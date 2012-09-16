@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>cloud1.png</Source>
+      <Name>cloud1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\cloud1.xnb</Output>
+      <Time>2012-07-03T20:38:42.0479144-04:00</Time>
+    </Item>
+    <Item>
+      <Source>black.png</Source>
+      <Name>black</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\black.xnb</Output>
+      <Time>2012-07-03T21:07:41.1403848-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage.png</Source>
+      <Name>Rage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage.xnb</Output>
+      <Time>2012-07-14T12:52:18.0202742-04:00</Time>
+    </Item>
+    <Item>
+      <Source>block1-1.png</Source>
+      <Name>block1-1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\block1-1.xnb</Output>
+      <Time>2012-07-13T19:44:59.5750287-04:00</Time>
+    </Item>
+    <Item>
+      <Source>arena.png</Source>
+      <Name>arena</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\arena.xnb</Output>
+      <Time>2012-07-15T10:33:38.3032584-04:00</Time>
+    </Item>
+    <Item>
+      <Source>titleScreenElement.0.png</Source>
+      <Name>titleScreenElement.0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\titleScreenElement.0.xnb</Output>
+      <Time>2012-07-15T10:33:38.3112588-04:00</Time>
+    </Item>
+    <Item>
+      <Source>titleScreenElement.1.png</Source>
+      <Name>titleScreenElement.1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\titleScreenElement.1.xnb</Output>
+      <Time>2012-07-15T10:33:38.3172592-04:00</Time>
+    </Item>
+    <Item>
+      <Source>titleScreenElement.2.png</Source>
+      <Name>titleScreenElement.2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\titleScreenElement.2.xnb</Output>
+      <Time>2012-07-15T10:33:38.3232595-04:00</Time>
+    </Item>
+    <Item>
+      <Source>titleScreenElement.3.png</Source>
+      <Name>titleScreenElement.3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\titleScreenElement.3.xnb</Output>
+      <Time>2012-07-15T10:33:38.3282598-04:00</Time>
+    </Item>
+    <Item>
+      <Source>titleScreenElement.4.png</Source>
+      <Name>titleScreenElement.4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\titleScreenElement.4.xnb</Output>
+      <Time>2012-08-05T21:19:00.142684-04:00</Time>
+    </Item>
+    <Item>
+      <Source>titleScreenElement.5.png</Source>
+      <Name>titleScreenElement.5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\titleScreenElement.5.xnb</Output>
+      <Time>2012-07-15T10:33:38.3402605-04:00</Time>
+    </Item>
+    <Item>
+      <Source>titleScreenElement.6.png</Source>
+      <Name>titleScreenElement.6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\titleScreenElement.6.xnb</Output>
+      <Time>2012-07-15T10:33:38.3552614-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Font\ghost_42px_bold.bmp</Source>
+      <Name>Font\ghost_42px_bold</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>FontTextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Font\ghost_42px_bold.xnb</Output>
+      <Time>2012-07-15T10:43:34.1143368-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Font\share_20px_reg.bmp</Source>
+      <Name>Font\share_20px_reg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>FontTextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Font\share_20px_reg.xnb</Output>
+      <Time>2012-07-15T10:43:34.117337-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Font\share_48px_bold.bmp</Source>
+      <Name>Font\share_48px_bold</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>FontTextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Font\share_48px_bold.xnb</Output>
+      <Time>2012-07-15T10:43:34.1223373-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Circle.png</Source>
+      <Name>Circle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Circle.xnb</Output>
+      <Time>2012-07-15T10:53:28.2683205-04:00</Time>
+    </Item>
+    <Item>
+      <Source>pix.png</Source>
+      <Name>pix</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\pix.xnb</Output>
+      <Time>2012-07-15T10:53:28.2713207-04:00</Time>
+    </Item>
+    <Item>
+      <Source>RageQuit.png</Source>
+      <Name>RageQuit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\RageQuit.xnb</Output>
+      <Time>2012-07-19T18:27:26.4418998-04:00</Time>
+    </Item>
+    <Item>
+      <Source>block1-2.png</Source>
+      <Name>block1-2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\block1-2.xnb</Output>
+      <Time>2012-07-29T19:08:27.7036226-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Space.png</Source>
+      <Name>Space</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Space.xnb</Output>
+      <Time>2012-08-01T19:19:23.1587731-04:00</Time>
+    </Item>
+    <Item>
+      <Source>SpaceAir.png</Source>
+      <Name>SpaceAir</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\SpaceAir.xnb</Output>
+      <Time>2012-08-01T20:32:14.3347901-04:00</Time>
+    </Item>
+    <Item>
+      <Source>block1-3.png</Source>
+      <Name>block1-3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\block1-3.xnb</Output>
+      <Time>2012-08-01T19:28:56.1565467-04:00</Time>
+    </Item>
+    <Item>
+      <Source>block1-4.png</Source>
+      <Name>block1-4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\block1-4.xnb</Output>
+      <Time>2012-08-20T23:32:22.1073515-04:00</Time>
+    </Item>
+    <Item>
+      <Source>titleScreenElement.4 copy.png</Source>
+      <Name>titleScreenElement.4 copy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\titleScreenElement.4 copy.xnb</Output>
+      <Time>2012-08-05T21:18:34.7882338-04:00</Time>
+    </Item>
+    <Item>
+      <Source>LeverSelect.png</Source>
+      <Name>LeverSelect</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\LeverSelect.xnb</Output>
+      <Time>2012-08-07T21:48:25.560505-04:00</Time>
+    </Item>
+    <Item>
+      <Source>SpaceDERP.png</Source>
+      <Name>SpaceDERP</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\SpaceDERP.xnb</Output>
+      <Time>2012-08-07T22:42:18.054393-04:00</Time>
+    </Item>
+    <Item>
+      <Source>outPut.png</Source>
+      <Name>outPut</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\outPut.xnb</Output>
+      <Time>2012-08-13T20:34:10.3296036-04:00</Time>
+    </Item>
+    <Item>
+      <Source>grassBlock.png</Source>
+      <Name>grassBlock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\grassBlock.xnb</Output>
+      <Time>2012-08-15T20:26:18.8135115-04:00</Time>
+    </Item>
+    <Item>
+      <Source>pixelGrass.png</Source>
+      <Name>pixelGrass</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\pixelGrass.xnb</Output>
+      <Time>2012-08-15T20:33:59.9628877-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Rage1.mp3</Source>
+      <Name>Rage\Rage1</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage1.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage1.wma</Extra>
+      <Time>2012-08-20T20:17:21.7601299-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Rage2.mp3</Source>
+      <Name>Rage\Rage2</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage2.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage2.wma</Extra>
+      <Time>2012-08-20T20:17:21.7841313-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Rage3.mp3</Source>
+      <Name>Rage\Rage3</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage3.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage3.wma</Extra>
+      <Time>2012-08-20T20:17:21.8091327-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Rage4.mp3</Source>
+      <Name>Rage\Rage4</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage4.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage4.wma</Extra>
+      <Time>2012-08-20T20:17:21.8391344-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Rage5.mp3</Source>
+      <Name>Rage\Rage5</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage5.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage5.wma</Extra>
+      <Time>2012-08-20T20:17:21.867136-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Rage6.mp3</Source>
+      <Name>Rage\Rage6</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage6.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage6.wma</Extra>
+      <Time>2012-08-20T20:17:21.8701362-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Rage7.mp3</Source>
+      <Name>Rage\Rage7</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage7.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage7.wma</Extra>
+      <Time>2012-08-20T20:17:21.8721363-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Rage8.mp3</Source>
+      <Name>Rage\Rage8</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage8.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage8.wma</Extra>
+      <Time>2012-08-20T20:17:21.8921375-04:00</Time>
+    </Item>
+    <Item>
+      <Source>clouds.png</Source>
+      <Name>clouds</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\clouds.xnb</Output>
+      <Time>2012-08-20T23:34:46.2415955-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Wave\Rage1.wav</Source>
+      <Name>Rage\Wave\Rage1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\Rage1.xnb</Output>
+      <Time>2012-08-20T21:48:29.7248796-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Wave\Rage2.wav</Source>
+      <Name>Rage\Wave\Rage2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\Rage2.xnb</Output>
+      <Time>2012-08-20T21:48:29.7268797-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Wave\jump.wav</Source>
+      <Name>Rage\Wave\jump</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\jump.xnb</Output>
+      <Time>2012-08-20T22:48:21.144297-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Wave\death.wav</Source>
+      <Name>Rage\Wave\death</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\death.xnb</Output>
+      <Time>2012-08-20T22:51:28.8940357-04:00</Time>
+    </Item>
+    <Item>
+      <Source>MikeRun1.png</Source>
+      <Name>MikeRun1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\MikeRun1.xnb</Output>
+      <Time>2012-08-21T20:02:14.6410389-04:00</Time>
+    </Item>
+    <Item>
+      <Source>MikeRun2.png</Source>
+      <Name>MikeRun2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\MikeRun2.xnb</Output>
+      <Time>2012-08-21T20:02:14.6450391-04:00</Time>
+    </Item>
+    <Item>
+      <Source>MikeJump1.png</Source>
+      <Name>MikeJump1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\MikeJump1.xnb</Output>
+      <Time>2012-08-21T21:44:47.7479765-04:00</Time>
+    </Item>
+    <Item>
+      <Source>MikeJump2.png</Source>
+      <Name>MikeJump2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\MikeJump2.xnb</Output>
+      <Time>2012-08-21T21:44:47.7519767-04:00</Time>
+    </Item>
+    <Item>
+      <Source>MikeStand.png</Source>
+      <Name>MikeStand</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\MikeStand.xnb</Output>
+      <Time>2012-08-22T22:16:27.8361367-04:00</Time>
+    </Item>
+    <Item>
+      <Source>MikeWall.png</Source>
+      <Name>MikeWall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\MikeWall.xnb</Output>
+      <Time>2012-08-21T21:56:29.8031317-04:00</Time>
+    </Item>
+    <Item>
+      <Source>pixelWood.png</Source>
+      <Name>pixelWood</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\pixelWood.xnb</Output>
+      <Time>2012-08-22T22:39:47.5961984-04:00</Time>
+    </Item>
+    <Item>
+      <Source>MikeIcon.png</Source>
+      <Name>MikeIcon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\MikeIcon.xnb</Output>
+      <Time>2012-08-23T22:01:44.8474616-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Wave\Opening.wav</Source>
+      <Name>Rage\Wave\Opening</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\Opening.xnb</Output>
+      <Time>2012-08-25T15:24:15.1099545-04:00</Time>
+    </Item>
+    <Item>
+      <Source>ahLogo.png</Source>
+      <Name>ahLogo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\ahLogo.xnb</Output>
+      <Time>2012-08-29T21:21:51.6396364-04:00</Time>
+    </Item>
+    <Item>
+      <Source>deathSpikes.png</Source>
+      <Name>deathSpikes</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\deathSpikes.xnb</Output>
+      <Time>2012-08-30T19:30:26.5879855-04:00</Time>
+    </Item>
+    <Item>
+      <Source>ahLogo1.png</Source>
+      <Name>ahLogo1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\ahLogo1.xnb</Output>
+      <Time>2012-09-05T19:26:33.7392268-04:00</Time>
+    </Item>
+    <Item>
+      <Source>ahLogo2.png</Source>
+      <Name>ahLogo2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\ahLogo2.xnb</Output>
+      <Time>2012-09-05T19:26:33.7532276-04:00</Time>
+    </Item>
+    <Item>
+      <Source>ahLogo3.png</Source>
+      <Name>ahLogo3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\ahLogo3.xnb</Output>
+      <Time>2012-09-05T19:26:33.7732287-04:00</Time>
+    </Item>
+    <Item>
+      <Source>ahLogo0.png</Source>
+      <Name>ahLogo0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\ahLogo0.xnb</Output>
+      <Time>2012-09-05T19:27:30.1574537-04:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerpContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerpContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2011-08-08T15:16:42.5033377-04:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

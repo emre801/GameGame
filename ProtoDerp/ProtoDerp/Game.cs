@@ -1,0 +1,506 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.GamerServices;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
+using FarseerPhysics.Collision;
+using FarseerPhysics.Common;
+using FarseerPhysics.Controllers;
+using FarseerPhysics.Dynamics;
+using FarseerPhysics.Factories;
+
+namespace ProtoDerp
+{
+    
+    public class Game : Microsoft.Xna.Framework.Game
+    {
+        public Random ran = new Random();
+        public enum Fonts { FT_MEDIUM, FT_HEADER, FT_TITLE };
+        public SpriteFont[] fonts = new SpriteFont[4];
+
+        public SortedSet<Entity> entities = new SortedSet<Entity>();
+        public float WorldSpeed { get; set; }
+        Dictionary<string, Sprite> sprites = new Dictionary<string, Sprite>();
+        public LinkedList<String> blockList = new LinkedList<string>();
+        GraphicsDeviceManager graphics;
+        SpriteBatch spriteBatch;
+
+        bool restart = false;
+
+        public Dictionary<string, SoundEffect> sounds = new Dictionary<string, SoundEffect>();
+        Dictionary<string, SoundInstance> soundInstances = new Dictionary<string, SoundInstance>();
+
+        public bool isInLevelSelect = false;
+        public LevelSelect levelSelect;
+        public World world,world2;
+
+        public bool startGame = false;
+
+        public readonly DrawingTool drawingTool;
+        public Input playerOneInput = null;
+
+        private bool isPaused = false;
+        public bool IsPaused { get { return isPaused; } }
+        public GUI GUI { get; private set; }
+
+        public Arena Arena { get; private set; }
+        LinkedList<Entity> toBeAdded = new LinkedList<Entity>();
+
+        TimeSpan pauseAdjustment = TimeSpan.Zero;
+
+        LinkedList<Entity> toBeRemoved = new LinkedList<Entity>();
+        public bool loadNewLevel = false;
+        public TitleScreen Title;
+        public int gMode=1;
+        public bool isInCreatorMode = false;
+        public int currentLevel = 1;
+        public float windowHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+        public float windowWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+        public int numDeath;
+        public float maxLeft, maxRight, maxTop, maxButtom;
+        public Game()
+        {
+            WorldSpeed = 1.0f;
+            world = new World(new Vector2(0, 5.0f));
+            world2 = new World(new Vector2(0, 0));
+            ConvertUnits.SetDisplayUnitToSimUnitRatio(30);
+            //graphics = new GraphicsDeviceManager(this);
+            Content.RootDirectory = "Content";
+
+            drawingTool = new DrawingTool(this);
+            numDeath = 0;
+            
+        }
+
+        protected void addSound(String fName)
+        {
+            SoundEffect s = Content.Load<SoundEffect>(fName);
+            sounds.Add(fName, s);
+            soundInstances.Add(fName, new SoundInstance(s.CreateInstance()));
+        }
+
+        public SoundInstance getSoundInstance(String fName)
+        {
+            if (soundInstances.ContainsKey(fName))
+                return soundInstances[fName];
+            else
+                return null;
+        }
+
+        public void addEntity(Entity e)
+        {
+            toBeAdded.AddLast(e);
+        }
+        public void populateWorld()
+        {
+            drawingTool.cam.Zoom = 0.55f * drawingTool.zoomRatio;
+            //Create the in-game arena.
+            Arena = new Arena(this, Arena.GameMode.MODE_MULTI_PLAYER);
+            addEntity(Arena);
+            Arena.setUpDemensions(maxLeft, maxRight, maxTop, maxButtom);
+
+            
+            //GUI
+            //GUI = new GUI(this);
+            //addEntity(GUI);
+
+            this.startGame = true;
+
+            this.isInCreatorMode = false;
+        }
+
+        public void populateWorldCreatorMode()
+        {
+            drawingTool.cam.Zoom = 0.35f * drawingTool.zoomRatio;
+            //Create the in-game arena.
+            Arena = new Arena(this, Arena.GameMode.MODE_MULTI_PLAYER);
+            addEntity(Arena);
+            addEntity(new CreaterBlock(this, Arena, new Vector2(100, 100), 1, "block1-2"));
+
+            //GUI
+            GUI = new GUI(this);
+            addEntity(GUI);
+
+            this.startGame = true;
+
+            this.isInCreatorMode = true;
+        }
+
+        /**
+        * Get the dimensions of the window
+        */
+        public Vector2 getWorldSize()
+        {
+            return new Vector2(Constants.GAME_WORLD_WIDTH, Constants.GAME_WORLD_HEIGHT);
+        }
+
+        protected override void Initialize()
+        {          
+            base.Initialize();
+        }
+
+        protected override void LoadContent()
+        {
+            
+            //spriteBatch = new SpriteBatch(GraphicsDevice);
+           
+            drawingTool.initialize();
+            playerOneInput = new XboxInput(PlayerIndex.One);
+
+            //Load Sprites
+            sprites.Add("cloud1", new Sprite(Content, "cloud1"));
+            sprites.Add("black", new Sprite(Content,"black"));
+            sprites.Add("rage", new Sprite(Content, "rage"));
+            sprites.Add("outPut", new Sprite(Content, "outPut"));
+            blockList.AddLast("outPut");
+            sprites.Add("pixelWood", new Sprite(Content, "pixelWood"));
+            blockList.AddLast("pixelWood");
+            sprites.Add("block1-1", new Sprite(Content, "block1-1"));
+            blockList.AddLast("block1-1");
+            sprites.Add("block1-2", new Sprite(Content, "block1-2"));
+            blockList.AddLast("block1-2");
+            sprites.Add("block1-3", new Sprite(Content, "block1-3"));
+            blockList.AddLast("block1-3");
+            sprites.Add("block1-4", new Sprite(Content, "block1-4"));
+            blockList.AddLast("block1-4");
+            sprites.Add("pixelGrass", new Sprite(Content, "pixelGrass"));
+            blockList.AddLast("pixelGrass");
+            sprites.Add("deathSpikes", new Sprite(Content, "deathSpikes"));
+            blockList.AddLast("deathSpikes");
+            sprites.Add("RageQuit", new Sprite(Content, "RageQuit"));
+            sprites.Add("Space", new Sprite(Content, "Space"));
+            sprites.Add("SpaceAir", new Sprite(Content, "SpaceAir"));
+            sprites.Add("SpaceDERP", new Sprite(Content, "SpaceDERP"));
+            sprites.Add("arena", new Sprite(Content, "arena"));            
+            sprites.Add("titleScreenElement.0", new Sprite(Content, "titleScreenElement.0")); //Logo Text
+            sprites.Add("titleScreenElement.1", new Sprite(Content, "titleScreenElement.1")); //Logo Gear
+            sprites.Add("titleScreenElement.2", new Sprite(Content, "titleScreenElement.2", new Vector2(547, 0))); //Selection Inside
+            sprites.Add("titleScreenElement.3", new Sprite(Content, "titleScreenElement.3", new Vector2(547, 0))); //Selection Border
+            sprites.Add("titleScreenElement.4", new Sprite(Content, "titleScreenElement.4", new Vector2(335, 0))); //Selection Text
+            sprites.Add("titleScreenElement.5", new Sprite(Content, "titleScreenElement.5", new Vector2(75, 70))); //Long Clock Hand
+            sprites.Add("titleScreenElement.6", new Sprite(Content, "titleScreenElement.6", new Vector2(40, 70))); //Short Clock Hand
+
+            sprites.Add("pix", new Sprite(Content, "pix"));
+            sprites.Add("Circle", new Sprite(Content, "Circle"));
+            sprites.Add("LeverSelect", new Sprite(Content, "LeverSelect"));
+
+            sprites.Add("MikeIcon", new Sprite(Content, "MikeIcon"));
+            //sprites.Add("ahLogo", new Sprite(Content, "ahLogo"));
+            sprites.Add("ahLogo0", new Sprite(Content, "ahLogo0"));
+            sprites.Add("ahLogo1", new Sprite(Content, "ahLogo1"));
+            sprites.Add("ahLogo2", new Sprite(Content, "ahLogo2"));
+            sprites.Add("ahLogo3", new Sprite(Content, "ahLogo3"));
+            blockList.AddLast("ahLogo0");
+
+            sprites.Add("MikeRun1", new Sprite(Content, "MikeRun1"));
+            sprites.Add("MikeRun2", new Sprite(Content, "MikeRun2"));
+            sprites.Add("MikeJump1", new Sprite(Content, "MikeJump1"));
+            sprites.Add("MikeJump2", new Sprite(Content, "MikeJump2"));
+            sprites.Add("MikeStand", new Sprite(Content, "MikeStand"));
+            sprites.Add("MikeWall", new Sprite(Content, "MikeWall"));
+            
+            sprites.Add("clouds", new Sprite(Content, "clouds"));
+
+            //Load Fonts
+            fonts[(int)Fonts.FT_MEDIUM] = Content.Load<SpriteFont>("Font\\share_20px_reg");
+            fonts[(int)Fonts.FT_HEADER] = Content.Load<SpriteFont>("Font\\share_48px_bold");
+            fonts[(int)Fonts.FT_TITLE] = Content.Load<SpriteFont>("Font\\ghost_42px_bold");
+
+            //Title Screen
+            //populateWorld();
+
+            addSound("Rage//Wave//Rage1");
+            addSound("Rage//Wave//Rage2");
+            addSound("Rage//Wave//jump");
+            addSound("Rage//Wave//death");
+            addSound("Rage//Wave//Opening");
+            /*
+                                           * Rage//Wave//jump"
+            addSound("Rage//Rage3");
+            addSound("Rage//Rage4");
+            addSound("Rage//Rage5");
+            addSound("Rage//Rage6");
+            addSound("Rage//Rage7");
+            addSound("Rage//Rage8");*/
+            
+            if (Constants.ENABLE_TITLE_SCREEN)
+            {
+                GUI = new GUI(this);
+                Title = new TitleScreen(this);
+                addEntity(Title);
+            }
+            else
+            {
+                if (gMode == 0)
+                    populateWorld();
+                else if (gMode == 2)
+                    populateWorldCreatorMode();
+            }
+
+            levelSelect = new LevelSelect(this);
+            levelSelect.IsVisible = false;
+            addEntity(levelSelect);
+             
+        
+        }
+        //Gets a Sprite object from the database, based on its file name (without the extension!)
+        public Sprite getSprite(String fName)
+        {
+            if (sprites.ContainsKey(fName))
+                return sprites[fName];
+            else
+                return null;
+        }
+        
+        protected override void UnloadContent()
+        {
+            
+        }
+
+        public void Pause()
+        {
+            
+        }
+        public void clearEntities()
+        {
+            entities.Clear();
+        }
+
+        public void newLevel()
+        {
+            //writeLevel(2);
+            world = new World(new Vector2(0, 5.0f));
+            entities.Clear();
+            toBeAdded.Clear();
+            cachedEntityLists = new Dictionary<Type, object>();
+            drawingTool.initialize();
+            cachedEntityLists = new Dictionary<Type, object>();
+            if (!this.isInCreatorMode)
+                populateWorld();
+            else
+                populateWorldCreatorMode();
+        }
+        public void updateCreatorCamera()
+        {
+            
+        }
+
+        public void nextLevel(int level)
+        {
+            entities.Clear();
+            clearEntities();
+            cachedEntityLists = new Dictionary<Type, object>();            
+            currentLevel = level;
+            //newLevel();
+            loadNewLevel = true;
+        }
+
+        public void playSong(String songName)
+        {
+            MediaPlayer.Stop();
+
+            //if (Options.gameOptions.musicToggled) //Only actually play the song if music is turned on.
+            //{
+                Song song = Content.Load<Song>(songName);
+                MediaPlayer.Play(song);
+                MediaPlayer.IsRepeating = false;
+            //}
+        }
+
+        public void writeLevel(int templateNum)
+        {
+            String path ="";
+            int pathIndex = path.IndexOf("bin");
+            path = @"C:\Users\John\Documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerpContent\World1\Level" + templateNum + @".txt";
+            LinkedList<String> lines = new LinkedList<String>();
+            //lines.AddLast("test1");
+            //lines.AddLast("test2");
+            LinkedList<Block> blocks = getEntitiesOfType<Block>();
+            foreach (Block b in blocks)
+            {
+                int x = (int)b.origPos.X;
+                int y = (int)b.origPos.Y;
+                String spriteName = b.spriteNumber;
+                lines.AddLast(x + " " + y + " " + spriteName + " Block" +" "+b.height +" "+b.width);
+
+            }
+
+            LinkedList<DeathBlock> deathBlocks = getEntitiesOfType<DeathBlock>();
+            foreach (DeathBlock b in deathBlocks)
+            {
+                int x = (int)b.origPos.X;
+                int y = (int)b.origPos.Y;
+                String spriteName = b.spriteNumber;
+                lines.AddLast(x + " " + y + " " + spriteName + " DeathBlock");
+
+            }
+
+            LinkedList<GoalBlock> goalBlocks = getEntitiesOfType<GoalBlock>();
+            foreach (GoalBlock b in goalBlocks)
+            {
+                int x = (int)b.origPos.X;
+                int y = (int)b.origPos.Y;
+                String spriteName = b.spriteNumber;
+                lines.AddLast(x + " " + y + " " + spriteName + " GoalBlock "+ b.nextLevel);
+
+            }
+
+            LinkedList<MovingDeath> movingBlock = getEntitiesOfType<MovingDeath>();
+            foreach (MovingDeath b in movingBlock)
+            {
+                int x = (int)b.origPos.X;
+                int y = (int)b.origPos.Y;
+                String spriteName = b.spriteNumber;
+                lines.AddLast(x + " " + y + " " + spriteName + " MovingDeath " + b.velObj +" "+b.shootAngle.X + " "+b.shootAngle.Y);
+
+            }
+            lines.AddLast("Demi "+ maxLeft + " "+ maxRight +" "+ maxTop+ " " +maxButtom);
+
+            System.IO.File.WriteAllLines(path, lines);
+
+        }
+
+        protected override void Update(GameTime gameTime)
+        {
+            
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+            {
+                Exit();
+            }
+
+            if (loadNewLevel)
+            {
+                cachedEntityLists.Clear();
+                newLevel();
+                loadNewLevel = false;
+            }
+            if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Back))
+            {
+                restart = false;
+                world = new World(new Vector2(0, 5.0f));
+                entities.Clear();
+                toBeAdded.Clear();
+                cachedEntityLists = new Dictionary<Type, object>();
+                //drawingTool.initialize();
+                //drawingTool.resetCamera();
+                gMode = 6;
+                cachedEntityLists = new Dictionary<Type, object>();
+                Title = new TitleScreen(this);
+                addEntity(Title);
+                isInCreatorMode = false;
+
+            }
+
+            if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Start) || restart)
+            {
+                numDeath++;
+                restart = false;
+                if (!isInLevelSelect)
+                {
+                    if (isInCreatorMode)
+                    {
+                        Arena = new Arena(this, Arena.GameMode.MODE_MULTI_PLAYER);
+                    }
+                    newLevel();
+                }                
+            }
+            playerOneInput.Update(gameTime);
+
+            if (isInCreatorMode)
+            {
+                updateCreatorCamera();
+            }
+
+
+
+            GameTime pauseAdjustedGameTime = new GameTime(
+                  gameTime.TotalGameTime - pauseAdjustment,
+                  gameTime.ElapsedGameTime,
+                  gameTime.IsRunningSlowly);
+
+            foreach (Entity e in toBeAdded)
+            {
+                entities.Add(e);
+                e.OnAddedToGame(e.updatesWhenPaused ? gameTime : pauseAdjustedGameTime);
+            }
+
+            foreach (Entity e in entities)
+            {
+                if (e.IsUpdateable && !e.dispose)
+                {
+                    if (e.updatesWhenPaused)
+                    {
+                        // Entities which continue to update when the game is paused receive the unmodified gametime
+                        e.Update(gameTime, WorldSpeed);
+                    }
+                    else if (!isPaused)
+                    {
+                        // All others receive the modified one.
+                        e.Update(pauseAdjustedGameTime, WorldSpeed);
+                    }
+                }
+                if (e.dispose)
+                {
+                    
+                    toBeRemoved.AddLast(e);
+                }
+            }
+            world.Step((float)(gameTime.ElapsedGameTime.TotalMilliseconds * 0.002));
+            
+            
+            base.Update(gameTime);
+
+        }
+
+        protected override void Draw(GameTime gameTime)
+        {
+            if(gMode==0)
+                GraphicsDevice.Clear(Color.SkyBlue);
+            else
+                GraphicsDevice.Clear(Color.Black);
+
+            drawingTool.drawEntities(entities, gameTime);
+            drawingTool.drawLetterBox();
+
+            base.Draw(gameTime);
+        }
+        public void PlayerDies()
+        {
+            //newLevel();
+            numDeath++;
+            restart = true;
+        }
+
+        // Caching entity lists so that we don't need to regenerate them every time.
+        public Dictionary<Type, object> cachedEntityLists = new Dictionary<Type, object>();
+        public LinkedList<T> getEntitiesOfType<T>() where T : Entity
+        {
+            LinkedList<T> ret;
+            object cachedList = null;
+            cachedEntityLists.TryGetValue(typeof(T), out cachedList);
+            if (cachedList == null)
+            {
+                ret = new LinkedList<T>();
+                foreach (Entity entity in entities)
+                {
+                    T t = entity as T;
+                    if (t != null)
+                    {
+                        ret.AddLast(t);
+                    }
+                }
+                cachedEntityLists.Add(typeof(T), ret);
+            }
+            else
+            {
+                ret = (LinkedList<T>)cachedList;
+            }
+            return ret;
+        }
+    }
+}

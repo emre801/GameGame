@@ -1,0 +1,8 @@
+0 135 block1-4 Block 100 400
+231 135 block1-4 Block 100 400
+503 135 block1-4 Block 100 400
+670 135 block1-4 Block 100 400
+597 -381 block1-2 Block 1200 200
+272 -630 block1-2 Block 1200 200
+968 100 block1-1 GoalBlock 2
+48 -52 outPut MovingDeath 2 1 0
