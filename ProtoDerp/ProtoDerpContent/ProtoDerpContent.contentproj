@@ -344,6 +344,18 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Content Include="World1\Level4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level4</Name>
+    </Content>
+    <Content Include="World1\Level6.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level6</Name>
+    </Content>
+    <Content Include="World1\Level5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level5</Name>
+    </Content>
     <Content Include="World1\Level1.txt">
       <Name>Level1</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

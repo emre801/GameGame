@@ -187,19 +187,19 @@ namespace ProtoDerp
                 xturbo=5;
             if (keyState.IsKeyDown(Keys.Up))
             {
-                y = 1*xturbo;
+                y += 5;// 1 * xturbo;
             }
             if (keyState.IsKeyDown(Keys.Down))
             {
-                y = -1*xturbo;
+                y -= 5;// -1 * xturbo;
             }
             if (keyState.IsKeyDown(Keys.Left))
             {
-                x = -1*xturbo;
+                x -= 5;// -1 * xturbo;
             }
             if (keyState.IsKeyDown(Keys.Right))
             {
-                x = 1*xturbo;
+                x += 5;// 1 * xturbo;
             }
             
            

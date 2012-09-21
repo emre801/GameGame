@@ -63,6 +63,9 @@ Content\ahLogo1.xnb
 Content\ahLogo2.xnb
 Content\ahLogo3.xnb
 Content\ahLogo0.xnb
+Content\World1\Level4.txt
+Content\World1\Level6.txt
+Content\World1\Level5.txt
 Content\World1\Level1.txt
 Content\World1\Level2.txt
 Content\World1\Level3.txt
