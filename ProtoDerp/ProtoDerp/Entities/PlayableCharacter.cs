@@ -13,7 +13,7 @@ using FarseerPhysics.Controllers;
 using FarseerPhysics.Dynamics;
 using FarseerPhysics.Factories;
 using FarseerPhysics.Dynamics.Contacts;
-
+using FarseerPhysics.Dynamics.Joints;
 
 /**
  * 
@@ -50,6 +50,11 @@ namespace ProtoDerp
         float distance = 0;
         bool run = false;
         float max = 0;
+
+        public Fixture wheel;
+        public FixedAngleJoint fixedAngleJoint;
+        public RevoluteJoint motor;
+
         public PlayableCharacter(Game g, Arena a, Vector2 pos, int playerNum)
             : base(g)
         {
@@ -90,11 +95,12 @@ namespace ProtoDerp
                 {
                     if (onGround)
                         return true;
-                    onGround = true;
+                    //onGround = true;
                     modes = Modes.WALL;
                     body.IgnoreGravity = true;
+                    onGround = true;
                 }
-                onGround = true;
+                
             }
             return true;
         }
@@ -105,6 +111,7 @@ namespace ProtoDerp
             float mass = 1.0f;
             float width = playerSprite.index.Width;
             float height = playerSprite.index.Height;
+            
             fixture = FixtureFactory.CreateRectangle(world, (float)ConvertUnits.ToSimUnits(width), (float)ConvertUnits.ToSimUnits(height), mass);
             body = fixture.Body;
             fixture.Body.BodyType = BodyType.Dynamic;
@@ -135,6 +142,9 @@ namespace ProtoDerp
         {
             return false;
         }
+
+
+
         public Vector2 Position
         {
             get
@@ -172,7 +182,9 @@ namespace ProtoDerp
             if (onGround)
             {
                 if ((Math.Abs(body.LinearVelocity.X) < 5 * runningValue))
+                {
                     body.ApplyLinearImpulse(new Vector2(inputState.getXDirection() * 0.35f * runningValue, 0));// inputState.getYDirection() * 300f));
+                }
                 if (inputState.getXDirection() == 0)
                     fixture.Friction = 20;
                 else
@@ -182,6 +194,11 @@ namespace ProtoDerp
             {
 
                 body.ApplyLinearImpulse(new Vector2(inputState.getXDirection() * 0.35f * runningValue, 0));// inputState.getYDirection() * 300f));
+                //motor.MotorSpeed = inputState.getXDirection()*10;
+                if (inputState.getXDirection() == 0)
+                    fixture.Friction = 10;
+                else
+                    fixture.Friction = 0;
 
                 if (yDirection > 0)
                     body.ApplyLinearImpulse(new Vector2(0, yDirection * 1.05f));
@@ -264,11 +281,17 @@ namespace ProtoDerp
         {
             Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
             DrawingTool test = game.drawingTool;
+            float width = playerSprite.index.Width;
+            float height = playerSprite.index.Height;
+            float upperBodyHeight = height - (width / 2);
             int i = playerSprite.index.Width;
             if (!faceRight)
-                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, Color.White, body.Rotation, origin, SpriteEffects.None, 0f);
+                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y) , (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, Color.White, body.Rotation, origin, SpriteEffects.None, 0f);
             else
-                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, Color.White, body.Rotation, origin, SpriteEffects.FlipHorizontally, 0f);
+                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y) , (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, Color.White, body.Rotation, origin, SpriteEffects.FlipHorizontally, 0f);
+            //spriteBatch.Draw(game.getSprite("DeathTime").index, new Rectangle((int)ConvertUnits.ToDisplayUnits(wheel.Body.Position.X),
+                //(int)ConvertUnits.ToDisplayUnits(wheel.Body.Position.Y),
+                //(int)playerSprite.index.Width, playerSprite.index.Width), null, Color.White, wheel.Body.Rotation, new Vector2(playerSprite.index.Width / 2, playerSprite.index.Width / 2), SpriteEffects.FlipHorizontally, 0f);
 
         }
 

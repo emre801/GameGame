@@ -53,12 +53,12 @@ namespace ProtoDerp
         protected virtual void SetUpPhysics(Vector2 position)
         {
             World world = game.world;
-            float mass = 1;
+            float mass = 1000;
             float width = this.width;
             float height = this.height;            
             fixture = FixtureFactory.CreateRectangle(world, (float)ConvertUnits.ToSimUnits(width), (float)ConvertUnits.ToSimUnits(height), mass);
             body = fixture.Body;
-            fixture.Body.BodyType = BodyType.Static;
+            fixture.Body.BodyType = BodyType.Kinematic;
             fixture.Restitution = 0.3f;
             fixture.Friction = 0.1f;
             body.Position = ConvertUnits.ToSimUnits(position);

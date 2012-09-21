@@ -52,7 +52,8 @@ namespace ProtoDerp
             fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
             this.shootAngle = shootAngle;
             this.velObj = velObj;
-            body.LinearVelocity = new Vector2(shootAngle.X * velObj, shootAngle.Y * velObj);
+            if(game.gMode==0)
+                body.LinearVelocity = new Vector2(shootAngle.X * velObj, shootAngle.Y * velObj);
         }
         bool OnCollision(Fixture fixtureA, Fixture fixtureB, Contact contact)
         {

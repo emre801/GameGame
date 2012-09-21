@@ -48,7 +48,9 @@ namespace ProtoDerp
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             //spriteBatch.Draw(pix.index, new Rectangle(5,5,100,100), Color.White);
+            DrawBackThing(gameTime, spriteBatch);
             DrawCredits(gameTime, spriteBatch);
+            
         }
 
 
@@ -56,10 +58,19 @@ namespace ProtoDerp
         {
             spriteBatch.Draw(pix.index, rect, new Color(color.R, color.G, color.B, alpha));
         }
+        public void DrawBackThing(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            Vector2 origin = new Vector2(game.getSprite("DeathTime").index.Width / 2, game.getSprite("DeathTime").index.Height / 2);
+
+            spriteBatch.Draw(game.getSprite("DeathTime").index, new Rectangle((int)(game.getWorldSize().X * 0.140f),                
+                (int)(game.getWorldSize().Y * 0.06f),
+                (int)game.getSprite("DeathTime").index.Width, (int)game.getSprite("DeathTime").index.Height), null, Color.White, 0, origin, SpriteEffects.FlipHorizontally, 0f);
+
+        }
 
         public void DrawCredits(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            String str = "Time:       Death: " + game.numDeath; ;
+            String str = "Time:     Death: " + game.numDeath; ;
                 
             String[] tempstrMulti = str.Split("|".ToCharArray());
             SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];

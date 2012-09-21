@@ -540,6 +540,43 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\deathSpikes2.xnb</Output>
       <Time>2012-09-21T11:29:42.8219687-04:00</Time>
     </Item>
+    <Item>
+      <Source>Music\GameBeat2.mp3</Source>
+      <Name>Music\GameBeat2</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\GameBeat2.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\GameBeat2.wma</Extra>
+      <Time>2012-09-21T13:33:57.4543493-04:00</Time>
+    </Item>
+    <Item>
+      <Source>bullet.0.png</Source>
+      <Name>bullet.0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\bullet.0.xnb</Output>
+      <Time>2012-09-21T13:42:34.9599489-04:00</Time>
+    </Item>
+    <Item>
+      <Source>DeathTime.png</Source>
+      <Name>DeathTime</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\DeathTime.xnb</Output>
+      <Time>2012-09-21T13:59:14.6531281-04:00</Time>
+    </Item>
+    <Item>
+      <Source>cannon.png</Source>
+      <Name>cannon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\cannon.xnb</Output>
+      <Time>2012-09-21T16:23:17.978498-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

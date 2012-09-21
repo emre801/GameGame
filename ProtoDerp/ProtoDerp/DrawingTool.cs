@@ -444,7 +444,7 @@ namespace ProtoDerp
 
            if (game.gMode == 0)
            {
-               spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+               spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
                game.Arena.gui.Draw(gameTime, spriteBatch);
                spriteBatch.End();
            }

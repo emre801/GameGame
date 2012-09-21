@@ -354,6 +354,38 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="Music\GameBeat2.mp3">
+      <Name>GameBeat2</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="bullet.0.png">
+      <Name>bullet.0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="DeathTime.png">
+      <Name>DeathTime</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="cannon.png">
+      <Name>cannon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Content Include="World1\Level7.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level7</Name>
+    </Content>
+    <Content Include="World1\Level8.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level8</Name>
+    </Content>
+    <Content Include="World1\Level9.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level9</Name>
+    </Content>
     <Content Include="World1\Level4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>Level4</Name>

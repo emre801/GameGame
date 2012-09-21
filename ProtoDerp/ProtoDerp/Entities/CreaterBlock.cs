@@ -134,7 +134,7 @@ namespace ProtoDerp
             }
             if (keyInput.IsNewKeyPressed(Keys.Z))
             {                
-                game.writeLevel(6);
+                game.writeLevel(8);
                 //blockPressed = 0;
             }
             if (keyInput.IsNewKeyPressed(Keys.D)) 

@@ -94,6 +94,18 @@ namespace ProtoDerp
            foreach (MovingDeath i in moveDeathBlocks)
                game.addEntity(i);
 
+            
+
+           foreach(MovingDeath i in moveDeathBlocks)
+           {
+               foreach (MovingDeath j in moveDeathBlocks)
+               {
+                   i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                   j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+               }
+           }
+
+
            foreach (Block i in blocks)
            {
                foreach (Block j in blocks)

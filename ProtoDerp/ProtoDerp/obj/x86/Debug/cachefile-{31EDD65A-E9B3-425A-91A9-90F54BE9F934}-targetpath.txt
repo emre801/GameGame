@@ -65,6 +65,14 @@ Content\ahLogo3.xnb
 Content\ahLogo0.xnb
 Content\bigBlock.xnb
 Content\deathSpikes2.xnb
+Content\Music\GameBeat2.xnb
+Content\Music\GameBeat2.wma
+Content\bullet.0.xnb
+Content\DeathTime.xnb
+Content\cannon.xnb
+Content\World1\Level7.txt
+Content\World1\Level8.txt
+Content\World1\Level9.txt
 Content\World1\Level4.txt
 Content\World1\Level6.txt
 Content\World1\Level5.txt

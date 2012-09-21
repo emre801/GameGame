@@ -154,6 +154,7 @@ namespace ProtoDerp
 
             //Load Sprites
             sprites.Add("cloud1", new Sprite(Content, "cloud1"));
+            sprites.Add("DeathTime", new Sprite(Content, "DeathTime"));
             sprites.Add("black", new Sprite(Content,"black"));
             sprites.Add("rage", new Sprite(Content, "rage"));
             sprites.Add("bigBlock", new Sprite(Content, "bigBlock"));
@@ -176,6 +177,10 @@ namespace ProtoDerp
             blockList.AddLast("deathSpikes");
             sprites.Add("deathSpikes2", new Sprite(Content, "deathSpikes2"));
             blockList.AddLast("deathSpikes2");
+            sprites.Add("cannon", new Sprite(Content, "cannon"));
+            blockList.AddLast("cannon");
+            sprites.Add("bullet.0", new Sprite(Content, "bullet.0"));
+            blockList.AddLast("bullet.0");
             sprites.Add("RageQuit", new Sprite(Content, "RageQuit"));
             sprites.Add("Space", new Sprite(Content, "Space"));
             sprites.Add("SpaceAir", new Sprite(Content, "SpaceAir"));
@@ -249,6 +254,7 @@ namespace ProtoDerp
             levelSelect = new LevelSelect(this);
             levelSelect.IsVisible = false;
             addEntity(levelSelect);
+            //playSong("Music//GameBeat2");
              
         
         }
