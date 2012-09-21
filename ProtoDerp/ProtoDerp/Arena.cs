@@ -72,7 +72,10 @@ namespace ProtoDerp
             player1.inputState = game.playerOneInput;
             //TODO: Load Level;
             LevelEditor le = new LevelEditor(game);
-            le.readFile(game.currentLevel);
+            if(game.gMode==0)
+                le.readFile(game.currentLevel);  
+            else
+                le.readFile(4); 
             game.addEntity(player1);
             this.IsVisible = true;
 

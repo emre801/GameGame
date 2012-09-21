@@ -448,7 +448,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\pixelWood.xnb</Output>
-      <Time>2012-08-22T22:39:47.5961984-04:00</Time>
+      <Time>2012-09-21T09:58:14.8590752-04:00</Time>
     </Item>
     <Item>
       <Source>MikeIcon.png</Source>
@@ -484,7 +484,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\deathSpikes.xnb</Output>
-      <Time>2012-08-30T19:30:26.5879855-04:00</Time>
+      <Time>2012-09-21T11:28:42.9145422-04:00</Time>
     </Item>
     <Item>
       <Source>ahLogo1.png</Source>
@@ -521,6 +521,24 @@
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\ahLogo0.xnb</Output>
       <Time>2012-09-05T19:27:30.1574537-04:00</Time>
+    </Item>
+    <Item>
+      <Source>bigBlock.png</Source>
+      <Name>bigBlock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\bigBlock.xnb</Output>
+      <Time>2012-09-21T09:50:39.0330034-04:00</Time>
+    </Item>
+    <Item>
+      <Source>deathSpikes2.png</Source>
+      <Name>deathSpikes2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\deathSpikes2.xnb</Output>
+      <Time>2012-09-21T11:29:42.8219687-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

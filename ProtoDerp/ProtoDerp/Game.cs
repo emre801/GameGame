@@ -156,6 +156,8 @@ namespace ProtoDerp
             sprites.Add("cloud1", new Sprite(Content, "cloud1"));
             sprites.Add("black", new Sprite(Content,"black"));
             sprites.Add("rage", new Sprite(Content, "rage"));
+            sprites.Add("bigBlock", new Sprite(Content, "bigBlock"));
+            blockList.AddLast("bigBlock");
             sprites.Add("outPut", new Sprite(Content, "outPut"));
             blockList.AddLast("outPut");
             sprites.Add("pixelWood", new Sprite(Content, "pixelWood"));
@@ -172,6 +174,8 @@ namespace ProtoDerp
             blockList.AddLast("pixelGrass");
             sprites.Add("deathSpikes", new Sprite(Content, "deathSpikes"));
             blockList.AddLast("deathSpikes");
+            sprites.Add("deathSpikes2", new Sprite(Content, "deathSpikes2"));
+            blockList.AddLast("deathSpikes2");
             sprites.Add("RageQuit", new Sprite(Content, "RageQuit"));
             sprites.Add("Space", new Sprite(Content, "Space"));
             sprites.Add("SpaceAir", new Sprite(Content, "SpaceAir"));
@@ -398,7 +402,7 @@ namespace ProtoDerp
 
             if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Start) || restart)
             {
-                numDeath++;
+                //numDeath++;
                 restart = false;
                 if (!isInLevelSelect)
                 {

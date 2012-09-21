@@ -344,6 +344,16 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="bigBlock.png">
+      <Name>bigBlock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="deathSpikes2.png">
+      <Name>deathSpikes2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="World1\Level4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>Level4</Name>
