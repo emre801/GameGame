@@ -36,6 +36,8 @@ namespace ProtoDerp
         int counter = 0;
         KeyboardInput keyInput;
         int blockPressed = 0;
+        public float blockWidth, blockHeight;
+        int drawLevel = 0;
         public CreaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
             : base(g)
         {
@@ -46,11 +48,11 @@ namespace ProtoDerp
             
             blockArray=blocks.ToArray<String>();
             this.spriteNumber = blockArray[counter];
-           
+            
             LoadContent();
             //SetUpPhysics(Constants.player1SpawnLocation + pos);
             origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
-            
+           
             keyInput= new KeyboardInput();
 
             
@@ -73,6 +75,8 @@ namespace ProtoDerp
         {
             playerSprite = game.getSprite(blockArray[counter]);
             origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
+            blockHeight = playerSprite.index.Height;
+            blockWidth = playerSprite.index.Width;
         }
 
         public bool isExpanding()
@@ -134,8 +138,7 @@ namespace ProtoDerp
             }
             if (keyInput.IsNewKeyPressed(Keys.Z))
             {                
-                game.writeLevel(8);
-                //blockPressed = 0;
+                game.writeLevel(5);
             }
             if (keyInput.IsNewKeyPressed(Keys.D)) 
             {
@@ -148,7 +151,26 @@ namespace ProtoDerp
                 game.cachedEntityLists = new Dictionary<Type, object>();
                 blockPressed = 3;
             }
+
+            if (keyInput.IsNewKeyPressed(Keys.I) || (keyInput.IsKeyPressed(Keys.I)&&keyInput.IsKeyPressed(Keys.LeftShift)))
+            {
+                blockHeight += 5;
+            }
+            if (keyInput.IsNewKeyPressed(Keys.K) || (keyInput.IsKeyPressed(Keys.K) && keyInput.IsKeyPressed(Keys.LeftShift)))
+            {
+                blockHeight -= 5;
+            }
+            if (keyInput.IsNewKeyPressed(Keys.J) || (keyInput.IsKeyPressed(Keys.J) && keyInput.IsKeyPressed(Keys.LeftShift)))
+            {
+                blockWidth -= 5;
+            }
+            if (keyInput.IsNewKeyPressed(Keys.L) || (keyInput.IsKeyPressed(Keys.L) && keyInput.IsKeyPressed(Keys.LeftShift)))
+            {
+                blockWidth += 5;
+            }
+
             chooseNextSprite();
+            updateDrawLevel();
         }
         public void chooseNextSprite()
         {
@@ -171,6 +193,21 @@ namespace ProtoDerp
             }
             if(isPressed)
                 LoadContent();
+        }
+        public void updateDrawLevel()
+        {
+            if (keyInput.IsNewKeyPressed(Keys.E))
+            {
+                drawLevel = 1;
+            }
+            if (keyInput.IsNewKeyPressed(Keys.R))
+            {
+                drawLevel = 0;
+            }
+            if (keyInput.IsNewKeyPressed(Keys.T))
+            {
+                drawLevel = 2;
+            }
         }
 
         public void moveBlock()
@@ -209,7 +246,7 @@ namespace ProtoDerp
         public void addBlock()
         {
 
-            game.addEntity(new Block(game, game.Arena, origPos, 1, blockArray[counter], game.getSprite(blockArray[counter]).index.Height, game.getSprite(blockArray[counter]).index.Width));
+            game.addEntity(new Block(game, game.Arena, origPos, 1, blockArray[counter], blockHeight, blockWidth,drawLevel));
         }
 
         public void addDeathBlock()
@@ -232,7 +269,7 @@ namespace ProtoDerp
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             
-            spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, Color.White, 0, origin, SpriteEffects.None, 0f);
+            spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);
 
         }
 

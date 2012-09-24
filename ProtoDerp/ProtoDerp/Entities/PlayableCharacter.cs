@@ -94,7 +94,10 @@ namespace ProtoDerp
                 if (pColis.X != 0 && pColis.Y == 0)
                 {
                     if (onGround)
+                    {
+                        modes = Modes.WALL;
                         return true;
+                    }
                     //onGround = true;
                     modes = Modes.WALL;
                     body.IgnoreGravity = true;
@@ -241,7 +244,7 @@ namespace ProtoDerp
             }
 
 
-            if (modes == Modes.GROUND)
+            if (onGround)//modes == Modes.GROUND)
             {
                 //TODO: add running
 

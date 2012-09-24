@@ -19,6 +19,8 @@ namespace ProtoDerp
         public PlayableCharacter player1 = null;
         public PlayableCharacter player2 = null;
         LinkedList<Block> blocks = new LinkedList<Block>();
+        LinkedList<Block> topBlocks = new LinkedList<Block>();
+        LinkedList<Block> buttomBlocks = new LinkedList<Block>();
         LinkedList<DeathBlock> deathBlocks = new LinkedList<DeathBlock>();
         LinkedList<GoalBlock> goalBlocks = new LinkedList<GoalBlock>();
         LinkedList<MovingDeath> moveDeathBlocks = new LinkedList<MovingDeath>();
@@ -64,8 +66,16 @@ namespace ProtoDerp
                 float x=Convert.ToInt32(words[0]);
                 float y = Convert.ToInt32(words[1]);
                 String spriteName = words[2];
-                if(words[3].Equals("Block"))
-                    blocks.AddLast(new Block(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4]), Convert.ToInt32(words[5])));
+                if (words[3].Equals("Block"))
+                {
+                    if(Convert.ToInt32(words[6])==0)
+                        blocks.AddLast(new Block(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4]), Convert.ToInt32(words[5]), Convert.ToInt32(words[6])));
+                    else if(Convert.ToInt32(words[6])==1)
+                        topBlocks.AddLast(new Block(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4]), Convert.ToInt32(words[5]), Convert.ToInt32(words[6])));
+                    else
+                        buttomBlocks.AddLast(new Block(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4]), Convert.ToInt32(words[5]), Convert.ToInt32(words[6])));
+                    
+                }
                 if (words[3].Equals("DeathBlock"))
                    deathBlocks.AddLast(new DeathBlock(game, game.Arena, new Vector2(x, y), 1, spriteName));
                 if (words[3].Equals("GoalBlock"))
@@ -85,36 +95,38 @@ namespace ProtoDerp
                 
             }
             
-           foreach (Block i in blocks)
+            foreach (Block i in buttomBlocks)
+                game.addEntity(i);           
+            foreach (Block i in blocks)
+                game.addEntity(i);         
+            foreach (Block i in topBlocks)
                 game.addEntity(i);
-           foreach (DeathBlock i in deathBlocks)
-               game.addEntity(i);
-           foreach (GoalBlock i in goalBlocks)
-               game.addEntity(i);
-           foreach (MovingDeath i in moveDeathBlocks)
-               game.addEntity(i);
+            foreach (DeathBlock i in deathBlocks)
+                game.addEntity(i);
+            foreach (GoalBlock i in goalBlocks)
+                game.addEntity(i);
+            foreach (MovingDeath i in moveDeathBlocks)
+                game.addEntity(i);            
 
-            
-
-           foreach(MovingDeath i in moveDeathBlocks)
-           {
-               foreach (MovingDeath j in moveDeathBlocks)
-               {
-                   i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
-                   j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
-               }
-           }
+            foreach(MovingDeath i in moveDeathBlocks)
+            {
+                foreach (MovingDeath j in moveDeathBlocks)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+                }
+            }
 
 
-           foreach (Block i in blocks)
-           {
-               foreach (Block j in blocks)
-               {
-                   i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
-                   j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
-               }
-           }
-           SortedSet<Entity> omg=game.entities;
+            foreach (Block i in blocks)
+            {
+                   foreach (Block j in blocks)
+                   {
+                        i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                        j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+                   }
+            }
+            SortedSet<Entity> omg=game.entities;
 
         }
         

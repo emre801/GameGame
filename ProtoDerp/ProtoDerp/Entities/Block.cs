@@ -34,7 +34,8 @@ namespace ProtoDerp
         public String spriteNumber;
         public Vector2 origPos;
         public float height, width;
-        public Block(Game g, Arena a, Vector2 pos, int playerNum,String spriteNumber,float height, float width)
+        public int drawLevel = 0;
+        public Block(Game g, Arena a, Vector2 pos, int playerNum,String spriteNumber,float height, float width,int drawLevel)
             : base(g)
         {
             this.pos = Constants.player1SpawnLocation + pos;
@@ -44,6 +45,7 @@ namespace ProtoDerp
             LoadContent();
             this.height = height;
             this.width = width;
+            this.drawLevel = drawLevel;
             SetUpPhysics(Constants.player1SpawnLocation + pos);
             origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
             
@@ -53,6 +55,10 @@ namespace ProtoDerp
         protected virtual void SetUpPhysics(Vector2 position)
         {
             World world = game.world;
+            if (drawLevel == 1)
+                world = game.world2;
+            if (drawLevel == 2)
+                world = game.world3;
             float mass = 1000;
             float width = this.width;
             float height = this.height;            

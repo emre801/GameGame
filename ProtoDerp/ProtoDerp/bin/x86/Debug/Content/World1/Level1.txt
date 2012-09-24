@@ -1,26 +1,16 @@
--1 70 block1-4 Block 50 200
-189 70 block1-4 Block 50 200
-382 70 block1-4 Block 50 200
-570 70 block1-4 Block 50 200
-764 70 block1-4 Block 50 200
-956 70 block1-4 Block 50 200
-1131 70 block1-4 Block 50 200
-1320 -504 pixelWood Block 1200 200
--190 -504 pixelWood Block 1200 200
-415 190 bigBlock Block 200 1000
-715 190 bigBlock Block 200 1000
-415 375 bigBlock Block 200 1000
-720 375 bigBlock Block 200 1000
-720 565 bigBlock Block 200 1000
-420 565 bigBlock Block 200 1000
-210 195 bigBlock Block 200 1000
-210 385 bigBlock Block 200 1000
-210 570 bigBlock Block 200 1000
-930 175 bigBlock Block 200 1000
-930 305 bigBlock Block 200 1000
-930 450 bigBlock Block 200 1000
-930 525 bigBlock Block 200 1000
-930 555 bigBlock Block 200 1000
-930 565 bigBlock Block 200 1000
-1147 -10 ahLogo0 GoalBlock 2
+423 158 bigBlock Block 200 1750 0
+1198 -346 block1-2 Block 1200 200 0
+-351 -346 block1-2 Block 1200 200 0
+-160 135 pixelWood Block 153 171 1
+10 135 pixelWood Block 153 171 1
+180 135 pixelWood Block 153 171 1
+350 135 pixelWood Block 153 171 1
+520 135 pixelWood Block 153 171 1
+690 135 pixelWood Block 153 171 1
+835 135 pixelWood Block 153 171 1
+1005 135 pixelWood Block 153 171 1
+345 45 cannon Block 35 57 2
+560 45 cannon Block 35 57 2
+775 45 cannon Block 35 57 2
+1018 -81 ahLogo0 GoalBlock 2
 Demi -100 800 -800 300

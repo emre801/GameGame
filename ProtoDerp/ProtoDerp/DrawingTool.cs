@@ -380,7 +380,7 @@ namespace ProtoDerp
             if (game.gMode == 0)
             {
                 followPlayer();
-                spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointWrap, DepthStencilState.None, null, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
+                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointWrap, DepthStencilState.None, null, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
                 
                 /*spriteBatch.Begin(SpriteSortMode.Deferred,
                          BlendState.NonPremultiplied,

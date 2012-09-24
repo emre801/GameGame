@@ -37,7 +37,7 @@ namespace ProtoDerp
 
         public bool isInLevelSelect = false;
         public LevelSelect levelSelect;
-        public World world,world2;
+        public World world,world2,world3;
 
         public bool startGame = false;
 
@@ -68,6 +68,7 @@ namespace ProtoDerp
             WorldSpeed = 1.0f;
             world = new World(new Vector2(0, 5.0f));
             world2 = new World(new Vector2(0, 0));
+            world3 = new World(new Vector2(0, 0));
             ConvertUnits.SetDisplayUnitToSimUnitRatio(30);
             //graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -285,6 +286,8 @@ namespace ProtoDerp
         {
             //writeLevel(2);
             world = new World(new Vector2(0, 5.0f));
+            world2 = new World(new Vector2(0, 0));
+            world3 = new World(new Vector2(0, 0));
             entities.Clear();
             toBeAdded.Clear();
             cachedEntityLists = new Dictionary<Type, object>();
@@ -336,7 +339,7 @@ namespace ProtoDerp
                 int x = (int)b.origPos.X;
                 int y = (int)b.origPos.Y;
                 String spriteName = b.spriteNumber;
-                lines.AddLast(x + " " + y + " " + spriteName + " Block" +" "+b.height +" "+b.width);
+                lines.AddLast(x + " " + y + " " + spriteName + " Block" +" "+b.height +" "+b.width+" "+b.drawLevel);
 
             }
 
