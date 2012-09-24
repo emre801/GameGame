@@ -577,6 +577,42 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\cannon.xnb</Output>
       <Time>2012-09-21T16:23:17.978498-04:00</Time>
     </Item>
+    <Item>
+      <Source>mountain.png</Source>
+      <Name>mountain</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\mountain.xnb</Output>
+      <Time>2012-09-24T13:42:59.8950207-04:00</Time>
+    </Item>
+    <Item>
+      <Source>grass1.png</Source>
+      <Name>grass1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\grass1.xnb</Output>
+      <Time>2012-09-24T15:25:23.9374398-04:00</Time>
+    </Item>
+    <Item>
+      <Source>grass2.png</Source>
+      <Name>grass2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\grass2.xnb</Output>
+      <Time>2012-09-24T15:25:23.9394399-04:00</Time>
+    </Item>
+    <Item>
+      <Source>grass3.png</Source>
+      <Name>grass3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\grass3.xnb</Output>
+      <Time>2012-09-24T15:25:23.94044-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

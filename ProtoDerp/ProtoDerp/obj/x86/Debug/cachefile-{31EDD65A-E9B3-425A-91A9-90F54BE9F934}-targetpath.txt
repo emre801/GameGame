@@ -70,6 +70,10 @@ Content\Music\GameBeat2.wma
 Content\bullet.0.xnb
 Content\DeathTime.xnb
 Content\cannon.xnb
+Content\mountain.xnb
+Content\grass1.xnb
+Content\grass2.xnb
+Content\grass3.xnb
 Content\World1\Level7.txt
 Content\World1\Level8.txt
 Content\World1\Level9.txt

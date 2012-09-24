@@ -160,6 +160,12 @@ namespace ProtoDerp
             sprites.Add("rage", new Sprite(Content, "rage"));
             sprites.Add("bigBlock", new Sprite(Content, "bigBlock"));
             blockList.AddLast("bigBlock");
+            sprites.Add("grass1", new Sprite(Content, "grass1"));
+            blockList.AddLast("grass1");
+            sprites.Add("grass2", new Sprite(Content, "grass3"));
+            blockList.AddLast("grass2");
+            sprites.Add("grass3", new Sprite(Content, "grass3"));
+            blockList.AddLast("grass3");
             sprites.Add("outPut", new Sprite(Content, "outPut"));
             blockList.AddLast("outPut");
             sprites.Add("pixelWood", new Sprite(Content, "pixelWood"));
@@ -180,6 +186,8 @@ namespace ProtoDerp
             blockList.AddLast("deathSpikes2");
             sprites.Add("cannon", new Sprite(Content, "cannon"));
             blockList.AddLast("cannon");
+            sprites.Add("mountain", new Sprite(Content, "mountain"));
+            blockList.AddLast("mountain");
             sprites.Add("bullet.0", new Sprite(Content, "bullet.0"));
             blockList.AddLast("bullet.0");
             sprites.Add("RageQuit", new Sprite(Content, "RageQuit"));
