@@ -1,6 +1,6 @@
 423 158 bigBlock Block 200 1750 0
-1198 -346 block1-2 Block 1200 200 0
--351 -346 block1-2 Block 1200 200 0
+1198 -346 bigBlock Block 1200 200 0
+-351 -346 bigBlock Block 1200 200 0
 -160 135 pixelWood Block 153 171 1
 10 135 pixelWood Block 153 171 1
 180 135 pixelWood Block 153 171 1
