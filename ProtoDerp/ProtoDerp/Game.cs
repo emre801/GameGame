@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -52,6 +53,11 @@ namespace ProtoDerp
         LinkedList<Entity> toBeAdded = new LinkedList<Entity>();
 
         TimeSpan pauseAdjustment = TimeSpan.Zero;
+
+        public Stopwatch stopWatch = new Stopwatch();
+
+        public Stopwatch animationTime = new Stopwatch();
+        public bool deathAnimation = false,winningAnimation=false;
 
         LinkedList<Entity> toBeRemoved = new LinkedList<Entity>();
         public bool loadNewLevel = false;
@@ -301,6 +307,8 @@ namespace ProtoDerp
             cachedEntityLists = new Dictionary<Type, object>();
             drawingTool.initialize();
             cachedEntityLists = new Dictionary<Type, object>();
+            stopWatch.Reset();
+            stopWatch.Start();
             if (!this.isInCreatorMode)
                 populateWorld();
             else
@@ -313,12 +321,18 @@ namespace ProtoDerp
 
         public void nextLevel(int level)
         {
+            /*
             entities.Clear();
             clearEntities();
             cachedEntityLists = new Dictionary<Type, object>();            
             currentLevel = level;
+             * */
             //newLevel();
-            loadNewLevel = true;
+            currentLevel = level;
+            winningAnimation = true;
+            animationTime.Reset();
+            animationTime.Start();
+            //loadNewLevel = true;
         }
 
         public void playSong(String songName)
@@ -389,16 +403,18 @@ namespace ProtoDerp
         protected override void Update(GameTime gameTime)
         {
             
+
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
             {
                 Exit();
             }
 
-            if (loadNewLevel)
+            if (loadNewLevel||restart||((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Start))
             {
-                cachedEntityLists.Clear();
-                newLevel();
+                restart = false;
                 loadNewLevel = false;
+                cachedEntityLists.Clear();
+                newLevel();                
             }
             if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Back))
             {
@@ -416,7 +432,7 @@ namespace ProtoDerp
                 isInCreatorMode = false;
 
             }
-
+            /*
             if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Start) || restart)
             {
                 //numDeath++;
@@ -430,14 +446,13 @@ namespace ProtoDerp
                     newLevel();
                 }                
             }
+             * */
             playerOneInput.Update(gameTime);
 
             if (isInCreatorMode)
             {
                 updateCreatorCamera();
             }
-
-
 
             GameTime pauseAdjustedGameTime = new GameTime(
                   gameTime.TotalGameTime - pauseAdjustment,
@@ -471,8 +486,37 @@ namespace ProtoDerp
                     toBeRemoved.AddLast(e);
                 }
             }
-            world.Step((float)(gameTime.ElapsedGameTime.TotalMilliseconds * 0.002));
-            
+            if (!winningAnimation && !deathAnimation)
+                world.Step((float)(gameTime.ElapsedGameTime.TotalMilliseconds * 0.002));
+            if (winningAnimation == true)
+            {
+                animationTime.Stop();
+                TimeSpan ts = animationTime.Elapsed;
+                animationTime.Start();
+                if (ts.CompareTo(new TimeSpan(0, 0, 2)) > 0)
+                {
+                    //entities.Clear();
+                    //clearEntities();
+                    //cachedEntityLists = new Dictionary<Type, object>();
+                    //currentLevel = level;
+                    winningAnimation = false;
+                    loadNewLevel = true;
+                    //return;
+                }
+            }
+            if (deathAnimation == true)
+            {
+                animationTime.Stop();
+                TimeSpan ts = animationTime.Elapsed;
+                animationTime.Start();
+                if (ts.CompareTo(new TimeSpan(0, 0, 2)) > 0)
+                {
+                    deathAnimation = false;
+                    restart = true;
+                    //return;
+                }
+            }
+
             
             base.Update(gameTime);
 
@@ -494,7 +538,8 @@ namespace ProtoDerp
         {
             //newLevel();
             numDeath++;
-            restart = true;
+            deathAnimation = true;
+            //restart = true;
         }
 
         // Caching entity lists so that we don't need to regenerate them every time.

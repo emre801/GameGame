@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -70,8 +71,15 @@ namespace ProtoDerp
 
         public void DrawCredits(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            String str = "Time:     Death: " + game.numDeath; ;
-                
+            game.stopWatch.Stop();
+            TimeSpan ts = game.stopWatch.Elapsed;
+            string elapsedTime = String.Format("{0:00}:{1:00}.{2:00}",
+             ts.Minutes, ts.Seconds,
+            ts.Milliseconds / 10);
+            String str = "Time: " + elapsedTime + " Death: " + game.numDeath; 
+            if(!game.winningAnimation)
+            game.stopWatch.Start();
+
             String[] tempstrMulti = str.Split("|".ToCharArray());
             SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
             tempstrMulti = str.Split("|".ToCharArray());
