@@ -613,6 +613,33 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\grass3.xnb</Output>
       <Time>2012-09-24T15:25:23.94044-04:00</Time>
     </Item>
+    <Item>
+      <Source>fire0.png</Source>
+      <Name>fire0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\fire0.xnb</Output>
+      <Time>2012-09-26T11:56:18.4580159-04:00</Time>
+    </Item>
+    <Item>
+      <Source>fire1.png</Source>
+      <Name>fire1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\fire1.xnb</Output>
+      <Time>2012-09-26T11:56:18.459016-04:00</Time>
+    </Item>
+    <Item>
+      <Source>fire2.png</Source>
+      <Name>fire2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\fire2.xnb</Output>
+      <Time>2012-09-26T11:56:18.4610161-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

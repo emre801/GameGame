@@ -157,6 +157,13 @@ namespace ProtoDerp
         }
         public override void Update(GameTime gameTime, float worldSpeed)
         {
+            if (game.deathAnimation)
+            {
+                playerSprite = game.getSprite("fire1");
+                return;
+
+            }
+
             float direction = inputState.GetJoyDirection();
             float x = (float)Math.Sin(direction);
             float y = (float)Math.Cos(direction) - 1;

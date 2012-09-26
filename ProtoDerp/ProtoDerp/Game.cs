@@ -69,6 +69,7 @@ namespace ProtoDerp
         public float windowWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
         public int numDeath;
         public float maxLeft, maxRight, maxTop, maxButtom;
+        public int count = 0;
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -160,6 +161,9 @@ namespace ProtoDerp
             playerOneInput = new XboxInput(PlayerIndex.One);
 
             //Load Sprites
+            sprites.Add("fire0", new Sprite(Content, "fire0"));
+            sprites.Add("fire1", new Sprite(Content, "fire1"));
+            sprites.Add("fire2", new Sprite(Content, "fire2"));  
             sprites.Add("cloud1", new Sprite(Content, "cloud1"));
             sprites.Add("DeathTime", new Sprite(Content, "DeathTime"));
             sprites.Add("black", new Sprite(Content,"black"));
@@ -509,10 +513,13 @@ namespace ProtoDerp
                 animationTime.Stop();
                 TimeSpan ts = animationTime.Elapsed;
                 animationTime.Start();
-                if (ts.CompareTo(new TimeSpan(0, 0, 2)) > 0)
+                count++;
+                //Arena.player1.playerSprite = getSprite("fire"+count%3);
+                if (ts.CompareTo(new TimeSpan(0, 0, 0)) > 0)
                 {
                     deathAnimation = false;
                     restart = true;
+                    animationTime.Restart();
                     //return;
                 }
             }

@@ -75,7 +75,7 @@ namespace ProtoDerp
             if(game.gMode==0)
                 le.readFile(game.currentLevel);  
             else
-                le.readFile(1); 
+                le.readFile(8); 
             game.addEntity(player1);
             this.IsVisible = true;
 

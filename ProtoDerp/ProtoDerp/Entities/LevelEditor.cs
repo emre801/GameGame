@@ -68,12 +68,17 @@ namespace ProtoDerp
                 String spriteName = words[2];
                 if (words[3].Equals("Block"))
                 {
+                    Block toBeAdded = new Block(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4]), Convert.ToInt32(words[5]), Convert.ToInt32(words[6]));
+                    if (words.Length >= 8)
+                    {
+                        toBeAdded.setdisAppearTimer(Convert.ToInt32(words[7]));
+                    }                   
                     if(Convert.ToInt32(words[6])==0)
-                        blocks.AddLast(new Block(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4]), Convert.ToInt32(words[5]), Convert.ToInt32(words[6])));
+                        blocks.AddLast(toBeAdded);
                     else if(Convert.ToInt32(words[6])==1)
-                        topBlocks.AddLast(new Block(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4]), Convert.ToInt32(words[5]), Convert.ToInt32(words[6])));
+                        topBlocks.AddLast(toBeAdded);
                     else
-                        buttomBlocks.AddLast(new Block(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4]), Convert.ToInt32(words[5]), Convert.ToInt32(words[6])));
+                        buttomBlocks.AddLast(toBeAdded);
                     
                 }
                 if (words[3].Equals("DeathBlock"))

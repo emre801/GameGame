@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using FarseerPhysics.Common;
 using FarseerPhysics.Controllers;
 using FarseerPhysics.Dynamics;
 using FarseerPhysics.Factories;
+using FarseerPhysics.Dynamics.Contacts;
 
 
 /**
@@ -35,6 +37,10 @@ namespace ProtoDerp
         public Vector2 origPos;
         public float height, width;
         public int drawLevel = 0;
+        public int disappearTimer = -1,maxDisplay=-1;
+        public bool isDisappearing = false;
+        public Stopwatch stopWatch = new Stopwatch();
+        public float displayAlpha = 0;
         public Block(Game g, Arena a, Vector2 pos, int playerNum,String spriteNumber,float height, float width,int drawLevel)
             : base(g)
         {
@@ -48,7 +54,29 @@ namespace ProtoDerp
             this.drawLevel = drawLevel;
             SetUpPhysics(Constants.player1SpawnLocation + pos);
             origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
+            fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
             
+
+        }
+
+        bool OnCollision(Fixture fixtureA, Fixture fixtureB, Contact contact)
+        {            
+            if (contact.IsTouching())
+            {
+                if (disappearTimer == 0)
+                    return false;
+                if (!isDisappearing)
+                {
+                    stopWatch.Start();
+                    isDisappearing = true;
+                }
+            }
+            return true;
+        }
+        public void setdisAppearTimer(int disappearTimer)
+        {
+            this.disappearTimer = disappearTimer;
+            this.maxDisplay = disappearTimer;
 
         }
 
@@ -138,7 +166,22 @@ namespace ProtoDerp
 
         public override void Update(GameTime gameTime, float worldSpeed)
         {
-          
+            if (disappearTimer == 0)
+            {
+                isDisappearing = false;
+                this.fixture.CollisionFilter.IgnoreCollisionWith(game.Arena.player1.fixture);
+                game.Arena.player1.fixture.CollisionFilter.IgnoreCollisionWith(this.fixture);
+            }
+            if (isDisappearing)
+            {
+                stopWatch.Stop();
+                TimeSpan ts = stopWatch.Elapsed;
+                stopWatch.Start();                
+                if(ts.CompareTo(new TimeSpan(0,0,1))>0)
+                {
+                    disappearTimer--;
+                }
+            }          
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -148,7 +191,7 @@ namespace ProtoDerp
             int i = playerSprite.index.Width;
             Point bottomRight = new Point(playerSprite.index.Width, playerSprite.index.Height);
             Rectangle targetRect = new Rectangle((int)ringDrawPoint.X, (int)ringDrawPoint.Y, bottomRight.X, bottomRight.Y);
-            spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, Color.White, body.Rotation, origin, SpriteEffects.None, 0f);
+            spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, Color.White*(disappearTimer/maxDisplay), body.Rotation, origin, SpriteEffects.None, 0f);
         
         }
 
