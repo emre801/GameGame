@@ -40,7 +40,8 @@ namespace ProtoDerp
         public int disappearTimer = -1,maxDisplay=-1;
         public bool isDisappearing = false;
         public Stopwatch stopWatch = new Stopwatch();
-        public float displayAlpha = 0;
+        public float displayAlpha = 1;
+        float fadeOutRatio=0;
         public Block(Game g, Arena a, Vector2 pos, int playerNum,String spriteNumber,float height, float width,int drawLevel)
             : base(g)
         {
@@ -63,8 +64,8 @@ namespace ProtoDerp
         {            
             if (contact.IsTouching())
             {
-                if (disappearTimer == 0)
-                    return false;
+                if (disappearTimer < 0)
+                    return true;
                 if (!isDisappearing)
                 {
                     stopWatch.Start();
@@ -77,6 +78,7 @@ namespace ProtoDerp
         {
             this.disappearTimer = disappearTimer;
             this.maxDisplay = disappearTimer;
+            this.fadeOutRatio = 1f / (float)disappearTimer;
 
         }
 
@@ -172,14 +174,18 @@ namespace ProtoDerp
                 this.fixture.CollisionFilter.IgnoreCollisionWith(game.Arena.player1.fixture);
                 game.Arena.player1.fixture.CollisionFilter.IgnoreCollisionWith(this.fixture);
             }
+            
+
             if (isDisappearing)
             {
                 stopWatch.Stop();
-                TimeSpan ts = stopWatch.Elapsed;
+                TimeSpan ts = stopWatch.Elapsed;                
                 stopWatch.Start();                
                 if(ts.CompareTo(new TimeSpan(0,0,1))>0)
                 {
+                    stopWatch.Reset();
                     disappearTimer--;
+                    displayAlpha -= fadeOutRatio;
                 }
             }          
         }
@@ -191,7 +197,8 @@ namespace ProtoDerp
             int i = playerSprite.index.Width;
             Point bottomRight = new Point(playerSprite.index.Width, playerSprite.index.Height);
             Rectangle targetRect = new Rectangle((int)ringDrawPoint.X, (int)ringDrawPoint.Y, bottomRight.X, bottomRight.Y);
-            spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, Color.White*(disappearTimer/maxDisplay), body.Rotation, origin, SpriteEffects.None, 0f);
+
+            spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, Color.White * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
         
         }
 

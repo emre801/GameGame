@@ -55,6 +55,8 @@ namespace ProtoDerp
         public FixedAngleJoint fixedAngleJoint;
         public RevoluteJoint motor;
 
+        KeyboardInput keyInput;
+
         public PlayableCharacter(Game g, Arena a, Vector2 pos, int playerNum)
             : base(g)
         {
@@ -71,6 +73,7 @@ namespace ProtoDerp
             run = false;
             if (g.isInCreatorMode)
                 body.IgnoreGravity = true;
+            keyInput = new KeyboardInput();
 
         }
         void OnSeparation(Fixture fixtureA, Fixture fixtureB)
@@ -157,6 +160,7 @@ namespace ProtoDerp
         }
         public override void Update(GameTime gameTime, float worldSpeed)
         {
+            keyInput.Update(gameTime);
             if (game.deathAnimation)
             {
                 playerSprite = game.getSprite("fire1");
@@ -171,7 +175,9 @@ namespace ProtoDerp
             //body.ApplyLinearImpulse(new Vector2(inputState.getXDirection() * 2f, 0));// inputState.getYDirection() * 300f));
 
             float xDirection = inputState.getXDirection();
+            xDirection += keyInput.HorizontalMovement();
             float yDirection = inputState.getYDirection();
+            yDirection += keyInput.VerticalMovement();
             float runningValue = 1;
             distance = (float)(distance + gameTime.ElapsedGameTime.TotalMilliseconds * 0.002f * Math.Abs(body.LinearVelocity.X));
             if (distance > 0.9f)
@@ -187,15 +193,15 @@ namespace ProtoDerp
                 return;
             }
 
-            if (inputState.IsButtonPressed(Buttons.RightShoulder))
+            if (inputState.IsButtonPressed(Buttons.RightShoulder)|| keyInput.IsNewKeyPressed(Keys.Z))
                 runningValue = 2f;
             if (onGround)
             {
                 if ((Math.Abs(body.LinearVelocity.X) < 5 * runningValue))
                 {
-                    body.ApplyLinearImpulse(new Vector2(inputState.getXDirection() * 0.35f * runningValue, 0));// inputState.getYDirection() * 300f));
+                    body.ApplyLinearImpulse(new Vector2(xDirection * 0.35f * runningValue, 0));// inputState.getYDirection() * 300f));
                 }
-                if (inputState.getXDirection() == 0)
+                if (xDirection == 0)
                     fixture.Friction = 20;
                 else
                     fixture.Friction = 0;
@@ -203,7 +209,7 @@ namespace ProtoDerp
             else
             {
 
-                body.ApplyLinearImpulse(new Vector2(inputState.getXDirection() * 0.35f * runningValue, 0));// inputState.getYDirection() * 300f));
+                body.ApplyLinearImpulse(new Vector2(xDirection * 0.35f * runningValue, 0));// inputState.getYDirection() * 300f));
                 //motor.MotorSpeed = inputState.getXDirection()*10;
                 if (inputState.getXDirection() == 0)
                     fixture.Friction = 10;
@@ -216,7 +222,7 @@ namespace ProtoDerp
                     body.ApplyLinearImpulse(new Vector2(0, yDirection * 0.12f));
             }
 
-            if (inputState.isAPressed() && onGround)// && body.LinearVelocity.Y > -50)
+            if ((inputState.isAPressed()|| keyInput.IsNewKeyPressed(Keys.Space)) && onGround)// && body.LinearVelocity.Y > -50)
             {
                 body.IgnoreGravity = true;
                 body.LinearVelocity = new Vector2(body.LinearVelocity.X, 0);
@@ -228,7 +234,7 @@ namespace ProtoDerp
                 modes = Modes.AIRUP;
             }
 
-            if (inputState.IsNewButtonReleased(Buttons.A) && body.LinearVelocity.Y < -1)
+            if ((inputState.IsNewButtonReleased(Buttons.A)  || keyInput.IsNewKeyReleased(Keys.Space))&& body.LinearVelocity.Y < -1)
             {
                 body.LinearVelocity = new Vector2(body.LinearVelocity.X, body.LinearVelocity.Y / 2f);
             }

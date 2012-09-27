@@ -68,6 +68,8 @@ Content\grass3.xnb
 Content\fire0.xnb
 Content\fire1.xnb
 Content\fire2.xnb
+Content\deathSpikes3.xnb
+Content\deathSpikes4.xnb
 Content\Rage\Rage1.wma
 Content\Rage\Rage2.wma
 Content\Rage\Rage3.wma
@@ -77,6 +79,11 @@ Content\Rage\Rage6.wma
 Content\Rage\Rage7.wma
 Content\Rage\Rage8.wma
 Content\Music\GameBeat2.wma
+Content\World1\Level11.txt
+Content\World1\Level14.txt
+Content\World1\Level13.txt
+Content\World1\Level12.txt
+Content\World1\Level10.txt
 Content\World1\Level7.txt
 Content\World1\Level8.txt
 Content\World1\Level9.txt

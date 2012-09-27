@@ -9,6 +9,9 @@ namespace ProtoDerp
 {
     class Constants
     {
+        public const int WRITE_LEVEL = 12;
+        public const int READ_LEVEL = 12;
+
         public const double GAMEWORLD_ASPECT_RATIO = 4f / 3f; // Width of game world / height of game world
 
         // The size of the screen in pixels

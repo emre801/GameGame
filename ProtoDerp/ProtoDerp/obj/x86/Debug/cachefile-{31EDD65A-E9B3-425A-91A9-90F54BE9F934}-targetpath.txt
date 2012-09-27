@@ -77,6 +77,13 @@ Content\grass3.xnb
 Content\fire0.xnb
 Content\fire1.xnb
 Content\fire2.xnb
+Content\deathSpikes3.xnb
+Content\deathSpikes4.xnb
+Content\World1\Level11.txt
+Content\World1\Level14.txt
+Content\World1\Level13.txt
+Content\World1\Level12.txt
+Content\World1\Level10.txt
 Content\World1\Level7.txt
 Content\World1\Level8.txt
 Content\World1\Level9.txt

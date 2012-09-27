@@ -194,6 +194,10 @@ namespace ProtoDerp
             blockList.AddLast("deathSpikes");
             sprites.Add("deathSpikes2", new Sprite(Content, "deathSpikes2"));
             blockList.AddLast("deathSpikes2");
+            sprites.Add("deathSpikes3", new Sprite(Content, "deathSpikes3"));
+            blockList.AddLast("deathSpikes3");
+            sprites.Add("deathSpikes4", new Sprite(Content, "deathSpikes4"));
+            blockList.AddLast("deathSpikes4");
             sprites.Add("cannon", new Sprite(Content, "cannon"));
             blockList.AddLast("cannon");
             sprites.Add("mountain", new Sprite(Content, "mountain"));

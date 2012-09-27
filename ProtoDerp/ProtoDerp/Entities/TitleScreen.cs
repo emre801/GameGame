@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace ProtoDerp
 {
@@ -47,6 +48,8 @@ namespace ProtoDerp
         int decreaseAlpha = -1; //If set to something other than -1, fades the title screen out, and performs
         //the parallel option (that matches select)
 
+        KeyboardInput keyInput;
+
         public TitleScreen(Game g)
             : base(g)
         {
@@ -79,10 +82,13 @@ namespace ProtoDerp
             //battleOptions = new BattleOptions(g, this);
             //game.addEntity(battleOptions);
             //battleOptions.IsVisible = false;
+
+            keyInput = new KeyboardInput();
         }
 
         public override void Update(GameTime gameTime, float worldFactor)
         {
+            keyInput.Update(gameTime);
             if (IsVisible)
             {
                 game.drawingTool.resetCamera();
@@ -109,7 +115,7 @@ namespace ProtoDerp
                 posLogoHandLong = new Vector2(Constants.GAME_WORLD_WIDTH * 0.309f, Constants.GAME_WORLD_HEIGHT * (0.148f + offsetGear));
 
                 //Menu Control
-                if (this.player1.IsUpPressed() && alpha >= 1)
+                if ((this.player1.IsUpPressed() || keyInput.IsNewKeyPressed(Keys.Up)) && alpha >= 1)
                 {
                     //game.getSound("Audio\\Waves\\menuNavigate").Play();
                     select -= 1;
@@ -117,14 +123,14 @@ namespace ProtoDerp
                         select = numOptions - 1;
                    
                 }
-                else if (this.player1.IsDownPressed() && alpha >= 1)
+                else if ((this.player1.IsDownPressed() || keyInput.IsNewKeyPressed(Keys.Down)) && alpha >= 1)
                 {
                    // game.getSound("Audio\\Waves\\menuNavigate").Play();
                     select += 1;
                     if (select > numOptions - 1)
                         select = 0;
                 }
-                else if (this.player1.IsSelectPressed() && alpha >= 1)
+                else if ((this.player1.IsSelectPressed() || keyInput.IsNewKeyPressed(Keys.Space)) && alpha >= 1)
                 {
                     //game.getSound("Audio\\Waves\\menuSelect").Play();
                     game.sounds["Rage//Wave//Opening"].Play();

@@ -409,6 +409,36 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="deathSpikes3.png">
+      <Name>deathSpikes3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="deathSpikes4.png">
+      <Name>deathSpikes4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Content Include="World1\Level11.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level11</Name>
+    </Content>
+    <Content Include="World1\Level14.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level14</Name>
+    </Content>
+    <Content Include="World1\Level13.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level13</Name>
+    </Content>
+    <Content Include="World1\Level12.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level12</Name>
+    </Content>
+    <Content Include="World1\Level10.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level10</Name>
+    </Content>
     <Content Include="World1\Level7.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>Level7</Name>
