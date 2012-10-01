@@ -70,6 +70,12 @@ Content\fire1.xnb
 Content\fire2.xnb
 Content\deathSpikes3.xnb
 Content\deathSpikes4.xnb
+Content\cloud.xnb
+Content\Music\ForrestSounds.xnb
+Content\Tree.xnb
+Content\Tree2.xnb
+Content\Tree3.xnb
+Content\Tree4.xnb
 Content\Rage\Rage1.wma
 Content\Rage\Rage2.wma
 Content\Rage\Rage3.wma
@@ -79,6 +85,7 @@ Content\Rage\Rage6.wma
 Content\Rage\Rage7.wma
 Content\Rage\Rage8.wma
 Content\Music\GameBeat2.wma
+Content\Music\ForrestSounds.wma
 Content\World1\Level11.txt
 Content\World1\Level14.txt
 Content\World1\Level13.txt

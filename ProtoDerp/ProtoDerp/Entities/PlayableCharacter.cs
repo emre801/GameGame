@@ -202,7 +202,7 @@ namespace ProtoDerp
                     body.ApplyLinearImpulse(new Vector2(xDirection * 0.35f * runningValue, 0));// inputState.getYDirection() * 300f));
                 }
                 if (xDirection == 0)
-                    fixture.Friction = 20;
+                    fixture.Friction = 80;
                 else
                     fixture.Friction = 0;
             }
@@ -231,7 +231,7 @@ namespace ProtoDerp
                 onGround = false;
                 maxSpeedInAir = body.LinearVelocity;
                 game.sounds["Rage//Wave//jump"].Play();
-                modes = Modes.AIRUP;
+                //modes = Modes.AIRUP;
             }
 
             if ((inputState.IsNewButtonReleased(Buttons.A)  || keyInput.IsNewKeyReleased(Keys.Space))&& body.LinearVelocity.Y < -1)
@@ -289,6 +289,7 @@ namespace ProtoDerp
             if (modes == Modes.WALL)
             {
                 playerSprite = game.getSprite("MikeWall");
+                fixture.Friction = 80;
             }
 
         }

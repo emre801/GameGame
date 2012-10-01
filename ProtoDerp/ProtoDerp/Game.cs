@@ -111,7 +111,7 @@ namespace ProtoDerp
             Arena = new Arena(this, Arena.GameMode.MODE_MULTI_PLAYER);
             addEntity(Arena);
             Arena.setUpDemensions(maxLeft, maxRight, maxTop, maxButtom);
-
+            //playSong("Music//ForrestSounds");
             
             //GUI
             //GUI = new GUI(this);
@@ -163,8 +163,9 @@ namespace ProtoDerp
             //Load Sprites
             sprites.Add("fire0", new Sprite(Content, "fire0"));
             sprites.Add("fire1", new Sprite(Content, "fire1"));
-            sprites.Add("fire2", new Sprite(Content, "fire2"));  
-            sprites.Add("cloud1", new Sprite(Content, "cloud1"));
+            sprites.Add("fire2", new Sprite(Content, "fire2"));
+            sprites.Add("cloud", new Sprite(Content, "cloud"));
+            blockList.AddLast("cloud");
             sprites.Add("DeathTime", new Sprite(Content, "DeathTime"));
             sprites.Add("black", new Sprite(Content,"black"));
             sprites.Add("rage", new Sprite(Content, "rage"));
@@ -238,6 +239,15 @@ namespace ProtoDerp
             
             sprites.Add("clouds", new Sprite(Content, "clouds"));
 
+            sprites.Add("Tree", new Sprite(Content, "Tree"));
+            blockList.AddLast("Tree");
+            sprites.Add("Tree2", new Sprite(Content, "Tree2"));
+            blockList.AddLast("Tree2");
+            sprites.Add("Tree3", new Sprite(Content, "Tree3"));
+            blockList.AddLast("Tree3");
+            sprites.Add("Tree4", new Sprite(Content, "Tree4"));
+            blockList.AddLast("Tree4");
+
             //Load Fonts
             fonts[(int)Fonts.FT_MEDIUM] = Content.Load<SpriteFont>("Font\\share_20px_reg");
             fonts[(int)Fonts.FT_HEADER] = Content.Load<SpriteFont>("Font\\share_48px_bold");
@@ -259,6 +269,7 @@ namespace ProtoDerp
             addSound("Rage//Rage6");
             addSound("Rage//Rage7");
             addSound("Rage//Rage8");*/
+            //addSound("Music//ForrestSounds");
             
             if (Constants.ENABLE_TITLE_SCREEN)
             {
@@ -277,6 +288,7 @@ namespace ProtoDerp
             levelSelect = new LevelSelect(this);
             levelSelect.IsVisible = false;
             addEntity(levelSelect);
+           
             //playSong("Music//GameBeat2");
              
         
@@ -351,7 +363,7 @@ namespace ProtoDerp
             //{
                 Song song = Content.Load<Song>(songName);
                 MediaPlayer.Play(song);
-                MediaPlayer.IsRepeating = false;
+                MediaPlayer.IsRepeating = true;
             //}
         }
 

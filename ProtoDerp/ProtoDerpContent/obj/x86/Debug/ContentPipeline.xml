@@ -658,6 +658,61 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\deathSpikes4.xnb</Output>
       <Time>2012-09-27T11:00:08.7360579-04:00</Time>
     </Item>
+    <Item>
+      <Source>cloud.png</Source>
+      <Name>cloud</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\cloud.xnb</Output>
+      <Time>2012-09-28T16:42:07.7380872-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\ForrestSounds.mp3</Source>
+      <Name>Music\ForrestSounds</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\ForrestSounds.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\ForrestSounds.wma</Extra>
+      <Time>2012-10-01T09:52:07.0720296-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Tree.png</Source>
+      <Name>Tree</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Tree.xnb</Output>
+      <Time>2012-10-01T11:27:30.4373873-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Tree2.png</Source>
+      <Name>Tree2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Tree2.xnb</Output>
+      <Time>2012-10-01T11:27:30.4443877-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Tree3.png</Source>
+      <Name>Tree3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Tree3.xnb</Output>
+      <Time>2012-10-01T11:27:30.4473879-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Tree4.png</Source>
+      <Name>Tree4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Tree4.xnb</Output>
+      <Time>2012-10-01T11:27:30.4523882-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

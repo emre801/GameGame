@@ -169,6 +169,7 @@ namespace ProtoDerp
                         //game.playSong("Audio\\Mp3s\\BulletMusicInGame");
                         game.gMode = 0;
                         game.isInLevelSelect = false;
+                        game.playSong("Music//ForrestSounds");
                         game.populateWorld();
                         game.drawingTool.cam.Zoom = 0.55f * game.drawingTool.zoomRatio;
                         IsVisible = false;

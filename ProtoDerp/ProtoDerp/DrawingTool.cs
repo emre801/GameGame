@@ -440,7 +440,23 @@ namespace ProtoDerp
                    break;
                }
            }
+            foreach (Entity e in entities)
+            {
+                if (e is Block)
+                {
+                    Block b = (Block)e;
+                    if (b.drawLevel == 2)
+                    {
+                        e.Draw(gameTime, spriteBatch);
+                    }
+                }
+                if (e is DeathBlock)
+                    e.Draw(gameTime, spriteBatch);
+            }
            endBatch();
+           
+           //foreach (Block i in topBlocks)
+           //game.addEntity(i);
 
            if (game.gMode == 0)
            {
