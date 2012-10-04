@@ -445,13 +445,14 @@ namespace ProtoDerp
                 if (e is Block)
                 {
                     Block b = (Block)e;
-                    if (b.drawLevel == 2)
+                    if (b.drawLevel == 2|| b.drawLevel==0)
                     {
                         e.Draw(gameTime, spriteBatch);
                     }
                 }
-                if (e is DeathBlock)
+                if (e is DeathBlock|| e is GoalBlock)
                     e.Draw(gameTime, spriteBatch);
+                
             }
            endBatch();
            

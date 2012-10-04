@@ -99,18 +99,19 @@ namespace ProtoDerp
                 }
                 
             }
-
+            
             foreach (Block i in buttomBlocks)
-                game.addEntity(i);
-            foreach (Block i in blocks)
                 game.addEntity(i);            
-            foreach (GoalBlock i in goalBlocks)
-                game.addEntity(i);
             foreach (MovingDeath i in moveDeathBlocks)
                 game.addEntity(i);            
             foreach (Block i in topBlocks)
                 game.addEntity(i);
             foreach (DeathBlock i in deathBlocks)
+                game.addEntity(i);
+
+            foreach (Block i in blocks)
+                game.addEntity(i);
+            foreach (GoalBlock i in goalBlocks)
                 game.addEntity(i);
 
                       
