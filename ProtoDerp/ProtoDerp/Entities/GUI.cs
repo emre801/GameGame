@@ -6,6 +6,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Input;
 
 /**
  * 
@@ -27,6 +28,7 @@ namespace ProtoDerp
         int pauseSelect = 0; //0 - Resume Game, 1 - Back to Title
         int pauseSelectCount = 2;
         GameTime startTime;
+        
         public GUI(Game g)
             : base(g)
         {
@@ -49,9 +51,28 @@ namespace ProtoDerp
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             //spriteBatch.Draw(pix.index, new Rectangle(5,5,100,100), Color.White);
-            DrawBackThing(gameTime, spriteBatch);
-            DrawCredits(gameTime, spriteBatch);
+            if (game.gMode == 0)
+            {
+                DrawBackThing(gameTime, spriteBatch);
+                DrawCredits(gameTime, spriteBatch);
+            }
+            if (game.gMode == 2)
+            {
+                DrawCreatorInformation(gameTime, spriteBatch);
+                DrawPositionInformation(gameTime, spriteBatch);
+                DrawCurrentLevelInfo(gameTime, spriteBatch);
+                DrawSaveText(gameTime, spriteBatch);
+                DrawMouse(gameTime, spriteBatch);
+            }
             
+        }
+
+        public void DrawMouse(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            MouseState ms = Mouse.GetState();
+            Rectangle rect= new Rectangle(ms.X,ms.Y,10,15);
+            spriteBatch.Draw(game.getSprite("MouseImage").index, rect,Color.White);
+        
         }
 
 
@@ -94,10 +115,103 @@ namespace ProtoDerp
                     SpriteEffects.None,
                     0);
         }
+        public void DrawCreatorInformation(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            String blockInfo = "Current Block Type = ";
 
+            switch (game.blockType)
+            {
+                case Game.BlockType.Normal:
+                    blockInfo += "Normal";
+                    break;
+                case Game.BlockType.Death:
+                    blockInfo += "Death";
+                    break;
+                case Game.BlockType.Moving:
+                    blockInfo += "Moving";
+                    break;
+                case Game.BlockType.Goal:
+                    blockInfo += "Goal";
+                    break;
 
+            }
 
+            String[] tempstrMulti = blockInfo.Split("|".ToCharArray());
+            SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
+            tempstrMulti = blockInfo.Split("|".ToCharArray());
+            for (int i = 0; i < tempstrMulti.Length; i += 1)
+                spriteBatch.DrawString(font, tempstrMulti[i],
+                    game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * 0.065f, (game.getWorldSize().Y * 0.85f) + (font.MeasureString("A").Y * i))),
+                    Color.White,
+                    0f,
+                    Vector2.Zero,
+                    //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
+                    game.drawingTool.gameToScreen(1f) * 0.25f,
+                    SpriteEffects.None,
+                    0);
 
+        }
+
+        public void DrawPositionInformation(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            String positionInfo = "X: " + (int)game.cXLocation + " Y: " + (int)game.cYLocation ;
+
+            String[] tempstrMulti = positionInfo.Split("|".ToCharArray());
+            SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
+            tempstrMulti = positionInfo.Split("|".ToCharArray());
+            for (int i = 0; i < tempstrMulti.Length; i += 1)
+                spriteBatch.DrawString(font, tempstrMulti[i],
+                    game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * 0.465f, (game.getWorldSize().Y * 0.85f) + (font.MeasureString("A").Y * i))),
+                    Color.White,
+                    0f,
+                    Vector2.Zero,
+                    //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
+                    game.drawingTool.gameToScreen(1f) * 0.25f,
+                    SpriteEffects.None,
+                    0);
+
+        }
+
+        public void DrawCurrentLevelInfo(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            String currentLevel = "Current Level: " + game.currentWriteLevel;
+
+            String[] tempstrMulti = currentLevel.Split("|".ToCharArray());
+            SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
+            tempstrMulti = currentLevel.Split("|".ToCharArray());
+            for (int i = 0; i < tempstrMulti.Length; i += 1)
+                spriteBatch.DrawString(font, tempstrMulti[i],
+                    game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * 0.465f, (game.getWorldSize().Y * 0.90f) + (font.MeasureString("A").Y * i))),
+                    Color.White,
+                    0f,
+                    Vector2.Zero,
+                    //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
+                    game.drawingTool.gameToScreen(1f) * 0.25f,
+                    SpriteEffects.None,
+                    0);
+
+        }
+
+        public void DrawSaveText(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            String currentLevel = "Saved file to: Level"+game.currentWriteLevel+".txt";
+            if (game.saveAlpha >= 0)
+                game.saveAlpha -= 0.01f;
+            String[] tempstrMulti = currentLevel.Split("|".ToCharArray());
+            SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
+            tempstrMulti = currentLevel.Split("|".ToCharArray());
+            for (int i = 0; i < tempstrMulti.Length; i += 1)
+                spriteBatch.DrawString(font, tempstrMulti[i],
+                    game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * 0.465f, (game.getWorldSize().Y * 0.95f) + (font.MeasureString("A").Y * i))),
+                    Color.White*game.saveAlpha,
+                    0f,
+                    Vector2.Zero,
+                    //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
+                    game.drawingTool.gameToScreen(1f) * 0.25f,
+                    SpriteEffects.None,
+                    0);
+
+        }
 
     }
 }

@@ -81,5 +81,8 @@
 1010 -595 cloud Block 102 148 1
 440 -550 cloud Block 102 148 1
 -145 -655 cloud Block 102 148 1
-1018 -81 ahLogo0 GoalBlock 2
-Demi -100 800 -800 300
+530 -740 cloud Block 162 318 0
+1085 -370 deathSpikes3 DeathBlock
+1085 -240 deathSpikes3 DeathBlock
+1018 -81 ahLogo0 GoalBlock 14
+Demi -100 800 -800 500

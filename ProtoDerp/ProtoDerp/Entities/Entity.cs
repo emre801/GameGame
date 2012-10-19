@@ -24,7 +24,7 @@ namespace ProtoDerp
         public bool IsVisible = true;      // If true, this entity's draw function will be called each draw
         public bool IsUpdateable = true;   // If true, this entity's update function will be called each update
         public bool updatesWhenPaused = false;  // If true, this entity updates even when the game is paused
-
+        public bool isSelected = false; //If True the image is HighLighted 
         public int drawPriority = 0;       // Higher numbers get drawn later.  Therefore higher numbers are on top of smaller ones.  DONT CHANGE THIS AFTER CREATING THE ENTITY
         public Vector2 pos = Vector2.Zero; //Position in the room.
         public float scale = 1.0f;         //% scaling factor.
@@ -35,6 +35,8 @@ namespace ProtoDerp
 
         public int animDelay = 100;        //Delay in milliseconds between each frame in this Entity's animation.
         private int animTime = 0;
+
+        
 
         public Vector2 Velocity = new Vector2();
 

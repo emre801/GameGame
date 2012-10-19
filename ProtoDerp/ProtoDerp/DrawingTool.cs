@@ -10,7 +10,7 @@ namespace ProtoDerp
     public class DrawingTool
     {
         readonly GraphicsDeviceManager gdm;
-        BasicEffect effect;
+        //BasicEffect effect;
         SpriteBatch spriteBatch;
         readonly Game game;
         public Camera2d cam;
@@ -66,9 +66,9 @@ namespace ProtoDerp
 
         public void initialize()
         {
-            effect = new BasicEffect(gdm.GraphicsDevice);
-            effect.Projection = Matrix.CreateOrthographicOffCenter(0, gdm.GraphicsDevice.Viewport.Width, gdm.GraphicsDevice.Viewport.Height, 0, -1, 1);
-            effect.VertexColorEnabled = true;
+            //effect = new BasicEffect(gdm.GraphicsDevice);
+            //effect.Projection = Matrix.CreateOrthographicOffCenter(0, gdm.GraphicsDevice.Viewport.Width, gdm.GraphicsDevice.Viewport.Height, 0, -1, 1);
+            //effect.VertexColorEnabled = true;
 
             spriteBatch = new SpriteBatch(gdm.GraphicsDevice);
 
@@ -100,8 +100,8 @@ namespace ProtoDerp
             }
 
 
-            zoomRatio =  h/600f;
-            cam.Zoom = 0.75f*zoomRatio;
+            zoomRatio = 1;// h / 600f;
+            cam.Zoom = 0.75f;// *zoomRatio;
         }
         public void resetCamera()
         {
@@ -287,24 +287,24 @@ namespace ProtoDerp
 
         private void drawPrimitiveElement(PrimitiveDrawingElement p)
         {
-            drawPrimitiveElement(p, 1.0f);
+            //drawPrimitiveElement(p, 1.0f);
         }
 
         private void drawPrimitiveElement(PrimitiveDrawingElement p, float alpha)
         {
-            float temp = effect.Alpha;
-            effect.Alpha = alpha;
-            effect.World = p.transform;
-            foreach (EffectPass ep in effect.CurrentTechnique.Passes)
-            {
-                ep.Apply();
-                if (p.primitiveCount > 0)
-                {
-                    gdm.GraphicsDevice.DrawUserPrimitives<VertexPositionColor>(p.type, p.vertices, p.vertexOffset, p.primitiveCount);
-                }
-            }
-            effect.Alpha = temp;
-        }
+           // float temp = effect.Alpha;
+            //effect.Alpha = alpha;
+            //effect.World = p.transform;
+            //foreach (EffectPass ep in effect.CurrentTechnique.Passes)
+            //{
+            //    ep.Apply();
+            //    if (p.primitiveCount > 0)
+            //    {
+            //        gdm.GraphicsDevice.DrawUserPrimitives<VertexPositionColor>(p.type, p.vertices, p.vertexOffset, p.primitiveCount);
+            //    }
+            //}
+            //effect.Alpha = temp;
+        }//
 
         private void endBatch()
         {
@@ -406,8 +406,8 @@ namespace ProtoDerp
             //Draw all game Entities (sprites)
             foreach (Entity e in entities)
             {
-                if(e is PlayableCharacter)
-                continue;
+                if(e is PlayableCharacter|| e is GUI)
+                    continue;
 
                 if (e.IsVisible)
                 {
@@ -459,12 +459,13 @@ namespace ProtoDerp
            //foreach (Block i in topBlocks)
            //game.addEntity(i);
 
-           if (game.gMode == 0)
+           if (game.gMode == 0|| game.gMode==2)
            {
                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
                game.Arena.gui.Draw(gameTime, spriteBatch);
                spriteBatch.End();
            }
+           
  
         }
 

@@ -86,6 +86,9 @@ Content\Rage\Wave\Rage2.xnb
 Content\Rage\Wave\jump.xnb
 Content\Rage\Wave\death.xnb
 Content\Rage\Wave\Opening.xnb
+Content\CutScene1\0.xnb
+Content\CutScene1\1.xnb
+Content\MouseImage.xnb
 Content\World1\Level11.txt
 Content\World1\Level14.txt
 Content\World1\Level13.txt

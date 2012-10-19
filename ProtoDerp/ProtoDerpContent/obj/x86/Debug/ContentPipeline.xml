@@ -713,6 +713,33 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\Opening.xnb</Output>
       <Time>2012-08-25T15:24:15.1099545-04:00</Time>
     </Item>
+    <Item>
+      <Source>CutScene1\0.png</Source>
+      <Name>CutScene1\0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CutScene1\0.xnb</Output>
+      <Time>2012-10-05T12:40:25.9005716-04:00</Time>
+    </Item>
+    <Item>
+      <Source>CutScene1\1.png</Source>
+      <Name>CutScene1\1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CutScene1\1.xnb</Output>
+      <Time>2012-10-05T12:40:25.907572-04:00</Time>
+    </Item>
+    <Item>
+      <Source>MouseImage.png</Source>
+      <Name>MouseImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\MouseImage.xnb</Output>
+      <Time>2012-10-19T11:51:16.8992535-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

@@ -38,6 +38,11 @@ namespace ProtoDerp
         int blockPressed = 0;
         public float blockWidth, blockHeight;
         int drawLevel = 0;
+        bool inDeleteMode = false,isSelectedBlockChanged=false;
+        int blockIterater = 0;
+
+        Entity selected = null;
+
         public CreaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
             : base(g)
         {
@@ -50,7 +55,6 @@ namespace ProtoDerp
             this.spriteNumber = blockArray[counter];
             
             LoadContent();
-            //SetUpPhysics(Constants.player1SpawnLocation + pos);
             origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
            
             keyInput= new KeyboardInput();
@@ -119,37 +123,81 @@ namespace ProtoDerp
 
         public override void Update(GameTime gameTime, float worldSpeed)
         {
-            
-            moveBlock();
-           
-            KeyboardState keyState = Keyboard.GetState();
+           // KeyboardState keyState = Keyboard.GetState();
             keyInput.Update(gameTime);
+            if (keyInput.IsNewKeyPressed(Keys.M))
+            {
+                blockIterater = 0;
+                inDeleteMode = !inDeleteMode;
+                isSelectedBlockChanged = true;
+                if (selected != null)
+                    selected.isSelected = !selected.isSelected;
+            }
+            if (inDeleteMode)
+            {
+                DeleteBlockSelector();
+                return;
+            }
+            moveBlock();
             if (keyInput.IsNewKeyPressed(Keys.A))
             {
-                addBlock();
+                game.blockType =Game.BlockType.Normal;
                 game.cachedEntityLists = new Dictionary<Type, object>();
                 blockPressed = 0;
             }
             if (keyInput.IsNewKeyPressed(Keys.S))
             {
-                addDeathBlock();
+                game.blockType = Game.BlockType.Death;
                 game.cachedEntityLists = new Dictionary<Type, object>();
                 blockPressed = 1;
             }
             if (keyInput.IsNewKeyPressed(Keys.Z))
-            {                
-                game.writeLevel(Constants.WRITE_LEVEL);
+            {
+                game.saveAlpha = 1;
+                game.writeLevel(game.currentWriteLevel);
             }
             if (keyInput.IsNewKeyPressed(Keys.D)) 
             {
-                addMovingDeathBlock();
+                game.blockType = Game.BlockType.Moving;
                 blockPressed = 2;
             }
             if (keyInput.IsNewKeyPressed(Keys.F))
             {
-                addGoalBlock();
+                game.blockType = Game.BlockType.Goal;
                 game.cachedEntityLists = new Dictionary<Type, object>();
                 blockPressed = 3;
+            }
+            if (keyInput.IsNewKeyPressed(Keys.O))
+            {
+                if(game.currentWriteLevel>0)
+                    game.currentWriteLevel--;
+            }
+            if (keyInput.IsNewKeyPressed(Keys.P))
+            {
+                if(game.currentWriteLevel<Constants.MAX_WRITE_LEVEL)
+                    game.currentWriteLevel++;
+            }
+            
+            if (keyInput.IsNewKeyPressed(Keys.Enter))
+            {
+                switch (game.blockType)
+                {
+                    case Game.BlockType.Normal:
+                        addBlock();
+                        break;
+                    case Game.BlockType.Death:
+                        addDeathBlock();
+                        break;
+                    case Game.BlockType.Moving:
+                        addMovingDeathBlock();
+                        break;
+                    case Game.BlockType.Goal:
+                        addGoalBlock();
+                        game.cachedEntityLists = new Dictionary<Type, object>();
+                        break;
+
+                }
+                
             }
 
             if (keyInput.IsNewKeyPressed(Keys.I) || (keyInput.IsKeyPressed(Keys.I)&&keyInput.IsKeyPressed(Keys.LeftShift)))
@@ -169,6 +217,8 @@ namespace ProtoDerp
                 blockWidth += 5;
             }
 
+            game.cXLocation = pos.X;
+            game.cYLocation = pos.Y;
             chooseNextSprite();
             updateDrawLevel();
         }
@@ -207,6 +257,97 @@ namespace ProtoDerp
             if (keyInput.IsNewKeyPressed(Keys.T))
             {
                 drawLevel = 2;
+            }
+        }
+
+        public void DeleteBlockSelector()
+        {
+            SortedSet<Entity> block= game.entities;
+            int count = 0;
+            if (isSelectedBlockChanged)
+            {
+                isSelectedBlockChanged = false;
+                foreach (Entity e in game.entities)
+                {
+                    if (e is DeathBlock || e is Block || e is MovingDeath || e is GoalBlock)
+                    {
+                        if (count == blockIterater)
+                        {
+                            selected = e;
+                            e.isSelected = true;
+                        }
+                        count++;
+                    }
+                }
+            }
+            moveSelectedBlock();
+            if (keyInput.IsNewKeyPressed(Keys.Q))
+            {
+                if (blockIterater != 0)
+                    blockIterater--;
+                isSelectedBlockChanged=true;
+                selected.isSelected = false;
+            }
+            if (keyInput.IsNewKeyPressed(Keys.W))
+            {
+                blockIterater++;
+                isSelectedBlockChanged = true;
+                selected.isSelected = false;
+
+            }
+            
+
+
+        }
+
+        public void moveSelectedBlock()
+        {
+            XboxInput xbi = (XboxInput)game.playerOneInput;
+            float turbo = 1;
+            if (xbi.isTriggerPressed())
+                turbo = 5;
+            float x = xbi.HorizontalMovementRight();
+            float y = xbi.VerticalMovementRight();
+            KeyboardState keyState = Keyboard.GetState();
+            float xturbo = 1;
+            if (keyState.IsKeyDown(Keys.LeftShift))
+                xturbo = 5;
+            if (keyState.IsKeyDown(Keys.Up))
+            {
+                y += 5;// 1 * xturbo;
+            }
+            if (keyState.IsKeyDown(Keys.Down))
+            {
+                y -= 5;// -1 * xturbo;
+            }
+            if (keyState.IsKeyDown(Keys.Left))
+            {
+                x -= 5;// -1 * xturbo;
+            }
+            if (keyState.IsKeyDown(Keys.Right))
+            {
+                x += 5;// 1 * xturbo;
+            }
+
+            if (selected is Block)
+            {
+                ((Block)selected).body.Position += new Vector2(ConvertUnits.ToSimUnits(x * turbo), ConvertUnits.ToSimUnits(y * turbo));
+                ((Block)selected).origPos += new Vector2(x * turbo, y * turbo);
+            }
+            if (selected is DeathBlock)
+            {
+                ((DeathBlock)selected).body.Position += new Vector2(ConvertUnits.ToSimUnits(x * turbo), ConvertUnits.ToSimUnits(y * turbo));
+                ((DeathBlock)selected).origPos += new Vector2(x * turbo, y * turbo);
+            }
+            if (selected is MovingDeath)
+            {
+                ((MovingDeath)selected).body.Position += new Vector2(ConvertUnits.ToSimUnits(x * turbo), ConvertUnits.ToSimUnits(y * turbo));
+                ((MovingDeath)selected).origPos += new Vector2(x * turbo, y * turbo);
+            }
+            if (selected is GoalBlock)
+            {
+                ((GoalBlock)selected).body.Position += new Vector2(ConvertUnits.ToSimUnits(x * turbo), ConvertUnits.ToSimUnits(y * turbo));
+                ((GoalBlock)selected).origPos += new Vector2(x * turbo, y * turbo);
             }
         }
 
@@ -268,8 +409,8 @@ namespace ProtoDerp
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            
-            spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);
+            if(!inDeleteMode)
+                spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);
 
         }
 

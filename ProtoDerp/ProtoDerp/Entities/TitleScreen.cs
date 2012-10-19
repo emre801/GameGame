@@ -167,14 +167,15 @@ namespace ProtoDerp
                     if (decreaseAlpha == 0)
                     {
                         //game.playSong("Audio\\Mp3s\\BulletMusicInGame");
-                        game.gMode = 0;
+                        /*game.gMode = 0;
                         game.isInLevelSelect = false;
                         game.playSong("Music//ForrestSounds");
                         game.populateWorld();
                         game.drawingTool.cam.Zoom = 0.55f * game.drawingTool.zoomRatio;
+                        */
                         IsVisible = false;
-                        
-                        
+                        CutScene ct = new CutScene(game, 1);
+                        game.addEntity(ct);
 
 
                     }
@@ -209,13 +210,9 @@ namespace ProtoDerp
                 spriteBatch.Draw(sprLogoText.index, game.drawingTool.getDrawingCoords(posLogoText), null, Color.White * alpha * 1f, 0, sprLogoText.origin, game.drawingTool.gameToScreen(1.0f * scaleFactor), SpriteEffects.None, 0);
                 spriteBatch.Draw(sprSelectText.index, game.drawingTool.getDrawingCoords(posSelectText), null, Color.White * alpha * 1f, 0, sprSelectText.origin, game.drawingTool.gameToScreen(1.0f * scaleFactor), SpriteEffects.None, 0);
                 game.GUI.DrawRectangle(spriteBatch, new Rectangle((int)game.drawingTool.gameToScreen(0), (int)game.drawingTool.gameToScreen(posSelectInner.Y), (int)game.drawingTool.gameXCoordToScreenCoordX(game.getWorldSize().X), (int)game.drawingTool.gameToScreen(sprSelectInner.index.Height * scaleFactor)), Color.Black, .75f);
-                //spriteBatch.Draw(sprSelectOuter.index, game.drawingTool.getDrawingCoords(posSelectOuter), null, Color.White*alpha, 0, sprSelectOuter.origin, game.drawingTool.gameToScreen(1.0f * scaleFactor), SpriteEffects.None, 0);
                 
             }
         }
-        
-
-
 
         public void DrawCredits(GameTime gameTime, SpriteBatch spriteBatch)
         {

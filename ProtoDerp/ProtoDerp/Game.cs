@@ -70,6 +70,14 @@ namespace ProtoDerp
         public int numDeath;
         public float maxLeft, maxRight, maxTop, maxButtom;
         public int count = 0;
+
+        public enum BlockType { Normal, Death, Moving, Goal };
+        public BlockType blockType = BlockType.Normal;
+
+        public float cXLocation=0, cYLocation=0;
+        public int currentWriteLevel = Constants.WRITE_LEVEL;
+        public float saveAlpha = 0;
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -160,7 +168,7 @@ namespace ProtoDerp
             drawingTool.initialize();
             playerOneInput = new XboxInput(PlayerIndex.One);
 
-            //Load Sprites
+            //Load Sprites            
             sprites.Add("fire0", new Sprite(Content, "fire0"));
             sprites.Add("fire1", new Sprite(Content, "fire1"));
             sprites.Add("fire2", new Sprite(Content, "fire2"));
@@ -247,6 +255,8 @@ namespace ProtoDerp
             blockList.AddLast("Tree3");
             sprites.Add("Tree4", new Sprite(Content, "Tree4"));
             blockList.AddLast("Tree4");
+
+            sprites.Add("MouseImage", new Sprite(Content, "MouseImage"));
 
             //Load Fonts
             fonts[(int)Fonts.FT_MEDIUM] = Content.Load<SpriteFont>("Font\\share_20px_reg");
@@ -378,6 +388,8 @@ namespace ProtoDerp
             LinkedList<Block> blocks = getEntitiesOfType<Block>();
             foreach (Block b in blocks)
             {
+                if (!b.IsVisible)
+                    continue;
                 int x = (int)b.origPos.X;
                 int y = (int)b.origPos.Y;
                 String spriteName = b.spriteNumber;
@@ -388,6 +400,8 @@ namespace ProtoDerp
             LinkedList<DeathBlock> deathBlocks = getEntitiesOfType<DeathBlock>();
             foreach (DeathBlock b in deathBlocks)
             {
+                if (!b.IsVisible)
+                    continue;
                 int x = (int)b.origPos.X;
                 int y = (int)b.origPos.Y;
                 String spriteName = b.spriteNumber;
@@ -398,6 +412,8 @@ namespace ProtoDerp
             LinkedList<GoalBlock> goalBlocks = getEntitiesOfType<GoalBlock>();
             foreach (GoalBlock b in goalBlocks)
             {
+                if (!b.IsVisible)
+                    continue;
                 int x = (int)b.origPos.X;
                 int y = (int)b.origPos.Y;
                 String spriteName = b.spriteNumber;
@@ -408,6 +424,8 @@ namespace ProtoDerp
             LinkedList<MovingDeath> movingBlock = getEntitiesOfType<MovingDeath>();
             foreach (MovingDeath b in movingBlock)
             {
+                if (!b.IsVisible)
+                    continue;
                 int x = (int)b.origPos.X;
                 int y = (int)b.origPos.Y;
                 String spriteName = b.spriteNumber;
@@ -428,8 +446,13 @@ namespace ProtoDerp
             {
                 Exit();
             }
+            if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Start))
+            {
+                if (gMode == 0)
+                    restart = true;
+            }
 
-            if (loadNewLevel||restart||((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Start))
+            if (loadNewLevel||restart)
             {
                 restart = false;
                 loadNewLevel = false;
