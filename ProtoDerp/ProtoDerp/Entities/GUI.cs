@@ -58,11 +58,14 @@ namespace ProtoDerp
             }
             if (game.gMode == 2)
             {
-                DrawCreatorInformation(gameTime, spriteBatch);
-                DrawPositionInformation(gameTime, spriteBatch);
-                DrawCurrentLevelInfo(gameTime, spriteBatch);
-                DrawSaveText(gameTime, spriteBatch);
-                DrawMouse(gameTime, spriteBatch);
+                if (!game.inDeleteMode)
+                {
+                    DrawCreatorInformation(gameTime, spriteBatch);
+                    DrawPositionInformation(gameTime, spriteBatch);
+                    DrawCurrentLevelInfo(gameTime, spriteBatch);
+                    DrawSaveText(gameTime, spriteBatch);
+                    DrawMouse(gameTime, spriteBatch);
+                }
             }
             
         }

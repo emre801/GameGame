@@ -78,6 +78,8 @@ namespace ProtoDerp
         public int currentWriteLevel = Constants.WRITE_LEVEL;
         public float saveAlpha = 0;
 
+        public bool inDeleteMode = false;
+
         public Game()
         {
             WorldSpeed = 1.0f;

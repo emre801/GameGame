@@ -38,7 +38,8 @@ namespace ProtoDerp
         int blockPressed = 0;
         public float blockWidth, blockHeight;
         int drawLevel = 0;
-        bool inDeleteMode = false,isSelectedBlockChanged=false;
+        //bool inDeleteMode = false; 
+        bool isSelectedBlockChanged = false;
         int blockIterater = 0;
 
         Entity selected = null;
@@ -128,12 +129,12 @@ namespace ProtoDerp
             if (keyInput.IsNewKeyPressed(Keys.M))
             {
                 blockIterater = 0;
-                inDeleteMode = !inDeleteMode;
+                game.inDeleteMode = !game.inDeleteMode;
                 isSelectedBlockChanged = true;
                 if (selected != null)
                     selected.isSelected = !selected.isSelected;
             }
-            if (inDeleteMode)
+            if (game.inDeleteMode)
             {
                 DeleteBlockSelector();
                 return;
@@ -409,7 +410,7 @@ namespace ProtoDerp
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            if(!inDeleteMode)
+            if(!game.inDeleteMode)
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);
 
         }
@@ -418,9 +419,5 @@ namespace ProtoDerp
         {
 
         }
-
-
-
-
     }
 }
