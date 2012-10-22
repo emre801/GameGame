@@ -63,17 +63,9 @@ namespace ProtoDerp
             
         }
 
-        
-        //private Vector3[] baseHB = new Vector3[Constants.HEALTH_BAR_SEGMENT_COUNT];
-        private void initializePrimitives()
-        {
-
-        }
-
-        
         public void addEnemyPlayer(PlayableCharacter enemy)
         {
-
+            //Option to add enemy character, no plan right now to use
         }
 
         public void LoadContent()
@@ -83,45 +75,6 @@ namespace ProtoDerp
             blockHeight = playerSprite.index.Height;
             blockWidth = playerSprite.index.Width;
         }
-
-        public bool isExpanding()
-        {
-            return false;
-        }
-
-        public bool isPreviewing()
-        {
-            return true;
-        }
-
-
-        public void tutorialReset()
-        {
-
-        }
-
-        public void damage(float health, int invinTime)
-        {
-
-        }
-
-        public void updateHealthBar()
-        {
-
-        }
-
-        public bool isInvincible()
-        {
-            return false;
-        }
-
-        public void expandingSquare(GameTime gameTime)
-        {
-
-        }
-
-
-
         public override void Update(GameTime gameTime, float worldSpeed)
         {
            // KeyboardState keyState = Keyboard.GetState();
@@ -304,9 +257,6 @@ namespace ProtoDerp
                 selected.isSelected = false;
                 blockIterater++;
             }
-            
-
-
         }
 
         public void moveSelectedBlock()
@@ -420,11 +370,6 @@ namespace ProtoDerp
         {
             if(!game.inDeleteMode)
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);
-
-        }
-
-        private void drawHealthBar()
-        {
 
         }
     }
