@@ -740,6 +740,15 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\MouseImage.xnb</Output>
       <Time>2012-10-19T11:51:16.8992535-04:00</Time>
     </Item>
+    <Item>
+      <Source>MouseClick.png</Source>
+      <Name>MouseClick</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\MouseClick.xnb</Output>
+      <Time>2012-10-20T15:47:07.4618884-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

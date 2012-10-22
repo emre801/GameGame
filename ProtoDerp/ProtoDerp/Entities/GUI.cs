@@ -19,15 +19,8 @@ namespace ProtoDerp
     {
         Sprite pix; //Used to draw rectangles
         Sprite cir; //Used to draw circles
-        double life = 0;
         Sprite gameOverGUI;
         public bool gameOver = false;
-        float gameOverAlpha = 0;
-        int gameOverSelect = 0; //0 - TRY AGAIN, 1 - BACK TO TITLE
-        int gameOverSelectCount = 2;
-        int pauseSelect = 0; //0 - Resume Game, 1 - Back to Title
-        int pauseSelectCount = 2;
-        GameTime startTime;
         
         public GUI(Game g)
             : base(g)
@@ -43,9 +36,7 @@ namespace ProtoDerp
 
         public override void Update(GameTime gameTime, float worldSpeed)
         {
-
-            
-
+            //No Need to update anything here
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -64,17 +55,49 @@ namespace ProtoDerp
                     DrawPositionInformation(gameTime, spriteBatch);
                     DrawCurrentLevelInfo(gameTime, spriteBatch);
                     DrawSaveText(gameTime, spriteBatch);
-                    DrawMouse(gameTime, spriteBatch);
+                    DrawControlsInfo(gameTime, spriteBatch);
+                    //DrawMouse(gameTime, spriteBatch);
+                }
+                else
+                {
+                    DrawControlsInfoEditMode(gameTime, spriteBatch);
                 }
             }
             
+        }
+
+        public void DrawControlsInfo(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            DrawText(spriteBatch, 0.90f, 0.05f, "Controls Info");
+            DrawText(spriteBatch, 0.90f, 0.075f, "Q and W Change sprite");
+            DrawText(spriteBatch, 0.90f, 0.10f, "A: Normal Block");
+            DrawText(spriteBatch, 0.90f, 0.125f, "S: Death Block");
+            DrawText(spriteBatch, 0.90f, 0.15f, "D: Moving Block");
+            DrawText(spriteBatch, 0.90f, 0.175f, "F: Goal Block");
+            DrawText(spriteBatch, 0.90f, 0.20f, "Z: Save");
+            DrawText(spriteBatch, 0.90f, 0.225f, "J and L Change Sprite Length");
+            DrawText(spriteBatch, 0.90f, 0.25f, "I and K Change Sprite Height");
+        }
+
+        public void DrawControlsInfoEditMode(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            DrawText(spriteBatch, 0.90f, 0.05f, "Controls Info");
+            DrawText(spriteBatch, 0.90f, 0.075f, "Q and W Shift Block");
+            DrawText(spriteBatch, 0.90f, 0.10f, "Delete, Remove Block");           
         }
 
         public void DrawMouse(GameTime gameTime, SpriteBatch spriteBatch)
         {
             MouseState ms = Mouse.GetState();
             Rectangle rect= new Rectangle(ms.X,ms.Y,10,15);
-            spriteBatch.Draw(game.getSprite("MouseImage").index, rect,Color.White);
+            if (ms.LeftButton == ButtonState.Pressed)
+            {
+                spriteBatch.Draw(game.getSprite("MouseClick").index, rect, Color.White);
+            }
+            else
+            {
+                spriteBatch.Draw(game.getSprite("MouseImage").index, rect, Color.White);
+            }
         
         }
 
@@ -104,19 +127,7 @@ namespace ProtoDerp
             if(!game.winningAnimation)
             game.stopWatch.Start();
 
-            String[] tempstrMulti = str.Split("|".ToCharArray());
-            SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
-            tempstrMulti = str.Split("|".ToCharArray());
-            for (int i = 0; i < tempstrMulti.Length; i += 1)
-                spriteBatch.DrawString(font, tempstrMulti[i],
-                    game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * 0.065f, (game.getWorldSize().Y * 0.05f) + (font.MeasureString("A").Y * i))),
-                    Color.White,
-                    0f,
-                    Vector2.Zero,
-                    //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
-                    game.drawingTool.gameToScreen(1f) * 0.25f,
-                    SpriteEffects.None,
-                    0);
+            DrawText(spriteBatch, 0.065f, 0.05f, str);            
         }
         public void DrawCreatorInformation(GameTime gameTime, SpriteBatch spriteBatch)
         {
@@ -138,60 +149,19 @@ namespace ProtoDerp
                     break;
 
             }
-
-            String[] tempstrMulti = blockInfo.Split("|".ToCharArray());
-            SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
-            tempstrMulti = blockInfo.Split("|".ToCharArray());
-            for (int i = 0; i < tempstrMulti.Length; i += 1)
-                spriteBatch.DrawString(font, tempstrMulti[i],
-                    game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * 0.065f, (game.getWorldSize().Y * 0.85f) + (font.MeasureString("A").Y * i))),
-                    Color.White,
-                    0f,
-                    Vector2.Zero,
-                    //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
-                    game.drawingTool.gameToScreen(1f) * 0.25f,
-                    SpriteEffects.None,
-                    0);
-
+            DrawText(spriteBatch, 0.065f, 0.85f, blockInfo);
         }
 
         public void DrawPositionInformation(GameTime gameTime, SpriteBatch spriteBatch)
         {
             String positionInfo = "X: " + (int)game.cXLocation + " Y: " + (int)game.cYLocation ;
-
-            String[] tempstrMulti = positionInfo.Split("|".ToCharArray());
-            SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
-            tempstrMulti = positionInfo.Split("|".ToCharArray());
-            for (int i = 0; i < tempstrMulti.Length; i += 1)
-                spriteBatch.DrawString(font, tempstrMulti[i],
-                    game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * 0.465f, (game.getWorldSize().Y * 0.85f) + (font.MeasureString("A").Y * i))),
-                    Color.White,
-                    0f,
-                    Vector2.Zero,
-                    //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
-                    game.drawingTool.gameToScreen(1f) * 0.25f,
-                    SpriteEffects.None,
-                    0);
-
+            DrawText(spriteBatch, 0.465f, 0.85f, positionInfo);
         }
 
         public void DrawCurrentLevelInfo(GameTime gameTime, SpriteBatch spriteBatch)
         {
             String currentLevel = "Current Level: " + game.currentWriteLevel;
-
-            String[] tempstrMulti = currentLevel.Split("|".ToCharArray());
-            SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
-            tempstrMulti = currentLevel.Split("|".ToCharArray());
-            for (int i = 0; i < tempstrMulti.Length; i += 1)
-                spriteBatch.DrawString(font, tempstrMulti[i],
-                    game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * 0.465f, (game.getWorldSize().Y * 0.90f) + (font.MeasureString("A").Y * i))),
-                    Color.White,
-                    0f,
-                    Vector2.Zero,
-                    //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
-                    game.drawingTool.gameToScreen(1f) * 0.25f,
-                    SpriteEffects.None,
-                    0);
+            DrawText(spriteBatch, 0.465f, 0.90f, currentLevel);           
 
         }
 
@@ -200,13 +170,18 @@ namespace ProtoDerp
             String currentLevel = "Saved file to: Level"+game.currentWriteLevel+".txt";
             if (game.saveAlpha >= 0)
                 game.saveAlpha -= 0.01f;
-            String[] tempstrMulti = currentLevel.Split("|".ToCharArray());
+            DrawText(spriteBatch, 0.465f, 0.95f, currentLevel); 
+        }
+
+        public void DrawText(SpriteBatch spriteBatch, float x, float y, String text)
+        {
+            String[] tempstrMulti = text.Split("|".ToCharArray());
             SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
-            tempstrMulti = currentLevel.Split("|".ToCharArray());
+            tempstrMulti = text.Split("|".ToCharArray());
             for (int i = 0; i < tempstrMulti.Length; i += 1)
                 spriteBatch.DrawString(font, tempstrMulti[i],
-                    game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * 0.465f, (game.getWorldSize().Y * 0.95f) + (font.MeasureString("A").Y * i))),
-                    Color.White*game.saveAlpha,
+                    game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * x, (game.getWorldSize().Y * y) + (font.MeasureString("A").Y * i))),
+                    Color.White,
                     0f,
                     Vector2.Zero,
                     //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 

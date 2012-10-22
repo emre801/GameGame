@@ -464,6 +464,11 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="MouseClick.png">
+      <Name>MouseClick</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="World1\Level11.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>Level11</Name>

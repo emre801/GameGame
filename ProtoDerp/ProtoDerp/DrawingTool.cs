@@ -442,6 +442,10 @@ namespace ProtoDerp
            }
             foreach (Entity e in entities)
             {
+                if (!e.IsVisible)
+                {
+                    continue;
+                }
                 if (e is Block)
                 {
                     Block b = (Block)e;

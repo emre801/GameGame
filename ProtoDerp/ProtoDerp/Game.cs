@@ -259,6 +259,7 @@ namespace ProtoDerp
             blockList.AddLast("Tree4");
 
             sprites.Add("MouseImage", new Sprite(Content, "MouseImage"));
+            sprites.Add("MouseClick", new Sprite(Content, "MouseClick"));
 
             //Load Fonts
             fonts[(int)Fonts.FT_MEDIUM] = Content.Load<SpriteFont>("Font\\share_20px_reg");

@@ -272,10 +272,11 @@ namespace ProtoDerp
                 {
                     if (e is DeathBlock || e is Block || e is MovingDeath || e is GoalBlock)
                     {
-                        if (count == blockIterater)
+                        if (count == blockIterater&&e.IsVisible)
                         {
                             selected = e;
                             e.isSelected = true;
+                            break;
                         }
                         count++;
                     }
@@ -295,6 +296,13 @@ namespace ProtoDerp
                 isSelectedBlockChanged = true;
                 selected.isSelected = false;
 
+            }
+            if (keyInput.IsNewKeyPressed(Keys.Delete) || keyInput.IsNewKeyPressed(Keys.Back))
+            {
+                selected.IsVisible = false;
+                isSelectedBlockChanged = true;
+                selected.isSelected = false;
+                blockIterater++;
             }
             
 
