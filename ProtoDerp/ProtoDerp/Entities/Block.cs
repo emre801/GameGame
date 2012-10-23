@@ -104,13 +104,7 @@ namespace ProtoDerp
             body.LinearDamping = 0.5f;
             body.AngularDamping = 1f;
         }
-
-        //private Vector3[] baseHB = new Vector3[Constants.HEALTH_BAR_SEGMENT_COUNT];
-        private void initializePrimitives()
-        {
-
-        }
-
+        
         public Vector2 Position
         {
             get
@@ -127,45 +121,6 @@ namespace ProtoDerp
         {
             playerSprite = game.getSprite(spriteNumber);
         }
-
-        public bool isExpanding()
-        {
-            return false;
-        }
-
-        public bool isPreviewing()
-        {
-            return true;
-        }
-
-
-        public void tutorialReset()
-        {
-
-        }
-
-        public void damage(float health, int invinTime)
-        {
-
-        }
-
-        public void updateHealthBar()
-        {
-
-        }
-
-        public bool isInvincible()
-        {
-            return false;
-        }
-
-        public void expandingSquare(GameTime gameTime)
-        {
-
-        }
-
-
-
         public override void Update(GameTime gameTime, float worldSpeed)
         {
             if (disappearTimer == 0)
@@ -203,14 +158,5 @@ namespace ProtoDerp
             spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
         
         }
-
-        private void drawHealthBar()
-        {
-
-        }
-
-
-
-
     }
 }

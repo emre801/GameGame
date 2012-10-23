@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using FarseerPhysics.Dynamics;
+using System.Diagnostics;
 
 namespace ProtoDerp
 {
@@ -24,12 +26,11 @@ namespace ProtoDerp
             }
         }
 
-        /// <summary>
-        /// Create a new sprite strip animation handler from the given spritestrip and a number of states.
-        /// </summary>
-        /// <param name="strip">The spritestrip.  The strip must be formatted as a series of equal size sprites concatenated horizontally in a single image.</param>
-        /// <param name="stateCount">The number of states in the animation. This is how the animation handler knows where to split the spritestrip</param>
-        public SpriteStripAnimationHandler(Sprite strip, int stateCount)
+        private int frameRate;
+        private int origFrameRate;
+        public Stopwatch stopWatch = new Stopwatch();
+
+        public SpriteStripAnimationHandler(Sprite strip, int stateCount,int frameRate)
         {
             this.spriteStrip = strip;
             if (strip.index.Width % stateCount != 0)
@@ -39,6 +40,9 @@ namespace ProtoDerp
             this.stateCount = stateCount;
             this.widthOfSingleState = strip.index.Width / stateCount;
             texBounds = new Rectangle(0, 0, widthOfSingleState, strip.index.Height);
+            stopWatch.Start();
+            this.frameRate = frameRate;
+            this.origFrameRate = frameRate;
         }
 
         public void nextState()
@@ -56,16 +60,36 @@ namespace ProtoDerp
             texBounds.X = state * widthOfSingleState;
             _currentState = state;
         }
-
-        public void Update(GameTime gameTime, float worldSpeed)
+        public void changeFrameRate(int frameRate)
         {
+            this.frameRate = frameRate;
+        }
+        public int getFrameRate()
+        {
+            return frameRate;
+        }
+        public void resetFrameRate()
+        {
+            this.frameRate = this.origFrameRate;
+        }
+        public void Update()
+        {
+            stopWatch.Stop();
+            TimeSpan ts = stopWatch.Elapsed;
+            if (ts.Milliseconds > frameRate)
+            {
+                stopWatch.Reset();
+                nextState();
+            }
+            stopWatch.Start();
 
         }
-
-        public void drawCurrentState(SpriteBatch spriteBatch, Entity owner)
+        public void drawCurrentState(SpriteBatch spriteBatch, Entity owner, Vector2 drawPos,Vector2 origin, Body body, Rectangle rect,Boolean direction)
         {
-            Vector2 drawPos = owner.game.drawingTool.getDrawingCoords(new Vector2(owner.pos.X - (widthOfSingleState / 2), owner.pos.Y - (spriteStrip.index.Height / 2)));
-            spriteBatch.Draw(spriteStrip.index, drawPos, texBounds, owner.blend * owner.alpha, MathHelper.ToRadians(owner.angle), Vector2.Zero, owner.game.drawingTool.gameToScreen(owner.scale), SpriteEffects.None, 0);
+            if(direction)
+                spriteBatch.Draw(spriteStrip.index, drawPos, texBounds, owner.blend * owner.alpha, MathHelper.ToRadians(owner.angle), origin, 1, SpriteEffects.None, 0);
+            else
+                spriteBatch.Draw(spriteStrip.index, drawPos, texBounds, owner.blend * owner.alpha, MathHelper.ToRadians(owner.angle), origin, 1, SpriteEffects.FlipHorizontally, 0);
         }
     }
 }

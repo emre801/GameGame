@@ -31,6 +31,9 @@ namespace ProtoDerp
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        Dictionary<string, SpriteStripAnimationHandler> spriteAnimation = new Dictionary<string, SpriteStripAnimationHandler>();
+
+
         bool restart = false;
 
         public Dictionary<string, SoundEffect> sounds = new Dictionary<string, SoundEffect>();
@@ -283,6 +286,11 @@ namespace ProtoDerp
             addSound("Rage//Rage7");
             addSound("Rage//Rage8");*/
             //addSound("Music//ForrestSounds");
+
+
+            spriteAnimation.Add("player_strip12", new SpriteStripAnimationHandler(new Sprite(Content, "player_strip12"), 12,20));
+            spriteAnimation.Add("missile_strip_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "missile_strip_strip4"), 4,10));
+
             
             if (Constants.ENABLE_TITLE_SCREEN)
             {
@@ -311,6 +319,14 @@ namespace ProtoDerp
         {
             if (sprites.ContainsKey(fName))
                 return sprites[fName];
+            else
+                return null;
+        }
+
+        public SpriteStripAnimationHandler getSpriteAnimation(String fName)
+        {
+            if (this.spriteAnimation.ContainsKey(fName))
+                return spriteAnimation[fName];
             else
                 return null;
         }

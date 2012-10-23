@@ -90,6 +90,10 @@ Content\CutScene1\0.xnb
 Content\CutScene1\1.xnb
 Content\MouseImage.xnb
 Content\MouseClick.xnb
+Content\Background.xnb
+Content\ground.xnb
+Content\player_strip12.xnb
+Content\missile_strip_strip4.xnb
 Content\World1\Level11.txt
 Content\World1\Level14.txt
 Content\World1\Level13.txt

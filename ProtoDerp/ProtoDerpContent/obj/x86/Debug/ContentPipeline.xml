@@ -749,6 +749,42 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\MouseClick.xnb</Output>
       <Time>2012-10-20T15:47:07.4618884-04:00</Time>
     </Item>
+    <Item>
+      <Source>Background.png</Source>
+      <Name>Background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Background.xnb</Output>
+      <Time>2012-10-22T14:35:49.477208-04:00</Time>
+    </Item>
+    <Item>
+      <Source>ground.png</Source>
+      <Name>ground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\ground.xnb</Output>
+      <Time>2012-10-22T14:35:49.4812082-04:00</Time>
+    </Item>
+    <Item>
+      <Source>player_strip12.png</Source>
+      <Name>player_strip12</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\player_strip12.xnb</Output>
+      <Time>2012-10-22T18:32:06.6836673-04:00</Time>
+    </Item>
+    <Item>
+      <Source>missile_strip_strip4.png</Source>
+      <Name>missile_strip_strip4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\missile_strip_strip4.xnb</Output>
+      <Time>2012-10-22T14:35:49.4872085-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

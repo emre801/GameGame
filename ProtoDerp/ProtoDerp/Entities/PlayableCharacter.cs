@@ -54,8 +54,13 @@ namespace ProtoDerp
         public Fixture wheel;
         public FixedAngleJoint fixedAngleJoint;
         public RevoluteJoint motor;
-
+        SpriteStripAnimationHandler ani; 
         KeyboardInput keyInput;
+
+        bool mikeStandingStill = false;
+
+        public int frameRate = 5;
+        public int framCounter = 0;
 
         public PlayableCharacter(Game g, Arena a, Vector2 pos, int playerNum)
             : base(g)
@@ -74,6 +79,7 @@ namespace ProtoDerp
             if (g.isInCreatorMode)
                 body.IgnoreGravity = true;
             keyInput = new KeyboardInput();
+            ani= game.getSpriteAnimation("player_strip12");
 
         }
         void OnSeparation(Fixture fixtureA, Fixture fixtureB)
@@ -167,6 +173,7 @@ namespace ProtoDerp
                 return;
 
             }
+            ani.Update();
 
             float direction = inputState.GetJoyDirection();
             float x = (float)Math.Sin(direction);
@@ -256,6 +263,7 @@ namespace ProtoDerp
                 //playerSprite = game.getSprite("Space");
             }
 
+            mikeStandingStill = false;
 
             if (onGround)//modes == Modes.GROUND)
             {
@@ -270,7 +278,10 @@ namespace ProtoDerp
                         playerSprite = game.getSprite("MikeRun2");
                 }
                 if (body.LinearVelocity.X == 0)
+                {
                     playerSprite = game.getSprite("MikeStand");
+                    mikeStandingStill = true;
+                }
                 // modes = Modes.WAITING;
             }
             else
@@ -302,6 +313,15 @@ namespace ProtoDerp
             float height = playerSprite.index.Height;
             float upperBodyHeight = height - (width / 2);
             int i = playerSprite.index.Width;
+
+            if (mikeStandingStill)
+            {
+                //framCounter++;
+                //if(framCounter%frameRate==0)
+                    //ani.nextState();
+                ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)), origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), !faceRight);
+                return;
+            }
             if (!faceRight)
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y) , (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, Color.White, body.Rotation, origin, SpriteEffects.None, 0f);
             else
