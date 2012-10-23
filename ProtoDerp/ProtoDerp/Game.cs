@@ -277,17 +277,7 @@ namespace ProtoDerp
             addSound("Rage//Wave//jump");
             addSound("Rage//Wave//death");
             addSound("Rage//Wave//Opening");
-            /*
-                                           * Rage//Wave//jump"
-            addSound("Rage//Rage3");
-            addSound("Rage//Rage4");
-            addSound("Rage//Rage5");
-            addSound("Rage//Rage6");
-            addSound("Rage//Rage7");
-            addSound("Rage//Rage8");*/
-            //addSound("Music//ForrestSounds");
-
-
+            
             spriteAnimation.Add("player_strip12", new SpriteStripAnimationHandler(new Sprite(Content, "player_strip12"), 12,20));
             spriteAnimation.Add("missile_strip_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "missile_strip_strip4"), 4,10));
 
@@ -402,8 +392,6 @@ namespace ProtoDerp
             int pathIndex = path.IndexOf("bin");
             path = @"C:\Users\John\Documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerpContent\World1\Level" + templateNum + @".txt";
             LinkedList<String> lines = new LinkedList<String>();
-            //lines.AddLast("test1");
-            //lines.AddLast("test2");
             LinkedList<Block> blocks = getEntitiesOfType<Block>();
             foreach (Block b in blocks)
             {
@@ -458,8 +446,7 @@ namespace ProtoDerp
         }
 
         protected override void Update(GameTime gameTime)
-        {
-            
+        {         
 
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
             {
@@ -494,21 +481,7 @@ namespace ProtoDerp
                 isInCreatorMode = false;
 
             }
-            /*
-            if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Start) || restart)
-            {
-                //numDeath++;
-                restart = false;
-                if (!isInLevelSelect)
-                {
-                    if (isInCreatorMode)
-                    {
-                        Arena = new Arena(this, Arena.GameMode.MODE_MULTI_PLAYER);
-                    }
-                    newLevel();
-                }                
-            }
-             * */
+
             playerOneInput.Update(gameTime);
 
             if (isInCreatorMode)
@@ -572,7 +545,6 @@ namespace ProtoDerp
                 TimeSpan ts = animationTime.Elapsed;
                 animationTime.Start();
                 count++;
-                //Arena.player1.playerSprite = getSprite("fire"+count%3);
                 if (ts.CompareTo(new TimeSpan(0, 0, 0)) > 0)
                 {
                     deathAnimation = false;
