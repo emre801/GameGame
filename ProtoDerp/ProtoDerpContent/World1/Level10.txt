@@ -1,0 +1,10 @@
+355 155 bigBlock Block 200 1000 0
+955 -790 bigBlock Block 2085 240 0
+655 -1155 bigBlock Block 2085 30 0
+685 -175 deathSpikes4 DeathBlock
+685 -765 deathSpikes4 DeathBlock
+685 -1205 deathSpikes4 DeathBlock
+685 -1755 deathSpikes4 DeathBlock
+685 -2110 deathSpikes4 DeathBlock
+950 -1900 ahLogo0 GoalBlock 11
+Demi -100 800 -1600 300

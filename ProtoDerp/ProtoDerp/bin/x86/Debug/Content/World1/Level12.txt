@@ -1,0 +1,6 @@
+420 90 bigBlock Block 45 1000 0
+810 -85 bigBlock Block 45 235 0
+900 5 bigBlock Block 210 50 0
+715 5 bigBlock Block 210 50 0 3
+800 0 ahLogo0 GoalBlock 13
+Demi -100 800 -1600 300

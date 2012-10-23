@@ -1,0 +1,22 @@
+1798 175 bigBlock Block 200 3910 0
+-246 -905 bigBlock Block 2365 200 0
+3852 -905 bigBlock Block 2365 200 0
+1560 640 bigBlock Block 730 6390 2
+-1105 -415 bigBlock Block 3330 1525 2
+4708 -415 bigBlock Block 3330 1525 2
+297 50 deathSpikes DeathBlock
+812 50 deathSpikes DeathBlock
+1337 50 deathSpikes DeathBlock
+1947 50 deathSpikes DeathBlock
+2562 50 deathSpikes DeathBlock
+3007 50 deathSpikes DeathBlock
+3542 50 deathSpikes DeathBlock
+3647 50 deathSpikes DeathBlock
+3727 50 deathSpikes DeathBlock
+3677 -40 ahLogo0 GoalBlock 8
+725 0 bullet.0 MovingDeath 2 -2 0
+1255 0 bullet.0 MovingDeath 2 -2 0
+1855 0 bullet.0 MovingDeath 2 -2 0
+2470 0 bullet.0 MovingDeath 2 -2 0
+2925 0 bullet.0 MovingDeath 2 -2 0
+Demi -100 3800 -800 300
