@@ -14,7 +14,10 @@ namespace ProtoDerp
             : base(g)
         {
             this.game = game;
-            initLevels();
+            if (game.gMode == 0)
+                initLevels("World1");
+            else
+                initLevels("Template");
         }
         public PlayableCharacter player1 = null;
         public PlayableCharacter player2 = null;
@@ -143,11 +146,11 @@ namespace ProtoDerp
         public static int templateCount = 0;
 
         private static bool isInitialized = false;
-        private static void initLevels()
+        private static void initLevels(String path)
         {
             if (!isInitialized)
             {
-                DirectoryInfo di = new DirectoryInfo(@"Content\World1");
+                DirectoryInfo di = new DirectoryInfo(@"Content\"+path);
                 //This clears the cache templates so that new Maps can be loaded
                 templates = new Dictionary<string, string>();
                 foreach (FileInfo fi in di.GetFiles())
@@ -162,6 +165,9 @@ namespace ProtoDerp
                 }
             }
         }
+
+
+
 
     }
 }

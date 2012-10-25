@@ -82,6 +82,7 @@ namespace ProtoDerp
         public float saveAlpha = 0;
 
         public bool inDeleteMode = false;
+        public int gameTemplateLevel = 1;
 
         public Game()
         {
@@ -139,6 +140,7 @@ namespace ProtoDerp
         {
             drawingTool.cam.Zoom = 0.35f * drawingTool.zoomRatio;
             //Create the in-game arena.
+            //clearEntities();
             Arena = new Arena(this, Arena.GameMode.MODE_MULTI_PLAYER);
             addEntity(Arena);
             addEntity(new CreaterBlock(this, Arena, new Vector2(100, 100), 1, "block1-2"));
@@ -523,6 +525,12 @@ namespace ProtoDerp
                     toBeRemoved.AddLast(e);
                 }
             }
+            
+            foreach (Entity e in toBeRemoved)
+            {
+                entities.Remove(e);
+            }
+
             if (!winningAnimation && !deathAnimation)
                 world.Step((float)(gameTime.ElapsedGameTime.TotalMilliseconds * 0.002));
             if (winningAnimation == true)

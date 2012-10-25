@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="82432">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="82944">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>IuV9n3kT3P/E7g+I+fkMwsYGATc=</dsig:DigestValue>
+        <dsig:DigestValue>WJjBByL7oCjpxARSno12bXvfDWg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -870,6 +870,33 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>ZTiTz/ZvYDuB4wnFzt4kdFv79l8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Template\Level1.txt" size="131">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>K9RgQgWA4qQbAMjDkbMg9TbxiXM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Template\Level2.txt" size="22">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>99deOlqjSsZ7Tx3GttzO+zmwOQc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Template\Level3.txt" size="131">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>K9RgQgWA4qQbAMjDkbMg9TbxiXM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\titleScreenElement.0.xnb" size="789523">

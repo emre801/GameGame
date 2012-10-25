@@ -54,6 +54,7 @@ namespace ProtoDerp
                     DrawCreatorInformation(gameTime, spriteBatch);
                     DrawPositionInformation(gameTime, spriteBatch);
                     DrawCurrentLevelInfo(gameTime, spriteBatch);
+                    DrawCurrentTemplateLevel(gameTime, spriteBatch);
                     DrawSaveText(gameTime, spriteBatch);
                     DrawControlsInfo(gameTime, spriteBatch);
                     //DrawMouse(gameTime, spriteBatch);
@@ -68,15 +69,20 @@ namespace ProtoDerp
 
         public void DrawControlsInfo(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            DrawText(spriteBatch, 0.90f, 0.05f, "Controls Info");
-            DrawText(spriteBatch, 0.90f, 0.075f, "Q and W Change sprite");
-            DrawText(spriteBatch, 0.90f, 0.10f, "A: Normal Block");
-            DrawText(spriteBatch, 0.90f, 0.125f, "S: Death Block");
-            DrawText(spriteBatch, 0.90f, 0.15f, "D: Moving Block");
-            DrawText(spriteBatch, 0.90f, 0.175f, "F: Goal Block");
-            DrawText(spriteBatch, 0.90f, 0.20f, "Z: Save");
-            DrawText(spriteBatch, 0.90f, 0.225f, "J and L Change Sprite Length");
-            DrawText(spriteBatch, 0.90f, 0.25f, "I and K Change Sprite Height");
+            float currentPos = 0;
+            float increment = 0.025f;
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "Controls Info");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "Q and W Change sprite");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "A: Normal Block");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "S: Death Block");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "D: Moving Block");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "F: Goal Block");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "Z: Save");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "J and L Change Sprite Length");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "I and K Change Sprite Height");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "B and N Change Template Level");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "V: load new template");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "O and P change Save Location");
         }
 
         public void DrawControlsInfoEditMode(GameTime gameTime, SpriteBatch spriteBatch)
@@ -162,6 +168,12 @@ namespace ProtoDerp
         {
             String currentLevel = "Current Level: " + game.currentWriteLevel;
             DrawText(spriteBatch, 0.465f, 0.90f, currentLevel);           
+
+        }
+        public void DrawCurrentTemplateLevel(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            String currentLevel = "Template Level: " + game.gameTemplateLevel;
+            DrawText(spriteBatch, 0.605f, 0.90f, currentLevel);
 
         }
 

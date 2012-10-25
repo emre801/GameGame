@@ -131,7 +131,19 @@ namespace ProtoDerp
                 if(game.currentWriteLevel<Constants.MAX_WRITE_LEVEL)
                     game.currentWriteLevel++;
             }
-            
+            if (keyInput.IsNewKeyPressed(Keys.V))
+            {
+                game.loadNewLevel = true;
+                this.dispose = true;
+            }
+            if (keyInput.IsNewKeyPressed(Keys.B))
+            {
+                game.gameTemplateLevel--;
+            }
+            if (keyInput.IsNewKeyPressed(Keys.N))
+            {
+                game.gameTemplateLevel++;
+            }
             if (keyInput.IsNewKeyPressed(Keys.Enter))
             {
                 switch (game.blockType)

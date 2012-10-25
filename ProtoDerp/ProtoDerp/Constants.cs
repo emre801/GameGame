@@ -11,7 +11,7 @@ namespace ProtoDerp
     {
         public const int WRITE_LEVEL = 1;
         public const int MAX_WRITE_LEVEL = 14;
-        public const int READ_LEVEL = 6;
+        public const int READ_LEVEL = 2;
 
         public const double GAMEWORLD_ASPECT_RATIO = 4f / 3f; // Width of game world / height of game world
 
