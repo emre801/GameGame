@@ -501,6 +501,26 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>Level1</Name>
     </Content>
+    <Content Include="World1\Level15.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level15</Name>
+    </Content>
+    <Content Include="World1\Level19.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level19</Name>
+    </Content>
+    <Content Include="World1\Level18.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level18</Name>
+    </Content>
+    <Content Include="World1\Level17.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level17</Name>
+    </Content>
+    <Content Include="World1\Level16.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level16</Name>
+    </Content>
     <Content Include="World1\Level11.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>Level11</Name>

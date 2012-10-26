@@ -57,7 +57,7 @@ namespace ProtoDerp
                     DrawCurrentTemplateLevel(gameTime, spriteBatch);
                     DrawSaveText(gameTime, spriteBatch);
                     DrawControlsInfo(gameTime, spriteBatch);
-                    //DrawMouse(gameTime, spriteBatch);
+                    DrawMouse(gameTime, spriteBatch);
                 }
                 else
                 {

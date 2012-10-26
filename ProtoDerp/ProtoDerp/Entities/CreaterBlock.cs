@@ -44,6 +44,8 @@ namespace ProtoDerp
 
         Entity selected = null;
 
+        MouseState oldMouse;
+
         public CreaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
             : base(g)
         {
@@ -59,6 +61,7 @@ namespace ProtoDerp
             origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
            
             keyInput= new KeyboardInput();
+            oldMouse = Mouse.GetState();
 
             
         }
@@ -183,8 +186,21 @@ namespace ProtoDerp
                 blockWidth += 5;
             }
 
+            //Matrix inverseViewMatrix = Matrix.Invert(game.drawingTool.cam._transform);
+            //Vector2 worldMousePosition = Vector2.Transform(mousePosition, inverseViewMatrix);
+            //Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
+            //Vector2 worldMousePosition = Vector2.Transform(mousePosition, game.drawingTool.cam._transform);
+            if (Mouse.GetState().LeftButton == ButtonState.Pressed && oldMouse.LeftButton==ButtonState.Released)
+            {
+                Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y - 500 * game.drawingTool.cam.Zoom);
+                Vector2 worldMousePosition = Vector2.Transform(mousePosition, Matrix.Invert(game.drawingTool.cam._transform));
+                addBlockBasedOnMouse(worldMousePosition);
+            }
+
+
             game.cXLocation = pos.X;
             game.cYLocation = pos.Y;
+            oldMouse = Mouse.GetState();
             chooseNextSprite();
             updateDrawLevel();
         }
@@ -355,6 +371,12 @@ namespace ProtoDerp
             pos += new Vector2(x * turbo, y * turbo);
             origPos += new Vector2(x*turbo, y*turbo);
         }
+
+        public void addBlockBasedOnMouse(Vector2 origin)
+        {
+            game.addEntity(new Block(game, game.Arena, origin, 1, blockArray[counter], blockHeight, blockWidth, drawLevel));
+        }
+
         public void addBlock()
         {
 
