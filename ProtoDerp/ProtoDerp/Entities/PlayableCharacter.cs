@@ -87,6 +87,7 @@ namespace ProtoDerp
         {
             modes = Modes.AIRUP;
             body.IgnoreGravity = false;
+            //onGround = false;
         }
         bool OnCollision(Fixture fixtureA, Fixture fixtureB, Contact contact)
         {
@@ -278,10 +279,18 @@ namespace ProtoDerp
                         playerSprite = game.getSprite("MikeRun1");
                     else
                         playerSprite = game.getSprite("MikeRun2");
-                    if(Math.Abs(body.LinearVelocity.X)<5)
+                    if (Math.Abs(body.LinearVelocity.X) < 5)
+                    {
                         ani = game.getSpriteAnimation("sprite15_strip4");
+                        int frameRate = 120 * (int)(5f/Math.Abs(body.LinearVelocity.X));
+                        ani.changeFrameRate(frameRate);
+                    }
                     else
+                    {
                         ani = game.getSpriteAnimation("sprite16_strip6");
+                        int frameRate = 30* (int)(15f/Math.Abs(body.LinearVelocity.X));
+                        ani.changeFrameRate(frameRate);
+                    }
 
                     
                     doAnimation = true;
@@ -295,7 +304,7 @@ namespace ProtoDerp
                 }
                 // modes = Modes.WAITING;
             }
-            else
+            if (Math.Abs(body.LinearVelocity.Y)>=0.0001f)
             {
                 if (body.LinearVelocity.Y > 0.05f)
                 {
