@@ -281,10 +281,17 @@ namespace ProtoDerp
             addSound("Rage//Wave//Opening");
             
             spriteAnimation.Add("player_strip12", new SpriteStripAnimationHandler(new Sprite(Content, "player_strip12")
-                , 12,60));
+                , 12,60));//Player Standing
             spriteAnimation.Add("missile_strip_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "missile_strip_strip4")
-                , 4,10));
-
+                , 4,10));//missle
+            spriteAnimation.Add("sprite14_strip9", new SpriteStripAnimationHandler(new Sprite(Content, "sprite14_strip9")
+                , 9, 60));//Wall Hang
+            spriteAnimation.Add("sprite15_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "sprite15_strip4")
+                , 4, 60));//walking
+            spriteAnimation.Add("sprite16_strip6", new SpriteStripAnimationHandler(new Sprite(Content, "sprite16_strip6")
+                , 6, 120));//Running
+            spriteAnimation.Add("sprite17", new SpriteStripAnimationHandler(new Sprite(Content, "sprite17")
+                , 1, 60));//Running
             
             if (Constants.ENABLE_TITLE_SCREEN)
             {

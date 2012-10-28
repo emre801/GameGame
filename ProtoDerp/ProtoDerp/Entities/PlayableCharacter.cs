@@ -61,7 +61,7 @@ namespace ProtoDerp
 
         public int frameRate = 5;
         public int framCounter = 0;
-
+        bool doAnimation = false;
         public PlayableCharacter(Game g, Arena a, Vector2 pos, int playerNum)
             : base(g)
         {
@@ -72,14 +72,15 @@ namespace ProtoDerp
             fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
             fixture.OnSeparation += new OnSeparationEventHandler(OnSeparation);
 
-            this.origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
+            //this.origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
+            this.origin = new Vector2(ani.widthOf() / 2, ani.heightOf() / 2);
             modes = Modes.AIRDOWN;
             yOld = body.Position.X;
             run = false;
             if (g.isInCreatorMode)
                 body.IgnoreGravity = true;
             keyInput = new KeyboardInput();
-            ani= game.getSpriteAnimation("player_strip12");
+            
 
         }
         void OnSeparation(Fixture fixtureA, Fixture fixtureB)
@@ -120,9 +121,9 @@ namespace ProtoDerp
         protected virtual void SetUpPhysics(Vector2 position)
         {
             World world = game.world;
-            float mass = 1.0f;
-            float width = playerSprite.index.Width;
-            float height = playerSprite.index.Height;
+            float mass = 0.8f;
+            float width = game.getSpriteAnimation("player_strip12").widthOf();
+            float height = game.getSpriteAnimation("player_strip12").heightOf();
             
             fixture = FixtureFactory.CreateRectangle(world, (float)ConvertUnits.ToSimUnits(width), (float)ConvertUnits.ToSimUnits(height), mass);
             body = fixture.Body;
@@ -138,6 +139,7 @@ namespace ProtoDerp
         public void LoadContent()
         {
             playerSprite = game.getSprite("MikeRun1");
+            ani = game.getSpriteAnimation("player_strip12");
         }
 
         public bool isExpanding()
@@ -174,7 +176,7 @@ namespace ProtoDerp
 
             }
             ani.Update();
-
+            doAnimation = false;
             float direction = inputState.GetJoyDirection();
             float x = (float)Math.Sin(direction);
             float y = (float)Math.Cos(direction) - 1;
@@ -206,7 +208,7 @@ namespace ProtoDerp
             {
                 if ((Math.Abs(body.LinearVelocity.X) < 5 * runningValue))
                 {
-                    body.ApplyLinearImpulse(new Vector2(xDirection * 0.35f * runningValue, 0));// inputState.getYDirection() * 300f));
+                    body.ApplyLinearImpulse(new Vector2(xDirection * 0.45f * runningValue, 0));// inputState.getYDirection() * 300f));
                 }
                 if (xDirection == 0)
                     fixture.Friction = 80;
@@ -216,7 +218,7 @@ namespace ProtoDerp
             else
             {
 
-                body.ApplyLinearImpulse(new Vector2(xDirection * 0.35f * runningValue, 0));// inputState.getYDirection() * 300f));
+                body.ApplyLinearImpulse(new Vector2(xDirection * 0.45f * runningValue, 0));// inputState.getYDirection() * 300f));
                 //motor.MotorSpeed = inputState.getXDirection()*10;
                 if (inputState.getXDirection() == 0)
                     fixture.Friction = 10;
@@ -276,11 +278,20 @@ namespace ProtoDerp
                         playerSprite = game.getSprite("MikeRun1");
                     else
                         playerSprite = game.getSprite("MikeRun2");
+                    if(Math.Abs(body.LinearVelocity.X)<5)
+                        ani = game.getSpriteAnimation("sprite15_strip4");
+                    else
+                        ani = game.getSpriteAnimation("sprite16_strip6");
+
+                    
+                    doAnimation = true;
                 }
                 if (body.LinearVelocity.X == 0)
                 {
                     playerSprite = game.getSprite("MikeStand");
                     mikeStandingStill = true;
+                    ani = game.getSpriteAnimation("player_strip12");
+                    doAnimation = true;
                 }
                 // modes = Modes.WAITING;
             }
@@ -295,12 +306,15 @@ namespace ProtoDerp
                     playerSprite = game.getSprite("MikeJump1");
 
                 }
+                ani = game.getSpriteAnimation("sprite17");
             }
 
             if (modes == Modes.WALL)
             {
                 playerSprite = game.getSprite("MikeWall");
                 fixture.Friction = 80;
+                ani = game.getSpriteAnimation("sprite14_strip9");
+                doAnimation = true;
             }
 
         }
@@ -314,14 +328,14 @@ namespace ProtoDerp
             float upperBodyHeight = height - (width / 2);
             int i = playerSprite.index.Width;
 
-            if (mikeStandingStill)
-            {
+            //if (mikeStandingStill||doAnimation)
+            //{
                 //framCounter++;
                 //if(framCounter%frameRate==0)
                     //ani.nextState();
                 ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)), origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), !faceRight);
                 return;
-            }
+            //}
             if (!faceRight)
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y) , (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, Color.White, body.Rotation, origin, SpriteEffects.None, 0f);
             else

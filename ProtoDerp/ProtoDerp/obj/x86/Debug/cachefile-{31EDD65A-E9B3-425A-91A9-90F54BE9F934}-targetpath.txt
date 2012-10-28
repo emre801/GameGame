@@ -94,6 +94,10 @@ Content\Background.xnb
 Content\ground.xnb
 Content\player_strip12.xnb
 Content\missile_strip_strip4.xnb
+Content\sprite14_strip9.xnb
+Content\sprite15_strip4.xnb
+Content\sprite16_strip6.xnb
+Content\sprite17.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

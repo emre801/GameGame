@@ -15,7 +15,6 @@
 595 -78 bigBlock Block 15 1005 0
 250 -243 bigBlock Block 15 1005 0
 596 -433 bigBlock Block 15 1005 0
-355 -104 deathSpikes DeathBlock
 1035 -104 deathSpikes DeathBlock
 900 -104 deathSpikes DeathBlock
 685 -404 deathSpikes2 DeathBlock

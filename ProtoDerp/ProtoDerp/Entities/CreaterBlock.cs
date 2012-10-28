@@ -45,6 +45,7 @@ namespace ProtoDerp
         Entity selected = null;
 
         MouseState oldMouse;
+        int oldMouseValue;
 
         public CreaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
             : base(g)
@@ -62,6 +63,7 @@ namespace ProtoDerp
            
             keyInput= new KeyboardInput();
             oldMouse = Mouse.GetState();
+            oldMouseValue = Mouse.GetState().ScrollWheelValue;
 
             
         }
@@ -197,6 +199,9 @@ namespace ProtoDerp
                 addBlockBasedOnMouse(worldMousePosition);
             }
 
+
+            blockIterater +=  Mouse.GetState().ScrollWheelValue;
+            oldMouseValue = Mouse.GetState().ScrollWheelValue;
 
             game.cXLocation = pos.X;
             game.cYLocation = pos.Y;

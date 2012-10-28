@@ -785,6 +785,42 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\missile_strip_strip4.xnb</Output>
       <Time>2012-10-22T14:35:49.4872085-04:00</Time>
     </Item>
+    <Item>
+      <Source>sprite14_strip9.png</Source>
+      <Name>sprite14_strip9</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\sprite14_strip9.xnb</Output>
+      <Time>2012-10-28T02:06:05.6346941-04:00</Time>
+    </Item>
+    <Item>
+      <Source>sprite15_strip4.png</Source>
+      <Name>sprite15_strip4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\sprite15_strip4.xnb</Output>
+      <Time>2012-10-28T02:06:05.6436946-04:00</Time>
+    </Item>
+    <Item>
+      <Source>sprite16_strip6.png</Source>
+      <Name>sprite16_strip6</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\sprite16_strip6.xnb</Output>
+      <Time>2012-10-28T02:06:05.6556953-04:00</Time>
+    </Item>
+    <Item>
+      <Source>sprite17.png</Source>
+      <Name>sprite17</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\sprite17.xnb</Output>
+      <Time>2012-10-28T02:38:15.4830751-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

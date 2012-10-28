@@ -49,6 +49,15 @@ namespace ProtoDerp
         {
             setState((CurrentState + 1) % stateCount);
         }
+        public int widthOf()
+        {
+
+            return this.widthOfSingleState;
+        }
+        public int heightOf()
+        {
+            return spriteStrip.index.Height;
+        }
 
         public void previousState()
         {
