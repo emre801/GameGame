@@ -84,6 +84,9 @@ namespace ProtoDerp
         public bool inDeleteMode = false;
         public int gameTemplateLevel = 1;
 
+        public bool loadFromLevel = false;
+        public int drawLevel = 0;
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -186,6 +189,10 @@ namespace ProtoDerp
             sprites.Add("rage", new Sprite(Content, "rage"));
             sprites.Add("bigBlock", new Sprite(Content, "bigBlock"));
             blockList.AddLast("bigBlock");
+            sprites.Add("Background", new Sprite(Content, "Background"));
+            blockList.AddLast("Background");
+            sprites.Add("ground", new Sprite(Content, "ground"));
+            blockList.AddLast("ground");
             sprites.Add("grass1", new Sprite(Content, "grass1"));
             blockList.AddLast("grass1");
             sprites.Add("grass2", new Sprite(Content, "grass3"));

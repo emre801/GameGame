@@ -82,6 +82,13 @@
 440 -550 cloud Block 102 148 1
 -145 -655 cloud Block 102 148 1
 530 -740 cloud Block 162 318 0
+-125 75 ground Block 64 256 2
+130 75 ground Block 64 256 2
+380 75 ground Block 64 256 2
+630 75 ground Block 64 256 2
+885 75 ground Block 64 256 2
+970 75 ground Block 64 256 2
+425 -310 Background Block 1243 1444 1
 1085 -370 deathSpikes3 DeathBlock
 1085 -240 deathSpikes3 DeathBlock
 1018 -81 ahLogo0 GoalBlock 2

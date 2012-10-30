@@ -56,6 +56,9 @@ namespace ProtoDerp
         public RevoluteJoint motor;
         SpriteStripAnimationHandler ani; 
         KeyboardInput keyInput;
+        Vector2 shiftPosition;
+
+        
 
         bool mikeStandingStill = false;
 
@@ -75,6 +78,7 @@ namespace ProtoDerp
             //this.origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
             this.origin = new Vector2(ani.widthOf() / 2, ani.heightOf() / 2);
             modes = Modes.AIRDOWN;
+            shiftPosition = new Vector2(0, 0);
             yOld = body.Position.X;
             run = false;
             if (g.isInCreatorMode)
@@ -178,6 +182,8 @@ namespace ProtoDerp
             }
             ani.Update();
             doAnimation = false;
+            shiftPosition = new Vector2(0, 0);
+
             float direction = inputState.GetJoyDirection();
             float x = (float)Math.Sin(direction);
             float y = (float)Math.Cos(direction) - 1;
@@ -324,6 +330,7 @@ namespace ProtoDerp
                 fixture.Friction = 80;
                 ani = game.getSpriteAnimation("sprite14_strip9");
                 doAnimation = true;
+                shiftPosition = new Vector2(8, 0);
             }
 
         }
@@ -342,7 +349,9 @@ namespace ProtoDerp
                 //framCounter++;
                 //if(framCounter%frameRate==0)
                     //ani.nextState();
-                ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)), origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), !faceRight);
+                ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)), 
+                    origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), 
+                        (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), !faceRight,shiftPosition);
                 return;
             //}
             if (!faceRight)

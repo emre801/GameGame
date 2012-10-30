@@ -102,11 +102,14 @@ namespace ProtoDerp
 
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            /*
             if (IsVisible == true && anim != null)
                 anim.drawCurrentState(spriteBatch, this, new Vector2(0, 0), new Vector2(0, 0),null,new Rectangle(1,1,0,0),false);
             else if (IsVisible == true && sprite != null)
                 spriteBatch.Draw(sprite.index, game.drawingTool.getDrawingCoords(pos), null, blend * alpha, MathHelper.ToRadians(angle), sprite.origin, game.drawingTool.gameToScreen(scale), SpriteEffects.None, 0);
             //spriteBatch.Draw(sprite.index, pos, null, blend * alpha, MathHelper.ToRadians(angle), sprite.origin, scale, SpriteEffects.None, 0);
+        
+             */
         }
 
         public virtual void MoveSelf(GameTime gameTime, float worldFactor)

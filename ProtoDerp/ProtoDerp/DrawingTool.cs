@@ -397,7 +397,7 @@ namespace ProtoDerp
                     controlCamera();
                 else
                     followTitle();
-                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
+                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointClamp, null, null, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
             }
         }
         internal void drawEntities(SortedSet<Entity> entities, GameTime gameTime)
@@ -426,7 +426,7 @@ namespace ProtoDerp
 
             spriteBatch.Begin(SpriteSortMode.Deferred,
                          BlendState.NonPremultiplied,
-                         null,
+                         SamplerState.PointClamp,
                          null,
                          null,
                          null,
@@ -465,7 +465,7 @@ namespace ProtoDerp
 
            if (game.gMode == 0|| game.gMode==2)
            {
-               spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
+               spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
                game.Arena.gui.Draw(gameTime, spriteBatch);
                spriteBatch.End();
            }

@@ -45,7 +45,9 @@ namespace ProtoDerp
         Entity selected = null;
 
         MouseState oldMouse;
-        int oldMouseValue;
+        int oldMouseValue;        
+
+        bool mouseInSelectMode = false;
 
         public CreaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
             : base(g)
@@ -140,14 +142,35 @@ namespace ProtoDerp
             {
                 game.loadNewLevel = true;
                 this.dispose = true;
+                game.currentWriteLevel = game.gameTemplateLevel;
             }
             if (keyInput.IsNewKeyPressed(Keys.B))
             {
-                game.gameTemplateLevel--;
+                if(game.gameTemplateLevel!=0)
+                    game.gameTemplateLevel--;
             }
             if (keyInput.IsNewKeyPressed(Keys.N))
             {
-                game.gameTemplateLevel++;
+                if (!game.loadFromLevel)
+                {
+                    if (game.gameTemplateLevel != Constants.MAX_TEMPLATE_LEVEL)
+                        game.gameTemplateLevel++;
+                }
+                else
+                {
+                    if (game.gameTemplateLevel != Constants.MAX_WRITE_LEVEL)
+                        game.gameTemplateLevel++;
+
+                }
+            }
+            if (keyInput.IsNewKeyPressed(Keys.RightShift))
+            {
+                game.loadFromLevel = !game.loadFromLevel;
+            }
+
+            if (keyInput.IsNewKeyPressed(Keys.C))
+            {
+                mouseInSelectMode = !mouseInSelectMode;
             }
             if (keyInput.IsNewKeyPressed(Keys.Enter))
             {
@@ -166,7 +189,6 @@ namespace ProtoDerp
                         addGoalBlock();
                         game.cachedEntityLists = new Dictionary<Type, object>();
                         break;
-
                 }
                 
             }
@@ -192,17 +214,24 @@ namespace ProtoDerp
             //Vector2 worldMousePosition = Vector2.Transform(mousePosition, inverseViewMatrix);
             //Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
             //Vector2 worldMousePosition = Vector2.Transform(mousePosition, game.drawingTool.cam._transform);
-            if (Mouse.GetState().LeftButton == ButtonState.Pressed && oldMouse.LeftButton==ButtonState.Released)
+            if (!mouseInSelectMode)
             {
-                Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y - 500 * game.drawingTool.cam.Zoom);
-                Vector2 worldMousePosition = Vector2.Transform(mousePosition, Matrix.Invert(game.drawingTool.cam._transform));
-                addBlockBasedOnMouse(worldMousePosition);
+                if (Mouse.GetState().LeftButton == ButtonState.Pressed && oldMouse.LeftButton == ButtonState.Released)
+                {
+                    Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y - 500 * game.drawingTool.cam.Zoom);
+                    Vector2 worldMousePosition = Vector2.Transform(mousePosition, Matrix.Invert(game.drawingTool.cam._transform));
+                    addBlockBasedOnMouse(worldMousePosition);
+                }
+
+
+                blockIterater += Mouse.GetState().ScrollWheelValue;
+                oldMouseValue = Mouse.GetState().ScrollWheelValue;
             }
-
-
-            blockIterater +=  Mouse.GetState().ScrollWheelValue;
-            oldMouseValue = Mouse.GetState().ScrollWheelValue;
-
+            else
+            {
+                
+                    makeMouseSelection();
+            }
             game.cXLocation = pos.X;
             game.cYLocation = pos.Y;
             oldMouse = Mouse.GetState();
@@ -236,14 +265,17 @@ namespace ProtoDerp
             if (keyInput.IsNewKeyPressed(Keys.E))
             {
                 drawLevel = 1;
+                game.drawLevel = 1;
             }
             if (keyInput.IsNewKeyPressed(Keys.R))
             {
                 drawLevel = 0;
+                game.drawLevel = 0;
             }
             if (keyInput.IsNewKeyPressed(Keys.T))
             {
                 drawLevel = 2;
+                game.drawLevel = 2;
             }
         }
 
@@ -292,6 +324,12 @@ namespace ProtoDerp
             }
         }
 
+        public void makeMouseSelection()
+        {
+           
+            
+        }
+
         public void moveSelectedBlock()
         {
             XboxInput xbi = (XboxInput)game.playerOneInput;
@@ -320,7 +358,7 @@ namespace ProtoDerp
             {
                 x += 5;// 1 * xturbo;
             }
-
+            //Should think of a better way of doing this
             if (selected is Block)
             {
                 ((Block)selected).body.Position += new Vector2(ConvertUnits.ToSimUnits(x * turbo), ConvertUnits.ToSimUnits(y * turbo));
@@ -379,7 +417,24 @@ namespace ProtoDerp
 
         public void addBlockBasedOnMouse(Vector2 origin)
         {
-            game.addEntity(new Block(game, game.Arena, origin, 1, blockArray[counter], blockHeight, blockWidth, drawLevel));
+            switch (game.blockType)
+            {
+                case Game.BlockType.Normal:
+                    game.addEntity(new Block(game, game.Arena, origin, 1, blockArray[counter], blockHeight, blockWidth, drawLevel));
+                    break;
+                case Game.BlockType.Death:
+                    game.addEntity(new DeathBlock(game, game.Arena, origin, 1, blockArray[counter]));
+                    break;
+                case Game.BlockType.Moving:
+                    game.addEntity(new MovingDeath(game, game.Arena, origin, 1, blockArray[counter], new Vector2(1, 0), 2));        
+                    break;
+                case Game.BlockType.Goal:
+                    game.addEntity(new GoalBlock(game, game.Arena, origin, 1, blockArray[counter], game.currentLevel));
+                    game.cachedEntityLists = new Dictionary<Type, object>();
+                    break;
+
+            }
+            
         }
 
         public void addBlock()

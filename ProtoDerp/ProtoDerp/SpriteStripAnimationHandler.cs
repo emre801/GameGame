@@ -93,12 +93,12 @@ namespace ProtoDerp
             stopWatch.Start();
 
         }
-        public void drawCurrentState(SpriteBatch spriteBatch, Entity owner, Vector2 drawPos,Vector2 origin, Body body, Rectangle rect,Boolean direction)
+        public void drawCurrentState(SpriteBatch spriteBatch, Entity owner, Vector2 drawPos,Vector2 origin, Body body, Rectangle rect,Boolean direction,Vector2 shiftPosition)
         {
             if(direction)
-                spriteBatch.Draw(spriteStrip.index, drawPos, texBounds, owner.blend * owner.alpha, MathHelper.ToRadians(owner.angle), origin, 1, SpriteEffects.None, 0);
+                spriteBatch.Draw(spriteStrip.index, drawPos, texBounds, owner.blend * owner.alpha, MathHelper.ToRadians(owner.angle), origin+shiftPosition, 1, SpriteEffects.None, 0);
             else
-                spriteBatch.Draw(spriteStrip.index, drawPos, texBounds, owner.blend * owner.alpha, MathHelper.ToRadians(owner.angle), origin, 1, SpriteEffects.FlipHorizontally, 0);
+                spriteBatch.Draw(spriteStrip.index, drawPos, texBounds, owner.blend * owner.alpha, MathHelper.ToRadians(owner.angle), origin-shiftPosition, 1, SpriteEffects.FlipHorizontally, 0);
         }
     }
 }

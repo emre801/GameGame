@@ -17,7 +17,16 @@ namespace ProtoDerp
             if (game.gMode == 0)
                 initLevels("World1");
             else
-                initLevels("Template");
+            {
+                if (!game.loadFromLevel)
+                {
+                    initLevels("Template");
+                }
+                else
+                {
+                    initLevels("World1");
+                }
+            }
         }
         public PlayableCharacter player1 = null;
         public PlayableCharacter player2 = null;

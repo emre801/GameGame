@@ -83,6 +83,9 @@ namespace ProtoDerp
             DrawText(spriteBatch, 0.90f, currentPos += increment, "B and N Change Template Level");
             DrawText(spriteBatch, 0.90f, currentPos += increment, "V: load new template");
             DrawText(spriteBatch, 0.90f, currentPos += increment, "O and P change Save Location");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "C: Change Mouse to Select");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "V: New Template");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "Shift to change loadLocation");
         }
 
         public void DrawControlsInfoEditMode(GameTime gameTime, SpriteBatch spriteBatch)
@@ -156,6 +159,22 @@ namespace ProtoDerp
 
             }
             DrawText(spriteBatch, 0.065f, 0.85f, blockInfo);
+
+            String drawLevel = "";
+            if (game.drawLevel == 1)
+            {
+                drawLevel = "Background";
+            }
+            else if (game.drawLevel == 2)
+            {
+                drawLevel = "Forground";
+            }
+            else
+            {
+                drawLevel = "Normal";
+            }
+
+            DrawText(spriteBatch, 0.065f, 0.90f, "DrawLevel = "+drawLevel);
         }
 
         public void DrawPositionInformation(GameTime gameTime, SpriteBatch spriteBatch)
@@ -172,7 +191,9 @@ namespace ProtoDerp
         }
         public void DrawCurrentTemplateLevel(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            String currentLevel = "Template Level: " + game.gameTemplateLevel;
+            String currentLevel = "Template Level: " + game.gameTemplateLevel +" from Templates";
+            if(game.loadFromLevel)
+                currentLevel = "Template Level: " + game.gameTemplateLevel + " from Levels";
             DrawText(spriteBatch, 0.605f, 0.90f, currentLevel);
 
         }
