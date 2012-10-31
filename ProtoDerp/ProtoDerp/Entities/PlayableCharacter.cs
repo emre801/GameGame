@@ -202,7 +202,7 @@ namespace ProtoDerp
                 run = !run;
             }
             //Ignores input if it's in creator mode
-            if (game.isInCreatorMode)
+            if (game.isInCreatorMode && !game.testLevel)
             {
                 body.IgnoreGravity = true;
                 body.LinearVelocity = new Vector2(0, 0);

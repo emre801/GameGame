@@ -49,7 +49,7 @@ namespace ProtoDerp
             }
             if (game.gMode == 2)
             {
-                if (!game.inDeleteMode)
+                if (!game.inDeleteMode && !game.testLevel)
                 {
                     DrawCreatorInformation(gameTime, spriteBatch);
                     DrawPositionInformation(gameTime, spriteBatch);

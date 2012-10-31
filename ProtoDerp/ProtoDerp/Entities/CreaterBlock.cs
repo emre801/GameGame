@@ -94,12 +94,22 @@ namespace ProtoDerp
                 if (selected != null)
                     selected.isSelected = !selected.isSelected;
             }
+            if (keyInput.IsNewKeyPressed(Keys.Tab))
+            {
+                game.testLevel = !game.testLevel;
+            }
+            if (game.testLevel)
+            {
+                return;
+            }
+            
             if (game.inDeleteMode)
             {
                 DeleteBlockSelector();
                 return;
             }
             moveBlock();
+            
             if (keyInput.IsNewKeyPressed(Keys.A))
             {
                 game.blockType =Game.BlockType.Normal;
@@ -216,14 +226,15 @@ namespace ProtoDerp
             //Vector2 worldMousePosition = Vector2.Transform(mousePosition, game.drawingTool.cam._transform);
             if (!mouseInSelectMode)
             {
+                Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y - 500 * game.drawingTool.cam.Zoom);
+                Vector2 worldMousePosition = Vector2.Transform(mousePosition, Matrix.Invert(game.drawingTool.cam._transform));
+                    
                 if (Mouse.GetState().LeftButton == ButtonState.Pressed && oldMouse.LeftButton == ButtonState.Released)
                 {
-                    Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y - 500 * game.drawingTool.cam.Zoom);
-                    Vector2 worldMousePosition = Vector2.Transform(mousePosition, Matrix.Invert(game.drawingTool.cam._transform));
                     addBlockBasedOnMouse(worldMousePosition);
                 }
 
-
+                pos = worldMousePosition+Constants.player1SpawnLocation;
                 blockIterater += Mouse.GetState().ScrollWheelValue;
                 oldMouseValue = Mouse.GetState().ScrollWheelValue;
             }

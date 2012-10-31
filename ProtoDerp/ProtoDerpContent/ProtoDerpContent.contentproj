@@ -509,6 +509,26 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="BigBackGround.png">
+      <Name>BigBackGround</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="groundTemplate.png">
+      <Name>groundTemplate</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="BigGround.png">
+      <Name>BigGround</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="LongGround.png">
+      <Name>LongGround</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="Template\Level3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>Level3</Name>

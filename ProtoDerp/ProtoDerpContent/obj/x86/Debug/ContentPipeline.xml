@@ -821,6 +821,42 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\sprite17.xnb</Output>
       <Time>2012-10-28T02:38:15.4830751-04:00</Time>
     </Item>
+    <Item>
+      <Source>BigBackGround.png</Source>
+      <Name>BigBackGround</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\BigBackGround.xnb</Output>
+      <Time>2012-10-30T13:19:30.1621981-04:00</Time>
+    </Item>
+    <Item>
+      <Source>groundTemplate.png</Source>
+      <Name>groundTemplate</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\groundTemplate.xnb</Output>
+      <Time>2012-10-31T12:52:24.4896525-04:00</Time>
+    </Item>
+    <Item>
+      <Source>BigGround.png</Source>
+      <Name>BigGround</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\BigGround.xnb</Output>
+      <Time>2012-10-31T13:17:31.3318389-04:00</Time>
+    </Item>
+    <Item>
+      <Source>LongGround.png</Source>
+      <Name>LongGround</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\LongGround.xnb</Output>
+      <Time>2012-10-31T13:25:27.1890564-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

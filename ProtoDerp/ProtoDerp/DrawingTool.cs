@@ -365,6 +365,9 @@ namespace ProtoDerp
         }
         public void controlCamera()
         {
+            if (game.testLevel)
+                return;
+
             XboxInput xbInput=(XboxInput)game.Arena.player1.inputState;
             float xDirection = xbInput.getXDirection();
             float yDirection = xbInput.getYDirection();
@@ -454,8 +457,9 @@ namespace ProtoDerp
                         e.Draw(gameTime, spriteBatch);
                     }
                 }
-                if (e is DeathBlock|| e is GoalBlock)
+                if (e is DeathBlock|| e is GoalBlock|| e is CreaterBlock)
                     e.Draw(gameTime, spriteBatch);
+                
                 
             }
            endBatch();
