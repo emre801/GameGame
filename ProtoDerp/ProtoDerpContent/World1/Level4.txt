@@ -4,18 +4,19 @@
 345 45 cannon Block 35 57 2
 560 45 cannon Block 35 57 2
 775 45 cannon Block 35 57 2
-595 -78 bigBlock Block 15 1005 0
-250 -243 bigBlock Block 15 1005 0
-596 -433 bigBlock Block 15 1005 0
+595 -83 bigBlock Block 15 1005 0
+250 -298 bigBlock Block 15 1005 0
+596 -508 bigBlock Block 15 1005 0
 430 350 bigBlock Block 220 1765 2
 -545 -190 bigBlock Block 1510 200 2
 1380 -190 bigBlock Block 1510 200 2
-1038 -105 deathSpikes DeathBlock
-933 -105 deathSpikes DeathBlock
-518 -270 deathSpikes DeathBlock
-163 -270 deathSpikes DeathBlock
--186 -270 deathSpikes DeathBlock
-1033 -460 deathSpikes DeathBlock
-928 -460 deathSpikes DeathBlock
-1046 -553 ahLogo0 GoalBlock 5
+1038 -115 deathSpikes DeathBlock
+933 -110 deathSpikes DeathBlock
+518 -315 deathSpikes DeathBlock
+163 -325 deathSpikes DeathBlock
+-186 -330 deathSpikes DeathBlock
+1033 -535 deathSpikes DeathBlock
+928 -530 deathSpikes DeathBlock
+811 -108 deathSpikes DeathBlock
+1046 -653 ahLogo0 GoalBlock 5
 Demi -100 750 -800 500

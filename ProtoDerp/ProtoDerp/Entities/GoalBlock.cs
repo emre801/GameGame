@@ -60,8 +60,11 @@ namespace ProtoDerp
                 PlayableCharacter player = players.First();
                 if (fixtureB == player.fixture)
                 {
-                    game.numDeath = 0;
-                    game.nextLevel(nextLevel++);
+                    if (!game.testLevel)
+                    {
+                        game.numDeath = 0;
+                        game.nextLevel(nextLevel++);
+                    }
                 }
             }
             return true;

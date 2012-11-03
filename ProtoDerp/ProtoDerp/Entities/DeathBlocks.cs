@@ -58,8 +58,11 @@ namespace ProtoDerp
                  if (fixtureB == player.fixture)
                  {
                      //game.sounds["Rage//Wave//Rage" + game.ran.Next(1, 2)].Play();
-                     game.PlayerDies();
-                     game.sounds["Rage//Wave//death"].Play();
+                     if (!game.testLevel)
+                     {
+                         game.PlayerDies();
+                         game.sounds["Rage//Wave//death"].Play();
+                     }
                      //game.playSong("Rage//Rage"+game.ran.Next(1,8));
                      
                  }

@@ -86,6 +86,8 @@ namespace ProtoDerp
             DrawText(spriteBatch, 0.90f, currentPos += increment, "C: Change Mouse to Select");
             DrawText(spriteBatch, 0.90f, currentPos += increment, "V: New Template");
             DrawText(spriteBatch, 0.90f, currentPos += increment, "Shift to change loadLocation");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "Tab to enter test mode");
+            DrawText(spriteBatch, 0.90f, currentPos += increment, "M to change into delete mode");
         }
 
         public void DrawControlsInfoEditMode(GameTime gameTime, SpriteBatch spriteBatch)
