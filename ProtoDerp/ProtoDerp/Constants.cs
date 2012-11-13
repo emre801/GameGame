@@ -10,7 +10,7 @@ namespace ProtoDerp
     class Constants
     {
         public const int WRITE_LEVEL = 1;
-        public const int MAX_WRITE_LEVEL = 14;
+        public const int MAX_WRITE_LEVEL = 19;
         public const int READ_LEVEL = 2;
 
         public const int MAX_TEMPLATE_LEVEL = 3;

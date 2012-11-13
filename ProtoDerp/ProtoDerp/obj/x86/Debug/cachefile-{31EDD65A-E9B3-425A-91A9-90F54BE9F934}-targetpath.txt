@@ -102,6 +102,8 @@ Content\BigBackGround.xnb
 Content\groundTemplate.xnb
 Content\BigGround.xnb
 Content\LongGround.xnb
+Content\sprite17-2.xnb
+Content\sprite18_strip4.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

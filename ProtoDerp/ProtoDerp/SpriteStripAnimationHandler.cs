@@ -29,6 +29,7 @@ namespace ProtoDerp
         private int frameRate;
         private int origFrameRate;
         public Stopwatch stopWatch = new Stopwatch();
+        public int numberOfTotalCycles = 0;
 
         public SpriteStripAnimationHandler(Sprite strip, int stateCount,int frameRate)
         {
@@ -63,7 +64,15 @@ namespace ProtoDerp
         {
             setState((CurrentState - 1) % stateCount);
         }
+        public int getCycles()
+        {
+            return _currentState;
+        }
 
+        public void setStatePub(int state)
+        {
+            setState(state);
+        }
         private void setState(int state)
         {
             texBounds.X = state * widthOfSingleState;

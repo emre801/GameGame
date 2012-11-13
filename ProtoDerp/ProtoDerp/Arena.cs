@@ -100,10 +100,48 @@ namespace ProtoDerp
             Vector2 origin = new Vector2(1000, 1000);
             
             //spriteBatch.Draw(background.index, new Rectangle(0, 0, 8000, 8000), null, Color.White, 0, origin, SpriteEffects.None, 0f);
-            
+            if (game.isInCreatorMode)
+            {
+                for (int i = (int)game.Arena.maxLeft; i < game.Arena.maxRight; i++)
+                {
+                    DrawText(spriteBatch, i, game.Arena.maxTop, "*");
+                    DrawText(spriteBatch, i, game.Arena.maxButtom, "*");
+                }
+                for (int i = (int)game.Arena.maxTop; i < game.Arena.maxButtom; i++)
+                {
+                    DrawText(spriteBatch, game.Arena.maxLeft, i, "*");
+                    DrawText(spriteBatch, game.Arena.maxRight, i, "*");
+                }
+            }
             base.Draw(gameTime, spriteBatch);
         }
 
+        public void DrawText(SpriteBatch spriteBatch, float x, float y, String text)
+        {
+            String[] tempstrMulti = text.Split("|".ToCharArray());
+            SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
+            tempstrMulti = text.Split("|".ToCharArray());
+            Color colo = Color.Red;
+            PlayableCharacter p1 = game.Arena.player1;
+
+            if (game.Arena.maxLeft < p1.Position.X && game.Arena.maxRight > p1.Position.X
+                && game.Arena.maxTop < p1.Position.Y && game.Arena.maxButtom > p1.Position.Y)
+            {
+                colo = Color.Green;
+            }
+
+            for (int i = 0; i < tempstrMulti.Length; i += 1)
+                spriteBatch.DrawString(font, tempstrMulti[i],
+                    new Vector2((x), (y) + (font.MeasureString("A").Y * i)),
+                    colo,
+                    0f,
+                    Vector2.Zero,
+                    //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
+                    game.drawingTool.gameToScreen(1f) * 0.25f,
+                    SpriteEffects.None,
+                    0);
+
+        }
         /**
          *  Disposes of all entities in the arena, in preparation for moving to another game state.
          */

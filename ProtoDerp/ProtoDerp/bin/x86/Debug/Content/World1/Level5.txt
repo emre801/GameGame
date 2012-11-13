@@ -15,4 +15,4 @@
 910 -460 deathSpikes DeathBlock
 750 -460 deathSpikes DeathBlock
 1046 -553 ahLogo0 GoalBlock 6
-Demi -100 750 -800 500
+Demi -283 1130 -492 661

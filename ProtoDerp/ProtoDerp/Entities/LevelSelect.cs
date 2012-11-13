@@ -19,6 +19,9 @@ namespace ProtoDerp
         const int numOptions = 4;
         Input player1;
         Vector2 origin;
+
+        int levelNum = 1;
+        //Input player1 = null;
         public LevelSelect(Game g)
             : base(g)
         {
@@ -37,7 +40,27 @@ namespace ProtoDerp
         {
             if (IsVisible)
             {
-
+                if (this.player1.IsDownPressed())
+                {
+                    if (levelNum != 1)
+                        levelNum--;
+                }
+                if (this.player1.IsUpPressed())
+                {
+                    if (levelNum != Constants.MAX_WRITE_LEVEL)
+                        levelNum++;
+                }
+                if (player1.isAPressed())
+                {
+                    game.gMode = 0;
+                    game.isInLevelSelect = false;
+                    game.playSong("Music//ForrestSounds");
+                    game.currentLevel = levelNum;
+                    game.populateWorld();                    
+                    game.drawingTool.cam.Zoom = 0.55f * game.drawingTool.zoomRatio;
+                    this.IsVisible = false;
+                    this.dispose = true;
+                }
             }
         }
 
@@ -45,10 +68,26 @@ namespace ProtoDerp
         {
             if (IsVisible)
             {
-                base.Draw(gameTime, spriteBatch);
-                spriteBatch.Draw(sprLevelSelect.index, new Rectangle((int)400, (int)400, (int)sprLevelSelect.index.Width, (int)sprLevelSelect.index.Height), null, Color.White, 0, origin, SpriteEffects.None, 0f);
-
+                DrawText(spriteBatch, 0.5f, 0.5f, "Current Level " + levelNum);
             }
+        }
+
+        public void DrawText(SpriteBatch spriteBatch, float x, float y, String text)
+        {
+            String[] tempstrMulti = text.Split("|".ToCharArray());
+            SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
+            tempstrMulti = text.Split("|".ToCharArray());
+            for (int i = 0; i < tempstrMulti.Length; i += 1)
+                spriteBatch.DrawString(font, tempstrMulti[i],
+                    game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * x, (game.getWorldSize().Y * y) + (font.MeasureString("A").Y * i))),
+                    Color.White,
+                    0f,
+                    Vector2.Zero,
+                    //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
+                    game.drawingTool.gameToScreen(1f) * 0.25f,
+                    SpriteEffects.None,
+                    0);
+
         }
 
     }

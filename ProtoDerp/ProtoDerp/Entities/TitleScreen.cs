@@ -182,6 +182,7 @@ namespace ProtoDerp
                     else if (decreaseAlpha == 1)
                     {
                         decreaseAlpha = -1;
+                        IsVisible = false;
                         game.isInLevelSelect = true;
                         game.levelSelect = new LevelSelect(game);
                         game.addEntity(game.levelSelect);

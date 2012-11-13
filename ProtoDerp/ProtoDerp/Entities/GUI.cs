@@ -58,6 +58,8 @@ namespace ProtoDerp
                     DrawSaveText(gameTime, spriteBatch);
                     DrawControlsInfo(gameTime, spriteBatch);
                     DrawMouse(gameTime, spriteBatch);
+                    DrawCameraText(gameTime, spriteBatch);
+                    DrawMouseCameraValue(gameTime, spriteBatch);
                 }
                 else
                 {
@@ -88,6 +90,30 @@ namespace ProtoDerp
             DrawText(spriteBatch, 0.90f, currentPos += increment, "Shift to change loadLocation");
             DrawText(spriteBatch, 0.90f, currentPos += increment, "Tab to enter test mode");
             DrawText(spriteBatch, 0.90f, currentPos += increment, "M to change into delete mode");
+        }
+
+        public void DrawMouseCameraValue(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            String position = "";
+            switch (game.cameraWindowValue)
+            {
+                case 0:
+                    return;
+                case 1:
+                    position = "Buttom";
+                    break;
+                case 2:
+                    position = "Top";
+                    break;
+                case 3:
+                    position = "Right";
+                    break;
+                case 4:
+                    position = "Left";
+                    break;
+            }
+            
+            DrawText(spriteBatch, 0.065f, 0.65f, "Camera = " + position);
         }
 
         public void DrawControlsInfoEditMode(GameTime gameTime, SpriteBatch spriteBatch)
@@ -206,6 +232,11 @@ namespace ProtoDerp
             if (game.saveAlpha >= 0)
                 game.saveAlpha -= 0.01f;
             DrawText(spriteBatch, 0.465f, 0.95f, currentLevel); 
+        }
+        public void DrawCameraText(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            String camera = "MaxRight= " + game.maxRight + " MaxLeft= " + game.maxLeft + "  MaxTop= " + game.maxLeft + " MaxButtom= " + game.maxButtom;
+            DrawText(spriteBatch, 0.605f, 0.85f, camera);
         }
 
         public void DrawText(SpriteBatch spriteBatch, float x, float y, String text)

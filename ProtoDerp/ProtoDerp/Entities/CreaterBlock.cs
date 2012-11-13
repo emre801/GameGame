@@ -45,8 +45,8 @@ namespace ProtoDerp
         Entity selected = null;
 
         MouseState oldMouse;
-        int oldMouseValue;        
-
+        int oldMouseValue;
+        //int cameraWindowValue = 0;
         bool mouseInSelectMode = false;
 
         public CreaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
@@ -94,6 +94,23 @@ namespace ProtoDerp
                 if (selected != null)
                     selected.isSelected = !selected.isSelected;
             }
+
+            if (keyInput.IsNewKeyPressed(Keys.H))
+            {
+                if (game.cameraWindowValue == 4)
+                    game.cameraWindowValue = 0;
+                else
+                    game.cameraWindowValue++;
+
+            }
+
+            if (game.cameraWindowValue != 0)
+            {
+                cameraInputPress();
+                return;
+
+            }
+
             if (keyInput.IsNewKeyPressed(Keys.Tab))
             {
                 game.testLevel = !game.testLevel;
@@ -341,6 +358,37 @@ namespace ProtoDerp
             
         }
 
+        public void cameraInputPress()
+        {
+            Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y - 500 * game.drawingTool.cam.Zoom);
+            Vector2 worldMousePosition = Vector2.Transform(mousePosition, Matrix.Invert(game.drawingTool.cam._transform));
+            worldMousePosition += Constants.player1SpawnLocation;
+            if (Mouse.GetState().LeftButton == ButtonState.Pressed && oldMouse.LeftButton == ButtonState.Released)
+            {
+
+                 switch (game.cameraWindowValue)
+                 {
+                     case 1:
+                         game.maxButtom = worldMousePosition.Y;
+                         game.Arena.maxButtom = worldMousePosition.Y;
+                        break;
+                     case 2:
+                        game.maxTop = worldMousePosition.Y;
+                        game.Arena.maxTop = worldMousePosition.Y;
+                        break;
+                     case 3:
+                        game.maxRight = worldMousePosition.X;
+                        game.Arena.maxRight = worldMousePosition.X;
+                        break;
+                     case 4:
+                        game.maxLeft = worldMousePosition.X;
+                        game.Arena.maxLeft = worldMousePosition.X;
+                        break;
+                    }
+                }
+
+        }
+
         public void moveSelectedBlock()
         {
             XboxInput xbi = (XboxInput)game.playerOneInput;
@@ -475,6 +523,35 @@ namespace ProtoDerp
         {
             if(!game.inDeleteMode)
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);
+            
+        }
+
+        public void DrawText(SpriteBatch spriteBatch, float x, float y, String text)
+        {
+            String[] tempstrMulti = text.Split("|".ToCharArray());
+            SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
+            PlayableCharacter p1 = game.Arena.player1;
+            Color colo = Color.Green;
+            if (!(game.Arena.maxLeft > p1.Position.X || game.Arena.maxRight < p1.Position.X))
+            {
+                colo = Color.Red;
+            }
+            if (!(game.Arena.maxTop > p1.Position.Y || game.Arena.maxButtom < p1.Position.Y))
+            {
+                colo = Color.Red;
+            }
+
+            tempstrMulti = text.Split("|".ToCharArray());
+            for (int i = 0; i < tempstrMulti.Length; i += 1)
+                spriteBatch.DrawString(font, tempstrMulti[i],
+                    new Vector2(ConvertUnits.ToSimUnits(x), ConvertUnits.ToSimUnits(y) + ConvertUnits.ToSimUnits(font.MeasureString("A").Y * i)),
+                    colo,
+                    0f,
+                    Vector2.Zero,
+                    //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
+                    game.drawingTool.gameToScreen(1f) * 0.25f,
+                    SpriteEffects.None,
+                    0);
 
         }
     }

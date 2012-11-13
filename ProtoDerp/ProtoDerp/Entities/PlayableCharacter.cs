@@ -58,7 +58,10 @@ namespace ProtoDerp
         KeyboardInput keyInput;
         Vector2 shiftPosition;
 
-        
+        bool isOnWall = false;
+        int wallJumpCount = 0;
+        bool jumpDirection = false;
+        bool isFirstAni = false;
 
         bool mikeStandingStill = false;
 
@@ -211,6 +214,13 @@ namespace ProtoDerp
 
             if (inputState.IsButtonPressed(Buttons.RightShoulder)|| keyInput.IsNewKeyPressed(Keys.Z))
                 runningValue = 2f;
+
+            if ((xDirection > 0 && body.LinearVelocity.X < 0) || (xDirection < 0 && body.LinearVelocity.X > 0))
+            {
+                body.LinearVelocity = new Vector2(body.LinearVelocity.X*0.88f, body.LinearVelocity.Y);
+
+            }
+            
             if (onGround)
             {
                 if ((Math.Abs(body.LinearVelocity.X) < 5 * runningValue))
@@ -225,7 +235,7 @@ namespace ProtoDerp
             else
             {
 
-                body.ApplyLinearImpulse(new Vector2(xDirection * 0.45f * runningValue, 0));// inputState.getYDirection() * 300f));
+                body.ApplyLinearImpulse(new Vector2(xDirection * 0.65f * runningValue, 0));// inputState.getYDirection() * 300f));
                 //motor.MotorSpeed = inputState.getXDirection()*10;
                 if (inputState.getXDirection() == 0)
                     fixture.Friction = 10;
@@ -243,6 +253,18 @@ namespace ProtoDerp
                 body.IgnoreGravity = true;
                 body.LinearVelocity = new Vector2(body.LinearVelocity.X, 0);
                 body.ApplyLinearImpulse(new Vector2(0, -30f));
+                if (isOnWall)
+                {
+                    if (jumpDirection)
+                    {
+                        body.ApplyLinearImpulse(new Vector2(-0.75f * runningValue, 0f));
+                    }
+                    else
+                    {
+                        body.ApplyLinearImpulse(new Vector2(0.75f * runningValue, 0f));                    
+                    }
+
+                }
                 body.IgnoreGravity = false;
                 onGround = false;
                 maxSpeedInAir = body.LinearVelocity;
@@ -312,18 +334,38 @@ namespace ProtoDerp
             }
             if (Math.Abs(body.LinearVelocity.Y)>=0.0001f)
             {
-                if (body.LinearVelocity.Y > 0.05f)
+                if (!isOnWall)
                 {
-                    playerSprite = game.getSprite("MikeJump2");
+                    if (body.LinearVelocity.Y > 0.05f)
+                    {
+                        ani = game.getSpriteAnimation("sprite17");
+                    }
+                    if (body.LinearVelocity.Y < -0.05f)
+                    {
+                        ani = game.getSpriteAnimation("sprite17-2");
+                    }
+                    wallJumpCount = 0;
                 }
-                if (body.LinearVelocity.Y < -0.05f)
+                else
                 {
-                    playerSprite = game.getSprite("MikeJump1");
+                    ani = game.getSpriteAnimation("sprite18_strip4");
+                    if (isFirstAni)
+                    {
+                        ani.setStatePub(0);
+                        isFirstAni = false;
+                    }
+                        
+                    wallJumpCount++;
+                    faceRight = jumpDirection;
+                    if (ani.getCycles()>=3)
+                    {
+                        isOnWall = false;
+                        faceRight = !jumpDirection;
+                    }
+                    
 
                 }
-                ani = game.getSpriteAnimation("sprite17");
             }
-
             if (modes == Modes.WALL)
             {
                 playerSprite = game.getSprite("MikeWall");
@@ -331,6 +373,9 @@ namespace ProtoDerp
                 ani = game.getSpriteAnimation("sprite14_strip9");
                 doAnimation = true;
                 shiftPosition = new Vector2(8, 0);
+                isOnWall = true;
+                jumpDirection = faceRight;
+                isFirstAni = true;
             }
 
         }

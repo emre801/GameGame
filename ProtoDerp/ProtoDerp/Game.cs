@@ -88,6 +88,7 @@ namespace ProtoDerp
         public int drawLevel = 0;
 
         public bool testLevel = false;
+        public int cameraWindowValue = 0;
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -307,7 +308,12 @@ namespace ProtoDerp
             spriteAnimation.Add("sprite16_strip6", new SpriteStripAnimationHandler(new Sprite(Content, "sprite16_strip6")
                 , 6, 120));//Running
             spriteAnimation.Add("sprite17", new SpriteStripAnimationHandler(new Sprite(Content, "sprite17")
-                , 1, 60));//Running
+                , 1, 60));//jumping up
+            spriteAnimation.Add("sprite17-2", new SpriteStripAnimationHandler(new Sprite(Content, "sprite17-2")
+                , 1, 60));//jumping up
+            spriteAnimation.Add("sprite18_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "sprite18_strip4")
+                , 4, 60));//WallJump
+
             
             if (Constants.ENABLE_TITLE_SCREEN)
             {
@@ -466,7 +472,7 @@ namespace ProtoDerp
                 lines.AddLast(x + " " + y + " " + spriteName + " MovingDeath " + b.velObj +" "+b.shootAngle.X + " "+b.shootAngle.Y);
 
             }
-            lines.AddLast("Demi "+ maxLeft + " "+ maxRight +" "+ maxTop+ " " +maxButtom);
+            lines.AddLast("Demi " + (int)maxLeft + " " + (int)maxRight + " " + (int)maxTop + " " + (int)maxButtom);
 
             System.IO.File.WriteAllLines(path, lines);
 
@@ -490,7 +496,8 @@ namespace ProtoDerp
                 restart = false;
                 loadNewLevel = false;
                 cachedEntityLists.Clear();
-                newLevel();                
+                newLevel();
+                Arena.setUpDemensions(maxLeft, maxRight, maxTop, maxButtom);
             }
             if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Back))
             {
