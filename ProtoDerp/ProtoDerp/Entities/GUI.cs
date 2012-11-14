@@ -184,6 +184,9 @@ namespace ProtoDerp
                 case Game.BlockType.Goal:
                     blockInfo += "Goal";
                     break;
+                case Game.BlockType.Magnet:
+                    blockInfo += "Magnet";
+                    break;
 
             }
             DrawText(spriteBatch, 0.065f, 0.85f, blockInfo);

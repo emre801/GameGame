@@ -74,7 +74,7 @@ namespace ProtoDerp
         public float maxLeft, maxRight, maxTop, maxButtom;
         public int count = 0;
 
-        public enum BlockType { Normal, Death, Moving, Goal };
+        public enum BlockType { Normal, Death, Moving, Goal, Magnet };
         public BlockType blockType = BlockType.Normal;
 
         public float cXLocation=0, cYLocation=0;
@@ -446,6 +446,18 @@ namespace ProtoDerp
                 int y = (int)b.origPos.Y;
                 String spriteName = b.spriteNumber;
                 lines.AddLast(x + " " + y + " " + spriteName + " DeathBlock");
+
+            }
+
+            LinkedList<MagnetBlock> magnetBlocks = getEntitiesOfType<MagnetBlock>();
+            foreach (DeathBlock b in deathBlocks)
+            {
+                if (!b.IsVisible)
+                    continue;
+                int x = (int)b.origPos.X;
+                int y = (int)b.origPos.Y;
+                String spriteName = b.spriteNumber;
+                lines.AddLast(x + " " + y + " " + spriteName + " MagnetBlock");
 
             }
 

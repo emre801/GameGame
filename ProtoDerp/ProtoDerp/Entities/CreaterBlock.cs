@@ -26,7 +26,6 @@ namespace ProtoDerp
     {
         public Sprite playerSprite;
 
-        float playerAngle = 0;
         public float centerOffset;
         public Vector2 origin;
         public String spriteNumber;
@@ -126,35 +125,57 @@ namespace ProtoDerp
                 return;
             }
             moveBlock();
-            
+
             if (keyInput.IsNewKeyPressed(Keys.A))
+            {
+                if (blockPressed == 0)
+                    blockPressed = 5;
+                else
+                    blockPressed--;
+                changeBlockType();
+            }
+            if (keyInput.IsNewKeyPressed(Keys.S))
+            {
+                if (blockPressed == 5)
+                    blockPressed = 0;
+                else
+                    blockPressed++;
+                changeBlockType();
+            }
+
+
+
+            /*if (keyInput.IsNewKeyPressed(Keys.A))
             {
                 game.blockType =Game.BlockType.Normal;
                 game.cachedEntityLists = new Dictionary<Type, object>();
-                blockPressed = 0;
+                //blockPressed = 0;
             }
             if (keyInput.IsNewKeyPressed(Keys.S))
             {
                 game.blockType = Game.BlockType.Death;
                 game.cachedEntityLists = new Dictionary<Type, object>();
-                blockPressed = 1;
+                //blockPressed = 1;
             }
+             * */
             if (keyInput.IsNewKeyPressed(Keys.Z))
             {
                 game.saveAlpha = 1;
                 game.writeLevel(game.currentWriteLevel);
             }
+            /*
             if (keyInput.IsNewKeyPressed(Keys.D)) 
             {
                 game.blockType = Game.BlockType.Moving;
-                blockPressed = 2;
+                //blockPressed = 2;
             }
             if (keyInput.IsNewKeyPressed(Keys.F))
             {
                 game.blockType = Game.BlockType.Goal;
                 game.cachedEntityLists = new Dictionary<Type, object>();
-                blockPressed = 3;
+                //blockPressed = 3;
             }
+             * */
             if (keyInput.IsNewKeyPressed(Keys.O))
             {
                 if(game.currentWriteLevel>0)
@@ -216,6 +237,9 @@ namespace ProtoDerp
                         addGoalBlock();
                         game.cachedEntityLists = new Dictionary<Type, object>();
                         break;
+                    case Game.BlockType.Magnet:
+                        addMagnetBlock();
+                        break;
                 }
                 
             }
@@ -266,6 +290,40 @@ namespace ProtoDerp
             chooseNextSprite();
             updateDrawLevel();
         }
+
+        public void changeBlockType()
+        {
+
+            switch (blockPressed)
+            {
+
+                case 0:
+                    game.blockType = Game.BlockType.Normal;
+                    game.cachedEntityLists = new Dictionary<Type, object>();
+                    //blockPressed = 0;
+                    break;
+                case 1:
+                    game.blockType = Game.BlockType.Death;
+                    game.cachedEntityLists = new Dictionary<Type, object>();
+                    //blockPressed = 1;
+                    break;
+                case 2:
+                    game.blockType = Game.BlockType.Moving;
+                    //blockPressed = 2;
+                    break;
+                case 3:
+                    game.blockType = Game.BlockType.Goal;
+                    game.cachedEntityLists = new Dictionary<Type, object>();
+                //blockPressed = 3;
+                    break;
+                case 4:
+                    game.blockType = Game.BlockType.Magnet;
+                    game.cachedEntityLists = new Dictionary<Type, object>();
+                    break;
+            }
+
+        }
+
         public void chooseNextSprite()
         {
             bool isPressed = false;
@@ -316,7 +374,7 @@ namespace ProtoDerp
                 isSelectedBlockChanged = false;
                 foreach (Entity e in game.entities)
                 {
-                    if (e is DeathBlock || e is Block || e is MovingDeath || e is GoalBlock)
+                    if (e is DeathBlock || e is Block || e is MovingDeath || e is GoalBlock|| e is MagnetBlock)
                     {
                         if (count == blockIterater&&e.IsVisible)
                         {
@@ -438,6 +496,11 @@ namespace ProtoDerp
                 ((GoalBlock)selected).body.Position += new Vector2(ConvertUnits.ToSimUnits(x * turbo), ConvertUnits.ToSimUnits(y * turbo));
                 ((GoalBlock)selected).origPos += new Vector2(x * turbo, y * turbo);
             }
+            if (selected is MagnetBlock)
+            {
+                ((MagnetBlock)selected).body.Position += new Vector2(ConvertUnits.ToSimUnits(x * turbo), ConvertUnits.ToSimUnits(y * turbo));
+                ((MagnetBlock)selected).origPos += new Vector2(x * turbo, y * turbo);
+            }
         }
 
         public void moveBlock()
@@ -491,6 +554,10 @@ namespace ProtoDerp
                     game.addEntity(new GoalBlock(game, game.Arena, origin, 1, blockArray[counter], game.currentLevel));
                     game.cachedEntityLists = new Dictionary<Type, object>();
                     break;
+                case Game.BlockType.Magnet:
+                    game.addEntity(new MagnetBlock(game, game.Arena, origin, 1, blockArray[counter]));
+                    break;
+                
 
             }
             
@@ -506,6 +573,11 @@ namespace ProtoDerp
         {
 
             game.addEntity(new DeathBlock(game, game.Arena, origPos, 1, blockArray[counter]));
+        }
+        public void addMagnetBlock()
+        {
+
+            game.addEntity(new MagnetBlock(game, game.Arena, origPos, 1, blockArray[counter]));
         }
 
         public void addGoalBlock()

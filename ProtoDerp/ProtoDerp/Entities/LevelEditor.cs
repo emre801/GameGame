@@ -34,6 +34,7 @@ namespace ProtoDerp
         LinkedList<Block> topBlocks = new LinkedList<Block>();
         LinkedList<Block> buttomBlocks = new LinkedList<Block>();
         LinkedList<DeathBlock> deathBlocks = new LinkedList<DeathBlock>();
+        LinkedList<MagnetBlock> magnetBlocks = new LinkedList<MagnetBlock>();
         LinkedList<GoalBlock> goalBlocks = new LinkedList<GoalBlock>();
         LinkedList<MovingDeath> moveDeathBlocks = new LinkedList<MovingDeath>();
         public void readFile(int templateNum)
@@ -95,6 +96,9 @@ namespace ProtoDerp
                 }
                 if (words[3].Equals("DeathBlock"))
                    deathBlocks.AddLast(new DeathBlock(game, game.Arena, new Vector2(x, y), 1, spriteName));
+                if (words[3].Equals("MagnetBlock"))
+                    magnetBlocks.AddLast(new MagnetBlock(game, game.Arena, new Vector2(x, y), 1, spriteName));
+                
                 if (words[3].Equals("GoalBlock"))
                     goalBlocks.AddLast(new GoalBlock(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4])));
                 if (words[3].Equals("MovingDeath"))
@@ -120,15 +124,17 @@ namespace ProtoDerp
                 game.addEntity(i);
             foreach (DeathBlock i in deathBlocks)
                 game.addEntity(i);
+            foreach (MagnetBlock i in magnetBlocks)
+                game.addEntity(i);
 
             foreach (Block i in blocks)
                 game.addEntity(i);
             foreach (GoalBlock i in goalBlocks)
                 game.addEntity(i);
 
-                      
 
-            foreach(MovingDeath i in moveDeathBlocks)
+
+            foreach (MovingDeath i in moveDeathBlocks)
             {
                 foreach (MovingDeath j in moveDeathBlocks)
                 {
@@ -136,7 +142,7 @@ namespace ProtoDerp
                     j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
                 }
             }
-
+            
 
             foreach (Block i in blocks)
             {

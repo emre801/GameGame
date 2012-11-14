@@ -100,7 +100,9 @@ namespace ProtoDerp
         {
             body.LinearVelocity = new Vector2(body.LinearVelocity.X, 0);
             if (contact.IsTouching())
-            {               
+            {
+                if (isMagnet(fixtureB))
+                    return true;
                 Manifold colis = new Manifold();
                 contact.GetManifold(out colis);
                 Vector2 pColis = colis.LocalNormal;
@@ -124,6 +126,18 @@ namespace ProtoDerp
                 
             }
             return true;
+        }
+
+        public bool isMagnet(Fixture fixture)
+        {
+            LinkedList<MagnetBlock> magnets = game.getEntitiesOfType<MagnetBlock>();
+
+            foreach (MagnetBlock i in magnets)
+            {
+                if (i.fixture.Equals(fixture))
+                    return true;
+            }
+            return false;
         }
 
         protected virtual void SetUpPhysics(Vector2 position)
