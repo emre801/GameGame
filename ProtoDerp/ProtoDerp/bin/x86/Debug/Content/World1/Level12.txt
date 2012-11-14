@@ -1,4 +1,4 @@
-420 90 bigBlock Block 45 1000 0
+70 90 bigBlock Block 45 1000 0
 1635 380 bigBlock Block 45 295 0
 1065 365 bigBlock Block 45 295 0
 2634 42 bigBlock Block 45 295 0
@@ -19,23 +19,26 @@
 4528 707 bigBlock Block 2470 1220 0
 3851 761 bigBlock Block 2470 1220 0
 4464 -780 bigBlock Block 2470 1220 0
-991 97 deathSpikes DeathBlock
-1119 99 deathSpikes DeathBlock
-1251 99 deathSpikes DeathBlock
-1379 99 deathSpikes DeathBlock
-1505 102 deathSpikes DeathBlock
-1631 97 deathSpikes DeathBlock
-1757 99 deathSpikes DeathBlock
-1882 102 deathSpikes DeathBlock
-2011 102 deathSpikes DeathBlock
-2131 99 deathSpikes DeathBlock
-2254 99 deathSpikes DeathBlock
-2379 97 deathSpikes DeathBlock
-2497 99 deathSpikes DeathBlock
--42 -125 deathSpikes4 DeathBlock
--42 -254 deathSpikes4 DeathBlock
--40 -374 deathSpikes4 DeathBlock
--45 -500 deathSpikes4 DeathBlock
--45 -611 deathSpikes4 DeathBlock
+991 87 deathSpikes DeathBlock
+1124 84 deathSpikes DeathBlock
+1251 84 deathSpikes DeathBlock
+1379 85 deathSpikes DeathBlock
+1505 85 deathSpikes DeathBlock
+1631 85 deathSpikes DeathBlock
+1757 85 deathSpikes DeathBlock
+1882 85 deathSpikes DeathBlock
+2011 85 deathSpikes DeathBlock
+2136 85 deathSpikes DeathBlock
+2259 84 deathSpikes DeathBlock
+2384 84 deathSpikes DeathBlock
+2511 84 deathSpikes DeathBlock
+-46 -126 deathSpikes4 DeathBlock
+-46 -254 deathSpikes4 DeathBlock
+-47 -374 deathSpikes4 DeathBlock
+-46 -500 deathSpikes4 DeathBlock
+-46 -625 deathSpikes4 DeathBlock
+630 91 deathSpikes DeathBlock
+739 90 deathSpikes DeathBlock
+865 90 deathSpikes DeathBlock
 2640 -25 ahLogo0 GoalBlock 13
 Demi -100 2797 -129 660

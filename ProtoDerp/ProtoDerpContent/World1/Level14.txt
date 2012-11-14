@@ -54,5 +54,5 @@
 4127 267 deathSpikes DeathBlock
 4099 197 deathSpikes DeathBlock
 4193 197 deathSpikes DeathBlock
-4090 -1410 cloud GoalBlock 1
+4090 -1410 cloud GoalBlock 15
 Demi -100 4315 -1183 808

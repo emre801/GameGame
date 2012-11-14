@@ -197,7 +197,7 @@ namespace ProtoDerp
             xDirection += keyInput.HorizontalMovement();
             float yDirection = inputState.getYDirection();
             yDirection += keyInput.VerticalMovement();
-            float runningValue = 1;
+            float runningValue = 1.5f;
             distance = (float)(distance + gameTime.ElapsedGameTime.TotalMilliseconds * 0.002f * Math.Abs(body.LinearVelocity.X));
             if (distance > 0.9f)
             {
@@ -213,7 +213,7 @@ namespace ProtoDerp
             }
 
             if (inputState.IsButtonPressed(Buttons.RightShoulder)|| keyInput.IsNewKeyPressed(Keys.Z))
-                runningValue = 2f;
+                runningValue = 2.5f;
 
             if ((xDirection > 0 && body.LinearVelocity.X < 0) || (xDirection < 0 && body.LinearVelocity.X > 0))
             {

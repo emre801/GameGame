@@ -401,21 +401,21 @@ namespace ProtoDerp
             float xturbo = 1;
             if (keyState.IsKeyDown(Keys.LeftShift))
                 xturbo = 5;
-            if (keyState.IsKeyDown(Keys.Up))
+            if (keyInput.IsNewKeyPressed(Keys.Up)|| (keyState.IsKeyDown(Keys.Up) && keyState.IsKeyDown(Keys.LeftShift)))
             {
-                y += 5;// 1 * xturbo;
+                y += 1;// 1 * xturbo;
             }
-            if (keyState.IsKeyDown(Keys.Down))
+            if (keyInput.IsNewKeyPressed(Keys.Down) || (keyState.IsKeyDown(Keys.Down) && keyState.IsKeyDown(Keys.LeftShift)))
             {
-                y -= 5;// -1 * xturbo;
+                y -= 1;// -1 * xturbo;
             }
-            if (keyState.IsKeyDown(Keys.Left))
+            if (keyInput.IsNewKeyPressed(Keys.Left) || (keyState.IsKeyDown(Keys.Left) && keyState.IsKeyDown(Keys.LeftShift)))
             {
-                x -= 5;// -1 * xturbo;
+                x -= 1;// -1 * xturbo;
             }
-            if (keyState.IsKeyDown(Keys.Right))
+            if (keyInput.IsNewKeyPressed(Keys.Right) || (keyState.IsKeyDown(Keys.Right) && keyState.IsKeyDown(Keys.LeftShift)))
             {
-                x += 5;// 1 * xturbo;
+                x += 1;// 1 * xturbo;
             }
             //Should think of a better way of doing this
             if (selected is Block)

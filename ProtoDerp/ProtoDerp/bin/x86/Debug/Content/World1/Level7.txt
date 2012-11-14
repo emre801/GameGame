@@ -19,4 +19,4 @@
 1855 0 bullet.0 MovingDeath 2 -2 0
 2470 0 bullet.0 MovingDeath 2 -2 0
 2925 0 bullet.0 MovingDeath 2 -2 0
-Demi -100 3800 -800 300
+Demi -100 3621 -862 561

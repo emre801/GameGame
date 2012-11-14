@@ -371,7 +371,7 @@ namespace ProtoDerp
             XboxInput xbInput=(XboxInput)game.Arena.player1.inputState;
             float xDirection = xbInput.getXDirection();
             float yDirection = xbInput.getYDirection();
-            cam.Move(new Vector2(xDirection, yDirection));
+            cam.Move(new Vector2(xDirection*100f, yDirection*100f));
             float zoomIn=xbInput.isLeftTriggerPressed();
             float zoomOut = xbInput.isRightTriggerPressed();
             cam.Zoom += zoomIn/100f;
