@@ -401,7 +401,7 @@ namespace ProtoDerp
             float width = playerSprite.index.Width;
             float height = playerSprite.index.Height;
             float upperBodyHeight = height - (width / 2);
-            int i = playerSprite.index.Width;
+            //int i = playerSprite.index.Width;
 
             //if (mikeStandingStill||doAnimation)
             //{
@@ -413,11 +413,13 @@ namespace ProtoDerp
                         (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), !faceRight,shiftPosition);
                 return;
             //}
+            /*
             if (!faceRight)
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y) , (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, Color.White, body.Rotation, origin, SpriteEffects.None, 0f);
             else
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y) , (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, Color.White, body.Rotation, origin, SpriteEffects.FlipHorizontally, 0f);
-            //spriteBatch.Draw(game.getSprite("DeathTime").index, new Rectangle((int)ConvertUnits.ToDisplayUnits(wheel.Body.Position.X),
+            */
+             //spriteBatch.Draw(game.getSprite("DeathTime").index, new Rectangle((int)ConvertUnits.ToDisplayUnits(wheel.Body.Position.X),
                 //(int)ConvertUnits.ToDisplayUnits(wheel.Body.Position.Y),
                 //(int)playerSprite.index.Width, playerSprite.index.Width), null, Color.White, wheel.Body.Rotation, new Vector2(playerSprite.index.Width / 2, playerSprite.index.Width / 2), SpriteEffects.FlipHorizontally, 0f);
 

@@ -42,6 +42,7 @@ namespace ProtoDerp
         public Stopwatch stopWatch = new Stopwatch();
         public float displayAlpha = 1;
         float fadeOutRatio=0;
+        SpriteStripAnimationHandler ani;
         public Block(Game g, Arena a, Vector2 pos, int playerNum,String spriteNumber,float height, float width,int drawLevel)
             : base(g)
         {
@@ -120,9 +121,11 @@ namespace ProtoDerp
         public void LoadContent()
         {
             playerSprite = game.getSprite(spriteNumber);
+            ani = game.getSpriteAnimation(spriteNumber);
         }
         public override void Update(GameTime gameTime, float worldSpeed)
         {
+            ani.Update();
             if (disappearTimer == 0)
             {
                 isDisappearing = false;
@@ -155,8 +158,24 @@ namespace ProtoDerp
             Color drawColor = Color.White;
             if (isSelected)
                 drawColor = Color.Green;
-            spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
-        
+
+            if (ani.getStateCount() == 1)
+            {
+                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
+            }
+            else
+            {
+                ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)),
+                       origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),
+                           (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), true, new Vector2(0,0));
+            }
+
+            //ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)),
+            //       origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),
+            //           (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), true, new Vector2(0,0));
+            //return;    
+            //spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
+            //ani.drawCurrentState(spriteBatch,this, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),(int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height),body,origin);
         }
     }
 }

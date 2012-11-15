@@ -46,6 +46,11 @@ namespace ProtoDerp
             this.origFrameRate = frameRate;
         }
 
+        public int getStateCount()
+        {
+            return this.stateCount;
+        }
+
         public void nextState()
         {
             setState((CurrentState + 1) % stateCount);
@@ -108,6 +113,11 @@ namespace ProtoDerp
                 spriteBatch.Draw(spriteStrip.index, drawPos, texBounds, owner.blend * owner.alpha, MathHelper.ToRadians(owner.angle), origin+shiftPosition, 1, SpriteEffects.None, 0);
             else
                 spriteBatch.Draw(spriteStrip.index, drawPos, texBounds, owner.blend * owner.alpha, MathHelper.ToRadians(owner.angle), origin-shiftPosition, 1, SpriteEffects.FlipHorizontally, 0);
+        }
+
+        public void drawCurrentState(SpriteBatch spriteBatch, Entity owner, Rectangle rect, Body body,Vector2 origin)
+        {
+            spriteBatch.Draw(spriteStrip.index, rect, null, Color.White, body.Rotation, origin, SpriteEffects.None, 0f);
         }
     }
 }

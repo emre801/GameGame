@@ -314,6 +314,11 @@ namespace ProtoDerp
             spriteAnimation.Add("sprite18_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "sprite18_strip4")
                 , 4, 60));//WallJump
 
+            foreach (String i in blockList)
+            {
+                spriteAnimation.Add(i, new SpriteStripAnimationHandler(getSprite(i),1,10));
+            }
+
             
             if (Constants.ENABLE_TITLE_SCREEN)
             {
