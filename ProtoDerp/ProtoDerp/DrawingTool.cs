@@ -407,21 +407,34 @@ namespace ProtoDerp
         {
             beginBatch();
             //Draw all game Entities (sprites)
+
+            //DrawShadows
+            foreach (Entity e in entities)
+            {
+                if (e is Block)
+                {
+                    Block b = (Block)e;
+                    if (b.drawLevel == 1)
+                        b.DrawShadow(gameTime, spriteBatch);
+                }
+
+            }
             foreach (Entity e in entities)
             {
                 if(e is PlayableCharacter|| e is GUI)
                     continue;
 
                 if (e.IsVisible)
-                {
+                {/*
                     if (game.IsPaused)
                     {
                         float remAlpha = e.alpha;
                         e.alpha *= Constants.PAUSE_FADE;
-                        e.Draw(gameTime, spriteBatch);
+                        //e.Draw(gameTime, spriteBatch);
                         e.alpha = remAlpha;
                     }
                     else
+                  * */
                         e.Draw(gameTime, spriteBatch);
                 }
             }
@@ -434,7 +447,27 @@ namespace ProtoDerp
                          null,
                          null,
                          cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
-            
+            //DrawShadows
+            foreach (Entity e in entities)
+            {
+                if (e is Block)
+                {
+                    Block b = (Block)e;
+                    if (b.drawLevel != 1)
+                        b.DrawShadow(gameTime, spriteBatch);
+                }
+                if (e is DeathBlock)
+                {
+                    DeathBlock b = (DeathBlock)e;
+                        b.DrawShadow(gameTime, spriteBatch);
+                }
+                if (e is GoalBlock)
+                {
+                    GoalBlock b = (GoalBlock)e;
+                    b.DrawShadow(gameTime, spriteBatch);
+                }
+
+            }
             foreach (Entity e in entities)
            {
                if (e is PlayableCharacter)
@@ -462,6 +495,7 @@ namespace ProtoDerp
                 
                 
             }
+
            endBatch();
            
            //foreach (Block i in topBlocks)

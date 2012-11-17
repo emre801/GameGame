@@ -189,6 +189,10 @@ namespace ProtoDerp
             sprites.Add("DeathTime", new Sprite(Content, "DeathTime"));
             sprites.Add("black", new Sprite(Content,"black"));
             sprites.Add("rage", new Sprite(Content, "rage"));
+            sprites.Add("GreenHill", new Sprite(Content, "GreenHill"));
+            blockList.AddLast("GreenHill");
+            sprites.Add("CloudBack", new Sprite(Content, "CloudBack"));
+            blockList.AddLast("CloudBack");
             sprites.Add("bigBlock", new Sprite(Content, "bigBlock"));
             blockList.AddLast("bigBlock");
             sprites.Add("bigGround", new Sprite(Content, "bigGround"));

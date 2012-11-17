@@ -35,7 +35,9 @@ namespace ProtoDerp
         public String spriteNumber;
         public Vector2 origPos;
         bool isDead = false;
-        public MagnetBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
+        bool isMagnet = true;
+        public Vector2 magnetPulse;
+        public MagnetBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber,Vector2 magnetPulse)
             : base(g)
         {
             this.pos = Constants.player1SpawnLocation + pos;
@@ -46,6 +48,7 @@ namespace ProtoDerp
             SetUpPhysics(Constants.player1SpawnLocation + pos);
             origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
             fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
+            this.magnetPulse = magnetPulse;
             //game.Arena.player1.fixture.CollisionFilter.IgnoreCollisionWith(this.fixture);
         }
         bool OnCollision(Fixture fixtureA, Fixture fixtureB, Contact contact)
@@ -57,8 +60,9 @@ namespace ProtoDerp
                 if (fixtureB == player.fixture)
                 {
                     //player.fixture.CollisionFilter.IgnoreCollisionWith(fixture);
-                    player.body.ApplyLinearImpulse(new Vector2(0,-20f));
-                    return false;
+                    player.body.ApplyLinearImpulse(magnetPulse);
+                    
+                    return !isMagnet;
 
                 }
             }

@@ -177,5 +177,27 @@ namespace ProtoDerp
             //spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
             //ani.drawCurrentState(spriteBatch,this, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),(int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height),body,origin);
         }
+        public void DrawShadow(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
+            DrawingTool test = game.drawingTool;
+            int i = playerSprite.index.Width;
+            Point bottomRight = new Point(playerSprite.index.Width, playerSprite.index.Height);
+            Rectangle targetRect = new Rectangle((int)ringDrawPoint.X, (int)ringDrawPoint.Y, bottomRight.X, bottomRight.Y);
+            Color drawColor = Color.Black;
+            
+            if (ani.getStateCount() == 1)
+            {
+                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X)+5, (int)ConvertUnits.ToDisplayUnits(body.Position.Y)-5, (int)width, (int)height), null, drawColor * 0.25f, body.Rotation, origin, SpriteEffects.None, 0f);
+            }
+            else
+            {
+                this.blend=Color.Black;
+                ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)),
+                       origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),
+                           (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), true, new Vector2(5, -5));
+                this.blend= Color.White;
+            }
+        }
     }
 }

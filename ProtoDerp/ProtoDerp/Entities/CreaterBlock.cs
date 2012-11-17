@@ -555,7 +555,7 @@ namespace ProtoDerp
                     game.cachedEntityLists = new Dictionary<Type, object>();
                     break;
                 case Game.BlockType.Magnet:
-                    game.addEntity(new MagnetBlock(game, game.Arena, origin, 1, blockArray[counter]));
+                    game.addEntity(new MagnetBlock(game, game.Arena, origin, 1, blockArray[counter], new Vector2(-20,0)));
                     break;
                 
 
@@ -577,7 +577,7 @@ namespace ProtoDerp
         public void addMagnetBlock()
         {
 
-            game.addEntity(new MagnetBlock(game, game.Arena, origPos, 1, blockArray[counter]));
+            game.addEntity(new MagnetBlock(game, game.Arena, origPos, 1, blockArray[counter], new Vector2(-20,0)));
         }
 
         public void addGoalBlock()

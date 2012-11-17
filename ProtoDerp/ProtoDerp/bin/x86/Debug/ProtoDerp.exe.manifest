@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="92672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="94208">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>AGYB97EObkoF6aDhWkJWLjgNTcw=</dsig:DigestValue>
+        <dsig:DigestValue>V5EXEAi1mXXx4TxT4PCDEEbPIpo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -296,6 +296,15 @@
       <dsig:DigestValue>Em31y0XsaiR05QapfMR8un33vwE=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Content\CloudBack.xnb" size="313787">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>oiaEnjs1EG5Lsmeu7uUwgCEp/1Y=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Content\clouds.xnb" size="16000187">
     <hash>
       <dsig:Transforms>
@@ -456,6 +465,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>FsHfTvHFevwCVHyrGtlcUsjy8cw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\GreenHill.xnb" size="11160187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>SXV4cArn5O0ce3W/k+LHwEaf5VA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\ground.xnb" size="65723">
@@ -1097,13 +1115,13 @@
       <dsig:DigestValue>6DbW3RLItSLbwI7OvRMtEMPXxB0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level1.txt" size="495">
+  <file name="Content\World1\Level1.txt" size="1294">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>LEjP71tDEmHPHp5KuBi9M3DiMDk=</dsig:DigestValue>
+      <dsig:DigestValue>IGsnKgALqh/aZS2UINpOjtB0GhU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level10.txt" size="960">

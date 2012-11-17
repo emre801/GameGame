@@ -408,9 +408,16 @@ namespace ProtoDerp
                 //framCounter++;
                 //if(framCounter%frameRate==0)
                     //ani.nextState();
+            this.blend = Color.Black;
+            this.alpha = 0.25f;
+            ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)),
+                   origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),
+                       (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), !faceRight, shiftPosition);
+            this.blend = Color.White;
+            this.alpha = 1f;
                 ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)), 
                     origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), 
-                        (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), !faceRight,shiftPosition);
+                        (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), !faceRight,shiftPosition+new Vector2(5,2));
                 return;
             //}
             /*

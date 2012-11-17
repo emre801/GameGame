@@ -875,6 +875,24 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\sprite18_strip4.xnb</Output>
       <Time>2012-11-04T11:30:17.4595899-05:00</Time>
     </Item>
+    <Item>
+      <Source>GreenHill.png</Source>
+      <Name>GreenHill</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\GreenHill.xnb</Output>
+      <Time>2012-11-17T00:52:12.0302718-05:00</Time>
+    </Item>
+    <Item>
+      <Source>CloudBack.png</Source>
+      <Name>CloudBack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CloudBack.xnb</Output>
+      <Time>2012-11-17T15:06:38.0952358-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

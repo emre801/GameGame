@@ -169,6 +169,19 @@ namespace ProtoDerp
 
         }
 
+        public void DrawShadow(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
+            DrawingTool test = game.drawingTool;
+            int i = playerSprite.index.Width;
+            Point bottomRight = new Point(playerSprite.index.Width, playerSprite.index.Height);
+            Rectangle targetRect = new Rectangle((int)ringDrawPoint.X, (int)ringDrawPoint.Y, bottomRight.X, bottomRight.Y);
+            Color drawColor = Color.Black;
+
+            spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X)+5, (int)ConvertUnits.ToDisplayUnits(body.Position.Y)-5, (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, drawColor*0.11f, body.Rotation, origin, SpriteEffects.None, 0f);
+
+        }
+
         private void drawHealthBar()
         {
 
