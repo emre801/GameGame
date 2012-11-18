@@ -57,8 +57,6 @@ namespace ProtoDerp
             SetUpPhysics(Constants.player1SpawnLocation + pos);
             origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
             fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
-            
-
         }
 
         bool OnCollision(Fixture fixtureA, Fixture fixtureB, Contact contact)

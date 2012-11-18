@@ -89,6 +89,9 @@ namespace ProtoDerp
 
         public bool testLevel = false;
         public int cameraWindowValue = 0;
+
+        public Vector2 magnetPulse= new Vector2(0, 0);
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -459,14 +462,14 @@ namespace ProtoDerp
             }
 
             LinkedList<MagnetBlock> magnetBlocks = getEntitiesOfType<MagnetBlock>();
-            foreach (DeathBlock b in deathBlocks)
+            foreach (MagnetBlock b in magnetBlocks)
             {
                 if (!b.IsVisible)
                     continue;
                 int x = (int)b.origPos.X;
                 int y = (int)b.origPos.Y;
                 String spriteName = b.spriteNumber;
-                lines.AddLast(x + " " + y + " " + spriteName + " MagnetBlock");
+                lines.AddLast(x + " " + y + " " + spriteName + " MagnetBlock" + " " + b.magnetPulse.X + " "+ b.magnetPulse.Y + " "+ b.width + " "+ b.height);
 
             }
 

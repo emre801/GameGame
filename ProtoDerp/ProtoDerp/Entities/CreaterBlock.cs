@@ -47,7 +47,8 @@ namespace ProtoDerp
         int oldMouseValue;
         //int cameraWindowValue = 0;
         bool mouseInSelectMode = false;
-
+        //public Vector2 magnetPulse;
+        public bool incrementXMagnetValue;
         public CreaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
             : base(g)
         {
@@ -65,6 +66,7 @@ namespace ProtoDerp
             keyInput= new KeyboardInput();
             oldMouse = Mouse.GetState();
             oldMouseValue = Mouse.GetState().ScrollWheelValue;
+            //magnetPulse = new Vector2(-20, 0);
 
             
         }
@@ -162,6 +164,37 @@ namespace ProtoDerp
             {
                 game.saveAlpha = 1;
                 game.writeLevel(game.currentWriteLevel);
+            }
+
+            if (game.blockType.Equals(Game.BlockType.Magnet))
+            {
+                if (incrementXMagnetValue)
+                {
+                    if (keyInput.IsNewKeyPressed(Keys.F))
+                    {
+                        game.magnetPulse -= new Vector2(1, 0);
+                    }
+                    else if (keyInput.IsNewKeyPressed(Keys.D))
+                    {
+                        game.magnetPulse += new Vector2(1, 0);
+                    }
+                }
+                else
+                {
+                    if (keyInput.IsNewKeyPressed(Keys.F))
+                    {
+                        game.magnetPulse -= new Vector2(0, 1);
+                    }
+                    else if (keyInput.IsNewKeyPressed(Keys.D))
+                    {
+                        game.magnetPulse += new Vector2(0, 1);
+                    }
+
+                }
+                if (keyInput.IsNewKeyPressed(Keys.LeftShift))
+                {
+                    incrementXMagnetValue = !incrementXMagnetValue;
+                }
             }
             /*
             if (keyInput.IsNewKeyPressed(Keys.D)) 
@@ -555,9 +588,8 @@ namespace ProtoDerp
                     game.cachedEntityLists = new Dictionary<Type, object>();
                     break;
                 case Game.BlockType.Magnet:
-                    game.addEntity(new MagnetBlock(game, game.Arena, origin, 1, blockArray[counter], new Vector2(-20,0)));
-                    break;
-                
+                    game.addEntity(new MagnetBlock(game, game.Arena, origin, 1, blockArray[counter], game.magnetPulse, blockHeight,blockWidth));
+                    break;               
 
             }
             
@@ -577,7 +609,7 @@ namespace ProtoDerp
         public void addMagnetBlock()
         {
 
-            game.addEntity(new MagnetBlock(game, game.Arena, origPos, 1, blockArray[counter], new Vector2(-20,0)));
+            game.addEntity(new MagnetBlock(game, game.Arena, origPos, 1, blockArray[counter], game.magnetPulse, blockHeight,blockWidth));
         }
 
         public void addGoalBlock()

@@ -37,18 +37,22 @@ namespace ProtoDerp
         bool isDead = false;
         bool isMagnet = true;
         public Vector2 magnetPulse;
-        public MagnetBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber,Vector2 magnetPulse)
+        public float height, width;
+        public MagnetBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber,Vector2 magnetPulse, float height, float width)
             : base(g)
         {
             this.pos = Constants.player1SpawnLocation + pos;
             this.origPos = pos;
             this.drawPriority = Constants.PLAYER_DRAWPRI;
             this.spriteNumber = spriteNumber;
+            this.width = width;
+            this.height = height;
             LoadContent();
             SetUpPhysics(Constants.player1SpawnLocation + pos);
             origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
             fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
             this.magnetPulse = magnetPulse;
+            
             //game.Arena.player1.fixture.CollisionFilter.IgnoreCollisionWith(this.fixture);
         }
         bool OnCollision(Fixture fixtureA, Fixture fixtureB, Contact contact)
@@ -73,8 +77,8 @@ namespace ProtoDerp
         {
             World world = game.world;
             float mass = 1;
-            float width = playerSprite.index.Width;
-            float height = playerSprite.index.Height;
+            float width = this.width;//playerSprite.index.Width;
+            float height = this.height;// playerSprite.index.Height;
             fixture = FixtureFactory.CreateRectangle(world, (float)ConvertUnits.ToSimUnits(width), (float)ConvertUnits.ToSimUnits(height), mass);
             body = fixture.Body;
             fixture.Body.BodyType = BodyType.Static;
@@ -165,7 +169,7 @@ namespace ProtoDerp
             if (isSelected || game.isInCreatorMode)
             {
                 drawColor = Color.Green;
-                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, drawColor, body.Rotation, origin, SpriteEffects.None, 0f);
+                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)this.width, (int)this.height), null, drawColor, body.Rotation, origin, SpriteEffects.None, 0f);
             }
         }
 

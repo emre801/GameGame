@@ -97,7 +97,7 @@ namespace ProtoDerp
                 if (words[3].Equals("DeathBlock"))
                    deathBlocks.AddLast(new DeathBlock(game, game.Arena, new Vector2(x, y), 1, spriteName));
                 if (words[3].Equals("MagnetBlock"))
-                    magnetBlocks.AddLast(new MagnetBlock(game, game.Arena, new Vector2(x, y), 1, spriteName, new Vector2(0,-20)));
+                    magnetBlocks.AddLast(new MagnetBlock(game, game.Arena, new Vector2(x, y), 1, spriteName, new Vector2(Convert.ToInt32(words[4]), Convert.ToInt32(words[5])), Convert.ToInt32(words[6]), Convert.ToInt32(words[7])));
                 
                 if (words[3].Equals("GoalBlock"))
                     goalBlocks.AddLast(new GoalBlock(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4])));

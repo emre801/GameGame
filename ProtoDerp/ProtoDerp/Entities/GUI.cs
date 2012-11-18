@@ -186,6 +186,7 @@ namespace ProtoDerp
                     break;
                 case Game.BlockType.Magnet:
                     blockInfo += "Magnet";
+                    DrawText(spriteBatch, 0.065f, 0.875f, game.magnetPulse.X + " " + game.magnetPulse.Y);
                     break;
 
             }
