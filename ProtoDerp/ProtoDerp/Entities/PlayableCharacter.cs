@@ -344,6 +344,12 @@ namespace ProtoDerp
                     ani = game.getSpriteAnimation("player_strip12");
                     doAnimation = true;
                 }
+                if (xbi.IsButtonPressed(Buttons.LeftShoulder))
+                {
+
+                    body.LinearVelocity = new Vector2(body.LinearVelocity.X*0.95f, body.LinearVelocity.Y);
+                }
+
                 // modes = Modes.WAITING;
             }
             if (Math.Abs(body.LinearVelocity.Y)>=0.0001f)
