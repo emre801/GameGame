@@ -68,6 +68,8 @@ namespace ProtoDerp
         public int frameRate = 5;
         public int framCounter = 0;
         bool doAnimation = false;
+        bool isWallOnRight = false;
+        bool isOnJumpAnimation = false;
         public PlayableCharacter(Game g, Arena a, Vector2 pos, int playerNum)
             : base(g)
         {
@@ -92,13 +94,19 @@ namespace ProtoDerp
         }
         void OnSeparation(Fixture fixtureA, Fixture fixtureB)
         {
-            modes = Modes.AIRUP;
-            body.IgnoreGravity = false;
+            if (modes == Modes.WALL)
+            {
+                modes = Modes.AIRDOWN;
+            }
+           //modes = Modes.AIRUP;
+            //body.IgnoreGravity = false;
             //onGround = false;
         }
         bool OnCollision(Fixture fixtureA, Fixture fixtureB, Contact contact)
         {
+            Vector2 movementBefore = body.LinearVelocity;
             body.LinearVelocity = new Vector2(body.LinearVelocity.X, 0);
+            
             if (contact.IsTouching())
             {
                 if (isMagnet(fixtureB))
@@ -110,18 +118,40 @@ namespace ProtoDerp
                 {
                     onGround = true;
                     modes = Modes.GROUND;
+                    return true;
+                    
                 }
                 if (pColis.X != 0 && pColis.Y == 0)
                 {
                     if (onGround)
                     {
                         modes = Modes.WALL;
-                        return true;
+                        return false;
                     }
-                    //onGround = true;
-                    modes = Modes.WALL;
-                    body.IgnoreGravity = true;
+                   
+                    float direction = inputState.GetJoyDirection();
+                    float x = (float)Math.Sin(direction);
+                    if (pColis.X > 0)
+                        isWallOnRight = true;
+                    else
+                        isWallOnRight = false;
+
+                    float xMomentum = 0;
+                    if (movementBefore.Y>0)
+                    {
+                        xMomentum = Math.Abs(body.LinearVelocity.X * 0.3f);
+                    }
+                    else if (movementBefore.Y<0)
+                    {
+                        xMomentum = -Math.Abs(body.LinearVelocity.X*0.6f);
+                    }
+
+                    body.LinearVelocity = new Vector2(0, body.LinearVelocity.Y+xMomentum);
+                    //body.IgnoreGravity = true;
                     onGround = true;
+                    onGround = true;
+                    modes = Modes.WALL;
+                    return false;
                 }
                 
             }
@@ -212,6 +242,8 @@ namespace ProtoDerp
             float yDirection = inputState.getYDirection();
             yDirection += keyInput.VerticalMovement();
             float runningValue = 1.5f;
+            if (isOnJumpAnimation)
+                xDirection = 0;
             distance = (float)(distance + gameTime.ElapsedGameTime.TotalMilliseconds * 0.002f * Math.Abs(body.LinearVelocity.X));
             if (distance > 0.9f)
             {
@@ -226,8 +258,9 @@ namespace ProtoDerp
                 return;
             }
 
-            if (inputState.IsButtonPressed(Buttons.RightShoulder)|| keyInput.IsNewKeyPressed(Keys.Z))
+            if (inputState.IsButtonPressed(Buttons.RightShoulder)|| keyInput.IsKeyPressed(Keys.Z))
                 runningValue = 2.5f;
+
 
             if ((xDirection > 0 && body.LinearVelocity.X < 0) || (xDirection < 0 && body.LinearVelocity.X > 0))
             {
@@ -266,16 +299,17 @@ namespace ProtoDerp
             {
                 body.IgnoreGravity = true;
                 body.LinearVelocity = new Vector2(body.LinearVelocity.X, 0);
+                modes = Modes.AIRUP;
                 body.ApplyLinearImpulse(new Vector2(0, -30f));
                 if (isOnWall)
                 {
                     if (jumpDirection)
                     {
-                        body.ApplyLinearImpulse(new Vector2(-0.75f * runningValue, 0f));
+                        body.ApplyLinearImpulse(new Vector2(-1.75f * runningValue, 0f));
                     }
                     else
                     {
-                        body.ApplyLinearImpulse(new Vector2(0.75f * runningValue, 0f));                    
+                        body.ApplyLinearImpulse(new Vector2(1.75f * runningValue, 0f));                    
                     }
 
                 }
@@ -332,10 +366,10 @@ namespace ProtoDerp
                         ani = game.getSpriteAnimation("sprite16_strip6");
                         int frameRate = 30* (int)(15f/Math.Abs(body.LinearVelocity.X));
                         ani.changeFrameRate(frameRate);
-                    }
-
-                    
+                    }                    
                     doAnimation = true;
+                    isOnWall = false;
+                    isOnJumpAnimation = false;
                 }
                 if (body.LinearVelocity.X == 0)
                 {
@@ -343,6 +377,8 @@ namespace ProtoDerp
                     mikeStandingStill = true;
                     ani = game.getSpriteAnimation("player_strip12");
                     doAnimation = true;
+                    isOnWall = false;
+                    isOnJumpAnimation = false;
                 }
                 if (xbi.IsButtonPressed(Buttons.LeftShoulder))
                 {
@@ -380,6 +416,7 @@ namespace ProtoDerp
                     if (ani.getCycles()>=3)
                     {
                         isOnWall = false;
+                        isOnJumpAnimation = false;
                         faceRight = !jumpDirection;
                     }
                     
@@ -388,13 +425,14 @@ namespace ProtoDerp
             }
             if (modes == Modes.WALL)
             {
+                isOnJumpAnimation = true;
                 playerSprite = game.getSprite("MikeWall");
                 fixture.Friction = 80;
                 ani = game.getSpriteAnimation("sprite14_strip9");
                 doAnimation = true;
                 shiftPosition = new Vector2(8, 0);
                 isOnWall = true;
-                jumpDirection = faceRight;
+                jumpDirection = isWallOnRight;// faceRight;
                 isFirstAni = true;
             }
 

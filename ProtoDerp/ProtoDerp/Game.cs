@@ -319,7 +319,7 @@ namespace ProtoDerp
             spriteAnimation.Add("sprite17-2", new SpriteStripAnimationHandler(new Sprite(Content, "sprite17-2")
                 , 1, 60));//jumping up
             spriteAnimation.Add("sprite18_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "sprite18_strip4")
-                , 4, 60));//WallJump
+                , 4, 45));//WallJump
 
             foreach (String i in blockList)
             {

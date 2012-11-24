@@ -33,5 +33,9 @@
 -980 -817 CloudBack Block 70 1120 1
 1914 -754 CloudBack Block 70 1120 1
 2337 -982 CloudBack Block 70 1120 1
+-64 -781 cloud Block 162 318 2
+362 -566 cloud Block 162 318 2
+645 -793 cloud Block 162 318 2
+952 -538 cloud Block 162 318 2
 1018 -1 ahLogo0 GoalBlock 2
 Demi -349 1182 -532 795

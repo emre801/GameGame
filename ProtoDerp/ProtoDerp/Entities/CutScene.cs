@@ -20,6 +20,7 @@ namespace ProtoDerp
         Input player1 = null;
         private static Dictionary<string, string> images = new Dictionary<string, string>();
         public bool isVisible = false;
+        KeyboardInput keyInput;
         public CutScene(Game g, int cutSceneNumber)
             : base(g)
         {
@@ -28,6 +29,7 @@ namespace ProtoDerp
             player1 = game.playerOneInput;
             LoadContent();
             isVisible = true;
+            keyInput = new KeyboardInput();
 
         }
         public void LoadContent()
@@ -55,9 +57,11 @@ namespace ProtoDerp
 
         public override void Update(GameTime gameTime, float worldFactor)
         {
+            
             if (isVisible)
             {
-                if (this.player1.isAPressed())
+                keyInput.Update(gameTime);
+                if (this.player1.isAPressed()|| keyInput.IsNewKeyPressed(Keys.Enter))
                 {
                     if (images.Count > currentPic+1)
                     {

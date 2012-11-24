@@ -130,7 +130,7 @@ namespace ProtoDerp
                     if (select > numOptions - 1)
                         select = 0;
                 }
-                else if ((this.player1.IsSelectPressed() || keyInput.IsNewKeyPressed(Keys.Space)) && alpha >= 1)
+                else if ((this.player1.IsSelectPressed() || keyInput.IsNewKeyPressed(Keys.Enter)) && alpha >= 1)
                 {
                     //game.getSound("Audio\\Waves\\menuSelect").Play();
                     game.sounds["Rage//Wave//Opening"].Play();

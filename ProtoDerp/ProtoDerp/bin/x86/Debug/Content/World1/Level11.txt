@@ -1,6 +1,9 @@
 355 155 bigBlock Block 200 1000 0
 955 -790 bigBlock Block 2085 240 0
 655 -1155 bigBlock Block 2085 30 0
+746 -515 GreenHill Block 1550 1800 1
+2544 -515 GreenHill Block 1550 1800 1
+-1052 -521 GreenHill Block 1550 1800 1
 685 -175 deathSpikes4 DeathBlock
 685 -765 deathSpikes4 DeathBlock
 685 -1250 deathSpikes4 DeathBlock
