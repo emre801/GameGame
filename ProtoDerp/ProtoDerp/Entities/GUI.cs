@@ -21,7 +21,7 @@ namespace ProtoDerp
         Sprite cir; //Used to draw circles
         Sprite gameOverGUI;
         public bool gameOver = false;
-        
+        float pauseSelection = 0.45f;
         public GUI(Game g)
             : base(g)
         {
@@ -42,6 +42,28 @@ namespace ProtoDerp
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             //spriteBatch.Draw(pix.index, new Rectangle(5,5,100,100), Color.White);
+            if (game.pause)
+            {
+                DrawText(spriteBatch, 0.45f, 0.40f, "Paused",1.5f);
+                DrawText(spriteBatch, 0.45f, 0.45f, "Return To Title", 1.0f);
+                DrawText(spriteBatch, 0.45f, 0.475f, "Return To Game", 1.0f);
+                if (game.playerOneInput.VerticalMovement() > 0)
+                    pauseSelection = 0.45f;
+                else if (game.playerOneInput.VerticalMovement() < 0)
+                    pauseSelection = 0.475f;
+                DrawText(spriteBatch, 0.425f, pauseSelection, ">", 1.0f);
+                if (game.playerOneInput.IsNewButtonPressed(Buttons.A))
+                {
+                    if (pauseSelection == 0.45f)
+                    {
+                        game.backToTitleScreen = true;
+                    }
+                    game.pause = false;
+
+                }
+
+            }
+
             if (game.gMode == 0)
             {
                 DrawBackThing(gameTime, spriteBatch);
@@ -242,12 +264,27 @@ namespace ProtoDerp
             String camera = "MaxRight= " + game.maxRight + " MaxLeft= " + game.maxLeft + "  MaxTop= " + game.maxLeft + " MaxButtom= " + game.maxButtom;
             DrawText(spriteBatch, 0.605f, 0.85f, camera);
         }
-
         public void DrawText(SpriteBatch spriteBatch, float x, float y, String text)
+        {
+            DrawText(spriteBatch, x, y, text, 1);
+        }
+
+        public void DrawText(SpriteBatch spriteBatch, float x, float y, String text, float fontSize)
         {
             String[] tempstrMulti = text.Split("|".ToCharArray());
             SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
             tempstrMulti = text.Split("|".ToCharArray());
+            for (int i = 0; i < tempstrMulti.Length; i += 1)
+                spriteBatch.DrawString(font, tempstrMulti[i],
+                    game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * x + 1.5f, (game.getWorldSize().Y * y+2.0f) + (font.MeasureString("A").Y * i))),
+                    Color.Black,
+                    0f,
+                    Vector2.Zero,
+                    //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
+                    game.drawingTool.gameToScreen(1f) * 0.25f*fontSize,
+                    SpriteEffects.None,
+                    0);
+
             for (int i = 0; i < tempstrMulti.Length; i += 1)
                 spriteBatch.DrawString(font, tempstrMulti[i],
                     game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * x, (game.getWorldSize().Y * y) + (font.MeasureString("A").Y * i))),
@@ -255,9 +292,11 @@ namespace ProtoDerp
                     0f,
                     Vector2.Zero,
                     //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
-                    game.drawingTool.gameToScreen(1f) * 0.25f,
+                    game.drawingTool.gameToScreen(1f) * 0.25f*fontSize,
                     SpriteEffects.None,
                     0);
+
+            
 
         }
 

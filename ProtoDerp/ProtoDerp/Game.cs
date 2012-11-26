@@ -92,6 +92,10 @@ namespace ProtoDerp
 
         public Vector2 magnetPulse= new Vector2(0, 0);
 
+        public bool pause = false;
+        public float pauseAlpha = 1f;
+        public bool backToTitleScreen = false;
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -503,8 +507,10 @@ namespace ProtoDerp
         }
 
         protected override void Update(GameTime gameTime)
-        {         
+        {
 
+
+            playerOneInput.Update(gameTime);
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
             {
                 Exit();
@@ -525,6 +531,38 @@ namespace ProtoDerp
             }
             if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Back))
             {
+                if (gMode == 0)
+                {
+                    pause = !pause;
+                    return;
+                }
+                /*
+                restart = false;
+                world = new World(new Vector2(0, 5.0f));
+                entities.Clear();
+                toBeAdded.Clear();
+                cachedEntityLists = new Dictionary<Type, object>();
+                //drawingTool.initialize();
+                //drawingTool.resetCamera();
+                gMode = 6;
+                cachedEntityLists = new Dictionary<Type, object>();
+                Title = new TitleScreen(this);
+                addEntity(Title);
+                isInCreatorMode = false;
+                 * */
+
+            }
+            pauseAlpha = 1f;
+            if (pause)
+            {
+                pauseAlpha = 0.25f;
+                return;
+            }
+
+            if (backToTitleScreen)
+            {
+                backToTitleScreen = false;
+                pause = false;
                 restart = false;
                 world = new World(new Vector2(0, 5.0f));
                 entities.Clear();
@@ -540,7 +578,7 @@ namespace ProtoDerp
 
             }
 
-            playerOneInput.Update(gameTime);
+            
 
             if (isInCreatorMode)
             {

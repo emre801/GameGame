@@ -240,7 +240,7 @@ namespace ProtoDerp
             float xDirection = inputState.getXDirection();
             xDirection += keyInput.HorizontalMovement();
             float yDirection = inputState.getYDirection();
-            yDirection += keyInput.VerticalMovement();
+            yDirection -= keyInput.VerticalMovement();
             float runningValue = 1.5f;
             if (isOnJumpAnimation)
                 xDirection = 0;
@@ -453,12 +453,12 @@ namespace ProtoDerp
                 //if(framCounter%frameRate==0)
                     //ani.nextState();
             this.blend = Color.Black;
-            this.alpha = 0.25f;
+            this.alpha = 0.25f*game.pauseAlpha;
             ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)),
                    origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),
                        (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), !faceRight, shiftPosition);
             this.blend = Color.White;
-            this.alpha = 1f;
+            this.alpha = 1f * game.pauseAlpha;
                 ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)), 
                     origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), 
                         (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), !faceRight,shiftPosition+new Vector2(5,2));

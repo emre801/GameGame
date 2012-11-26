@@ -186,7 +186,7 @@ namespace ProtoDerp
             
             if (ani.getStateCount() == 1)
             {
-                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X)+5, (int)ConvertUnits.ToDisplayUnits(body.Position.Y)-5, (int)width, (int)height), null, drawColor * 0.25f, body.Rotation, origin, SpriteEffects.None, 0f);
+                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X) + 5, (int)ConvertUnits.ToDisplayUnits(body.Position.Y) - 5, (int)width, (int)height), null, drawColor * 0.25f, body.Rotation, origin, SpriteEffects.None, 0f);
             }
             else
             {
