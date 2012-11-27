@@ -13,5 +13,5 @@
 475 -330 BigBackGround Block 1240 1650 1
 1085 -370 deathSpikes3 DeathBlock
 1085 -240 deathSpikes3 DeathBlock
-1018 -81 ahLogo0 GoalBlock 3
+1018 -81 ahLogo0 GoalBlock 4
 Demi -306 1153 -527 604

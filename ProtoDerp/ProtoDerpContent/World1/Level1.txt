@@ -39,5 +39,6 @@
 1914 -754 CloudBack Block 70 1120 2
 2337 -982 CloudBack Block 70 1120 2
 271 28 fan Block 15 35 0
+457 11 fan DeathBlock
 1018 -1 ahLogo0 GoalBlock 2
 Demi -349 1182 -532 795

@@ -312,12 +312,14 @@ namespace ProtoDerp
             
             spriteAnimation.Add("player_strip12", new SpriteStripAnimationHandler(new Sprite(Content, "player_strip12")
                 , 12,60));//Player Standing
+
             spriteAnimation.Add("fan", new SpriteStripAnimationHandler(new Sprite(Content, "fan")
                 , 4,120));//fan
-            sprites.Add("fan", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "fan"), 4, 10).getIndex(), "fan"));
+            sprites.Add("fan", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "fan"), 4, 120).getIndex(), "fan"));
             blockList.AddLast("fan");
+
             spriteAnimation.Add("missile_strip_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "missile_strip_strip4")
-                , 4, 160));//missle
+                , 4, 45));//missle
             spriteAnimation.Add("sprite14_strip9", new SpriteStripAnimationHandler(new Sprite(Content, "sprite14_strip9")
                 , 9, 60));//Wall Hang
             spriteAnimation.Add("sprite15_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "sprite15_strip4")
@@ -336,9 +338,6 @@ namespace ProtoDerp
                 if(!spriteAnimation.ContainsKey(i))
                     spriteAnimation.Add(i, new SpriteStripAnimationHandler(getSprite(i),1,10));
             }
-
-           
-
             
             if (Constants.ENABLE_TITLE_SCREEN)
             {

@@ -55,7 +55,7 @@ namespace ProtoDerp
             this.width = width;
             this.drawLevel = drawLevel;
             SetUpPhysics(Constants.player1SpawnLocation + pos);
-            origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
+            origin = new Vector2(ani.widthOf() / 2, ani.heightOf() / 2);
             fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
         }
 

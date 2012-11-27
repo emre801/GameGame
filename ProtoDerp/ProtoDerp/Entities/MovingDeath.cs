@@ -39,6 +39,8 @@ namespace ProtoDerp
         public float velObj;
         public Fixture origFix;
         public bool telePort = false;
+        SpriteStripAnimationHandler ani;
+        float width, height;
         public MovingDeath(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber,Vector2 shootAngle,float velObj)
             : base(g)
         {
@@ -48,7 +50,7 @@ namespace ProtoDerp
             this.spriteNumber = spriteNumber;
             LoadContent();
             SetUpPhysics(Constants.player1SpawnLocation + pos);
-            origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
+            origin = new Vector2(ani.widthOf() / 2, ani.heightOf() / 2);
             fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
             this.shootAngle = shootAngle;
             this.velObj = velObj;
@@ -86,8 +88,8 @@ namespace ProtoDerp
         {
             World world = game.world;
             float mass = 1;
-            float width = playerSprite.index.Width;
-            float height = playerSprite.index.Height;
+            this.width = ani.widthOf();
+            this.height = ani.heightOf();
             fixture = FixtureFactory.CreateRectangle(world, (float)ConvertUnits.ToSimUnits(width), (float)ConvertUnits.ToSimUnits(height), mass);
             this.origFix = fixture;
             body = fixture.Body;
@@ -124,6 +126,7 @@ namespace ProtoDerp
         public void LoadContent()
         {
             playerSprite = game.getSprite(spriteNumber);
+            ani = game.getSpriteAnimation(spriteNumber);
         }
 
         public bool isExpanding()
@@ -166,6 +169,7 @@ namespace ProtoDerp
 
         public override void Update(GameTime gameTime, float worldSpeed)
         {
+            ani.Update();
             //body.ApplyForce(new Vector2(shootAngle.X*velObj, shootAngle.Y*velObj));
             if (telePort)
             {
@@ -179,14 +183,23 @@ namespace ProtoDerp
         {
             Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
             DrawingTool test = game.drawingTool;
-            int i = playerSprite.index.Width;
-            Point bottomRight = new Point(playerSprite.index.Width, playerSprite.index.Height);
+            //int i = playerSprite.index.Width;
+            Point bottomRight = new Point((int)width, (int)height);
             Rectangle targetRect = new Rectangle((int)ringDrawPoint.X, (int)ringDrawPoint.Y, bottomRight.X, bottomRight.Y);
             Color drawColor = Color.White;
             if (isSelected)
                 drawColor = Color.Green;
-            spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, drawColor, body.Rotation, origin, SpriteEffects.None, 0f);
-
+            //spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, drawColor, body.Rotation, origin, SpriteEffects.None, 0f);
+            if (ani.getStateCount() == 1)
+            {
+                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor, body.Rotation, origin, SpriteEffects.None, 0f);
+            }
+            else
+            {
+                ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)),
+                       origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),
+                           (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), true, new Vector2(0, 0));
+            }
         }
 
         private void drawHealthBar()
