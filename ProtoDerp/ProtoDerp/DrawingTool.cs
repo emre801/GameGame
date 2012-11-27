@@ -86,22 +86,29 @@ namespace ProtoDerp
             GameToScreen = RenderingAreaWidth / Constants.GAME_WORLD_WIDTH;
             ScreenToGame = 1 / GameToScreen;
             float h = 1;
+            float w = 1;
             if (!Constants.FULLSCREEN)
             {
                 cam = new Camera2d(Constants.GAME_WORLD_WIDTH, Constants.GAME_WORLD_HEIGHT);
                 cam.Pos = new Vector2(Constants.GAME_WORLD_WIDTH * 0.5f, Constants.GAME_WORLD_HEIGHT * 0.6f);
                 h = Constants.GAME_WORLD_HEIGHT;
+                w = Constants.GAME_WORLD_WIDTH;
+                zoomRatio = 1;
             }
             else
             {
                 cam = new Camera2d(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height);
-                cam.Pos = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 0.5f, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.6f);
-                h = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+               // cam.Pos = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 0.5f, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.6f);
+                cam.Pos = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 1, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 1f);
+                
+                h = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height+3;
+                w = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+                zoomRatio = 1.12505f;
             }
 
-
-            zoomRatio = 1;// h / 600f;
+            
             cam.Zoom = 0.75f;// *zoomRatio;
+            
         }
         public void resetCamera()
         {
@@ -114,7 +121,10 @@ namespace ProtoDerp
             else
             {
                 cam = new Camera2d(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height);
-                cam.Pos = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 0.5f, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.6f);
+                if(game.gMode!=6)
+                    cam.Pos = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 0.5f, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.6f);
+                else
+                    cam.Pos = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 1, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.2f);
                 
             }
             cam.Zoom = 0.75f*zoomRatio;
@@ -316,9 +326,9 @@ namespace ProtoDerp
             float widthRatio = 0.75f;
             float heightRatio = 0.85f;
             float heightRatio2 = 0.70f;
-            float width = widthRatio * cam.ViewportWidth*zoomRatio;
-            float height = heightRatio * cam.ViewportHeight*zoomRatio;
-            float height2 = heightRatio2 * cam.ViewportHeight * zoomRatio;
+            float width = widthRatio * cam.ViewportWidth;// *zoomRatio;
+            float height = heightRatio * cam.ViewportHeight;// *zoomRatio;
+            float height2 = heightRatio2 * cam.ViewportHeight;// *zoomRatio;
             //This allows the camera to follow the player
             PlayableCharacter p1 = game.Arena.player1;
 
@@ -349,8 +359,8 @@ namespace ProtoDerp
                 widthRatio = 0.25f;
                 heightRatio = 0.15f;
             }
-            float width = widthRatio * cam.ViewportWidth * zoomRatio;
-            float height = heightRatio * cam.ViewportHeight * zoomRatio;
+            float width = widthRatio * cam.ViewportWidth;// *zoomRatio;
+            float height = heightRatio * cam.ViewportHeight;// *zoomRatio;
             //This allows the camera to follow the player
             //PlayableCharacter p1 = game.Arena.player1;
             if (Position.X + width > cam._pos.X + cam.ViewportWidth / 1)

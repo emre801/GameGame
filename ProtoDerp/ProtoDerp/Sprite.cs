@@ -28,6 +28,13 @@ namespace ProtoDerp
             index = content.Load<Texture2D>(fileName);
         }
 
+        public Sprite( Texture2D index,String fileName)
+        {
+            this.fileName = fileName;
+            BBox = Rectangle.Empty;
+            this.index = index;
+        }
+
         /**
          * Constructor
          * 

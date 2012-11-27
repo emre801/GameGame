@@ -198,6 +198,8 @@ namespace ProtoDerp
             sprites.Add("rage", new Sprite(Content, "rage"));
             sprites.Add("GreenHill", new Sprite(Content, "GreenHill"));
             blockList.AddLast("GreenHill");
+            sprites.Add("GreenHill2", new Sprite(Content, "GreenHill2"));
+            blockList.AddLast("GreenHill2");
             sprites.Add("CloudBack", new Sprite(Content, "CloudBack"));
             blockList.AddLast("CloudBack");
             sprites.Add("bigBlock", new Sprite(Content, "bigBlock"));
@@ -310,8 +312,12 @@ namespace ProtoDerp
             
             spriteAnimation.Add("player_strip12", new SpriteStripAnimationHandler(new Sprite(Content, "player_strip12")
                 , 12,60));//Player Standing
+            spriteAnimation.Add("fan", new SpriteStripAnimationHandler(new Sprite(Content, "fan")
+                , 4,120));//fan
+            sprites.Add("fan", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "fan"), 4, 10).getIndex(), "fan"));
+            blockList.AddLast("fan");
             spriteAnimation.Add("missile_strip_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "missile_strip_strip4")
-                , 4,10));//missle
+                , 4, 160));//missle
             spriteAnimation.Add("sprite14_strip9", new SpriteStripAnimationHandler(new Sprite(Content, "sprite14_strip9")
                 , 9, 60));//Wall Hang
             spriteAnimation.Add("sprite15_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "sprite15_strip4")
@@ -327,8 +333,11 @@ namespace ProtoDerp
 
             foreach (String i in blockList)
             {
-                spriteAnimation.Add(i, new SpriteStripAnimationHandler(getSprite(i),1,10));
+                if(!spriteAnimation.ContainsKey(i))
+                    spriteAnimation.Add(i, new SpriteStripAnimationHandler(getSprite(i),1,10));
             }
+
+           
 
             
             if (Constants.ENABLE_TITLE_SCREEN)
@@ -533,24 +542,11 @@ namespace ProtoDerp
             {
                 if (gMode == 0)
                 {
+                    if (pause)
+                        stopWatch.Stop();
                     pause = !pause;
                     return;
                 }
-                /*
-                restart = false;
-                world = new World(new Vector2(0, 5.0f));
-                entities.Clear();
-                toBeAdded.Clear();
-                cachedEntityLists = new Dictionary<Type, object>();
-                //drawingTool.initialize();
-                //drawingTool.resetCamera();
-                gMode = 6;
-                cachedEntityLists = new Dictionary<Type, object>();
-                Title = new TitleScreen(this);
-                addEntity(Title);
-                isInCreatorMode = false;
-                 * */
-
             }
             pauseAlpha = 1f;
             if (pause)

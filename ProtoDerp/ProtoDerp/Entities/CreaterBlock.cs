@@ -49,6 +49,8 @@ namespace ProtoDerp
         bool mouseInSelectMode = false;
         //public Vector2 magnetPulse;
         public bool incrementXMagnetValue;
+        SpriteStripAnimationHandler ani;
+
         public CreaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
             : base(g)
         {
@@ -82,10 +84,20 @@ namespace ProtoDerp
             origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
             blockHeight = playerSprite.index.Height;
             blockWidth = playerSprite.index.Width;
+
+
+            ani = game.getSpriteAnimation(blockArray[counter]);
+            
+                blockHeight = ani.heightOf();
+                blockWidth = ani.widthOf();
+                origin = new Vector2(blockWidth / 2, blockHeight / 2);
+            
+
         }
         public override void Update(GameTime gameTime, float worldSpeed)
         {
            // KeyboardState keyState = Keyboard.GetState();
+            ani.Update();
             keyInput.Update(gameTime);
             if (keyInput.IsNewKeyPressed(Keys.M))
             {
@@ -625,9 +637,22 @@ namespace ProtoDerp
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            if(!game.inDeleteMode)
-                spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);
-            
+            if (!game.inDeleteMode)
+            {
+                //spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);
+                
+                if (ani.getStateCount() == 1)
+                {
+                    spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);
+                }
+                else
+                {
+                    ani.drawCurrentState(spriteBatch, this, new Vector2((int)pos.X-blockWidth, (int)pos.Y),
+                           origin, null, new Rectangle((int)pos.X,
+                               (int)pos.Y, (int)blockWidth, (int)blockHeight), true, new Vector2(0, 0));
+                }
+                 
+            }
         }
 
         public void DrawText(SpriteBatch spriteBatch, float x, float y, String text)

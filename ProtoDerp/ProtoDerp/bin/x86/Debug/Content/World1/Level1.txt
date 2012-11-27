@@ -10,6 +10,11 @@
 630 75 ground Block 64 256 2
 885 75 ground Block 64 256 2
 970 75 ground Block 64 256 2
+1225 -531 GreenHill2 Block 981 821 1
+-364 -508 GreenHill2 Block 981 821 1
+-1313 -607 GreenHill2 Block 981 821 1
+2317 -475 GreenHill2 Block 981 821 1
+3139 -570 GreenHill2 Block 981 821 1
 434 -325 GreenHill Block 1550 1800 1
 -1297 -371 GreenHill Block 1550 1800 1
 2122 -317 GreenHill Block 1550 1800 1
@@ -28,14 +33,11 @@
 2554 1174 bigBlock Block 560 1120 1
 1942 311 bigBlock Block 560 1120 1
 -365 634 bigBlock Block 560 1120 1
-762 -937 CloudBack Block 70 1120 1
--348 -1005 CloudBack Block 70 1120 1
--980 -817 CloudBack Block 70 1120 1
-1914 -754 CloudBack Block 70 1120 1
-2337 -982 CloudBack Block 70 1120 1
--64 -781 cloud Block 162 318 2
-362 -566 cloud Block 162 318 2
-645 -793 cloud Block 162 318 2
-952 -538 cloud Block 162 318 2
+762 -937 CloudBack Block 70 1120 2
+-348 -1005 CloudBack Block 70 1120 2
+-980 -817 CloudBack Block 70 1120 2
+1914 -754 CloudBack Block 70 1120 2
+2337 -982 CloudBack Block 70 1120 2
+271 28 fan Block 15 35 0
 1018 -1 ahLogo0 GoalBlock 2
 Demi -349 1182 -532 795

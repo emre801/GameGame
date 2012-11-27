@@ -893,6 +893,24 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CloudBack.xnb</Output>
       <Time>2012-11-17T15:06:38.0952358-05:00</Time>
     </Item>
+    <Item>
+      <Source>GreenHill2.png</Source>
+      <Name>GreenHill2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\GreenHill2.xnb</Output>
+      <Time>2012-11-27T12:03:47.5347914-05:00</Time>
+    </Item>
+    <Item>
+      <Source>fan.png</Source>
+      <Name>fan</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\fan.xnb</Output>
+      <Time>2012-11-27T13:24:22.3875423-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

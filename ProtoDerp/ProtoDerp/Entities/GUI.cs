@@ -21,7 +21,7 @@ namespace ProtoDerp
         Sprite cir; //Used to draw circles
         Sprite gameOverGUI;
         public bool gameOver = false;
-        float pauseSelection = 0.45f;
+        float pauseSelection = 0.475f;
         public GUI(Game g)
             : base(g)
         {
@@ -58,15 +58,15 @@ namespace ProtoDerp
                     {
                         game.backToTitleScreen = true;
                     }
+                    game.stopWatch.Start();
                     game.pause = false;
-
                 }
 
             }
 
             if (game.gMode == 0)
             {
-                DrawBackThing(gameTime, spriteBatch);
+                //DrawBackThing(gameTime, spriteBatch);
                 DrawCredits(gameTime, spriteBatch);
             }
             if (game.gMode == 2)
@@ -177,6 +177,8 @@ namespace ProtoDerp
 
         public void DrawCredits(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            if (game.pause)
+                return;
             game.stopWatch.Stop();
             TimeSpan ts = game.stopWatch.Elapsed;
             string elapsedTime = String.Format("{0:00}:{1:00}.{2:00}",

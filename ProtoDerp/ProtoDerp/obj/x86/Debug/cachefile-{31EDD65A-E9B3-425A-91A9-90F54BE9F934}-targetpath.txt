@@ -106,6 +106,8 @@ Content\sprite17-2.xnb
 Content\sprite18_strip4.xnb
 Content\GreenHill.xnb
 Content\CloudBack.xnb
+Content\GreenHill2.xnb
+Content\fan.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

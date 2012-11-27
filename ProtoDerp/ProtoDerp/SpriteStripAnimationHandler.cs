@@ -45,6 +45,10 @@ namespace ProtoDerp
             this.frameRate = frameRate;
             this.origFrameRate = frameRate;
         }
+        public Texture2D getIndex()
+        {
+            return spriteStrip.index;
+        }
 
         public int getStateCount()
         {
@@ -57,7 +61,6 @@ namespace ProtoDerp
         }
         public int widthOf()
         {
-
             return this.widthOfSingleState;
         }
         public int heightOf()
