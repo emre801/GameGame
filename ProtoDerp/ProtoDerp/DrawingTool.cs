@@ -40,8 +40,10 @@ namespace ProtoDerp
         private PrimitiveDrawingElement letterBox;
 
         public float zoomRatio = 1.75f;
+        public Texture2D rectangle;
 
-        
+       
+
 
         public DrawingTool(Game game)
         {
@@ -98,17 +100,20 @@ namespace ProtoDerp
             else
             {
                 cam = new Camera2d(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height);
-               // cam.Pos = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 0.5f, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.6f);
+                // cam.Pos = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 0.5f, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.6f);
                 cam.Pos = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 1, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 1f);
-                
-                h = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height+3;
+
+                h = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height + 3;
                 w = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
                 zoomRatio = 1.12505f;
             }
 
-            
+
             cam.Zoom = 0.75f;// *zoomRatio;
-            
+
+            rectangle = new Texture2D(gdm.GraphicsDevice, 1, 1);
+            rectangle.SetData(new[] { Color.White });
+
         }
         public void resetCamera()
         {
@@ -116,18 +121,18 @@ namespace ProtoDerp
             {
                 cam = new Camera2d(Constants.GAME_WORLD_WIDTH, Constants.GAME_WORLD_HEIGHT);
                 cam.Pos = new Vector2(Constants.GAME_WORLD_WIDTH * 0.5f, Constants.GAME_WORLD_HEIGHT * 0.6f);
-                
+
             }
             else
             {
                 cam = new Camera2d(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height);
-                if(game.gMode!=6)
+                if (game.gMode != 6)
                     cam.Pos = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 0.5f, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.6f);
                 else
                     cam.Pos = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 1, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.2f);
-                
+
             }
-            cam.Zoom = 0.75f*zoomRatio;
+            cam.Zoom = 0.75f * zoomRatio;
         }
         private void initializeLetterBox()
         {
@@ -302,7 +307,7 @@ namespace ProtoDerp
 
         private void drawPrimitiveElement(PrimitiveDrawingElement p, float alpha)
         {
-           // float temp = effect.Alpha;
+            // float temp = effect.Alpha;
             //effect.Alpha = alpha;
             //effect.World = p.transform;
             //foreach (EffectPass ep in effect.CurrentTechnique.Passes)
@@ -346,11 +351,17 @@ namespace ProtoDerp
                 if (p1.Position.Y - height < cam._pos.Y - cam.ViewportHeight / 1)
                     cam.Move(new Vector2(0, (p1.Position.Y - height) - (cam._pos.Y - cam.ViewportHeight / 1)));
             }
+            //Player dies if they go out of the camera bounds
+            if (p1.Position.X > cam.Pos.X + cam.ViewportWidth || p1.Position.X < cam.Pos.X - cam.ViewportWidth
+                || p1.Position.Y > cam.Pos.Y + cam.ViewportHeight || p1.Position.Y < cam.Pos.Y - cam.ViewportHeight)
+            {
+                game.PlayerDies();
+            }
         }
 
         public void followTitle()
         {
-            Vector2 Position =game.Title.posSelectText;
+            Vector2 Position = game.Title.posSelectText;
 
             float widthRatio = 0.55f;
             float heightRatio = 0.55f;
@@ -371,20 +382,20 @@ namespace ProtoDerp
                 cam.Move(new Vector2(0, (Position.Y + height) - (cam._pos.Y + cam.ViewportHeight / 1)));
             if (Position.Y - height < cam._pos.Y - cam.ViewportHeight / 1)
                 cam.Move(new Vector2(0, (Position.Y - height) - (cam._pos.Y - cam.ViewportHeight / 1)));
-        
+
         }
         public void controlCamera()
         {
             if (game.testLevel)
                 return;
 
-            XboxInput xbInput=(XboxInput)game.Arena.player1.inputState;
+            XboxInput xbInput = (XboxInput)game.Arena.player1.inputState;
             float xDirection = xbInput.getXDirection();
             float yDirection = xbInput.getYDirection();
-            cam.Move(new Vector2(xDirection*100f, yDirection*100f));
-            float zoomIn=xbInput.isLeftTriggerPressed();
+            cam.Move(new Vector2(xDirection * 100f, yDirection * 100f));
+            float zoomIn = xbInput.isLeftTriggerPressed();
             float zoomOut = xbInput.isRightTriggerPressed();
-            cam.Zoom += zoomIn/100f;
+            cam.Zoom += zoomIn / 100f;
             cam.Zoom -= zoomOut / 100f;
         }
 
@@ -394,17 +405,18 @@ namespace ProtoDerp
             {
                 followPlayer();
                 spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, null, null, null, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
-                
+
                 /*spriteBatch.Begin(SpriteSortMode.Deferred,
                          BlendState.NonPremultiplied,
                          null,
                          null,
                          null,
                          null,
-                         cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*///));
-            
+                         cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/
+                //));
+
             }
-            else 
+            else
             {
                 if (game.isInCreatorMode)
                     controlCamera();
@@ -431,7 +443,7 @@ namespace ProtoDerp
             }
             foreach (Entity e in entities)
             {
-                if(e is PlayableCharacter|| e is GUI)
+                if (e is PlayableCharacter || e is GUI)
                     continue;
 
                 if (e.IsVisible)
@@ -445,7 +457,7 @@ namespace ProtoDerp
                     }
                     else
                   * */
-                        e.Draw(gameTime, spriteBatch);
+                    e.Draw(gameTime, spriteBatch);
                 }
             }
             endBatch();
@@ -469,7 +481,7 @@ namespace ProtoDerp
                 if (e is DeathBlock)
                 {
                     DeathBlock b = (DeathBlock)e;
-                        b.DrawShadow(gameTime, spriteBatch);
+                    b.DrawShadow(gameTime, spriteBatch);
                 }
                 if (e is GoalBlock)
                 {
@@ -479,46 +491,56 @@ namespace ProtoDerp
 
             }
             foreach (Entity e in entities)
-           {
-               if (e is PlayableCharacter)
-               {
-                   e.Draw(gameTime, spriteBatch);
-                   break;
-               }
-           }
+            {
+                if (e is PlayableCharacter)
+                {
+                    e.Draw(gameTime, spriteBatch);
+                    break;
+                }
+            }
             foreach (Entity e in entities)
             {
                 if (!e.IsVisible)
                 {
                     continue;
                 }
+                
+                if (e is DeathBlock || e is GoalBlock || e is CreaterBlock || e is Arena)
+                    e.Draw(gameTime, spriteBatch);
+
+
+            }
+
+            foreach (Entity e in entities)
+            {
                 if (e is Block)
                 {
                     Block b = (Block)e;
-                    if (b.drawLevel == 2|| b.drawLevel==0)
+                    if (b.drawLevel == 2 || b.drawLevel == 0)
                     {
                         e.Draw(gameTime, spriteBatch);
                     }
                 }
-                if (e is DeathBlock|| e is GoalBlock|| e is CreaterBlock || e is Arena)
-                    e.Draw(gameTime, spriteBatch);
-                
-                
             }
 
-           endBatch();
-           
-           //foreach (Block i in topBlocks)
-           //game.addEntity(i);
+            endBatch();
 
-           if (game.gMode == 0|| game.gMode==2)
-           {
-               spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
-               game.Arena.gui.Draw(gameTime, spriteBatch);
-               spriteBatch.End();
-           }
-           
- 
+            //foreach (Block i in topBlocks)
+            //game.addEntity(i);
+
+            if (game.gMode == 0 || game.gMode == 2)
+            {
+                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
+                game.Arena.gui.Draw(gameTime, spriteBatch);
+                spriteBatch.End();
+            }
+
+
+        }
+        //Draws a simple rectangle based on given location and color
+        public void drawRectangle(Rectangle rect, Color color)
+        {
+            spriteBatch.Draw(rectangle, rect, color);
         }
 
         // Draw a sprite based on a center position and an x and y radius. All parameters are in terms of game world sizes. Does not support sprite rotation

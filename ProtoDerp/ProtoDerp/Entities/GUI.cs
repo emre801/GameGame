@@ -22,6 +22,8 @@ namespace ProtoDerp
         Sprite gameOverGUI;
         public bool gameOver = false;
         float pauseSelection = 0.475f;
+
+        KeyboardInput keyInput;
         public GUI(Game g)
             : base(g)
         {
@@ -32,27 +34,36 @@ namespace ProtoDerp
             cir = game.getSprite("Circle");
             gameOverGUI = game.getSprite("gameOver");
             this.updatesWhenPaused = true;
+            keyInput = new KeyboardInput();
         }
 
         public override void Update(GameTime gameTime, float worldSpeed)
         {
             //No Need to update anything here
+            
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            keyInput.Update(gameTime);
             //spriteBatch.Draw(pix.index, new Rectangle(5,5,100,100), Color.White);
             if (game.pause)
             {
                 DrawText(spriteBatch, 0.45f, 0.40f, "Paused",1.5f);
-                DrawText(spriteBatch, 0.45f, 0.45f, "Return To Title", 1.0f);
-                DrawText(spriteBatch, 0.45f, 0.475f, "Return To Game", 1.0f);
+                DrawText(spriteBatch, 0.45f, 0.45f, "Rage Quit!!", 1.0f);
+                DrawText(spriteBatch, 0.45f, 0.475f, "Return to Game", 1.0f);
                 if (game.playerOneInput.VerticalMovement() > 0)
                     pauseSelection = 0.45f;
-                else if (game.playerOneInput.VerticalMovement() < 0)
+                else if (game.playerOneInput.VerticalMovement() < 0 )
                     pauseSelection = 0.475f;
+                
+               if (keyInput.IsKeyPressed(Keys.Up))
+                        pauseSelection = 0.45f;
+               else if (keyInput.IsKeyPressed(Keys.Down))
+                        pauseSelection = 0.475f;
+                
                 DrawText(spriteBatch, 0.425f, pauseSelection, ">", 1.0f);
-                if (game.playerOneInput.IsNewButtonPressed(Buttons.A))
+                if (game.playerOneInput.IsNewButtonPressed(Buttons.A)|| keyInput.IsNewKeyPressed(Keys.Enter))
                 {
                     if (pauseSelection == 0.45f)
                     {
@@ -61,13 +72,19 @@ namespace ProtoDerp
                     game.stopWatch.Start();
                     game.pause = false;
                 }
-
+                    game.drawingTool.drawRectangle(new Rectangle(0, 0, game.drawingTool.ActualScreenPixelWidth,
+                        (int)(game.drawingTool.ActualScreenPixelHeight*0.10f)), Color.Black);
+                    game.drawingTool.drawRectangle(new Rectangle(0, (int)(game.drawingTool.ActualScreenPixelHeight*0.90f),
+                        game.drawingTool.ActualScreenPixelWidth, (int)(game.drawingTool.ActualScreenPixelHeight * 0.10f+12)), Color.Black);
+                
+               
             }
 
             if (game.gMode == 0)
             {
                 //DrawBackThing(gameTime, spriteBatch);
                 DrawCredits(gameTime, spriteBatch);
+
             }
             if (game.gMode == 2)
             {
@@ -210,7 +227,7 @@ namespace ProtoDerp
                     break;
                 case Game.BlockType.Magnet:
                     blockInfo += "Magnet";
-                    DrawText(spriteBatch, 0.065f, 0.875f, game.magnetPulse.X + " " + game.magnetPulse.Y);
+                    DrawText(spriteBatch, 0.065f, 0.875f, "X:"+game.magnetPulse.X + "Y:" + game.magnetPulse.Y);
                     break;
 
             }

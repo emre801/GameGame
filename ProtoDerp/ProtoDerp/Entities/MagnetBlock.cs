@@ -166,9 +166,10 @@ namespace ProtoDerp
             Point bottomRight = new Point(playerSprite.index.Width, playerSprite.index.Height);
             Rectangle targetRect = new Rectangle((int)ringDrawPoint.X, (int)ringDrawPoint.Y, bottomRight.X, bottomRight.Y);
             Color drawColor = Color.White;
-            if (isSelected || game.isInCreatorMode)
+            if (game.isInCreatorMode)
             {
-                drawColor = Color.Green;
+                if(isSelected)
+                    drawColor = Color.Green;
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)this.width, (int)this.height), null, drawColor, body.Rotation, origin, SpriteEffects.None, 0f);
             }
         }

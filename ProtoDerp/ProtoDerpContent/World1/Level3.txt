@@ -4,14 +4,39 @@
 430 350 bigBlock Block 220 1765 2
 -545 -190 bigBlock Block 1510 200 2
 1380 -190 bigBlock Block 1510 200 2
+430 350 bigBlock Block 220 1765 2
+-545 -190 bigBlock Block 1510 200 2
+1380 -190 bigBlock Block 1510 200 2
 -125 75 ground Block 64 256 2
 130 75 ground Block 64 256 2
 380 75 ground Block 64 256 2
 630 75 ground Block 64 256 2
 885 75 ground Block 64 256 2
 970 75 ground Block 64 256 2
-475 -330 BigBackGround Block 1240 1650 1
-1085 -370 deathSpikes3 DeathBlock
-1085 -240 deathSpikes3 DeathBlock
-1018 -81 ahLogo0 GoalBlock 4
+-125 75 ground Block 64 256 2
+130 75 ground Block 64 256 2
+380 75 ground Block 64 256 2
+630 75 ground Block 64 256 2
+885 75 ground Block 64 256 2
+970 75 ground Block 64 256 2
+1225 -531 GreenHill2 Block 981 821 1
+-364 -508 GreenHill2 Block 981 821 1
+-1313 -607 GreenHill2 Block 981 821 1
+2317 -475 GreenHill2 Block 981 821 1
+3139 -570 GreenHill2 Block 981 821 1
+434 -325 GreenHill Block 1550 1800 1
+-1297 -371 GreenHill Block 1550 1800 1
+2122 -317 GreenHill Block 1550 1800 1
+762 -937 CloudBack Block 70 1120 2
+-348 -1005 CloudBack Block 70 1120 2
+-980 -817 CloudBack Block 70 1120 2
+1914 -754 CloudBack Block 70 1120 2
+165 -120 bigBlock Block 20 1250 0
+448 631 bigBlock Block 985 5045 1
+314 1592 bigBlock Block 985 5045 1
+-231 -882 deathSpikes4 DeathBlock
+-231 -754 deathSpikes4 DeathBlock
+1094 -862 deathSpikes3 DeathBlock
+1085 -740 deathSpikes3 DeathBlock
+-198 -238 ahLogo0 GoalBlock 4
 Demi -306 1153 -527 604

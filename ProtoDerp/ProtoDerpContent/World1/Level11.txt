@@ -1,34 +1,10 @@
-355 155 bigBlock Block 200 1000 0
-955 -790 bigBlock Block 2085 240 0
-655 -1155 bigBlock Block 2085 30 0
-746 -515 GreenHill Block 1550 1800 1
-2544 -515 GreenHill Block 1550 1800 1
--1052 -521 GreenHill Block 1550 1800 1
-685 -175 deathSpikes4 DeathBlock
-685 -765 deathSpikes4 DeathBlock
-685 -1250 deathSpikes4 DeathBlock
-685 -1860 deathSpikes4 DeathBlock
-685 -2110 deathSpikes4 DeathBlock
-813 -460 deathSpikes3 DeathBlock
-813 -1049 deathSpikes3 DeathBlock
-813 -1594 deathSpikes3 DeathBlock
-622 -180 deathSpikes3 DeathBlock
-625 -302 deathSpikes3 DeathBlock
-622 -420 deathSpikes3 DeathBlock
-622 -545 deathSpikes3 DeathBlock
-619 -665 deathSpikes3 DeathBlock
-619 -777 deathSpikes3 DeathBlock
-622 -897 deathSpikes3 DeathBlock
-619 -1017 deathSpikes3 DeathBlock
-622 -1140 deathSpikes3 DeathBlock
-628 -1200 deathSpikes3 DeathBlock
-625 -1314 deathSpikes3 DeathBlock
-625 -1437 deathSpikes3 DeathBlock
-622 -1556 deathSpikes3 DeathBlock
-619 -1681 deathSpikes3 DeathBlock
-620 -1810 deathSpikes3 DeathBlock
-623 -1936 deathSpikes3 DeathBlock
-623 -2063 deathSpikes3 DeathBlock
-626 -2132 deathSpikes3 DeathBlock
-950 -1900 ahLogo0 GoalBlock 12
+368 191 bigBlock Block 200 1000 0
+779 -288 bigBlock Block 55 175 0
+942 -257 bigBlock Block 1095 175 0
+405 37 magnet1 Block 112 107 0
+834 -194 deathSpikes3 DeathBlock
+839 -68 deathSpikes3 DeathBlock
+845 54 deathSpikes3 DeathBlock
+411 262 LongGround MagnetBlock 0 -20 1510 200
+777 -382 ahLogo0 GoalBlock 12
 Demi -100 800 -1600 572

@@ -38,7 +38,11 @@
 -980 -817 CloudBack Block 70 1120 2
 1914 -754 CloudBack Block 70 1120 2
 2337 -982 CloudBack Block 70 1120 2
-271 28 fan Block 15 35 0
-457 11 fan DeathBlock
+-228 -882 deathSpikes4 DeathBlock
+-228 -777 deathSpikes4 DeathBlock
+-228 -657 deathSpikes4 DeathBlock
+1079 -857 deathSpikes3 DeathBlock
+1077 -745 deathSpikes3 DeathBlock
+1079 -620 deathSpikes3 DeathBlock
 1018 -1 ahLogo0 GoalBlock 2
 Demi -349 1182 -532 795

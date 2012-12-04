@@ -559,6 +559,11 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="magnet1.png">
+      <Name>magnet1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="Template\Level3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>Level3</Name>
@@ -570,6 +575,46 @@
     <Content Include="Template\Level1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>Level1</Name>
+    </Content>
+    <Content Include="World1\Level20.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level20</Name>
+    </Content>
+    <Content Include="World1\Level21.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level21</Name>
+    </Content>
+    <Content Include="World1\Level22.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level22</Name>
+    </Content>
+    <Content Include="World1\Level23.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level23</Name>
+    </Content>
+    <Content Include="World1\Level24.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level24</Name>
+    </Content>
+    <Content Include="World1\Level25.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level25</Name>
+    </Content>
+    <Content Include="World1\Level26.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level26</Name>
+    </Content>
+    <Content Include="World1\Level27.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level27</Name>
+    </Content>
+    <Content Include="World1\Level28.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level28</Name>
+    </Content>
+    <Content Include="World1\Level29.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level29</Name>
     </Content>
     <Content Include="World1\Level15.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

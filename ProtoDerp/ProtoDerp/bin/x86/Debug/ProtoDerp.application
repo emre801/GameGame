@@ -8,14 +8,14 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ProtoDerp.exe.manifest" size="58283">
+    <dependentAssembly dependencyType="install" codebase="ProtoDerp.exe.manifest" size="62522">
       <assemblyIdentity name="ProtoDerp.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>bmpNdlSl098FXLNse9Sdb9A9LPI=</dsig:DigestValue>
+        <dsig:DigestValue>1s/eEga5u/V21snhyOFErR1i8Lk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

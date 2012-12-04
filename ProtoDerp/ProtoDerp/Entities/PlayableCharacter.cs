@@ -143,9 +143,11 @@ namespace ProtoDerp
                     }
                     else if (movementBefore.Y<0)
                     {
-                        xMomentum = -Math.Abs(body.LinearVelocity.X*0.6f);
+                        xMomentum = -Math.Abs(body.LinearVelocity.X*0.8f);
                     }
-
+                    XboxInput xbi = (XboxInput)inputState;
+                    if(xbi.getYDirection()<0)
+                        xMomentum+=xbi.getYDirection()*4f;
                     body.LinearVelocity = new Vector2(0, body.LinearVelocity.Y+xMomentum);
                     //body.IgnoreGravity = true;
                     onGround = true;
@@ -227,6 +229,18 @@ namespace ProtoDerp
                 return;
 
             }
+            if (keyInput.IsNewKeyPressed(Keys.Enter))
+            {
+                game.isPausePressed = true;
+            }
+            if (keyInput.IsKeyPressed(Keys.Up))
+            {
+                game.isUpMenuSelect = 1;
+            }
+            if (keyInput.IsKeyPressed(Keys.Down))
+            {
+                game.isUpMenuSelect = 2;
+            }
             ani.Update();
             doAnimation = false;
             shiftPosition = new Vector2(0, 0);
@@ -282,7 +296,7 @@ namespace ProtoDerp
             else
             {
 
-                body.ApplyLinearImpulse(new Vector2(xDirection * 0.65f * runningValue, 0));// inputState.getYDirection() * 300f));
+                body.ApplyLinearImpulse(new Vector2(xDirection * 0.95f * runningValue, 0));// inputState.getYDirection() * 300f));
                 //motor.MotorSpeed = inputState.getXDirection()*10;
                 if (inputState.getXDirection() == 0)
                     fixture.Friction = 10;

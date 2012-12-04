@@ -560,21 +560,23 @@ namespace ProtoDerp
             float xturbo = 1;
             if(keyState.IsKeyDown(Keys.LeftShift))
                 xturbo=5;
+            if(keyState.IsKeyDown(Keys.RightShift))
+                turbo=0.5f;
             if (keyState.IsKeyDown(Keys.Up))
             {
-                y += 5;// 1 * xturbo;
+                y += 1;// 1 * xturbo;
             }
             if (keyState.IsKeyDown(Keys.Down))
             {
-                y -= 5;// -1 * xturbo;
+                y -= 1;// -1 * xturbo;
             }
             if (keyState.IsKeyDown(Keys.Left))
             {
-                x -= 5;// -1 * xturbo;
+                x -= 1;// -1 * xturbo;
             }
             if (keyState.IsKeyDown(Keys.Right))
             {
-                x += 5;// 1 * xturbo;
+                x += 1;// 1 * xturbo;
             }
             
            

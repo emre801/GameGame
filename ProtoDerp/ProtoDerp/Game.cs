@@ -96,6 +96,9 @@ namespace ProtoDerp
         public float pauseAlpha = 1f;
         public bool backToTitleScreen = false;
 
+        public bool isPausePressed = false;
+        public int isUpMenuSelect = 0;
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -198,6 +201,8 @@ namespace ProtoDerp
             sprites.Add("rage", new Sprite(Content, "rage"));
             sprites.Add("GreenHill", new Sprite(Content, "GreenHill"));
             blockList.AddLast("GreenHill");
+            sprites.Add("magnet1", new Sprite(Content, "magnet1"));
+            blockList.AddLast("magnet1");
             sprites.Add("GreenHill2", new Sprite(Content, "GreenHill2"));
             blockList.AddLast("GreenHill2");
             sprites.Add("CloudBack", new Sprite(Content, "CloudBack"));
@@ -481,7 +486,7 @@ namespace ProtoDerp
                 int x = (int)b.origPos.X;
                 int y = (int)b.origPos.Y;
                 String spriteName = b.spriteNumber;
-                lines.AddLast(x + " " + y + " " + spriteName + " MagnetBlock" + " " + b.magnetPulse.X + " "+ b.magnetPulse.Y + " "+ b.width + " "+ b.height);
+                lines.AddLast(x + " " + y + " " + spriteName + " MagnetBlock" + " " + b.magnetPulse.X + " "+ b.magnetPulse.Y + " "+ b.height +" "+ b.width  );
 
             }
 
@@ -537,8 +542,9 @@ namespace ProtoDerp
                 newLevel();
                 Arena.setUpDemensions(maxLeft, maxRight, maxTop, maxButtom);
             }
-            if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Back))
+            if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Back) || isPausePressed)
             {
+                isPausePressed = false;
                 if (gMode == 0)
                 {
                     if (pause)
