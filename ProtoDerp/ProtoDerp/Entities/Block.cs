@@ -43,7 +43,8 @@ namespace ProtoDerp
         public float displayAlpha = 1;
         float fadeOutRatio=0;
         SpriteStripAnimationHandler ani;
-        public Block(Game g, Arena a, Vector2 pos, int playerNum,String spriteNumber,float height, float width,int drawLevel)
+        public float rotationAngle = 0;
+        public Block(Game g, Arena a, Vector2 pos, int playerNum,String spriteNumber,float height, float width,int drawLevel, float rotation)
             : base(g)
         {
             this.pos = Constants.player1SpawnLocation + pos;
@@ -54,6 +55,7 @@ namespace ProtoDerp
             this.height = height;
             this.width = width;
             this.drawLevel = drawLevel;
+            this.rotationAngle = rotation;
             SetUpPhysics(Constants.player1SpawnLocation + pos);
             origin = new Vector2(ani.widthOf() / 2, ani.heightOf() / 2);
             fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
@@ -102,6 +104,8 @@ namespace ProtoDerp
             body.FixedRotation = true;
             body.LinearDamping = 0.5f;
             body.AngularDamping = 1f;
+            body.Rotation = rotationAngle*(float)Math.PI/180f; 
+            
         }
         
         public Vector2 Position

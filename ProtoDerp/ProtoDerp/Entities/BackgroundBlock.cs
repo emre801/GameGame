@@ -19,7 +19,7 @@ namespace ProtoDerp
     class BackgroundBlock :Block
     {
         public BackgroundBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber, float height, float width)
-            : base(g,a,pos,playerNum,spriteNumber,height,width,1)
+            : base(g,a,pos,playerNum,spriteNumber,height,width,1,0)
         {
         }
         protected override void SetUpPhysics(Vector2 position)

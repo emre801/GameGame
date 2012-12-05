@@ -37,13 +37,15 @@ namespace ProtoDerp
         bool isDead = false;
         SpriteStripAnimationHandler ani;
         float width, height;
-        public DeathBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
+        public float rotationAngle=0;
+        public DeathBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber, float rotation)
             : base(g)
         {
             this.pos = Constants.player1SpawnLocation + pos;
             this.origPos = pos;
             this.drawPriority = Constants.PLAYER_DRAWPRI;
             this.spriteNumber = spriteNumber;
+            this.rotationAngle = rotation;
             LoadContent();
             SetUpPhysics(Constants.player1SpawnLocation + pos);
             origin = new Vector2(ani.widthOf() / 2, ani.heightOf() / 2);
@@ -89,6 +91,8 @@ namespace ProtoDerp
             body.FixedRotation = true;
             body.LinearDamping = 0.5f;
             body.AngularDamping = 1f;
+            body.Rotation = rotationAngle * (float)Math.PI / 180f;
+
         }
 
         //private Vector3[] baseHB = new Vector3[Constants.HEALTH_BAR_SEGMENT_COUNT];

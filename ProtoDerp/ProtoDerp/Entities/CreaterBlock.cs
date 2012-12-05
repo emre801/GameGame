@@ -50,6 +50,7 @@ namespace ProtoDerp
         //public Vector2 magnetPulse;
         public bool incrementXMagnetValue;
         SpriteStripAnimationHandler ani;
+        float rotation = 0;
 
         public CreaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
             : base(g)
@@ -177,6 +178,20 @@ namespace ProtoDerp
                 game.saveAlpha = 1;
                 game.writeLevel(game.currentWriteLevel);
             }
+
+            if (keyInput.IsNewKeyPressed(Keys.D2))
+            {
+                rotation += 90;
+            }
+            if (keyInput.IsNewKeyPressed(Keys.D1))
+            {
+                rotation -= 90;
+            }
+            if (keyInput.IsKeyPressed(Keys.D2))
+            {
+                rotation += 1;
+            }
+            
 
             if (game.blockType.Equals(Game.BlockType.Magnet))
             {
@@ -589,10 +604,10 @@ namespace ProtoDerp
             switch (game.blockType)
             {
                 case Game.BlockType.Normal:
-                    game.addEntity(new Block(game, game.Arena, origin, 1, blockArray[counter], blockHeight, blockWidth, drawLevel));
+                    game.addEntity(new Block(game, game.Arena, origin, 1, blockArray[counter], blockHeight, blockWidth, drawLevel,rotation));
                     break;
                 case Game.BlockType.Death:
-                    game.addEntity(new DeathBlock(game, game.Arena, origin, 1, blockArray[counter]));
+                    game.addEntity(new DeathBlock(game, game.Arena, origin, 1, blockArray[counter],rotation));
                     break;
                 case Game.BlockType.Moving:
                     game.addEntity(new MovingDeath(game, game.Arena, origin, 1, blockArray[counter], new Vector2(1, 0), 2));        
@@ -612,13 +627,13 @@ namespace ProtoDerp
         public void addBlock()
         {
 
-            game.addEntity(new Block(game, game.Arena, origPos, 1, blockArray[counter], blockHeight, blockWidth,drawLevel));
+            game.addEntity(new Block(game, game.Arena, origPos, 1, blockArray[counter], blockHeight, blockWidth,drawLevel,rotation));
         }
 
         public void addDeathBlock()
         {
 
-            game.addEntity(new DeathBlock(game, game.Arena, origPos, 1, blockArray[counter]));
+            game.addEntity(new DeathBlock(game, game.Arena, origPos, 1, blockArray[counter],rotation));
         }
         public void addMagnetBlock()
         {
@@ -645,7 +660,7 @@ namespace ProtoDerp
                 
                 if (ani.getStateCount() == 1)
                 {
-                    spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);
+                    spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, rotation*(float)Math.PI/180f, origin, SpriteEffects.None, 0f);
                 }
                 else
                 {

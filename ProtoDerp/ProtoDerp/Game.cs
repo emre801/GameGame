@@ -462,7 +462,7 @@ namespace ProtoDerp
                 int x = (int)b.origPos.X;
                 int y = (int)b.origPos.Y;
                 String spriteName = b.spriteNumber;
-                lines.AddLast(x + " " + y + " " + spriteName + " Block" +" "+b.height +" "+b.width+" "+b.drawLevel);
+                lines.AddLast(x + " " + y + " " + spriteName + " Block" +" "+b.height +" "+b.width+" "+b.drawLevel +" "+ b.rotationAngle);
 
             }
 
@@ -474,7 +474,7 @@ namespace ProtoDerp
                 int x = (int)b.origPos.X;
                 int y = (int)b.origPos.Y;
                 String spriteName = b.spriteNumber;
-                lines.AddLast(x + " " + y + " " + spriteName + " DeathBlock");
+                lines.AddLast(x + " " + y + " " + spriteName + " DeathBlock" +" " +b.rotationAngle);
 
             }
 

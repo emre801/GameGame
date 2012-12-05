@@ -81,10 +81,13 @@ namespace ProtoDerp
                 String spriteName = words[2];
                 if (words[3].Equals("Block"))
                 {
-                    Block toBeAdded = new Block(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4]), Convert.ToInt32(words[5]), Convert.ToInt32(words[6]));
+                    float rotation = 0;
+                    if(words.Length==8)
+                        rotation =(Convert.ToInt32(words[7]));
+                    Block toBeAdded = new Block(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4]), Convert.ToInt32(words[5]), Convert.ToInt32(words[6]),rotation);
                     if (words.Length >= 8)
                     {
-                        toBeAdded.setdisAppearTimer(Convert.ToInt32(words[7]));
+                        //toBeAdded.setdisAppearTimer(Convert.ToInt32(words[7]));
                     }                   
                     if(Convert.ToInt32(words[6])==0)
                         blocks.AddLast(toBeAdded);
@@ -95,8 +98,13 @@ namespace ProtoDerp
                     
                 }
                 if (words[3].Equals("DeathBlock"))
-                   deathBlocks.AddLast(new DeathBlock(game, game.Arena, new Vector2(x, y), 1, spriteName));
-                if (words[3].Equals("MagnetBlock"))
+                {
+                    float rotation = 0;
+                    if(words.Length==5)
+                        rotation = (Convert.ToInt32(words[4]));
+                    deathBlocks.AddLast(new DeathBlock(game, game.Arena, new Vector2(x, y), 1, spriteName,rotation));
+                }
+                 if (words[3].Equals("MagnetBlock"))
                     magnetBlocks.AddLast(new MagnetBlock(game, game.Arena, new Vector2(x, y), 1, spriteName, new Vector2(Convert.ToInt32(words[4]), Convert.ToInt32(words[5])), Convert.ToInt32(words[6]), Convert.ToInt32(words[7])));
                 
                 if (words[3].Equals("GoalBlock"))

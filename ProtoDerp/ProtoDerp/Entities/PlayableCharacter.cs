@@ -146,8 +146,10 @@ namespace ProtoDerp
                         xMomentum = -Math.Abs(body.LinearVelocity.X*0.8f);
                     }
                     XboxInput xbi = (XboxInput)inputState;
-                    if(xbi.getYDirection()<0)
-                        xMomentum+=xbi.getYDirection()*4f;
+                    if (xbi.getYDirection() < 0)
+                        xMomentum += xbi.getYDirection() * 4f;
+                    else
+                        xMomentum = 0;
                     body.LinearVelocity = new Vector2(0, body.LinearVelocity.Y+xMomentum);
                     //body.IgnoreGravity = true;
                     onGround = true;
