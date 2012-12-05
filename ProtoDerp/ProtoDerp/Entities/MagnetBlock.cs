@@ -38,6 +38,7 @@ namespace ProtoDerp
         bool isMagnet = true;
         public Vector2 magnetPulse;
         public float height, width;
+        bool isInMagnet = false;
         public MagnetBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber,Vector2 magnetPulse, float height, float width)
             : base(g)
         {
@@ -51,9 +52,20 @@ namespace ProtoDerp
             SetUpPhysics(Constants.player1SpawnLocation + pos);
             origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
             fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
+            fixture.OnSeparation += new OnSeparationEventHandler(OnSeparation);
+
             this.magnetPulse = magnetPulse;
             
             //game.Arena.player1.fixture.CollisionFilter.IgnoreCollisionWith(this.fixture);
+        }
+        void OnSeparation(Fixture fixtureA, Fixture fixtureB)
+        {
+            LinkedList<PlayableCharacter> players = game.getEntitiesOfType<PlayableCharacter>();
+            PlayableCharacter player = players.First();
+            isInMagnet = false;
+            player.body.LinearVelocity = new Vector2(0, 0);
+            //player.body.IgnoreGravity = false;
+
         }
         bool OnCollision(Fixture fixtureA, Fixture fixtureB, Contact contact)
         {
@@ -63,11 +75,17 @@ namespace ProtoDerp
                 PlayableCharacter player = players.First();
                 if (fixtureB == player.fixture)
                 {
-                    //player.fixture.CollisionFilter.IgnoreCollisionWith(fixture);
                     player.body.ApplyLinearImpulse(magnetPulse);
-                    
+                    if (!isInMagnet)
+                    {
+                        if(magnetPulse.X!=0)
+                            player.body.LinearVelocity = new Vector2(0, body.LinearVelocity.Y);
+                        else
+                            player.body.LinearVelocity = new Vector2(body.LinearVelocity.X, 0);
+                        isInMagnet = true;
+                    }
+                    //player.body.IgnoreGravity = true;
                     return !isMagnet;
-
                 }
             }
             return true;
@@ -92,7 +110,6 @@ namespace ProtoDerp
             body.AngularDamping = 1f;
         }
 
-        //private Vector3[] baseHB = new Vector3[Constants.HEALTH_BAR_SEGMENT_COUNT];
         private void initializePrimitives()
         {
 

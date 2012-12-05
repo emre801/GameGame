@@ -187,9 +187,13 @@ namespace ProtoDerp
             {
                 rotation -= 90;
             }
-            if (keyInput.IsKeyPressed(Keys.D2))
+            if (keyInput.IsKeyPressed(Keys.D3))
             {
                 rotation += 1;
+            }
+            if (keyInput.IsNewKeyPressed(Keys.D4))
+            {
+                rotation = 0 ;
             }
             
 

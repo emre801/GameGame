@@ -54,7 +54,7 @@ namespace ProtoDerp
         public Fixture wheel;
         public FixedAngleJoint fixedAngleJoint;
         public RevoluteJoint motor;
-        SpriteStripAnimationHandler ani; 
+        SpriteStripAnimationHandler ani;
         KeyboardInput keyInput;
         Vector2 shiftPosition;
 
@@ -89,7 +89,7 @@ namespace ProtoDerp
             if (g.isInCreatorMode)
                 body.IgnoreGravity = true;
             keyInput = new KeyboardInput();
-            
+
 
         }
         void OnSeparation(Fixture fixtureA, Fixture fixtureB)
@@ -98,7 +98,7 @@ namespace ProtoDerp
             {
                 modes = Modes.AIRDOWN;
             }
-           //modes = Modes.AIRUP;
+            //modes = Modes.AIRUP;
             //body.IgnoreGravity = false;
             //onGround = false;
         }
@@ -106,7 +106,7 @@ namespace ProtoDerp
         {
             Vector2 movementBefore = body.LinearVelocity;
             body.LinearVelocity = new Vector2(body.LinearVelocity.X, 0);
-            
+
             if (contact.IsTouching())
             {
                 if (isMagnet(fixtureB))
@@ -119,7 +119,7 @@ namespace ProtoDerp
                     onGround = true;
                     modes = Modes.GROUND;
                     return true;
-                    
+
                 }
                 if (pColis.X != 0 && pColis.Y == 0)
                 {
@@ -128,7 +128,7 @@ namespace ProtoDerp
                         modes = Modes.WALL;
                         return false;
                     }
-                   
+
                     float direction = inputState.GetJoyDirection();
                     float x = (float)Math.Sin(direction);
                     if (pColis.X > 0)
@@ -137,27 +137,27 @@ namespace ProtoDerp
                         isWallOnRight = false;
 
                     float xMomentum = 0;
-                    if (movementBefore.Y>0)
+                    if (movementBefore.Y > 0)
                     {
                         xMomentum = Math.Abs(body.LinearVelocity.X * 0.3f);
                     }
-                    else if (movementBefore.Y<0)
+                    else if (movementBefore.Y < 0)
                     {
-                        xMomentum = -Math.Abs(body.LinearVelocity.X*0.8f);
+                        xMomentum = -Math.Abs(body.LinearVelocity.X * 0.8f);
                     }
                     XboxInput xbi = (XboxInput)inputState;
                     if (xbi.getYDirection() < 0)
                         xMomentum += xbi.getYDirection() * 4f;
                     else
                         xMomentum = 0;
-                    body.LinearVelocity = new Vector2(0, body.LinearVelocity.Y+xMomentum);
+                    body.LinearVelocity = new Vector2(0, body.LinearVelocity.Y + xMomentum);
                     //body.IgnoreGravity = true;
                     onGround = true;
                     onGround = true;
                     modes = Modes.WALL;
                     return false;
                 }
-                
+
             }
             return true;
         }
@@ -180,7 +180,7 @@ namespace ProtoDerp
             float mass = 0.8f;
             float width = game.getSpriteAnimation("player_strip12").widthOf();
             float height = game.getSpriteAnimation("player_strip12").heightOf();
-            
+
             fixture = FixtureFactory.CreateRectangle(world, (float)ConvertUnits.ToSimUnits(width), (float)ConvertUnits.ToSimUnits(height), mass);
             body = fixture.Body;
             fixture.Body.BodyType = BodyType.Dynamic;
@@ -206,7 +206,7 @@ namespace ProtoDerp
         public bool isPreviewing()
         {
             return true;
-        }        
+        }
 
         public bool isInvincible()
         {
@@ -274,19 +274,19 @@ namespace ProtoDerp
                 return;
             }
 
-            if (inputState.IsButtonPressed(Buttons.RightShoulder)|| keyInput.IsKeyPressed(Keys.Z))
+            if (inputState.IsButtonPressed(Buttons.RightShoulder) || keyInput.IsKeyPressed(Keys.Z))
                 runningValue = 2.5f;
 
 
             if ((xDirection > 0 && body.LinearVelocity.X < 0) || (xDirection < 0 && body.LinearVelocity.X > 0))
             {
-                body.LinearVelocity = new Vector2(body.LinearVelocity.X*0.88f, body.LinearVelocity.Y);
+                body.LinearVelocity = new Vector2(body.LinearVelocity.X * 0.88f, body.LinearVelocity.Y);
 
             }
-            
+
             if (onGround)
             {
-                if ((Math.Abs(body.LinearVelocity.X) < 5 * runningValue))
+                if ((Math.Abs(body.LinearVelocity.X) < 10 * runningValue))
                 {
                     body.ApplyLinearImpulse(new Vector2(xDirection * 0.45f * runningValue, 0));// inputState.getYDirection() * 300f));
                 }
@@ -311,12 +311,15 @@ namespace ProtoDerp
                     body.ApplyLinearImpulse(new Vector2(0, yDirection * 0.12f));
             }
 
-            if ((inputState.isAPressed()|| keyInput.IsNewKeyPressed(Keys.Space)) && onGround)// && body.LinearVelocity.Y > -50)
+            if ((inputState.isAPressed() || keyInput.IsNewKeyPressed(Keys.Space)) && onGround)// && body.LinearVelocity.Y > -50)
             {
                 body.IgnoreGravity = true;
+                float oldYvalue = body.LinearVelocity.Y;
+                if (oldYvalue > 0)
+                    oldYvalue = 0;
                 body.LinearVelocity = new Vector2(body.LinearVelocity.X, 0);
                 modes = Modes.AIRUP;
-                body.ApplyLinearImpulse(new Vector2(0, -30f));
+                body.ApplyLinearImpulse(new Vector2(0, -30f+oldYvalue));
                 if (isOnWall)
                 {
                     if (jumpDirection)
@@ -325,7 +328,7 @@ namespace ProtoDerp
                     }
                     else
                     {
-                        body.ApplyLinearImpulse(new Vector2(1.75f * runningValue, 0f));                    
+                        body.ApplyLinearImpulse(new Vector2(1.75f * runningValue, 0f));
                     }
 
                 }
@@ -336,7 +339,7 @@ namespace ProtoDerp
                 //modes = Modes.AIRUP;
             }
 
-            if ((inputState.IsNewButtonReleased(Buttons.A)  || keyInput.IsNewKeyReleased(Keys.Space))&& body.LinearVelocity.Y < -1)
+            if ((inputState.IsNewButtonReleased(Buttons.A) || keyInput.IsNewKeyReleased(Keys.Space)) && body.LinearVelocity.Y < -1)
             {
                 body.LinearVelocity = new Vector2(body.LinearVelocity.X, body.LinearVelocity.Y / 2f);
             }
@@ -374,15 +377,15 @@ namespace ProtoDerp
                     if (Math.Abs(body.LinearVelocity.X) < 5)
                     {
                         ani = game.getSpriteAnimation("sprite15_strip4");
-                        int frameRate = 120 * (int)(5f/Math.Abs(body.LinearVelocity.X));
+                        int frameRate = 120 * (int)(5f / Math.Abs(body.LinearVelocity.X));
                         ani.changeFrameRate(frameRate);
                     }
                     else
                     {
                         ani = game.getSpriteAnimation("sprite16_strip6");
-                        int frameRate = 30* (int)(15f/Math.Abs(body.LinearVelocity.X));
+                        int frameRate = 30 * (int)(15f / Math.Abs(body.LinearVelocity.X));
                         ani.changeFrameRate(frameRate);
-                    }                    
+                    }
                     doAnimation = true;
                     isOnWall = false;
                     isOnJumpAnimation = false;
@@ -399,12 +402,12 @@ namespace ProtoDerp
                 if (xbi.IsButtonPressed(Buttons.LeftShoulder))
                 {
 
-                    body.LinearVelocity = new Vector2(body.LinearVelocity.X*0.95f, body.LinearVelocity.Y);
+                    body.LinearVelocity = new Vector2(body.LinearVelocity.X * 0.95f, body.LinearVelocity.Y);
                 }
 
                 // modes = Modes.WAITING;
             }
-            if (Math.Abs(body.LinearVelocity.Y)>=0.0001f)
+            if (Math.Abs(body.LinearVelocity.Y) >= 0.0001f)
             {
                 if (!isOnWall)
                 {
@@ -426,16 +429,16 @@ namespace ProtoDerp
                         ani.setStatePub(0);
                         isFirstAni = false;
                     }
-                        
+
                     wallJumpCount++;
                     faceRight = jumpDirection;
-                    if (ani.getCycles()>=3)
+                    if (ani.getCycles() >= 3)
                     {
                         isOnWall = false;
                         isOnJumpAnimation = false;
                         faceRight = !jumpDirection;
                     }
-                    
+
 
                 }
             }
@@ -465,20 +468,20 @@ namespace ProtoDerp
 
             //if (mikeStandingStill||doAnimation)
             //{
-                //framCounter++;
-                //if(framCounter%frameRate==0)
-                    //ani.nextState();
+            //framCounter++;
+            //if(framCounter%frameRate==0)
+            //ani.nextState();
             this.blend = Color.Black;
-            this.alpha = 0.25f*game.pauseAlpha;
+            this.alpha = 0.25f * game.pauseAlpha;
             ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)),
                    origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),
                        (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), !faceRight, shiftPosition);
             this.blend = Color.White;
             this.alpha = 1f * game.pauseAlpha;
-                ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)), 
-                    origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), 
-                        (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), !faceRight,shiftPosition+new Vector2(5,2));
-                return;
+            ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)),
+                origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),
+                    (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), !faceRight, shiftPosition + new Vector2(5, 2));
+            return;
             //}
             /*
             if (!faceRight)
@@ -486,9 +489,9 @@ namespace ProtoDerp
             else
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y) , (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, Color.White, body.Rotation, origin, SpriteEffects.FlipHorizontally, 0f);
             */
-             //spriteBatch.Draw(game.getSprite("DeathTime").index, new Rectangle((int)ConvertUnits.ToDisplayUnits(wheel.Body.Position.X),
-                //(int)ConvertUnits.ToDisplayUnits(wheel.Body.Position.Y),
-                //(int)playerSprite.index.Width, playerSprite.index.Width), null, Color.White, wheel.Body.Rotation, new Vector2(playerSprite.index.Width / 2, playerSprite.index.Width / 2), SpriteEffects.FlipHorizontally, 0f);
+            //spriteBatch.Draw(game.getSprite("DeathTime").index, new Rectangle((int)ConvertUnits.ToDisplayUnits(wheel.Body.Position.X),
+            //(int)ConvertUnits.ToDisplayUnits(wheel.Body.Position.Y),
+            //(int)playerSprite.index.Width, playerSprite.index.Width), null, Color.White, wheel.Body.Rotation, new Vector2(playerSprite.index.Width / 2, playerSprite.index.Width / 2), SpriteEffects.FlipHorizontally, 0f);
 
         }
 
