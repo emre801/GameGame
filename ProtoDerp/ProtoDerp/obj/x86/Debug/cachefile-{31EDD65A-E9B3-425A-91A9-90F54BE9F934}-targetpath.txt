@@ -110,6 +110,11 @@ Content\GreenHill2.xnb
 Content\fan.xnb
 Content\magnet1.xnb
 Content\BlueBackground.xnb
+Content\patternWood.xnb
+Content\patternWood1.xnb
+Content\dirtBlock.xnb
+Content\dirtBlockHigh.xnb
+Content\dirtBlockLong.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

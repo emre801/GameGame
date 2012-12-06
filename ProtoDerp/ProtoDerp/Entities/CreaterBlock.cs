@@ -283,6 +283,17 @@ namespace ProtoDerp
             if (keyInput.IsNewKeyPressed(Keys.C))
             {
                 mouseInSelectMode = !mouseInSelectMode;
+
+                if (mouseInSelectMode)
+                {
+                    Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y - 500 * game.drawingTool.cam.Zoom);
+                    Vector2 worldMousePosition = Vector2.Transform(mousePosition, Matrix.Invert(game.drawingTool.cam._transform));
+                    
+                    origPos = worldMousePosition;
+                    pos = worldMousePosition+Constants.player1SpawnLocation;
+                    
+                }
+                
             }
             if (keyInput.IsNewKeyPressed(Keys.Enter))
             {
@@ -342,6 +353,7 @@ namespace ProtoDerp
                 pos = worldMousePosition+Constants.player1SpawnLocation;
                 blockIterater += Mouse.GetState().ScrollWheelValue;
                 oldMouseValue = Mouse.GetState().ScrollWheelValue;
+                
             }
             else
             {
@@ -583,19 +595,19 @@ namespace ProtoDerp
                 turbo=0.5f;
             if (keyState.IsKeyDown(Keys.Up))
             {
-                y += 1;// 1 * xturbo;
+                y += 1 * xturbo;
             }
             if (keyState.IsKeyDown(Keys.Down))
             {
-                y -= 1;// -1 * xturbo;
+                y -= 1 * xturbo;
             }
             if (keyState.IsKeyDown(Keys.Left))
             {
-                x -= 1;// -1 * xturbo;
+                x -= 1 * xturbo;
             }
             if (keyState.IsKeyDown(Keys.Right))
             {
-                x += 1;// 1 * xturbo;
+                x += 1 * xturbo;
             }
             
            
@@ -661,17 +673,19 @@ namespace ProtoDerp
             if (!game.inDeleteMode)
             {
                 //spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);
-                
-                if (ani.getStateCount() == 1)
-                {
-                    spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, rotation*(float)Math.PI/180f, origin, SpriteEffects.None, 0f);
-                }
-                else
-                {
-                    ani.drawCurrentState(spriteBatch, this, new Vector2((int)pos.X-blockWidth, (int)pos.Y),
-                           origin, null, new Rectangle((int)pos.X,
-                               (int)pos.Y, (int)blockWidth, (int)blockHeight), true, new Vector2(0, 0));
-                }
+                //if (mouseInSelectMode)
+                //{
+                    if (ani.getStateCount() == 1)
+                    {
+                        spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, rotation * (float)Math.PI / 180f, origin, SpriteEffects.None, 0f);
+                    }
+                    else
+                    {
+                        ani.drawCurrentState(spriteBatch, this, new Vector2((int)pos.X - blockWidth, (int)pos.Y),
+                               origin, null, new Rectangle((int)pos.X,
+                                   (int)pos.Y, (int)blockWidth, (int)blockHeight), true, new Vector2(0, 0));
+                    }
+                //}
                  
             }
         }

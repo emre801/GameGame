@@ -547,6 +547,10 @@ namespace ProtoDerp
                         e.Draw(gameTime, spriteBatch);
                     }
                 }
+                if (e is CreaterBlock)
+                {
+                    e.Draw(gameTime, spriteBatch);
+                }
             }
 
             endBatch();
