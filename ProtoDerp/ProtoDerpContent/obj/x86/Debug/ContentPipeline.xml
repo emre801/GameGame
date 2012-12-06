@@ -920,6 +920,15 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\magnet1.xnb</Output>
       <Time>2012-12-04T11:04:12.1339268-05:00</Time>
     </Item>
+    <Item>
+      <Source>BlueBackground.png</Source>
+      <Name>BlueBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\BlueBackground.xnb</Output>
+      <Time>2012-12-05T17:31:03.1633653-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

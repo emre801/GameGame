@@ -147,7 +147,13 @@ namespace ProtoDerp
                     disappearTimer--;
                     displayAlpha -= fadeOutRatio;
                 }
-            }          
+            }
+
+            if (drawLevel == 1)
+            {
+                if(game.moveBackGround.X!=0)
+                    body.Position += new Vector2(game.moveBackGround.X / 100000f, game.moveBackGround.Y / 300000f);
+            }
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)

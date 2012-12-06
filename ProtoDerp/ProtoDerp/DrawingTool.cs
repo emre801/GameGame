@@ -42,7 +42,7 @@ namespace ProtoDerp
         public float zoomRatio = 1.75f;
         public Texture2D rectangle;
 
-       
+        Vector2 startingCamPosition;
 
 
         public DrawingTool(Game game)
@@ -107,7 +107,7 @@ namespace ProtoDerp
                 w = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
                 zoomRatio = 1.12505f;
             }
-
+            startingCamPosition = cam.Pos;
 
             cam.Zoom = 0.75f;// *zoomRatio;
 
@@ -117,6 +117,8 @@ namespace ProtoDerp
         }
         public void resetCamera()
         {
+            
+            
             if (!Constants.FULLSCREEN)
             {
                 cam = new Camera2d(Constants.GAME_WORLD_WIDTH, Constants.GAME_WORLD_HEIGHT);
@@ -126,13 +128,15 @@ namespace ProtoDerp
             else
             {
                 cam = new Camera2d(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height);
-                if (game.gMode != 6)
+                //if (game.gMode != 6)
                     cam.Pos = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 0.5f, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.6f);
-                else
-                    cam.Pos = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 1, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.2f);
+               // else
+                   // cam.Pos = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 1, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.2f);
 
             }
-            cam.Zoom = 0.75f * zoomRatio;
+            //cam.Pos = startingCamPosition;
+            
+            cam.Zoom = 0.55f * zoomRatio;
         }
         private void initializeLetterBox()
         {
@@ -336,21 +340,38 @@ namespace ProtoDerp
             float height2 = heightRatio2 * cam.ViewportHeight;// *zoomRatio;
             //This allows the camera to follow the player
             PlayableCharacter p1 = game.Arena.player1;
-
+            game.moveBackGround = new Vector2(0, 0);
             if (!(game.Arena.maxLeft > p1.Position.X || game.Arena.maxRight < p1.Position.X))
             {
                 if (p1.Position.X + width > cam._pos.X + cam.ViewportWidth / 1)
+                {
                     cam.Move(new Vector2((p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1), 0));
+                    float moveAmount = (p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1) / 10000f;
+                    game.moveBackGround += new Vector2(moveAmount, 0);
+                }
                 if (p1.Position.X - width < cam._pos.X - cam.ViewportWidth / 1)
+                {
                     cam.Move(new Vector2((p1.Position.X - width) - (cam._pos.X - cam.ViewportWidth / 1), 0));
+                    float moveAmount = (p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1) / 10000f;
+                    game.moveBackGround -= new Vector2(moveAmount, 0);
+                }
             }
             if (!(game.Arena.maxTop > p1.Position.Y || game.Arena.maxButtom < p1.Position.Y))
             {
                 if (p1.Position.Y + height2 > cam._pos.Y + cam.ViewportHeight / 1)
+                {
                     cam.Move(new Vector2(0, (p1.Position.Y + height2) - (cam._pos.Y + cam.ViewportHeight / 1)));
+                    float moveAmount = (p1.Position.Y + height2) - (cam._pos.Y + cam.ViewportHeight / 1);
+                    game.moveBackGround -= new Vector2(0, moveAmount);
+                }
                 if (p1.Position.Y - height < cam._pos.Y - cam.ViewportHeight / 1)
+                {
                     cam.Move(new Vector2(0, (p1.Position.Y - height) - (cam._pos.Y - cam.ViewportHeight / 1)));
+                    float moveAmount=(p1.Position.Y - height) - (cam._pos.Y - cam.ViewportHeight / 1);
+                    game.moveBackGround += new Vector2(0, moveAmount);
+                }
             }
+
             //Player dies if they go out of the camera bounds
             if (p1.Position.X > cam.Pos.X + cam.ViewportWidth || p1.Position.X < cam.Pos.X - cam.ViewportWidth
                 || p1.Position.Y > cam.Pos.Y + cam.ViewportHeight || p1.Position.Y < cam.Pos.Y - cam.ViewportHeight)
@@ -422,6 +443,7 @@ namespace ProtoDerp
                     controlCamera();
                 else
                     followTitle();
+                
                 spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointClamp, null, null, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
             }
         }

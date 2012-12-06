@@ -99,6 +99,8 @@ namespace ProtoDerp
         public bool isPausePressed = false;
         public int isUpMenuSelect = 0;
 
+        public Vector2 moveBackGround= new Vector2(0,0);
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -108,7 +110,7 @@ namespace ProtoDerp
             ConvertUnits.SetDisplayUnitToSimUnitRatio(30);
             //graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-
+            IsFixedTimeStep = false;
             drawingTool = new DrawingTool(this);
             numDeath = 0;
             
@@ -201,6 +203,8 @@ namespace ProtoDerp
             sprites.Add("rage", new Sprite(Content, "rage"));
             sprites.Add("GreenHill", new Sprite(Content, "GreenHill"));
             blockList.AddLast("GreenHill");
+            sprites.Add("BlueBackground", new Sprite(Content, "BlueBackground"));
+            blockList.AddLast("BlueBackground");
             sprites.Add("magnet1", new Sprite(Content, "magnet1"));
             blockList.AddLast("magnet1");
             sprites.Add("GreenHill2", new Sprite(Content, "GreenHill2"));
@@ -528,7 +532,7 @@ namespace ProtoDerp
             {
                 Exit();
             }
-            if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Start))
+            if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Start) && !pause)
             {
                 if (gMode == 0)
                     restart = true;
@@ -540,6 +544,7 @@ namespace ProtoDerp
                 loadNewLevel = false;
                 cachedEntityLists.Clear();
                 newLevel();
+                drawingTool.resetCamera();
                 Arena.setUpDemensions(maxLeft, maxRight, maxTop, maxButtom);
             }
             if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Back) || isPausePressed)
@@ -574,6 +579,7 @@ namespace ProtoDerp
                 gMode = 6;
                 cachedEntityLists = new Dictionary<Type, object>();
                 Title = new TitleScreen(this);
+                Title.IsVisible = true;
                 addEntity(Title);
                 isInCreatorMode = false;
 

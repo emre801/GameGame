@@ -16,6 +16,7 @@
 -125 75 ground Block 64 256 2
 130 75 ground Block 64 256 2
 380 75 ground Block 64 256 2
+470 -350 BlueBackground Block 2660 2795 1 0
 630 75 ground Block 64 256 2
 885 75 ground Block 64 256 2
 970 75 ground Block 64 256 2

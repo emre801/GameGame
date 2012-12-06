@@ -45,6 +45,7 @@ namespace ProtoDerp
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            float zoom=game.drawingTool.cam.Zoom;
             keyInput.Update(gameTime);
             //spriteBatch.Draw(pix.index, new Rectangle(5,5,100,100), Color.White);
             if (game.pause)

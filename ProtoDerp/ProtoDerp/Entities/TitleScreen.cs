@@ -82,7 +82,7 @@ namespace ProtoDerp
             //battleOptions = new BattleOptions(g, this);
             //game.addEntity(battleOptions);
             //battleOptions.IsVisible = false;
-
+            game.drawingTool.resetCamera();
             keyInput = new KeyboardInput();
         }
 
@@ -91,7 +91,7 @@ namespace ProtoDerp
             keyInput.Update(gameTime);
             if (IsVisible)
             {
-                game.drawingTool.resetCamera();
+                //game.drawingTool.resetCamera();
 
 
                 life += gameTime.ElapsedGameTime.TotalMilliseconds;
