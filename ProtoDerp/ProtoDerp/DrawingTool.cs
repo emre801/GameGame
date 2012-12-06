@@ -66,6 +66,10 @@ namespace ProtoDerp
 
             gdm.IsFullScreen = Constants.FULLSCREEN;
         }
+        public GraphicsDevice getGraphicsDevice()
+        {
+            return gdm.GraphicsDevice;
+        }
 
         public void initialize()
         {

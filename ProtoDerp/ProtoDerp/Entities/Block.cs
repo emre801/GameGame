@@ -44,6 +44,9 @@ namespace ProtoDerp
         float fadeOutRatio=0;
         SpriteStripAnimationHandler ani;
         public float rotationAngle = 0;
+        Texture2D dynamicPattern;
+        float heightDiff = 0,widthDiff=0;
+        Random r = new Random();
         public Block(Game g, Arena a, Vector2 pos, int playerNum,String spriteNumber,float height, float width,int drawLevel, float rotation)
             : base(g)
         {
@@ -51,9 +54,9 @@ namespace ProtoDerp
             this.origPos = pos;
             this.drawPriority = Constants.PLAYER_DRAWPRI;
             this.spriteNumber = spriteNumber;
-            LoadContent();
             this.height = height;
             this.width = width;
+            LoadContent();
             this.drawLevel = drawLevel;
             this.rotationAngle = rotation;
             SetUpPhysics(Constants.player1SpawnLocation + pos);
@@ -124,9 +127,49 @@ namespace ProtoDerp
         {
             playerSprite = game.getSprite(spriteNumber);
             ani = game.getSpriteAnimation(spriteNumber);
+            Color[] cData = new Color[(int)(width * height)];
+            if (spriteNumber.Equals("bigBlock")&& width<4000 && height<4000)
+            {
+                dynamicPattern = game.getCachedDirt(new Rectangle(1,1,(int)width, (int)height));
+                
+                if (dynamicPattern == null)
+                {
+                    for (int x = 0; x < width; x++)
+                    {
+                        for (int y = 0; y < height; y++)
+                        {
+                            float br = r.Next(255/2)+(255*0.9f);
+                            if (r.Next(4) % 4 == 0)
+                            {
+                                if (x != width - 1 && y != height - 1)
+                                {
+                                    //Play with so that it looks like dirt :)
+                                    cData[(int)(x + y * width)] = new Color(89, 61, 41) * (br / 252f);
+                                    cData[(int)((x + 1) + y * width)] = new Color(89, 61, 41) * (br / 252f);
+                                    cData[(int)(x + (y + 1) * width)] = new Color(89, 61, 41) * (br / 252f);
+                                    cData[(int)((x + 1) + (y + 1) * width)] = new Color(89, 61, 41) * (br / 252f);
+                                }
+                            }
+                            else
+                            {
+                                cData[(int)(x + y * width)] = new Color(89, 61, 41);
+                            }
+                        }
+                    }
+                    this.dynamicPattern = new Texture2D(game.drawingTool.getGraphicsDevice(), (int)width, (int)height);
+                    dynamicPattern.SetData<Color>(cData);
+                    game.addCachedDirt(new Rectangle(1, 1, (int)width, (int)height), dynamicPattern);
+                }
+                heightDiff = playerSprite.index.Height - height;
+                widthDiff = playerSprite.index.Width - width;
+                //origin = new Vector2(width / 2, height / 2);
+            }
         }
         public override void Update(GameTime gameTime, float worldSpeed)
         {
+            //Texture2D test=sprite.index;
+            //test.SetData<Color>(Color[])
+
             ani.Update();
             if (disappearTimer == 0)
             {
@@ -169,7 +212,17 @@ namespace ProtoDerp
 
             if (ani.getStateCount() == 1)
             {
+
+                if(spriteNumber.Equals("bigBlock")&& width<4000 && height<4000)
+                {
+                    spriteBatch.Draw(dynamicPattern, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X+ConvertUnits.ToSimUnits(widthDiff/2f)),
+                        (int)ConvertUnits.ToDisplayUnits(body.Position.Y+ConvertUnits.ToSimUnits(heightDiff/2f)), (int)dynamicPattern.Width, (int)dynamicPattern.Height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
+                
+                }
+                else
+                {
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
+                }
             }
             else
             {

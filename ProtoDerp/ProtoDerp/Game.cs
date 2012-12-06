@@ -101,6 +101,8 @@ namespace ProtoDerp
 
         public Vector2 moveBackGround= new Vector2(0,0);
 
+        public Dictionary<Rectangle, Texture2D> cacheOfDirt = new Dictionary<Rectangle, Texture2D>();
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -696,6 +698,17 @@ namespace ProtoDerp
             numDeath++;
             deathAnimation = true;
             //restart = true;
+        }
+        public Texture2D getCachedDirt(Rectangle key)
+        {
+            Texture2D textCached = null;
+            cacheOfDirt.TryGetValue(key, out textCached);
+            return textCached;
+
+        }
+        public void addCachedDirt(Rectangle key, Texture2D value)
+        {
+            cacheOfDirt.Add(key, value);
         }
 
         // Caching entity lists so that we don't need to regenerate them every time.
