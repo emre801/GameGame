@@ -51,6 +51,7 @@ namespace ProtoDerp
             instance = this;
             gdm = new GraphicsDeviceManager(game);
             gdm.PreferMultiSampling = true;
+            gdm.ApplyChanges();
 
             if (Constants.FULLSCREEN && !Constants.OVERRIDE_FULLSCREEN_RES)
             {
@@ -346,12 +347,14 @@ namespace ProtoDerp
                 if (p1.Position.X + width > cam._pos.X + cam.ViewportWidth / 1)
                 {
                     cam.Move(new Vector2((p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1), 0));
+                    //cam.Move(new Vector2(10, 0));
                     float moveAmount = (p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1) / 10000f;
                     game.moveBackGround += new Vector2(moveAmount, 0);
                 }
                 if (p1.Position.X - width < cam._pos.X - cam.ViewportWidth / 1)
                 {
                     cam.Move(new Vector2((p1.Position.X - width) - (cam._pos.X - cam.ViewportWidth / 1), 0));
+                    //cam.Move(new Vector2(-, 0));
                     float moveAmount = (p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1) / 10000f;
                     game.moveBackGround -= new Vector2(moveAmount, 0);
                 }
@@ -395,6 +398,7 @@ namespace ProtoDerp
             float height = heightRatio * cam.ViewportHeight;// *zoomRatio;
             //This allows the camera to follow the player
             //PlayableCharacter p1 = game.Arena.player1;
+
             if (Position.X + width > cam._pos.X + cam.ViewportWidth / 1)
                 cam.Move(new Vector2((Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1), 0));
             if (Position.X - width < cam._pos.X - cam.ViewportWidth / 1)
@@ -425,7 +429,7 @@ namespace ProtoDerp
             if (game.gMode == 0)
             {
                 followPlayer();
-                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, null, null, null, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
+                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.AnisotropicClamp, null, null, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
 
                 /*spriteBatch.Begin(SpriteSortMode.Deferred,
                          BlendState.NonPremultiplied,
@@ -443,8 +447,8 @@ namespace ProtoDerp
                     controlCamera();
                 else
                     followTitle();
-                
-                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointClamp, null, null, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
+
+                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.AnisotropicClamp, null, null, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
             }
         }
         internal void drawEntities(SortedSet<Entity> entities, GameTime gameTime)
@@ -486,7 +490,7 @@ namespace ProtoDerp
 
             spriteBatch.Begin(SpriteSortMode.Deferred,
                          BlendState.NonPremultiplied,
-                         SamplerState.PointClamp,
+                         SamplerState.AnisotropicClamp,
                          null,
                          null,
                          null,
