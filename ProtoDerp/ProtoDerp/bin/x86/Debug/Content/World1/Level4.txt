@@ -27,12 +27,12 @@
 -1799 -849 CloudBack Block 70 1120 2 0
 1673 -613 CloudBack Block 70 1120 2 0
 2689 -849 CloudBack Block 70 1120 2 0
--128 54 ground Block 64 256 2 0
-122 54 ground Block 64 256 2 0
-371 57 ground Block 64 256 2 0
-619 59 ground Block 64 256 2 0
-877 57 ground Block 64 256 2 0
-1008 62 ground Block 64 256 2 0
+-128 67 ground Block 64 256 2 0
+122 67 ground Block 64 256 2 0
+371 67 ground Block 64 256 2 0
+619 68 ground Block 64 256 2 0
+874 68 ground Block 64 256 2 0
+970 68 ground Block 64 256 2 0
 1041 -113 deathSpikes DeathBlock 0
 933 -110 deathSpikes DeathBlock 0
 518 -326 deathSpikes DeathBlock 0

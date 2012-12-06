@@ -25,20 +25,20 @@
 905 59 ground Block 64 256 2 0
 882 59 ground Block 64 256 2 0
 971 59 ground Block 64 256 2 0
-222 -85 ground Block 34 256 2 0
-471 -85 ground Block 34 256 2 0
-725 -88 ground Block 34 256 2 0
+219 -85 ground Block 34 256 2 0
+470 -85 ground Block 34 256 2 0
+724 -85 ground Block 34 256 2 0
 979 -85 ground Block 34 256 2 0
 631 -297 ground Block 34 256 2 0
-391 -302 ground Block 34 256 2 0
-165 -302 ground Block 34 256 2 0
--85 -305 ground Block 34 256 2 0
--228 -305 ground Block 34 256 2 0
-222 -511 ground Block 34 256 2 0
-459 -508 ground Block 34 256 2 0
-705 -511 ground Block 34 256 2 0
-959 -511 ground Block 34 256 2 0
-1208 -508 ground Block 34 256 2 0
+381 -296 ground Block 34 256 2 0
+165 -296 ground Block 34 256 2 0
+-85 -296 ground Block 34 256 2 0
+-123 -296 ground Block 34 256 2 0
+220 -506 ground Block 34 256 2 0
+460 -506 ground Block 34 256 2 0
+705 -506 ground Block 34 256 2 0
+959 -506 ground Block 34 256 2 0
+971 -506 ground Block 34 256 2 0
 1035 -114 deathSpikes DeathBlock 0
 906 -113 deathSpikes DeathBlock 0
 685 -479 deathSpikes2 DeathBlock 0

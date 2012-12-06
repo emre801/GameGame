@@ -349,14 +349,14 @@ namespace ProtoDerp
                     cam.Move(new Vector2((p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1), 0));
                     //cam.Move(new Vector2(10, 0));
                     float moveAmount = (p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1) / 10000f;
-                    game.moveBackGround += new Vector2(moveAmount, 0);
+                    game.moveBackGround -= new Vector2(moveAmount, 0);
                 }
                 if (p1.Position.X - width < cam._pos.X - cam.ViewportWidth / 1)
                 {
                     cam.Move(new Vector2((p1.Position.X - width) - (cam._pos.X - cam.ViewportWidth / 1), 0));
                     //cam.Move(new Vector2(-, 0));
                     float moveAmount = (p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1) / 10000f;
-                    game.moveBackGround -= new Vector2(moveAmount, 0);
+                    game.moveBackGround += new Vector2(moveAmount, 0);
                 }
             }
             if (!(game.Arena.maxTop > p1.Position.Y || game.Arena.maxButtom < p1.Position.Y))

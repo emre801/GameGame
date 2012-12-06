@@ -452,6 +452,7 @@ namespace ProtoDerp
                 shiftPosition = new Vector2(8, 0);
                 isOnWall = true;
                 jumpDirection = isWallOnRight;// faceRight;
+                faceRight = jumpDirection;
                 isFirstAni = true;
             }
 
