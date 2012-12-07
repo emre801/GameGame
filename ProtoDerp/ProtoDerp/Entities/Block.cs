@@ -46,7 +46,7 @@ namespace ProtoDerp
         public float rotationAngle = 0;
         Texture2D dynamicPattern;
         float heightDiff = 0,widthDiff=0;
-        Random r = new Random();
+        Random r = new Random(801);
         public Block(Game g, Arena a, Vector2 pos, int playerNum,String spriteNumber,float height, float width,int drawLevel, float rotation)
             : base(g)
         {
@@ -138,22 +138,30 @@ namespace ProtoDerp
                     {
                         for (int y = 0; y < height; y++)
                         {
+                            cData[(int)(x + y * width)] = new Color(89, 61, 41);
+                        }
+                    }
+
+
+                    for (int x = 0; x < width; x=x+2)
+                    {
+                        for (int y = 0; y < height; y=y+2)
+                        {
                             float br = r.Next(255/2)+(255*0.9f);
-                            if (r.Next(4) % 4 == 0)
-                            {
-                                if (x != width - 1 && y != height - 1)
-                                {
+                            
+                                
                                     //Play with so that it looks like dirt :)
-                                    cData[(int)(x + y * width)] = new Color(89, 61, 41) * (br / 252f);
-                                    cData[(int)((x + 1) + y * width)] = new Color(89, 61, 41) * (br / 252f);
-                                    cData[(int)(x + (y + 1) * width)] = new Color(89, 61, 41) * (br / 252f);
-                                    cData[(int)((x + 1) + (y + 1) * width)] = new Color(89, 61, 41) * (br / 252f);
-                                }
+                            if (r.Next(100)<75 )
+                            {
+                                if(x!=0)
+                                cData[(int)(x + y * width)] = cData[(int)(x-1 + y * width)]; 
                             }
                             else
                             {
-                                cData[(int)(x + y * width)] = new Color(89, 61, 41);
+                                cData = drawPixel(2, x, y, cData, new Color(89, 61, 41) * (br / 252f));
                             }
+                                
+                            
                         }
                     }
                     this.dynamicPattern = new Texture2D(game.drawingTool.getGraphicsDevice(), (int)width, (int)height);
@@ -164,6 +172,25 @@ namespace ProtoDerp
                 widthDiff = playerSprite.index.Width - width;
                 //origin = new Vector2(width / 2, height / 2);
             }
+        }
+
+        public Color[] drawPixel(int point, int x, int y, Color[] cData, Color color)
+        {
+            for (int x1 = x-point; x1 < point+x; x1++)
+            {
+                for (int y1 = y-point; y1 < point+y; y1++)
+                {
+                    if (x1 > 0 && x1 < width - 1 && y1 > 0 && y1 < height - 1)
+                    {
+                        cData[(int)(x1 + y1 * width)] = color;
+                    }
+                }
+
+            }
+
+            return cData;
+
+
         }
         public override void Update(GameTime gameTime, float worldSpeed)
         {
