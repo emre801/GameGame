@@ -1,9 +1,6 @@
 423 158 bigBlock Block 200 1750 0 0
 1198 -346 bigBlock Block 1200 200 0 0
 -351 -346 bigBlock Block 1200 200 0 0
-345 45 cannon Block 35 57 2 0
-560 45 cannon Block 35 57 2 0
-775 45 cannon Block 35 57 2 0
 595 -83 bigBlock Block 15 1005 0 0
 250 -298 bigBlock Block 15 1005 0 0
 596 -508 bigBlock Block 15 1005 0 0
@@ -27,12 +24,24 @@
 -1799 -849 CloudBack Block 70 1120 2 0
 1673 -613 CloudBack Block 70 1120 2 0
 2689 -849 CloudBack Block 70 1120 2 0
--128 67 ground Block 64 256 2 0
-122 67 ground Block 64 256 2 0
-371 67 ground Block 64 256 2 0
-619 68 ground Block 64 256 2 0
-874 68 ground Block 64 256 2 0
-970 68 ground Block 64 256 2 0
+469 -91 grassTemplate Block 20 256 2 0
+723 -91 grassTemplate Block 20 256 2 0
+970 -91 grassTemplate Block 20 256 2 0
+624 -302 grassTemplate Block 20 256 2 0
+370 -302 grassTemplate Block 20 256 2 0
+118 -302 grassTemplate Block 20 256 2 0
+-124 -302 grassTemplate Block 20 256 2 0
+222 -513 grassTemplate Block 20 256 2 0
+475 -513 grassTemplate Block 20 256 2 0
+729 -513 grassTemplate Block 20 256 2 0
+971 -513 grassTemplate Block 20 256 2 0
+-123 61 grassTemplate Block 35 256 2 0
+134 61 grassTemplate Block 35 256 2 0
+388 61 grassTemplate Block 35 256 2 0
+643 61 grassTemplate Block 35 256 2 0
+898 61 grassTemplate Block 35 256 2 0
+971 61 grassTemplate Block 35 256 2 0
+221 -90 grassTemplate Block 20 256 2 0
 1041 -113 deathSpikes DeathBlock 0
 933 -110 deathSpikes DeathBlock 0
 518 -326 deathSpikes DeathBlock 0

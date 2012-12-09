@@ -1,47 +1,46 @@
-355 155 bigBlock Block 200 1000 0
-955 -790 bigBlock Block 2085 240 0
-655 -1155 bigBlock Block 2085 30 0
--231 -113 bigBlock Block 735 205 0
-1191 -1295 bigBlock Block 3090 255 0
--934 -250 GreenHill Block 1550 1800 1
-860 -256 GreenHill Block 1550 1800 1
-2655 -250 GreenHill Block 1550 1800 1
--2701 -250 GreenHill Block 1550 1800 1
-3865 -2890 GreenHill Block 1550 1800 1
-496 586 bigBlock Block 770 5760 1
--150 -910 CloudBack Block 70 1120 2
--1040 -1240 CloudBack Block 70 1120 2
-20 -1680 CloudBack Block 70 1120 2
--960 -1940 CloudBack Block 70 1120 2
-360 -2360 CloudBack Block 70 1120 2
-2120 -1000 CloudBack Block 70 1120 2
-2010 -1660 CloudBack Block 70 1120 2
-2270 -2200 CloudBack Block 70 1120 2
-622 -180 deathSpikes3 DeathBlock
-625 -302 deathSpikes3 DeathBlock
-622 -420 deathSpikes3 DeathBlock
-622 -545 deathSpikes3 DeathBlock
-619 -665 deathSpikes3 DeathBlock
-619 -777 deathSpikes3 DeathBlock
-622 -897 deathSpikes3 DeathBlock
-619 -1017 deathSpikes3 DeathBlock
-622 -1140 deathSpikes3 DeathBlock
-628 -1200 deathSpikes3 DeathBlock
-625 -1314 deathSpikes3 DeathBlock
-625 -1437 deathSpikes3 DeathBlock
-622 -1556 deathSpikes3 DeathBlock
-619 -1681 deathSpikes3 DeathBlock
-620 -1810 deathSpikes3 DeathBlock
-623 -1936 deathSpikes3 DeathBlock
-623 -2063 deathSpikes3 DeathBlock
-626 -2132 deathSpikes3 DeathBlock
--108 -418 deathSpikes4 DeathBlock
--112 -298 deathSpikes4 DeathBlock
-1042 -2210 deathSpikes3 DeathBlock
-1048 -2088 deathSpikes3 DeathBlock
-1044 -2331 deathSpikes3 DeathBlock
-1044 -2456 deathSpikes3 DeathBlock
-1044 -2575 deathSpikes3 DeathBlock
-476 566 bigBlock DeathBlock
+355 155 bigBlock Block 200 1000 0 0
+955 -790 bigBlock Block 2085 240 0 0
+655 -1155 bigBlock Block 2085 30 0 0
+-231 -113 bigBlock Block 735 205 0 0
+1191 -1295 bigBlock Block 3090 255 0 0
+-934 -250 GreenHill Block 1550 1800 1 0
+860 -256 GreenHill Block 1550 1800 1 0
+2655 -250 GreenHill Block 1550 1800 1 0
+-2701 -250 GreenHill Block 1550 1800 1 0
+3865 -2890 GreenHill Block 1550 1800 1 0
+496 586 bigBlock Block 770 5760 1 0
+-150 -910 CloudBack Block 70 1120 2 0
+-1040 -1240 CloudBack Block 70 1120 2 0
+20 -1680 CloudBack Block 70 1120 2 0
+-960 -1940 CloudBack Block 70 1120 2 0
+360 -2360 CloudBack Block 70 1120 2 0
+2120 -1000 CloudBack Block 70 1120 2 0
+2010 -1660 CloudBack Block 70 1120 2 0
+2270 -2200 CloudBack Block 70 1120 2 0
+622 -180 deathSpikes3 DeathBlock 0
+625 -302 deathSpikes3 DeathBlock 0
+622 -420 deathSpikes3 DeathBlock 0
+622 -545 deathSpikes3 DeathBlock 0
+619 -665 deathSpikes3 DeathBlock 0
+619 -777 deathSpikes3 DeathBlock 0
+622 -897 deathSpikes3 DeathBlock 0
+619 -1017 deathSpikes3 DeathBlock 0
+622 -1140 deathSpikes3 DeathBlock 0
+628 -1200 deathSpikes3 DeathBlock 0
+625 -1314 deathSpikes3 DeathBlock 0
+625 -1437 deathSpikes3 DeathBlock 0
+622 -1556 deathSpikes3 DeathBlock 0
+619 -1681 deathSpikes3 DeathBlock 0
+620 -1810 deathSpikes3 DeathBlock 0
+623 -1936 deathSpikes3 DeathBlock 0
+623 -2063 deathSpikes3 DeathBlock 0
+626 -2132 deathSpikes3 DeathBlock 0
+-108 -418 deathSpikes4 DeathBlock 0
+-112 -298 deathSpikes4 DeathBlock 0
+1042 -2210 deathSpikes3 DeathBlock 0
+1048 -2088 deathSpikes3 DeathBlock 0
+1044 -2331 deathSpikes3 DeathBlock 0
+1044 -2456 deathSpikes3 DeathBlock 0
+1044 -2575 deathSpikes3 DeathBlock 0
 950 -1900 ahLogo0 GoalBlock 10
 Demi -100 1088 -1770 578

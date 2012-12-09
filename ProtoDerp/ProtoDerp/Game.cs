@@ -204,21 +204,15 @@ namespace ProtoDerp
             sprites.Add("black", new Sprite(Content,"black"));
             sprites.Add("rage", new Sprite(Content, "rage"));
             sprites.Add("dirtBlock", new Sprite(Content, "dirtBlock"));
-            blockList.AddLast("dirtBlock");
-            sprites.Add("dirtBlockLong", new Sprite(Content, "dirtBlockLong"));
-            blockList.AddLast("dirtBlockLong");
-            sprites.Add("dirtBlockHigh", new Sprite(Content, "dirtBlockHigh"));
-            blockList.AddLast("dirtBlockHigh");
+            
+            sprites.Add("grassTemplate", new Sprite(Content, "grassTemplate"));
+            blockList.AddLast("grassTemplate");
             sprites.Add("GreenHill", new Sprite(Content, "GreenHill"));
             blockList.AddLast("GreenHill");
             sprites.Add("BlueBackground", new Sprite(Content, "BlueBackground"));
             blockList.AddLast("BlueBackground");
             sprites.Add("magnet1", new Sprite(Content, "magnet1"));
             blockList.AddLast("magnet1");
-            sprites.Add("patternWood", new Sprite(Content, "patternWood"));
-            blockList.AddLast("patternWood");
-            sprites.Add("patternWood1", new Sprite(Content, "patternWood1"));
-            blockList.AddLast("patternWood1");
             sprites.Add("GreenHill2", new Sprite(Content, "GreenHill2"));
             blockList.AddLast("GreenHill2");
             sprites.Add("CloudBack", new Sprite(Content, "CloudBack"));
@@ -237,40 +231,22 @@ namespace ProtoDerp
             blockList.AddLast("ground");
             sprites.Add("groundTemplate", new Sprite(Content, "groundTemplate"));
             blockList.AddLast("groundTemplate");
-            sprites.Add("grass1", new Sprite(Content, "grass1"));
-            blockList.AddLast("grass1");
-            sprites.Add("grass2", new Sprite(Content, "grass3"));
-            blockList.AddLast("grass2");
-            sprites.Add("grass3", new Sprite(Content, "grass3"));
-            blockList.AddLast("grass3");
             sprites.Add("outPut", new Sprite(Content, "outPut"));
             blockList.AddLast("outPut");
             sprites.Add("pixelWood", new Sprite(Content, "pixelWood"));
             blockList.AddLast("pixelWood");
-            sprites.Add("block1-1", new Sprite(Content, "block1-1"));
-            blockList.AddLast("block1-1");
-            sprites.Add("block1-2", new Sprite(Content, "block1-2"));
-            blockList.AddLast("block1-2");
-            sprites.Add("block1-3", new Sprite(Content, "block1-3"));
-            blockList.AddLast("block1-3");
-            sprites.Add("block1-4", new Sprite(Content, "block1-4"));
-            blockList.AddLast("block1-4");
-            sprites.Add("pixelGrass", new Sprite(Content, "pixelGrass"));
-            blockList.AddLast("pixelGrass");
             sprites.Add("deathSpikes", new Sprite(Content, "deathSpikes"));
             blockList.AddLast("deathSpikes");
+
             sprites.Add("deathSpikes2", new Sprite(Content, "deathSpikes2"));
             blockList.AddLast("deathSpikes2");
+
             sprites.Add("deathSpikes3", new Sprite(Content, "deathSpikes3"));
             blockList.AddLast("deathSpikes3");
+
             sprites.Add("deathSpikes4", new Sprite(Content, "deathSpikes4"));
             blockList.AddLast("deathSpikes4");
-            sprites.Add("cannon", new Sprite(Content, "cannon"));
-            blockList.AddLast("cannon");
-            sprites.Add("mountain", new Sprite(Content, "mountain"));
-            blockList.AddLast("mountain");
-            sprites.Add("bullet.0", new Sprite(Content, "bullet.0"));
-            blockList.AddLast("bullet.0");
+           
             sprites.Add("RageQuit", new Sprite(Content, "RageQuit"));
             sprites.Add("Space", new Sprite(Content, "Space"));
             sprites.Add("SpaceAir", new Sprite(Content, "SpaceAir"));

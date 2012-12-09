@@ -44,6 +44,7 @@ namespace ProtoDerp
         float fadeOutRatio=0;
         SpriteStripAnimationHandler ani;
         public float rotationAngle = 0;
+        public float grassPosition = 0;
         Texture2D dynamicPattern;
         float heightDiff = 0,widthDiff=0;
         Random r = new Random(801);
@@ -127,43 +128,86 @@ namespace ProtoDerp
         {
             playerSprite = game.getSprite(spriteNumber);
             ani = game.getSpriteAnimation(spriteNumber);
-            Color[] cData = new Color[(int)(width * height)];
+
+            
             if (spriteNumber.Equals("bigBlock")&& width<4000 && height<4000)
             {
+                Color[] cData = new Color[(int)(width * height)];
                 dynamicPattern = game.getCachedDirt(new Rectangle(1,1,(int)width, (int)height));
                 
                 if (dynamicPattern == null)
                 {
+
+                    
+                    Color[] template=new Color[256*28];
+                    
+                    game.getSprite("groundTemplate").index.GetData<Color>(template);
+                    int counter = 0;
+                    int maxCounter = template.Length;
                     for (int x = 0; x < width; x++)
                     {
                         for (int y = 0; y < height; y++)
                         {
-                            cData[(int)(x + y * width)] = new Color(89, 61, 41);
+                            int xMod = x % 256;
+                            int yMod = y % 28;
+                            cData[(int)(x + y * width)] = template[xMod+yMod*256];
+                            counter++;
+                            if (counter == maxCounter)
+                                counter = 0;//new Color(121, 98, 45);
                         }
                     }
+                     
 
-
-                    for (int x = 0; x < width; x=x+2)
+                    Color dirtColor = new Color(147, 121, 47);
+                    Color dirtColor2 = new Color(105, 87, 46);
+                    Color dirtColor3 = new Color(150, 123, 48);
+                    /*
+                    for (int x = (int)width-1; x >= 0; x-=2)
                     {
-                        for (int y = 0; y < height; y=y+2)
+                        for (int y = (int)height-1; y >= 0; y-=2)
                         {
                             float br = r.Next(255/2)+(255*0.9f);
                             
                                 
                                     //Play with so that it looks like dirt :)
-                            if (r.Next(100)<75 )
+                            if (grassPosition == 0)
                             {
-                                if(x!=0)
-                                cData[(int)(x + y * width)] = cData[(int)(x-1 + y * width)]; 
+                                if (width - 30 < x)
+                                {
+
+                                    //cData[(int)(x + y * width)] = new Color(39, 152, 65); ;
+                                    //continue;
+                                }
                             }
-                            else
+
+
+                            if (r.Next(100) < 6)
                             {
-                                cData = drawPixel(2, x, y, cData, new Color(89, 61, 41) * (br / 252f));
+                                Color tempColor = dirtColor;
+                                if (r.Next(3) % 2 == 0)
+                                {
+                                    if (r.Next(5) < 3)
+                                        tempColor = dirtColor2;
+                                    else
+                                        tempColor = dirtColor3;
+                                }
+                                
+                                cData = drawPixel(2, x, y, cData, tempColor);
+                                int number = r.Next(5, 12);
+                                int downNum = (int)(number * 0.5f);
+                                //for (int i = 0; i < number; i++)
+                               // {
+                                    cData = drawPixel(8, x , y, cData, tempColor);
+                                    //if(i>=downNum)
+                                       // cData = drawPixelDown(2, x + i, y, cData, tempColor);
+                                //}
                             }
+
                                 
                             
                         }
                     }
+                     * */
                     this.dynamicPattern = new Texture2D(game.drawingTool.getGraphicsDevice(), (int)width, (int)height);
                     dynamicPattern.SetData<Color>(cData);
                     game.addCachedDirt(new Rectangle(1, 1, (int)width, (int)height), dynamicPattern);
@@ -172,25 +216,41 @@ namespace ProtoDerp
                 widthDiff = playerSprite.index.Width - width;
                 //origin = new Vector2(width / 2, height / 2);
             }
+                 
         }
 
         public Color[] drawPixel(int point, int x, int y, Color[] cData, Color color)
         {
             for (int x1 = x-point; x1 < point+x; x1++)
             {
-                for (int y1 = y-point; y1 < point+y; y1++)
+                for (int y1 = y-point; y1 < y+point; y1++)
                 {
                     if (x1 > 0 && x1 < width - 1 && y1 > 0 && y1 < height - 1)
                     {
-                        cData[(int)(x1 + y1 * width)] = color;
+                        cData[(int)(x1 + y * width)] = color;
                     }
                 }
 
             }
 
             return cData;
+        }
+        public Color[] drawPixelDown(int point, int x, int y, Color[] cData, Color color)
+        {
+            //for (int x1 = x - point; x1 < point + x; x1++)
+            //{
+                for (int y1 = y
+                    ; y1 < point + y; y1++)
+                {
+                    if ( y1 > 0 && y1 < height - 1)
+                    {
+                        cData[(int)(x + y1 * width)] = color;
+                    }
+                }
 
+            //}
 
+            return cData;
         }
         public override void Update(GameTime gameTime, float worldSpeed)
         {
@@ -239,7 +299,7 @@ namespace ProtoDerp
 
             if (ani.getStateCount() == 1)
             {
-
+                
                 if(spriteNumber.Equals("bigBlock")&& width<4000 && height<4000)
                 {
                     spriteBatch.Draw(dynamicPattern, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X+ConvertUnits.ToSimUnits(widthDiff/2f)),
@@ -248,6 +308,7 @@ namespace ProtoDerp
                 }
                 else
                 {
+                 
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
                 }
             }

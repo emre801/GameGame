@@ -352,15 +352,21 @@ namespace ProtoDerp
                 {
                     cam.Move(new Vector2((p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1), 0));
                     //cam.Move(new Vector2(10, 0));
-                    float moveAmount = (p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1) / 10000f;
-                    game.moveBackGround -= new Vector2(moveAmount, 0);
+                    if (Math.Abs(game.Arena.player1.body.LinearVelocity.X) > 0.1f)
+                    {
+                        float moveAmount = (p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1) / 10000f;
+                        game.moveBackGround -= new Vector2(moveAmount, 0);
+                    }
                 }
                 if (p1.Position.X - width < cam._pos.X - cam.ViewportWidth / 1)
                 {
                     cam.Move(new Vector2((p1.Position.X - width) - (cam._pos.X - cam.ViewportWidth / 1), 0));
                     //cam.Move(new Vector2(-, 0));
-                    float moveAmount = (p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1) / 10000f;
-                    game.moveBackGround += new Vector2(moveAmount, 0);
+                    if (Math.Abs(game.Arena.player1.body.LinearVelocity.X) > 0.1f)
+                    {
+                        float moveAmount = (p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1) / 10000f;
+                        game.moveBackGround += new Vector2(moveAmount, 0);
+                    }
                 }
             }
             if (!(game.Arena.maxTop > p1.Position.Y || game.Arena.maxButtom < p1.Position.Y))
@@ -368,14 +374,20 @@ namespace ProtoDerp
                 if (p1.Position.Y + height2 > cam._pos.Y + cam.ViewportHeight / 1)
                 {
                     cam.Move(new Vector2(0, (p1.Position.Y + height2) - (cam._pos.Y + cam.ViewportHeight / 1)));
-                    float moveAmount = (p1.Position.Y + height2) - (cam._pos.Y + cam.ViewportHeight / 1);
-                    game.moveBackGround -= new Vector2(0, moveAmount);
+                    if (Math.Abs(game.Arena.player1.body.LinearVelocity.Y) > 0.1f)
+                    {
+                        float moveAmount = (p1.Position.Y + height2) - (cam._pos.Y + cam.ViewportHeight / 1);
+                        game.moveBackGround -= new Vector2(0, moveAmount);
+                    }
                 }
                 if (p1.Position.Y - height < cam._pos.Y - cam.ViewportHeight / 1)
                 {
                     cam.Move(new Vector2(0, (p1.Position.Y - height) - (cam._pos.Y - cam.ViewportHeight / 1)));
-                    float moveAmount=(p1.Position.Y - height) - (cam._pos.Y - cam.ViewportHeight / 1);
-                    game.moveBackGround += new Vector2(0, moveAmount);
+                    if (Math.Abs(game.Arena.player1.body.LinearVelocity.Y) > 0.1f)
+                    {
+                        float moveAmount = (p1.Position.Y - height) - (cam._pos.Y - cam.ViewportHeight / 1);
+                        game.moveBackGround += new Vector2(0, moveAmount);
+                    }
                 }
             }
 
@@ -548,7 +560,8 @@ namespace ProtoDerp
                     Block b = (Block)e;
                     if (b.drawLevel == 2 || b.drawLevel == 0)
                     {
-                        e.Draw(gameTime, spriteBatch);
+                        if(b.IsVisible)
+                            e.Draw(gameTime, spriteBatch);
                     }
                 }
                 if (e is CreaterBlock)

@@ -974,6 +974,15 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\dirtBlockLong.xnb</Output>
       <Time>2012-12-06T11:28:55.0227179-05:00</Time>
     </Item>
+    <Item>
+      <Source>grassTemplate.png</Source>
+      <Name>grassTemplate</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\grassTemplate.xnb</Output>
+      <Time>2012-12-07T10:20:24.4312135-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
