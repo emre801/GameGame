@@ -14,6 +14,7 @@ using FarseerPhysics.Common;
 using FarseerPhysics.Controllers;
 using FarseerPhysics.Dynamics;
 using FarseerPhysics.Factories;
+using System.IO;
 
 namespace ProtoDerp
 {
@@ -194,6 +195,9 @@ namespace ProtoDerp
             drawingTool.initialize();
             playerOneInput = new XboxInput(PlayerIndex.One);
 
+            //Load uploaded sprites
+            loadImageFromContent();
+
             //Load Sprites            
             sprites.Add("fire0", new Sprite(Content, "fire0"));
             sprites.Add("fire1", new Sprite(Content, "fire1"));
@@ -251,7 +255,9 @@ namespace ProtoDerp
             sprites.Add("Space", new Sprite(Content, "Space"));
             sprites.Add("SpaceAir", new Sprite(Content, "SpaceAir"));
             sprites.Add("SpaceDERP", new Sprite(Content, "SpaceDERP"));
-            sprites.Add("arena", new Sprite(Content, "arena"));            
+            
+            sprites.Add("arena", new Sprite(Content, "arena")); 
+            
             sprites.Add("titleScreenElement.0", new Sprite(Content, "titleScreenElement.0")); //Logo Text
             sprites.Add("titleScreenElement.1", new Sprite(Content, "titleScreenElement.1")); //Logo Gear
             sprites.Add("titleScreenElement.2", new Sprite(Content, "titleScreenElement.2", new Vector2(547, 0))); //Selection Inside
@@ -259,7 +265,7 @@ namespace ProtoDerp
             sprites.Add("titleScreenElement.4", new Sprite(Content, "titleScreenElement.4", new Vector2(335, 0))); //Selection Text
             sprites.Add("titleScreenElement.5", new Sprite(Content, "titleScreenElement.5", new Vector2(75, 70))); //Long Clock Hand
             sprites.Add("titleScreenElement.6", new Sprite(Content, "titleScreenElement.6", new Vector2(40, 70))); //Short Clock Hand
-
+            
             sprites.Add("pix", new Sprite(Content, "pix"));
             sprites.Add("Circle", new Sprite(Content, "Circle"));
             sprites.Add("LeverSelect", new Sprite(Content, "LeverSelect"));
@@ -712,6 +718,79 @@ namespace ProtoDerp
                 ret = (LinkedList<T>)cachedList;
             }
             return ret;
+        }
+
+        public void loadImageFromContent()
+        {
+
+
+            
+            DirectoryInfo derp = new DirectoryInfo(Content.RootDirectory);
+            String uploadDirect = derp.FullName;
+            int location = uploadDirect.IndexOf("bin")-10;
+            uploadDirect = uploadDirect.Substring(0, location);
+
+            DirectoryInfo di = new DirectoryInfo(uploadDirect + "ProtoDerpContent\\UploadedImages");
+            FileInfo[] fi = di.GetFiles("*", SearchOption.AllDirectories);
+            GraphicsDevice gd = drawingTool.getGraphicsDevice();
+
+            foreach (FileInfo fileInfo in fi)
+            {
+                Texture2D file;
+                RenderTarget2D result;
+
+                String nameOfFile = fileInfo.FullName;
+                using (FileStream sourceStream = new FileStream(nameOfFile,FileMode.Open))
+                   
+                {
+                    file = Texture2D.FromStream(gd, sourceStream);
+                }
+                //Setup a render target to hold our final texture which will have premulitplied alpha values
+                result = new RenderTarget2D(gd, file.Width, file.Height);
+
+                gd.SetRenderTarget(result);
+                gd.Clear(Color.Black);
+
+                //Multiply each color by the source alpha, and write in just the color values into the final texture
+                var blendColor = new BlendState
+                {
+                    ColorWriteChannels = ColorWriteChannels.Red | ColorWriteChannels.Green | ColorWriteChannels.Blue,
+                    AlphaDestinationBlend = Blend.Zero,
+                    ColorDestinationBlend = Blend.Zero,
+                    AlphaSourceBlend = Blend.SourceAlpha,
+                    ColorSourceBlend = Blend.SourceAlpha
+                };
+
+                var spriteBatch = new SpriteBatch(gd);
+                spriteBatch.Begin(SpriteSortMode.Immediate, blendColor);
+                spriteBatch.Draw(file, file.Bounds, Color.White);
+                spriteBatch.End();
+
+                //Now copy over the alpha values from the PNG source texture to the final one, without multiplying them
+                var blendAlpha = new BlendState
+                {
+                    ColorWriteChannels = ColorWriteChannels.Alpha,
+                    AlphaDestinationBlend = Blend.Zero,
+                    ColorDestinationBlend = Blend.Zero,
+                    AlphaSourceBlend = Blend.One,
+                    ColorSourceBlend = Blend.One
+                };
+
+                spriteBatch.Begin(SpriteSortMode.Immediate, blendAlpha);
+                spriteBatch.Draw(file, file.Bounds, Color.White);
+                spriteBatch.End();
+
+                //Release the GPU back to drawing to the screen
+                gd.SetRenderTarget(null);
+
+                Texture2D finalFile = result as Texture2D;
+
+                sprites.Add(fileInfo.Name, new Sprite(finalFile, fileInfo.Name));
+                blockList.AddLast(fileInfo.Name);
+
+            }
+
+
         }
     }
 }

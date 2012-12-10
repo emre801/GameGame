@@ -5,14 +5,6 @@
 430 350 bigBlock Block 220 1765 2 0
 -545 -190 bigBlock Block 1510 200 2 0
 1380 -190 bigBlock Block 1510 200 2 0
-1225 -531 GreenHill2 Block 981 821 1 0
--364 -508 GreenHill2 Block 981 821 1 0
--1313 -607 GreenHill2 Block 981 821 1 0
-2317 -475 GreenHill2 Block 981 821 1 0
-3139 -570 GreenHill2 Block 981 821 1 0
-434 -325 GreenHill Block 1550 1800 1 0
--1297 -371 GreenHill Block 1550 1800 1 0
-2122 -317 GreenHill Block 1550 1800 1 0
 -997 285 bigBlock Block 560 1120 1 0
 1697 305 bigBlock Block 560 1120 1 0
 2817 305 bigBlock Block 560 1120 1 0
@@ -47,11 +39,15 @@
 -515 -939 grassTemplate Block 35 256 2 360
 1225 -939 grassTemplate Block 35 256 2 360
 1358 -939 grassTemplate Block 35 256 2 360
-762 -937 CloudBack Block 70 1120 2 0
--348 -1005 CloudBack Block 70 1120 2 0
--980 -817 CloudBack Block 70 1120 2 0
-1914 -754 CloudBack Block 70 1120 2 0
+762 -658 CloudBack Block 70 1120 2 0
+-348 -736 CloudBack Block 70 1120 2 0
+-980 -581 CloudBack Block 70 1120 2 0
+1800 -468 CloudBack Block 70 1120 2 0
 2337 -982 CloudBack Block 70 1120 2 0
+98 -124 GreenHill Block 525 690 1 0
+783 -124 GreenHill Block 525 690 1 0
+-844 -112 GreenHill Block 525 690 1 0
+1793 -155 GreenHill Block 525 690 1 0
 -228 -882 deathSpikes4 DeathBlock 0
 -228 -777 deathSpikes4 DeathBlock 0
 -228 -657 deathSpikes4 DeathBlock 0

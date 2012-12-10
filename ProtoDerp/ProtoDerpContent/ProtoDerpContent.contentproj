@@ -147,7 +147,9 @@
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UploadedImages\" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="block1-2.png">
       <Name>block1-2</Name>

@@ -129,7 +129,7 @@ namespace ProtoDerp
             playerSprite = game.getSprite(spriteNumber);
             ani = game.getSpriteAnimation(spriteNumber);
 
-            
+            /*
             if (spriteNumber.Equals("bigBlock")&& width<4000 && height<4000)
             {
                 Color[] cData = new Color[(int)(width * height)];
@@ -207,7 +207,7 @@ namespace ProtoDerp
                             
                         }
                     }
-                     * */
+                     
                     this.dynamicPattern = new Texture2D(game.drawingTool.getGraphicsDevice(), (int)width, (int)height);
                     dynamicPattern.SetData<Color>(cData);
                     game.addCachedDirt(new Rectangle(1, 1, (int)width, (int)height), dynamicPattern);
@@ -215,7 +215,7 @@ namespace ProtoDerp
                 heightDiff = playerSprite.index.Height - height;
                 widthDiff = playerSprite.index.Width - width;
                 //origin = new Vector2(width / 2, height / 2);
-            }
+            }*/
                  
         }
 
@@ -299,7 +299,7 @@ namespace ProtoDerp
 
             if (ani.getStateCount() == 1)
             {
-                
+                /*
                 if(spriteNumber.Equals("bigBlock")&& width<4000 && height<4000)
                 {
                     spriteBatch.Draw(dynamicPattern, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X+ConvertUnits.ToSimUnits(widthDiff/2f)),
@@ -307,10 +307,10 @@ namespace ProtoDerp
                 
                 }
                 else
-                {
+                {*/
                  
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
-                }
+                //}
             }
             else
             {
