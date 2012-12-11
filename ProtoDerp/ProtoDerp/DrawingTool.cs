@@ -579,6 +579,12 @@ namespace ProtoDerp
             {
                 spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
                 game.Arena.gui.Draw(gameTime, spriteBatch);
+
+                foreach (Entity e in entities)
+                {
+                    if(e is Button)
+                        e.Draw(gameTime, spriteBatch);
+                }
                 spriteBatch.End();
             }
 

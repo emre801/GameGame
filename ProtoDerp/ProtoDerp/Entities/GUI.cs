@@ -24,6 +24,8 @@ namespace ProtoDerp
         float pauseSelection = 0.475f;
 
         KeyboardInput keyInput;
+
+        public Button[] buttons;
         public GUI(Game g)
             : base(g)
         {
@@ -35,6 +37,7 @@ namespace ProtoDerp
             gameOverGUI = game.getSprite("gameOver");
             this.updatesWhenPaused = true;
             keyInput = new KeyboardInput();
+
         }
 
         public override void Update(GameTime gameTime, float worldSpeed)

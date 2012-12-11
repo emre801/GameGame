@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
-  <asmv1:assemblyIdentity name="ProtoDerp.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity name="ProtoDerp.exe" version="1.0.0.10" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <description asmv2:iconFile="Game.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -94,25 +94,25 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FarseerPhysicsXNA.dll" size="307712">
-      <assemblyIdentity name="FarseerPhysicsXNA" version="3.2.4657.31141" language="neutral" processorArchitecture="x86" />
+      <assemblyIdentity name="FarseerPhysicsXNA" version="3.2.4727.25257" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ZgcvOWJmdbmt4bofH9bg6e2PLDc=</dsig:DigestValue>
+        <dsig:DigestValue>rdg5xlca3WvY/GHUf5JSNxhg7VU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="101888">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="103424">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>FTE99qt+IXaItZ2ehGkODw9INsU=</dsig:DigestValue>
+        <dsig:DigestValue>7MuIQkvHE1JsBi+ul14ZgdWlcXc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -413,6 +413,15 @@
       <dsig:DigestValue>Au4rnqQ7XJYUx9URWonWd8eaWTU=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Content\Error.xnb" size="10187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>r1b6O1NZH4W8D8JmkBemSyvmyro=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Content\fan.xnb" size="8587">
     <hash>
       <dsig:Transforms>
@@ -689,7 +698,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>+hO/4YWtZ9ePza19MCS3O5Qo9q4=</dsig:DigestValue>
+      <dsig:DigestValue>u0vNLT87vCV4iF8AlhA78pEoHEk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Music\ForrestSounds.xnb" size="131">
@@ -707,7 +716,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>qXm2aUsfBt3RkmeQxWENeEQSDo0=</dsig:DigestValue>
+      <dsig:DigestValue>QS1VcOWiqhJJ3C5m/CBGUP2Ba2k=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Music\GameBeat2.xnb" size="127">
@@ -797,7 +806,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>CgNN5sPdMZdLZG4LCHLWS2b6dxg=</dsig:DigestValue>
+      <dsig:DigestValue>U12AewctCZyQBeeQmywde1r1Uno=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Rage\Rage1.xnb" size="123">
@@ -815,7 +824,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>zwgNBYDikJjKuJw5LlfUco0oH8U=</dsig:DigestValue>
+      <dsig:DigestValue>wPfKON/xfjqC8Wutp4obor/thYM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Rage\Rage2.xnb" size="123">
@@ -833,7 +842,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>HqE+tpaCuju69keiudV0KwZq810=</dsig:DigestValue>
+      <dsig:DigestValue>QWjdso17fuG60rof549nIQg3VHY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Rage\Rage3.xnb" size="123">
@@ -851,7 +860,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>hLYPA+9riUxUFxo2TkHSrvsCZ0E=</dsig:DigestValue>
+      <dsig:DigestValue>9hVln33rRrcSXI6w8MfxNUXQ4xE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Rage\Rage4.xnb" size="123">
@@ -869,7 +878,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>o/PuolShlokpQQfMM3Somm0kTaA=</dsig:DigestValue>
+      <dsig:DigestValue>yxNimHO73ZLN81/gscdCnuEOJXE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Rage\Rage5.xnb" size="123">
@@ -887,7 +896,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>VHnUoAWj+6n/vfBP4Ew9fz8pHCw=</dsig:DigestValue>
+      <dsig:DigestValue>7CfPwv6oDVxMnt3lf9iL59juYjw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Rage\Rage6.xnb" size="123">
@@ -905,7 +914,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>SH6xV1JXRHxl/UyvXdt2jEXNPW8=</dsig:DigestValue>
+      <dsig:DigestValue>yIdeOJU8ItDpf8jHOjsFnTY8hoQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Rage\Rage7.xnb" size="123">
@@ -923,7 +932,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>UWHxo4+VeS+nZWq1zj6H3TwlDfs=</dsig:DigestValue>
+      <dsig:DigestValue>xisZZntaLLsc4lko6KCwLDNdJ48=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Rage\Rage8.xnb" size="123">
@@ -1205,13 +1214,13 @@
       <dsig:DigestValue>6DbW3RLItSLbwI7OvRMtEMPXxB0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level1.txt" size="2260">
+  <file name="Content\World1\Level1.txt" size="2416">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>tPp3sybypppuXFgkdNb60IifeWg=</dsig:DigestValue>
+      <dsig:DigestValue>KRlkLLPAbvCtlkb+sKa6wX2fySw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level10.txt" size="3496">

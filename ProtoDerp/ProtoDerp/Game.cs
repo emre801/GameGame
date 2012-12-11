@@ -16,6 +16,8 @@ using FarseerPhysics.Dynamics;
 using FarseerPhysics.Factories;
 using System.IO;
 
+
+
 namespace ProtoDerp
 {
     
@@ -102,7 +104,12 @@ namespace ProtoDerp
 
         public Vector2 moveBackGround= new Vector2(0,0);
 
+        public int spriteBlockCounter = 0;
+
         public Dictionary<Rectangle, Texture2D> cacheOfDirt = new Dictionary<Rectangle, Texture2D>();
+
+        public Button[] buttons;
+        public bool isButtonSelect = false;
 
         public Game()
         {
@@ -115,8 +122,7 @@ namespace ProtoDerp
             Content.RootDirectory = "Content";
             IsFixedTimeStep = false;
             drawingTool = new DrawingTool(this);
-            numDeath = 0;
-            
+            numDeath = 0;            
         }
 
         protected void addSound(String fName)
@@ -250,7 +256,9 @@ namespace ProtoDerp
 
             sprites.Add("deathSpikes4", new Sprite(Content, "deathSpikes4"));
             blockList.AddLast("deathSpikes4");
-           
+
+            sprites.Add("Error", new Sprite(Content, "Error"));
+            blockList.AddLast("Error");
             sprites.Add("RageQuit", new Sprite(Content, "RageQuit"));
             sprites.Add("Space", new Sprite(Content, "Space"));
             sprites.Add("SpaceAir", new Sprite(Content, "SpaceAir"));
@@ -335,13 +343,23 @@ namespace ProtoDerp
                 , 1, 60));//jumping up
             spriteAnimation.Add("sprite18_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "sprite18_strip4")
                 , 4, 45));//WallJump
-
+            int blockCounter=9;
             foreach (String i in blockList)
             {
                 if(!spriteAnimation.ContainsKey(i))
                     spriteAnimation.Add(i, new SpriteStripAnimationHandler(getSprite(i),1,10));
+                blockCounter++;
             }
-            
+            int bCounter=0;
+            buttons = new Button[blockCounter];
+            foreach (String i in blockList)
+            {
+                Button b = new Button(this, new Vector2(50, 5+50*bCounter), bCounter, i);
+                addEntity(b);
+                buttons[bCounter] = b;
+                bCounter++;
+            }
+
             if (Constants.ENABLE_TITLE_SCREEN)
             {
                 GUI = new GUI(this);
@@ -370,7 +388,7 @@ namespace ProtoDerp
             if (sprites.ContainsKey(fName))
                 return sprites[fName];
             else
-                return null;
+                return sprites["Error"];
         }
 
         public SpriteStripAnimationHandler getSpriteAnimation(String fName)
@@ -378,7 +396,7 @@ namespace ProtoDerp
             if (this.spriteAnimation.ContainsKey(fName))
                 return spriteAnimation[fName];
             else
-                return null;
+                return getSpriteAnimation("Error");
         }
         
         protected override void UnloadContent()
@@ -724,69 +742,69 @@ namespace ProtoDerp
         {
 
 
-            
-            DirectoryInfo derp = new DirectoryInfo(Content.RootDirectory);
-            String uploadDirect = derp.FullName;
-            int location = uploadDirect.IndexOf("bin")-10;
-            uploadDirect = uploadDirect.Substring(0, location);
-
-            DirectoryInfo di = new DirectoryInfo(uploadDirect + "ProtoDerpContent\\UploadedImages");
-            FileInfo[] fi = di.GetFiles("*", SearchOption.AllDirectories);
-            GraphicsDevice gd = drawingTool.getGraphicsDevice();
-
-            foreach (FileInfo fileInfo in fi)
+            try
             {
-                Texture2D file;
-                RenderTarget2D result;
-
-                String nameOfFile = fileInfo.FullName;
-                using (FileStream sourceStream = new FileStream(nameOfFile,FileMode.Open))
-                   
+                
+                DirectoryInfo di = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\UploadedImages");
+                FileInfo[] fi = di.GetFiles("*", SearchOption.AllDirectories);
+                GraphicsDevice gd = drawingTool.getGraphicsDevice();
+                foreach (FileInfo fileInfo in fi)
                 {
-                    file = Texture2D.FromStream(gd, sourceStream);
+                    Texture2D file;
+                    RenderTarget2D result;
+
+                    String nameOfFile = fileInfo.FullName;
+                    using (FileStream sourceStream = new FileStream(nameOfFile, FileMode.Open))
+                    {
+                        file = Texture2D.FromStream(gd, sourceStream);
+                    }
+                    //Setup a render target to hold our final texture which will have premulitplied alpha values
+                    result = new RenderTarget2D(gd, file.Width, file.Height);
+
+                    gd.SetRenderTarget(result);
+                    gd.Clear(Color.Black);
+
+                    //Multiply each color by the source alpha, and write in just the color values into the final texture
+                    var blendColor = new BlendState
+                    {
+                        ColorWriteChannels = ColorWriteChannels.Red | ColorWriteChannels.Green | ColorWriteChannels.Blue,
+                        AlphaDestinationBlend = Blend.Zero,
+                        ColorDestinationBlend = Blend.Zero,
+                        AlphaSourceBlend = Blend.SourceAlpha,
+                        ColorSourceBlend = Blend.SourceAlpha
+                    };
+
+                    var spriteBatch = new SpriteBatch(gd);
+                    spriteBatch.Begin(SpriteSortMode.Immediate, blendColor);
+                    spriteBatch.Draw(file, file.Bounds, Color.White);
+                    spriteBatch.End();
+
+                    //Now copy over the alpha values from the PNG source texture to the final one, without multiplying them
+                    var blendAlpha = new BlendState
+                    {
+                        ColorWriteChannels = ColorWriteChannels.Alpha,
+                        AlphaDestinationBlend = Blend.Zero,
+                        ColorDestinationBlend = Blend.Zero,
+                        AlphaSourceBlend = Blend.One,
+                        ColorSourceBlend = Blend.One
+                    };
+
+                    spriteBatch.Begin(SpriteSortMode.Immediate, blendAlpha);
+                    spriteBatch.Draw(file, file.Bounds, Color.White);
+                    spriteBatch.End();
+
+                    //Release the GPU back to drawing to the screen
+                    gd.SetRenderTarget(null);
+
+                    Texture2D finalFile = result as Texture2D;
+
+                    sprites.Add(fileInfo.Name, new Sprite(finalFile, fileInfo.Name));
+                    blockList.AddLast(fileInfo.Name);
+
                 }
-                //Setup a render target to hold our final texture which will have premulitplied alpha values
-                result = new RenderTarget2D(gd, file.Width, file.Height);
-
-                gd.SetRenderTarget(result);
-                gd.Clear(Color.Black);
-
-                //Multiply each color by the source alpha, and write in just the color values into the final texture
-                var blendColor = new BlendState
-                {
-                    ColorWriteChannels = ColorWriteChannels.Red | ColorWriteChannels.Green | ColorWriteChannels.Blue,
-                    AlphaDestinationBlend = Blend.Zero,
-                    ColorDestinationBlend = Blend.Zero,
-                    AlphaSourceBlend = Blend.SourceAlpha,
-                    ColorSourceBlend = Blend.SourceAlpha
-                };
-
-                var spriteBatch = new SpriteBatch(gd);
-                spriteBatch.Begin(SpriteSortMode.Immediate, blendColor);
-                spriteBatch.Draw(file, file.Bounds, Color.White);
-                spriteBatch.End();
-
-                //Now copy over the alpha values from the PNG source texture to the final one, without multiplying them
-                var blendAlpha = new BlendState
-                {
-                    ColorWriteChannels = ColorWriteChannels.Alpha,
-                    AlphaDestinationBlend = Blend.Zero,
-                    ColorDestinationBlend = Blend.Zero,
-                    AlphaSourceBlend = Blend.One,
-                    ColorSourceBlend = Blend.One
-                };
-
-                spriteBatch.Begin(SpriteSortMode.Immediate, blendAlpha);
-                spriteBatch.Draw(file, file.Bounds, Color.White);
-                spriteBatch.End();
-
-                //Release the GPU back to drawing to the screen
-                gd.SetRenderTarget(null);
-
-                Texture2D finalFile = result as Texture2D;
-
-                sprites.Add(fileInfo.Name, new Sprite(finalFile, fileInfo.Name));
-                blockList.AddLast(fileInfo.Name);
+            }
+            catch
+            {
 
             }
 

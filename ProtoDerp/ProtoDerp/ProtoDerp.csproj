@@ -29,7 +29,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -127,6 +127,7 @@
     <Compile Include="DrawingTool.cs" />
     <Compile Include="Entities\BackgroundBlock.cs" />
     <Compile Include="Entities\Block.cs" />
+    <Compile Include="Entities\Button.cs" />
     <Compile Include="Entities\CreaterBlock.cs" />
     <Compile Include="Entities\CutScene.cs" />
     <Compile Include="Entities\DeathBlocks.cs" />

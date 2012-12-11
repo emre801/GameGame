@@ -32,7 +32,7 @@ namespace ProtoDerp
         public Vector2 origPos;
         LinkedList<String> blocks;
         String[] blockArray;
-        int counter = 0;
+        //public int game.spriteBlockCounter = 0;
         KeyboardInput keyInput;
         int blockPressed = 0;
         public float blockWidth, blockHeight;
@@ -61,7 +61,7 @@ namespace ProtoDerp
             this.blocks = g.blockList;
             
             blockArray=blocks.ToArray<String>();
-            this.spriteNumber = blockArray[counter];
+            this.spriteNumber = blockArray[game.spriteBlockCounter];
             
             LoadContent();
             origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
@@ -81,17 +81,18 @@ namespace ProtoDerp
 
         public void LoadContent()
         {
-            playerSprite = game.getSprite(blockArray[counter]);
+            playerSprite = game.getSprite(blockArray[game.spriteBlockCounter]);
             origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
             blockHeight = playerSprite.index.Height;
             blockWidth = playerSprite.index.Width;
 
 
-            ani = game.getSpriteAnimation(blockArray[counter]);
+            ani = game.getSpriteAnimation(blockArray[game.spriteBlockCounter]);
             
                 blockHeight = ani.heightOf();
                 blockWidth = ani.widthOf();
                 origin = new Vector2(blockWidth / 2, blockHeight / 2);
+                game.isButtonSelect = false;
             
 
         }
@@ -405,21 +406,21 @@ namespace ProtoDerp
             bool isPressed = false;
             if (keyInput.IsNewKeyPressed(Keys.Q))
             {
-                if (counter == 0)
-                    counter = blockArray.Length - 1;
+                if (game.spriteBlockCounter == 0)
+                    game.spriteBlockCounter = blockArray.Length - 1;
                 else
-                    counter--;
+                    game.spriteBlockCounter--;
                 isPressed = true;
             }
             else if (keyInput.IsNewKeyPressed(Keys.W))
             {
-                if (counter == blockArray.Length - 1)
-                    counter = 0;
+                if (game.spriteBlockCounter == blockArray.Length - 1)
+                    game.spriteBlockCounter = 0;
                 else
-                    counter++;
+                    game.spriteBlockCounter++;
                 isPressed = true;
             }
-            if(isPressed)
+            if(isPressed|| game.isButtonSelect)
                 LoadContent();
         }
         public void updateDrawLevel()
@@ -620,20 +621,20 @@ namespace ProtoDerp
             switch (game.blockType)
             {
                 case Game.BlockType.Normal:
-                    game.addEntity(new Block(game, game.Arena, origin, 1, blockArray[counter], blockHeight, blockWidth, drawLevel,rotation));
+                    game.addEntity(new Block(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth, drawLevel,rotation));
                     break;
                 case Game.BlockType.Death:
-                    game.addEntity(new DeathBlock(game, game.Arena, origin, 1, blockArray[counter],rotation));
+                    game.addEntity(new DeathBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter],rotation));
                     break;
                 case Game.BlockType.Moving:
-                    game.addEntity(new MovingDeath(game, game.Arena, origin, 1, blockArray[counter], new Vector2(1, 0), 2));        
+                    game.addEntity(new MovingDeath(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], new Vector2(1, 0), 2));        
                     break;
                 case Game.BlockType.Goal:
-                    game.addEntity(new GoalBlock(game, game.Arena, origin, 1, blockArray[counter], game.currentLevel));
+                    game.addEntity(new GoalBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], game.currentLevel));
                     game.cachedEntityLists = new Dictionary<Type, object>();
                     break;
                 case Game.BlockType.Magnet:
-                    game.addEntity(new MagnetBlock(game, game.Arena, origin, 1, blockArray[counter], game.magnetPulse, blockHeight,blockWidth));
+                    game.addEntity(new MagnetBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], game.magnetPulse, blockHeight,blockWidth));
                     break;               
 
             }
@@ -643,29 +644,29 @@ namespace ProtoDerp
         public void addBlock()
         {
 
-            game.addEntity(new Block(game, game.Arena, origPos, 1, blockArray[counter], blockHeight, blockWidth,drawLevel,rotation));
+            game.addEntity(new Block(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth,drawLevel,rotation));
         }
 
         public void addDeathBlock()
         {
 
-            game.addEntity(new DeathBlock(game, game.Arena, origPos, 1, blockArray[counter],rotation));
+            game.addEntity(new DeathBlock(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter],rotation));
         }
         public void addMagnetBlock()
         {
 
-            game.addEntity(new MagnetBlock(game, game.Arena, origPos, 1, blockArray[counter], game.magnetPulse, blockHeight,blockWidth));
+            game.addEntity(new MagnetBlock(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter], game.magnetPulse, blockHeight,blockWidth));
         }
 
         public void addGoalBlock()
         {
 
-            game.addEntity(new GoalBlock(game, game.Arena, origPos, 1, blockArray[counter],game.currentLevel));
+            game.addEntity(new GoalBlock(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter],game.currentLevel));
         }
 
         public void addMovingDeathBlock()
         {
-            game.addEntity(new MovingDeath(game, game.Arena, origPos, 1, blockArray[counter], new Vector2(1,0),2 ));
+            game.addEntity(new MovingDeath(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter], new Vector2(1,0),2 ));
         
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
