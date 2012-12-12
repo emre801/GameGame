@@ -366,6 +366,7 @@ namespace ProtoDerp
             oldMouse = Mouse.GetState();
             chooseNextSprite();
             updateDrawLevel();
+            game.isSelectingBlock = false;
         }
 
         public void changeBlockType()
@@ -618,25 +619,28 @@ namespace ProtoDerp
 
         public void addBlockBasedOnMouse(Vector2 origin)
         {
-            switch (game.blockType)
+            if (!game.isSelectingBlock)
             {
-                case Game.BlockType.Normal:
-                    game.addEntity(new Block(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth, drawLevel,rotation));
-                    break;
-                case Game.BlockType.Death:
-                    game.addEntity(new DeathBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter],rotation));
-                    break;
-                case Game.BlockType.Moving:
-                    game.addEntity(new MovingDeath(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], new Vector2(1, 0), 2));        
-                    break;
-                case Game.BlockType.Goal:
-                    game.addEntity(new GoalBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], game.currentLevel));
-                    game.cachedEntityLists = new Dictionary<Type, object>();
-                    break;
-                case Game.BlockType.Magnet:
-                    game.addEntity(new MagnetBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], game.magnetPulse, blockHeight,blockWidth));
-                    break;               
+                switch (game.blockType)
+                {
+                    case Game.BlockType.Normal:
+                        game.addEntity(new Block(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth, drawLevel, rotation));
+                        break;
+                    case Game.BlockType.Death:
+                        game.addEntity(new DeathBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], rotation));
+                        break;
+                    case Game.BlockType.Moving:
+                        game.addEntity(new MovingDeath(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], new Vector2(1, 0), 2));
+                        break;
+                    case Game.BlockType.Goal:
+                        game.addEntity(new GoalBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], game.currentLevel));
+                        game.cachedEntityLists = new Dictionary<Type, object>();
+                        break;
+                    case Game.BlockType.Magnet:
+                        game.addEntity(new MagnetBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], game.magnetPulse, blockHeight, blockWidth));
+                        break;
 
+                }
             }
             
         }

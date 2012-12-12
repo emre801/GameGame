@@ -34,6 +34,7 @@ namespace ProtoDerp
 
         public float maxLeft, maxRight, maxTop, maxButtom;
         public GUI gui;
+        public Button[] buttons;
 
         /**
          * Constructor
@@ -52,6 +53,15 @@ namespace ProtoDerp
             maxTop = -800;
             maxButtom = 300;
             gui = new GUI(g);
+            buttons = new Button[g.blockCounter-9];
+            int bCounter = 0;
+            foreach (String i in g.blockList)
+            {
+                Button b = new Button(g, new Vector2(50, 5 + 50 * bCounter), bCounter, i);
+                //gamaddEntity(b);
+                buttons[bCounter] = b;
+                bCounter++;
+            }
         }
 
         public void setUpDemensions(float maxLeft, float maxRight, float maxTop, float maxButtom)
@@ -89,6 +99,16 @@ namespace ProtoDerp
             {
                 if (!game.IsPaused && (game.playerOneInput.IsPausePressed()))
                     game.Pause();
+            }
+            if (game.gMode == 2)
+            {
+                int count = 0;
+                foreach (Button b in buttons)
+                {
+                    b.Update(gameTime, worldFactor);
+                    count++;
+                }
+
             }
 
             base.Update(gameTime, worldFactor);

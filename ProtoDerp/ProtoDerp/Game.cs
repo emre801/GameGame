@@ -108,9 +108,10 @@ namespace ProtoDerp
 
         public Dictionary<Rectangle, Texture2D> cacheOfDirt = new Dictionary<Rectangle, Texture2D>();
 
-        public Button[] buttons;
+        
         public bool isButtonSelect = false;
-
+        public bool isSelectingBlock = false;
+        public int blockCounter = 9;
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -343,7 +344,7 @@ namespace ProtoDerp
                 , 1, 60));//jumping up
             spriteAnimation.Add("sprite18_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "sprite18_strip4")
                 , 4, 45));//WallJump
-            int blockCounter=9;
+            blockCounter=9;
             foreach (String i in blockList)
             {
                 if(!spriteAnimation.ContainsKey(i))
@@ -351,14 +352,7 @@ namespace ProtoDerp
                 blockCounter++;
             }
             int bCounter=0;
-            buttons = new Button[blockCounter];
-            foreach (String i in blockList)
-            {
-                Button b = new Button(this, new Vector2(50, 5+50*bCounter), bCounter, i);
-                addEntity(b);
-                buttons[bCounter] = b;
-                bCounter++;
-            }
+            
 
             if (Constants.ENABLE_TITLE_SCREEN)
             {
@@ -411,6 +405,11 @@ namespace ProtoDerp
         public void clearEntities()
         {
             entities.Clear();
+        }
+
+        public void addButtons()
+        {
+            
         }
 
         public void newLevel()
@@ -537,7 +536,7 @@ namespace ProtoDerp
 
         protected override void Update(GameTime gameTime)
         {
-
+            bool reloadButtons = false;
 
             playerOneInput.Update(gameTime);
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
@@ -555,9 +554,12 @@ namespace ProtoDerp
                 restart = false;
                 loadNewLevel = false;
                 cachedEntityLists.Clear();
+               
                 newLevel();
                 drawingTool.resetCamera();
                 Arena.setUpDemensions(maxLeft, maxRight, maxTop, maxButtom);
+                if (gMode == 2)
+                    reloadButtons = true;
             }
             if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Back) || isPausePressed)
             {
@@ -675,7 +677,8 @@ namespace ProtoDerp
                 }
             }
 
-            
+            if (reloadButtons)
+                addButtons();
             base.Update(gameTime);
 
         }
