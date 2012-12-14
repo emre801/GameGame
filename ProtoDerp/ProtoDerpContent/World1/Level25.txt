@@ -1,0 +1,59 @@
+414 182 bigBlock Block 200 1000 0
+2785 4403 bigBlock Block 200 2280 0
+1615 -2066 bigBlock Block 2305 125 0
+100 2880 bigBlock Block 1370 125 0
+1565 603 bigBlock Block 1370 125 0
+1565 893 bigBlock Block 1370 125 0
+1565 2793 bigBlock Block 1370 125 0
+105 1503 bigBlock Block 1370 125 0
+105 953 bigBlock Block 1370 125 0
+105 4083 bigBlock Block 1370 125 0
+3875 1543 bigBlock Block 5795 125 0
+3875 -936 bigBlock Block 5795 125 0
+2745 613 bigBlock Block 50 955 0
+3425 2503 bigBlock Block 50 955 0
+2085 2503 bigBlock Block 50 955 0
+2725 2553 bigBlock Block 50 955 0
+635 4513 bigBlock Block 50 2035 0
+2628 2509 deathSpikes DeathBlock
+2757 2506 deathSpikes DeathBlock
+2883 2506 deathSpikes DeathBlock
+229 4469 deathSpikes DeathBlock
+343 4469 deathSpikes DeathBlock
+466 4469 deathSpikes DeathBlock
+594 4469 deathSpikes DeathBlock
+726 4466 deathSpikes DeathBlock
+851 4469 deathSpikes DeathBlock
+983 4466 deathSpikes DeathBlock
+1109 4466 deathSpikes DeathBlock
+1234 4466 deathSpikes DeathBlock
+1360 4466 deathSpikes DeathBlock
+1486 4466 deathSpikes DeathBlock
+1609 4466 deathSpikes DeathBlock
+190 2199 deathSpikes4 DeathBlock
+187 3376 deathSpikes4 DeathBlock
+1649 1513 deathSpikes4 DeathBlock
+1649 1391 deathSpikes4 DeathBlock
+1649 1265 deathSpikes4 DeathBlock
+1649 2168 deathSpikes4 DeathBlock
+1647 2285 deathSpikes4 DeathBlock
+1647 2411 deathSpikes4 DeathBlock
+2333 567 deathSpikes DeathBlock
+2461 564 deathSpikes DeathBlock
+2590 567 deathSpikes DeathBlock
+2707 567 deathSpikes DeathBlock
+2824 567 deathSpikes DeathBlock
+2950 567 deathSpikes DeathBlock
+3073 567 deathSpikes DeathBlock
+3161 567 deathSpikes DeathBlock
+1480 -17 deathSpikes3 DeathBlock
+1483 105 deathSpikes3 DeathBlock
+1538 -977 deathSpikes3 DeathBlock
+1538 -1100 deathSpikes3 DeathBlock
+3795 -86 deathSpikes3 DeathBlock
+3792 42 deathSpikes3 DeathBlock
+3789 165 deathSpikes3 DeathBlock
+3792 573 deathSpikes3 DeathBlock
+3795 722 deathSpikes3 DeathBlock
+3789 851 deathSpikes3 DeathBlock
+Demi -100 4353 -1906 5303

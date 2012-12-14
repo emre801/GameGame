@@ -1,0 +1,60 @@
+362 185 bigBlock Block 200 1000 0 0
+784 -493 bigBlock Block 1560 180 0 0
+-186 -259 bigBlock Block 1095 180 0 0
+-750 -70 bigBlock Block 2675 175 0 0
+790 1170 bigBlock Block 200 3225 0 0
+2320 -610 bigBlock Block 3615 175 0 0
+10 -1280 bigBlock Block 185 1740 0 0
+1540 -2320 bigBlock Block 185 1740 0 0
+760 -1820 bigBlock Block 995 185 0 0
+519 17 magnet1 Block 127 127 1 0
+542 -1054 magnet1 Block 127 127 1 -90
+-374 447 magnet1 Block 147 112 1 90
+-549 840 magnet1 Block 147 112 1 90
+1536 458 magnet1 Block 147 112 1 0
+1842 819 magnet1 Block 147 112 1 0
+1851 145 magnet1 Block 147 112 1 90
+1745 -1034 magnet1 Block 32 32 1 -90
+1061 -1038 magnet1 Block 32 32 1 0
+1203 -1130 magnet1 Block 32 32 1 90
+1434 -1344 magnet1 Block 32 32 1 90
+2011 -1369 magnet1 Block 32 32 1 0
+1997 -2072 magnet1 Block 32 32 1 270
+2211 155 deathSpikes3 DeathBlock 0
+2214 -1151 deathSpikes3 DeathBlock 0
+-607 1051 deathSpikes3 DeathBlock 90
+-475 1051 deathSpikes3 DeathBlock 90
+-347 1049 deathSpikes3 DeathBlock 90
+-218 1049 deathSpikes3 DeathBlock 90
+-84 1049 deathSpikes3 DeathBlock 90
+44 1049 deathSpikes3 DeathBlock 90
+181 1049 deathSpikes3 DeathBlock 90
+315 1046 deathSpikes3 DeathBlock 90
+447 1051 deathSpikes3 DeathBlock 90
+588 1051 deathSpikes3 DeathBlock 90
+723 1049 deathSpikes3 DeathBlock 90
+860 1049 deathSpikes3 DeathBlock 90
+997 1049 deathSpikes3 DeathBlock 90
+1143 1049 deathSpikes3 DeathBlock 90
+1280 1046 deathSpikes3 DeathBlock 90
+1420 1049 deathSpikes3 DeathBlock 90
+1563 1049 deathSpikes3 DeathBlock 90
+1700 1051 deathSpikes3 DeathBlock 90
+1838 1051 deathSpikes3 DeathBlock 90
+1967 1049 deathSpikes3 DeathBlock 90
+2101 1051 deathSpikes3 DeathBlock 90
+522 -491 bigGround MagnetBlock 0 -70 965 120
+-5 -1057 bigGround MagnetBlock -7 0 140 1140
+491 450 bigGround MagnetBlock 10 0 55 1855
+566 836 bigGround MagnetBlock 10 0 55 2350
+1988 149 bigGround MagnetBlock 15 0 70 405
+1531 -235 LongGround MagnetBlock 0 -80 1510 25
+1841 554 LongGround MagnetBlock 0 -80 650 60
+1423 -1036 LongGround MagnetBlock -15 0 15 655
+1061 -1304 LongGround MagnetBlock 0 -30 560 20
+1617 -1128 bigGround MagnetBlock 24 0 20 855
+1691 -1342 bigGround MagnetBlock 24 0 20 535
+2011 -1689 bigGround MagnetBlock 0 -80 670 20
+1759 -2070 bigGround MagnetBlock -13 0 15 505
+1554 -2043 ahLogo0 GoalBlock 6
+Demi -906 2496 -1959 1842

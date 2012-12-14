@@ -1,0 +1,58 @@
+894 179 bigBlock Block 200 2025 0
+2389 -231 bigBlock Block 200 240 0
+1950 -575 bigBlock Block 200 240 0
+2426 -861 bigBlock Block 200 240 0
+1986 -1124 bigBlock Block 200 240 0
+3444 -1161 bigBlock Block 200 1645 0
+1610 470 bigBlock Block 495 3460 0
+3590 470 bigBlock Block 495 3460 0
+1610 950 bigBlock Block 495 3460 0
+3590 950 bigBlock Block 495 3460 0
+3590 1400 bigBlock Block 495 3460 0
+1610 1410 bigBlock Block 495 3460 0
+1600 1880 bigBlock Block 495 3460 0
+3590 1880 bigBlock Block 495 3460 0
+-470 120 bigBlock Block 4020 705 0
+-980 130 bigBlock Block 4020 705 0
+-1440 130 bigBlock Block 4020 705 0
+4620 -260 bigBlock Block 4020 705 0
+4970 -220 bigBlock Block 4020 705 0
+1810 -615 deathSpikes3 DeathBlock
+1807 -547 deathSpikes3 DeathBlock
+1844 -1161 deathSpikes3 DeathBlock
+1844 -1093 deathSpikes3 DeathBlock
+2529 -272 deathSpikes4 DeathBlock
+2529 -201 deathSpikes4 DeathBlock
+2563 -829 deathSpikes4 DeathBlock
+2556 -897 deathSpikes4 DeathBlock
+1889 -690 deathSpikes DeathBlock
+1994 -690 deathSpikes DeathBlock
+2351 -350 deathSpikes DeathBlock
+2448 -355 deathSpikes DeathBlock
+1920 -1247 deathSpikes DeathBlock
+2028 -1247 deathSpikes DeathBlock
+2382 -975 deathSpikes DeathBlock
+2488 -975 deathSpikes DeathBlock
+2060 176 deathSpikes DeathBlock
+1969 201 deathSpikes DeathBlock
+2097 197 deathSpikes DeathBlock
+2221 201 deathSpikes DeathBlock
+2341 201 deathSpikes DeathBlock
+2469 197 deathSpikes DeathBlock
+2597 193 deathSpikes DeathBlock
+2716 197 deathSpikes DeathBlock
+2840 201 deathSpikes DeathBlock
+2964 201 deathSpikes DeathBlock
+3094 201 deathSpikes DeathBlock
+3226 197 deathSpikes DeathBlock
+3354 192 deathSpikes DeathBlock
+3478 192 deathSpikes DeathBlock
+3606 192 deathSpikes DeathBlock
+3742 192 deathSpikes DeathBlock
+3860 193 deathSpikes DeathBlock
+3975 197 deathSpikes DeathBlock
+4127 267 deathSpikes DeathBlock
+4099 197 deathSpikes DeathBlock
+4193 197 deathSpikes DeathBlock
+4090 -1410 cloud GoalBlock 15
+Demi -100 4315 -1183 808
