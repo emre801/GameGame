@@ -58,5 +58,6 @@
 1079 -857 deathSpikes3 DeathBlock 0
 1077 -745 deathSpikes3 DeathBlock 0
 1079 -620 deathSpikes3 DeathBlock 0
+341 -10 Tree DeathBlock 0
 1018 -1 ahLogo0 GoalBlock 2
 Demi -349 1182 -532 795

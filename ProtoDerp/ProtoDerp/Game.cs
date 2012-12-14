@@ -685,7 +685,7 @@ namespace ProtoDerp
 
         protected override void Draw(GameTime gameTime)
         {
-            if(gMode==0)
+            if(gMode==0 || gMode==2)
                 GraphicsDevice.Clear(Color.SkyBlue);
             else
                 GraphicsDevice.Clear(Color.Black);

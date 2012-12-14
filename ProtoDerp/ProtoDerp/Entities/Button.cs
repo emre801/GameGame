@@ -74,11 +74,13 @@ namespace ProtoDerp
             Rectangle mouseRect = new Rectangle((int)mousePosition.X, (int)mousePosition.Y, 1, 1);
             if (mouseRect.Intersects(buttonBox))
             {
-                game.isSelectingBlock = true;
-                game.isButtonSelect = true;
-                
+                if (oldMouse.LeftButton == ButtonState.Released && Mouse.GetState().LeftButton == ButtonState.Pressed)
+                {
+                    game.isSelectingBlock = true;
+                    game.isButtonSelect = true;
+
                     game.spriteBlockCounter = spritePos;
-                    
+                }
                 
                 return true;
             }
@@ -90,9 +92,17 @@ namespace ProtoDerp
         {
             if (game.gMode==2)
             {
+                if (game.spriteBlockCounter == spritePos)
+                {
+                    spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X-2.5),
+                 (int)(pos.Y-2.5),
+                 (int)widthDiff + 5, (int)heightDiff + 5), null, Color.Black, 0, origin, SpriteEffects.FlipHorizontally, 0f);
+                }
                 spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X),
                  (int)(pos.Y),
                  (int)widthDiff, (int)heightDiff), null, Color.White, 0, origin, SpriteEffects.FlipHorizontally, 0f);
+                
+            
             }
 
         }

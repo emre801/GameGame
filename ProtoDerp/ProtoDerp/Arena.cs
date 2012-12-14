@@ -55,9 +55,16 @@ namespace ProtoDerp
             gui = new GUI(g);
             buttons = new Button[g.blockCounter-9];
             int bCounter = 0;
+            
             foreach (String i in g.blockList)
             {
-                Button b = new Button(g, new Vector2(50, 5 + 50 * bCounter), bCounter, i);
+                Button b ;
+                if(bCounter%3==0)
+                    b = new Button(g, new Vector2(10, (5 + 50 * bCounter)/3), bCounter, i);
+                else if(bCounter%3==1)
+                    b = new Button(g, new Vector2(50, (5 + 50 * (bCounter-1))/3), bCounter, i);
+                else
+                    b = new Button(g, new Vector2(90, (5 + 50 * (bCounter - 2)) / 3), bCounter, i);
                 //gamaddEntity(b);
                 buttons[bCounter] = b;
                 bCounter++;
