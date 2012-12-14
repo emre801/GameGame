@@ -91,6 +91,7 @@ Content\dirtBlock.xnb
 Content\dirtBlockHigh.xnb
 Content\dirtBlockLong.xnb
 Content\grassTemplate.xnb
+Content\Error.xnb
 Content\Rage\Rage1.xnb
 Content\Rage\Rage2.xnb
 Content\Rage\Rage3.xnb
@@ -106,7 +107,6 @@ Content\Rage\Wave\Rage2.xnb
 Content\Rage\Wave\jump.xnb
 Content\Rage\Wave\death.xnb
 Content\Rage\Wave\Opening.xnb
-Content\Error.xnb
 Content\Rage\Rage1.wma
 Content\Rage\Rage2.wma
 Content\Rage\Rage3.wma
