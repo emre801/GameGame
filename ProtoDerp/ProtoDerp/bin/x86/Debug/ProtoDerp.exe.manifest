@@ -112,7 +112,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>WiGF06Jyj8B+gq2dCbagPpq6e5k=</dsig:DigestValue>
+        <dsig:DigestValue>YBpS3/VPukhZOKa9YTAjEwFMlWU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -989,13 +989,13 @@
       <dsig:DigestValue>e4f7IcIXOoppvI9rXjPe51EKK/U=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\RageQuit.xnb" size="1184447">
+  <file name="Content\RageQuit.xnb" size="1280187">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>QaLQFrMxXeFSyyq3ITHQKQJ/SYQ=</dsig:DigestValue>
+      <dsig:DigestValue>ohrloAfPAB4kavwTYccMxLJvZhw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Space.xnb" size="10187">
@@ -1214,13 +1214,13 @@
       <dsig:DigestValue>6DbW3RLItSLbwI7OvRMtEMPXxB0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level1.txt" size="2443">
+  <file name="Content\World1\Level1.txt" size="2260">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>9TU8jWy6cHXUluDSXrZPXpmNcLc=</dsig:DigestValue>
+      <dsig:DigestValue>tPp3sybypppuXFgkdNb60IifeWg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level10.txt" size="3496">
