@@ -108,15 +108,19 @@ Content\Rage\Rage7.xnb
 Content\Rage\Rage7.wma
 Content\Rage\Rage8.xnb
 Content\Rage\Rage8.wma
-Content\Music\GameBeat2.xnb
-Content\Music\GameBeat2.wma
-Content\Music\ForrestSounds.xnb
-Content\Music\ForrestSounds.wma
 Content\Rage\Wave\Rage1.xnb
 Content\Rage\Wave\Rage2.xnb
 Content\Rage\Wave\jump.xnb
 Content\Rage\Wave\death.xnb
 Content\Rage\Wave\Opening.xnb
+Content\Music\06 Anxiety Attack.xnb
+Content\Music\06 Anxiety Attack.wma
+Content\Music\05 Nostalgia.xnb
+Content\Music\05 Nostalgia.wma
+Content\Music\01 Syntax Error.xnb
+Content\Music\01 Syntax Error.wma
+Content\Music\03 Tokyo Escapade.xnb
+Content\Music\03 Tokyo Escapade.wma
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

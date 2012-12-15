@@ -453,14 +453,29 @@ namespace ProtoDerp
 
         public void playSong(String songName)
         {
-            MediaPlayer.Stop();
+            //MediaPlayer.Stop();
 
-            //if (Options.gameOptions.musicToggled) //Only actually play the song if music is turned on.
-            //{
+            if (MediaPlayer.State == MediaState.Stopped)
+            {
                 Song song = Content.Load<Song>(songName);
                 MediaPlayer.Play(song);
                 MediaPlayer.IsRepeating = true;
-            //}
+            }
+        }
+
+        public void playRandonSong()
+        {
+            if (MediaPlayer.State == MediaState.Stopped)
+            {
+                DirectoryInfo di = new DirectoryInfo(Content.RootDirectory + "\\Music");
+                FileInfo[] fi = di.GetFiles("*", SearchOption.AllDirectories);
+
+                String songName = fi[ran.Next(fi.Length)].Name;
+                songName = songName.Substring(0, songName.IndexOf("."));
+
+                playSong("Music\\" + songName);
+            }
+        
         }
 
         public void writeLevel(int templateNum)

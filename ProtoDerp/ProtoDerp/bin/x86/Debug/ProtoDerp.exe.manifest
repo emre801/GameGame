@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="103936">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="104448">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>YBpS3/VPukhZOKa9YTAjEwFMlWU=</dsig:DigestValue>
+        <dsig:DigestValue>quOy2jmMoyGDrW9jW/jgnhWW+lk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -692,40 +692,76 @@
       <dsig:DigestValue>tWgUUeY9P4Hx3tory8yUUKfLhZg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Music\ForrestSounds.wma" size="1526139">
+  <file name="Content\Music\01 Syntax Error.wma" size="2546211">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>PUOafwxO509zAT4ncF9mxy9KlAw=</dsig:DigestValue>
+      <dsig:DigestValue>oXWZ7RQvT8uPUJGnmuatdpgmNm0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Music\ForrestSounds.xnb" size="131">
+  <file name="Content\Music\01 Syntax Error.xnb" size="133">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>WBXBbZAjUeauxd5MR9I3PZadCBI=</dsig:DigestValue>
+      <dsig:DigestValue>7vS1HIhCSDh6AvJ09FJO6J1dl54=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Music\GameBeat2.wma" size="2197239">
+  <file name="Content\Music\03 Tokyo Escapade.wma" size="2358303">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>o0j5AY/Be7KmszbHwZDYlFAfNWU=</dsig:DigestValue>
+      <dsig:DigestValue>17/qGAf+IoRgaU2d1AwYnWZ3dzE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Music\GameBeat2.xnb" size="127">
+  <file name="Content\Music\03 Tokyo Escapade.xnb" size="135">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>j1XKYgx0yvT+e5UCx6Lf1WY0tyI=</dsig:DigestValue>
+      <dsig:DigestValue>GuMTh3p7yBR/rYWrsrDo+A8Yk94=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\05 Nostalgia.wma" size="5042703">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>umvVue54nUMKCFbNRkZTJJWGuzo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\05 Nostalgia.xnb" size="130">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>eVoeR6fM2VRL8Z8H8g+hTdhKygM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\06 Anxiety Attack.wma" size="5982243">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>euOFR2LHd2aDoJ7OONmu07qWWG4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\06 Anxiety Attack.xnb" size="135">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>K3+TEfrJ+TDhrOjlMct9/4XSXEk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\outPut.xnb" size="2875">

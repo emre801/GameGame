@@ -356,11 +356,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Music\GameBeat2.mp3">
-      <Name>GameBeat2</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
     <Compile Include="bullet.0.png">
       <Name>bullet.0</Name>
       <Importer>TextureImporter</Importer>
@@ -425,11 +420,6 @@
       <Name>cloud</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Music\ForrestSounds.mp3">
-      <Name>ForrestSounds</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
     </Compile>
     <Compile Include="Tree.png">
       <Name>Tree</Name>
@@ -605,6 +595,26 @@
       <Name>Error</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Music\06 Anxiety Attack.mp3">
+      <Name>06 Anxiety Attack</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Music\05 Nostalgia.mp3">
+      <Name>05 Nostalgia</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Music\01 Syntax Error.mp3">
+      <Name>01 Syntax Error</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Music\03 Tokyo Escapade.mp3">
+      <Name>03 Tokyo Escapade</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
     </Compile>
     <Content Include="Template\Level3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
