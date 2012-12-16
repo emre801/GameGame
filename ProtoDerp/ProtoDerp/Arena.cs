@@ -169,7 +169,7 @@ namespace ProtoDerp
                     if (pulse == 0)
                         pulseUp = true;
                 }
-
+                
                 spriteBatch.Draw(deathBall.index, new Rectangle(
                     (int)ConvertUnits.ToDisplayUnits(player1.body.Position.X)+game.ballPosition, (int)ConvertUnits.ToDisplayUnits(player1.body.Position.Y),
                     (int)10 + pulse, (int)10 + pulse), null, Color.White, 0, player1.origin, SpriteEffects.None, 0f);
@@ -202,7 +202,16 @@ namespace ProtoDerp
                 spriteBatch.Draw(deathBall.index, new Rectangle(
                     (int)ConvertUnits.ToDisplayUnits(player1.body.Position.X) + game.ballPosition, (int)ConvertUnits.ToDisplayUnits(player1.body.Position.Y) + game.ballPosition,
                     (int)10 + pulse, (int)10 + pulse), null, Color.White, 0, player1.origin, SpriteEffects.None, 0f);
+                
+            }
 
+            if (game.winningAnimation)
+            {
+                
+                spriteBatch.Draw(deathBall.index, new Rectangle(
+                    (int)ConvertUnits.ToDisplayUnits(player1.body.Position.X), (int)ConvertUnits.ToDisplayUnits(player1.body.Position.Y)-game.ballPosition,
+                    (int)30 + pulse, (int)30 + pulse), null, Color.White, 0, player1.origin, SpriteEffects.None, 0f);
+            
             }
 
             base.Draw(gameTime, spriteBatch);

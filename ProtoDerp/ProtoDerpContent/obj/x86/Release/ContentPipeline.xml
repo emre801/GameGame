@@ -47,42 +47,6 @@
       <Time>2012-07-15T10:33:38.3032584-04:00</Time>
     </Item>
     <Item>
-      <Source>titleScreenElement.0.png</Source>
-      <Name>titleScreenElement.0</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\titleScreenElement.0.xnb</Output>
-      <Time>2012-07-15T10:33:38.3112588-04:00</Time>
-    </Item>
-    <Item>
-      <Source>titleScreenElement.1.png</Source>
-      <Name>titleScreenElement.1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\titleScreenElement.1.xnb</Output>
-      <Time>2012-07-15T10:33:38.3172592-04:00</Time>
-    </Item>
-    <Item>
-      <Source>titleScreenElement.2.png</Source>
-      <Name>titleScreenElement.2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\titleScreenElement.2.xnb</Output>
-      <Time>2012-07-15T10:33:38.3232595-04:00</Time>
-    </Item>
-    <Item>
-      <Source>titleScreenElement.3.png</Source>
-      <Name>titleScreenElement.3</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\titleScreenElement.3.xnb</Output>
-      <Time>2012-07-15T10:33:38.3282598-04:00</Time>
-    </Item>
-    <Item>
       <Source>titleScreenElement.4.png</Source>
       <Name>titleScreenElement.4</Name>
       <Importer>TextureImporter</Importer>
@@ -90,24 +54,6 @@
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\titleScreenElement.4.xnb</Output>
       <Time>2012-08-05T21:19:00.142684-04:00</Time>
-    </Item>
-    <Item>
-      <Source>titleScreenElement.5.png</Source>
-      <Name>titleScreenElement.5</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\titleScreenElement.5.xnb</Output>
-      <Time>2012-07-15T10:33:38.3402605-04:00</Time>
-    </Item>
-    <Item>
-      <Source>titleScreenElement.6.png</Source>
-      <Name>titleScreenElement.6</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\titleScreenElement.6.xnb</Output>
-      <Time>2012-07-15T10:33:38.3552614-04:00</Time>
     </Item>
     <Item>
       <Source>Font\ghost_42px_bold.bmp</Source>
@@ -161,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\RageQuit.xnb</Output>
-      <Time>2012-12-04T18:45:48.6807054-05:00</Time>
+      <Time>2012-12-15T01:58:51.7020901-05:00</Time>
     </Item>
     <Item>
       <Source>block1-2.png</Source>
@@ -207,15 +153,6 @@
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\block1-4.xnb</Output>
       <Time>2012-08-20T23:32:22.1073515-04:00</Time>
-    </Item>
-    <Item>
-      <Source>titleScreenElement.4 copy.png</Source>
-      <Name>titleScreenElement.4 copy</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\titleScreenElement.4 copy.xnb</Output>
-      <Time>2012-08-05T21:18:34.7882338-04:00</Time>
     </Item>
     <Item>
       <Source>LeverSelect.png</Source>
@@ -964,26 +901,6 @@
       <Time>2012-12-10T14:18:01.4918254-05:00</Time>
     </Item>
     <Item>
-      <Source>Music\GameBeat2.mp3</Source>
-      <Name>Music\GameBeat2</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\GameBeat2.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\GameBeat2.wma</Extra>
-      <Time>2012-09-21T13:33:57.4543493-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Music\ForrestSounds.mp3</Source>
-      <Name>Music\ForrestSounds</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\ForrestSounds.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\ForrestSounds.wma</Extra>
-      <Time>2012-10-01T09:52:07.0720296-04:00</Time>
-    </Item>
-    <Item>
       <Source>Rage\Wave\Opening.wav</Source>
       <Name>Rage\Wave\Opening</Name>
       <Importer>WavImporter</Importer>
@@ -991,6 +908,55 @@
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Rage\Wave\Opening.xnb</Output>
       <Time>2012-08-25T15:24:15.1099545-04:00</Time>
+    </Item>
+    <Item>
+      <Source>deathBall.png</Source>
+      <Name>deathBall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\deathBall.xnb</Output>
+      <Time>2012-12-16T11:15:44.3225267-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\05 Nostalgia.mp3</Source>
+      <Name>Music\05 Nostalgia</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\05 Nostalgia.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\05 Nostalgia.wma</Extra>
+      <Time>2012-12-16T15:48:12.7297466-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\01 Syntax Error.mp3</Source>
+      <Name>Music\01 Syntax Error</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\01 Syntax Error.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\01 Syntax Error.wma</Extra>
+      <Time>2012-12-16T15:48:12.2147171-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\03 Tokyo Escapade.mp3</Source>
+      <Name>Music\03 Tokyo Escapade</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\03 Tokyo Escapade.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\03 Tokyo Escapade.wma</Extra>
+      <Time>2012-12-16T15:48:12.2607198-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Alpha Black Magic.mp3</Source>
+      <Name>Music\Alpha Black Magic</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Alpha Black Magic.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Alpha Black Magic.wma</Extra>
+      <Time>2012-12-16T16:13:27.5823912-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

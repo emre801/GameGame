@@ -3,13 +3,7 @@ Content\black.xnb
 Content\Rage.xnb
 Content\block1-1.xnb
 Content\arena.xnb
-Content\titleScreenElement.0.xnb
-Content\titleScreenElement.1.xnb
-Content\titleScreenElement.2.xnb
-Content\titleScreenElement.3.xnb
 Content\titleScreenElement.4.xnb
-Content\titleScreenElement.5.xnb
-Content\titleScreenElement.6.xnb
 Content\Font\ghost_42px_bold.xnb
 Content\Font\share_20px_reg.xnb
 Content\Font\share_48px_bold.xnb
@@ -21,7 +15,6 @@ Content\Space.xnb
 Content\SpaceAir.xnb
 Content\block1-3.xnb
 Content\block1-4.xnb
-Content\titleScreenElement.4 copy.xnb
 Content\LeverSelect.xnb
 Content\SpaceDERP.xnb
 Content\outPut.xnb
@@ -112,11 +105,16 @@ Content\dirtBlockHigh.xnb
 Content\dirtBlockLong.xnb
 Content\grassTemplate.xnb
 Content\Error.xnb
-Content\Music\GameBeat2.xnb
-Content\Music\GameBeat2.wma
-Content\Music\ForrestSounds.xnb
-Content\Music\ForrestSounds.wma
 Content\Rage\Wave\Opening.xnb
+Content\deathBall.xnb
+Content\Music\05 Nostalgia.xnb
+Content\Music\05 Nostalgia.wma
+Content\Music\01 Syntax Error.xnb
+Content\Music\01 Syntax Error.wma
+Content\Music\03 Tokyo Escapade.xnb
+Content\Music\03 Tokyo Escapade.wma
+Content\Music\Alpha Black Magic.xnb
+Content\Music\Alpha Black Magic.wma
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

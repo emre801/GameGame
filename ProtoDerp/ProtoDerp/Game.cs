@@ -56,7 +56,7 @@ namespace ProtoDerp
         public GUI GUI { get; private set; }
 
         public Arena Arena { get; private set; }
-        LinkedList<Entity> toBeAdded = new LinkedList<Entity>();
+        public LinkedList<Entity> toBeAdded = new LinkedList<Entity>();
 
         TimeSpan pauseAdjustment = TimeSpan.Zero;
 
@@ -210,15 +210,16 @@ namespace ProtoDerp
             loadImageFromContent();
 
             //Load Sprites            
-            sprites.Add("fire0", new Sprite(Content, "fire0"));
+            /*sprites.Add("fire0", new Sprite(Content, "fire0"));
             sprites.Add("fire1", new Sprite(Content, "fire1"));
             sprites.Add("fire2", new Sprite(Content, "fire2"));
+             */
             sprites.Add("cloud", new Sprite(Content, "cloud"));
             blockList.AddLast("cloud");
-            sprites.Add("DeathTime", new Sprite(Content, "DeathTime"));
-            sprites.Add("black", new Sprite(Content,"black"));
-            sprites.Add("rage", new Sprite(Content, "rage"));
-            sprites.Add("dirtBlock", new Sprite(Content, "dirtBlock"));
+            //sprites.Add("DeathTime", new Sprite(Content, "DeathTime"));
+            ///sprites.Add("black", new Sprite(Content,"black"));
+            //sprites.Add("rage", new Sprite(Content, "rage"));
+            //sprites.Add("dirtBlock", new Sprite(Content, "dirtBlock"));
             
             sprites.Add("grassTemplate", new Sprite(Content, "grassTemplate"));
             blockList.AddLast("grassTemplate");
@@ -273,14 +274,15 @@ namespace ProtoDerp
             sprites.Add("SpaceDERP", new Sprite(Content, "SpaceDERP"));
             
             sprites.Add("arena", new Sprite(Content, "arena")); 
-            
+            /*
             sprites.Add("titleScreenElement.0", new Sprite(Content, "titleScreenElement.0")); //Logo Text
             sprites.Add("titleScreenElement.1", new Sprite(Content, "titleScreenElement.1")); //Logo Gear
             sprites.Add("titleScreenElement.2", new Sprite(Content, "titleScreenElement.2", new Vector2(547, 0))); //Selection Inside
-            sprites.Add("titleScreenElement.3", new Sprite(Content, "titleScreenElement.3", new Vector2(547, 0))); //Selection Border
+            */
+            //sprites.Add("titleScreenElement.3", new Sprite(Content, "titleScreenElement.3", new Vector2(547, 0))); //Selection Border
             sprites.Add("titleScreenElement.4", new Sprite(Content, "titleScreenElement.4", new Vector2(335, 0))); //Selection Text
-            sprites.Add("titleScreenElement.5", new Sprite(Content, "titleScreenElement.5", new Vector2(75, 70))); //Long Clock Hand
-            sprites.Add("titleScreenElement.6", new Sprite(Content, "titleScreenElement.6", new Vector2(40, 70))); //Short Clock Hand
+            //sprites.Add("titleScreenElement.5", new Sprite(Content, "titleScreenElement.5", new Vector2(75, 70))); //Long Clock Hand
+            //sprites.Add("titleScreenElement.6", new Sprite(Content, "titleScreenElement.6", new Vector2(40, 70))); //Short Clock Hand
             
             sprites.Add("pix", new Sprite(Content, "pix"));
             sprites.Add("Circle", new Sprite(Content, "Circle"));
@@ -380,6 +382,7 @@ namespace ProtoDerp
             addEntity(levelSelect);
            
             //playSong("Music//GameBeat2");
+            preloadSongs();
              
         
         }
@@ -463,9 +466,8 @@ namespace ProtoDerp
         {
             //MediaPlayer.Stop();
 
-            if (MediaPlayer.State == MediaState.Stopped)
+            if (MediaPlayer.State != MediaState.Playing)
             {
-                
                 Song song = Content.Load<Song>(songName);
                 this.songArtist=song.Artist.Name;
                 this.songName = songName.Substring(songName.IndexOf("\\")+1);
@@ -474,10 +476,25 @@ namespace ProtoDerp
                 MediaPlayer.Volume = 0.2f;
             }
         }
+        public void preloadSongs()
+        {
+            DirectoryInfo di = new DirectoryInfo(Content.RootDirectory + "\\Music");
+            FileInfo[] fi = di.GetFiles("*", SearchOption.AllDirectories);
+            foreach (FileInfo fInfo in fi)
+            {
+                String songName = fInfo.Name;
+                songName = songName.Substring(0, songName.IndexOf("."));
+
+                Song song = Content.Load<Song>("Music\\"+songName);
+                MediaPlayer.Play(song);
+                MediaPlayer.Pause();
+            }
+
+        }
 
         public void playRandonSong()
         {
-            if (MediaPlayer.State == MediaState.Stopped)
+            if (MediaPlayer.State != MediaState.Playing)
             {
                 DirectoryInfo di = new DirectoryInfo(Content.RootDirectory + "\\Music");
                 FileInfo[] fi = di.GetFiles("*", SearchOption.AllDirectories);
@@ -596,7 +613,7 @@ namespace ProtoDerp
             {
                 isPausePressed = false;
                
-                if (gMode == 0)
+                if (gMode == 0 && !deathAnimation && !winningAnimation)
                 {
                     pauseMusic();
                     if (pause)
@@ -608,7 +625,7 @@ namespace ProtoDerp
             }
             pauseAlpha = 1f;
             if (pause)
-            {
+           { 
                 pauseAlpha = 0.25f;
                 return;
             }
@@ -651,6 +668,8 @@ namespace ProtoDerp
                 e.OnAddedToGame(e.updatesWhenPaused ? gameTime : pauseAdjustedGameTime);
             }
 
+            toBeAdded.Clear();
+
             foreach (Entity e in entities)
             {
                 if (e.IsUpdateable && !e.dispose)
@@ -685,15 +704,10 @@ namespace ProtoDerp
                 animationTime.Stop();
                 TimeSpan ts = animationTime.Elapsed;
                 animationTime.Start();
-                if (ts.CompareTo(new TimeSpan(0, 0, 2)) > 0)
+                ballPosition += 30;
+                if (ts.CompareTo(new TimeSpan(0, 0, 0,0,500)) > 0)
                 {
-                    //entities.Clear();
-                    //clearEntities();
-                    //cachedEntityLists = new Dictionary<Type, object>();
-                    //currentLevel = level;
-                    //winningAnimation = false;
                     loadNewLevel = true;
-                    //return;
                 }
             }
             if (deathAnimation == true)

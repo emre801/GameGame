@@ -675,6 +675,7 @@ namespace ProtoDerp
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            //game.toBeAdded.Clear();
             if (!game.inDeleteMode)
             {
                 //spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);

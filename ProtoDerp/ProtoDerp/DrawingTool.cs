@@ -570,7 +570,7 @@ namespace ProtoDerp
                 }
             }
             if (game.Arena != null) 
-                game.Arena.Draw(gameTime, spriteBatch);
+               game.Arena.Draw(gameTime, spriteBatch);
                 
             endBatch();
 

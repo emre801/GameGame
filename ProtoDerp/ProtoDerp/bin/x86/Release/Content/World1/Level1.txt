@@ -48,10 +48,6 @@
 783 -124 GreenHill Block 525 690 1 0
 -844 -112 GreenHill Block 525 690 1 0
 1793 -155 GreenHill Block 525 690 1 0
-141 -378 derrick.png Block 105 75 0 0
-523 -160 derrick.png Block 105 75 0 0
-370 -390 derrick.png Block 105 75 0 0
-170 -203 derrick.png Block 105 75 0 0
 -228 -882 deathSpikes4 DeathBlock 0
 -228 -777 deathSpikes4 DeathBlock 0
 -228 -657 deathSpikes4 DeathBlock 0
