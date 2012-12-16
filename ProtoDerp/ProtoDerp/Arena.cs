@@ -36,6 +36,11 @@ namespace ProtoDerp
         public GUI gui;
         public Button[] buttons;
 
+        Sprite deathBall;
+        int pulse = 0;
+        bool pulseUp = true;
+        
+
         /**
          * Constructor
          */
@@ -69,6 +74,7 @@ namespace ProtoDerp
                 buttons[bCounter] = b;
                 bCounter++;
             }
+            deathBall = game.getSprite("deathBall");
         }
 
         public void setUpDemensions(float maxLeft, float maxRight, float maxTop, float maxButtom)
@@ -123,6 +129,7 @@ namespace ProtoDerp
                 game.playRandonSong();
 
             }
+            
 
             base.Update(gameTime, worldFactor);
         }
@@ -146,6 +153,58 @@ namespace ProtoDerp
                     DrawText(spriteBatch, game.Arena.maxRight, i, "*");
                 }
             }
+
+            if (game.deathAnimation)
+            {
+
+                if (pulseUp)
+                {
+                    pulse++;
+                    if (pulse == 20)
+                        pulseUp = false;
+                }
+                else
+                {
+                    pulse--;
+                    if (pulse == 0)
+                        pulseUp = true;
+                }
+
+                spriteBatch.Draw(deathBall.index, new Rectangle(
+                    (int)ConvertUnits.ToDisplayUnits(player1.body.Position.X)+game.ballPosition, (int)ConvertUnits.ToDisplayUnits(player1.body.Position.Y),
+                    (int)10 + pulse, (int)10 + pulse), null, Color.White, 0, player1.origin, SpriteEffects.None, 0f);
+
+                spriteBatch.Draw(deathBall.index, new Rectangle(
+                    (int)ConvertUnits.ToDisplayUnits(player1.body.Position.X) - game.ballPosition, (int)ConvertUnits.ToDisplayUnits(player1.body.Position.Y),
+                    (int)10 + pulse, (int)10 + pulse), null, Color.White, 0, player1.origin, SpriteEffects.None, 0f);
+                
+                spriteBatch.Draw(deathBall.index, new Rectangle(
+                    (int)ConvertUnits.ToDisplayUnits(player1.body.Position.X), (int)ConvertUnits.ToDisplayUnits(player1.body.Position.Y)+game.ballPosition,
+                    (int)10 + pulse, (int)10 + pulse), null, Color.White, 0, player1.origin, SpriteEffects.None, 0f);
+                
+                spriteBatch.Draw(deathBall.index, new Rectangle(
+                    (int)ConvertUnits.ToDisplayUnits(player1.body.Position.X), (int)ConvertUnits.ToDisplayUnits(player1.body.Position.Y)-game.ballPosition,
+                    (int)10 + pulse, (int)10 + pulse), null, Color.White, 0, player1.origin, SpriteEffects.None, 0f);
+
+
+                spriteBatch.Draw(deathBall.index, new Rectangle(
+                    (int)ConvertUnits.ToDisplayUnits(player1.body.Position.X) + game.ballPosition, (int)ConvertUnits.ToDisplayUnits(player1.body.Position.Y)-game.ballPosition,
+                    (int)10 + pulse, (int)10 + pulse), null, Color.White, 0, player1.origin, SpriteEffects.None, 0f);
+
+                spriteBatch.Draw(deathBall.index, new Rectangle(
+                    (int)ConvertUnits.ToDisplayUnits(player1.body.Position.X) - game.ballPosition, (int)ConvertUnits.ToDisplayUnits(player1.body.Position.Y) - game.ballPosition,
+                    (int)10 + pulse, (int)10 + pulse), null, Color.White, 0, player1.origin, SpriteEffects.None, 0f);
+
+                spriteBatch.Draw(deathBall.index, new Rectangle(
+                    (int)ConvertUnits.ToDisplayUnits(player1.body.Position.X) - game.ballPosition, (int)ConvertUnits.ToDisplayUnits(player1.body.Position.Y) + game.ballPosition,
+                    (int)10 + pulse, (int)10 + pulse), null, Color.White, 0, player1.origin, SpriteEffects.None, 0f);
+
+                spriteBatch.Draw(deathBall.index, new Rectangle(
+                    (int)ConvertUnits.ToDisplayUnits(player1.body.Position.X) + game.ballPosition, (int)ConvertUnits.ToDisplayUnits(player1.body.Position.Y) + game.ballPosition,
+                    (int)10 + pulse, (int)10 + pulse), null, Color.White, 0, player1.origin, SpriteEffects.None, 0f);
+
+            }
+
             base.Draw(gameTime, spriteBatch);
         }
 

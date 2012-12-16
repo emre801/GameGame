@@ -1012,6 +1012,25 @@
       <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\03 Tokyo Escapade.wma</Extra>
       <Time>2012-12-15T16:15:14.4964523-05:00</Time>
     </Item>
+    <Item>
+      <Source>Music\Pins and Needles.mp3</Source>
+      <Name>Music\Pins and Needles</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Pins and Needles.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Pins and Needles.wma</Extra>
+      <Time>2012-12-15T19:45:30.6550553-05:00</Time>
+    </Item>
+    <Item>
+      <Source>deathBall.png</Source>
+      <Name>deathBall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\deathBall.xnb</Output>
+      <Time>2012-12-16T11:15:44.3225267-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

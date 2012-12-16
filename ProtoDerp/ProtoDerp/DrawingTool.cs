@@ -569,7 +569,9 @@ namespace ProtoDerp
                     e.Draw(gameTime, spriteBatch);
                 }
             }
-
+            if (game.Arena != null) 
+                game.Arena.Draw(gameTime, spriteBatch);
+                
             endBatch();
 
             //foreach (Block i in topBlocks)
@@ -579,7 +581,6 @@ namespace ProtoDerp
             {
                 spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
                 game.Arena.gui.Draw(gameTime, spriteBatch);
-
                 foreach (Button b in game.Arena.buttons)
                 {
                     b.Draw(gameTime, spriteBatch);

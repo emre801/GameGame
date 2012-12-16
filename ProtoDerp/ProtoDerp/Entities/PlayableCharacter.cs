@@ -460,6 +460,9 @@ namespace ProtoDerp
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            if (game.deathAnimation || game.winningAnimation)
+                return;
+
             Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
             DrawingTool test = game.drawingTool;
             float width = playerSprite.index.Width;

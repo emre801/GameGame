@@ -50,6 +50,7 @@ namespace ProtoDerp
         {
             float zoom=game.drawingTool.cam.Zoom;
             keyInput.Update(gameTime);
+            
             //spriteBatch.Draw(pix.index, new Rectangle(5,5,100,100), Color.White);
             if (game.pause)
             {
@@ -72,6 +73,7 @@ namespace ProtoDerp
                     if (pauseSelection == 0.45f)
                     {
                         game.backToTitleScreen = true;
+                        MediaPlayer.Stop();
                     }
                     game.stopWatch.Start();
                     game.pause = false;
@@ -88,6 +90,10 @@ namespace ProtoDerp
             {
                 //DrawBackThing(gameTime, spriteBatch);
                 DrawCredits(gameTime, spriteBatch);
+
+                DrawText(spriteBatch, 0.05f, 0.9f, game.songName);
+                if(!game.songArtist.Equals(""))
+                DrawText(spriteBatch, 0.05f, 0.95f,  "by "+game.songArtist);
 
             }
             if (game.gMode == 2)

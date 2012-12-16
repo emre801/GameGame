@@ -34,6 +34,14 @@
 639 63 grassTemplate Block 35 256 2 0
 895 63 grassTemplate Block 35 256 2 0
 970 63 grassTemplate Block 35 256 2 0
+-254 -819 grassTemplate Block 35 256 2 90
+-254 -566 grassTemplate Block 35 256 2 90
+-254 -314 grassTemplate Block 35 256 2 90
+-254 -63 grassTemplate Block 35 256 2 90
+1105 -63 grassTemplate Block 35 256 2 270
+1105 -318 grassTemplate Block 35 256 2 270
+1105 -574 grassTemplate Block 35 256 2 270
+1105 -820 grassTemplate Block 35 256 2 270
 1085 -370 deathSpikes3 DeathBlock 0
 1085 -240 deathSpikes3 DeathBlock 0
 -228 -882 deathSpikes4 DeathBlock 0

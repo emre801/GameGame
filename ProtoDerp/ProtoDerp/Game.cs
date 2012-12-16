@@ -112,6 +112,10 @@ namespace ProtoDerp
         public bool isButtonSelect = false;
         public bool isSelectingBlock = false;
         public int blockCounter = 9;
+        public String songName= "",songArtist="";
+
+        public int ballPosition = 0;
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -257,6 +261,9 @@ namespace ProtoDerp
 
             sprites.Add("deathSpikes4", new Sprite(Content, "deathSpikes4"));
             blockList.AddLast("deathSpikes4");
+
+            sprites.Add("deathBall", new Sprite(Content, "deathBall"));
+            blockList.AddLast("deathBall");
 
             sprites.Add("Error", new Sprite(Content, "Error"));
             blockList.AddLast("Error");
@@ -446,7 +453,8 @@ namespace ProtoDerp
             //newLevel();
             currentLevel = level;
             winningAnimation = true;
-            animationTime.Reset();
+            animationTime = new Stopwatch();
+            //animationTime.Reset();
             animationTime.Start();
             //loadNewLevel = true;
         }
@@ -457,7 +465,10 @@ namespace ProtoDerp
 
             if (MediaPlayer.State == MediaState.Stopped)
             {
+                
                 Song song = Content.Load<Song>(songName);
+                this.songArtist=song.Artist.Name;
+                this.songName = songName.Substring(songName.IndexOf("\\")+1);
                 MediaPlayer.Play(song);
                 MediaPlayer.IsRepeating = false;
                 MediaPlayer.Volume = 0.2f;
@@ -570,19 +581,24 @@ namespace ProtoDerp
                 restart = false;
                 loadNewLevel = false;
                 cachedEntityLists.Clear();
+                deathAnimation = false;
+                winningAnimation = false;
+                ballPosition = 0;
                
                 newLevel();
                 drawingTool.resetCamera();
                 Arena.setUpDemensions(maxLeft, maxRight, maxTop, maxButtom);
                 if (gMode == 2)
                     reloadButtons = true;
+                animationTime = new Stopwatch();
             }
             if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Back) || isPausePressed)
             {
                 isPausePressed = false;
-                pauseMusic();
+               
                 if (gMode == 0)
                 {
+                    pauseMusic();
                     if (pause)
                         stopWatch.Stop();
                     pause = !pause;
@@ -675,7 +691,7 @@ namespace ProtoDerp
                     //clearEntities();
                     //cachedEntityLists = new Dictionary<Type, object>();
                     //currentLevel = level;
-                    winningAnimation = false;
+                    //winningAnimation = false;
                     loadNewLevel = true;
                     //return;
                 }
@@ -686,11 +702,12 @@ namespace ProtoDerp
                 TimeSpan ts = animationTime.Elapsed;
                 animationTime.Start();
                 count++;
-                if (ts.CompareTo(new TimeSpan(0, 0, 0)) > 0)
+                ballPosition+=50;
+                if (ts.CompareTo(new TimeSpan(0, 0, 0,0,300)) > 0|| playerOneInput.isAPressed())
                 {
-                    deathAnimation = false;
+                    //deathAnimation = false;
                     restart = true;
-                    animationTime.Restart();
+                    //animationTime.Restart();
                     //return;
                 }
             }

@@ -73,7 +73,7 @@ namespace ProtoDerp
                         game.gMode = 0;
                         game.isInLevelSelect = false;
                         //game.playSong("Music//ForrestSounds");
-                        //game.playRandonSong();
+                        game.playRandonSong();
                         game.populateWorld();
                         game.drawingTool.cam.Zoom = 0.55f * game.drawingTool.zoomRatio;
                         this.isVisible = false;

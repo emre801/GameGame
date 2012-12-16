@@ -121,6 +121,9 @@ Content\Music\01 Syntax Error.xnb
 Content\Music\01 Syntax Error.wma
 Content\Music\03 Tokyo Escapade.xnb
 Content\Music\03 Tokyo Escapade.wma
+Content\Music\Pins and Needles.xnb
+Content\Music\Pins and Needles.wma
+Content\deathBall.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt
