@@ -118,6 +118,12 @@ namespace ProtoDerp
 
             }
 
+            if (MediaPlayer.State == MediaState.Stopped)
+            {
+                game.playRandonSong();
+
+            }
+
             base.Update(gameTime, worldFactor);
         }
 

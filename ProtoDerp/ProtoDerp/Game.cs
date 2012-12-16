@@ -459,7 +459,8 @@ namespace ProtoDerp
             {
                 Song song = Content.Load<Song>(songName);
                 MediaPlayer.Play(song);
-                MediaPlayer.IsRepeating = true;
+                MediaPlayer.IsRepeating = false;
+                MediaPlayer.Volume = 0.2f;
             }
         }
 
@@ -579,6 +580,7 @@ namespace ProtoDerp
             if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Back) || isPausePressed)
             {
                 isPausePressed = false;
+                pauseMusic();
                 if (gMode == 0)
                 {
                     if (pause)
@@ -586,6 +588,7 @@ namespace ProtoDerp
                     pause = !pause;
                     return;
                 }
+                
             }
             pauseAlpha = 1f;
             if (pause)
@@ -697,6 +700,15 @@ namespace ProtoDerp
             base.Update(gameTime);
 
         }
+        public void pauseMusic()
+        {
+            if (MediaPlayer.State == MediaState.Playing)
+                MediaPlayer.Pause();
+            else if (MediaPlayer.State == MediaState.Paused)
+                MediaPlayer.Resume();
+
+        }
+
 
         protected override void Draw(GameTime gameTime)
         {
