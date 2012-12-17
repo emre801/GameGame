@@ -101,6 +101,9 @@ namespace ProtoDerp
            // KeyboardState keyState = Keyboard.GetState();
             ani.Update();
             keyInput.Update(gameTime);
+            //if (Keyboard.GetState().GetPressedKeys().Length == 0)
+                //return;
+
             if (keyInput.IsNewKeyPressed(Keys.M))
             {
                 blockIterater = 0;
@@ -254,8 +257,10 @@ namespace ProtoDerp
             if (keyInput.IsNewKeyPressed(Keys.V))
             {
                 game.loadNewLevel = true;
-                this.dispose = true;
+                //this.dispose = true;
                 game.currentWriteLevel = game.gameTemplateLevel;
+                //game.clearEntities();
+                return;
             }
             if (keyInput.IsNewKeyPressed(Keys.B))
             {

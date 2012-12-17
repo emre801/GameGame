@@ -30,6 +30,15 @@
 672 -1762 grassTemplate Block 20 256 2 90
 672 -2011 grassTemplate Block 20 256 2 90
 672 -2071 grassTemplate Block 20 256 2 90
+838 -70 grassTemplate Block 20 256 2 270
+836 -323 grassTemplate Block 20 256 2 270
+836 -573 grassTemplate Block 20 256 2 270
+836 -825 grassTemplate Block 20 256 2 270
+836 -1075 grassTemplate Block 20 256 2 270
+836 -1328 grassTemplate Block 20 256 2 270
+836 -1582 grassTemplate Block 20 256 2 270
+836 -1707 grassTemplate Block 20 256 2 270
+954 -1832 grassTemplate Block 30 226 2 0
 622 -180 deathSpikes3 DeathBlock 0
 625 -302 deathSpikes3 DeathBlock 0
 622 -420 deathSpikes3 DeathBlock 0

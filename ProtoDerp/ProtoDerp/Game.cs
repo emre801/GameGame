@@ -85,9 +85,9 @@ namespace ProtoDerp
         public float saveAlpha = 0;
 
         public bool inDeleteMode = false;
-        public int gameTemplateLevel = 1;
+        public int gameTemplateLevel = Constants.WRITE_LEVEL;
 
-        public bool loadFromLevel = false;
+        public bool loadFromLevel = true;
         public int drawLevel = 0;
 
         public bool testLevel = false;
@@ -115,6 +115,7 @@ namespace ProtoDerp
         public String songName= "",songArtist="";
 
         public int ballPosition = 0;
+        public bool activateButtons = false;
 
         public Game()
         {
@@ -125,7 +126,7 @@ namespace ProtoDerp
             ConvertUnits.SetDisplayUnitToSimUnitRatio(30);
             //graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            IsFixedTimeStep = false;
+            IsFixedTimeStep = true;
             drawingTool = new DrawingTool(this);
             numDeath = 0;            
         }
@@ -601,13 +602,14 @@ namespace ProtoDerp
                 deathAnimation = false;
                 winningAnimation = false;
                 ballPosition = 0;
-               
+                entities.Clear();
                 newLevel();
                 drawingTool.resetCamera();
                 Arena.setUpDemensions(maxLeft, maxRight, maxTop, maxButtom);
                 if (gMode == 2)
                     reloadButtons = true;
-                animationTime = new Stopwatch();
+                animationTime.Reset();
+                return;
             }
             if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Back) || isPausePressed)
             {
@@ -674,15 +676,24 @@ namespace ProtoDerp
             {
                 if (e.IsUpdateable && !e.dispose)
                 {
+                    
+
                     if (e.updatesWhenPaused)
                     {
                         // Entities which continue to update when the game is paused receive the unmodified gametime
-                        e.Update(gameTime, WorldSpeed);
+                        if (e is CreaterBlock || e is Button)
+                            e.Update(gameTime, WorldSpeed);
                     }
                     else if (!isPaused)
                     {
                         // All others receive the modified one.
-                        e.Update(pauseAdjustedGameTime, WorldSpeed);
+                        if (gMode == 2)
+                        {
+                            //if (!(e is CreaterBlock || e is Button))
+                                e.Update(pauseAdjustedGameTime, WorldSpeed);
+                        }
+                        else
+                                e.Update(pauseAdjustedGameTime, WorldSpeed);
                     }
                 }
                 if (e.dispose)

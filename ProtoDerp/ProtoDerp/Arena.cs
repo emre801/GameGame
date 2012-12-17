@@ -142,6 +142,7 @@ namespace ProtoDerp
             //spriteBatch.Draw(background.index, new Rectangle(0, 0, 8000, 8000), null, Color.White, 0, origin, SpriteEffects.None, 0f);
             if (game.isInCreatorMode)
             {
+                /*
                 for (int i = (int)game.Arena.maxLeft; i < game.Arena.maxRight; i++)
                 {
                     DrawText(spriteBatch, i, game.Arena.maxTop, "*");
@@ -151,7 +152,7 @@ namespace ProtoDerp
                 {
                     DrawText(spriteBatch, game.Arena.maxLeft, i, "*");
                     DrawText(spriteBatch, game.Arena.maxRight, i, "*");
-                }
+                }*/
             }
 
             if (game.deathAnimation)

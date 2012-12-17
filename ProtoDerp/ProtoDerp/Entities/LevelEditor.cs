@@ -160,6 +160,17 @@ namespace ProtoDerp
                         j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
                    }
             }
+
+
+            foreach (DeathBlock i in deathBlocks)
+            {
+                foreach (DeathBlock j in deathBlocks)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                        j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+
+                }
+            }
             SortedSet<Entity> omg=game.entities;
 
         }

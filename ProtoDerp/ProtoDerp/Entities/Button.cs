@@ -53,7 +53,7 @@ namespace ProtoDerp
 
         public override void Update(GameTime gameTime, float worldSpeed)
         {
-            if (game.gMode==2)
+            if (game.gMode==2 && game.activateButtons)
             {
                 if (isColliding())
                 {
@@ -90,7 +90,7 @@ namespace ProtoDerp
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            if (game.gMode==2)
+            if (game.gMode == 2 && game.activateButtons)
             {
                 if (game.spriteBlockCounter == spritePos)
                 {
