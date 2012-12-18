@@ -100,6 +100,8 @@
 747 3354 grassTemplate Block 35 256 2 270
 747 3598 grassTemplate Block 35 256 2 270
 747 3838 grassTemplate Block 35 256 2 270
+242 -420 derrick.png Block 105 75 0 0
+308 -91 derrick.png Block 105 75 0 0
 1251 233 deathSpikes3 DeathBlock 0
 1251 357 deathSpikes3 DeathBlock 0
 1251 484 deathSpikes3 DeathBlock 0

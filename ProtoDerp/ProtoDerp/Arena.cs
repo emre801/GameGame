@@ -53,10 +53,10 @@ namespace ProtoDerp
             this.scale = (float)Constants.GAME_WORLD_WIDTH / (float)background.index.Width;
             player1.LoadContent();
             background = game.getSprite("clouds");
-            maxLeft = -100;
-            maxRight = 800;
-            maxTop = -800;
-            maxButtom = 300;
+            maxLeft = game.maxLeft;
+            maxRight = game.maxRight;
+            maxTop = game.maxTop;
+            maxButtom = game.maxButtom;
             gui = new GUI(g);
             buttons = new Button[g.blockCounter-9];
             int bCounter = 0;
@@ -142,17 +142,21 @@ namespace ProtoDerp
             //spriteBatch.Draw(background.index, new Rectangle(0, 0, 8000, 8000), null, Color.White, 0, origin, SpriteEffects.None, 0f);
             if (game.isInCreatorMode)
             {
-                /*
-                for (int i = (int)game.Arena.maxLeft; i < game.Arena.maxRight; i++)
+                Texture2D blank = new Texture2D(game.drawingTool.getGraphicsDevice(), 1, 1, false, SurfaceFormat.Color);
+                blank.SetData(new[] { Color.White });
+                Color colo=Color.Red;
+                PlayableCharacter p1 = game.Arena.player1;
+                if (game.Arena.maxLeft < p1.Position.X && game.Arena.maxRight > p1.Position.X
+                && game.Arena.maxTop < p1.Position.Y && game.Arena.maxButtom > p1.Position.Y)
                 {
-                    DrawText(spriteBatch, i, game.Arena.maxTop, "*");
-                    DrawText(spriteBatch, i, game.Arena.maxButtom, "*");
+                    colo = Color.Green;
                 }
-                for (int i = (int)game.Arena.maxTop; i < game.Arena.maxButtom; i++)
-                {
-                    DrawText(spriteBatch, game.Arena.maxLeft, i, "*");
-                    DrawText(spriteBatch, game.Arena.maxRight, i, "*");
-                }*/
+
+                DrawLine(spriteBatch, blank, 5, colo, new Vector2(maxRight, maxTop), new Vector2(maxLeft, maxTop));
+                DrawLine(spriteBatch, blank, 5, colo, new Vector2(maxRight, maxButtom), new Vector2(maxLeft, maxButtom));
+                DrawLine(spriteBatch, blank, 5, colo, new Vector2(maxRight, maxTop), new Vector2(maxRight, maxButtom));
+                DrawLine(spriteBatch, blank, 5, colo, new Vector2(maxLeft, maxButtom), new Vector2(maxLeft, maxTop));
+
             }
 
             if (game.deathAnimation)
@@ -239,11 +243,23 @@ namespace ProtoDerp
                     0f,
                     Vector2.Zero,
                     //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
-                    game.drawingTool.gameToScreen(1f) * 0.25f,
+                    game.drawingTool.gameToScreen(1f) * 5.25f,
                     SpriteEffects.None,
                     0);
 
         }
+
+        public void DrawLine(SpriteBatch batch, Texture2D blank,
+              float width, Color color, Vector2 point1, Vector2 point2)
+        {
+            float angle = (float)Math.Atan2(point2.Y - point1.Y, point2.X - point1.X);
+            float length = Vector2.Distance(point1, point2);
+
+            batch.Draw(blank, point1, null, color,
+                       angle, Vector2.Zero, new Vector2(length, width),
+                       SpriteEffects.None, 0);
+        }
+
         /**
          *  Disposes of all entities in the arena, in preparation for moving to another game state.
          */

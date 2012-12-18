@@ -240,6 +240,9 @@ namespace ProtoDerp
                     blockInfo += "Magnet";
                     DrawText(spriteBatch, 0.065f, 0.875f, "X:"+game.magnetPulse.X + "Y:" + game.magnetPulse.Y);
                     break;
+                case Game.BlockType.Path:
+                    blockInfo += "PathBlock";
+                    break;
 
             }
             DrawText(spriteBatch, 0.065f, 0.85f, blockInfo);

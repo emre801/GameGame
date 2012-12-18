@@ -77,7 +77,7 @@ namespace ProtoDerp
         public float maxLeft, maxRight, maxTop, maxButtom;
         public int count = 0;
 
-        public enum BlockType { Normal, Death, Moving, Goal, Magnet };
+        public enum BlockType { Normal, Death, Moving, Goal, Magnet,Path };
         public BlockType blockType = BlockType.Normal;
 
         public float cXLocation=0, cYLocation=0;
@@ -115,7 +115,7 @@ namespace ProtoDerp
         public String songName= "",songArtist="";
 
         public int ballPosition = 0;
-        public bool activateButtons = false;
+        public bool activateButtons = true;
 
         public Game()
         {

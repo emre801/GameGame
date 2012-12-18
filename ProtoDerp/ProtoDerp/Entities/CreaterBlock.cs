@@ -51,7 +51,9 @@ namespace ProtoDerp
         public bool incrementXMagnetValue;
         SpriteStripAnimationHandler ani;
         float rotation = 0;
-
+        Vector2 point1 = new Vector2(0, 0), point2 = new Vector2(0, 0);
+        bool clickOne = false;
+        bool clickTwo = false;
         public CreaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
             : base(g)
         {
@@ -70,6 +72,7 @@ namespace ProtoDerp
             oldMouse = Mouse.GetState();
             oldMouseValue = Mouse.GetState().ScrollWheelValue;
             //magnetPulse = new Vector2(-20, 0);
+            
 
             
         }
@@ -403,6 +406,10 @@ namespace ProtoDerp
                     game.blockType = Game.BlockType.Magnet;
                     game.cachedEntityLists = new Dictionary<Type, object>();
                     break;
+                case 5:
+                    game.blockType = Game.BlockType.Path;
+                    game.cachedEntityLists = new Dictionary<Type, object>();
+                    break;
             }
 
         }
@@ -644,6 +651,19 @@ namespace ProtoDerp
                     case Game.BlockType.Magnet:
                         game.addEntity(new MagnetBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], game.magnetPulse, blockHeight, blockWidth));
                         break;
+                    case Game.BlockType.Path:
+                        if (!clickOne)
+                        {
+                            point1 = origin;
+                            clickOne = true;
+                        }
+                        else
+                        {
+                            clickOne = false;
+                            game.addEntity(new MovingPath(game, game.Arena, point1, 1, blockArray[game.spriteBlockCounter], 2, point1 + Constants.player1SpawnLocation, origin + Constants.player1SpawnLocation, false));
+                        }
+                        break;
+
 
                 }
             }
@@ -678,6 +698,13 @@ namespace ProtoDerp
             game.addEntity(new MovingDeath(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter], new Vector2(1,0),2 ));
         
         }
+
+        public void addPathBlock()
+        {
+
+            game.addEntity(new MovingPath(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter], 2, point1, point2, false));
+        }
+
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             //game.toBeAdded.Clear();
