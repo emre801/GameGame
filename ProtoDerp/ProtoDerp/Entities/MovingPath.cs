@@ -39,9 +39,10 @@ namespace ProtoDerp
         public Fixture origFix;
         SpriteStripAnimationHandler ani;
         float width, height;
-        Vector2 point1, point2;
+        public Vector2 point1, point2;
         Vector2 path;
         bool moveDirection = false;
+        Vector2 validPoint;
         public MovingPath(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber, float velObj,
             Vector2 point1,Vector2 point2, bool isDeath)
             : base(g)
@@ -69,6 +70,9 @@ namespace ProtoDerp
                 //y = 0;
             ///this.path = point1 - point2;// new Vector2(x * 2, -y * 2);
             this.path = new Vector2(x, y);
+            this.validPoint = ConvertUnits.ToSimUnits(point1);
+            body.ApplyLinearImpulse(path);
+            setMoveDirection();
         }
         bool OnCollision(Fixture fixtureA, Fixture fixtureB, Contact contact)
         {
@@ -79,14 +83,7 @@ namespace ProtoDerp
                 if (fixtureB == player.fixture)
                 {
                     if(game.gMode!=2)
-                        if(isDeath)
                             game.PlayerDies();
-                }
-                else
-                {
-                    //If it collids with something other than the player switch direction
-                    moveDirection = !moveDirection;
-
                 }
             }
             return true;
@@ -95,6 +92,8 @@ namespace ProtoDerp
         protected virtual void SetUpPhysics(Vector2 position)
         {
             World world = game.world;
+            if (game.gMode == 2)
+                world = game.world2;
             float mass = 1;
             this.width = ani.widthOf();
             this.height = ani.heightOf();
@@ -178,30 +177,56 @@ namespace ProtoDerp
         public override void Update(GameTime gameTime, float worldSpeed)
         {
             ani.Update();
-            //body.LinearVelocity = path;
-            if (isBetween())
+            if (game.gMode != 2)
             {
-                setMoveDirection();
+                if (isBetween())
+                {
+                    setMoveDirection();
+                    validPoint = body.Position;
+                }
+                else
+                {
+                    moveDirection = !moveDirection;
+                    body.Position = validPoint;
+                    setMoveDirection();
+                }
+                moveObject(gameTime);
+            }
+            
+        }
+        public void moveObject(GameTime gameTime)
+        {
+            Vector2 velo;
+            if (!moveDirection)
+            {
 
+                velo = -path * velObj;// *0.001f;
             }
             else
             {
-                moveDirection = !moveDirection;
-                setMoveDirection();
+                velo = path * velObj;// *0.001f;
             }
-            
+
+            body.ApplyForce(velo);
+            /*
+            float step = (float)(gameTime.ElapsedGameTime.TotalMilliseconds * 0.002f);
+            float xDis = (float)(velo.X * step);
+            float yDis = (float)(velo.Y * step);
+            body.Position = new Vector2(body.Position.X + xDis, body.Position.Y + yDis);
+             * */
+
         }
 
         public void setMoveDirection()
         {
-            if (moveDirection)
+            if (!moveDirection)
             {
 
-                body.LinearVelocity = -path;// *0.001f;
+                body.LinearVelocity = -path*velObj;// *0.001f;
             }
             else
             {
-                body.LinearVelocity = path;// *0.001f;
+                body.LinearVelocity = path*velObj;// *0.001f;
             }
         }
 
@@ -212,7 +237,7 @@ namespace ProtoDerp
             Vector2 b = ConvertUnits.ToSimUnits(point2);
             Vector2 c= body.Position;
             float crossProduct = (c.Y - a.Y) * (b.X - a.X) - (c.X - a.X) * (b.Y - a.Y);
-            if (Math.Abs(crossProduct) >= 2)
+            if (Math.Abs(crossProduct) == 0)
                 return false;
             float dotProduct = (c.X - a.X) * (b.X - a.X) + (c.Y - a.Y) * (b.Y - a.Y);
             if (dotProduct < 0)
@@ -246,8 +271,8 @@ namespace ProtoDerp
                        origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),
                            (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), true, new Vector2(0, 0));
             }
-
-            game.drawingTool.DrawLine(spriteBatch, 2, Color.Yellow, point1, point2);
+            if(game.gMode==2)
+                game.drawingTool.DrawLine(spriteBatch, 2, Color.Yellow, point1, point2);
         }
 
         private void drawHealthBar()

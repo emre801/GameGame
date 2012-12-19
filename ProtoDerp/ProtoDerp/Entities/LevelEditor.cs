@@ -37,6 +37,7 @@ namespace ProtoDerp
         LinkedList<MagnetBlock> magnetBlocks = new LinkedList<MagnetBlock>();
         LinkedList<GoalBlock> goalBlocks = new LinkedList<GoalBlock>();
         LinkedList<MovingDeath> moveDeathBlocks = new LinkedList<MovingDeath>();
+        LinkedList<MovingPath> movePathBlock = new LinkedList<MovingPath>();
         public void readFile(int templateNum)
         {
             String path = Directory.GetCurrentDirectory();
@@ -114,6 +115,11 @@ namespace ProtoDerp
                     Vector2 shootAngle = new Vector2(Convert.ToInt32(words[5]), Convert.ToInt32(words[6]));
                     moveDeathBlocks.AddLast(new MovingDeath(game, game.Arena, new Vector2(x, y), 1, spriteName, shootAngle, Convert.ToInt32(words[4])));
                 }
+                if (words[3].Equals("MovingPath"))
+                {
+                    movePathBlock.AddLast(new MovingPath(game, game.Arena, new Vector2(x, y),1,spriteName,Convert.ToInt32(words[4]),
+                        new Vector2(Convert.ToInt32(words[5]),Convert.ToInt32(words[6])),new Vector2(Convert.ToInt32(words[7]),Convert.ToInt32(words[8])),false));
+                }
                 if (words[0].Equals("Demi"))
                 {
                     game.maxLeft = Convert.ToInt32(words[1]);
@@ -133,6 +139,8 @@ namespace ProtoDerp
             foreach (DeathBlock i in deathBlocks)
                 game.addEntity(i);
             foreach (MagnetBlock i in magnetBlocks)
+                game.addEntity(i);
+            foreach (MovingPath i in movePathBlock)
                 game.addEntity(i);
 
             foreach (Block i in blocks)
@@ -170,6 +178,39 @@ namespace ProtoDerp
                         j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
 
                 }
+            }
+
+            foreach (MovingPath i in movePathBlock)
+            {
+                foreach (MovingPath j in movePathBlock)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+
+                }
+
+            }
+
+            foreach (MovingPath i in movePathBlock)
+            {
+                foreach (DeathBlock j in deathBlocks)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+
+                }
+
+            }
+
+            foreach (MovingPath i in movePathBlock)
+            {
+                foreach (Block j in blocks)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+
+                }
+
             }
             SortedSet<Entity> omg=game.entities;
 

@@ -234,6 +234,21 @@ namespace ProtoDerp
                     incrementXMagnetValue = !incrementXMagnetValue;
                 }
             }
+            if (game.blockType.Equals(Game.BlockType.Path))
+            {
+
+                if (keyInput.IsNewKeyPressed(Keys.F))
+                {
+                    game.pathSpeed--;
+                }
+                if (keyInput.IsNewKeyPressed(Keys.D))
+                {
+                    game.pathSpeed++;
+                }
+                
+
+
+            }
             /*
             if (keyInput.IsNewKeyPressed(Keys.D)) 
             {
@@ -660,7 +675,7 @@ namespace ProtoDerp
                         else
                         {
                             clickOne = false;
-                            game.addEntity(new MovingPath(game, game.Arena, point1, 1, blockArray[game.spriteBlockCounter], 2, point1 + Constants.player1SpawnLocation, origin + Constants.player1SpawnLocation, false));
+                            game.addEntity(new MovingPath(game, game.Arena, point1, 1, blockArray[game.spriteBlockCounter], game.pathSpeed, point1 + Constants.player1SpawnLocation, origin + Constants.player1SpawnLocation, false));
                         }
                         break;
 
@@ -725,6 +740,15 @@ namespace ProtoDerp
                     }
                 //}
                  
+            }
+            if (clickOne)
+            {
+
+                Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y - 500 * game.drawingTool.cam.Zoom);
+                Vector2 worldMousePosition = Vector2.Transform(mousePosition, Matrix.Invert(game.drawingTool.cam._transform));
+
+                game.drawingTool.DrawLine(spriteBatch, 5, Color.Yellow, point1+Constants.player1SpawnLocation, worldMousePosition+Constants.player1SpawnLocation);
+
             }
         }
 

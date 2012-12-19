@@ -242,6 +242,7 @@ namespace ProtoDerp
                     break;
                 case Game.BlockType.Path:
                     blockInfo += "PathBlock";
+                    DrawText(spriteBatch, 0.065f, 0.875f, "Vel: "+game.pathSpeed);
                     break;
 
             }

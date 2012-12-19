@@ -611,7 +611,7 @@ namespace ProtoDerp
             Rectangle drawRect = new Rectangle((int)topLeft.X, (int)topLeft.Y, rect.Width, rect.Height);
             spriteBatch.Draw(sprite, drawRect, blendColor);
         }
-        //DrawsLine
+        //DrawsLine be careful, to many lines cause lag....
         public void DrawLine(SpriteBatch batch,
               float width, Color color, Vector2 point1, Vector2 point2)
         {

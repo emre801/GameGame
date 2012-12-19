@@ -117,6 +117,8 @@ namespace ProtoDerp
         public int ballPosition = 0;
         public bool activateButtons = true;
 
+        public int pathSpeed = 2;
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -126,9 +128,10 @@ namespace ProtoDerp
             ConvertUnits.SetDisplayUnitToSimUnitRatio(30);
             //graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            IsFixedTimeStep = true;
+            IsFixedTimeStep = false;
             drawingTool = new DrawingTool(this);
-            numDeath = 0;            
+            numDeath = 0;
+            
         }
 
         protected void addSound(String fName)
@@ -571,6 +574,18 @@ namespace ProtoDerp
                 int y = (int)b.origPos.Y;
                 String spriteName = b.spriteNumber;
                 lines.AddLast(x + " " + y + " " + spriteName + " MovingDeath " + b.velObj +" "+b.shootAngle.X + " "+b.shootAngle.Y);
+
+            }
+            LinkedList<MovingPath> movingPathBlock = getEntitiesOfType<MovingPath>();
+            foreach (MovingPath b in movingPathBlock)
+            {
+                if (!b.IsVisible)
+                    continue;
+                int x = (int)b.origPos.X;
+                int y = (int)b.origPos.Y;
+                String spriteName = b.spriteNumber;
+                lines.AddLast(x + " " + y + " " + spriteName + " MovingPath " + b.velObj + " "
+                    + (int)b.point1.X + " " + (int)b.point1.Y + " " + (int)b.point2.X + " " + (int)b.point2.Y + " ");
 
             }
             lines.AddLast("Demi " + (int)maxLeft + " " + (int)maxRight + " " + (int)maxTop + " " + (int)maxButtom);

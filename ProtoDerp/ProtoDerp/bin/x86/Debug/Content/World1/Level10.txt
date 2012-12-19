@@ -181,4 +181,13 @@
 1249 3845 deathSpikes3 DeathBlock 0
 860 4368 deathSpikes DeathBlock 0
 501 357 ahLogo0 GoalBlock 11
+1254 -80 deathBall MovingPath 20 1262 429 667 350 
+1034 -691 derrick.png MovingPath 2 1042 -181 587 18 
+405 -174 derrick.png MovingPath 2 413 335 746 464 
+458 -305 derrick.png MovingPath 2 466 204 768 430 
+90 -287 derrick.png MovingPath 2 98 222 584 451 
+365 -554 derrick.png MovingPath 2 373 -44 322 888 
+618 -603 derrick.png MovingPath 2 626 -93 651 802 
+865 -547 derrick.png MovingPath 2 873 -37 531 562 
+49 -541 derrick.png MovingPath 2 57 -31 933 195 
 Demi -100 1901 287 5137
