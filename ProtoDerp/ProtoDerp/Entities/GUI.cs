@@ -245,6 +245,10 @@ namespace ProtoDerp
                     blockInfo += "PathBlock";
                     DrawText(spriteBatch, 0.065f, 0.875f, "Vel: "+game.pathSpeed);
                     break;
+                case Game.BlockType.Cycle:
+                    blockInfo += "Cycle Block";
+                    DrawText(spriteBatch, 0.065f, 0.875f, "Vel: " + game.pathSpeed);
+                    break;
 
             }
             DrawText(spriteBatch, 0.065f, 0.85f, blockInfo);

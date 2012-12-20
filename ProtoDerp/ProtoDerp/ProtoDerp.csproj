@@ -138,6 +138,7 @@
     <Compile Include="Entities\LevelSelect.cs" />
     <Compile Include="Entities\MagnetBlock.cs" />
     <Compile Include="Entities\MouseItem.cs" />
+    <Compile Include="Entities\MoveCycle.cs" />
     <Compile Include="Entities\MovingDeath.cs" />
     <Compile Include="Entities\MovingPath.cs" />
     <Compile Include="Entities\PlayableCharacter.cs" />

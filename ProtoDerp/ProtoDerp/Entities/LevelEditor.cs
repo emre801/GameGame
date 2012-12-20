@@ -38,6 +38,7 @@ namespace ProtoDerp
         LinkedList<GoalBlock> goalBlocks = new LinkedList<GoalBlock>();
         LinkedList<MovingDeath> moveDeathBlocks = new LinkedList<MovingDeath>();
         LinkedList<MovingPath> movePathBlock = new LinkedList<MovingPath>();
+        LinkedList<MovingCycle> moveCycleBlock = new LinkedList<MovingCycle>();
         public void readFile(int templateNum)
         {
             String path = Directory.GetCurrentDirectory();
@@ -120,6 +121,23 @@ namespace ProtoDerp
                     movePathBlock.AddLast(new MovingPath(game, game.Arena, new Vector2(x, y),1,spriteName,Convert.ToInt32(words[4]),
                         new Vector2(Convert.ToInt32(words[5]),Convert.ToInt32(words[6])),new Vector2(Convert.ToInt32(words[7]),Convert.ToInt32(words[8])),false));
                 }
+
+                if (words[3].Equals("MovingCycle"))
+                {
+                    int count = Convert.ToInt32(words[5]);
+                    ArrayList paths = new ArrayList();
+                    for (int i = 6; i < 6+count*2; i+=2)
+                    {
+                        int xPos = Convert.ToInt32(words[i]);
+                        int yPos = Convert.ToInt32(words[i+1]);
+                        Vector2 vectors = new Vector2(xPos, yPos);
+                        paths.Add(vectors);
+                    }
+                    moveCycleBlock.AddLast(new MovingCycle(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4]), paths, true));
+                    
+
+                }
+
                 if (words[0].Equals("Demi"))
                 {
                     game.maxLeft = Convert.ToInt32(words[1]);
@@ -133,7 +151,9 @@ namespace ProtoDerp
             foreach (Block i in buttomBlocks)
                 game.addEntity(i);            
             foreach (MovingDeath i in moveDeathBlocks)
-                game.addEntity(i);            
+                game.addEntity(i);
+            foreach (MovingCycle i in moveCycleBlock)
+                game.addEntity(i);
             foreach (Block i in topBlocks)
                 game.addEntity(i);
             foreach (DeathBlock i in deathBlocks)
@@ -223,6 +243,46 @@ namespace ProtoDerp
                 }
 
             }
+            foreach (MovingCycle i in moveCycleBlock)
+            {
+                foreach (MovingCycle j in moveCycleBlock)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+
+                }
+            }
+
+            foreach (MovingCycle i in moveCycleBlock)
+            {
+                foreach (Block j in blocks)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+
+                }
+            }
+
+            foreach (MovingCycle i in moveCycleBlock)
+            {
+                foreach (DeathBlock j in deathBlocks)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+
+                }
+            }
+
+            foreach (MovingCycle i in moveCycleBlock)
+            {
+                foreach (MovingPath j in movePathBlock)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+
+                }
+            }
+
 
             SortedSet<Entity> omg=game.entities;
 

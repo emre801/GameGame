@@ -77,7 +77,7 @@ namespace ProtoDerp
         public float maxLeft, maxRight, maxTop, maxButtom;
         public int count = 0;
 
-        public enum BlockType { Normal, Death, Moving, Goal, Magnet,Path };
+        public enum BlockType { Normal, Death, Moving, Goal, Magnet,Path,Cycle };
         public BlockType blockType = BlockType.Normal;
 
         public float cXLocation=0, cYLocation=0;
@@ -589,6 +589,21 @@ namespace ProtoDerp
                     + (int)b.point1.X + " " + (int)b.point1.Y + " " + (int)b.point2.X + " " + (int)b.point2.Y + " ");
 
             }
+
+            LinkedList<MovingCycle> movingCycle = getEntitiesOfType<MovingCycle>();
+            foreach (MovingCycle b in movingCycle)
+            {
+                 if (!b.IsVisible)
+                    continue;
+                int x = (int)b.origPos.X;
+                int y = (int)b.origPos.Y;
+                String spriteName = b.spriteNumber;
+                String count = ""+b.getSizeOfPaths();
+                String paths = b.getVectorsAsString();
+                lines.AddLast(x + " " + y + " " + spriteName + " MovingCycle " + b.velObj + " " +count + paths);
+
+            }
+
             lines.AddLast("Demi " + (int)maxLeft + " " + (int)maxRight + " " + (int)maxTop + " " + (int)maxButtom);
 
             System.IO.File.WriteAllLines(path, lines);

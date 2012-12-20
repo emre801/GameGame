@@ -54,6 +54,7 @@ namespace ProtoDerp
         Vector2 point1 = new Vector2(0, 0), point2 = new Vector2(0, 0);
         bool clickOne = false;
         bool clickTwo = false;
+        ArrayList pathPoints= new ArrayList();
         public CreaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
             : base(g)
         {
@@ -151,7 +152,7 @@ namespace ProtoDerp
             if (keyInput.IsNewKeyPressed(Keys.A))
             {
                 if (blockPressed == 0)
-                    blockPressed = 5;
+                    blockPressed = 6;
                 else
                     blockPressed--;
                 changeBlockType();
@@ -382,6 +383,11 @@ namespace ProtoDerp
                 {
                     addBlockBasedOnMouse(worldMousePosition);
                 }
+                else if (Mouse.GetState().RightButton == ButtonState.Pressed && oldMouse.RightButton == ButtonState.Released) 
+                {
+                    if (game.blockType==Game.BlockType.Cycle)
+                        pathPoints.Add(worldMousePosition+Constants.player1SpawnLocation);
+                }
 
                 pos = worldMousePosition+Constants.player1SpawnLocation;
                 blockIterater += Mouse.GetState().ScrollWheelValue;
@@ -432,6 +438,10 @@ namespace ProtoDerp
                     break;
                 case 5:
                     game.blockType = Game.BlockType.Path;
+                    game.cachedEntityLists = new Dictionary<Type, object>();
+                    break;
+                case 6:
+                    game.blockType = Game.BlockType.Cycle;
                     game.cachedEntityLists = new Dictionary<Type, object>();
                     break;
             }
@@ -697,6 +707,15 @@ namespace ProtoDerp
                         {
                             clickOne = false;
                             game.addEntity(new MovingPath(game, game.Arena, point1, 1, blockArray[game.spriteBlockCounter], game.pathSpeed, point1 + Constants.player1SpawnLocation, origin + Constants.player1SpawnLocation, false));
+                        }
+                        break;
+                    case Game.BlockType.Cycle:
+
+                        if (pathPoints.Count > 1)
+                        {
+                            pathPoints.Add(origin+Constants.player1SpawnLocation);
+                            game.addEntity(new MovingCycle(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], game.pathSpeed, pathPoints, true));
+                            pathPoints = new ArrayList();
                         }
                         break;
                 }
