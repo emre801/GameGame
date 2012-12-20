@@ -90,7 +90,7 @@ namespace ProtoDerp
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            if (game.gMode == 2 && game.activateButtons)
+            if (game.gMode == 2 && game.activateButtons && game.cameraWindowValue==0)
             {
                 if (game.spriteBlockCounter == spritePos)
                 {

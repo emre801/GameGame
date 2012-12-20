@@ -55,7 +55,7 @@ namespace ProtoDerp
             this.shootAngle = shootAngle;
             this.velObj = velObj;
             if(game.gMode==0)
-                body.LinearVelocity = new Vector2(shootAngle.X * velObj, shootAngle.Y * velObj);
+                body.LinearVelocity = new Vector2(shootAngle.X, shootAngle.Y);
         }
         bool OnCollision(Fixture fixtureA, Fixture fixtureB, Contact contact)
         {
@@ -175,7 +175,13 @@ namespace ProtoDerp
             {
                 telePort = false;
                 body.SetTransform(ConvertUnits.ToSimUnits(pos), 0);
-                body.LinearVelocity = new Vector2(shootAngle.X * velObj, shootAngle.Y * velObj);
+                body.LinearVelocity = new Vector2(0, 0);
+                //body.LinearVelocity = new Vector2(shootAngle.X, shootAngle.Y);
+            }
+            else
+            {
+                if(game.gMode!=2)
+                    body.LinearVelocity = new Vector2(shootAngle.X*velObj, shootAngle.Y*velObj);
             }
         }
 

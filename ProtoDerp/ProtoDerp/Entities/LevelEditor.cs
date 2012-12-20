@@ -212,6 +212,18 @@ namespace ProtoDerp
                 }
 
             }
+
+            foreach (MovingDeath i in moveDeathBlocks)
+            {
+                foreach (MovingDeath j in moveDeathBlocks)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+
+                }
+
+            }
+
             SortedSet<Entity> omg=game.entities;
 
         }

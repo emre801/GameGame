@@ -232,6 +232,7 @@ namespace ProtoDerp
                     break;
                 case Game.BlockType.Moving:
                     blockInfo += "Moving";
+                    DrawText(spriteBatch, 0.065f, 0.875f, "X:" + game.moveSpeed.X+ "Y:" + game.moveSpeed.Y);
                     break;
                 case Game.BlockType.Goal:
                     blockInfo += "Goal";

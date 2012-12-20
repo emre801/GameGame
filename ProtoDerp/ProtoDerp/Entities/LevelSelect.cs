@@ -54,6 +54,7 @@ namespace ProtoDerp
                 {
                     game.gMode = 0;
                     game.isInLevelSelect = false;
+                    game.playRandonSong();
                     //game.playSong("Music//ForrestSounds");
                     game.currentLevel = levelNum;
                     game.populateWorld();                    

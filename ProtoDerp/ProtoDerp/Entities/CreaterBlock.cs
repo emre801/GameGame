@@ -245,10 +245,19 @@ namespace ProtoDerp
                 {
                     game.pathSpeed++;
                 }
-                
-
-
             }
+            if (game.blockType.Equals(Game.BlockType.Moving))
+            {
+                if (clickOne)
+                {
+                    Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y - 500 * game.drawingTool.cam.Zoom);
+                    Vector2 worldMousePosition = Vector2.Transform(mousePosition, Matrix.Invert(game.drawingTool.cam._transform));
+                    Vector2 direction = worldMousePosition - point1;
+                    direction = new Vector2((int)(direction.X * 0.1f), (int)(direction.Y * 0.1f));
+                    game.moveSpeed = direction;
+                }
+            }
+
             /*
             if (keyInput.IsNewKeyPressed(Keys.D)) 
             {
@@ -657,7 +666,19 @@ namespace ProtoDerp
                         game.addEntity(new DeathBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], rotation));
                         break;
                     case Game.BlockType.Moving:
-                        game.addEntity(new MovingDeath(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], new Vector2(1, 0), 2));
+                        if (!clickOne)
+                        {
+                            point1 = origin;
+                            clickOne = true;
+                        }
+                        else
+                        {
+                            clickOne = false;
+                            Vector2 direction = origin - point1;
+                            direction = new Vector2((int)(direction.X*0.01f), (int)(direction.Y*0.01f));
+                            game.addEntity(new MovingDeath(game, game.Arena, point1, 1, blockArray[game.spriteBlockCounter], direction, game.pathSpeed));
+                           
+                        }
                         break;
                     case Game.BlockType.Goal:
                         game.addEntity(new GoalBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], game.currentLevel));
@@ -678,8 +699,6 @@ namespace ProtoDerp
                             game.addEntity(new MovingPath(game, game.Arena, point1, 1, blockArray[game.spriteBlockCounter], game.pathSpeed, point1 + Constants.player1SpawnLocation, origin + Constants.player1SpawnLocation, false));
                         }
                         break;
-
-
                 }
             }
             

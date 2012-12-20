@@ -151,11 +151,13 @@ namespace ProtoDerp
                 {
                     colo = Color.Green;
                 }
-
-                DrawLine(spriteBatch, blank, 5, colo, new Vector2(maxRight, maxTop), new Vector2(maxLeft, maxTop));
-                DrawLine(spriteBatch, blank, 5, colo, new Vector2(maxRight, maxButtom), new Vector2(maxLeft, maxButtom));
-                DrawLine(spriteBatch, blank, 5, colo, new Vector2(maxRight, maxTop), new Vector2(maxRight, maxButtom));
-                DrawLine(spriteBatch, blank, 5, colo, new Vector2(maxLeft, maxButtom), new Vector2(maxLeft, maxTop));
+                if (game.cameraWindowValue != 0)
+                {
+                    DrawLine(spriteBatch, blank, 5, colo, new Vector2(maxRight, maxTop), new Vector2(maxLeft, maxTop));
+                    DrawLine(spriteBatch, blank, 5, colo, new Vector2(maxRight, maxButtom), new Vector2(maxLeft, maxButtom));
+                    DrawLine(spriteBatch, blank, 5, colo, new Vector2(maxRight, maxTop), new Vector2(maxRight, maxButtom));
+                    DrawLine(spriteBatch, blank, 5, colo, new Vector2(maxLeft, maxButtom), new Vector2(maxLeft, maxTop));
+                }
 
             }
 

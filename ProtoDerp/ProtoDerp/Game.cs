@@ -118,6 +118,7 @@ namespace ProtoDerp
         public bool activateButtons = true;
 
         public int pathSpeed = 2;
+        public Vector2 moveSpeed = new Vector2(0, 0);
 
         public Game()
         {
@@ -128,7 +129,7 @@ namespace ProtoDerp
             ConvertUnits.SetDisplayUnitToSimUnitRatio(30);
             //graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            IsFixedTimeStep = false;
+            IsFixedTimeStep = true;
             drawingTool = new DrawingTool(this);
             numDeath = 0;
             
