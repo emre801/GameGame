@@ -7,35 +7,18 @@
 722 -423 GreenHill Block 1550 1800 1 0
 2520 -423 GreenHill Block 1550 1800 1 0
 4312 -423 GreenHill Block 1550 1800 1 0
--19 90 ground Block 64 256 2 0
-222 90 ground Block 64 256 2 0
-471 90 ground Block 64 256 2 0
-727 90 ground Block 64 256 2 0
-983 90 ground Block 64 256 2 0
-1234 90 ground Block 64 256 2 0
-1478 90 ground Block 64 256 2 0
-1732 90 ground Block 64 256 2 0
-1988 89 ground Block 64 256 2 0
-2243 90 ground Block 64 256 2 0
-2499 90 ground Block 64 256 2 0
-2751 90 ground Block 64 256 2 0
-3002 90 ground Block 64 256 2 0
-3257 90 ground Block 64 256 2 0
-3513 89 ground Block 64 256 2 0
-3627 90 ground Block 64 256 2 0
-297 50 deathSpikes DeathBlock 0
-812 50 deathSpikes DeathBlock 0
-1337 50 deathSpikes DeathBlock 0
-1947 50 deathSpikes DeathBlock 0
-2562 50 deathSpikes DeathBlock 0
-3007 50 deathSpikes DeathBlock 0
-3542 50 deathSpikes DeathBlock 0
-3647 50 deathSpikes DeathBlock 0
-3727 50 deathSpikes DeathBlock 0
+1051 -300 deathBall Block 183 186 0 0
 -131 -100 deathSpikes4 DeathBlock 0
 -122 -228 deathSpikes4 DeathBlock 0
 -122 -351 deathSpikes4 DeathBlock 0
 -125 -468 deathSpikes4 DeathBlock 0
 -122 -582 deathSpikes4 DeathBlock 0
 3677 -40 ahLogo0 GoalBlock 7
+573 123 deathBall MovingPath 10 581 633 1242 636 
+1236 118 deathBall MovingPath 10 1244 628 589 631 
+1884 117 deathBall MovingPath 10 1892 627 2969 619 
+2994 99 deathBall MovingPath 10 3002 609 1889 622 
+1574 142 deathBall MovingPath 10 1582 652 1582 33 
+495 -455 deathBall MovingPath 2 503 54 747 423 
+850 -457 deathBall MovingPath 10 858 52 338 473 
 Demi -100 3717 -717 600

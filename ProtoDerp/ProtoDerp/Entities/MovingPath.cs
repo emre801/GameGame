@@ -41,8 +41,9 @@ namespace ProtoDerp
         float width, height;
         public Vector2 point1, point2;
         Vector2 path;
-        bool moveDirection = false;
+        bool moveDirection = true;
         Vector2 validPoint;
+        Vector2 goalPoint; 
         public MovingPath(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber, float velObj,
             Vector2 point1,Vector2 point2, bool isDeath)
             : base(g)
@@ -71,8 +72,8 @@ namespace ProtoDerp
             ///this.path = point1 - point2;// new Vector2(x * 2, -y * 2);
             this.path = new Vector2(x, y);
             this.validPoint = ConvertUnits.ToSimUnits(point1);
-            body.ApplyLinearImpulse(path);
-            setMoveDirection();
+            //body.ApplyLinearImpulse(path);
+            goalPoint = ConvertUnits.ToSimUnits(point2);
         }
         bool OnCollision(Fixture fixtureA, Fixture fixtureB, Contact contact)
         {
@@ -179,57 +180,47 @@ namespace ProtoDerp
             ani.Update();
             if (game.gMode != 2)
             {
-                if (isBetween())
-                {
-                    setMoveDirection();
-                    validPoint = body.Position;
-                }
-                else
-                {
-                    moveDirection = !moveDirection;
-                    body.Position = validPoint;
-                    setMoveDirection();
-                }
+                //setMoveDirection();
                 moveObject(gameTime);
+                setMoveDirection();
             }
+            
             
         }
         public void moveObject(GameTime gameTime)
         {
             Vector2 velo;
-            if (!moveDirection)
-            {
+            Vector2 currentPosition = body.Position;
+            
+            double angel = Math.Atan2((double)(goalPoint.Y - currentPosition.Y), (double)(goalPoint.X - currentPosition.X)) * 180 / Math.PI;
+            float x = (float)Math.Cos(angel * Math.PI / 180f);
+            float y = (float)Math.Sin(angel * Math.PI / 180f);
 
-                velo = -path * velObj;// *0.001f;
-            }
-            else
-            {
-                velo = path * velObj;// *0.001f;
-            }
-
-            body.ApplyForce(velo);
-            /*
-            float step = (float)(gameTime.ElapsedGameTime.TotalMilliseconds * 0.002f);
-            float xDis = (float)(velo.X * step);
-            float yDis = (float)(velo.Y * step);
-            body.Position = new Vector2(body.Position.X + xDis, body.Position.Y + yDis);
-             * */
-
+            Vector2 dir = new Vector2(x, y);
+            dir = goalPoint - currentPosition;
+            dir.Normalize();
+            body.LinearVelocity=dir*velObj;
         }
 
         public void setMoveDirection()
         {
-            if (!moveDirection)
+            double dist = distance();
+            if (distance() < 1)
             {
-
-                body.LinearVelocity = -path*velObj;// *0.001f;
-            }
-            else
-            {
-                body.LinearVelocity = path*velObj;// *0.001f;
+                if(moveDirection)
+                    goalPoint = ConvertUnits.ToSimUnits(point2);
+                else
+                    goalPoint = ConvertUnits.ToSimUnits(point1);
+                moveDirection = !moveDirection;
             }
         }
 
+        public double distance()
+        {
+            return Math.Sqrt((goalPoint.X - body.Position.X) * (goalPoint.X - body.Position.X)
+                + (goalPoint.Y - body.Position.Y) * (goalPoint.Y - body.Position.Y));
+
+        }
         public bool isBetween()
         {
             
@@ -271,8 +262,8 @@ namespace ProtoDerp
                        origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),
                            (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), true, new Vector2(0, 0));
             }
-            if(game.gMode==2)
-                game.drawingTool.DrawLine(spriteBatch, 2, Color.Yellow, point1, point2);
+            //if(game.gMode==2)
+                //game.drawingTool.DrawLine(spriteBatch, 2, Color.Yellow, point1, point2);
         }
 
         private void drawHealthBar()
