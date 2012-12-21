@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using FarseerPhysics.Dynamics;
 using System.Diagnostics;
+using Microsoft.Xna.Framework.Audio;
 
 namespace ProtoDerp
 {
@@ -16,6 +17,8 @@ namespace ProtoDerp
         private readonly int stateCount, widthOfSingleState;
         private int _currentState;
         private Rectangle texBounds;
+        private SoundEffect sound;
+        int soundRate = 0;
         public int CurrentState
         {
             get { return _currentState; }
@@ -106,9 +109,16 @@ namespace ProtoDerp
             {
                 stopWatch.Reset();
                 nextState();
+                soundRate++;
+                if (sound != null && soundRate%5==0)
+                    sound.Play();
             }
             stopWatch.Start();
 
+        }
+        public void addSound(SoundEffect sound)
+        {
+            this.sound = sound;
         }
         public void drawCurrentState(SpriteBatch spriteBatch, Entity owner, Vector2 drawPos,Vector2 origin, Body body, Rectangle rect,Boolean direction,Vector2 shiftPosition)
         {

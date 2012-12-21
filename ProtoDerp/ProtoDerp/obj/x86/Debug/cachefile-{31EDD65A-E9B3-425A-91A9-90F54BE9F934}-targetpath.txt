@@ -102,8 +102,6 @@ Content\Rage\Rage7.xnb
 Content\Rage\Rage7.wma
 Content\Rage\Rage8.xnb
 Content\Rage\Rage8.wma
-Content\Rage\Wave\Rage1.xnb
-Content\Rage\Wave\Rage2.xnb
 Content\Rage\Wave\jump.xnb
 Content\Rage\Wave\death.xnb
 Content\Rage\Wave\Opening.xnb
@@ -115,6 +113,9 @@ Content\Music\05 Nostalgia.xnb
 Content\Music\05 Nostalgia.wma
 Content\Music\Alpha Black Magic.xnb
 Content\Music\Alpha Black Magic.wma
+Content\Rage\Wave\explosion.xnb
+Content\Rage\Wave\menu.xnb
+Content\Rage\Wave\running.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

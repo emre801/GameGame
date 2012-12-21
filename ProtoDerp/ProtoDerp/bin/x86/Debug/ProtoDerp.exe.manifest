@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="118272">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="118784">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>BDDWiIM2pt+bWGq8H+JxYKpxYsQ=</dsig:DigestValue>
+        <dsig:DigestValue>QmSDpP83HlY3NUQ407r4aliLaW8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -998,6 +998,15 @@
       <dsig:DigestValue>l6WWxuThidhHF6WSc4sLv5rBJ9Q=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Content\Rage\Wave\explosion.xnb" size="49145">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>08yH7+/E9ns0ko1mZ5ns0PMcLyI=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Content\Rage\Wave\jump.xnb" size="14023">
     <hash>
       <dsig:Transforms>
@@ -1005,6 +1014,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>3wmLE3xRIhiWjFxxd6qz3bIBtK4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Rage\Wave\menu.xnb" size="4085">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>1gnIZT9iS0uI0ojxOgpX1qFKBbo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Rage\Wave\Opening.xnb" size="827497">
@@ -1016,22 +1034,13 @@
       <dsig:DigestValue>hcB4MiGTo3SlUs7BwE8jlxjq5JM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Rage\Wave\Rage1.xnb" size="290409">
+  <file name="Content\Rage\Wave\running.xnb" size="7491">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>nm3E3VlAF74U7xzUT61Y5Jm5UD0=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Content\Rage\Wave\Rage2.xnb" size="101481">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>e4f7IcIXOoppvI9rXjPe51EKK/U=</dsig:DigestValue>
+      <dsig:DigestValue>GkME8oY7LpxEyQRm7dO6GLjWJVs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\RageQuit.xnb" size="1280187">
@@ -1421,13 +1430,13 @@
       <dsig:DigestValue>v8wK7e5wmwS09vbE+MswUWIYppA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level6.txt" size="1086">
+  <file name="Content\World1\Level6.txt" size="1033">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>qAAWSL5ORUvSQ2KyfmgyKLScP6M=</dsig:DigestValue>
+      <dsig:DigestValue>141GxXrL8Dg1NIhv7fLeGzSzYl0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level7.txt" size="803">

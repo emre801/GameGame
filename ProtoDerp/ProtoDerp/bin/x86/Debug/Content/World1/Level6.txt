@@ -21,6 +21,5 @@
 2994 99 deathBall MovingPath 10 3002 609 1889 622 
 1574 142 deathBall MovingPath 10 1582 652 1582 33 
 495 -455 deathBall MovingPath 2 503 54 747 423 
-850 -457 deathBall MovingPath 10 858 52 338 473 
-14 208 cloud MovingCycle 2 3 42 335 882 352 22 718
+850 -457 deathBall MovingPath 10 858 52 338 473
 Demi -100 3717 -717 600

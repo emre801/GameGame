@@ -118,6 +118,7 @@ namespace ProtoDerp
                 if ((this.player1.IsUpPressed() || keyInput.IsNewKeyPressed(Keys.Up)) && alpha >= 1)
                 {
                     //game.getSound("Audio\\Waves\\menuNavigate").Play();
+                    game.sounds["Rage//Wave//menu"].Play();
                     select -= 1;
                     if (select < 0)
                         select = numOptions - 1;
@@ -125,6 +126,7 @@ namespace ProtoDerp
                 }
                 else if ((this.player1.IsDownPressed() || keyInput.IsNewKeyPressed(Keys.Down)) && alpha >= 1)
                 {
+                    game.sounds["Rage//Wave//menu"].Play();
                    // game.getSound("Audio\\Waves\\menuNavigate").Play();
                     select += 1;
                     if (select > numOptions - 1)

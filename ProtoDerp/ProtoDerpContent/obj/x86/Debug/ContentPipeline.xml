@@ -874,24 +874,6 @@
       <Time>2012-08-20T20:17:21.8921375-04:00</Time>
     </Item>
     <Item>
-      <Source>Rage\Wave\Rage1.wav</Source>
-      <Name>Rage\Wave\Rage1</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\Rage1.xnb</Output>
-      <Time>2012-08-20T21:48:29.7248796-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Rage\Wave\Rage2.wav</Source>
-      <Name>Rage\Wave\Rage2</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\Rage2.xnb</Output>
-      <Time>2012-08-20T21:48:29.7268797-04:00</Time>
-    </Item>
-    <Item>
       <Source>Rage\Wave\jump.wav</Source>
       <Name>Rage\Wave\jump</Name>
       <Importer>WavImporter</Importer>
@@ -957,6 +939,33 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Alpha Black Magic.xnb</Output>
       <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Alpha Black Magic.wma</Extra>
       <Time>2012-12-16T16:13:27.5823912-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Wave\explosion.wav</Source>
+      <Name>Rage\Wave\explosion</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\explosion.xnb</Output>
+      <Time>2012-12-21T16:29:47.1991645-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Wave\menu.wav</Source>
+      <Name>Rage\Wave\menu</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\menu.xnb</Output>
+      <Time>2012-12-21T16:37:11.7505914-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Wave\running.wav</Source>
+      <Name>Rage\Wave\running</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\running.xnb</Output>
+      <Time>2012-12-21T16:42:59.9935097-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

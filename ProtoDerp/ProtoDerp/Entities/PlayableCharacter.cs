@@ -383,6 +383,7 @@ namespace ProtoDerp
                     else
                     {
                         ani = game.getSpriteAnimation("sprite16_strip6");
+                        ani.addSound(game.sounds["Rage//Wave//running"]);
                         int frameRate = 30 * (int)(15f / Math.Abs(body.LinearVelocity.X));
                         ani.changeFrameRate(frameRate);
                     }

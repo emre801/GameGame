@@ -83,8 +83,11 @@ namespace ProtoDerp
                 PlayableCharacter player = players.First();
                 if (fixtureB == player.fixture)
                 {
-                    if(game.gMode!=2)
-                            game.PlayerDies();
+                    if (game.gMode != 2)
+                    {
+                        game.sounds["Rage//Wave//explosion"].Play();
+                        game.PlayerDies();
+                    }
                 }
             }
             return true;

@@ -329,12 +329,12 @@ namespace ProtoDerp
 
             //Title Screen
             //populateWorld();
-
-            addSound("Rage//Wave//Rage1");
-            addSound("Rage//Wave//Rage2");
             addSound("Rage//Wave//jump");
             addSound("Rage//Wave//death");
             addSound("Rage//Wave//Opening");
+            addSound("Rage//Wave//explosion");
+            addSound("Rage//Wave//menu");
+            addSound("Rage//Wave//running");
             
             spriteAnimation.Add("player_strip12", new SpriteStripAnimationHandler(new Sprite(Content, "player_strip12")
                 , 12,60));//Player Standing
