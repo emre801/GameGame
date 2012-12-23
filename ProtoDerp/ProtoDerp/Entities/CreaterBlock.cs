@@ -785,7 +785,7 @@ namespace ProtoDerp
                 Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y - 500 * game.drawingTool.cam.Zoom);
                 Vector2 worldMousePosition = Vector2.Transform(mousePosition, Matrix.Invert(game.drawingTool.cam._transform));
 
-                game.drawingTool.DrawLine(spriteBatch, 5, Color.Yellow, point1+Constants.player1SpawnLocation, worldMousePosition+Constants.player1SpawnLocation);
+                //game.drawingTool.DrawLine(spriteBatch, 5, Color.Yellow, point1+Constants.player1SpawnLocation, worldMousePosition+Constants.player1SpawnLocation);
 
             }
         }

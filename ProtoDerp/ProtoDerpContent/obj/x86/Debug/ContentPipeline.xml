@@ -967,6 +967,42 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\running.xnb</Output>
       <Time>2012-12-21T16:42:59.9935097-05:00</Time>
     </Item>
+    <Item>
+      <Source>CreativeMode.png</Source>
+      <Name>CreativeMode</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CreativeMode.xnb</Output>
+      <Time>2012-12-23T12:30:41.2677159-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Exit.png</Source>
+      <Name>Exit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Exit.xnb</Output>
+      <Time>2012-12-23T12:30:41.2717161-05:00</Time>
+    </Item>
+    <Item>
+      <Source>SelectLevel.png</Source>
+      <Name>SelectLevel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\SelectLevel.xnb</Output>
+      <Time>2012-12-23T12:30:41.2797165-05:00</Time>
+    </Item>
+    <Item>
+      <Source>start.png</Source>
+      <Name>start</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\start.xnb</Output>
+      <Time>2012-12-23T12:30:41.2847168-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

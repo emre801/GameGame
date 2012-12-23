@@ -49,6 +49,7 @@ namespace ProtoDerp
         //the parallel option (that matches select)
 
         KeyboardInput keyInput;
+        Button start, selectLevel, creativeMode, exit;
 
         public TitleScreen(Game g)
             : base(g)
@@ -64,7 +65,7 @@ namespace ProtoDerp
             sprLogoHandShort = game.getSprite("titleScreenElement.6");
 
 
-            posSelectText = new Vector2(Constants.GAME_WORLD_WIDTH * 0.475f, Constants.GAME_WORLD_HEIGHT * 0.634f);
+            posSelectText = new Vector2(Constants.GAME_WORLD_WIDTH * 0.5f, Constants.GAME_WORLD_HEIGHT * 0.634f);
 
             angleHandShort = 135;
             angleHandLong = 350;
@@ -82,6 +83,20 @@ namespace ProtoDerp
             //battleOptions = new BattleOptions(g, this);
             //game.addEntity(battleOptions);
             //battleOptions.IsVisible = false;
+            Vector2 v1 = new Vector2(posSelectText.X, (posSelectText.Y - (Constants.GAME_WORLD_HEIGHT * 0.01f)) + ((float)0 * (Constants.GAME_WORLD_HEIGHT * 0.08f)));
+            Vector2 v2 = new Vector2(posSelectText.X, (posSelectText.Y - (Constants.GAME_WORLD_HEIGHT * 0.01f)) + ((float)1 * (Constants.GAME_WORLD_HEIGHT * 0.08f)));
+            Vector2 v3 = new Vector2(posSelectText.X, (posSelectText.Y - (Constants.GAME_WORLD_HEIGHT * 0.01f)) + ((float)2 * (Constants.GAME_WORLD_HEIGHT * 0.08f)));
+            Vector2 v4 = new Vector2(posSelectText.X, (posSelectText.Y - (Constants.GAME_WORLD_HEIGHT * 0.01f)) + ((float)3 * (Constants.GAME_WORLD_HEIGHT * 0.08f)));
+
+            start = new Button(g, v1, 0, "start");
+            start.setTitleValuee(0);
+            selectLevel = new Button(g, v2, 0, "SelectLevel");
+            selectLevel.setTitleValuee(1);
+            creativeMode = new Button(g, v3, 0, "CreativeMode");
+            creativeMode.setTitleValuee(2);
+            exit = new Button(g, v4, 0, "Exit");
+            exit.setTitleValuee(3);
+            
             game.drawingTool.resetCamera();
             keyInput = new KeyboardInput();
         }
@@ -93,6 +108,10 @@ namespace ProtoDerp
             {
                 //game.drawingTool.resetCamera();
 
+                start.Update(gameTime, worldFactor);
+                selectLevel.Update(gameTime, worldFactor);
+                creativeMode.Update(gameTime, worldFactor);
+                exit.Update(gameTime, worldFactor);
 
                 life += gameTime.ElapsedGameTime.TotalMilliseconds;
                 game.drawingTool.cam.Zoom = 0.95f*game.drawingTool.zoomRatio;
@@ -145,8 +164,18 @@ namespace ProtoDerp
                     else if (select == 3) //End Game
                         decreaseAlpha = 3;
                 }
-                posSelectInner = new Vector2(posSelectText.X, (posSelectText.Y - (Constants.GAME_WORLD_HEIGHT * 0.01f)) + ((float)select * (Constants.GAME_WORLD_HEIGHT * 0.08f)));
-                posSelectOuter = new Vector2(posSelectText.X, (posSelectText.Y - (Constants.GAME_WORLD_HEIGHT * 0.01f)) + ((float)select * (Constants.GAME_WORLD_HEIGHT * 0.08f)));
+                if (game.isCollidingWithButton)
+                {
+                    game.isCollidingWithButton = false;
+                    select = game.gameTitleValue;
+                }
+                else
+                {
+                    game.gameTitleValue = select;
+                }
+                
+                //posSelectInner = new Vector2(posSelectText.X, (posSelectText.Y - (Constants.GAME_WORLD_HEIGHT * 0.01f)) + ((float)select * (Constants.GAME_WORLD_HEIGHT * 0.08f)));
+                //posSelectOuter = new Vector2(posSelectText.X, (posSelectText.Y - (Constants.GAME_WORLD_HEIGHT * 0.01f)) + ((float)select * (Constants.GAME_WORLD_HEIGHT * 0.08f)));
 
                 //Fade out effect
                 if (decreaseAlpha != -1)
@@ -168,13 +197,7 @@ namespace ProtoDerp
                 {
                     if (decreaseAlpha == 0)
                     {
-                        //game.playSong("Audio\\Mp3s\\BulletMusicInGame");
-                        /*game.gMode = 0;
-                        game.isInLevelSelect = false;
-                        game.playSong("Music//ForrestSounds");
-                        game.populateWorld();
-                        game.drawingTool.cam.Zoom = 0.55f * game.drawingTool.zoomRatio;
-                        */
+                        //Start Game
                         IsVisible = false;
                         CutScene ct = new CutScene(game, 1);
                         game.addEntity(ct);
@@ -183,6 +206,7 @@ namespace ProtoDerp
                     }
                     else if (decreaseAlpha == 1)
                     {
+                        //Level Select
                         decreaseAlpha = -1;
                         IsVisible = false;
                         game.isInLevelSelect = true;
@@ -192,6 +216,7 @@ namespace ProtoDerp
                     }
                     else if (this.decreaseAlpha == 2)
                     {
+                        //Creative Mode
                         game.isInLevelSelect = false;
                         game.drawingTool.cam.Zoom = 0.35f * game.drawingTool.zoomRatio;
                         game.populateWorldCreatorMode();
@@ -211,9 +236,14 @@ namespace ProtoDerp
             {
                 base.Draw(gameTime, spriteBatch);
                 spriteBatch.Draw(sprLogoText.index, game.drawingTool.getDrawingCoords(posLogoText), null, Color.White * alpha * 1f, 0, sprLogoText.origin, game.drawingTool.gameToScreen(1.0f * scaleFactor), SpriteEffects.None, 0);
-                spriteBatch.Draw(sprSelectText.index, game.drawingTool.getDrawingCoords(posSelectText), null, Color.White * alpha * 1f, 0, sprSelectText.origin, game.drawingTool.gameToScreen(1.0f * scaleFactor), SpriteEffects.None, 0);
+                //spriteBatch.Draw(sprSelectText.index, game.drawingTool.getDrawingCoords(posSelectText), null, Color.White * alpha * 1f, 0, sprSelectText.origin, game.drawingTool.gameToScreen(1.0f * scaleFactor), SpriteEffects.None, 0);
                 game.GUI.DrawRectangle(spriteBatch, new Rectangle((int)game.drawingTool.gameToScreen(0), (int)game.drawingTool.gameToScreen(posSelectInner.Y), (int)game.drawingTool.gameXCoordToScreenCoordX(game.getWorldSize().X), (int)game.drawingTool.gameToScreen(sprSelectInner.index.Height * scaleFactor)), Color.Black, .75f);
-                
+                start.Draw(gameTime, spriteBatch);
+                selectLevel.Draw(gameTime, spriteBatch);
+                creativeMode.Draw(gameTime, spriteBatch);
+                exit.Draw(gameTime, spriteBatch);
+                game.GUI.DrawMouse(gameTime, spriteBatch);    
+            
             }
         }
 

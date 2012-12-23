@@ -377,6 +377,8 @@ namespace ProtoDerp
                     if (Math.Abs(body.LinearVelocity.X) < 5)
                     {
                         ani = game.getSpriteAnimation("sprite15_strip4");
+                        ani.addSound(game.sounds["Rage//Wave//running"]);
+                        ani.changeSoundRate(8);
                         int frameRate = 120 * (int)(5f / Math.Abs(body.LinearVelocity.X));
                         ani.changeFrameRate(frameRate);
                     }
@@ -384,6 +386,7 @@ namespace ProtoDerp
                     {
                         ani = game.getSpriteAnimation("sprite16_strip6");
                         ani.addSound(game.sounds["Rage//Wave//running"]);
+                        ani.changeSoundRate(6);
                         int frameRate = 30 * (int)(15f / Math.Abs(body.LinearVelocity.X));
                         ani.changeFrameRate(frameRate);
                     }

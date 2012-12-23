@@ -33,6 +33,8 @@ namespace ProtoDerp
         Sprite blockSprite;
         Vector2 origin;
         float heightDiff=30, widthDiff=30;
+        bool isInTitle = false;
+        int titleValue=0;
         
         public Button(Game g, Vector2 pos, int spritePos, String spriteName)
             : base(g)
@@ -44,25 +46,34 @@ namespace ProtoDerp
             this.oldMouse = Mouse.GetState();
             this.blockSprite = game.getSprite(spriteName);
             this.buttonBox = new Rectangle((int)pos.X, (int)pos.Y, 20, 20);
-            //if (blockSprite.index.Width < widthDiff)
-            //    this.widthDiff = blockSprite.index.Width;
-            //if (blockSprite.index.Height < heightDiff)
-            //    this.heightDiff = blockSprite.index.Height;
             this.origin = new Vector2(1, 1);
+        }
+
+        public void setTitleValuee(int titleValue)
+        {
+            this.titleValue = titleValue;
+            this.isInTitle = true;
+            this.buttonBox=new Rectangle((int)(pos.X),
+                 (int)(pos.Y),
+                 (int)(blockSprite.index.Width*0.45f), (int)(blockSprite.index.Height*0.45f));
         }
 
         public override void Update(GameTime gameTime, float worldSpeed)
         {
-            if (game.gMode==2 && game.activateButtons)
+            if (game.gMode == 2 && game.activateButtons)
             {
-                if (isColliding())
+                isColliding();
+                if (!isInTitle)
                 {
-                    int k = 0;
+                    int scrollWheel = oldMouse.ScrollWheelValue - Mouse.GetState().ScrollWheelValue;
+                    pos = new Vector2(pos.X, pos.Y - scrollWheel * 0.2f);
+                    this.buttonBox = new Rectangle((int)pos.X, (int)pos.Y, (int)widthDiff + 10, (int)heightDiff + 10);
+                    oldMouse = Mouse.GetState();
                 }
-                int scrollWheel = oldMouse.ScrollWheelValue - Mouse.GetState().ScrollWheelValue;
-                pos = new Vector2(pos.X, pos.Y-scrollWheel*0.2f);
-                this.buttonBox = new Rectangle((int)pos.X, (int)pos.Y, (int)widthDiff+10, (int)heightDiff+10);
-                oldMouse = Mouse.GetState();
+            }
+            else if (game.gMode==1)
+            {
+                isColliding();
             }
 
         }
@@ -76,10 +87,17 @@ namespace ProtoDerp
             {
                 if (oldMouse.LeftButton == ButtonState.Released && Mouse.GetState().LeftButton == ButtonState.Pressed)
                 {
-                    game.isSelectingBlock = true;
-                    game.isButtonSelect = true;
-
-                    game.spriteBlockCounter = spritePos;
+                    if (!isInTitle)
+                    {
+                        game.isSelectingBlock = true;
+                        game.isButtonSelect = true;
+                        game.spriteBlockCounter = spritePos;
+                    }
+                    else
+                    {
+                        game.isCollidingWithButton = true;
+                        game.gameTitleValue = titleValue;
+                    }
                 }
                 
                 return true;
@@ -90,7 +108,7 @@ namespace ProtoDerp
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            if (game.gMode == 2 && game.activateButtons && game.cameraWindowValue==0)
+            if ((game.gMode == 2 && game.activateButtons && game.cameraWindowValue==0))
             {
                 if (game.spriteBlockCounter == spritePos)
                 {
@@ -103,6 +121,21 @@ namespace ProtoDerp
                  (int)widthDiff, (int)heightDiff), null, Color.White, 0, origin, SpriteEffects.FlipHorizontally, 0f);
                 
             
+            }
+            if (game.gMode == 1)
+            {
+                origin = new Vector2(blockSprite.index.Width / 2f, blockSprite.index.Height/ 2f);
+                float alpha = 1f;
+
+                if (game.gameTitleValue == titleValue)
+                    alpha = 0.5f;
+
+                spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X),
+                 (int)(pos.Y),
+                 (int)(blockSprite.index.Width*0.45f), (int)(blockSprite.index.Height*0.45f)), null, Color.White*alpha, 0, origin, SpriteEffects.None, 0f);
+                
+
+
             }
 
         }

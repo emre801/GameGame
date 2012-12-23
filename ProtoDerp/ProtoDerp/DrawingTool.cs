@@ -615,6 +615,7 @@ namespace ProtoDerp
         public void DrawLine(SpriteBatch batch,
               float width, Color color, Vector2 point1, Vector2 point2)
         {
+            /*
             Texture2D blank = new Texture2D(game.drawingTool.getGraphicsDevice(), 1, 1, false, SurfaceFormat.Color);
             blank.SetData(new[] { Color.White });
                 
@@ -625,6 +626,7 @@ namespace ProtoDerp
             batch.Draw(blank, point1, null, color,
                        angle, Vector2.Zero, new Vector2(length, width),
                        SpriteEffects.None, 0);
+             * */
         }
     }
 }

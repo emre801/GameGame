@@ -120,6 +120,9 @@ namespace ProtoDerp
         public int pathSpeed = 2;
         public Vector2 moveSpeed = new Vector2(0, 0);
 
+        public int gameTitleValue = 0;
+        public bool isCollidingWithButton = false;
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -307,7 +310,12 @@ namespace ProtoDerp
             sprites.Add("MikeJump2", new Sprite(Content, "MikeJump2"));
             sprites.Add("MikeStand", new Sprite(Content, "MikeStand"));
             sprites.Add("MikeWall", new Sprite(Content, "MikeWall"));
-            
+
+            sprites.Add("start", new Sprite(Content, "start"));
+            sprites.Add("SelectLevel", new Sprite(Content, "SelectLevel"));
+            sprites.Add("CreativeMode", new Sprite(Content, "CreativeMode"));
+            sprites.Add("Exit", new Sprite(Content, "Exit"));
+
             sprites.Add("clouds", new Sprite(Content, "clouds"));
 
             sprites.Add("Tree", new Sprite(Content, "Tree"));

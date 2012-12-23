@@ -116,6 +116,10 @@ Content\Music\Alpha Black Magic.wma
 Content\Rage\Wave\explosion.xnb
 Content\Rage\Wave\menu.xnb
 Content\Rage\Wave\running.xnb
+Content\CreativeMode.xnb
+Content\Exit.xnb
+Content\SelectLevel.xnb
+Content\start.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace ProtoDerp
 {
@@ -21,6 +22,7 @@ namespace ProtoDerp
         Vector2 origin;
 
         int levelNum = 1;
+        KeyboardInput keyInput;
         //Input player1 = null;
         public LevelSelect(Game g)
             : base(g)
@@ -33,24 +35,28 @@ namespace ProtoDerp
             this.scale = (float)Constants.GAME_WORLD_WIDTH / (float)sprLevelSelect.index.Width;
             player1 = game.playerOneInput;
             origin = new Vector2(sprLevelSelect.index.Width / 2, sprLevelSelect.index.Height / 2);
-            
+
+            keyInput = new KeyboardInput();
         }
 
         public override void Update(GameTime gameTime, float worldFactor)
         {
+            keyInput.Update(gameTime);
             if (IsVisible)
             {
-                if (this.player1.IsDownPressed())
+                if (this.player1.IsDownPressed() || keyInput.IsNewKeyPressed(Keys.Down))
                 {
                     if (levelNum != 1)
                         levelNum--;
+                    game.sounds["Rage//Wave//menu"].Play();
                 }
-                if (this.player1.IsUpPressed())
+                if (this.player1.IsUpPressed() || keyInput.IsNewKeyPressed(Keys.Up))
                 {
                     if (levelNum != Constants.MAX_WRITE_LEVEL)
                         levelNum++;
+                    game.sounds["Rage//Wave//menu"].Play();
                 }
-                if (player1.isAPressed())
+                if (player1.isAPressed() || keyInput.IsNewKeyPressed(Keys.Enter))
                 {
                     game.gMode = 0;
                     game.isInLevelSelect = false;

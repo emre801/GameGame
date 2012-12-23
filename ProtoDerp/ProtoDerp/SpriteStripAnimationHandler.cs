@@ -19,6 +19,7 @@ namespace ProtoDerp
         private Rectangle texBounds;
         private SoundEffect sound;
         int soundRate = 0;
+        int rateOfSound = 5;
         public int CurrentState
         {
             get { return _currentState; }
@@ -110,7 +111,7 @@ namespace ProtoDerp
                 stopWatch.Reset();
                 nextState();
                 soundRate++;
-                if (sound != null && soundRate%5==0)
+                if (sound != null && soundRate%rateOfSound==0)
                     sound.Play();
             }
             stopWatch.Start();
@@ -119,6 +120,10 @@ namespace ProtoDerp
         public void addSound(SoundEffect sound)
         {
             this.sound = sound;
+        }
+        public void changeSoundRate(int rateofSound)
+        {
+            this.rateOfSound = rateofSound;
         }
         public void drawCurrentState(SpriteBatch spriteBatch, Entity owner, Vector2 drawPos,Vector2 origin, Body body, Rectangle rect,Boolean direction,Vector2 shiftPosition)
         {
