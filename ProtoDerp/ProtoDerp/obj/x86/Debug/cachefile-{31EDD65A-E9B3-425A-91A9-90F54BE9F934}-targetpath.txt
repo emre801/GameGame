@@ -105,12 +105,6 @@ Content\Rage\Rage8.wma
 Content\Rage\Wave\jump.xnb
 Content\Rage\Wave\death.xnb
 Content\Rage\Wave\Opening.xnb
-Content\Music\01 Syntax Error.xnb
-Content\Music\01 Syntax Error.wma
-Content\Music\03 Tokyo Escapade.xnb
-Content\Music\03 Tokyo Escapade.wma
-Content\Music\05 Nostalgia.xnb
-Content\Music\05 Nostalgia.wma
 Content\Music\Alpha Black Magic.xnb
 Content\Music\Alpha Black Magic.wma
 Content\Rage\Wave\explosion.xnb
@@ -120,6 +114,18 @@ Content\CreativeMode.xnb
 Content\Exit.xnb
 Content\SelectLevel.xnb
 Content\start.xnb
+Content\Music\Pins and Needles.xnb
+Content\Music\Pins and Needles.wma
+Content\Music\Pirate Empire.xnb
+Content\Music\Pirate Empire.wma
+Content\Music\Syntax Error.xnb
+Content\Music\Syntax Error.wma
+Content\Music\Tokyo Escapade.xnb
+Content\Music\Tokyo Escapade.wma
+Content\Music\Nostalgia.xnb
+Content\Music\Nostalgia.wma
+Content\Music\Anxiety Attack.xnb
+Content\Music\Anxiety Attack.wma
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

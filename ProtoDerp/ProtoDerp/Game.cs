@@ -122,6 +122,9 @@ namespace ProtoDerp
 
         public int gameTitleValue = 0;
         public bool isCollidingWithButton = false;
+        public float fadeAlpha = 1f;
+
+        public string writeDirectory="";
 
         public Game()
         {
@@ -524,7 +527,18 @@ namespace ProtoDerp
         {
             String path ="";
             int pathIndex = path.IndexOf("bin");
-            path = @"C:\Users\John\Documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerpContent\World1\Level" + templateNum + @".txt";
+            //Need to change this.....
+            DirectoryInfo di = new DirectoryInfo(@"Content\" + "World1");
+            String fullName = di.FullName;
+            if (Constants.IS_IN_DEBUG_MODE)
+            {
+                path = @"C:\Users\John\Documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerpContent\World1\Level" + templateNum + @".txt";
+            }
+            else
+            {
+                //path = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\LevelEditor2").FullName;
+                path = this.writeDirectory + @"\Level" + templateNum + @".txt";
+            }//path = fullName + @"\Level" + templateNum + @".txt";
             LinkedList<String> lines = new LinkedList<String>();
             LinkedList<Block> blocks = getEntitiesOfType<Block>();
             foreach (Block b in blocks)
@@ -613,8 +627,15 @@ namespace ProtoDerp
             }
 
             lines.AddLast("Demi " + (int)maxLeft + " " + (int)maxRight + " " + (int)maxTop + " " + (int)maxButtom);
+            //lines.AddLast(path);
+            
 
             System.IO.File.WriteAllLines(path, lines);
+            if (!Constants.IS_IN_DEBUG_MODE)
+            {
+                DirectoryInfo di2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\LevelEditor");
+                System.IO.File.WriteAllLines(di2.FullName+"\\Level" + templateNum + @".txt", lines);
+            }
 
         }
 

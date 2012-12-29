@@ -52,4 +52,5 @@
 909 -536 deathSpikes DeathBlock 0
 780 -535 deathSpikes DeathBlock 0
 1046 -668 ahLogo0 GoalBlock 9
+903 -301 deathBall MovingCycle 2 4 853 557 251 550 248 -97 911 208
 Demi -283 1130 -492 661

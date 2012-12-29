@@ -571,18 +571,18 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Music\01 Syntax Error.mp3">
-      <Name>01 Syntax Error</Name>
+    <Compile Include="Music\Syntax Error.mp3">
+      <Name>Syntax Error</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
     </Compile>
-    <Compile Include="Music\03 Tokyo Escapade.mp3">
-      <Name>03 Tokyo Escapade</Name>
+    <Compile Include="Music\Tokyo Escapade.mp3">
+      <Name>Tokyo Escapade</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
     </Compile>
-    <Compile Include="Music\05 Nostalgia.mp3">
-      <Name>05 Nostalgia</Name>
+    <Compile Include="Music\Nostalgia.mp3">
+      <Name>Nostalgia</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
     </Compile>
@@ -625,6 +625,21 @@
       <Name>start</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Music\Anxiety Attack.mp3">
+      <Name>Anxiety Attack</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Music\Pins and Needles.mp3">
+      <Name>Pins and Needles</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="Music\Pirate Empire.mp3">
+      <Name>Pirate Empire</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
     </Compile>
     <Content Include="Template\Level3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

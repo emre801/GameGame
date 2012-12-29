@@ -27,6 +27,9 @@ namespace ProtoDerp
                     initLevels("World1");
                 }
             }
+
+            DirectoryInfo di = new DirectoryInfo(@"Content\" + "World");
+            this.game.writeDirectory = fullLocation;
         }
         public PlayableCharacter player1 = null;
         public PlayableCharacter player2 = null;
@@ -292,12 +295,15 @@ namespace ProtoDerp
         private static Dictionary<string, string> templates = new Dictionary<string, string>();
         public static int templateCount = 0;
 
+        public static string fullLocation="";
+
         private static bool isInitialized = false;
         private static void initLevels(String path)
         {
             if (!isInitialized)
             {
                 DirectoryInfo di = new DirectoryInfo(@"Content\"+path);
+                String fullname=di.FullName;
                 //This clears the cache templates so that new Maps can be loaded
                 templates = new Dictionary<string, string>();
                 foreach (FileInfo fi in di.GetFiles())
@@ -310,6 +316,14 @@ namespace ProtoDerp
                         int i = 0;
                     }
                 }
+                
+                DirectoryInfo di2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\DebugInfo");
+                String name = di2.FullName + @"\DebugInfo.txt";
+                LinkedList<String> lines = new LinkedList<String>();
+                lines.AddLast(di.FullName);
+                fullLocation = di.FullName;
+                System.IO.File.WriteAllLines(name, lines);
+                
             }
         }
 

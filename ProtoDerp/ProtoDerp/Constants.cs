@@ -15,6 +15,8 @@ namespace ProtoDerp
 
         public const int MAX_TEMPLATE_LEVEL = 3;
 
+        public const bool IS_IN_DEBUG_MODE = true;
+
         public const double GAMEWORLD_ASPECT_RATIO = 4f / 3f; // Width of game world / height of game world
 
         // The size of the screen in pixels

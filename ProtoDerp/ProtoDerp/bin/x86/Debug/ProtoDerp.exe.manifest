@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
-  <asmv1:assemblyIdentity name="ProtoDerp.exe" version="1.0.0.16" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity name="ProtoDerp.exe" version="1.0.0.29" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <description asmv2:iconFile="Game.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="119808">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="120320">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>gHi269ijJAjwtPB88qa7Z+QitUY=</dsig:DigestValue>
+        <dsig:DigestValue>qUyRkCeJVnYt6v2+OYhJqCkXDIA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -719,60 +719,6 @@
       <dsig:DigestValue>tWgUUeY9P4Hx3tory8yUUKfLhZg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Music\01 Syntax Error.wma" size="2546211">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>haIzBU8psIrp3AHZbozZ0MPZyDE=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Content\Music\01 Syntax Error.xnb" size="133">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>7vS1HIhCSDh6AvJ09FJO6J1dl54=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Content\Music\03 Tokyo Escapade.wma" size="2358303">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>pjGpxbQ5XGPgQqYxA7r7jYd4GXc=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Content\Music\03 Tokyo Escapade.xnb" size="135">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>GuMTh3p7yBR/rYWrsrDo+A8Yk94=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Content\Music\05 Nostalgia.wma" size="5042703">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>yFG1iMrKbK0umWawtVIEmzBZl0Q=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Content\Music\05 Nostalgia.xnb" size="130">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>eVoeR6fM2VRL8Z8H8g+hTdhKygM=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="Content\Music\Alpha Black Magic.wma" size="4156851">
     <hash>
       <dsig:Transforms>
@@ -789,6 +735,114 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>+axMP0rYErYHLx2JzezURMgGy5Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\Anxiety Attack.wma" size="5982243">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Aj0fr4uzHhAA+tobmYbjwTQFmyc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\Anxiety Attack.xnb" size="132">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HXGitjtl1F/4Hn+73218Ttn+6Ec=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\Nostalgia.wma" size="5042703">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>q08OLMLthVhYR8TGEaHiObC6IN4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\Nostalgia.xnb" size="127">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jHeOaJN9BViVVFUpxbiHXsNFFzo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\Pins and Needles.wma" size="3673659">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XnCnJc03rluCmbaGsVDM8zyZyGM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\Pins and Needles.xnb" size="134">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>WwCZPMu6SPZqLsXR4zsvzGTyakM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\Pirate Empire.wma" size="2948871">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>1fHP2i2q5FWocr8Y0XPqjMvZF60=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\Pirate Empire.xnb" size="131">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>yaY9EA0TZ5CBsILmfKmzLvdzrfA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\Syntax Error.wma" size="2546211">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ddOdH1KvXTmPpfVMeLYm4L358e8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\Syntax Error.xnb" size="130">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>EDMGZp4gvTIuLva+gJJr8DCpOD4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\Tokyo Escapade.wma" size="2358303">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QQ6hPjRl9eg4/9JhFGR5KONRoDQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Music\Tokyo Escapade.xnb" size="132">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>CGXVgqodY+me8sdPq75sYidQ46I=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\outPut.xnb" size="2875">
@@ -1241,13 +1295,13 @@
       <dsig:DigestValue>6DbW3RLItSLbwI7OvRMtEMPXxB0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level1.txt" size="2258">
+  <file name="Content\World1\Level1.txt" size="2299">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>/dimjvWjEajuWem9GUi9jLlv5s4=</dsig:DigestValue>
+      <dsig:DigestValue>XPHVsFisAv9qZhg/6i+1fptaF00=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level10.txt" size="7197">
@@ -1439,13 +1493,13 @@
       <dsig:DigestValue>W8RGxxAq/lGUx2aYB9472a1wFtg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level3.txt" size="1981">
+  <file name="Content\World1\Level3.txt" size="2055">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Vpfczc92jStEN0AoethZXVnL6z0=</dsig:DigestValue>
+      <dsig:DigestValue>oNyPnubHDiad/Qnnm4ZSCD9XYUU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level4.txt" size="2069">
@@ -1457,22 +1511,22 @@
       <dsig:DigestValue>UzD7yumDSzXt48rGOn38Rkhp7uo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level5.txt" size="2129">
+  <file name="Content\World1\Level5.txt" size="2197">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>v8wK7e5wmwS09vbE+MswUWIYppA=</dsig:DigestValue>
+      <dsig:DigestValue>sULZ8z0oY/qAYYYgNYyo3WxSQg8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level6.txt" size="1033">
+  <file name="Content\World1\Level6.txt" size="1268">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>141GxXrL8Dg1NIhv7fLeGzSzYl0=</dsig:DigestValue>
+      <dsig:DigestValue>80RPeB5NVfY2I3c3nEOGbCJfOuU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level7.txt" size="803">

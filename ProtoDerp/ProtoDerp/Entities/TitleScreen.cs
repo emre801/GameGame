@@ -66,7 +66,11 @@ namespace ProtoDerp
 
 
             posSelectText = new Vector2(Constants.GAME_WORLD_WIDTH * 0.5f, Constants.GAME_WORLD_HEIGHT * 0.634f);
+            if (Constants.FULLSCREEN)
+            {
+                posSelectText = new Vector2(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 0.5f, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.634f);
 
+            }
             angleHandShort = 135;
             angleHandLong = 350;
             alpha = 1;
@@ -96,7 +100,8 @@ namespace ProtoDerp
             creativeMode.setTitleValuee(2);
             exit = new Button(g, v4, 0, "Exit");
             exit.setTitleValuee(3);
-            
+
+            game.fadeAlpha = 1f;
             game.drawingTool.resetCamera();
             keyInput = new KeyboardInput();
         }
@@ -181,6 +186,7 @@ namespace ProtoDerp
                 if (decreaseAlpha != -1)
                 {
                     alpha -= Constants.TITLE_FADEOUT_SPEED*.22f;
+                    game.fadeAlpha = alpha;
 
                     if (decreaseAlpha == 1)
                     {
@@ -237,7 +243,7 @@ namespace ProtoDerp
                 base.Draw(gameTime, spriteBatch);
                 spriteBatch.Draw(sprLogoText.index, game.drawingTool.getDrawingCoords(posLogoText), null, Color.White * alpha * 1f, 0, sprLogoText.origin, game.drawingTool.gameToScreen(1.0f * scaleFactor), SpriteEffects.None, 0);
                 //spriteBatch.Draw(sprSelectText.index, game.drawingTool.getDrawingCoords(posSelectText), null, Color.White * alpha * 1f, 0, sprSelectText.origin, game.drawingTool.gameToScreen(1.0f * scaleFactor), SpriteEffects.None, 0);
-                game.GUI.DrawRectangle(spriteBatch, new Rectangle((int)game.drawingTool.gameToScreen(0), (int)game.drawingTool.gameToScreen(posSelectInner.Y), (int)game.drawingTool.gameXCoordToScreenCoordX(game.getWorldSize().X), (int)game.drawingTool.gameToScreen(sprSelectInner.index.Height * scaleFactor)), Color.Black, .75f);
+                //game.GUI.DrawRectangle(spriteBatch, new Rectangle((int)game.drawingTool.gameToScreen(0), (int)game.drawingTool.gameToScreen(posSelectInner.Y), (int)game.drawingTool.gameXCoordToScreenCoordX(game.getWorldSize().X), (int)game.drawingTool.gameToScreen(sprSelectInner.index.Height * scaleFactor)), Color.Black, .75f);
                 start.Draw(gameTime, spriteBatch);
                 selectLevel.Draw(gameTime, spriteBatch);
                 creativeMode.Draw(gameTime, spriteBatch);

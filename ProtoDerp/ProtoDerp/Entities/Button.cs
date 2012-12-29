@@ -71,7 +71,7 @@ namespace ProtoDerp
                     oldMouse = Mouse.GetState();
                 }
             }
-            else if (game.gMode==1)
+            else if (game.gMode==1|| game.gMode==6)
             {
                 isColliding();
             }
@@ -122,7 +122,7 @@ namespace ProtoDerp
                 
             
             }
-            if (game.gMode == 1)
+            if (game.gMode == 1 || game.gMode == 6)
             {
                 origin = new Vector2(blockSprite.index.Width / 2f, blockSprite.index.Height/ 2f);
                 float alpha = 1f;
@@ -132,7 +132,7 @@ namespace ProtoDerp
 
                 spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X),
                  (int)(pos.Y),
-                 (int)(blockSprite.index.Width*0.45f), (int)(blockSprite.index.Height*0.45f)), null, Color.White*alpha, 0, origin, SpriteEffects.None, 0f);
+                 (int)(blockSprite.index.Width * 0.45f * game.drawingTool.zoomRatio), (int)(blockSprite.index.Height * 0.45f*game.drawingTool.zoomRatio)), null, Color.White * alpha * game.fadeAlpha, 0, origin, SpriteEffects.None, 0f);
                 
 
 

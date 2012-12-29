@@ -90,10 +90,12 @@ namespace ProtoDerp
             {
                 //DrawBackThing(gameTime, spriteBatch);
                 DrawCredits(gameTime, spriteBatch);
-                
-                DrawText(spriteBatch, 0.05f, 0.9f, game.songName);
-                if(!game.songArtist.Equals(""))
-                DrawText(spriteBatch, 0.05f, 0.95f,  "by "+game.songArtist);
+                if (game.pause)
+                {
+                    DrawText(spriteBatch, 0.05f, 0.9f, game.songName);
+                    if (!game.songArtist.Equals(""))
+                        DrawText(spriteBatch, 0.05f, 0.95f, "by " + game.songArtist);
+                }
                  
 
             }

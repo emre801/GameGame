@@ -901,36 +901,6 @@
       <Time>2012-08-25T15:24:15.1099545-04:00</Time>
     </Item>
     <Item>
-      <Source>Music\01 Syntax Error.mp3</Source>
-      <Name>Music\01 Syntax Error</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\01 Syntax Error.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\01 Syntax Error.wma</Extra>
-      <Time>2012-12-16T15:48:12.2147171-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Music\03 Tokyo Escapade.mp3</Source>
-      <Name>Music\03 Tokyo Escapade</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\03 Tokyo Escapade.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\03 Tokyo Escapade.wma</Extra>
-      <Time>2012-12-16T15:48:12.2607198-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Music\05 Nostalgia.mp3</Source>
-      <Name>Music\05 Nostalgia</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\05 Nostalgia.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\05 Nostalgia.wma</Extra>
-      <Time>2012-12-16T15:48:12.7297466-05:00</Time>
-    </Item>
-    <Item>
       <Source>Music\Alpha Black Magic.mp3</Source>
       <Name>Music\Alpha Black Magic</Name>
       <Importer>Mp3Importer</Importer>
@@ -1002,6 +972,66 @@
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\start.xnb</Output>
       <Time>2012-12-23T12:30:41.2847168-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Pins and Needles.mp3</Source>
+      <Name>Music\Pins and Needles</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Pins and Needles.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Pins and Needles.wma</Extra>
+      <Time>2012-12-28T13:58:57.4653343-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Pirate Empire.mp3</Source>
+      <Name>Music\Pirate Empire</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Pirate Empire.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Pirate Empire.wma</Extra>
+      <Time>2012-12-28T13:58:57.4863355-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Syntax Error.mp3</Source>
+      <Name>Music\Syntax Error</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Syntax Error.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Syntax Error.wma</Extra>
+      <Time>2012-12-16T15:48:12.2147171-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Tokyo Escapade.mp3</Source>
+      <Name>Music\Tokyo Escapade</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Tokyo Escapade.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Tokyo Escapade.wma</Extra>
+      <Time>2012-12-16T15:48:12.2607198-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Nostalgia.mp3</Source>
+      <Name>Music\Nostalgia</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Nostalgia.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Nostalgia.wma</Extra>
+      <Time>2012-12-16T15:48:12.7297466-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Anxiety Attack.mp3</Source>
+      <Name>Music\Anxiety Attack</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Anxiety Attack.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Anxiety Attack.wma</Extra>
+      <Time>2012-12-28T13:57:57.2108879-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
