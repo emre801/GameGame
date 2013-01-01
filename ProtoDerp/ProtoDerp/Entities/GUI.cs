@@ -94,7 +94,9 @@ namespace ProtoDerp
                 {
                     DrawText(spriteBatch, 0.05f, 0.9f, game.songName);
                     if (!game.songArtist.Equals(""))
-                        DrawText(spriteBatch, 0.05f, 0.95f, "by " + game.songArtist);
+                        DrawText(spriteBatch, 0.05f, 0.925f, "by " + game.songArtist);
+                    else
+                        DrawText(spriteBatch, 0.05f, 0.925f, "by __twc");
                 }
                  
 

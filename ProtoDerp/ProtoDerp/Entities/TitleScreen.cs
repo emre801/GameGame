@@ -50,6 +50,8 @@ namespace ProtoDerp
 
         KeyboardInput keyInput;
         Button start, selectLevel, creativeMode, exit;
+        bool moveDirection;
+        int moveTimer = 0;
 
         public TitleScreen(Game g)
             : base(g)
@@ -87,10 +89,18 @@ namespace ProtoDerp
             //battleOptions = new BattleOptions(g, this);
             //game.addEntity(battleOptions);
             //battleOptions.IsVisible = false;
-            Vector2 v1 = new Vector2(posSelectText.X, (posSelectText.Y - (Constants.GAME_WORLD_HEIGHT * 0.01f)) + ((float)0 * (Constants.GAME_WORLD_HEIGHT * 0.08f)));
-            Vector2 v2 = new Vector2(posSelectText.X, (posSelectText.Y - (Constants.GAME_WORLD_HEIGHT * 0.01f)) + ((float)1 * (Constants.GAME_WORLD_HEIGHT * 0.08f)));
-            Vector2 v3 = new Vector2(posSelectText.X, (posSelectText.Y - (Constants.GAME_WORLD_HEIGHT * 0.01f)) + ((float)2 * (Constants.GAME_WORLD_HEIGHT * 0.08f)));
-            Vector2 v4 = new Vector2(posSelectText.X, (posSelectText.Y - (Constants.GAME_WORLD_HEIGHT * 0.01f)) + ((float)3 * (Constants.GAME_WORLD_HEIGHT * 0.08f)));
+            Sprite startSP=game.getSprite("start");
+            Sprite selectLevelSP = game.getSprite("SelectLevel");
+            Sprite creativeSP = game.getSprite("CreativeMode");
+            Sprite exitSP = game.getSprite("Exit");
+            float spaceValue = 0.45f;
+            if (Constants.FULLSCREEN)
+                spaceValue = 0.65f;
+
+            Vector2 v1 = new Vector2(posSelectText.X, (posSelectText.Y - (Constants.GAME_WORLD_HEIGHT * 0.01f)));
+            Vector2 v2 = new Vector2(posSelectText.X, v1.Y + startSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
+            Vector2 v3 = new Vector2(posSelectText.X, v2.Y + selectLevelSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
+            Vector2 v4 = new Vector2(posSelectText.X, v3.Y + creativeSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
 
             start = new Button(g, v1, 0, "start");
             start.setTitleValuee(0);
@@ -112,11 +122,37 @@ namespace ProtoDerp
             if (IsVisible)
             {
                 //game.drawingTool.resetCamera();
-
+                
+                //Update menu buttons
                 start.Update(gameTime, worldFactor);
                 selectLevel.Update(gameTime, worldFactor);
                 creativeMode.Update(gameTime, worldFactor);
                 exit.Update(gameTime, worldFactor);
+
+                //Move buttons up and down
+                /*
+                if (moveDirection)
+                {
+                    start.moveButton(new Vector2(0,0.01f));
+                    selectLevel.moveButton(new Vector2(0, 0.01f));
+                    creativeMode.moveButton(new Vector2(0, 0.01f));
+                    exit.moveButton(new Vector2(0, 0.01f));
+                }
+                else
+                {
+                    start.moveButton(new Vector2(0, -0.01f));
+                    selectLevel.moveButton(new Vector2(0, -0.01f));
+                    creativeMode.moveButton(new Vector2(0, -0.01f));
+                    exit.moveButton(new Vector2(0, -0.01f));
+                }
+
+                moveTimer++;
+                if (moveTimer == 200)
+                {
+                    moveTimer = 0;
+                    moveDirection = !moveDirection;
+                }
+                 * */
 
                 life += gameTime.ElapsedGameTime.TotalMilliseconds;
                 game.drawingTool.cam.Zoom = 0.95f*game.drawingTool.zoomRatio;
@@ -250,53 +286,6 @@ namespace ProtoDerp
                 exit.Draw(gameTime, spriteBatch);
                 game.GUI.DrawMouse(gameTime, spriteBatch);    
             
-            }
-        }
-
-        public void DrawCredits(GameTime gameTime, SpriteBatch spriteBatch)
-        {
-            String str;
-            switch (this.creditDev % 4)
-            {
-                case 0:
-                    str = "Andrew Marrero: Team Lead, Graphics, Audio";
-                    break;
-                case 1:
-                    str = "John Erdogan: Graphics/Level Design";
-                    break;
-                case 2:
-                    str = "Jeremy Schiff: Graphics Programming, Engine";
-                    break;
-                default:
-                    str = "Vaibhav Verma: Gameplay Programming, Tutorial";
-                    break;
-            }
-            String[] tempstrMulti = str.Split("|".ToCharArray());
-            SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
-            tempstrMulti = str.Split("|".ToCharArray());
-            for (int i = 0; i < tempstrMulti.Length; i += 1)
-                spriteBatch.DrawString(font, tempstrMulti[i],
-                    game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * 0.065f, (game.getWorldSize().Y * 0.05f) + (font.MeasureString("A").Y * i))),
-                    Color.Black * 0.75f * alpha * this.devAlpha,
-                    0f,
-                    Vector2.Zero,
-                    //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
-                    game.drawingTool.gameToScreen(1f) * 0.25f,
-                    SpriteEffects.None,
-                    0);
-            if (this.increaseDevAlpha)
-                devAlpha += 0.0002f;
-            else
-                devAlpha -= 0.0002f;
-            if (devAlpha >= 0.64f)
-            {
-
-                this.increaseDevAlpha = false;
-            }
-            if (devAlpha <= 0)
-            {
-                this.creditDev++;
-                this.increaseDevAlpha = true;
             }
         }
     }

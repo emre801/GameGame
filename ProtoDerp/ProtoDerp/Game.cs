@@ -791,6 +791,7 @@ namespace ProtoDerp
                 if (ts.CompareTo(new TimeSpan(0, 0, 0,0,300)) > 0|| playerOneInput.isAPressed())
                 {
                     //deathAnimation = false;
+                    numDeath++;
                     restart = true;
                     //animationTime.Restart();
                     //return;
@@ -827,7 +828,7 @@ namespace ProtoDerp
         public void PlayerDies()
         {
             //newLevel();
-            numDeath++;
+            //numDeath++;
             deathAnimation = true;
             //restart = true;
         }

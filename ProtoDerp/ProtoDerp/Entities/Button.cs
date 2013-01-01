@@ -78,6 +78,11 @@ namespace ProtoDerp
 
         }
 
+        public void moveButton(Vector2 moveDir)
+        {
+            this.pos += moveDir;
+        }
+
         public bool isColliding()
         {
             
@@ -129,11 +134,22 @@ namespace ProtoDerp
 
                 if (game.gameTitleValue == titleValue)
                     alpha = 0.5f;
-
-                spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X),
-                 (int)(pos.Y),
-                 (int)(blockSprite.index.Width * 0.45f * game.drawingTool.zoomRatio), (int)(blockSprite.index.Height * 0.45f*game.drawingTool.zoomRatio)), null, Color.White * alpha * game.fadeAlpha, 0, origin, SpriteEffects.None, 0f);
+                if (Constants.FULLSCREEN)
+                {
+                    spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X),
+                     (int)(pos.Y),
+                     (int)(blockSprite.index.Width * 0.65f * game.drawingTool.zoomRatio), (int)(blockSprite.index.Height * 0.65f * game.drawingTool.zoomRatio)), null, Color.White * alpha * game.fadeAlpha, 0, origin, SpriteEffects.None, 0f);
+                }
+                else
+                {
+                    spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X),
+                     (int)(pos.Y),
+                     (int)(blockSprite.index.Width * 0.45f * game.drawingTool.zoomRatio), (int)(blockSprite.index.Height * 0.45f * game.drawingTool.zoomRatio)), null, Color.White * alpha * game.fadeAlpha, 0, origin, SpriteEffects.None, 0f);
                 
+                }
+                //spriteBatch.Draw(blockSprite.index, new Vector2((int)pos.X, (int)pos.Y), new Rectangle((int)(pos.X),
+                // (int)(pos.Y),
+               //  (int)widthDiff, (int)heightDiff), Color.White, 0, origin, 5, SpriteEffects.FlipHorizontally, 0f);
 
 
             }
