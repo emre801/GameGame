@@ -258,6 +258,16 @@ namespace ProtoDerp
 
             foreach (MovingCycle i in moveCycleBlock)
             {
+                foreach (GoalBlock j in goalBlocks)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+
+                }
+            }
+
+            foreach (MovingCycle i in moveCycleBlock)
+            {
                 foreach (Block j in blocks)
                 {
                     i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);

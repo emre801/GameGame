@@ -112,7 +112,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>SCOSkF/Yo8m4FF81jKuK1aBh+uc=</dsig:DigestValue>
+        <dsig:DigestValue>x0UmhQuTxCV3yeYru0V7Z4nbs0M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1349,31 +1349,31 @@
       <dsig:DigestValue>WSCkKh2O/dOPnCMywmYvxpB++vw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level15.txt" size="2344">
+  <file name="Content\World1\Level15.txt" size="2345">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>/jt553Lo74ccTi2gAsacManx8PA=</dsig:DigestValue>
+      <dsig:DigestValue>08xsQgbBGVyGg7vGYQjxTgalq1g=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level16.txt" size="528">
+  <file name="Content\World1\Level16.txt" size="831">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Pki5Dsrlw8cBVjLloUPw0TRIFSM=</dsig:DigestValue>
+      <dsig:DigestValue>Nitf+T7bsFerOQa6AWTEWuzsxSQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level17.txt" size="505">
+  <file name="Content\World1\Level17.txt" size="2">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Oy8QLkaO1SWAe8YDtzRxpf/O9pg=</dsig:DigestValue>
+      <dsig:DigestValue>uoq1oCgLlTqpdDX/iUbLy7J1Wic=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level18.txt" size="183">
@@ -1520,13 +1520,13 @@
       <dsig:DigestValue>sULZ8z0oY/qAYYYgNYyo3WxSQg8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level6.txt" size="1268">
+  <file name="Content\World1\Level6.txt" size="995">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>80RPeB5NVfY2I3c3nEOGbCJfOuU=</dsig:DigestValue>
+      <dsig:DigestValue>QDRI8XbWV5/IlYYXjlF9dBq/I2c=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level7.txt" size="803">

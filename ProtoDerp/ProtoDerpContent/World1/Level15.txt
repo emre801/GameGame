@@ -56,5 +56,5 @@
 1691 -1342 bigGround MagnetBlock 24 0 20 535
 2011 -1689 bigGround MagnetBlock 0 -80 670 20
 1759 -2070 bigGround MagnetBlock -13 0 15 505
-1554 -2043 ahLogo0 GoalBlock 6
+1554 -2043 ahLogo0 GoalBlock 16
 Demi -906 2496 -1959 1842

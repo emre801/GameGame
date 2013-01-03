@@ -114,6 +114,9 @@ namespace ProtoDerp
             game.fadeAlpha = 1f;
             game.drawingTool.resetCamera();
             keyInput = new KeyboardInput();
+
+            posLogoText = new Vector2(Constants.GAME_WORLD_WIDTH * 0.3f, Constants.GAME_WORLD_HEIGHT * (0.301f));
+                
         }
 
         public override void Update(GameTime gameTime, float worldFactor)
@@ -131,28 +134,34 @@ namespace ProtoDerp
 
                 //Move buttons up and down
                 /*
-                if (moveDirection)
+                if (moveTimer % 30 == 0)
                 {
-                    start.moveButton(new Vector2(0,0.01f));
-                    selectLevel.moveButton(new Vector2(0, 0.01f));
-                    creativeMode.moveButton(new Vector2(0, 0.01f));
-                    exit.moveButton(new Vector2(0, 0.01f));
-                }
-                else
-                {
-                    start.moveButton(new Vector2(0, -0.01f));
-                    selectLevel.moveButton(new Vector2(0, -0.01f));
-                    creativeMode.moveButton(new Vector2(0, -0.01f));
-                    exit.moveButton(new Vector2(0, -0.01f));
+                    if (moveDirection)
+                    {
+                        posLogoText += game.drawingTool.getDrawingCoords(new Vector2(0, 1f));
+                        start.moveButton(new Vector2(0, 1f));
+                        selectLevel.moveButton(new Vector2(0, 1f));
+                        creativeMode.moveButton(new Vector2(0, 1f));
+                        exit.moveButton(new Vector2(0, 1f));
+                    }
+                    else
+                    {
+                        posLogoText += game.drawingTool.getDrawingCoords(new Vector2(0, -1f));
+                        start.moveButton(new Vector2(0, -1f));
+                        selectLevel.moveButton(new Vector2(0, -1f));
+                        creativeMode.moveButton(new Vector2(0, -1f));
+                        exit.moveButton(new Vector2(0, -1f));
+                    }
                 }
 
                 moveTimer++;
-                if (moveTimer == 200)
+                if (moveTimer == 120)
                 {
                     moveTimer = 0;
                     moveDirection = !moveDirection;
                 }
                  * */
+                 
 
                 life += gameTime.ElapsedGameTime.TotalMilliseconds;
                 game.drawingTool.cam.Zoom = 0.95f*game.drawingTool.zoomRatio;
@@ -169,10 +178,10 @@ namespace ProtoDerp
                 offsetLogo = (float)Math.Cos(life * 0.001) * 0.01f;
                 selectionAlpha = (float)(Math.Abs(Math.Cos(life * 0.00075)) + 0.15f) * 0.3f;
 
-                posLogoText = new Vector2(Constants.GAME_WORLD_WIDTH * 0.3f, Constants.GAME_WORLD_HEIGHT * (0.301f));
-                posLogoGear = new Vector2(Constants.GAME_WORLD_WIDTH * 0.036f, Constants.GAME_WORLD_HEIGHT * (0.079f + offsetGear));
-                posLogoHandShort = new Vector2(Constants.GAME_WORLD_WIDTH * 0.127f, Constants.GAME_WORLD_HEIGHT * (0.457f + offsetGear));
-                posLogoHandLong = new Vector2(Constants.GAME_WORLD_WIDTH * 0.309f, Constants.GAME_WORLD_HEIGHT * (0.148f + offsetGear));
+                //posLogoText = new Vector2(Constants.GAME_WORLD_WIDTH * 0.3f, Constants.GAME_WORLD_HEIGHT * (0.301f));
+                //posLogoGear = new Vector2(Constants.GAME_WORLD_WIDTH * 0.036f, Constants.GAME_WORLD_HEIGHT * (0.079f + offsetGear));
+                //posLogoHandShort = new Vector2(Constants.GAME_WORLD_WIDTH * 0.127f, Constants.GAME_WORLD_HEIGHT * (0.457f + offsetGear));
+                //posLogoHandLong = new Vector2(Constants.GAME_WORLD_WIDTH * 0.309f, Constants.GAME_WORLD_HEIGHT * (0.148f + offsetGear));
 
                 //Menu Control
                 if ((this.player1.IsUpPressed() || keyInput.IsNewKeyPressed(Keys.Up)) && alpha >= 1)
