@@ -1,1 +1,29 @@
-
+-451 -120 derrick.png Block 105 75 0 0
+733 85 bigBlock Block 25 1565 0 0
+-305 -401 bigBlock Block 1365 30 0 0
+726 288 bigBlock Block 25 2085 0 0
+864 -126 bigBlock Block 25 1810 0 0
+1749 59 bigBlock Block 430 35 0 0
+1749 59 bigBlock Block 430 35 0 0
+-51 -497 bigBlock Block 1190 35 0 0
+-180 -1080 bigBlock Block 40 285 0 0
+199 59 deathSpikes DeathBlock 0
+545 59 deathSpikes DeathBlock 0
+1080 59 deathSpikes DeathBlock 0
+1454 59 deathSpikes DeathBlock 0
+1713 -53 deathSpikes DeathBlock -90
+1713 70 deathSpikes DeathBlock -90
+1713 195 deathSpikes DeathBlock -90
+1400 253 deathSpikes DeathBlock 0
+994 251 deathSpikes DeathBlock 0
+698 252 deathSpikes DeathBlock 0
+404 249 deathSpikes DeathBlock 0
+95 250 deathSpikes DeathBlock 0
+-223 253 deathSpikes DeathBlock 0
+-171 -1024 ahLogo0 GoalBlock 6
+162 -320 ahLogo0 MovingCycle 2 8 -295 370 173 100 97 182 222 293 239 208 142 102 99 146 170 190
+-50 -136 ahLogo0 MovingCycle 2 3 -302 380 -42 373 -42 373
+-12 -465 ahLogo0 MovingCycle 2 3 -337 39 -4 44 -4 44
+-45 -767 ahLogo0 MovingCycle 2 3 -302 -240 -37 -257 -37 -257
+-330 -894 ahLogo0 MovingCycle 2 3 0 -384 -322 -384 -322 -384
+Demi -361 1798 -610 830

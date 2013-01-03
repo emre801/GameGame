@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="119808">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="120320">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>x0UmhQuTxCV3yeYru0V7Z4nbs0M=</dsig:DigestValue>
+        <dsig:DigestValue>bxBl/kRMv9PqsrJRxc3Iv5p2dbc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1358,31 +1358,31 @@
       <dsig:DigestValue>08xsQgbBGVyGg7vGYQjxTgalq1g=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level16.txt" size="831">
+  <file name="Content\World1\Level16.txt" size="832">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Nitf+T7bsFerOQa6AWTEWuzsxSQ=</dsig:DigestValue>
+      <dsig:DigestValue>4w/is/8u3lEE69x1HO+HgU7loaQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level17.txt" size="2">
+  <file name="Content\World1\Level17.txt" size="1171">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>uoq1oCgLlTqpdDX/iUbLy7J1Wic=</dsig:DigestValue>
+      <dsig:DigestValue>aeEL0/+4HJKRjVqc0cgHRag0wYs=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level18.txt" size="183">
+  <file name="Content\World1\Level18.txt" size="626">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>beNdvtg42DHQYXHiQLxayhs7gBs=</dsig:DigestValue>
+      <dsig:DigestValue>8Ge04zn6i2kLbhPt1PBlikKr9Sg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level19.txt" size="440">

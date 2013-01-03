@@ -37,6 +37,10 @@ namespace ProtoDerp
             origin = new Vector2(sprLevelSelect.index.Width / 2, sprLevelSelect.index.Height / 2);
 
             keyInput = new KeyboardInput();
+            if (Constants.IS_IN_DEBUG_MODE)
+            {
+                levelNum = Constants.WRITE_LEVEL;
+            }
         }
 
         public override void Update(GameTime gameTime, float worldFactor)

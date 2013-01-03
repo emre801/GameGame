@@ -295,6 +295,15 @@ namespace ProtoDerp
 
                 }
             }
+            foreach (MovingCycle i in moveCycleBlock)
+            {
+                foreach (MagnetBlock j in magnetBlocks)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+
+                }
+            }
 
 
             SortedSet<Entity> omg=game.entities;

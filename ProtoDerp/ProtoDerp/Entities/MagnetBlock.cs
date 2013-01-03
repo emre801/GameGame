@@ -60,10 +60,14 @@ namespace ProtoDerp
         }
         void OnSeparation(Fixture fixtureA, Fixture fixtureB)
         {
+            
             LinkedList<PlayableCharacter> players = game.getEntitiesOfType<PlayableCharacter>();
             PlayableCharacter player = players.First();
             isInMagnet = false;
-            player.body.LinearVelocity = new Vector2(0, 0);
+            if (fixtureB == player.fixture)
+            {
+                player.body.LinearVelocity = new Vector2(0, 0);
+            }
             //player.body.IgnoreGravity = false;
 
         }
@@ -78,11 +82,13 @@ namespace ProtoDerp
                     player.body.ApplyLinearImpulse(magnetPulse);
                     if (!isInMagnet)
                     {
+                        
                         if(magnetPulse.X!=0)
                             player.body.LinearVelocity = new Vector2(0, body.LinearVelocity.Y);
                         else
                             player.body.LinearVelocity = new Vector2(body.LinearVelocity.X, 0);
                         isInMagnet = true;
+                         
                     }
                     //player.body.IgnoreGravity = true;
                     return !isMagnet;

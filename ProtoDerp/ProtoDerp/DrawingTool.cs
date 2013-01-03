@@ -355,7 +355,7 @@ namespace ProtoDerp
                     if (Math.Abs(game.Arena.player1.body.LinearVelocity.X) > 0.1f)
                     {
                         float moveAmount = (p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1) / 10000f;
-                        game.moveBackGround -= new Vector2(moveAmount, 0);
+                        //game.moveBackGround -= new Vector2(moveAmount, 0);
                     }
                 }
                 if (p1.Position.X - width < cam._pos.X - cam.ViewportWidth / 1)
@@ -365,7 +365,7 @@ namespace ProtoDerp
                     if (Math.Abs(game.Arena.player1.body.LinearVelocity.X) > 0.1f)
                     {
                         float moveAmount = (p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1) / 10000f;
-                        game.moveBackGround += new Vector2(moveAmount, 0);
+                        //game.moveBackGround += new Vector2(moveAmount, 0);
                     }
                 }
             }
@@ -377,7 +377,7 @@ namespace ProtoDerp
                     if (Math.Abs(game.Arena.player1.body.LinearVelocity.Y) > 0.1f)
                     {
                         float moveAmount = (p1.Position.Y + height2) - (cam._pos.Y + cam.ViewportHeight / 1);
-                        game.moveBackGround -= new Vector2(0, moveAmount);
+                        //game.moveBackGround -= new Vector2(0, moveAmount);
                     }
                 }
                 if (p1.Position.Y - height < cam._pos.Y - cam.ViewportHeight / 1)
@@ -386,7 +386,7 @@ namespace ProtoDerp
                     if (Math.Abs(game.Arena.player1.body.LinearVelocity.Y) > 0.1f)
                     {
                         float moveAmount = (p1.Position.Y - height) - (cam._pos.Y - cam.ViewportHeight / 1);
-                        game.moveBackGround += new Vector2(0, moveAmount);
+                        //game.moveBackGround += new Vector2(0, moveAmount);
                     }
                 }
             }

@@ -1,6 +1,14 @@
-420 90 bigBlock Block 45 1000 0
-810 -85 bigBlock Block 45 235 0
-900 5 bigBlock Block 210 50 0
-715 5 bigBlock Block 210 50 0 3
-800 0 ahLogo0 GoalBlock 13
-Demi -100 800 -1600 300
+616 112 bigBlock Block 90 1365 0 0
+1540 -132 bigBlock Block 140 175 0 0
+1890 -447 bigBlock Block 140 175 0 0
+1890 167 bigBlock Block 140 175 0 0
+2220 -117 bigBlock Block 140 175 0 0
+1541 -753 bigBlock Block 140 175 0 0
+2221 -763 bigBlock Block 140 175 0 0
+1906 -1247 bigBlock Block 140 175 0 0
+1895 -940 bigBlock Block 140 175 0 0
+1904 -1407 ahLogo0 GoalBlock 1
+1890 153 bullet.0 MovingCycle 5 4 1913 -745 1909 53 1898 663 1898 663
+1542 -1244 bullet.0 MovingCycle 10 5 1540 -756 2271 -767 2235 663 1522 688 1550 -734
+1349 114 bullet.0 MovingCycle 5 4 2655 619 1900 70 1369 622 1357 624
+Demi -148 4171 -1020 1000
