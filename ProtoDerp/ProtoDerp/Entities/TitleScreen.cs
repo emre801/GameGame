@@ -100,8 +100,12 @@ namespace ProtoDerp
             Vector2 v1 = new Vector2(posSelectText.X, (posSelectText.Y - (Constants.GAME_WORLD_HEIGHT * 0.01f)));
             Vector2 v2 = new Vector2(posSelectText.X, v1.Y + startSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
             Vector2 v3 = new Vector2(posSelectText.X, v2.Y + selectLevelSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
+            
             Vector2 v4 = new Vector2(posSelectText.X, v3.Y + creativeSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
-
+            if (!Constants.ENABLE_CREATIVE_MODE)
+            {
+                v4 = new Vector2(posSelectText.X, v2.Y + selectLevelSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
+            }
             start = new Button(g, v1, 0, "start");
             start.setTitleValuee(0);
             selectLevel = new Button(g, v2, 0, "SelectLevel");
@@ -191,6 +195,11 @@ namespace ProtoDerp
                     select -= 1;
                     if (select < 0)
                         select = numOptions - 1;
+                    if (!Constants.ENABLE_CREATIVE_MODE)
+                    {
+                        if (select == 2)
+                            select = 1;
+                    }
                    
                 }
                 else if ((this.player1.IsDownPressed() || keyInput.IsNewKeyPressed(Keys.Down)) && alpha >= 1)
@@ -200,6 +209,11 @@ namespace ProtoDerp
                     select += 1;
                     if (select > numOptions - 1)
                         select = 0;
+                    if (!Constants.ENABLE_CREATIVE_MODE)
+                    {
+                        if (select == 2)
+                            select = 3;
+                    }
                 }
                 else if ((this.player1.IsSelectPressed() || keyInput.IsNewKeyPressed(Keys.Enter)) && alpha >= 1)
                 {
@@ -291,7 +305,8 @@ namespace ProtoDerp
                 //game.GUI.DrawRectangle(spriteBatch, new Rectangle((int)game.drawingTool.gameToScreen(0), (int)game.drawingTool.gameToScreen(posSelectInner.Y), (int)game.drawingTool.gameXCoordToScreenCoordX(game.getWorldSize().X), (int)game.drawingTool.gameToScreen(sprSelectInner.index.Height * scaleFactor)), Color.Black, .75f);
                 start.Draw(gameTime, spriteBatch);
                 selectLevel.Draw(gameTime, spriteBatch);
-                creativeMode.Draw(gameTime, spriteBatch);
+                if(Constants.ENABLE_CREATIVE_MODE)
+                    creativeMode.Draw(gameTime, spriteBatch);
                 exit.Draw(gameTime, spriteBatch);
                 game.GUI.DrawMouse(gameTime, spriteBatch);    
             
