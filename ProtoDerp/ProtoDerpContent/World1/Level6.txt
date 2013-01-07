@@ -4,15 +4,34 @@
 1560 640 bigBlock Block 730 6390 2 0
 -1105 -415 bigBlock Block 3330 1525 2 0
 4708 -415 bigBlock Block 3330 1525 2 0
-722 -423 GreenHill Block 1550 1800 1 0
-2520 -423 GreenHill Block 1550 1800 1 0
-4312 -423 GreenHill Block 1550 1800 1 0
+222 -91 GreenHill Block 780 755 1 0
+969 -91 GreenHill Block 780 755 1 0
+1721 -91 GreenHill Block 780 755 1 0
+2476 -91 GreenHill Block 780 755 1 0
+3229 -91 GreenHill Block 780 755 1 0
+3982 -91 GreenHill Block 780 755 1 0
 1051 -300 deathBall Block 183 186 0 0
+-16 78 grassTemplate Block 35 256 2 0
+233 78 grassTemplate Block 35 256 2 0
+486 78 grassTemplate Block 35 256 2 0
+731 78 grassTemplate Block 35 256 2 0
+986 78 grassTemplate Block 35 256 2 0
+1238 78 grassTemplate Block 35 256 2 0
+1489 78 grassTemplate Block 35 256 2 0
+1740 78 grassTemplate Block 35 256 2 0
+1991 78 grassTemplate Block 35 256 2 0
+2243 78 grassTemplate Block 35 256 2 0
+2492 78 grassTemplate Block 35 256 2 0
+2742 78 grassTemplate Block 35 256 2 0
+2996 78 grassTemplate Block 35 256 2 0
+3242 78 grassTemplate Block 35 256 2 0
+3498 78 grassTemplate Block 35 256 2 0
+3622 78 grassTemplate Block 35 256 2 0
 -131 -100 deathSpikes4 DeathBlock 0
--122 -228 deathSpikes4 DeathBlock 0
--122 -351 deathSpikes4 DeathBlock 0
--125 -468 deathSpikes4 DeathBlock 0
--122 -582 deathSpikes4 DeathBlock 0
+-125 -228 deathSpikes4 DeathBlock 0
+-125 -351 deathSpikes4 DeathBlock 0
+-125 -479 deathSpikes4 DeathBlock 0
+-125 -607 deathSpikes4 DeathBlock 0
 3677 -40 ahLogo0 GoalBlock 7
 573 123 deathBall MovingPath 10 581 633 1242 636 
 1236 118 deathBall MovingPath 10 1244 628 589 631 

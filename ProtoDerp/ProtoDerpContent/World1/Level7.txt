@@ -1,18 +1,40 @@
-1798 175 bigBlock Block 200 3910 0
--246 -905 bigBlock Block 2365 200 0
-3852 -905 bigBlock Block 2365 200 0
-1560 640 bigBlock Block 730 6390 2
--1105 -415 bigBlock Block 3330 1525 2
-4708 -415 bigBlock Block 3330 1525 2
-297 50 deathSpikes DeathBlock
-812 50 deathSpikes DeathBlock
-1337 50 deathSpikes DeathBlock
-1947 50 deathSpikes DeathBlock
-2562 50 deathSpikes DeathBlock
-3007 50 deathSpikes DeathBlock
-3542 50 deathSpikes DeathBlock
-3647 50 deathSpikes DeathBlock
-3727 50 deathSpikes DeathBlock
+1798 175 bigBlock Block 200 3910 0 0
+-246 -905 bigBlock Block 2365 200 0 0
+3852 -905 bigBlock Block 2365 200 0 0
+1560 640 bigBlock Block 730 6390 2 0
+-1105 -415 bigBlock Block 3330 1525 2 0
+4708 -415 bigBlock Block 3330 1525 2 0
+-16 78 grassTemplate Block 35 256 2 0
+233 78 grassTemplate Block 35 256 2 0
+486 78 grassTemplate Block 35 256 2 0
+731 78 grassTemplate Block 35 256 2 0
+986 78 grassTemplate Block 35 256 2 0
+1238 78 grassTemplate Block 35 256 2 0
+1489 78 grassTemplate Block 35 256 2 0
+1740 78 grassTemplate Block 35 256 2 0
+1991 78 grassTemplate Block 35 256 2 0
+2243 78 grassTemplate Block 35 256 2 0
+2492 78 grassTemplate Block 35 256 2 0
+2742 78 grassTemplate Block 35 256 2 0
+2996 78 grassTemplate Block 35 256 2 0
+3242 78 grassTemplate Block 35 256 2 0
+3498 78 grassTemplate Block 35 256 2 0
+3622 78 grassTemplate Block 35 256 2 0
+222 -91 GreenHill Block 780 755 1 0
+969 -91 GreenHill Block 780 755 1 0
+1721 -91 GreenHill Block 780 755 1 0
+2476 -91 GreenHill Block 780 755 1 0
+3229 -91 GreenHill Block 780 755 1 0
+3982 -91 GreenHill Block 780 755 1 0
+297 50 deathSpikes DeathBlock 0
+812 50 deathSpikes DeathBlock 0
+1337 50 deathSpikes DeathBlock 0
+1947 50 deathSpikes DeathBlock 0
+2562 50 deathSpikes DeathBlock 0
+3007 50 deathSpikes DeathBlock 0
+3542 50 deathSpikes DeathBlock 0
+3647 50 deathSpikes DeathBlock 0
+3727 50 deathSpikes DeathBlock 0
 3677 -40 ahLogo0 GoalBlock 8
 725 0 missile_strip_strip4 MovingDeath 2 -2 0
 1255 0 missile_strip_strip4 MovingDeath 2 -2 0
