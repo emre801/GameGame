@@ -126,6 +126,8 @@ namespace ProtoDerp
 
         public string writeDirectory="";
 
+        public SortedSet<Entity> backGroundImages = new SortedSet<Entity>();
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -632,6 +634,13 @@ namespace ProtoDerp
                 String paths = b.getVectorsAsString();
                 lines.AddLast(x + " " + y + " " + spriteName + " MovingCycle " + b.velObj + " " +count + paths);
 
+            }
+            foreach (BackgroundBlock b in backGroundImages)
+            {
+                int x = (int)b.startPos.X;
+                int y = (int)b.startPos.Y;
+                String spriteName=b.spriteName;
+                lines.AddLast(x+ " " + y + " " + spriteName + " " + "SuperBack" + " " + b.width +" "+b.height);
             }
 
             lines.AddLast("Demi " + (int)maxLeft + " " + (int)maxRight + " " + (int)maxTop + " " + (int)maxButtom);

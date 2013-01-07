@@ -266,6 +266,10 @@ namespace ProtoDerp
             {
                 drawLevel = "Forground";
             }
+            else if (game.drawLevel == -1)
+            {
+                drawLevel = "Super Background";
+            }
             else
             {
                 drawLevel = "Normal";

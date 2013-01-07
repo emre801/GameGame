@@ -45,6 +45,7 @@ namespace ProtoDerp
         public void readFile(int templateNum)
         {
             String path = Directory.GetCurrentDirectory();
+            game.backGroundImages.Clear();
             int pathIndex = path.IndexOf("bin");
             path = @"Level" + templateNum + @".txt";
 
@@ -147,6 +148,12 @@ namespace ProtoDerp
                     game.maxRight = Convert.ToInt32(words[2]);
                     game.maxTop = Convert.ToInt32(words[3]);
                     game.maxButtom= Convert.ToInt32(words[4]);
+                }
+
+                if (words[3].Equals("SuperBack"))
+                {
+                   game.backGroundImages.Add(new BackgroundBlock(game,game.Arena,new Vector2(x,y),1,spriteName,Convert.ToInt32(words[4]),Convert.ToInt32(words[5])));
+
                 }
                 
             }

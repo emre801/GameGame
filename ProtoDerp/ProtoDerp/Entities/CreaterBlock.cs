@@ -331,6 +331,11 @@ namespace ProtoDerp
             }
             if (keyInput.IsNewKeyPressed(Keys.Enter))
             {
+                if (game.drawLevel < 0)
+                {
+                    game.backGroundImages.Add(new BackgroundBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth));
+                    return;
+                }
                 switch (game.blockType)
                 {
                     case Game.BlockType.Normal:
@@ -474,18 +479,29 @@ namespace ProtoDerp
         {
             if (keyInput.IsNewKeyPressed(Keys.E))
             {
-                drawLevel = 1;
-                game.drawLevel = 1;
+                if (game.drawLevel > -1)
+                {
+                    drawLevel--;
+                    game.drawLevel--;
+                }
+                else
+                {
+                    drawLevel = 2;
+                    game.drawLevel = 2;
+                }
             }
             if (keyInput.IsNewKeyPressed(Keys.R))
             {
-                drawLevel = 0;
-                game.drawLevel = 0;
-            }
-            if (keyInput.IsNewKeyPressed(Keys.T))
-            {
-                drawLevel = 2;
-                game.drawLevel = 2;
+                if (game.drawLevel < 2)
+                {
+                    drawLevel++;
+                    game.drawLevel++;
+                }
+                else
+                {
+                    drawLevel = -1;
+                    game.drawLevel = -1;
+                }
             }
         }
 
@@ -667,10 +683,16 @@ namespace ProtoDerp
         {
             if (!game.isSelectingBlock)
             {
+                if (game.drawLevel < 0)
+                {
+                    game.backGroundImages.Add(new BackgroundBlock(game,game.Arena,origin,1,blockArray[game.spriteBlockCounter],blockHeight,blockWidth));
+                    return;
+                }
+
                 switch (game.blockType)
                 {
                     case Game.BlockType.Normal:
-                        game.addEntity(new Block(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth, drawLevel, rotation));
+                        game.addEntity(new Block(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth, game.drawLevel, rotation));
                         break;
                     case Game.BlockType.Death:
                         game.addEntity(new DeathBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], rotation));
@@ -726,7 +748,7 @@ namespace ProtoDerp
         public void addBlock()
         {
 
-            game.addEntity(new Block(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth,drawLevel,rotation));
+            game.addEntity(new Block(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth,game.drawLevel,rotation));
         }
 
         public void addDeathBlock()

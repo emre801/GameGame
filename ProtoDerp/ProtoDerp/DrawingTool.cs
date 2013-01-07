@@ -471,7 +471,10 @@ namespace ProtoDerp
         {
             beginBatch();
             //Draw all game Entities (sprites)
-
+            foreach (Entity e in game.backGroundImages)
+            {
+                e.Draw(gameTime, spriteBatch);
+            }
             //DrawShadows
             foreach (Entity e in entities)
             {
