@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="120320">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="120832">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>w/d3+rCDtxREmPuW5TanmalLmNw=</dsig:DigestValue>
+        <dsig:DigestValue>nzaJAoKOdEEuKzjgyTMu1cru2r4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -899,6 +899,33 @@
       <dsig:DigestValue>3khYeM0YKvXstgWJ9WllfbLKFns=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Content\pixGavin.xnb" size="49851">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0oelfCfgq0mew1U1NCJ8TxODFWg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\pixRay.xnb" size="50363">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0rh/WyhkVb8QP3up96/TgSdSNVM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\pixSun.xnb" size="1329787">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>T+O5nSJM3zIsxAl+D4BWIiC6r3Y=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Content\player_strip12.xnb" size="199867">
     <hash>
       <dsig:Transforms>
@@ -1358,13 +1385,13 @@
       <dsig:DigestValue>08xsQgbBGVyGg7vGYQjxTgalq1g=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level16.txt" size="832">
+  <file name="Content\World1\Level16.txt" size="831">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>4w/is/8u3lEE69x1HO+HgU7loaQ=</dsig:DigestValue>
+      <dsig:DigestValue>1b7/DqoRskE9kHePZ5DCrVHOIZk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level17.txt" size="1171">

@@ -641,6 +641,21 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
     </Compile>
+    <Compile Include="pixSun.png">
+      <Name>pixSun</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="pixGavin.png">
+      <Name>pixGavin</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="pixRay.png">
+      <Name>pixRay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="Template\Level3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>Level3</Name>

@@ -126,6 +126,9 @@ Content\Music\Nostalgia.xnb
 Content\Music\Nostalgia.wma
 Content\Music\Anxiety Attack.xnb
 Content\Music\Anxiety Attack.wma
+Content\pixSun.xnb
+Content\pixGavin.xnb
+Content\pixRay.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

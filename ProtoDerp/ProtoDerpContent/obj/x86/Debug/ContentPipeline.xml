@@ -1033,6 +1033,33 @@
       <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Anxiety Attack.wma</Extra>
       <Time>2012-12-28T13:57:57.2108879-05:00</Time>
     </Item>
+    <Item>
+      <Source>pixSun.png</Source>
+      <Name>pixSun</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\pixSun.xnb</Output>
+      <Time>2013-01-06T02:12:53.4438038-05:00</Time>
+    </Item>
+    <Item>
+      <Source>pixGavin.png</Source>
+      <Name>pixGavin</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\pixGavin.xnb</Output>
+      <Time>2013-01-07T09:30:07.5346268-05:00</Time>
+    </Item>
+    <Item>
+      <Source>pixRay.png</Source>
+      <Name>pixRay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\pixRay.xnb</Output>
+      <Time>2013-01-07T09:30:07.5376269-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

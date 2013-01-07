@@ -18,5 +18,5 @@
 919 422 deathSpikes DeathBlock 270
 919 -142 deathSpikes DeathBlock 270
 426 6 ahLogo0 GoalBlock 17
-341 -10 deathBall MovingCycle 5 6 341 472 -127 463 -129 1325 815 1333 847 502 349 499
+341 -10 pixGavin MovingCycle 5 6 341 472 -127 472 -129 1325 815 1333 847 502 349 499
 Demi -456 1126 133 1573
