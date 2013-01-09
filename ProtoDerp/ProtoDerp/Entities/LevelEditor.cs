@@ -82,6 +82,13 @@ namespace ProtoDerp
                     game.maxButtom = Convert.ToInt32(words[4]);
                     continue;
                 }
+                if (words[0].Equals("BGCOLOR"))
+                {
+                    game.backGroundColor= new Color((float)(Convert.ToInt32(words[1]))/252f,
+                        (float)(Convert.ToInt32(words[2]))/252f,(float)(Convert.ToInt32(words[3]))/252f);
+                    continue;
+
+                }
                 float x=Convert.ToInt32(words[0]);
                 float y = Convert.ToInt32(words[1]);
                 String spriteName = words[2];
@@ -152,7 +159,7 @@ namespace ProtoDerp
 
                 if (words[3].Equals("SuperBack"))
                 {
-                   game.backGroundImages.Add(new BackgroundBlock(game,game.Arena,new Vector2(x,y),1,spriteName,Convert.ToInt32(words[4]),Convert.ToInt32(words[5])));
+                   game.backGroundImages.Add(new BackgroundBlock(game,game.Arena,new Vector2(x,y),1,spriteName,Convert.ToInt32(words[5]),Convert.ToInt32(words[4])));
 
                 }
                 

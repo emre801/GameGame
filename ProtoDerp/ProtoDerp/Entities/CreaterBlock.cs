@@ -159,7 +159,7 @@ namespace ProtoDerp
             }
             if (keyInput.IsNewKeyPressed(Keys.S))
             {
-                if (blockPressed == 5)
+                if (blockPressed == 6)
                     blockPressed = 0;
                 else
                     blockPressed++;
@@ -514,7 +514,8 @@ namespace ProtoDerp
                 isSelectedBlockChanged = false;
                 foreach (Entity e in game.entities)
                 {
-                    if (e is DeathBlock || e is Block || e is MovingDeath || e is GoalBlock|| e is MagnetBlock)
+                    if (e is DeathBlock || e is Block || e is MovingDeath || e is GoalBlock
+                        || e is MagnetBlock || e is MovingCycle || e is MovingPath)
                     {
                         if (count == blockIterater&&e.IsVisible)
                         {
@@ -523,6 +524,21 @@ namespace ProtoDerp
                             break;
                         }
                         count++;
+                    }
+                }
+                int backCounter = 0;
+                if (blockIterater > game.entities.Count)
+                {
+                    int backgroundBlockCounter = blockIterater - game.entities.Count-1;
+                    foreach (BackgroundBlock i in game.backGroundImages)
+                    {
+                        if (backCounter == backgroundBlockCounter && i.IsVisible)
+                        {
+                            selected = i;
+                            i.isSelected = true;
+                        }
+                        backCounter++;
+
                     }
                 }
             }
@@ -640,6 +656,12 @@ namespace ProtoDerp
             {
                 ((MagnetBlock)selected).body.Position += new Vector2(ConvertUnits.ToSimUnits(x * turbo), ConvertUnits.ToSimUnits(y * turbo));
                 ((MagnetBlock)selected).origPos += new Vector2(x * turbo, y * turbo);
+            }
+            if (selected is BackgroundBlock)
+            {
+
+                ((BackgroundBlock)selected).pos += new Vector2(ConvertUnits.ToSimUnits(x * 200 * turbo), ConvertUnits.ToSimUnits(y * 200 * turbo));
+                ((BackgroundBlock)selected).startPos += new Vector2(x * 200 * turbo, y * 200 * turbo);
             }
         }
 

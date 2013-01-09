@@ -126,6 +126,8 @@ namespace ProtoDerp
 
         public string writeDirectory="";
 
+        public Color backGroundColor = Color.SkyBlue;
+
         public SortedSet<Entity> backGroundImages = new SortedSet<Entity>();
 
         public Game()
@@ -236,6 +238,12 @@ namespace ProtoDerp
             
             sprites.Add("grassTemplate", new Sprite(Content, "grassTemplate"));
             blockList.AddLast("grassTemplate");
+            sprites.Add("goundBottom", new Sprite(Content, "goundBottom"));
+            blockList.AddLast("goundBottom");
+            sprites.Add("groundWall", new Sprite(Content, "groundWall"));
+            blockList.AddLast("groundWall");
+            sprites.Add("backImage", new Sprite(Content, "backImage"));
+            blockList.AddLast("backImage");
             sprites.Add("pixSun", new Sprite(Content, "pixSun"));
             blockList.AddLast("pixSun");
             sprites.Add("pixGavin", new Sprite(Content, "pixGavin"));
@@ -637,6 +645,8 @@ namespace ProtoDerp
             }
             foreach (BackgroundBlock b in backGroundImages)
             {
+                if (!b.IsVisible)
+                    continue;
                 int x = (int)b.startPos.X;
                 int y = (int)b.startPos.Y;
                 String spriteName=b.spriteName;
@@ -645,7 +655,8 @@ namespace ProtoDerp
 
             lines.AddLast("Demi " + (int)maxLeft + " " + (int)maxRight + " " + (int)maxTop + " " + (int)maxButtom);
             //lines.AddLast(path);
-            
+            Vector3 vecColor= backGroundColor.ToVector3();
+            lines.AddLast("BGCOLOR " + (int)(vecColor.X * 252) + " " + (int)(vecColor.Y * 252) + " " + (int)(vecColor.Z * 252) + " ");
 
             System.IO.File.WriteAllLines(path, lines);
             if (!Constants.IS_IN_DEBUG_MODE)
@@ -833,7 +844,7 @@ namespace ProtoDerp
         protected override void Draw(GameTime gameTime)
         {
             if(gMode==0 || gMode==2)
-                GraphicsDevice.Clear(Color.SkyBlue);
+                GraphicsDevice.Clear(backGroundColor);
             else
                 GraphicsDevice.Clear(Color.Black);
 

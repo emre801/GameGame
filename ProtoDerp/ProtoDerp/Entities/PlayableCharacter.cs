@@ -146,7 +146,7 @@ namespace ProtoDerp
                         xMomentum = -Math.Abs(body.LinearVelocity.X * 0.8f);
                     }
                     XboxInput xbi = (XboxInput)inputState;
-                    if (xbi.getYDirection() < 0)
+                    if (xbi.getYDirection() < 0 || Keyboard.GetState().IsKeyDown(Keys.Up))
                         xMomentum += xbi.getYDirection() * 4f;
                     else
                         xMomentum = 0;
@@ -324,11 +324,11 @@ namespace ProtoDerp
                 {
                     if (jumpDirection)
                     {
-                        body.ApplyLinearImpulse(new Vector2(-1.75f * runningValue, 0f));
+                        body.ApplyLinearImpulse(new Vector2(-7.75f * runningValue, 0f));
                     }
                     else
                     {
-                        body.ApplyLinearImpulse(new Vector2(1.75f * runningValue, 0f));
+                        body.ApplyLinearImpulse(new Vector2(7.75f * runningValue, 0f));
                     }
 
                 }
@@ -342,12 +342,14 @@ namespace ProtoDerp
             if ((inputState.IsNewButtonReleased(Buttons.A) || keyInput.IsNewKeyReleased(Keys.Space)) && body.LinearVelocity.Y < -1)
             {
                 body.LinearVelocity = new Vector2(body.LinearVelocity.X, body.LinearVelocity.Y / 2f);
+                
+
             }
-            if (xDirection > 0)
+            if (body.LinearVelocity.X > 0)
             {
                 faceRight = true;
             }
-            if (xDirection < 0)
+            if (body.LinearVelocity.X < 0)
             {
                 faceRight = false;
             }

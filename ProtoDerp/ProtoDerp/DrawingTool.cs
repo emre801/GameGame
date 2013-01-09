@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace ProtoDerp
 {
@@ -355,7 +356,7 @@ namespace ProtoDerp
                     if (Math.Abs(game.Arena.player1.body.LinearVelocity.X) > 0.1f)
                     {
                         float moveAmount = (p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1) / 10000f;
-                        //game.moveBackGround -= new Vector2(moveAmount, 0);
+                        game.moveBackGround -= new Vector2(moveAmount, 0);
                     }
                 }
                 if (p1.Position.X - width < cam._pos.X - cam.ViewportWidth / 1)
@@ -365,7 +366,7 @@ namespace ProtoDerp
                     if (Math.Abs(game.Arena.player1.body.LinearVelocity.X) > 0.1f)
                     {
                         float moveAmount = (p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1) / 10000f;
-                        //game.moveBackGround += new Vector2(moveAmount, 0);
+                        game.moveBackGround += new Vector2(moveAmount, 0);
                     }
                 }
             }
@@ -377,7 +378,7 @@ namespace ProtoDerp
                     if (Math.Abs(game.Arena.player1.body.LinearVelocity.Y) > 0.1f)
                     {
                         float moveAmount = (p1.Position.Y + height2) - (cam._pos.Y + cam.ViewportHeight / 1);
-                        //game.moveBackGround -= new Vector2(0, moveAmount);
+                        game.moveBackGround -= new Vector2(0, moveAmount);
                     }
                 }
                 if (p1.Position.Y - height < cam._pos.Y - cam.ViewportHeight / 1)
@@ -386,7 +387,7 @@ namespace ProtoDerp
                     if (Math.Abs(game.Arena.player1.body.LinearVelocity.Y) > 0.1f)
                     {
                         float moveAmount = (p1.Position.Y - height) - (cam._pos.Y - cam.ViewportHeight / 1);
-                        //game.moveBackGround += new Vector2(0, moveAmount);
+                        game.moveBackGround += new Vector2(0, moveAmount);
                     }
                 }
             }
@@ -429,13 +430,43 @@ namespace ProtoDerp
         {
             if (game.testLevel)
                 return;
+            KeyboardState keyState = Keyboard.GetState();
 
             XboxInput xbInput = (XboxInput)game.Arena.player1.inputState;
             float xDirection = xbInput.getXDirection();
             float yDirection = xbInput.getYDirection();
+            float turboMove = 1;
+
+            if (keyState.IsKeyDown(Keys.D7))
+                turboMove = 10;
+            if (keyState.IsKeyDown(Keys.D7))
+            {
+                xDirection = -0.01f * turboMove;
+            }
+            if (keyState.IsKeyDown(Keys.D8))
+            {
+                xDirection = 0.01f * turboMove;
+            }
+            if (keyState.IsKeyDown(Keys.D9))
+            {
+                yDirection = 0.01f * turboMove;
+            }
+            if (keyState.IsKeyDown(Keys.D0))
+            {
+                yDirection = -0.01f * turboMove;
+            }
+
             cam.Move(new Vector2(xDirection * 100f, yDirection * 100f));
             float zoomIn = xbInput.isLeftTriggerPressed();
             float zoomOut = xbInput.isRightTriggerPressed();
+            if (keyState.IsKeyDown(Keys.D4))
+            {
+                zoomIn = 1;
+            }
+            if (keyState.IsKeyDown(Keys.D5))
+            {
+                zoomOut = 1;
+            }
             cam.Zoom += zoomIn / 100f;
             cam.Zoom -= zoomOut / 100f;
         }

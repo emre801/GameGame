@@ -65,7 +65,7 @@ namespace ProtoDerp
                 isColliding();
                 if (!isInTitle)
                 {
-                    int scrollWheel = oldMouse.ScrollWheelValue - Mouse.GetState().ScrollWheelValue;
+                    int scrollWheel = (oldMouse.ScrollWheelValue - Mouse.GetState().ScrollWheelValue)*2;
                     pos = new Vector2(pos.X, pos.Y - scrollWheel * 0.2f);
                     this.buttonBox = new Rectangle((int)pos.X, (int)pos.Y, (int)widthDiff + 10, (int)heightDiff + 10);
                     oldMouse = Mouse.GetState();

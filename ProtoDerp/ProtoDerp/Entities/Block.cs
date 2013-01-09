@@ -281,8 +281,8 @@ namespace ProtoDerp
 
             if (drawLevel == 1)
             {
-                if(game.moveBackGround.X!=0)
-                    body.Position += new Vector2(game.moveBackGround.X / 100000f, game.moveBackGround.Y / 300000f);
+                //if(game.moveBackGround.X!=0)
+                    //body.Position += new Vector2(game.moveBackGround.X / 100000f, game.moveBackGround.Y / 300000f);
             }
         }
 
@@ -294,6 +294,7 @@ namespace ProtoDerp
             Point bottomRight = new Point(playerSprite.index.Width, playerSprite.index.Height);
             Rectangle targetRect = new Rectangle((int)ringDrawPoint.X, (int)ringDrawPoint.Y, bottomRight.X, bottomRight.Y);
             Color drawColor = Color.White;
+
             if (isSelected)
                 drawColor = Color.Green;
 

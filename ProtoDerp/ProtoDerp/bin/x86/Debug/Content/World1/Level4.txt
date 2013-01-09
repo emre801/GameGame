@@ -7,9 +7,6 @@
 430 350 bigBlock Block 220 1765 2 0
 -545 -190 bigBlock Block 1510 200 2 0
 1380 -190 bigBlock Block 1510 200 2 0
-420 -244 GreenHill Block 1550 1800 1 0
--1193 -77 GreenHill Block 1550 1800 1 0
-2265 -112 GreenHill Block 1550 1800 1 0
 -24 -870 CloudBack Block 70 1120 2 0
 1193 -835 CloudBack Block 70 1120 2 0
 -817 507 bigBlock Block 620 2365 1 0
@@ -42,6 +39,9 @@
 898 61 grassTemplate Block 35 256 2 0
 971 61 grassTemplate Block 35 256 2 0
 221 -90 grassTemplate Block 20 256 2 0
+201 -94 GreenHill Block 675 935 1 0
+1225 -112 GreenHill Block 865 1125 1 0
+-1047 -43 GreenHill Block 865 1125 1 0
 1041 -113 deathSpikes DeathBlock 0
 933 -110 deathSpikes DeathBlock 0
 518 -326 deathSpikes DeathBlock 0
@@ -51,4 +51,8 @@
 928 -536 deathSpikes DeathBlock 0
 811 -108 deathSpikes DeathBlock 0
 1046 -653 ahLogo0 GoalBlock 5
+725 -130 GreenHill2 SuperBack 531 641
+-248 -88 GreenHill2 SuperBack 531 641
+1924 59 GreenHill2 SuperBack 531 641
+-741 -107 GreenHill2 SuperBack 531 641
 Demi -226 1082 -507 624

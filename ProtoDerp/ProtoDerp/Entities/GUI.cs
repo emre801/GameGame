@@ -73,6 +73,7 @@ namespace ProtoDerp
                     if (pauseSelection == 0.45f)
                     {
                         game.backToTitleScreen = true;
+                        game.backGroundImages.Clear();
                         MediaPlayer.Stop();
                     }
                     game.stopWatch.Start();
@@ -127,23 +128,29 @@ namespace ProtoDerp
         {
             float currentPos = 0;
             float increment = 0.025f;
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "Controls Info");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "Q and W Change sprite");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "A: Normal Block");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "S: Death Block");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "D: Moving Block");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "F: Goal Block");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "Z: Save");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "J and L Change Sprite Length");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "I and K Change Sprite Height");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "B and N Change Template Level");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "V: load new template");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "O and P change Save Location");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "C: Change Mouse to Select");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "V: New Template");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "Shift to change loadLocation");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "Tab to enter test mode");
-            DrawText(spriteBatch, 0.90f, currentPos += increment, "M to change into delete mode");
+            float position = 0.90f;
+            if (!Constants.FULLSCREEN)
+            {
+                position = 0.75f;
+            }
+            DrawText(spriteBatch, position, currentPos += increment, "Controls Info");
+            DrawText(spriteBatch, position, currentPos += increment, "Q and W Change sprite");
+            DrawText(spriteBatch, position, currentPos += increment, "A: Normal Block");
+            DrawText(spriteBatch, position, currentPos += increment, "S: Death Block");
+            DrawText(spriteBatch, position, currentPos += increment, "D: Moving Block");
+            DrawText(spriteBatch, position, currentPos += increment, "F: Goal Block");
+            DrawText(spriteBatch, position, currentPos += increment, "Z: Save");
+            DrawText(spriteBatch, position, currentPos += increment, "J and L Change Sprite Length");
+            DrawText(spriteBatch, position, currentPos += increment, "I and K Change Sprite Height");
+            DrawText(spriteBatch, position, currentPos += increment, "B and N Change Template Level");
+            DrawText(spriteBatch, position, currentPos += increment, "V: load new template");
+            DrawText(spriteBatch, position, currentPos += increment, "O and P change Save Location");
+            DrawText(spriteBatch, position, currentPos += increment, "C: Change Mouse to Select");
+            DrawText(spriteBatch, position, currentPos += increment, "V: New Template");
+            DrawText(spriteBatch, position, currentPos += increment, "Shift to change loadLocation");
+            DrawText(spriteBatch, position, currentPos += increment, "Tab to enter test mode");
+            DrawText(spriteBatch, position, currentPos += increment, "M to change into delete mode");
+            DrawText(spriteBatch, position, currentPos += increment, "L to change Background");
         }
 
         public void DrawMouseCameraValue(GameTime gameTime, SpriteBatch spriteBatch)
@@ -321,6 +328,11 @@ namespace ProtoDerp
             String[] tempstrMulti = text.Split("|".ToCharArray());
             SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
             tempstrMulti = text.Split("|".ToCharArray());
+            float fontRatio = 1;
+            if (!Constants.FULLSCREEN)
+            {
+                fontRatio = 0.85f;
+            }
             for (int i = 0; i < tempstrMulti.Length; i += 1)
                 spriteBatch.DrawString(font, tempstrMulti[i],
                     game.drawingTool.getDrawingCoords(new Vector2(game.getWorldSize().X * x + 1.5f, (game.getWorldSize().Y * y+2.0f) + (font.MeasureString("A").Y * i))),
@@ -328,7 +340,7 @@ namespace ProtoDerp
                     0f,
                     Vector2.Zero,
                     //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
-                    game.drawingTool.gameToScreen(1f) * 0.25f*fontSize,
+                    game.drawingTool.gameToScreen(1f) * 0.25f * fontSize * fontRatio,
                     SpriteEffects.None,
                     0);
 
@@ -339,7 +351,7 @@ namespace ProtoDerp
                     0f,
                     Vector2.Zero,
                     //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
-                    game.drawingTool.gameToScreen(1f) * 0.25f*fontSize,
+                    game.drawingTool.gameToScreen(1f) * 0.25f * fontSize * fontRatio,
                     SpriteEffects.None,
                     0);
 

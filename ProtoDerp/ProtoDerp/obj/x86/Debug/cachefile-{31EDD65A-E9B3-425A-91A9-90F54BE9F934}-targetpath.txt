@@ -129,6 +129,9 @@ Content\Music\Anxiety Attack.wma
 Content\pixSun.xnb
 Content\pixGavin.xnb
 Content\pixRay.xnb
+Content\backImage.xnb
+Content\goundBottom.xnb
+Content\groundWall.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt
