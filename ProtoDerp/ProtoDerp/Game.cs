@@ -130,6 +130,8 @@ namespace ProtoDerp
 
         public SortedSet<Entity> backGroundImages = new SortedSet<Entity>();
 
+        public int backGroundNum = 0;
+
         public Game()
         {
             WorldSpeed = 1.0f;

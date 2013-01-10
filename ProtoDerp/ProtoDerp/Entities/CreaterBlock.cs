@@ -107,7 +107,17 @@ namespace ProtoDerp
             keyInput.Update(gameTime);
             //if (Keyboard.GetState().GetPressedKeys().Length == 0)
                 //return;
-
+            if (keyInput.IsNewKeyPressed(Keys.U))
+            {
+                game.backGroundNum++;
+                if (game.backGroundNum > 3)
+                    game.backGroundNum = 0;
+            }
+            if (game.backGroundNum != 0)
+            {
+                changeBackgroundColor();
+                return;
+            }
             if (keyInput.IsNewKeyPressed(Keys.M))
             {
                 blockIterater = 0;
@@ -503,6 +513,40 @@ namespace ProtoDerp
                     game.drawLevel = -1;
                 }
             }
+        }
+
+        public void changeBackgroundColor()
+        {
+            int numIncrease = 0;
+            KeyboardState keyState = Keyboard.GetState();
+            if (keyState.IsKeyDown(Keys.Q))
+            {
+                numIncrease = 1;
+            }
+            if (keyState.IsKeyDown(Keys.W))
+            {
+                numIncrease = -1;
+            }
+            Vector3 color = game.backGroundColor.ToVector3();
+            float rValue = color.X * 252;
+            float gValue = color.Y * 252;
+            float bValue = color.Z * 252;
+            if (game.backGroundNum == 1)
+            {
+                rValue+=numIncrease;
+            }
+            if (game.backGroundNum == 2)
+            {
+                gValue += numIncrease;
+            }
+            if (game.backGroundNum == 3)
+            {
+                bValue += numIncrease;
+            }
+            Color newBGColor = new Color(rValue/252f, gValue/252f, bValue/252f);
+            game.backGroundColor = newBGColor;
+            
+            
         }
 
         public void DeleteBlockSelector()

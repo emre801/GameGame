@@ -104,7 +104,7 @@ namespace ProtoDerp
             }
             if (game.gMode == 2)
             {
-                if (!game.inDeleteMode && !game.testLevel)
+                if (!game.inDeleteMode && !game.testLevel && game.backGroundNum==0)
                 {
                     DrawCreatorInformation(gameTime, spriteBatch);
                     DrawPositionInformation(gameTime, spriteBatch);
@@ -116,6 +116,10 @@ namespace ProtoDerp
                     DrawCameraText(gameTime, spriteBatch);
                     DrawMouseCameraValue(gameTime, spriteBatch);
                 }
+                else if (game.backGroundNum != 0)
+                {
+                    DrawBackGroundColorInfo(spriteBatch);
+                }
                 else
                 {
                     DrawControlsInfoEditMode(gameTime, spriteBatch);
@@ -123,7 +127,14 @@ namespace ProtoDerp
             }
             
         }
-
+        public void DrawBackGroundColorInfo(SpriteBatch spriteBatch)
+        {
+            Vector3 colorVector = game.backGroundColor.ToVector3();
+            DrawText(spriteBatch, 0.3f, 0.8f, ""+(int)(colorVector.X*252));
+            DrawText(spriteBatch, 0.3f, 0.85f, "" + (int)(colorVector.Y * 252));
+            DrawText(spriteBatch, 0.3f, 0.9f, "" + (int)(colorVector.Z * 252));
+        
+        }
         public void DrawControlsInfo(GameTime gameTime, SpriteBatch spriteBatch)
         {
             float currentPos = 0;
