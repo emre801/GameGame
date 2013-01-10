@@ -1087,6 +1087,33 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\groundWall.xnb</Output>
       <Time>2013-01-07T17:16:34.1453693-05:00</Time>
     </Item>
+    <Item>
+      <Source>leftCurtain.png</Source>
+      <Name>leftCurtain</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\leftCurtain.xnb</Output>
+      <Time>2013-01-10T17:27:25.4638988-05:00</Time>
+    </Item>
+    <Item>
+      <Source>rightCurtain.png</Source>
+      <Name>rightCurtain</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\rightCurtain.xnb</Output>
+      <Time>2013-01-10T17:27:25.4658989-05:00</Time>
+    </Item>
+    <Item>
+      <Source>TopCurtain.png</Source>
+      <Name>TopCurtain</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\TopCurtain.xnb</Output>
+      <Time>2013-01-10T17:27:25.4678991-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

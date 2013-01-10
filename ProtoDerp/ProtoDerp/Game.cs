@@ -132,6 +132,9 @@ namespace ProtoDerp
 
         public int backGroundNum = 0;
 
+        public bool inTransition=false;
+        public bool justDied = false;
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -349,6 +352,10 @@ namespace ProtoDerp
             blockList.AddLast("Tree3");
             sprites.Add("Tree4", new Sprite(Content, "Tree4"));
             blockList.AddLast("Tree4");
+
+            sprites.Add("leftCurtain", new Sprite(Content, "leftCurtain"));
+            sprites.Add("rightCurtain", new Sprite(Content, "rightCurtain"));
+            sprites.Add("TopCurtain", new Sprite(Content, "TopCurtain"));
 
             sprites.Add("MouseImage", new Sprite(Content, "MouseImage"));
             sprites.Add("MouseClick", new Sprite(Content, "MouseClick"));
@@ -672,7 +679,8 @@ namespace ProtoDerp
         protected override void Update(GameTime gameTime)
         {
             bool reloadButtons = false;
-
+            if (inTransition)
+                return;
             playerOneInput.Update(gameTime);
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
             {
@@ -808,7 +816,8 @@ namespace ProtoDerp
                 ballPosition += 30;
                 if (ts.CompareTo(new TimeSpan(0, 0, 0,0,500)) > 0)
                 {
-                    loadNewLevel = true;
+                    inTransition = true;
+                    //loadNewLevel = true;
                 }
             }
             if (deathAnimation == true)

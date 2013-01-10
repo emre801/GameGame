@@ -24,6 +24,11 @@ namespace ProtoDerp
         float pauseSelection = 0.475f;
 
         KeyboardInput keyInput;
+        Sprite topCur, leftCur, rightCur;
+        float curHeight, curWidth, topCurHeight, topCurWidth;
+        float curTopMove = 0,curLeftMove=0,curRightMove=0;
+        float curLeftMove2 = 0, curRightMove2 = 0;
+        bool firstTransition = true;
 
         public Button[] buttons;
         public GUI(Game g)
@@ -37,6 +42,30 @@ namespace ProtoDerp
             gameOverGUI = game.getSprite("gameOver");
             this.updatesWhenPaused = true;
             keyInput = new KeyboardInput();
+            topCur = game.getSprite("TopCurtain");
+            leftCur = game.getSprite("leftCurtain");
+            rightCur = game.getSprite("rightCurtain");
+            if (!Constants.FULLSCREEN)
+            {
+                curHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+                curWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 0.5f;
+                topCurHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.1f;
+                topCurWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            }
+            else
+            {
+                curHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height+10f;
+                curWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+                topCurHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.1f;
+                topCurWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+
+            }
+            curTopMove = -topCurHeight;
+            curLeftMove = -curWidth/2f;
+            curRightMove = curWidth;
+            curLeftMove2 = 0;
+            curRightMove2 = curWidth/2f;
+            
 
         }
 
@@ -50,7 +79,22 @@ namespace ProtoDerp
         {
             float zoom=game.drawingTool.cam.Zoom;
             keyInput.Update(gameTime);
-            
+            if (firstTransition&& game.numDeath==0)
+            {
+                DrawTransitionOpening(spriteBatch);
+                return;
+            }
+            if (game.numDeath > 0)
+                firstTransition = false;
+            if (game.inTransition)
+            {
+                
+                    DrawTransitionClosing(spriteBatch);
+                
+                return;
+
+            }
+
             //spriteBatch.Draw(pix.index, new Rectangle(5,5,100,100), Color.White);
             if (game.pause)
             {
@@ -127,12 +171,66 @@ namespace ProtoDerp
             }
             
         }
+        public void DrawTransitionOpening(SpriteBatch spriteBatch)
+        {
+
+            //game.inTransition = false;
+            if (curLeftMove2 > curLeftMove)
+            {
+                curRightMove2 += 7;
+                curLeftMove2 -= 7;
+            }
+            else
+            {
+
+                firstTransition = false;
+            }
+
+            spriteBatch.Draw(leftCur.index, new Rectangle((int)(curLeftMove2),
+                        (int)(0),
+                        (int)(curWidth / 2f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            spriteBatch.Draw(rightCur.index, new Rectangle((int)(curRightMove2),
+                        (int)(0),
+                        (int)(curWidth / 2f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            
+            
+
+        }
+        public void DrawTransitionClosing(SpriteBatch spriteBatch)
+        {
+            if (curTopMove < 0)
+                curTopMove+=3;
+            if (curLeftMove < 0)
+            {
+                curLeftMove += 7;
+                curRightMove -= 7;
+            }
+            else
+            {
+
+                game.inTransition = false;
+                game.loadNewLevel = true;
+            }
+
+            spriteBatch.Draw(leftCur.index, new Rectangle((int)(curLeftMove),
+                        (int)(0),
+                        (int)(curWidth/2f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            spriteBatch.Draw(rightCur.index, new Rectangle((int)(curRightMove),
+                        (int)(0),
+                        (int)(curWidth / 2f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            
+            //spriteBatch.Draw(topCur.index, new Rectangle((int)(0),
+            //        (int)(curTopMove),
+            //        (int)(topCurWidth), (int)(topCurHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            
+        }
+
         public void DrawBackGroundColorInfo(SpriteBatch spriteBatch)
         {
             Vector3 colorVector = game.backGroundColor.ToVector3();
-            DrawText(spriteBatch, 0.3f, 0.8f, ""+(int)(colorVector.X*252));
-            DrawText(spriteBatch, 0.3f, 0.85f, "" + (int)(colorVector.Y * 252));
-            DrawText(spriteBatch, 0.3f, 0.9f, "" + (int)(colorVector.Z * 252));
+            DrawText(spriteBatch, 0.2f, 0.8f, "R:"+(int)(colorVector.X*252));
+            DrawText(spriteBatch, 0.2f, 0.85f, "G:" + (int)(colorVector.Y * 252));
+            DrawText(spriteBatch, 0.2f, 0.9f, "B:" + (int)(colorVector.Z * 252));
         
         }
         public void DrawControlsInfo(GameTime gameTime, SpriteBatch spriteBatch)

@@ -132,6 +132,9 @@ Content\pixRay.xnb
 Content\backImage.xnb
 Content\goundBottom.xnb
 Content\groundWall.xnb
+Content\leftCurtain.xnb
+Content\rightCurtain.xnb
+Content\TopCurtain.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt
