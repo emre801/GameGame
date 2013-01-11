@@ -112,7 +112,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>KrXO3Uy0htFn7ywzCAbPTX7RUJw=</dsig:DigestValue>
+        <dsig:DigestValue>E3eWDtP846GG1fMqY3K93cblRwg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1385,13 +1385,13 @@
       <dsig:DigestValue>i2FotnfXZisN8AQiWbzxnUClPLk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level10.txt" size="7197">
+  <file name="Content\World1\Level10.txt" size="7454">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>cDe41Q/kcseg0QpsMxlIg5mxtfo=</dsig:DigestValue>
+      <dsig:DigestValue>c2/A5T2NBtFjwhCMxkhaXhP2gL8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level11.txt" size="353">

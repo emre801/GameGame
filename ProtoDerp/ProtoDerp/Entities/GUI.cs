@@ -29,7 +29,7 @@ namespace ProtoDerp
         float curTopMove = 0,curLeftMove=0,curRightMove=0;
         float curLeftMove2 = 0, curRightMove2 = 0;
         bool firstTransition = true;
-
+        int transitionRate = 20;
         public Button[] buttons;
         public GUI(Game g)
             : base(g)
@@ -177,8 +177,8 @@ namespace ProtoDerp
             //game.inTransition = false;
             if (curLeftMove2 > curLeftMove)
             {
-                curRightMove2 += 7;
-                curLeftMove2 -= 7;
+                curRightMove2 += transitionRate;
+                curLeftMove2 -= transitionRate;
             }
             else
             {
@@ -202,8 +202,8 @@ namespace ProtoDerp
                 curTopMove+=3;
             if (curLeftMove < 0)
             {
-                curLeftMove += 7;
-                curRightMove -= 7;
+                curLeftMove += transitionRate;
+                curRightMove -= transitionRate;
             }
             else
             {
