@@ -181,11 +181,5 @@
 1249 3845 deathSpikes3 DeathBlock 0
 860 4368 deathSpikes DeathBlock 0
 501 357 ahLogo0 GoalBlock 11
-618 1390 bigBlock SuperBack 1435 2290
-747 3650 bigBlock SuperBack 1435 2290
-2165 3945 bigBlock SuperBack 1435 2290
-1347 1311 bigBlock SuperBack 1435 2290
-1435 1303 bigBlock SuperBack 1435 2290
-919 340 bigBlock SuperBack 1435 335
 Demi -100 1901 287 5137
 BGCOLOR 137 231 252 

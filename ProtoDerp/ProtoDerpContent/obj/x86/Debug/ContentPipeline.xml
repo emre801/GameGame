@@ -1114,6 +1114,60 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\TopCurtain.xnb</Output>
       <Time>2013-01-10T17:27:25.4678991-05:00</Time>
     </Item>
+    <Item>
+      <Source>rC1.png</Source>
+      <Name>rC1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\rC1.xnb</Output>
+      <Time>2013-01-14T14:01:21.8582354-05:00</Time>
+    </Item>
+    <Item>
+      <Source>rC2.png</Source>
+      <Name>rC2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\rC2.xnb</Output>
+      <Time>2013-01-14T14:01:21.8622357-05:00</Time>
+    </Item>
+    <Item>
+      <Source>rC3.png</Source>
+      <Name>rC3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\rC3.xnb</Output>
+      <Time>2013-01-14T14:01:21.8712362-05:00</Time>
+    </Item>
+    <Item>
+      <Source>lC1.png</Source>
+      <Name>lC1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\lC1.xnb</Output>
+      <Time>2013-01-14T14:17:39.5831581-05:00</Time>
+    </Item>
+    <Item>
+      <Source>lC2.png</Source>
+      <Name>lC2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\lC2.xnb</Output>
+      <Time>2013-01-14T14:17:39.5871583-05:00</Time>
+    </Item>
+    <Item>
+      <Source>lC3.png</Source>
+      <Name>lC3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\lC3.xnb</Output>
+      <Time>2013-01-14T14:17:39.5901585-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

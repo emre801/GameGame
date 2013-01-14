@@ -231,7 +231,7 @@ namespace ProtoDerp
                 return;
 
             }
-            if (keyInput.IsNewKeyPressed(Keys.Enter))
+            if (keyInput.IsNewKeyPressed(Keys.Tab))
             {
                 game.isPausePressed = true;
             }

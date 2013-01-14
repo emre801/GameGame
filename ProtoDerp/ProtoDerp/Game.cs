@@ -240,7 +240,14 @@ namespace ProtoDerp
             ///sprites.Add("black", new Sprite(Content,"black"));
             //sprites.Add("rage", new Sprite(Content, "rage"));
             //sprites.Add("dirtBlock", new Sprite(Content, "dirtBlock"));
-            
+            sprites.Add("rC1", new Sprite(Content, "rC1"));
+            sprites.Add("rC2", new Sprite(Content, "rC2"));
+            sprites.Add("rC3", new Sprite(Content, "rC3"));
+
+
+            sprites.Add("lC1", new Sprite(Content, "lC1"));
+            sprites.Add("lC2", new Sprite(Content, "lC2"));
+            sprites.Add("lC3", new Sprite(Content, "lC3"));
             sprites.Add("grassTemplate", new Sprite(Content, "grassTemplate"));
             blockList.AddLast("grassTemplate");
             sprites.Add("goundBottom", new Sprite(Content, "goundBottom"));
@@ -715,10 +722,11 @@ namespace ProtoDerp
                
                 if (gMode == 0 && !deathAnimation && !winningAnimation)
                 {
-                    pauseMusic();
+                    
                     if (pause)
                         stopWatch.Stop();
                     pause = !pause;
+                    pauseMusic();
                     return;
                 }
                 
@@ -844,9 +852,9 @@ namespace ProtoDerp
         }
         public void pauseMusic()
         {
-            if (MediaPlayer.State == MediaState.Playing)
+            if (MediaPlayer.State == MediaState.Playing && pause)
                 MediaPlayer.Pause();
-            else if (MediaPlayer.State == MediaState.Paused)
+            else if (MediaPlayer.State == MediaState.Paused && !pause)
                 MediaPlayer.Resume();
 
         }

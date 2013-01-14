@@ -135,6 +135,12 @@ Content\groundWall.xnb
 Content\leftCurtain.xnb
 Content\rightCurtain.xnb
 Content\TopCurtain.xnb
+Content\rC1.xnb
+Content\rC2.xnb
+Content\rC3.xnb
+Content\lC1.xnb
+Content\lC2.xnb
+Content\lC3.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

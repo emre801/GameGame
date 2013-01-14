@@ -48,6 +48,34 @@
 -844 -112 GreenHill Block 525 690 1 0
 1793 -155 GreenHill Block 525 690 1 0
 416 -166 derrick.png Block 105 75 0 0
+-635 -873 groundWall Block 95 44 2 0
+-635 -776 groundWall Block 95 44 2 0
+-635 -671 groundWall Block 95 44 2 0
+-635 -515 groundWall Block 95 44 2 0
+-635 -414 groundWall Block 95 44 2 0
+-635 -317 groundWall Block 95 44 2 0
+-635 -217 groundWall Block 95 44 2 0
+-635 -120 groundWall Block 95 44 2 0
+-635 -18 groundWall Block 95 44 2 0
+-635 83 groundWall Block 95 44 2 0
+-693 162 groundWall Block 95 44 2 90
+-788 162 groundWall Block 95 44 2 90
+-889 162 groundWall Block 95 44 2 90
+-977 162 groundWall Block 95 44 2 90
+-1086 162 groundWall Block 95 44 2 90
+1474 -875 groundWall Block 95 44 2 180
+1474 -763 groundWall Block 95 44 2 180
+1474 -633 groundWall Block 95 44 2 180
+1474 -519 groundWall Block 95 44 2 180
+1474 -418 groundWall Block 95 44 2 180
+1474 -310 groundWall Block 95 44 2 180
+1474 -207 groundWall Block 95 44 2 180
+1474 -101 groundWall Block 95 44 2 180
+1474 7 groundWall Block 95 44 2 180
+1474 109 groundWall Block 95 44 2 180
+1474 199 groundWall Block 95 44 2 180
+1474 297 groundWall Block 95 44 2 180
+1474 389 groundWall Block 95 44 2 180
 -228 -882 deathSpikes4 DeathBlock 0
 -228 -777 deathSpikes4 DeathBlock 0
 -228 -657 deathSpikes4 DeathBlock 0
@@ -55,4 +83,12 @@
 1077 -745 deathSpikes3 DeathBlock 0
 1079 -620 deathSpikes3 DeathBlock 0
 1018 -1 ahLogo0 GoalBlock 2
+430 -185 GreenHill2 SuperBack 371 466
+1036 -193 GreenHill2 SuperBack 371 466
+-158 -187 GreenHill2 SuperBack 371 466
+660 -439 CloudBack SuperBack 310 40
+72 -384 CloudBack SuperBack 310 40
+-171 -547 CloudBack SuperBack 310 40
+1051 -602 CloudBack SuperBack 310 40
 Demi -349 1182 -532 795
+BGCOLOR 137 231 252 

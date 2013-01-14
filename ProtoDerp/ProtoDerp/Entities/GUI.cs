@@ -24,7 +24,7 @@ namespace ProtoDerp
         float pauseSelection = 0.475f;
 
         KeyboardInput keyInput;
-        Sprite topCur, leftCur, rightCur;
+        Sprite topCur, leftCur, leftCur2, leftCur3, rightCur, rightCur2, rightCur3;
         float curHeight, curWidth, topCurHeight, topCurWidth;
         float curTopMove = 0,curLeftMove=0,curRightMove=0;
         float curLeftMove2 = 0, curRightMove2 = 0;
@@ -43,8 +43,14 @@ namespace ProtoDerp
             this.updatesWhenPaused = true;
             keyInput = new KeyboardInput();
             topCur = game.getSprite("TopCurtain");
+
             leftCur = game.getSprite("leftCurtain");
+            leftCur2 = game.getSprite("lC2");
+            leftCur3 = game.getSprite("lC3");
+
             rightCur = game.getSprite("rightCurtain");
+            rightCur2 = game.getSprite("rC2");
+            rightCur3 = game.getSprite("rC3");
             if (!Constants.FULLSCREEN)
             {
                 curHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
@@ -122,6 +128,7 @@ namespace ProtoDerp
                     }
                     game.stopWatch.Start();
                     game.pause = false;
+                    game.pauseMusic();
                 }
                     game.drawingTool.drawRectangle(new Rectangle(0, 0, game.drawingTool.ActualScreenPixelWidth,
                         (int)(game.drawingTool.ActualScreenPixelHeight*0.10f)), Color.Black);
@@ -189,10 +196,24 @@ namespace ProtoDerp
             spriteBatch.Draw(leftCur.index, new Rectangle((int)(curLeftMove2),
                         (int)(0),
                         (int)(curWidth / 2f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            /*spriteBatch.Draw(leftCur2.index, new Rectangle((int)(curLeftMove2+(curWidth / 2f / 3f)),
+                        (int)(0),
+                        (int)(curWidth / 2f / 3f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            spriteBatch.Draw(leftCur3.index, new Rectangle((int)(curLeftMove2 + (curWidth / 2f / 3f) + (curWidth / 2f / 3f)),
+                        (int)(0),
+                        (int)(curWidth / 2f / 3f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            */
+            
             spriteBatch.Draw(rightCur.index, new Rectangle((int)(curRightMove2),
                         (int)(0),
                         (int)(curWidth / 2f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
-            
+            /*spriteBatch.Draw(rightCur2.index, new Rectangle((int)(curRightMove2 + curRightMove2 * 2f / 3f),
+                       (int)(0),
+                       (int)(curWidth / 2f / 3f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            spriteBatch.Draw(rightCur3.index, new Rectangle((int)(curRightMove2 + curRightMove2 / 3f),
+                        (int)(0),
+                        (int)(curWidth / 2f / 3f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            */
             
 
         }
@@ -218,7 +239,13 @@ namespace ProtoDerp
             spriteBatch.Draw(rightCur.index, new Rectangle((int)(curRightMove),
                         (int)(0),
                         (int)(curWidth / 2f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
-            
+            /*spriteBatch.Draw(rightCur2.index, new Rectangle((int)(curRightMove+curRightMove*2f/3f),
+                        (int)(0),
+                        (int)(curWidth / 2f / 3f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            spriteBatch.Draw(rightCur3.index, new Rectangle((int)(curRightMove+curRightMove/3f),
+                        (int)(0),
+                        (int)(curWidth / 2f / 3f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            */
             //spriteBatch.Draw(topCur.index, new Rectangle((int)(0),
             //        (int)(curTopMove),
             //        (int)(topCurWidth), (int)(topCurHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
