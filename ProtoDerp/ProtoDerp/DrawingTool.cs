@@ -437,7 +437,7 @@ namespace ProtoDerp
             float yDirection = xbInput.getYDirection();
             float turboMove = 1;
 
-            if (keyState.IsKeyDown(Keys.D7))
+            if (keyState.IsKeyDown(Keys.LeftShift))
                 turboMove = 10;
             if (keyState.IsKeyDown(Keys.D7))
             {
@@ -473,6 +473,30 @@ namespace ProtoDerp
 
         private void beginBatch()
         {
+            if (game.isInCreatorMode)
+            {
+                //DrawGraph
+                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearWrap, null, null, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
+                Sprite graph = game.getSprite("graph");
+                for (int x = -10; x < 10; x++)
+                {
+                    for (int y = -10; y < 10; y++)
+                    {
+                        float xPos = graph.index.Width * x*2f;
+                        float yPos = graph.index.Height * y*2f;
+                        spriteBatch.Draw(graph.index, new Rectangle((int)(xPos),
+                        (int)(yPos),
+                        (int)(graph.index.Width*2f), (int)(graph.index.Height*2f)), null, Color.White, 0, new Vector2(0,0), SpriteEffects.None, 0f);
+                
+
+                    }
+
+                }
+                endBatch();
+
+            }
+
+
             if (game.gMode == 0)
             {
                 followPlayer();

@@ -1168,6 +1168,15 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\lC3.xnb</Output>
       <Time>2013-01-14T14:17:39.5901585-05:00</Time>
     </Item>
+    <Item>
+      <Source>graph.png</Source>
+      <Name>graph</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\graph.xnb</Output>
+      <Time>2013-01-14T16:40:01.0026993-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

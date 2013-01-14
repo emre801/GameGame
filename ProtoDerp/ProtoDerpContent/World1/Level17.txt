@@ -20,7 +20,7 @@
 404 249 deathSpikes DeathBlock 0
 95 250 deathSpikes DeathBlock 0
 -223 253 deathSpikes DeathBlock 0
--171 -1024 ahLogo0 GoalBlock 6
+-171 -1024 ahLogo0 GoalBlock 18
 162 -320 ahLogo0 MovingCycle 2 8 -295 370 173 100 97 182 222 293 239 208 142 102 99 146 170 190
 -50 -136 ahLogo0 MovingCycle 2 3 -302 380 -42 373 -42 373
 -12 -465 ahLogo0 MovingCycle 2 3 -337 39 -4 44 -4 44
