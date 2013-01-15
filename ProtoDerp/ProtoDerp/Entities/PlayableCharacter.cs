@@ -106,6 +106,19 @@ namespace ProtoDerp
         {
             Vector2 movementBefore = body.LinearVelocity;
             body.LinearVelocity = new Vector2(body.LinearVelocity.X, 0);
+            Block block=null;
+            foreach (Entity e in game.entities)
+            {
+                if (e is Block)
+                {
+                    Block b = (Block)e;
+                    if(b.fixture.Equals(fixtureB))
+                    {
+                        block = b;
+                    }
+
+                }
+            }
 
             if (contact.IsTouching())
             {
@@ -123,6 +136,13 @@ namespace ProtoDerp
                 }
                 if (pColis.X != 0 && pColis.Y == 0)
                 {
+                    if (fixtureB.Body.Rotation % 45 != 0)
+                    {
+                        onGround = true;
+                        modes = Modes.GROUND;
+                        return false;
+                    }
+
                     if (onGround)
                     {
                         modes = Modes.WALL;

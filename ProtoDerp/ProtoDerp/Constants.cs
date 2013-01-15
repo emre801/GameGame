@@ -13,7 +13,7 @@ namespace ProtoDerp
         public const int MAX_WRITE_LEVEL = 29;
         public const int READ_LEVEL = 2;
 
-        public const int MAX_TEMPLATE_LEVEL = 3;
+        public const int MAX_TEMPLATE_LEVEL = 10;
 
         public const bool IS_IN_DEBUG_MODE = true;
 
