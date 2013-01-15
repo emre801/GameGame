@@ -1,44 +1,22 @@
-1798 175 bigBlock Block 200 3910 0 0
--246 -905 bigBlock Block 2365 200 0 0
-3852 -905 bigBlock Block 2365 200 0 0
-1560 640 bigBlock Block 730 6390 2 0
--1105 -415 bigBlock Block 3330 1525 2 0
-4708 -415 bigBlock Block 3330 1525 2 0
--16 78 grassTemplate Block 35 256 2 0
-233 78 grassTemplate Block 35 256 2 0
-486 78 grassTemplate Block 35 256 2 0
-731 78 grassTemplate Block 35 256 2 0
-986 78 grassTemplate Block 35 256 2 0
-1238 78 grassTemplate Block 35 256 2 0
-1489 78 grassTemplate Block 35 256 2 0
-1740 78 grassTemplate Block 35 256 2 0
-1991 78 grassTemplate Block 35 256 2 0
-2243 78 grassTemplate Block 35 256 2 0
-2492 78 grassTemplate Block 35 256 2 0
-2742 78 grassTemplate Block 35 256 2 0
-2996 78 grassTemplate Block 35 256 2 0
-3242 78 grassTemplate Block 35 256 2 0
-3498 78 grassTemplate Block 35 256 2 0
-3622 78 grassTemplate Block 35 256 2 0
-222 -91 GreenHill Block 780 755 1 0
-969 -91 GreenHill Block 780 755 1 0
-1721 -91 GreenHill Block 780 755 1 0
-2476 -91 GreenHill Block 780 755 1 0
-3229 -91 GreenHill Block 780 755 1 0
-3982 -91 GreenHill Block 780 755 1 0
-297 50 deathSpikes DeathBlock 0
-812 50 deathSpikes DeathBlock 0
-1337 50 deathSpikes DeathBlock 0
-1947 50 deathSpikes DeathBlock 0
-2562 50 deathSpikes DeathBlock 0
-3007 50 deathSpikes DeathBlock 0
-3542 50 deathSpikes DeathBlock 0
-3647 50 deathSpikes DeathBlock 0
-3727 50 deathSpikes DeathBlock 0
-3677 -40 ahLogo0 GoalBlock 8
-725 0 missile_strip_strip4 MovingDeath 2 -2 0
-1255 0 missile_strip_strip4 MovingDeath 2 -2 0
-1855 0 missile_strip_strip4 MovingDeath 2 -2 0
-2470 0 missile_strip_strip4 MovingDeath 2 -2 0
-2925 0 missile_strip_strip4 MovingDeath 2 -2 0
+796 146 bigBlock Block 170 2820 0 0
+585 -256 bigBlock Block 200 1860 0 0
+1122 -712 bigBlock Block 200 2165 0 0
+1962 -166 bigBlock Block 900 485 0 0
+2668 -536 bigBlock Block 1635 485 0 0
+962 -1192 bigBlock Block 345 3460 0 0
+-529 -409 bigBlock Block 1285 475 0 0
+-446 -381 bigBlock Block 1285 475 0 0
+852 172 bigBlock Block 220 3240 0 0
+2308 11 ahLogo0 GoalBlock 8
+1224 -667 deathBall MovingPath 5 1232 -157 1249 217 
+775 -287 deathBall MovingPath 5 783 222 797 -168 
+284 -681 deathBall MovingPath 5 292 -171 297 228 
+555 -747 deathBall MovingPath 5 563 -237 185 -232 
+703 -1082 deathBall MovingPath 5 711 -572 1100 -572 
+1468 -753 deathBall MovingPath 5 1476 -243 1081 -240 
+2145 -699 deathBall MovingPath 5 2153 -189 2147 158 
+2505 -148 deathBall MovingPath 5 2513 361 2504 -192 
+142 -254 deathBall MovingPath 5 150 255 496 661 
+702 159 deathBall MovingPath 5 710 670 1150 255 
 Demi -100 3621 -862 561
+BGCOLOR 133 200 232 
