@@ -213,7 +213,12 @@ namespace ProtoDerp
             {
                 rotation = 0 ;
             }
-            
+            if (keyInput.IsNewKeyPressed(Keys.D6))
+            {
+                game.camZoomValue = game.drawingTool.cam.Zoom;
+                game.camPosSet = game.drawingTool.cam.Pos;
+
+            }
 
             if (game.blockType.Equals(Game.BlockType.Magnet))
             {

@@ -679,9 +679,9 @@ namespace ProtoDerp
             Vector3 vecColor= backGroundColor.ToVector3();
             lines.AddLast("BGCOLOR " + (int)(vecColor.X * 252) + " " + (int)(vecColor.Y * 252) + " " + (int)(vecColor.Z * 252) + " ");
 
-            lines.AddLast("CAM " + drawingTool.cam.Zoom/drawingTool.zoomRatio);
+            lines.AddLast("CAM " + camZoomValue/drawingTool.zoomRatio);
 
-            lines.AddLast("CPOS " + drawingTool.cam.Pos.X + " " + drawingTool.cam.Pos.Y);
+            lines.AddLast("CPOS " + camPosSet.X + " " + camPosSet.Y);
 
             System.IO.File.WriteAllLines(path, lines);
             if (!Constants.IS_IN_DEBUG_MODE)

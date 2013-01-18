@@ -252,7 +252,7 @@ namespace ProtoDerp
             {
                 ignoreInput--;
                 //Ignore input for a couple of frams to allow redirection
-                return;
+                //return;
             }
             if (game.deathAnimation)
             {
