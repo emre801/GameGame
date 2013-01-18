@@ -80,6 +80,7 @@ namespace ProtoDerp
             if (contact.IsTouching())
             {
                 LinkedList<PlayableCharacter> players = game.getEntitiesOfType<PlayableCharacter>();
+                
                 PlayableCharacter player = players.First();
                 if (fixtureB == player.fixture)
                 {
@@ -101,7 +102,19 @@ namespace ProtoDerp
             float mass = 1;
             this.width = ani.widthOf();
             this.height = ani.heightOf();
-            fixture = FixtureFactory.CreateRectangle(world, (float)ConvertUnits.ToSimUnits(width), (float)ConvertUnits.ToSimUnits(height), mass);
+            if (this.spriteNumber.Equals("deathBall")
+                || spriteNumber.Contains("circle"))
+            {
+                fixture = FixtureFactory.CreateCircle(world, (float)ConvertUnits.ToSimUnits(width)/2,  mass);
+
+            }
+
+            else
+            {
+                fixture = FixtureFactory.CreateRectangle(world, (float)ConvertUnits.ToSimUnits(width), (float)ConvertUnits.ToSimUnits(height), mass);
+
+
+            }
             this.origFix = fixture;
             body = fixture.Body;
             fixture.Body.BodyType = BodyType.Dynamic;

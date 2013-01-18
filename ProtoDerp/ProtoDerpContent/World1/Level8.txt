@@ -1,30 +1,41 @@
-1798 175 bigBlock Block 200 3910 0 0
--246 -905 bigBlock Block 2365 200 0 0
-3852 -905 bigBlock Block 2365 200 0 0
-446 51 deathSpikes Block 43 126 2 0
-616 51 deathSpikes Block 43 126 2 0
-981 51 deathSpikes Block 43 126 2 0
-1151 51 deathSpikes Block 43 126 2 0
-1503 51 deathSpikes Block 43 126 2 0
-1723 51 deathSpikes Block 43 126 2 0
-2143 51 deathSpikes Block 43 126 2 0
-2338 51 deathSpikes Block 43 126 2 0
-2778 51 deathSpikes Block 43 126 2 0
-3193 51 deathSpikes Block 43 126 2 0
-3348 51 deathSpikes Block 43 126 2 0
-1560 640 bigBlock Block 730 6390 2 0
--1105 -415 bigBlock Block 3330 1525 2 0
-4708 -415 bigBlock Block 3330 1525 2 0
-297 50 deathSpikes DeathBlock 0
-812 50 deathSpikes DeathBlock 0
-1337 50 deathSpikes DeathBlock 0
-1947 50 deathSpikes DeathBlock 0
-2562 50 deathSpikes DeathBlock 0
-3007 50 deathSpikes DeathBlock 0
-3542 50 deathSpikes DeathBlock 0
-3647 50 deathSpikes DeathBlock 0
-3727 50 deathSpikes DeathBlock 0
-3677 -40 ahLogo0 GoalBlock 9
-974 -482 derrick.png MovingDeath 2 -4 0
-619 -168 derrick.png MovingDeath 2 -1 -4
-Demi -100 3800 -800 672
+-143 -207 ahLogo0 Block 63 63 0 0
+243 -85 bigBlock Block 780 105 0 0
+256 96 bigBlock Block 65 885 0 0
+243 831 bigBlock Block 65 105 0 0
+19 490 bigBlock Block 35 830 0 64
+481 483 bigBlock Block 35 830 0 118
+-189 531 bigBlock Block 35 135 0 0
+-405 432 bigBlock Block 35 135 0 0
+-600 741 bigBlock Block 35 135 0 0
+-190 944 bigBlock Block 35 135 0 0
+60 1100 bigBlock Block 35 135 0 0
+514 998 bigBlock Block 35 135 0 0
+820 898 bigBlock Block 35 135 0 0
+529 743 bigBlock Block 35 135 0 0
+771 538 bigBlock Block 35 135 0 0
+1136 538 bigBlock Block 35 345 0 0
+-6128 -1098 derrick.png Block 100 75 0 0
+-6990 -856 derrick.png Block 100 75 0 0
+-6585 -879 derrick.png Block 100 75 0 0
+-3101 -712 derrick.png Block 100 75 0 0
+-6938 -298 derrick.png Block 100 75 0 0
+-6980 12 derrick.png Block 100 75 0 0
+-6056 -1098 derrick.png Block 100 75 0 0
+-6830 -14 derrick.png Block 100 75 0 0
+-6484 -278 derrick.png Block 100 75 0 0
+-7558 328 derrick.png Block 100 75 0 0
+-7343 -373 derrick.png Block 100 75 0 0
+-7352 -680 derrick.png Block 100 75 0 0
+-6484 -1098 derrick.png Block 100 75 0 0
+-7496 -1098 derrick.png Block 100 75 0 0
+-5903 -1094 derrick.png Block 100 75 0 0
+1405 -48 bigBlock Block 1200 200 0 0
+1131 -51 bigBlock Block 895 50 0 0
+465 3 ahLogo0 GoalBlock 1
+209 857 deathBall MovingPath 2 217 1367 -161 642 
+300 857 deathBall MovingPath 2 308 1367 693 629 
+245 109 deathBall MovingCycle 2 7 262 616 713 597 266 1364 200 1364 -145 626 253 619 253 619
+Demi -813 1374 7 1656
+BGCOLOR 133 183 232 
+CAM 0.2843987
+CPOS 400 360

@@ -125,6 +125,7 @@ namespace ProtoDerp
                         game.backToTitleScreen = true;
                         game.backGroundImages.Clear();
                         MediaPlayer.Stop();
+                        game.camZoomValue = -1;
                     }
                     game.stopWatch.Start();
                     game.pause = false;

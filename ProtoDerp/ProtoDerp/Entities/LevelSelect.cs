@@ -69,6 +69,12 @@ namespace ProtoDerp
                     game.currentLevel = levelNum;
                     game.populateWorld();                    
                     game.drawingTool.cam.Zoom = 0.55f * game.drawingTool.zoomRatio;
+
+                    if (game.camZoomValue != -1)
+                    {
+                        game.drawingTool.cam.Zoom = game.camZoomValue;
+                        game.drawingTool.cam.Pos = game.camPosSet;
+                    }
                     this.IsVisible = false;
                     this.dispose = true;
                 }

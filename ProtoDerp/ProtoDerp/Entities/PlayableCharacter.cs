@@ -70,6 +70,7 @@ namespace ProtoDerp
         bool doAnimation = false;
         bool isWallOnRight = false;
         bool isOnJumpAnimation = false;
+        int ignoreInput = 0;
         public PlayableCharacter(Game g, Arena a, Vector2 pos, int playerNum)
             : base(g)
         {
@@ -136,18 +137,19 @@ namespace ProtoDerp
                 }
                 if (pColis.X != 0 && pColis.Y == 0)
                 {
+                    
                     if (fixtureB.Body.Rotation % 45 != 0)
                     {
                         onGround = true;
                         modes = Modes.GROUND;
                         return false;
                     }
-
                     if (onGround)
                     {
                         modes = Modes.WALL;
                         return false;
                     }
+                    
 
                     float direction = inputState.GetJoyDirection();
                     float x = (float)Math.Sin(direction);
@@ -175,6 +177,7 @@ namespace ProtoDerp
                     onGround = true;
                     onGround = true;
                     modes = Modes.WALL;
+                    ignoreInput = 2;
                     return false;
                 }
 
@@ -245,6 +248,12 @@ namespace ProtoDerp
         public override void Update(GameTime gameTime, float worldSpeed)
         {
             keyInput.Update(gameTime);
+            if (ignoreInput > 0)
+            {
+                ignoreInput--;
+                //Ignore input for a couple of frams to allow redirection
+                return;
+            }
             if (game.deathAnimation)
             {
                 playerSprite = game.getSprite("fire1");

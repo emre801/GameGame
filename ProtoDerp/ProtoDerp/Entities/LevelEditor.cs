@@ -58,7 +58,7 @@ namespace ProtoDerp
 
             height = Constants.GAME_WORLD_HEIGHT;
             width = Constants.GAME_WORLD_WIDTH;
-
+            
             createLevel(file);
         }
 
@@ -70,6 +70,7 @@ namespace ProtoDerp
             int c = 0;
             if(game.loadNewLevel)
             game.clearEntities();
+            game.camZoomValue = -1;
             while ((line = sr.ReadLine()) != null)
             {
                 c++;
@@ -88,6 +89,19 @@ namespace ProtoDerp
                         (float)(Convert.ToInt32(words[2]))/252f,(float)(Convert.ToInt32(words[3]))/252f);
                     continue;
 
+                }
+                if (words[0].Equals("CAM"))
+                {
+
+                    float camValue=System.Convert.ToSingle(words[1]);
+                    game.drawingTool.cam.Zoom = camValue;
+                    game.camZoomValue = camValue;
+                    continue;
+                }
+                if (words[0].Equals("CPOS"))
+                {
+                    game.camPosSet = new Vector2(System.Convert.ToSingle(words[1]), System.Convert.ToSingle(words[2]));
+                    continue;
                 }
                 float x=Convert.ToInt32(words[0]);
                 float y = Convert.ToInt32(words[1]);

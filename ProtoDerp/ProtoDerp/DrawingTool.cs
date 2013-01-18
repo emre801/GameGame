@@ -111,11 +111,17 @@ namespace ProtoDerp
 
                 h = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height + 3;
                 w = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+                
                 zoomRatio = 1.12505f;
             }
             startingCamPosition = cam.Pos;
 
             cam.Zoom = 0.75f;// *zoomRatio;
+            if (game.camZoomValue != -1)
+            {
+                cam.Zoom = game.camZoomValue;
+                cam.Pos = game.camPosSet;
+            }
 
             rectangle = new Texture2D(gdm.GraphicsDevice, 1, 1);
             rectangle.SetData(new[] { Color.White });
@@ -143,6 +149,12 @@ namespace ProtoDerp
             //cam.Pos = startingCamPosition;
             
             cam.Zoom = 0.55f * zoomRatio;
+
+            if (game.camZoomValue != -1)
+            {
+                cam.Zoom = game.camZoomValue;
+                cam.Pos = game.camPosSet;
+            }
         }
         private void initializeLetterBox()
         {

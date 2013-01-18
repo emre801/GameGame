@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="126464">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="127488">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>xhvJjAjwVvRiaMRu0sG5Ca1VDmk=</dsig:DigestValue>
+        <dsig:DigestValue>t2ycV5Sxf2P9fonE5relXIf66o8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1673,22 +1673,22 @@
       <dsig:DigestValue>n0a4RE3nkAZbkmbsPpXOrCqinOU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level7.txt" size="946">
+  <file name="Content\World1\Level7.txt" size="956">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>6EcVKgHzeY5rURfljykMdkbKRow=</dsig:DigestValue>
+      <dsig:DigestValue>MXP987BzAKG9Ixe6s/dfU97yaB0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level8.txt" size="1092">
+  <file name="Content\World1\Level8.txt" size="1553">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>C7YMkTiF34DQ77eHX8UqdrbRgIA=</dsig:DigestValue>
+      <dsig:DigestValue>pfngz1GsF1Kp6lbiCILpJpH+2fs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level9.txt" size="2660">
