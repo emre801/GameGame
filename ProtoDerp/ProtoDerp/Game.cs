@@ -230,7 +230,8 @@ namespace ProtoDerp
             playerOneInput = new XboxInput(PlayerIndex.One);
 
             //Load uploaded sprites
-            loadImageFromContent();
+            if(Constants.IS_IN_DEBUG_MODE)
+                loadImageFromContent();
 
             //Load Sprites            
             /*sprites.Add("fire0", new Sprite(Content, "fire0"));

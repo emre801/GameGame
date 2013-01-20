@@ -9,15 +9,15 @@ namespace ProtoDerp
 {
     class Constants
     {
-        public const int WRITE_LEVEL = 8;
+        public const int WRITE_LEVEL = 1;
         public const int MAX_WRITE_LEVEL = 29;
         public const int READ_LEVEL = 2;
 
         public const int MAX_TEMPLATE_LEVEL = 10;
 
-        public const bool IS_IN_DEBUG_MODE = true;
+        public const bool IS_IN_DEBUG_MODE = true; //set this to false when release
 
-        public const bool ENABLE_CREATIVE_MODE = true;
+        public const bool ENABLE_CREATIVE_MODE = true; //set this to false if you want to give access to creative mode
 
         public const double GAMEWORLD_ASPECT_RATIO = 4f / 3f; // Width of game world / height of game world
 
