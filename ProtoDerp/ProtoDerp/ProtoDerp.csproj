@@ -132,6 +132,7 @@
     <Compile Include="Entities\CutScene.cs" />
     <Compile Include="Entities\DeathBlocks.cs" />
     <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\EntityBlock.cs" />
     <Compile Include="Entities\GoalBlock.cs" />
     <Compile Include="Entities\GUI.cs" />
     <Compile Include="Entities\LevelEditor.cs" />

@@ -23,7 +23,7 @@ using FarseerPhysics.Dynamics.Contacts;
  */
 namespace ProtoDerp
 {
-    public class MovingDeath : Entity
+    public class MovingDeath : EntityBlock
     {
         public Sprite playerSprite;
 

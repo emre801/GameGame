@@ -55,6 +55,8 @@ namespace ProtoDerp
         bool clickOne = false;
         bool clickTwo = false;
         ArrayList pathPoints= new ArrayList();
+        Vector2 drawPoint1 = Vector2.Zero, drawPoint2=Vector2.Zero;
+        int currentPointValue = 0;
         public CreaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
             : base(g)
         {
@@ -344,7 +346,7 @@ namespace ProtoDerp
                 }
                 
             }
-            if (keyInput.IsNewKeyPressed(Keys.Enter))
+            if (keyInput.IsNewKeyPressed(Keys.Enter) && keyInput.keyboardState.IsKeyUp(Keys.LeftShift))
             {
                 if (game.drawLevel < 0)
                 {
@@ -371,6 +373,22 @@ namespace ProtoDerp
                         break;
                 }
                 
+            }
+            if (keyInput.IsNewKeyPressed(Keys.Enter) && keyInput.keyboardState.IsKeyDown(Keys.LeftShift))
+            {
+                if (currentPointValue == 0)
+                {
+                    drawPoint1 = origPos;
+                    currentPointValue++;
+                }
+                else
+                {
+                    currentPointValue++;
+                    drawPoint2 = origPos;
+                }
+
+
+
             }
 
             if (keyInput.IsNewKeyPressed(Keys.I) || (keyInput.IsKeyPressed(Keys.I)&&keyInput.IsKeyPressed(Keys.LeftShift)))
@@ -399,9 +417,23 @@ namespace ProtoDerp
                 Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y - 500 * game.drawingTool.cam.Zoom);
                 Vector2 worldMousePosition = Vector2.Transform(mousePosition, Matrix.Invert(game.drawingTool.cam._transform));
                     
-                if (Mouse.GetState().LeftButton == ButtonState.Pressed && oldMouse.LeftButton == ButtonState.Released)
+                if (Mouse.GetState().LeftButton == ButtonState.Pressed && oldMouse.LeftButton == ButtonState.Released && keyInput.keyboardState.IsKeyUp(Keys.LeftShift))
                 {
                     addBlockBasedOnMouse(worldMousePosition);
+                }
+                else if (Mouse.GetState().LeftButton == ButtonState.Pressed && oldMouse.LeftButton == ButtonState.Released && keyInput.keyboardState.IsKeyDown(Keys.LeftShift))
+                {
+                    if (currentPointValue == 0)
+                    {
+                        drawPoint1 = worldMousePosition;
+                        currentPointValue++;
+                    }
+                    else
+                    {
+                        currentPointValue++;
+                        drawPoint2 = worldMousePosition;
+                    }
+                    
                 }
                 else if (Mouse.GetState().RightButton == ButtonState.Pressed && oldMouse.RightButton == ButtonState.Released) 
                 {
@@ -425,6 +457,40 @@ namespace ProtoDerp
             chooseNextSprite();
             updateDrawLevel();
             game.isSelectingBlock = false;
+
+
+            if (currentPointValue == 2)
+            {
+
+                currentPointValue = 0;
+                drawObjectsInLine(drawPoint1, drawPoint2);
+            }
+
+        }
+        public void drawObjectsInLine(Vector2 p1, Vector2 p2)
+        {
+            float angle = (float)Math.Atan2(p2.Y - p1.Y, p2.X - p1.X);
+            int blockWidth = game.getSprite(blockArray[game.spriteBlockCounter]).index.Width;
+            float angleDegree = angle / (float)Math.PI * 180f;
+
+            if ((angleDegree > 0 && angleDegree <= 90) || (angleDegree > 180 && angleDegree <= 270))
+            {
+                blockWidth = game.getSprite(blockArray[game.spriteBlockCounter]).index.Height;
+
+            }
+
+            Vector2 lineVec = p2 - p1;
+            for (int i = 0; i < lineVec.Length(); i = i + blockWidth)
+            {
+                int xAngle = (int)(Math.Cos(angle) * i);
+                int yAngle = (int)(Math.Sin(angle) * i);
+                Vector2 drawVal = new Vector2(p1.X + xAngle, p1.Y + yAngle);
+                addBlockBasedOnMouse(drawVal);
+
+            }
+
+
+
         }
 
         public void changeBlockType()
@@ -563,8 +629,8 @@ namespace ProtoDerp
                 isSelectedBlockChanged = false;
                 foreach (Entity e in game.entities)
                 {
-                    if (e is DeathBlock || e is Block || e is MovingDeath || e is GoalBlock
-                        || e is MagnetBlock || e is MovingCycle || e is MovingPath)
+                    if (e is EntityBlock)/* DeathBlock || e is Block || e is MovingDeath || e is GoalBlock
+                        || e is MagnetBlock || e is MovingCycle || e is MovingPath || e is BackgroundBlock)*/
                     {
                         if (count == blockIterater&&e.IsVisible)
                         {
@@ -613,6 +679,88 @@ namespace ProtoDerp
                 selected.isSelected = false;
                 blockIterater++;
             }
+            if (keyInput.IsNewKeyPressed(Keys.Z))
+            {
+                game.saveAlpha = 1;
+                game.writeLevel(game.currentWriteLevel);
+            }
+            if (keyInput.IsNewKeyPressed(Keys.T))
+            {
+                deleteAllSelectedType<DeathBlock>();
+            }
+            if (keyInput.IsNewKeyPressed(Keys.Y))
+            {
+                deleteAllSelectedType<Block>();
+            }
+            if (keyInput.IsNewKeyPressed(Keys.U))
+            {
+                deleteAllSelectedType<MovingDeath>();
+            }
+            if (keyInput.IsNewKeyPressed(Keys.I))
+            {
+                deleteAllSelectedType<MagnetBlock>();
+            }
+            if (keyInput.IsNewKeyPressed(Keys.O))
+            {
+                deleteAllSelectedType<MovingCycle>();
+            }
+            if (keyInput.IsNewKeyPressed(Keys.G))
+            {
+                //deleteEverything();
+                deleteAllSelectedType<EntityBlock>();
+                deleteSuperBackGround();
+            }
+
+        }
+        public void deleteSuperBackGround()
+        {
+            foreach (Entity e in game.backGroundImages)
+            {
+                e.IsVisible = false;
+                isSelectedBlockChanged = true;
+                e.isSelected = false;
+                isSelectedBlockChanged = true;
+            }
+
+        }
+
+        public void deleteEverything()
+        {
+            foreach (Entity e in game.entities)
+            {
+                if (e is DeathBlock || e is Block || e is MovingDeath || e is GoalBlock
+                        || e is MagnetBlock || e is MovingCycle || e is MovingPath)
+                {
+
+                    e.IsVisible = false;
+                    isSelectedBlockChanged = true;
+                    e.isSelected = false;
+
+
+                }
+            }
+            isSelectedBlockChanged = true;
+
+        }
+
+        public void deleteAllSelectedType<Type>()
+        {
+            foreach (Entity e in game.entities)
+            {
+                if (e is Type)
+                {
+                    
+                        e.IsVisible = false;
+                        isSelectedBlockChanged = true;
+                        e.isSelected = false;
+                   
+                    
+                }
+            }
+            isSelectedBlockChanged = true;
+
+
+
         }
 
         public void makeMouseSelection()

@@ -94,25 +94,25 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FarseerPhysicsXNA.dll" size="307712">
-      <assemblyIdentity name="FarseerPhysicsXNA" version="3.2.4737.1176" language="neutral" processorArchitecture="x86" />
+      <assemblyIdentity name="FarseerPhysicsXNA" version="3.2.4769.2279" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>VLqhJE0ZmlqTu+qRX604JeURc4I=</dsig:DigestValue>
+        <dsig:DigestValue>E+pL0AF5AoEzGjvkkI4aa2ve+co=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="128000">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="130048">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>u8vpDoSliT0yzsbi/nCefQMLDYc=</dsig:DigestValue>
+        <dsig:DigestValue>sKA/I/ZvdUiUdO+wtEohN1IbBP4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1448,13 +1448,13 @@
       <dsig:DigestValue>ZqyyWju2hHU6z6veHxHupnous68=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level10.txt" size="7219">
+  <file name="Content\World1\Level10.txt" size="4476">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>yDzRh80h5cZ/c0N8qB0HCEjkoQg=</dsig:DigestValue>
+      <dsig:DigestValue>HZE0e+JOGxfhAB6NvB40ypazNt4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level11.txt" size="374">

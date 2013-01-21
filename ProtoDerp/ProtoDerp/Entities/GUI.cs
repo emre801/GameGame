@@ -318,9 +318,17 @@ namespace ProtoDerp
 
         public void DrawControlsInfoEditMode(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            DrawText(spriteBatch, 0.90f, 0.05f, "Controls Info");
-            DrawText(spriteBatch, 0.90f, 0.075f, "Q and W Shift Block");
-            DrawText(spriteBatch, 0.90f, 0.10f, "Delete, Remove Block");           
+            float i = 0.025f;
+            DrawText(spriteBatch, 0.90f, i+=0.025f, "Controls Info");
+            DrawText(spriteBatch, 0.90f, i += 0.025f, "Q and W Shift Block");
+            DrawText(spriteBatch, 0.90f, i += 0.025f, "Delete, Remove Block");
+            DrawText(spriteBatch, 0.90f, i += 0.025f, "Z to Save");
+            DrawText(spriteBatch, 0.90f, i += 0.025f, "T, Delete all Death Blocks");
+            DrawText(spriteBatch, 0.90f, i += 0.025f, "Y, Delete all Normal Blocks");
+            DrawText(spriteBatch, 0.90f, i += 0.025f, "U, Delete all Moving Blocks");
+            DrawText(spriteBatch, 0.90f, i += 0.025f, "I, Delete all Magnet Blocks");
+            DrawText(spriteBatch, 0.90f, i += 0.025f, "O, Delete all MovingCycle Blocks");
+            DrawText(spriteBatch, 0.90f, i += 0.025f, "G, Delete everything");
         }
 
         public void DrawMouse(GameTime gameTime, SpriteBatch spriteBatch)

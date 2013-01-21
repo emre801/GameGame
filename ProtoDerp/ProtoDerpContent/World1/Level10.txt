@@ -29,79 +29,14 @@
 2150 176 grassTemplate Block 35 256 2 0
 2405 176 grassTemplate Block 35 256 2 0
 -2489 -465 rocco.png Block 249 176 0 0
-867 213 grassTemplate Block 35 256 2 450
-867 464 grassTemplate Block 35 256 2 450
-867 711 grassTemplate Block 35 256 2 450
-867 967 grassTemplate Block 35 256 2 450
-867 1192 grassTemplate Block 35 256 2 450
-867 1412 grassTemplate Block 35 256 2 450
-867 1665 grassTemplate Block 35 256 2 450
-867 1665 grassTemplate Block 35 256 2 450
-867 1918 grassTemplate Block 35 256 2 450
-867 2169 grassTemplate Block 35 256 2 450
-867 2415 grassTemplate Block 35 256 2 450
-867 2649 grassTemplate Block 35 256 2 450
-867 2895 grassTemplate Block 35 256 2 450
-867 3143 grassTemplate Block 35 256 2 450
-1275 317 grassTemplate Block 35 256 2 -90
-1275 559 grassTemplate Block 35 256 2 -90
-1275 811 grassTemplate Block 35 256 2 -90
-1275 1059 grassTemplate Block 35 256 2 -90
-1275 1314 grassTemplate Block 35 256 2 -90
-1275 1560 grassTemplate Block 35 256 2 -90
-1275 1815 grassTemplate Block 35 256 2 -90
-1275 2067 grassTemplate Block 35 256 2 -90
-1275 2313 grassTemplate Block 35 256 2 -90
-1275 2549 grassTemplate Block 35 256 2 -90
-1275 2799 grassTemplate Block 35 256 2 -90
-1275 3045 grassTemplate Block 35 256 2 -90
-1275 3289 grassTemplate Block 35 256 2 -90
-1275 3545 grassTemplate Block 35 256 2 -90
-1275 3795 grassTemplate Block 35 256 2 -90
-1275 3828 grassTemplate Block 35 256 2 -90
-867 3839 grassTemplate Block 35 256 2 90
-867 3584 grassTemplate Block 35 256 2 90
-867 3395 grassTemplate Block 35 256 2 90
 488 4391 grassTemplate Block 35 256 2 0
 741 4391 grassTemplate Block 35 256 2 0
 990 4391 grassTemplate Block 35 256 2 0
 1246 4391 grassTemplate Block 35 256 2 0
 1496 4391 grassTemplate Block 35 256 2 0
 1721 4391 grassTemplate Block 35 256 2 0
-362 4251 grassTemplate Block 35 256 2 90
-362 3995 grassTemplate Block 35 256 2 90
-362 3745 grassTemplate Block 35 256 2 90
-362 3491 grassTemplate Block 35 256 2 90
-362 3246 grassTemplate Block 35 256 2 90
-362 2998 grassTemplate Block 35 256 2 90
-362 2747 grassTemplate Block 35 256 2 90
-362 2495 grassTemplate Block 35 256 2 90
-362 2244 grassTemplate Block 35 256 2 90
-362 1993 grassTemplate Block 35 256 2 90
-362 1739 grassTemplate Block 35 256 2 90
-362 1486 grassTemplate Block 35 256 2 90
-362 1234 grassTemplate Block 35 256 2 90
-362 1034 grassTemplate Block 35 256 2 90
-362 790 grassTemplate Block 35 256 2 90
-362 540 grassTemplate Block 35 256 2 90
-362 398 grassTemplate Block 35 256 2 90
-747 398 grassTemplate Block 35 256 2 270
-747 638 grassTemplate Block 35 256 2 270
-747 889 grassTemplate Block 35 256 2 270
-747 1139 grassTemplate Block 35 256 2 270
-747 1385 grassTemplate Block 35 256 2 270
-747 1631 grassTemplate Block 35 256 2 270
-747 1887 grassTemplate Block 35 256 2 270
-747 2138 grassTemplate Block 35 256 2 270
-747 2353 grassTemplate Block 35 256 2 270
-747 2607 grassTemplate Block 35 256 2 270
-747 2864 grassTemplate Block 35 256 2 270
-747 3104 grassTemplate Block 35 256 2 270
-747 3354 grassTemplate Block 35 256 2 270
-747 3598 grassTemplate Block 35 256 2 270
-747 3838 grassTemplate Block 35 256 2 270
-242 -420 derrick.png Block 105 75 0 0
-308 -91 derrick.png Block 105 75 0 0
+-2407 -978 derrick.png Block 105 75 0 0
+563 -710 derrick.png Block 105 75 0 0
 1251 233 deathSpikes3 DeathBlock 0
 1251 357 deathSpikes3 DeathBlock 0
 1251 484 deathSpikes3 DeathBlock 0
@@ -182,4 +117,6 @@
 860 4368 deathSpikes DeathBlock 0
 501 357 ahLogo0 GoalBlock 11
 Demi -100 1901 287 5137
-BGCOLOR 133 175 232 
+BGCOLOR 133 173 232 
+CAM -1
+CPOS 202.8936 684.5406

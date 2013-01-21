@@ -24,7 +24,7 @@ using FarseerPhysics.Dynamics.Contacts;
  */
 namespace ProtoDerp
 {
-    public class Block : Entity
+    public class Block : EntityBlock
     {
         public Sprite playerSprite;
 
@@ -329,6 +329,8 @@ namespace ProtoDerp
         }
         public void DrawShadow(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            if (!IsVisible)
+                return;
             Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
             DrawingTool test = game.drawingTool;
             int i = playerSprite.index.Width;

@@ -23,7 +23,7 @@ using FarseerPhysics.Dynamics.Contacts;
  */
 namespace ProtoDerp
 {
-    public class MagnetBlock : Entity
+    public class MagnetBlock : EntityBlock
     {
         public Sprite playerSprite;
 
