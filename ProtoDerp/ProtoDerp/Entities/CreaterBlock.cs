@@ -50,7 +50,7 @@ namespace ProtoDerp
         //public Vector2 magnetPulse;
         public bool incrementXMagnetValue;
         SpriteStripAnimationHandler ani;
-        float rotation = 0;
+        int rotation = 0;
         Vector2 point1 = new Vector2(0, 0), point2 = new Vector2(0, 0);
         bool clickOne = false;
         bool clickTwo = false;
@@ -583,7 +583,7 @@ namespace ProtoDerp
             {
                 drawObjectsInLine(drawPoint1, drawPoint2);
             }
-            else if ((currentSquareValue >= 1 && other % everyOther == 0) || currentSquareValue == 2)
+            else if ((currentSquareValue >= 1 && other % everyOther*10 == 0) || currentSquareValue == 2)
             {
                 drawObjectsInSquare(drawPoint1, drawPoint2);
             }
@@ -611,7 +611,7 @@ namespace ProtoDerp
 
             Vector2 lineVec = p2 - p1;
             float tempRotation = rotation;
-            this.rotation += angleDegree;
+            this.rotation += (int)angleDegree;
             for (int i = 0; i < lineVec.Length(); i = i + blockSpacing)
             {
                 int xAngle = (int)(Math.Cos(angle) * i);
@@ -621,7 +621,7 @@ namespace ProtoDerp
                     addBlockBasedOnMouse(drawVal);
                 else
                 {
-                    linedUpBlocks.Add(new Block(game, game.Arena, drawVal, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth, game.drawLevel, rotation));
+                    linedUpBlocks.Add(new Block(game, game.Arena, drawVal, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth, game.drawLevel, (int)rotation));
                 }
 
             }
@@ -630,16 +630,21 @@ namespace ProtoDerp
                 currentPointValue = 0;
                 linedUpBlocks = new SortedSet<Entity>();
             }
-            rotation = tempRotation;
+            rotation = (int)tempRotation;
         }
         public void drawObjectsInSquare(Vector2 p1, Vector2 p2)
         {
             linedUpBlocks = new SortedSet<Entity>();
+
             Vector2 squareVec = p2 - p1;
+            int xWidth = 0,yWidth=0;
             for (int i = 0; i < Math.Abs(squareVec.X); i=i+(int)blockWidth)
             {
+                xWidth++;
+                yWidth = 0;
                 for (int j = 0; j < Math.Abs(squareVec.Y); j+=(int)blockHeight)
                 {
+                    yWidth++;
                     int xPosi = (int)p1.X + i;
                     if(squareVec.X<0)
                         xPosi = (int)p1.X - i;
@@ -647,12 +652,20 @@ namespace ProtoDerp
                     if (squareVec.Y < 0)
                         yPosi = (int)p1.Y - j;
                     Vector2 drawVal = new Vector2(xPosi, yPosi);
-                    if (currentSquareValue == 2 && (game.blockType == Game.BlockType.Death || (game.blockType == Game.BlockType.Normal && game.drawLevel != 0)))
+                    int tempDrawValue = game.drawLevel;
+                    if (currentSquareValue == 2 && (game.blockType == Game.BlockType.Death || (game.blockType == Game.BlockType.Normal)))
+                    {
+                       
+                            game.drawLevel = 2;
                         addBlockBasedOnMouse(drawVal);
+                    }
                     else
                     {
+                        game.drawLevel = 2;
                         linedUpBlocks.Add(new Block(game, game.Arena, drawVal, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth, game.drawLevel, rotation));
                     }
+                    game.drawLevel = tempDrawValue;
+
                 }
             }
 
@@ -660,6 +673,13 @@ namespace ProtoDerp
             {
                 currentSquareValue = 0;
                 linedUpBlocks = new SortedSet<Entity>();
+                if (game.drawLevel == 0)
+                {
+                    int actuallyWidth = (int)(xWidth * blockWidth);
+                    int actuallyHeight = (int)(yWidth * blockHeight);
+                    //Vector2 drawOrig=new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
+                    game.addEntity(new Block(game, game.Arena, p1 + new Vector2((int)(actuallyWidth / 2) - blockWidth / 2, (int)(actuallyHeight / 2) - blockHeight / 2), 1, "blankImage", (int)actuallyHeight, (int)actuallyWidth, 0, rotation));
+                }
             }
 
         }

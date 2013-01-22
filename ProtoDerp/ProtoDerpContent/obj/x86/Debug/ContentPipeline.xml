@@ -1186,6 +1186,15 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\groundPat.xnb</Output>
       <Time>2013-01-22T03:09:57.8967975-05:00</Time>
     </Item>
+    <Item>
+      <Source>blankImage.png</Source>
+      <Name>blankImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\blankImage.xnb</Output>
+      <Time>2013-01-22T15:58:57.7332616-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
