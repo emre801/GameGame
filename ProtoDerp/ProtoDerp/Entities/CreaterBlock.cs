@@ -212,11 +212,15 @@ namespace ProtoDerp
             {
                 rotation -= 90;
             }
-            if (keyInput.IsKeyPressed(Keys.D3))
+            if (keyInput.IsKeyPressed(Keys.D3) &&  keyInput.keyboardState.IsKeyUp(Keys.LeftShift))
             {
                 rotation += 1;
             }
-            if (keyInput.IsNewKeyPressed(Keys.D4))
+            if (keyInput.IsKeyPressed(Keys.D3) && keyInput.keyboardState.IsKeyDown(Keys.LeftShift))
+            {
+                rotation -= 1;
+            }
+            if (keyInput.IsNewKeyPressed(Keys.OemPlus))
             {
                 rotation = 0 ;
             }
@@ -353,31 +357,40 @@ namespace ProtoDerp
             }
             if (keyInput.IsNewKeyPressed(Keys.Enter) && keyInput.keyboardState.IsKeyUp(Keys.LeftShift))
             {
-                if (game.drawLevel < 0)
+                if (currentPointValue == 1)
                 {
-                    game.backGroundImages.Add(new BackgroundBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth));
-                    return;
+                    currentPointValue++;
+                    drawPoint2 = origin;
+
                 }
-                switch (game.blockType)
                 {
-                    case Game.BlockType.Normal:
-                        addBlock();
-                        break;
-                    case Game.BlockType.Death:
-                        addDeathBlock();
-                        break;
-                    case Game.BlockType.Moving:
-                        addMovingDeathBlock();
-                        break;
-                    case Game.BlockType.Goal:
-                        addGoalBlock();
-                        game.cachedEntityLists = new Dictionary<Type, object>();
-                        break;
-                    case Game.BlockType.Magnet:
-                        addMagnetBlock();
-                        break;
+                    if (game.drawLevel < 0)
+                    {
+                        game.backGroundImages.Add(new BackgroundBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth));
+                        return;
+                    }
+                    switch (game.blockType)
+                    {
+                        case Game.BlockType.Normal:
+                            addBlock();
+                            break;
+                        case Game.BlockType.Death:
+                            addDeathBlock();
+                            break;
+                        case Game.BlockType.Moving:
+                            addMovingDeathBlock();
+                            break;
+                        case Game.BlockType.Goal:
+                            addGoalBlock();
+                            game.cachedEntityLists = new Dictionary<Type, object>();
+                            break;
+                        case Game.BlockType.Magnet:
+                            addMagnetBlock();
+                            break;
+                    }
                 }
-                
+
+
             }
             if (keyInput.IsNewKeyPressed(Keys.Enter) && keyInput.keyboardState.IsKeyDown(Keys.LeftShift))
             {
@@ -428,7 +441,17 @@ namespace ProtoDerp
                     
                 if (Mouse.GetState().LeftButton == ButtonState.Pressed && oldMouse.LeftButton == ButtonState.Released && keyInput.keyboardState.IsKeyUp(Keys.LeftShift))
                 {
-                    addBlockBasedOnMouse(worldMousePosition);
+                    
+                    if (currentPointValue == 1)
+                    {
+                        currentPointValue++;
+                        drawPoint2 = worldMousePosition;
+
+                    }
+                    else
+                    {
+                        addBlockBasedOnMouse(worldMousePosition);
+                    }
                 }
                 else if (Mouse.GetState().LeftButton == ButtonState.Pressed && oldMouse.LeftButton == ButtonState.Released && keyInput.keyboardState.IsKeyDown(Keys.LeftShift))
                 {
