@@ -290,6 +290,7 @@ namespace ProtoDerp
             DrawText(spriteBatch, position, currentPos += increment, "L to change Background");
             DrawText(spriteBatch, position, currentPos += increment, "1,2 Rotate Block");
             DrawText(spriteBatch, position, currentPos += increment, "6 set cameraPosition");
+            DrawText(spriteBatch, position, currentPos += increment, "G turn on and off buttons");
         }
 
         public void DrawMouseCameraValue(GameTime gameTime, SpriteBatch spriteBatch)

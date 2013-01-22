@@ -47,7 +47,6 @@
 783 -124 GreenHill Block 525 690 1 0
 -844 -112 GreenHill Block 525 690 1 0
 1793 -155 GreenHill Block 525 690 1 0
-416 -166 derrick.png Block 105 75 0 0
 -635 -873 groundWall Block 95 44 2 0
 -635 -776 groundWall Block 95 44 2 0
 -635 -671 groundWall Block 95 44 2 0
@@ -85,6 +84,6 @@
 -171 -547 CloudBack SuperBack 310 40
 1051 -602 CloudBack SuperBack 310 40
 Demi -349 1182 -532 795
-BGCOLOR 133 173 232 
-CAM -1
-CPOS 0 0
+BGCOLOR 133 171 232 
+CAM 0.55
+CPOS 400 360

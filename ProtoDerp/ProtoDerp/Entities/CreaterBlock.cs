@@ -56,11 +56,15 @@ namespace ProtoDerp
         bool clickTwo = false;
         ArrayList pathPoints= new ArrayList();
         Vector2 drawPoint1 = Vector2.Zero, drawPoint2=Vector2.Zero;
+        //Vector2 drawSquarePoint1 = Vector2.Zero, drawSquarePoint = Vector2.Zero;
         int currentPointValue = 0;
+        int currentSquareValue = 0;
         int everyOther = 10;
         int other = 0;
 
         public SortedSet<Entity> linedUpBlocks = new SortedSet<Entity>();
+
+        
 
         public CreaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
             : base(g)
@@ -321,6 +325,10 @@ namespace ProtoDerp
                 if(game.gameTemplateLevel!=0)
                     game.gameTemplateLevel--;
             }
+            if (keyInput.IsNewKeyPressed(Keys.G))
+            {
+                game.activateButtons = !game.activateButtons;
+            }
             if (keyInput.IsNewKeyPressed(Keys.N))
             {
                 if (!game.loadFromLevel)
@@ -355,11 +363,17 @@ namespace ProtoDerp
                 }
                 
             }
-            if (keyInput.IsNewKeyPressed(Keys.Enter) && keyInput.keyboardState.IsKeyUp(Keys.LeftShift))
+            if (keyInput.IsNewKeyPressed(Keys.Enter) && keyInput.keyboardState.IsKeyUp(Keys.LeftShift) && keyInput.keyboardState.IsKeyUp(Keys.LeftControl))
             {
                 if (currentPointValue == 1)
                 {
                     currentPointValue++;
+                    drawPoint2 = origin;
+
+                }
+                if (currentSquareValue == 1)
+                {
+                    currentSquareValue++;
                     drawPoint2 = origin;
 
                 }
@@ -396,11 +410,13 @@ namespace ProtoDerp
             {
                 if (currentPointValue == 0)
                 {
+                    currentSquareValue = 0;
                     drawPoint1 = origPos;
                     currentPointValue++;
                 }
                 else
                 {
+                    currentSquareValue = 0;
                     currentPointValue++;
                     drawPoint2 = origPos;
                 }
@@ -408,7 +424,28 @@ namespace ProtoDerp
 
 
             }
+            if (keyInput.IsNewKeyPressed(Keys.Enter) && keyInput.keyboardState.IsKeyDown(Keys.LeftControl))
+            {
+                if (currentSquareValue == 0)
+                {
+                    currentPointValue = 0;
+                    drawPoint1 = origPos;
+                    currentSquareValue++;
+                }
+                else
+                {
+                    currentPointValue = 0;
+                    currentSquareValue++;
+                    drawPoint2 = origPos;
+                }
+
+            }
+
             if (currentPointValue >= 1)
+            {
+                drawPoint2 = origPos;
+            }
+            if (currentSquareValue >= 1)
             {
                 drawPoint2 = origPos;
             }
@@ -438,13 +475,19 @@ namespace ProtoDerp
             {
                 Vector2 mousePosition = new Vector2(Mouse.GetState().X, Mouse.GetState().Y - 500 * game.drawingTool.cam.Zoom);
                 Vector2 worldMousePosition = Vector2.Transform(mousePosition, Matrix.Invert(game.drawingTool.cam._transform));
-                    
-                if (Mouse.GetState().LeftButton == ButtonState.Pressed && oldMouse.LeftButton == ButtonState.Released && keyInput.keyboardState.IsKeyUp(Keys.LeftShift))
+
+                if (Mouse.GetState().LeftButton == ButtonState.Pressed && oldMouse.LeftButton == ButtonState.Released && keyInput.keyboardState.IsKeyUp(Keys.LeftShift) && keyInput.keyboardState.IsKeyUp(Keys.LeftControl))
                 {
                     
                     if (currentPointValue == 1)
                     {
                         currentPointValue++;
+                        drawPoint2 = worldMousePosition;
+
+                    }
+                    else if (currentSquareValue == 1)
+                    {
+                        currentSquareValue++;
                         drawPoint2 = worldMousePosition;
 
                     }
@@ -457,26 +500,53 @@ namespace ProtoDerp
                 {
                     if (currentPointValue == 0)
                     {
+                        currentSquareValue = 0;
                         drawPoint1 = worldMousePosition;
                         currentPointValue++;
                     }
                     else
                     {
+                        currentSquareValue = 0;
                         currentPointValue++;
                         drawPoint2 = worldMousePosition;
                     }
                     
                 }
-                else if (Mouse.GetState().RightButton == ButtonState.Pressed && oldMouse.RightButton == ButtonState.Released) 
+                else if (Mouse.GetState().LeftButton == ButtonState.Pressed && oldMouse.LeftButton == ButtonState.Released && keyInput.keyboardState.IsKeyDown(Keys.LeftControl))
                 {
-                    if (game.blockType==Game.BlockType.Cycle)
-                        pathPoints.Add(worldMousePosition+Constants.player1SpawnLocation);
+                    if (currentSquareValue == 0)
+                    {
+                        currentPointValue = 0;
+                        drawPoint1 = worldMousePosition;
+                        currentSquareValue++;
+                    }
+                    else
+                    {
+                        currentPointValue = 0;
+                        currentSquareValue++;
+                        drawPoint2 = worldMousePosition;
+                    }
+
+                }
+                else if (Mouse.GetState().RightButton == ButtonState.Pressed && oldMouse.RightButton == ButtonState.Released)
+                {
+                    if (game.blockType == Game.BlockType.Cycle)
+                        pathPoints.Add(worldMousePosition + Constants.player1SpawnLocation);
+                    else
+                    {
+                        currentPointValue = 0;
+                        //linedUpBlocks.Clear();
+                    }
                 }
 
                 pos = worldMousePosition+Constants.player1SpawnLocation;
                 blockIterater += Mouse.GetState().ScrollWheelValue;
                 oldMouseValue = Mouse.GetState().ScrollWheelValue;
                 if (currentPointValue >= 1)
+                {
+                    drawPoint2 = worldMousePosition;
+                }
+                if (currentSquareValue >= 1)
                 {
                     drawPoint2 = worldMousePosition;
                 }
@@ -499,10 +569,25 @@ namespace ProtoDerp
            // {
 
                 //currentPointValue = 0;
+            if (game.blockType!=Game.BlockType.Death && game.blockType != Game.BlockType.Normal)
+            {
+                
+                    currentPointValue = 0;
+                    currentSquareValue = 0;
+                    linedUpBlocks.Clear();
+                
+            }
+
+
             if ((currentPointValue >= 1 && other%everyOther==0) || currentPointValue==2)
             {
                 drawObjectsInLine(drawPoint1, drawPoint2);
             }
+            else if ((currentSquareValue >= 1 && other % everyOther == 0) || currentSquareValue == 2)
+            {
+                drawObjectsInSquare(drawPoint1, drawPoint2);
+            }
+            other++;
             //}
 
         }
@@ -532,7 +617,7 @@ namespace ProtoDerp
                 int xAngle = (int)(Math.Cos(angle) * i);
                 int yAngle = (int)(Math.Sin(angle) * i);
                 Vector2 drawVal = new Vector2(p1.X + xAngle, p1.Y + yAngle);
-                if (currentPointValue == 2 && (game.blockType== Game.BlockType.Death ||game.blockType== Game.BlockType.Normal))
+                if (currentPointValue == 2 && (game.blockType== Game.BlockType.Death ||(game.blockType== Game.BlockType.Normal && game.drawLevel!=0)))
                     addBlockBasedOnMouse(drawVal);
                 else
                 {
@@ -546,8 +631,36 @@ namespace ProtoDerp
                 linedUpBlocks = new SortedSet<Entity>();
             }
             rotation = tempRotation;
+        }
+        public void drawObjectsInSquare(Vector2 p1, Vector2 p2)
+        {
+            linedUpBlocks = new SortedSet<Entity>();
+            Vector2 squareVec = p2 - p1;
+            for (int i = 0; i < Math.Abs(squareVec.X); i=i+(int)blockWidth)
+            {
+                for (int j = 0; j < Math.Abs(squareVec.Y); j+=(int)blockHeight)
+                {
+                    int xPosi = (int)p1.X + i;
+                    if(squareVec.X<0)
+                        xPosi = (int)p1.X - i;
+                    int yPosi = (int)p1.Y + j;
+                    if (squareVec.Y < 0)
+                        yPosi = (int)p1.Y - j;
+                    Vector2 drawVal = new Vector2(xPosi, yPosi);
+                    if (currentSquareValue == 2 && (game.blockType == Game.BlockType.Death || (game.blockType == Game.BlockType.Normal && game.drawLevel != 0)))
+                        addBlockBasedOnMouse(drawVal);
+                    else
+                    {
+                        linedUpBlocks.Add(new Block(game, game.Arena, drawVal, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth, game.drawLevel, rotation));
+                    }
+                }
+            }
 
-
+            if (currentSquareValue == 2)
+            {
+                currentSquareValue = 0;
+                linedUpBlocks = new SortedSet<Entity>();
+            }
 
         }
 
@@ -1082,7 +1195,7 @@ namespace ProtoDerp
                             e.Draw(gameTime, spriteBatch);
                         }
                     
-                    other++;
+                    //other++;
                 //}
                  
             }

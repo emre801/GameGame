@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="130560">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="132096">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>FSvBuP6M6PyqKE/zLlbNggKaJR0=</dsig:DigestValue>
+        <dsig:DigestValue>Z/+TPGO9juEL5ZaIQ6MVyKHrAgU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -609,6 +609,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>iD/ClRYDpgpmP6e90zlx+41/O/w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\groundPat.xnb" size="53435">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>dlTmsTdU9FBzTLpEUAUcJ8nuvEI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\groundTemplate.xnb" size="28859">
@@ -1439,13 +1448,13 @@
       <dsig:DigestValue>6DbW3RLItSLbwI7OvRMtEMPXxB0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level1.txt" size="3421">
+  <file name="Content\World1\Level1.txt" size="3388">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>kwITn/dNwrn6LDPoHyMfZBz3Dkk=</dsig:DigestValue>
+      <dsig:DigestValue>YOmvYm07xoBjYzuBSgnDNFsmv8A=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level10.txt" size="8812">

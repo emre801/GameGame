@@ -256,6 +256,8 @@ namespace ProtoDerp
             sprites.Add("graph", new Sprite(Content, "graph"));
             sprites.Add("grassTemplate", new Sprite(Content, "grassTemplate"));
             blockList.AddLast("grassTemplate");
+            sprites.Add("groundPat", new Sprite(Content, "groundPat"));
+            blockList.AddLast("groundPat");
             sprites.Add("goundBottom", new Sprite(Content, "goundBottom"));
             blockList.AddLast("goundBottom");
             sprites.Add("groundWall", new Sprite(Content, "groundWall"));
