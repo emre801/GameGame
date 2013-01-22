@@ -623,8 +623,14 @@ namespace ProtoDerp
                 linedUpBlocks.Clear();
                 currentPointValue = 0;
                 Vector2 squareVec = p2 - p1;
-                if(game.blockType==Game.BlockType.Normal)
-                    game.addEntity(new Block(game, game.Arena, p1 + new Vector2((int)squareVec.X / 2, (int)squareVec.Y / 2), 1, blockArray[game.spriteBlockCounter], (int)squareVec.Y, (int)squareVec.X, game.drawLevel, (int)rotation));
+                float tempHeight = blockHeight, tempWidth = blockWidth;
+                this.blockHeight = squareVec.Y;
+                this.blockWidth = squareVec.X;
+                addBlockBasedOnMouse(p1 + new Vector2((int)squareVec.X / 2, (int)squareVec.Y / 2));
+                blockHeight = tempHeight;
+                blockWidth = tempWidth;
+                //if(game.blockType==Game.BlockType.Normal)
+                    //game.addEntity(new Block(game, game.Arena, p1 + new Vector2((int)squareVec.X / 2, (int)squareVec.Y / 2), 1, blockArray[game.spriteBlockCounter], (int)squareVec.Y, (int)squareVec.X, game.drawLevel, (int)rotation));
                 
             }
 
