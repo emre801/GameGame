@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="130048">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="130560">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>sKA/I/ZvdUiUdO+wtEohN1IbBP4=</dsig:DigestValue>
+        <dsig:DigestValue>fhxjBrD9Rwz/2/4Djf6P5g1RF0o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1439,22 +1439,22 @@
       <dsig:DigestValue>6DbW3RLItSLbwI7OvRMtEMPXxB0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level1.txt" size="3626">
+  <file name="Content\World1\Level1.txt" size="3421">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>ZqyyWju2hHU6z6veHxHupnous68=</dsig:DigestValue>
+      <dsig:DigestValue>kwITn/dNwrn6LDPoHyMfZBz3Dkk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level10.txt" size="4476">
+  <file name="Content\World1\Level10.txt" size="8812">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>HZE0e+JOGxfhAB6NvB40ypazNt4=</dsig:DigestValue>
+      <dsig:DigestValue>IJSVt4S6vUa5QeOiJD2k9YAgcUg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level11.txt" size="374">

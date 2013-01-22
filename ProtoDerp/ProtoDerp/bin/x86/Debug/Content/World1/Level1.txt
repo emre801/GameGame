@@ -76,12 +76,6 @@
 1474 199 groundWall Block 95 44 2 180
 1474 297 groundWall Block 95 44 2 180
 1474 389 groundWall Block 95 44 2 180
--228 -882 deathSpikes4 DeathBlock 0
--228 -777 deathSpikes4 DeathBlock 0
--228 -657 deathSpikes4 DeathBlock 0
-1079 -857 deathSpikes3 DeathBlock 0
-1077 -745 deathSpikes3 DeathBlock 0
-1079 -620 deathSpikes3 DeathBlock 0
 1018 -1 ahLogo0 GoalBlock 2
 430 -185 GreenHill2 SuperBack 371 466
 1036 -193 GreenHill2 SuperBack 371 466
@@ -91,4 +85,6 @@
 -171 -547 CloudBack SuperBack 310 40
 1051 -602 CloudBack SuperBack 310 40
 Demi -349 1182 -532 795
-BGCOLOR 133 175 232  
+BGCOLOR 133 173 232 
+CAM -1
+CPOS 0 0

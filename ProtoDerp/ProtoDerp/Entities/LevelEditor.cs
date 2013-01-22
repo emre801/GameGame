@@ -128,7 +128,7 @@ namespace ProtoDerp
                 {
                     float rotation = 0;
                     if(words.Length==5)
-                        rotation = (Convert.ToInt32(words[4]));
+                        rotation = System.Convert.ToSingle(words[4]);
                     deathBlocks.AddLast(new DeathBlock(game, game.Arena, new Vector2(x, y), 1, spriteName,rotation));
                 }
                  if (words[3].Equals("MagnetBlock"))

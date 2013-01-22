@@ -57,6 +57,11 @@ namespace ProtoDerp
         ArrayList pathPoints= new ArrayList();
         Vector2 drawPoint1 = Vector2.Zero, drawPoint2=Vector2.Zero;
         int currentPointValue = 0;
+        int everyOther = 10;
+        int other = 0;
+
+        public SortedSet<Entity> linedUpBlocks = new SortedSet<Entity>();
+
         public CreaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber)
             : base(g)
         {
@@ -390,6 +395,10 @@ namespace ProtoDerp
 
 
             }
+            if (currentPointValue >= 1)
+            {
+                drawPoint2 = origPos;
+            }
 
             if (keyInput.IsNewKeyPressed(Keys.I) || (keyInput.IsKeyPressed(Keys.I)&&keyInput.IsKeyPressed(Keys.LeftShift)))
             {
@@ -444,6 +453,10 @@ namespace ProtoDerp
                 pos = worldMousePosition+Constants.player1SpawnLocation;
                 blockIterater += Mouse.GetState().ScrollWheelValue;
                 oldMouseValue = Mouse.GetState().ScrollWheelValue;
+                if (currentPointValue >= 1)
+                {
+                    drawPoint2 = worldMousePosition;
+                }
                 
             }
             else
@@ -459,35 +472,57 @@ namespace ProtoDerp
             game.isSelectingBlock = false;
 
 
-            if (currentPointValue == 2)
-            {
+            //if (currentPointValue == 2)
+           // {
 
-                currentPointValue = 0;
+                //currentPointValue = 0;
+            if ((currentPointValue >= 1 && other%everyOther==0) || currentPointValue==2)
+            {
                 drawObjectsInLine(drawPoint1, drawPoint2);
             }
+            //}
 
         }
         public void drawObjectsInLine(Vector2 p1, Vector2 p2)
         {
             float angle = (float)Math.Atan2(p2.Y - p1.Y, p2.X - p1.X);
-            int blockWidth = game.getSprite(blockArray[game.spriteBlockCounter]).index.Width;
-            float angleDegree = angle / (float)Math.PI * 180f;
-
+            int blockSpacing = (int)this.blockWidth;
+            float angleDegree = angle / (float)Math.PI*180f;
+            linedUpBlocks = new SortedSet<Entity>() ;
+            //angleDegree = Math.Abs(angleDegree);
             if ((angleDegree > 0 && angleDegree <= 90) || (angleDegree > 180 && angleDegree <= 270))
             {
-                blockWidth = game.getSprite(blockArray[game.spriteBlockCounter]).index.Height;
+               // blockWidth = (int)this.blockHeight;
+            }
+            if (blockSpacing < this.blockHeight)
+            {
+                blockSpacing = (int)this.blockHeight;
+                angleDegree += 90;
 
             }
 
             Vector2 lineVec = p2 - p1;
-            for (int i = 0; i < lineVec.Length(); i = i + blockWidth)
+            float tempRotation = rotation;
+            this.rotation += angleDegree;
+            for (int i = 0; i < lineVec.Length(); i = i + blockSpacing)
             {
                 int xAngle = (int)(Math.Cos(angle) * i);
                 int yAngle = (int)(Math.Sin(angle) * i);
                 Vector2 drawVal = new Vector2(p1.X + xAngle, p1.Y + yAngle);
-                addBlockBasedOnMouse(drawVal);
+                if (currentPointValue == 2 && (game.blockType== Game.BlockType.Death ||game.blockType== Game.BlockType.Normal))
+                    addBlockBasedOnMouse(drawVal);
+                else
+                {
+                    linedUpBlocks.Add(new Block(game, game.Arena, drawVal, 1, blockArray[game.spriteBlockCounter], blockHeight, blockWidth, game.drawLevel, rotation));
+                }
 
             }
+            if (currentPointValue == 2)
+            {
+                currentPointValue = 0;
+                linedUpBlocks = new SortedSet<Entity>();
+            }
+            rotation = tempRotation;
 
 
 
@@ -874,6 +909,8 @@ namespace ProtoDerp
             float xturbo = 1;
             if(keyState.IsKeyDown(Keys.LeftShift))
                 xturbo=5;
+            if (keyState.IsKeyDown(Keys.LeftControl))
+                xturbo = xturbo * 10;
             if(keyState.IsKeyDown(Keys.RightShift))
                 turbo=0.5f;
             if (keyState.IsKeyDown(Keys.Up))
@@ -1017,6 +1054,12 @@ namespace ProtoDerp
                                origin, null, new Rectangle((int)pos.X,
                                    (int)pos.Y, (int)blockWidth, (int)blockHeight), true, new Vector2(0, 0));
                     }
+                      foreach (Entity e in linedUpBlocks)
+                        {
+                            e.Draw(gameTime, spriteBatch);
+                        }
+                    
+                    other++;
                 //}
                  
             }
