@@ -112,6 +112,8 @@
 565 -332 groundPat Block 104 128 2 0
 565 -228 groundPat Block 104 128 2 0
 373 -332 blankImage Block 312 512 0 0
+445 -200 derrick.png Block 379 792 0 0
+438 -542 derrick.png Block 54 565 0 0
 1018 -1 ahLogo0 GoalBlock 2
 430 -185 GreenHill2 SuperBack 371 466
 1036 -193 GreenHill2 SuperBack 371 466

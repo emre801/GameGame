@@ -62,6 +62,8 @@ namespace ProtoDerp
         int everyOther = 10;
         int other = 0;
 
+        bool isCapOn = false;
+
         public SortedSet<Entity> linedUpBlocks = new SortedSet<Entity>();
 
         
@@ -577,20 +579,57 @@ namespace ProtoDerp
                     linedUpBlocks.Clear();
                 
             }
-
-
-            if ((currentPointValue >= 1 && other%everyOther==0) || currentPointValue==2)
+            if (keyInput.IsNewKeyPressed(Keys.CapsLock))
             {
-                drawObjectsInLine(drawPoint1, drawPoint2);
+                isCapOn = !isCapOn;
+                currentPointValue = 0;
+                currentSquareValue = 0;
+                linedUpBlocks.Clear();
             }
-            else if ((currentSquareValue >= 1 && other % everyOther*10 == 0) || currentSquareValue == 2)
+
+            if (!isCapOn)
             {
-                drawObjectsInSquare(drawPoint1, drawPoint2);
+                if ((currentPointValue >= 1 && other % everyOther == 0) || currentPointValue == 2)
+                {
+                    drawObjectsInLine(drawPoint1, drawPoint2);
+                }
+                else if ((currentSquareValue >= 1 && other % everyOther * 10 == 0) || currentSquareValue == 2)
+                {
+                    drawObjectsInSquare(drawPoint1, drawPoint2);
+                }
+                other++;
             }
-            other++;
+            else
+            {
+                dragAndDrawObjects(drawPoint1, drawPoint2);
+
+            }
             //}
 
         }
+        public void dragAndDrawObjects(Vector2 p1, Vector2 p2)
+        {
+            if (currentPointValue == 1)
+            {
+                linedUpBlocks.Clear();
+                Vector2 squareVec = p2 - p1;
+                if(squareVec.X>0 && squareVec.Y>0)
+                    linedUpBlocks.Add(new Block(game, game.Arena, p1 + new Vector2((int)squareVec.X / 2, (int)squareVec.Y / 2), 1, blockArray[game.spriteBlockCounter], (int)squareVec.Y, (int)squareVec.X, game.drawLevel, (int)rotation));
+                
+
+            }
+            else if (currentPointValue == 2)
+            {
+                linedUpBlocks.Clear();
+                currentPointValue = 0;
+                Vector2 squareVec = p2 - p1;
+                if(game.blockType==Game.BlockType.Normal)
+                    game.addEntity(new Block(game, game.Arena, p1 + new Vector2((int)squareVec.X / 2, (int)squareVec.Y / 2), 1, blockArray[game.spriteBlockCounter], (int)squareVec.Y, (int)squareVec.X, game.drawLevel, (int)rotation));
+                
+            }
+
+        }
+
         public void drawObjectsInLine(Vector2 p1, Vector2 p2)
         {
             float angle = (float)Math.Atan2(p2.Y - p1.Y, p2.X - p1.X);
