@@ -65,4 +65,11 @@
 1044 -2456 deathSpikes3 DeathBlock 0
 1044 -2575 deathSpikes3 DeathBlock 0
 950 -1900 ahLogo0 GoalBlock 10
+36 -300 GreenHill SuperBack 650 575
+561 -320 GreenHill SuperBack 650 575
+-1771 -322 GreenHill SuperBack 650 575
+1838 -273 GreenHill SuperBack 650 575
 Demi -100 1088 -1770 578
+BGCOLOR 133 174 232 
+CAM -1
+CPOS 202.8936 684.5406

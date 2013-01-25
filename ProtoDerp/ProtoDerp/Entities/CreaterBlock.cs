@@ -571,7 +571,7 @@ namespace ProtoDerp
            // {
 
                 //currentPointValue = 0;
-            if (game.blockType!=Game.BlockType.Death && game.blockType != Game.BlockType.Normal)
+            if (game.blockType != Game.BlockType.Death && game.blockType != Game.BlockType.Normal || Mouse.GetState().RightButton == ButtonState.Pressed)
             {
                 
                     currentPointValue = 0;
@@ -579,7 +579,7 @@ namespace ProtoDerp
                     linedUpBlocks.Clear();
                 
             }
-            if (keyInput.IsNewKeyPressed(Keys.Tab))
+            if (keyInput.IsNewKeyPressed(Keys.CapsLock))
             {
                 isCapOn = !isCapOn;
                 currentPointValue = 0;
@@ -1247,12 +1247,16 @@ namespace ProtoDerp
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            
             //game.toBeAdded.Clear();
             if (!game.inDeleteMode)
             {
                 //spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);
                 //if (mouseInSelectMode)
                 //{
+                if (currentPointValue == 0 && currentSquareValue == 0 && keyInput.keyboardState.IsKeyUp(Keys.LeftShift))
+                {
+
                     if (ani.getStateCount() == 1)
                     {
                         spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, rotation * (float)Math.PI / 180f, origin, SpriteEffects.None, 0f);
@@ -1263,6 +1267,7 @@ namespace ProtoDerp
                                origin, null, new Rectangle((int)pos.X,
                                    (int)pos.Y, (int)blockWidth, (int)blockHeight), true, new Vector2(0, 0));
                     }
+                }
                       foreach (Entity e in linedUpBlocks)
                         {
                             e.Draw(gameTime, spriteBatch);
@@ -1285,6 +1290,8 @@ namespace ProtoDerp
 
         public void DrawText(SpriteBatch spriteBatch, float x, float y, String text)
         {
+            
+
             String[] tempstrMulti = text.Split("|".ToCharArray());
             SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
             PlayableCharacter p1 = game.Arena.player1;

@@ -88,6 +88,55 @@
 -528 -695 groundWall Block 65 24 2 180
 -528 -772 groundWall Block 65 24 2 180
 -528 -812 groundWall Block 65 24 2 180
+-587 -785 groundWall Block 115 54 2 0
+-585 -787 groundWall Block 115 54 2 359
+-585 -673 groundWall Block 115 54 2 359
+-584 -558 groundWall Block 115 54 2 359
+-584 -443 groundWall Block 115 54 2 359
+-583 -328 groundWall Block 115 54 2 359
+-583 -213 groundWall Block 115 54 2 359
+-582 -98 groundWall Block 115 54 2 359
+-581 16 groundWall Block 115 54 2 359
+-581 131 groundWall Block 115 54 2 359
+-580 246 groundWall Block 115 54 2 359
+-580 361 groundWall Block 115 54 2 359
+-579 476 groundWall Block 115 54 2 359
+-578 591 groundWall Block 115 54 2 359
+-578 706 groundWall Block 115 54 2 359
+-577 821 groundWall Block 115 54 2 359
+-577 936 groundWall Block 115 54 2 359
+-538 985 groundWall Block 115 54 2 269
+-451 985 groundWall Block 115 54 2 269
+-336 984 groundWall Block 115 54 2 269
+-221 983 groundWall Block 115 54 2 269
+-106 982 groundWall Block 115 54 2 269
+8 982 groundWall Block 115 54 2 269
+123 981 groundWall Block 115 54 2 269
+238 980 groundWall Block 115 54 2 269
+353 979 groundWall Block 115 54 2 269
+468 978 groundWall Block 115 54 2 269
+583 978 groundWall Block 115 54 2 269
+698 977 groundWall Block 115 54 2 269
+813 976 groundWall Block 115 54 2 269
+928 975 groundWall Block 115 54 2 269
+1043 975 groundWall Block 115 54 2 269
+1158 974 groundWall Block 115 54 2 269
+1230 938 groundWall Block 115 54 2 180
+1230 863 groundWall Block 115 54 2 180
+1231 748 groundWall Block 115 54 2 180
+1231 633 groundWall Block 115 54 2 180
+1232 518 groundWall Block 115 54 2 180
+1232 403 groundWall Block 115 54 2 180
+1233 288 groundWall Block 115 54 2 180
+1233 173 groundWall Block 115 54 2 180
+1234 58 groundWall Block 115 54 2 180
+1234 -56 groundWall Block 115 54 2 180
+1235 -171 groundWall Block 115 54 2 180
+1235 -286 groundWall Block 115 54 2 180
+1236 -401 groundWall Block 115 54 2 180
+1236 -516 groundWall Block 115 54 2 180
+1237 -631 groundWall Block 115 54 2 180
+1237 -781 groundWall Block 115 54 2 180
 228 -316 deathSpikes3 DeathBlock 0
 235 -189 deathSpikes3 DeathBlock 0
 -501 -231 deathSpikes4 DeathBlock 0
@@ -117,3 +166,6 @@
 1004 345 bigBlock MagnetBlock 0 -18 945 135
 387 -12 ahLogo0 GoalBlock 14
 Demi -617 1270 76 1532
+BGCOLOR 133 174 232 
+CAM -1
+CPOS 400 360

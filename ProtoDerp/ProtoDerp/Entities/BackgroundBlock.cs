@@ -41,7 +41,7 @@ namespace ProtoDerp
 
             if (game.moveBackGround.X != 0)
             {
-                pos += new Vector2(game.moveBackGround.X / 5000, game.moveBackGround.Y / 5000);
+                pos += new Vector2(game.moveBackGround.X / 15, game.moveBackGround.Y / 15);
             }
             Color color = Color.White;
             if (isSelected)

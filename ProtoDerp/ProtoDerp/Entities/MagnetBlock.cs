@@ -82,12 +82,13 @@ namespace ProtoDerp
                     player.body.ApplyLinearImpulse(magnetPulse);
                     if (!isInMagnet)
                     {
-                        
+                        /*
                         if(magnetPulse.X!=0)
                             player.body.LinearVelocity = new Vector2(0, body.LinearVelocity.Y);
                         else
                             player.body.LinearVelocity = new Vector2(body.LinearVelocity.X, 0);
                         isInMagnet = true;
+                         * */
                          
                     }
                     //player.body.IgnoreGravity = true;

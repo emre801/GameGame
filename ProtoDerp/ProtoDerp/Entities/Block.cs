@@ -281,8 +281,8 @@ namespace ProtoDerp
 
             if (drawLevel == 1)
             {
-                //if(game.moveBackGround.X!=0)
-                    //body.Position += new Vector2(game.moveBackGround.X / 100000f, game.moveBackGround.Y / 300000f);
+                if(game.moveBackGround.X!=0)
+                    body.Position += new Vector2(game.moveBackGround.X / 100000f, game.moveBackGround.Y / 300000f);
             }
         }
 

@@ -111,7 +111,7 @@ namespace ProtoDerp
                     float rotation = 0;
                     if(words.Length==8)
                         rotation =(Convert.ToInt32(words[7]));
-                    Block toBeAdded = new Block(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4]), Convert.ToInt32(words[5]), Convert.ToInt32(words[6]),rotation);
+                    Block toBeAdded = new Block(game, game.Arena, new Vector2(x, y), 1, spriteName, System.Convert.ToSingle(words[4]), System.Convert.ToSingle(words[5]), Convert.ToInt32(words[6]), rotation);
                     if (words.Length >= 8)
                     {
                         //toBeAdded.setdisAppearTimer(Convert.ToInt32(words[7]));
