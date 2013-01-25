@@ -1,6 +1,9 @@
 423 158 bigBlock Block 200 1750 0 0
 1198 -346 bigBlock Block 1200 200 0 0
 -351 -346 bigBlock Block 1200 200 0 0
+481 -234 skyScrapper Block 581 202 1 0
+74 -243 skyScrapper Block 581 202 1 0
+1007 -236 skyScrapper Block 581 202 1 0
 430 350 bigBlock Block 220 1765 2 0
 -545 -190 bigBlock Block 1510 200 2 0
 1380 -190 bigBlock Block 1510 200 2 0
@@ -76,7 +79,6 @@
 1474 297 groundWall Block 95 44 2 180
 1474 389 groundWall Block 95 44 2 180
 -505 100 groundTemplate Block 28 256 2 0
-373 -332 blankImage Block 312 512 0 0
 1018 -1 ahLogo0 GoalBlock 2
 430 -185 GreenHill2 SuperBack 371 466
 1036 -193 GreenHill2 SuperBack 371 466
@@ -85,6 +87,10 @@
 72 -384 CloudBack SuperBack 310 40
 -171 -547 CloudBack SuperBack 310 40
 1051 -602 CloudBack SuperBack 310 40
+218 -176 skyScrapper SuperBack 172 461
+612 -230 skyScrapper SuperBack 172 461
+936 -165 skyScrapper SuperBack 172 461
+-141 -156 skyScrapper SuperBack 172 461
 Demi -349 1182 -532 795
 BGCOLOR 133 168 232 
 CAM 0.55

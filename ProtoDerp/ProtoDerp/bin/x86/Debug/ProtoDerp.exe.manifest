@@ -112,7 +112,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vukZ+eqwtbwXFjgMARNyNkpXO/U=</dsig:DigestValue>
+        <dsig:DigestValue>CHl3G9dphNx65noqlHx50AaU8mg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1286,6 +1286,15 @@
       <dsig:DigestValue>K78uxl8w7hRoVr3+aF3VLFNr6u4=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Content\skyScrapper.xnb" size="1105035">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>tojBTK8VTga/qiMTHlrIe7/ocFs=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Content\Space.xnb" size="10187">
     <hash>
       <dsig:Transforms>
@@ -1457,13 +1466,13 @@
       <dsig:DigestValue>6DbW3RLItSLbwI7OvRMtEMPXxB0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level1.txt" size="3469">
+  <file name="Content\World1\Level1.txt" size="3711">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>EJKaTNWLmPu2MaJjiV4xjy891fM=</dsig:DigestValue>
+      <dsig:DigestValue>FNZkn+4ggrtOFtl+D74Uz9WyMls=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level10.txt" size="8812">

@@ -579,7 +579,7 @@ namespace ProtoDerp
                     linedUpBlocks.Clear();
                 
             }
-            if (keyInput.IsNewKeyPressed(Keys.CapsLock))
+            if (keyInput.IsNewKeyPressed(Keys.Tab))
             {
                 isCapOn = !isCapOn;
                 currentPointValue = 0;
@@ -601,7 +601,14 @@ namespace ProtoDerp
             }
             else
             {
-                dragAndDrawObjects(drawPoint1, drawPoint2);
+                if (game.blockType == Game.BlockType.Normal || game.blockType == Game.BlockType.Death)
+                    dragAndDrawObjects(drawPoint1, drawPoint2);
+                else
+                {
+                    currentPointValue = 0;
+                    currentSquareValue = 0;
+                    linedUpBlocks.Clear();
+                }
 
             }
             //}
@@ -613,7 +620,7 @@ namespace ProtoDerp
             {
                 linedUpBlocks.Clear();
                 Vector2 squareVec = p2 - p1;
-                if(squareVec.X>0 && squareVec.Y>0)
+                if(squareVec.X>2 && squareVec.Y>2)
                     linedUpBlocks.Add(new Block(game, game.Arena, p1 + new Vector2((int)squareVec.X / 2, (int)squareVec.Y / 2), 1, blockArray[game.spriteBlockCounter], (int)squareVec.Y, (int)squareVec.X, game.drawLevel, (int)rotation));
                 
 
@@ -626,7 +633,8 @@ namespace ProtoDerp
                 float tempHeight = blockHeight, tempWidth = blockWidth;
                 this.blockHeight = squareVec.Y;
                 this.blockWidth = squareVec.X;
-                addBlockBasedOnMouse(p1 + new Vector2((int)squareVec.X / 2, (int)squareVec.Y / 2));
+                if (squareVec.X > 2 && squareVec.Y > 2)
+                    addBlockBasedOnMouse(p1 + new Vector2((int)squareVec.X / 2, (int)squareVec.Y / 2));
                 blockHeight = tempHeight;
                 blockWidth = tempWidth;
                 //if(game.blockType==Game.BlockType.Normal)
