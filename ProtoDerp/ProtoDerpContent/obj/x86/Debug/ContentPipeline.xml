@@ -1204,6 +1204,16 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\skyScrapper.xnb</Output>
       <Time>2013-01-24T01:44:34.1255492-05:00</Time>
     </Item>
+    <Item>
+      <Source>Music\Melt Yourself.mp3</Source>
+      <Name>Music\Melt Yourself</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Melt Yourself.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Melt Yourself.wma</Extra>
+      <Time>2013-01-26T23:27:33.4072146-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

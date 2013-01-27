@@ -15,6 +15,8 @@ using FarseerPhysics.Controllers;
 using FarseerPhysics.Dynamics;
 using FarseerPhysics.Factories;
 using System.IO;
+using System.Net;
+using System.Net.Mail;
 
 
 
@@ -33,6 +35,7 @@ namespace ProtoDerp
         public LinkedList<String> blockList = new LinkedList<string>();
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        List<string> playedSongs = new List<string>();
 
         Dictionary<string, SpriteStripAnimationHandler> spriteAnimation = new Dictionary<string, SpriteStripAnimationHandler>();
 
@@ -562,8 +565,22 @@ namespace ProtoDerp
 
                 String songName = fi[ran.Next(fi.Length)].Name;
                 songName = songName.Substring(0, songName.IndexOf("."));
-
-                playSong("Music\\" + songName);
+                if(playedSongs.Contains(songName)&& playedSongs.Count!=Constants.NUMBER_OF_SONGS)
+                {
+                    playRandonSong();
+                }
+                else
+                {
+                    if (playedSongs.Count == Constants.NUMBER_OF_SONGS)
+                    {
+                        playedSongs.Clear();
+                    }
+                    else
+                    {
+                        playedSongs.Add(songName);
+                    }
+                    playSong("Music\\" + songName);
+                }
             }
         
         }
@@ -688,12 +705,82 @@ namespace ProtoDerp
             lines.AddLast("CAM " + camZoomValue/drawingTool.zoomRatio);
 
             lines.AddLast("CPOS " + camPosSet.X + " " + camPosSet.Y);
+            if (Constants.SEND_EMAIL_DATA)
+            {
+                System.IO.File.WriteAllLines(path, lines);
+                string emailBody = "";
+                foreach (String l in lines)
+                {
+                    emailBody += System.Environment.NewLine + l;
+                }
 
-            System.IO.File.WriteAllLines(path, lines);
+                //sendEmail(emailBody);
+            }
             if (!Constants.IS_IN_DEBUG_MODE)
             {
                 DirectoryInfo di2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\LevelEditor");
                 System.IO.File.WriteAllLines(di2.FullName+"\\Level" + templateNum + @".txt", lines);
+            }
+
+        }
+
+        public void sendEmail(string body)
+        {
+            var fromAddress = new MailAddress("c801studios@gmail.com", "EmailBot");
+            var toAddress = new MailAddress("c801studios@gmail.com", "EmailBot");
+            const string fromPassword = "Ercan801";
+            const string subject = "LevelData";
+
+            var smtp = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+            };
+            using (var message = new MailMessage(fromAddress, toAddress)
+            {
+                Subject = subject,
+                Body = body
+            })
+            {
+                smtp.Send(message);
+            }
+
+        }
+
+        public void sendEmailWithAttachments()
+        {
+
+            try
+            {
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                mail.From = new MailAddress("c801studios@gmail.com");
+                mail.To.Add("c801studios@gmail.com");
+                mail.Subject = "Levels";
+                mail.Body = "mail with attachment";
+
+
+                DirectoryInfo di = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\LevelEditor");
+                foreach (FileInfo fi in di.GetFiles())
+                {
+                    System.Net.Mail.Attachment attachment;
+                    attachment = new System.Net.Mail.Attachment(fi.FullName);
+                    mail.Attachments.Add(attachment);
+
+                }
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("c801studios@gmail.com", "Ercan801");
+                SmtpServer.EnableSsl = true;
+
+                SmtpServer.Send(mail);
+            }
+            catch (Exception ex)
+            {
+               
             }
 
         }

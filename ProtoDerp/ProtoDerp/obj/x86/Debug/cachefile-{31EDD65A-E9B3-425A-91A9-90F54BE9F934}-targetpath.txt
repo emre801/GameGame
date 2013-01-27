@@ -145,6 +145,8 @@ Content\graph.xnb
 Content\groundPat.xnb
 Content\blankImage.xnb
 Content\skyScrapper.xnb
+Content\Music\Melt Yourself.xnb
+Content\Music\Melt Yourself.wma
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

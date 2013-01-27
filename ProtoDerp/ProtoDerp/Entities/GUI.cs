@@ -71,7 +71,10 @@ namespace ProtoDerp
             curRightMove = curWidth;
             curLeftMove2 = 0;
             curRightMove2 = curWidth/2f;
-            
+            if (Constants.FULLSCREEN)
+            {
+                transitionRate *= 2;
+            }
 
         }
 
@@ -291,6 +294,10 @@ namespace ProtoDerp
             DrawText(spriteBatch, position, currentPos += increment, "1,2 Rotate Block");
             DrawText(spriteBatch, position, currentPos += increment, "6 set cameraPosition");
             DrawText(spriteBatch, position, currentPos += increment, "G turn on and off buttons");
+            if (Constants.SEND_EMAIL_DATA)
+            {
+                DrawText(spriteBatch, position, currentPos += increment, "X to email data");
+            }
         }
 
         public void DrawMouseCameraValue(GameTime gameTime, SpriteBatch spriteBatch)

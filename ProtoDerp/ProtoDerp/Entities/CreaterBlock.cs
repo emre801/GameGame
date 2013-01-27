@@ -126,6 +126,13 @@ namespace ProtoDerp
                 if (game.backGroundNum > 3)
                     game.backGroundNum = 0;
             }
+            if (keyInput.IsNewKeyPressed(Keys.X))
+            {
+                if (Constants.SEND_EMAIL_DATA)
+                {
+                    game.sendEmailWithAttachments();
+                }
+            }
             if (game.backGroundNum != 0)
             {
                 changeBackgroundColor();

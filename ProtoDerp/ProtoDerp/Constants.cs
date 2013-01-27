@@ -19,6 +19,8 @@ namespace ProtoDerp
 
         public const bool ENABLE_CREATIVE_MODE = true; //set this to false if you want to give access to creative mode
 
+        public const bool SEND_EMAIL_DATA = true;
+        
         public const double GAMEWORLD_ASPECT_RATIO = 4f / 3f; // Width of game world / height of game world
 
         // The size of the screen in pixels
@@ -29,6 +31,7 @@ namespace ProtoDerp
         public const float GAME_WORLD_WIDTH = 800f;  // Changing this constant will require changing lots of other constants, unless we cahnge them to be relative to this
         public const float GAME_WORLD_HEIGHT = (float)(GAME_WORLD_WIDTH / GAMEWORLD_ASPECT_RATIO);
 
+        public const int NUMBER_OF_SONGS = 8;
 
         public const int TEMPLATE_COUNT = 8;
 
