@@ -1030,7 +1030,8 @@ namespace ProtoDerp
 
             try
             {
-                
+                if (Constants.IS_IN_REALSE_MODE)
+                    return;
                 DirectoryInfo di = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\UploadedImages");
                 FileInfo[] fi = di.GetFiles("*", SearchOption.AllDirectories);
                 GraphicsDevice gd = drawingTool.getGraphicsDevice();

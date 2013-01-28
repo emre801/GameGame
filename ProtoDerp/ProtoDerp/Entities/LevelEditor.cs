@@ -363,13 +363,15 @@ namespace ProtoDerp
                         int i = 0;
                     }
                 }
-                
-                DirectoryInfo di2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\DebugInfo");
-                String name = di2.FullName + @"\DebugInfo.txt";
-                LinkedList<String> lines = new LinkedList<String>();
-                lines.AddLast(di.FullName);
-                fullLocation = di.FullName;
-                System.IO.File.WriteAllLines(name, lines);
+                if (!Constants.IS_IN_REALSE_MODE)
+                {
+                    DirectoryInfo di2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\DebugInfo");
+                    String name = di2.FullName + @"\DebugInfo.txt";
+                    LinkedList<String> lines = new LinkedList<String>();
+                    lines.AddLast(di.FullName);
+                    fullLocation = di.FullName;
+                    System.IO.File.WriteAllLines(name, lines);
+                }
                 
             }
         }

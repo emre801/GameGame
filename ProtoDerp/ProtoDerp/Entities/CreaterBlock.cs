@@ -1261,7 +1261,7 @@ namespace ProtoDerp
                 //spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);
                 //if (mouseInSelectMode)
                 //{
-                if (currentPointValue == 0 && currentSquareValue == 0 && keyInput.keyboardState.IsKeyUp(Keys.LeftShift))
+                if (currentPointValue == 0 && currentSquareValue == 0 && keyInput.keyboardState.IsKeyUp(Keys.LeftShift) || keyInput.keyboardState.IsKeyDown(Keys.D3))
                 {
 
                     if (ani.getStateCount() == 1)
