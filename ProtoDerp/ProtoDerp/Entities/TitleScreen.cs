@@ -191,6 +191,7 @@ namespace ProtoDerp
                 if ((this.player1.IsUpPressed() || keyInput.IsNewKeyPressed(Keys.Up)) && alpha >= 1)
                 {
                     //game.getSound("Audio\\Waves\\menuNavigate").Play();
+                    
                     game.sounds["Rage//Wave//menu"].Play();
                     select -= 1;
                     if (select < 0)
@@ -218,7 +219,8 @@ namespace ProtoDerp
                 else if ((this.player1.IsSelectPressed() || keyInput.IsNewKeyPressed(Keys.Enter)) && alpha >= 1)
                 {
                     //game.getSound("Audio\\Waves\\menuSelect").Play();
-                    game.sounds["Rage//Wave//Opening"].Play();
+                    if (Constants.DO_FADE_OUT)
+                        game.sounds["Rage//Wave//Opening"].Play();
                     if (select == 0) //Start Game
                         decreaseAlpha = 0;
                     else if (select == 1) //Battle Options
@@ -245,8 +247,12 @@ namespace ProtoDerp
                 if (decreaseAlpha != -1)
                 {
                     alpha -= Constants.TITLE_FADEOUT_SPEED*.22f;
+                    if (!Constants.DO_FADE_OUT)
+                    {
+                        alpha = 0;
+                    }
                     game.fadeAlpha = alpha;
-
+                    
                     if (decreaseAlpha == 1)
                     {
                        // battleOptions.alpha = 1 - alpha;

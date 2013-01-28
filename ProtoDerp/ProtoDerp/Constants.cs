@@ -9,7 +9,7 @@ namespace ProtoDerp
 {
     class Constants
     {
-        public const int WRITE_LEVEL = 1;
+        public const int WRITE_LEVEL = 12;
         public const int MAX_WRITE_LEVEL = 29;
         public const int READ_LEVEL = 2;
 
@@ -25,6 +25,7 @@ namespace ProtoDerp
         
         public const double GAMEWORLD_ASPECT_RATIO = 4f / 3f; // Width of game world / height of game world
 
+        public const bool DO_FADE_OUT = false;
         // The size of the screen in pixels
         public const int DESIRED_GAME_RESOLUTION_WIDTH = 800;
         public const int DESIRED_GAME_RESOLUTION_HEIGHT = (int)(DESIRED_GAME_RESOLUTION_WIDTH / GAMEWORLD_ASPECT_RATIO);
@@ -39,7 +40,7 @@ namespace ProtoDerp
 
         public const int TOTALNUMBEROFMAPS = 4;
 
-        public const bool FULLSCREEN = false;
+        public const bool FULLSCREEN = true;
 
         public const bool OVERRIDE_FULLSCREEN_RES = false; // If this is true, we will attempt to override the system's default fullscreen resolution.  Not recommended
 

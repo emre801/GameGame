@@ -1,44 +1,183 @@
-70 90 bigBlock Block 45 1000 0
-1635 380 bigBlock Block 45 295 0
-1065 365 bigBlock Block 45 295 0
-2634 42 bigBlock Block 45 295 0
-1814 128 bigBlock Block 45 1795 0
--74 -680 bigBlock Block 1565 15 0
-2785 -620 bigBlock Block 1565 15 0
-1222 -77 BigBackGround Block 2440 3470 1
--348 -794 bigBlock Block 4550 535 0
-3051 285 bigBlock Block 4550 535 0
-854 919 bigBlock Block 1615 2085 0
-2042 919 bigBlock Block 1615 2085 0
-91919 92722 bigBlock Block 1615 2085 0
--1280 768 bigBlock Block 1615 2085 0
--1205 -474 bigBlock Block 1615 2085 0
-3905 608 bigBlock Block 2470 1220 0
-3900 -123 bigBlock Block 2470 1220 0
-3925 -780 bigBlock Block 2470 1220 0
-4528 707 bigBlock Block 2470 1220 0
-3851 761 bigBlock Block 2470 1220 0
-4464 -780 bigBlock Block 2470 1220 0
-991 87 deathSpikes DeathBlock
-1124 84 deathSpikes DeathBlock
-1251 84 deathSpikes DeathBlock
-1379 85 deathSpikes DeathBlock
-1505 85 deathSpikes DeathBlock
-1631 85 deathSpikes DeathBlock
-1757 85 deathSpikes DeathBlock
-1882 85 deathSpikes DeathBlock
-2011 85 deathSpikes DeathBlock
-2136 85 deathSpikes DeathBlock
-2259 84 deathSpikes DeathBlock
-2384 84 deathSpikes DeathBlock
-2511 84 deathSpikes DeathBlock
--46 -126 deathSpikes4 DeathBlock
--46 -254 deathSpikes4 DeathBlock
--47 -374 deathSpikes4 DeathBlock
--46 -500 deathSpikes4 DeathBlock
--46 -625 deathSpikes4 DeathBlock
-630 91 deathSpikes DeathBlock
-739 90 deathSpikes DeathBlock
-865 90 deathSpikes DeathBlock
-2640 -25 ahLogo0 GoalBlock 13
-Demi -100 2797 -129 660
+827 203 bigBlock Block 183.6364 1761.818 0 0
+1585 -940 bigBlock Block 2260.212 251.891 0 0
+721 -1083 bigBlock Block 1947.05 238.2754 0 0
+1160 -2029 bigBlock Block 1115 190 0 90
+1353 57 magnet1 Block 87 92 2 360
+913 -812 magnet1 Block 87 92 2 360
+1389 -1255 magnet1 Block 87 92 2 360
+1110 1309 bigBlock Block 2302.582 6480.74 0 0
+-102 -111 GreenHill Block 875 1150 1 0
+-1199 -35 GreenHill Block 875 1150 1 0
+1021 -111 GreenHill Block 980 1150 1 0
+2145 83 GreenHill Block 980 1150 1 0
+3216 -35 GreenHill Block 980 1150 1 0
+4232 -8 GreenHill Block 980 1150 1 0
+-210 -1078 CloudBack Block 135 1145 2 0
+2345 -878 CloudBack Block 135 1145 2 0
+2383 -1932 CloudBack Block 135 1145 2 0
+210 -2084 CloudBack Block 135 1145 2 0
+1398 115 grassTemplate Block 35 256 2 0
+74 115 grassTemplate Block 35 256 2 0
+330 115 grassTemplate Block 35 256 2 0
+586 115 grassTemplate Block 35 256 2 0
+842 115 grassTemplate Block 35 256 2 0
+1098 115 grassTemplate Block 35 256 2 0
+1354 115 grassTemplate Block 35 256 2 0
+646 -110 goundBottom Block 65 80 2 0
+722 -112 goundBottom Block 65 80 2 0
+793 -112 goundBottom Block 65 80 2 0
+880 -1903 goundBottom Block 65 80 2 0
+956 -1903 goundBottom Block 65 80 2 0
+1031 -1904 goundBottom Block 65 80 2 0
+1110 -1904 goundBottom Block 65 80 2 0
+1190 -1903 goundBottom Block 65 80 2 0
+1270 -1903 goundBottom Block 65 80 2 0
+1350 -1902 goundBottom Block 65 80 2 0
+1430 -1902 goundBottom Block 65 80 2 0
+614 -2002 groundWall Block 110 39 2 359
+614 -1893 groundWall Block 110 39 2 359
+614 -1783 groundWall Block 110 39 2 359
+614 -1673 groundWall Block 110 39 2 359
+614 -1563 groundWall Block 110 39 2 359
+614 -1453 groundWall Block 110 39 2 359
+614 -1343 groundWall Block 110 39 2 359
+614 -1233 groundWall Block 110 39 2 359
+614 -1123 groundWall Block 110 39 2 359
+614 -1013 groundWall Block 110 39 2 359
+614 -903 groundWall Block 110 39 2 359
+614 -793 groundWall Block 110 39 2 359
+615 -683 groundWall Block 110 39 2 359
+615 -573 groundWall Block 110 39 2 359
+615 -463 groundWall Block 110 39 2 359
+615 -353 groundWall Block 110 39 2 359
+615 -243 groundWall Block 110 39 2 359
+1702 -2069 groundWall Block 110 39 2 540
+1702 -1960 groundWall Block 110 39 2 540
+1702 -1850 groundWall Block 110 39 2 540
+1702 -1740 groundWall Block 110 39 2 540
+1702 -1630 groundWall Block 110 39 2 540
+1702 -1520 groundWall Block 110 39 2 540
+1702 -1410 groundWall Block 110 39 2 540
+1702 -1300 groundWall Block 110 39 2 540
+1702 -1190 groundWall Block 110 39 2 540
+1702 -1080 groundWall Block 110 39 2 540
+1702 -970 groundWall Block 110 39 2 540
+1702 -860 groundWall Block 110 39 2 540
+1702 -750 groundWall Block 110 39 2 540
+1702 -640 groundWall Block 110 39 2 540
+1702 -530 groundWall Block 110 39 2 540
+1702 -420 groundWall Block 110 39 2 540
+1702 -310 groundWall Block 110 39 2 540
+1702 -200 groundWall Block 110 39 2 540
+1702 -90 groundWall Block 110 39 2 540
+1702 19 groundWall Block 110 39 2 540
+1702 129 groundWall Block 110 39 2 540
+830 -1846 groundWall Block 110 39 2 900
+830 -1737 groundWall Block 110 39 2 900
+830 -1627 groundWall Block 110 39 2 900
+830 -1517 groundWall Block 110 39 2 900
+830 -1407 groundWall Block 110 39 2 900
+830 -1297 groundWall Block 110 39 2 900
+830 -1187 groundWall Block 110 39 2 900
+830 -1077 groundWall Block 110 39 2 900
+830 -967 groundWall Block 110 39 2 900
+830 -857 groundWall Block 110 39 2 900
+829 -747 groundWall Block 110 39 2 900
+829 -637 groundWall Block 110 39 2 900
+829 -527 groundWall Block 110 39 2 900
+829 -417 groundWall Block 110 39 2 900
+829 -307 groundWall Block 110 39 2 900
+829 -197 groundWall Block 110 39 2 900
+1462 -1839 groundWall Block 110 39 2 1079
+1462 -1730 groundWall Block 110 39 2 1079
+1463 -1620 groundWall Block 110 39 2 1079
+1463 -1510 groundWall Block 110 39 2 1079
+1464 -1400 groundWall Block 110 39 2 1079
+1464 -1290 groundWall Block 110 39 2 1079
+1465 -1180 groundWall Block 110 39 2 1079
+1465 -1070 groundWall Block 110 39 2 1079
+1466 -960 groundWall Block 110 39 2 1079
+1466 -850 groundWall Block 110 39 2 1079
+1467 -740 groundWall Block 110 39 2 1079
+1467 -630 groundWall Block 110 39 2 1079
+1468 -520 groundWall Block 110 39 2 1079
+1468 -410 groundWall Block 110 39 2 1079
+1469 -300 groundWall Block 110 39 2 1079
+1470 -190 groundWall Block 110 39 2 1079
+1470 -80 groundWall Block 110 39 2 1079
+1471 29 groundWall Block 110 39 2 1079
+581 -171 deathSpikes DeathBlock 270
+581 -302 deathSpikes DeathBlock 270
+580 -2106 deathSpikes DeathBlock 360
+580 -431 deathSpikes DeathBlock 270
+580 -556 deathSpikes DeathBlock 270
+580 -682 deathSpikes DeathBlock 270
+580 -808 deathSpikes DeathBlock 270
+580 -934 deathSpikes DeathBlock 270
+580 -1060 deathSpikes DeathBlock 270
+580 -1186 deathSpikes DeathBlock 270
+580 -1312 deathSpikes DeathBlock 270
+580 -1438 deathSpikes DeathBlock 270
+580 -1564 deathSpikes DeathBlock 270
+580 -1690 deathSpikes DeathBlock 270
+580 -1816 deathSpikes DeathBlock 270
+580 -1942 deathSpikes DeathBlock 270
+580 -2068 deathSpikes DeathBlock 270
+902 -1503 deathSpikes DeathBlock 540
+993 -1503 deathSpikes DeathBlock 540
+1402 -1843 deathSpikes DeathBlock 540
+1310 -1845 deathSpikes DeathBlock 540
+1396 -1127 deathSpikes DeathBlock 540
+1285 -1127 deathSpikes DeathBlock 540
+-2061 141 deathSpikes DeathBlock 0
+-1936 141 deathSpikes DeathBlock 0
+-1810 141 deathSpikes DeathBlock 0
+-1684 142 deathSpikes DeathBlock 0
+-1558 142 deathSpikes DeathBlock 0
+-1432 142 deathSpikes DeathBlock 0
+-1306 143 deathSpikes DeathBlock 0
+-1180 143 deathSpikes DeathBlock 0
+-1054 144 deathSpikes DeathBlock 0
+-928 144 deathSpikes DeathBlock 0
+-802 144 deathSpikes DeathBlock 0
+-676 145 deathSpikes DeathBlock 0
+-550 145 deathSpikes DeathBlock 0
+-424 145 deathSpikes DeathBlock 0
+-298 146 deathSpikes DeathBlock 0
+-172 146 deathSpikes DeathBlock 0
+1771 146 deathSpikes DeathBlock 0
+1896 146 deathSpikes DeathBlock 0
+2022 146 deathSpikes DeathBlock 0
+2148 146 deathSpikes DeathBlock 0
+2274 146 deathSpikes DeathBlock 0
+2400 146 deathSpikes DeathBlock 0
+2526 146 deathSpikes DeathBlock 0
+2652 146 deathSpikes DeathBlock 0
+2778 146 deathSpikes DeathBlock 0
+2904 145 deathSpikes DeathBlock 0
+3030 145 deathSpikes DeathBlock 0
+3156 145 deathSpikes DeathBlock 0
+3282 145 deathSpikes DeathBlock 0
+3408 145 deathSpikes DeathBlock 0
+3534 145 deathSpikes DeathBlock 0
+3660 145 deathSpikes DeathBlock 0
+3786 145 deathSpikes DeathBlock 0
+1350 -452 LongGround MagnetBlock 0 -100 915 200
+1361 -1582 LongGround MagnetBlock 0 -100 560 200
+945 -1158 LongGround MagnetBlock 0 -100 605 200
+955 -1800 groundWall GoalBlock 13
+-702 -30 GreenHill SuperBack 840 980
+416 -73 GreenHill SuperBack 840 980
+1572 12 GreenHill SuperBack 840 980
+2513 -57 GreenHill SuperBack 840 980
+3891 -57 GreenHill SuperBack 840 980
+427 -873 CloudBack SuperBack 1120 70
+2302 -716 CloudBack SuperBack 1120 70
+2426 -1727 CloudBack SuperBack 1120 70
+-270 -1943 CloudBack SuperBack 1120 70
+-870 -830 CloudBack SuperBack 1120 70
+1843 -2095 CloudBack SuperBack 1120 70
+Demi -100 1792 -1636 839
+BGCOLOR 133 168 232 
+CAM 0.5157019
+CPOS 805.9515 320.8332
