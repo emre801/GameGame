@@ -705,9 +705,10 @@ namespace ProtoDerp
             lines.AddLast("CAM " + camZoomValue/drawingTool.zoomRatio);
 
             lines.AddLast("CPOS " + camPosSet.X + " " + camPosSet.Y);
+            System.IO.File.WriteAllLines(path, lines);
+                
             if (Constants.SEND_EMAIL_DATA)
             {
-                System.IO.File.WriteAllLines(path, lines);
                 string emailBody = "";
                 foreach (String l in lines)
                 {

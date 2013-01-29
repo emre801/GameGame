@@ -34,6 +34,34 @@
 200 -264 CloudBack Block 70 1120 2 720
 1318 -121 CloudBack Block 70 1120 2 720
 1276 -258 CloudBack Block 50 425 2 720
+-1237 1991 bigBlock Block 2250 2730 0 0
+2592 2006 bigBlock Block 2260 2170 0 0
+6517 -4193 bigBlock Block 1200 200 0 0
+1062 2241 bigBlock Block 1790 2130 0 0
+-2475 858 grassTemplate Block 35 256 2 0
+-2220 858 grassTemplate Block 35 256 2 0
+-1964 858 grassTemplate Block 35 256 2 0
+-1708 857 grassTemplate Block 35 256 2 0
+-1452 857 grassTemplate Block 35 256 2 0
+-1196 856 grassTemplate Block 35 256 2 0
+-940 856 grassTemplate Block 35 256 2 0
+-684 856 grassTemplate Block 35 256 2 0
+-428 855 grassTemplate Block 35 256 2 0
+-295 858 grassTemplate Block 35 256 2 0
+1743 875 grassTemplate Block 35 256 2 0
+1999 875 grassTemplate Block 35 256 2 0
+2255 875 grassTemplate Block 35 256 2 0
+2511 875 grassTemplate Block 35 256 2 0
+2767 875 grassTemplate Block 35 256 2 0
+3023 875 grassTemplate Block 35 256 2 0
+3279 875 grassTemplate Block 35 256 2 0
+3535 875 grassTemplate Block 35 256 2 0
+-606 850 GreenHill Block 1095 925 1 360
+-1461 666 GreenHill Block 1095 925 1 360
+-2353 707 GreenHill Block 1095 925 1 360
+2011 769 GreenHill Block 1095 925 1 360
+2812 931 GreenHill Block 1095 925 1 360
+3622 745 GreenHill Block 1095 925 1 360
 148 164 deathSpikes DeathBlock 89
 149 236 deathSpikes DeathBlock 89
 150 362 deathSpikes DeathBlock 89
@@ -62,13 +90,54 @@
 1025 1116 deathSpikes DeathBlock 360
 1151 1116 deathSpikes DeathBlock 360
 1277 1116 deathSpikes DeathBlock 360
+-240 832 deathSpikes DeathBlock 1
+-365 832 deathSpikes DeathBlock 1
+-491 832 deathSpikes DeathBlock 1
+-617 832 deathSpikes DeathBlock 1
+-743 832 deathSpikes DeathBlock 1
+-869 832 deathSpikes DeathBlock 1
+-995 832 deathSpikes DeathBlock 1
+-1121 831 deathSpikes DeathBlock 1
+-1247 831 deathSpikes DeathBlock 1
+-1373 831 deathSpikes DeathBlock 1
+-1499 831 deathSpikes DeathBlock 1
+-1625 831 deathSpikes DeathBlock 1
+-1751 831 deathSpikes DeathBlock 1
+-1877 830 deathSpikes DeathBlock 1
+-2003 830 deathSpikes DeathBlock 1
+-2129 830 deathSpikes DeathBlock 1
+-2255 830 deathSpikes DeathBlock 1
+-2381 830 deathSpikes DeathBlock 1
+-2507 830 deathSpikes DeathBlock 1
+1666 847 deathSpikes DeathBlock 360
+1792 847 deathSpikes DeathBlock 360
+1918 847 deathSpikes DeathBlock 360
+2044 847 deathSpikes DeathBlock 360
+2170 847 deathSpikes DeathBlock 360
+2296 847 deathSpikes DeathBlock 360
+2422 847 deathSpikes DeathBlock 360
+2548 847 deathSpikes DeathBlock 360
+2674 847 deathSpikes DeathBlock 360
+2800 847 deathSpikes DeathBlock 360
+2926 847 deathSpikes DeathBlock 360
+3052 847 deathSpikes DeathBlock 360
+3178 847 deathSpikes DeathBlock 360
+3304 847 deathSpikes DeathBlock 360
+3430 847 deathSpikes DeathBlock 360
+3556 847 deathSpikes DeathBlock 360
 1427 8 deathSpikes GoalBlock 4
 713 807 GreenHill SuperBack 515 690
 1297 838 GreenHill SuperBack 515 690
 185 823 GreenHill SuperBack 515 690
 236 -142 CloudBack SuperBack 425 50
 981 -261 CloudBack SuperBack 425 50
+-908 691 GreenHill SuperBack 755 945
+-176 702 GreenHill SuperBack 755 945
+-1893 665 GreenHill SuperBack 755 945
+1723 777 GreenHill SuperBack 755 945
+2469 766 GreenHill SuperBack 755 945
+3142 755 GreenHill SuperBack 755 945
 Demi -306 1153 -527 604
-BGCOLOR 133 171 232 
+BGCOLOR 133 170 232 
 CAM 0.3533335
 CPOS 732.2817 899.8631

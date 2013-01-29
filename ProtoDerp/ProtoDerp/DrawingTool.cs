@@ -45,6 +45,8 @@ namespace ProtoDerp
 
         Vector2 startingCamPosition;
 
+        public float zoomRatioValue = 0.75f;
+
 
         public DrawingTool(Game game)
         {
@@ -351,9 +353,9 @@ namespace ProtoDerp
 
         private void followPlayer()
         {
-            float widthRatio = 0.75f;
-            float heightRatio = 0.85f;
-            float heightRatio2 = 0.70f;
+            float widthRatio = 0.85f;
+            float heightRatio = 0.85f;//
+            float heightRatio2 = 0.70f;//
             float width = widthRatio * cam.ViewportWidth;// *zoomRatio;
             float height = heightRatio * cam.ViewportHeight;// *zoomRatio;
             float height2 = heightRatio2 * cam.ViewportHeight;// *zoomRatio;
@@ -406,8 +408,9 @@ namespace ProtoDerp
             }
 
             //Player dies if they go out of the camera bounds
-            if (p1.Position.X > cam.Pos.X + cam.ViewportWidth || p1.Position.X < cam.Pos.X - cam.ViewportWidth
-                || p1.Position.Y > cam.Pos.Y + cam.ViewportHeight || p1.Position.Y < cam.Pos.Y - cam.ViewportHeight)
+            float zoomAdjustments =  zoomRatioValue/cam.Zoom ;
+            if (p1.Position.X > cam.Pos.X + cam.ViewportWidth * zoomAdjustments || p1.Position.X < cam.Pos.X - cam.ViewportWidth * zoomAdjustments
+                || p1.Position.Y > cam.Pos.Y + cam.ViewportHeight * zoomAdjustments || p1.Position.Y < cam.Pos.Y - cam.ViewportHeight * zoomAdjustments)
             {
                 game.PlayerDies();
             }

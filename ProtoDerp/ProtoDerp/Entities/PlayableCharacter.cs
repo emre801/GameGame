@@ -248,6 +248,15 @@ namespace ProtoDerp
         public override void Update(GameTime gameTime, float worldSpeed)
         {
             keyInput.Update(gameTime);
+            if (game.isInCreatorMode)
+            {
+                if (keyInput.keyboardState.IsKeyDown(Keys.LeftShift) && keyInput.keyboardState.IsKeyDown(Keys.X))
+                {
+                    body.Position = ConvertUnits.ToSimUnits(Constants.player1SpawnLocation);
+                }
+
+            }
+
             if (ignoreInput > 0)
             {
                 ignoreInput--;

@@ -62,6 +62,7 @@ namespace ProtoDerp
             if (contact.IsTouching())
             {
                 LinkedList<PlayableCharacter> players = game.getEntitiesOfType<PlayableCharacter>();
+                
                 PlayableCharacter player = players.First();
                 if (fixtureB == player.fixture)
                 {

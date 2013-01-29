@@ -178,21 +178,21 @@
 1158 -486 CloudBack Block 70 1120 2 0
 1839 -265 CloudBack Block 70 1120 2 0
 3115 -462 CloudBack Block 70 1120 2 0
-559 54 deathSpikes DeathBlock 0
-685 54 deathSpikes DeathBlock 0
-811 54 deathSpikes DeathBlock 0
-937 54 deathSpikes DeathBlock 0
-1063 54 deathSpikes DeathBlock 0
-1803 55 deathSpikes DeathBlock 0
-2282 54 deathSpikes DeathBlock 0
-2768 55 deathSpikes DeathBlock 0
-1469 -125 deathSpikes DeathBlock 180
-1595 -126 deathSpikes DeathBlock 180
-2041 -125 deathSpikes DeathBlock 180
-2519 -125 deathSpikes DeathBlock 180
-2863 -126 deathSpikes DeathBlock 180
-2989 -126 deathSpikes DeathBlock 180
-3115 -126 deathSpikes DeathBlock 180
+559 67 deathSpikes DeathBlock 0
+685 67 deathSpikes DeathBlock 0
+811 68 deathSpikes DeathBlock 0
+937 66 deathSpikes DeathBlock 0
+1063 69 deathSpikes DeathBlock 0
+1803 74 deathSpikes DeathBlock 0
+2282 70 deathSpikes DeathBlock 0
+2768 72 deathSpikes DeathBlock 0
+1469 -135 deathSpikes DeathBlock 180
+1595 -139 deathSpikes DeathBlock 180
+2041 -139 deathSpikes DeathBlock 180
+2519 -137 deathSpikes DeathBlock 180
+2863 -137 deathSpikes DeathBlock 180
+2989 -140 deathSpikes DeathBlock 180
+3115 -134 deathSpikes DeathBlock 180
 3196 -86 deathSpikes DeathBlock 270
 3195 8 deathSpikes DeathBlock 270
 3047 30 deathSpikes GoalBlock 9

@@ -9,7 +9,7 @@ namespace ProtoDerp
 {
     class Constants
     {
-        public const int WRITE_LEVEL = 12;
+        public const int WRITE_LEVEL = 15;
         public const int MAX_WRITE_LEVEL = 29;
         public const int READ_LEVEL = 2;
 
@@ -21,7 +21,7 @@ namespace ProtoDerp
 
         public const bool ENABLE_CREATIVE_MODE = true; //set this to false if you want to give access to creative mode
 
-        public const bool SEND_EMAIL_DATA = true; // set to true when working it friends
+        public const bool SEND_EMAIL_DATA = false; // set to true when working it friends
         
         public const double GAMEWORLD_ASPECT_RATIO = 4f / 3f; // Width of game world / height of game world
 
@@ -40,7 +40,7 @@ namespace ProtoDerp
 
         public const int TOTALNUMBEROFMAPS = 4;
 
-        public const bool FULLSCREEN = true;
+        public const bool FULLSCREEN = false;
 
         public const bool OVERRIDE_FULLSCREEN_RES = false; // If this is true, we will attempt to override the system's default fullscreen resolution.  Not recommended
 
