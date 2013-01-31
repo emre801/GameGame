@@ -1214,6 +1214,42 @@
       <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Melt Yourself.wma</Extra>
       <Time>2013-01-26T23:27:33.4072146-05:00</Time>
     </Item>
+    <Item>
+      <Source>backGroundMan.png</Source>
+      <Name>backGroundMan</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\backGroundMan.xnb</Output>
+      <Time>2013-01-30T13:32:43.0805643-05:00</Time>
+    </Item>
+    <Item>
+      <Source>grassTempBack.png</Source>
+      <Name>grassTempBack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\grassTempBack.xnb</Output>
+      <Time>2013-01-30T09:44:55.766295-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BorderImage.png</Source>
+      <Name>BorderImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\BorderImage.xnb</Output>
+      <Time>2013-01-30T18:15:12.4620135-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BorderImageWhite.png</Source>
+      <Name>BorderImageWhite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\BorderImageWhite.xnb</Output>
+      <Time>2013-01-30T18:24:22.9715008-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

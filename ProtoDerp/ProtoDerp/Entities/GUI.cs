@@ -166,7 +166,7 @@ namespace ProtoDerp
                     DrawCurrentLevelInfo(gameTime, spriteBatch);
                     DrawCurrentTemplateLevel(gameTime, spriteBatch);
                     DrawSaveText(gameTime, spriteBatch);
-                    DrawControlsInfo(gameTime, spriteBatch);
+                    //DrawControlsInfo(gameTime, spriteBatch);
                     DrawMouse(gameTime, spriteBatch);
                     DrawCameraText(gameTime, spriteBatch);
                     DrawMouseCameraValue(gameTime, spriteBatch);
@@ -326,17 +326,45 @@ namespace ProtoDerp
 
         public void DrawControlsInfoEditMode(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            float position = 0.90f;
             float i = 0.025f;
-            DrawText(spriteBatch, 0.90f, i+=0.025f, "Controls Info");
-            DrawText(spriteBatch, 0.90f, i += 0.025f, "Q and W Shift Block");
-            DrawText(spriteBatch, 0.90f, i += 0.025f, "Delete, Remove Block");
-            DrawText(spriteBatch, 0.90f, i += 0.025f, "Z to Save");
-            DrawText(spriteBatch, 0.90f, i += 0.025f, "T, Delete all Death Blocks");
-            DrawText(spriteBatch, 0.90f, i += 0.025f, "Y, Delete all Normal Blocks");
-            DrawText(spriteBatch, 0.90f, i += 0.025f, "U, Delete all Moving Blocks");
-            DrawText(spriteBatch, 0.90f, i += 0.025f, "I, Delete all Magnet Blocks");
-            DrawText(spriteBatch, 0.90f, i += 0.025f, "O, Delete all MovingCycle Blocks");
-            DrawText(spriteBatch, 0.90f, i += 0.025f, "G, Delete everything");
+            if (!Constants.FULLSCREEN)
+            {
+                position = 0.75f;
+            }
+            DrawText(spriteBatch, position, i += 0.025f, "Controls Info");
+            DrawText(spriteBatch, position, i += 0.025f, "Q and W Shift Block");
+            DrawText(spriteBatch, position, i += 0.025f, "Delete, Remove Block");
+            DrawText(spriteBatch, position, i += 0.025f, "Z to Save");
+            DrawText(spriteBatch, position, i += 0.025f, "T, Delete all Death Blocks");
+            DrawText(spriteBatch, position, i += 0.025f, "Y, Delete all Normal Blocks");
+            DrawText(spriteBatch, position, i += 0.025f, "J, Delete all Normal Blocks, Background");
+            DrawText(spriteBatch, position, i += 0.025f, "K, Delete all Normal Blocks, Foreground");
+            DrawText(spriteBatch, position, i += 0.025f, "D, Delete all Super Backgrounds");
+            DrawText(spriteBatch, position, i += 0.025f, "I, Delete all Magnet Blocks");
+            DrawText(spriteBatch, position, i += 0.025f, "O, Delete all MovingCycle Blocks");
+            DrawText(spriteBatch, position, i += 0.025f, "G, Delete everything");
+        }
+
+        public void drawBorderImage(float x, float y, int height, int width, SpriteBatch spriteBatch)
+        {
+            if (Constants.FULLSCREEN)
+            {
+                x = x * 5;
+                y = y + y / 2 + y / 4;
+                height = (int)(height * 1.25f);
+                width = width * 2;
+            }
+            Rectangle rect = new Rectangle((int)((game.getWorldSize().X * x)), (int)((game.getWorldSize().Y * y)),  width,height);
+            Rectangle rect2 = new Rectangle((int)((game.getWorldSize().X * x))-2, (int)((game.getWorldSize().Y * y))-2, width+4, height+4);
+            Rectangle rect3 = new Rectangle((int)((game.getWorldSize().X * x)) - 4, (int)((game.getWorldSize().Y * y)) - 4, width + 8, height + 8);
+
+            spriteBatch.Draw(game.getSprite("BorderImage").index, rect3, Color.White);
+        
+            spriteBatch.Draw(game.getSprite("BorderImageWhite").index, rect2, Color.White);
+        
+            spriteBatch.Draw(game.getSprite("BorderImage").index, rect, Color.White);
+            
         }
 
         public void DrawMouse(GameTime gameTime, SpriteBatch spriteBatch)
@@ -382,7 +410,10 @@ namespace ProtoDerp
             if(!game.winningAnimation)
             game.stopWatch.Start();
 
-            DrawText(spriteBatch, 0.065f, 0.05f, str);            
+            drawBorderImage(0.065f, 0.05f, 25, 130, spriteBatch);
+            DrawText(spriteBatch, 0.065f, 0.0625f, str);
+            
+            
         }
         public void DrawCreatorInformation(GameTime gameTime, SpriteBatch spriteBatch)
         {

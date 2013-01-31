@@ -178,21 +178,21 @@
 1158 -486 CloudBack Block 70 1120 2 0
 1839 -265 CloudBack Block 70 1120 2 0
 3115 -462 CloudBack Block 70 1120 2 0
-559 67 deathSpikes DeathBlock 0
-685 67 deathSpikes DeathBlock 0
-811 68 deathSpikes DeathBlock 0
-937 66 deathSpikes DeathBlock 0
-1063 69 deathSpikes DeathBlock 0
-1803 74 deathSpikes DeathBlock 0
-2282 70 deathSpikes DeathBlock 0
-2768 72 deathSpikes DeathBlock 0
-1469 -135 deathSpikes DeathBlock 180
-1595 -139 deathSpikes DeathBlock 180
-2041 -139 deathSpikes DeathBlock 180
-2519 -137 deathSpikes DeathBlock 180
-2863 -137 deathSpikes DeathBlock 180
-2989 -140 deathSpikes DeathBlock 180
-3115 -134 deathSpikes DeathBlock 180
+559 56 deathSpikes DeathBlock 0
+685 55 deathSpikes DeathBlock 0
+811 55 deathSpikes DeathBlock 0
+937 55 deathSpikes DeathBlock 0
+1063 53 deathSpikes DeathBlock 0
+1803 55 deathSpikes DeathBlock 0
+2282 57 deathSpikes DeathBlock 0
+2768 58 deathSpikes DeathBlock 0
+1469 -121 deathSpikes DeathBlock 180
+1595 -127 deathSpikes DeathBlock 180
+2041 -128 deathSpikes DeathBlock 180
+2519 -134 deathSpikes DeathBlock 180
+2863 -130 deathSpikes DeathBlock 180
+2989 -129 deathSpikes DeathBlock 180
+3115 -127 deathSpikes DeathBlock 180
 3196 -86 deathSpikes DeathBlock 270
 3195 8 deathSpikes DeathBlock 270
 3047 30 deathSpikes GoalBlock 9
@@ -208,5 +208,5 @@
 3272 -354 CloudBack SuperBack 965 55
 Demi -642 3452 84 844
 BGCOLOR 133 168 232 
-CAM 0.4381164
+CAM 0.3894195
 CPOS 800 540

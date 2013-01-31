@@ -68,6 +68,10 @@ namespace ProtoDerp
                         game.nextLevel(nextLevel++);
                     }
                 }
+                else
+                {
+                    game.PlayerDies();
+                }
             }
             return true;
         }

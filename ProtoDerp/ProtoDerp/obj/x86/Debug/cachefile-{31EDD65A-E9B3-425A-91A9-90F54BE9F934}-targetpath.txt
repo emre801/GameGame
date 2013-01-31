@@ -147,6 +147,10 @@ Content\blankImage.xnb
 Content\skyScrapper.xnb
 Content\Music\Melt Yourself.xnb
 Content\Music\Melt Yourself.wma
+Content\backGroundMan.xnb
+Content\grassTempBack.xnb
+Content\BorderImage.xnb
+Content\BorderImageWhite.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

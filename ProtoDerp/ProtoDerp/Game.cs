@@ -259,6 +259,13 @@ namespace ProtoDerp
             sprites.Add("graph", new Sprite(Content, "graph"));
             sprites.Add("skyScrapper", new Sprite(Content,"skyScrapper"));
             blockList.AddLast("skyScrapper");
+            sprites.Add("BorderImage", new Sprite(Content, "BorderImage"));
+            sprites.Add("BorderImageWhite", new Sprite(Content, "BorderImageWhite"));
+            //blockList.AddLast("BorderImage");
+            sprites.Add("backGroundMan", new Sprite(Content, "backGroundMan"));
+            blockList.AddLast("backGroundMan");
+            sprites.Add("grassTempBack", new Sprite(Content, "grassTempBack"));
+            blockList.AddLast("grassTempBack");
             sprites.Add("grassTemplate", new Sprite(Content, "grassTemplate"));
             sprites.Add("blankImage", new Sprite(Content, "blankImage"));
             blockList.AddLast("grassTemplate");

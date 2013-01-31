@@ -961,6 +961,22 @@ namespace ProtoDerp
                 deleteAllSelectedType<EntityBlock>();
                 deleteSuperBackGround();
             }
+            if (keyInput.IsNewKeyPressed(Keys.J))
+            {
+                deleteAllSelectedType<Block>(0);
+            }
+            if (keyInput.IsNewKeyPressed(Keys.K))
+            {
+                deleteAllSelectedType<Block>(1);
+            }
+            if (keyInput.IsNewKeyPressed(Keys.D))
+            {
+                deleteSuperBackGround();
+            }
+            if (keyInput.IsNewKeyPressed(Keys.H))
+            {
+                deleteAllSelectedType<Block>(2);
+            }
 
         }
         public void deleteSuperBackGround()
@@ -996,14 +1012,32 @@ namespace ProtoDerp
 
         public void deleteAllSelectedType<Type>()
         {
+            deleteAllSelectedType<Type>(-1);
+        }
+
+        public void deleteAllSelectedType<Type>(int level)
+        {
             foreach (Entity e in game.entities)
             {
                 if (e is Type)
                 {
-                    
+                    if (level >= 0)
+                    {
+                        Block i = (Block)e;
+                        if (i.drawLevel == level)
+                        {
+                            e.IsVisible = false;
+                            isSelectedBlockChanged = true;
+                            e.isSelected = false;
+                        }
+                    }
+                    else
+                    {
                         e.IsVisible = false;
                         isSelectedBlockChanged = true;
                         e.isSelected = false;
+                    }
+                    
                    
                     
                 }

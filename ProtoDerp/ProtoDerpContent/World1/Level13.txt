@@ -137,6 +137,24 @@
 1236 -516 groundWall Block 115 54 2 180
 1237 -631 groundWall Block 115 54 2 180
 1237 -781 groundWall Block 115 54 2 180
+-1782 354 backGroundMan Block 50 50 1 0
+422 1338 backGroundMan Block 1121.698 3940.083 1 0
+-1415 778 grassTempBack Block 35 256 1 0
+-1160 778 grassTempBack Block 35 256 1 0
+-904 778 grassTempBack Block 35 256 1 0
+-648 778 grassTempBack Block 35 256 1 0
+-392 779 grassTempBack Block 35 256 1 0
+-136 779 grassTempBack Block 35 256 1 0
+119 779 grassTempBack Block 35 256 1 0
+375 779 grassTempBack Block 35 256 1 0
+631 780 grassTempBack Block 35 256 1 0
+887 780 grassTempBack Block 35 256 1 0
+1143 780 grassTempBack Block 35 256 1 0
+1399 781 grassTempBack Block 35 256 1 0
+1655 781 grassTempBack Block 35 256 1 0
+1911 781 grassTempBack Block 35 256 1 0
+2167 781 grassTempBack Block 35 256 1 0
+2423 782 grassTempBack Block 35 256 1 0
 228 -316 deathSpikes3 DeathBlock 0
 235 -189 deathSpikes3 DeathBlock 0
 -501 -231 deathSpikes4 DeathBlock 0
@@ -165,7 +183,13 @@
 731 679 bigBlock MagnetBlock 0 -18 460 135
 1004 345 bigBlock MagnetBlock 0 -18 945 135
 387 -12 ahLogo0 GoalBlock 14
+290 617 GreenHill SuperBack 585 450
+-612 688 GreenHill SuperBack 585 450
+-1183 681 GreenHill SuperBack 585 450
+835 606 GreenHill SuperBack 585 450
+1430 623 GreenHill SuperBack 585 450
+2012 623 GreenHill SuperBack 585 450
 Demi -617 1270 76 1532
-BGCOLOR 133 174 232 
+BGCOLOR 133 173 232 
 CAM -1
 CPOS 400 360

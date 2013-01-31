@@ -158,7 +158,7 @@ namespace ProtoDerp
                         Vector2 vectors = new Vector2(xPos, yPos);
                         paths.Add(vectors);
                     }
-                    moveCycleBlock.AddLast(new MovingCycle(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4]), paths, true));
+                    moveCycleBlock.AddLast(new MovingCycle(game, game.Arena, new Vector2(x, y), 1, spriteName, System.Convert.ToSingle(words[4]), paths, true));
                     
 
                 }
@@ -173,7 +173,7 @@ namespace ProtoDerp
 
                 if (words[3].Equals("SuperBack"))
                 {
-                   game.backGroundImages.Add(new BackgroundBlock(game,game.Arena,new Vector2(x,y),1,spriteName,Convert.ToInt32(words[5]),Convert.ToInt32(words[4])));
+                    game.backGroundImages.Add(new BackgroundBlock(game, game.Arena, new Vector2(x, y), 1, spriteName, System.Convert.ToSingle(words[5]), System.Convert.ToSingle(words[4])));
 
                 }
                 
@@ -288,8 +288,8 @@ namespace ProtoDerp
             {
                 foreach (GoalBlock j in goalBlocks)
                 {
-                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
-                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+                    //i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    //j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
 
                 }
             }
