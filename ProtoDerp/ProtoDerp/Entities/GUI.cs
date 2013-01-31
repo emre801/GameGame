@@ -354,6 +354,7 @@ namespace ProtoDerp
                 y = y + y / 2 + y / 4;
                 height = (int)(height * 1.25f);
                 width = width * 2;
+                
             }
             Rectangle rect = new Rectangle((int)((game.getWorldSize().X * x)), (int)((game.getWorldSize().Y * y)),  width,height);
             Rectangle rect2 = new Rectangle((int)((game.getWorldSize().X * x))-2, (int)((game.getWorldSize().Y * y))-2, width+4, height+4);
@@ -410,7 +411,7 @@ namespace ProtoDerp
             if(!game.winningAnimation)
             game.stopWatch.Start();
 
-            drawBorderImage(0.065f, 0.05f, 25, 130, spriteBatch);
+            game.drawingTool.drawBorderImage(0.065f, 0.05f, 25, 130, spriteBatch);
             DrawText(spriteBatch, 0.065f, 0.0625f, str);
             
             

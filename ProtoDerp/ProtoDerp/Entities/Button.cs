@@ -66,8 +66,11 @@ namespace ProtoDerp
                 if (!isInTitle)
                 {
                     int scrollWheel = (oldMouse.ScrollWheelValue - Mouse.GetState().ScrollWheelValue)*2;
-                    pos = new Vector2(pos.X, pos.Y - scrollWheel * 0.2f);
-                    this.buttonBox = new Rectangle((int)pos.X, (int)pos.Y, (int)widthDiff + 10, (int)heightDiff + 10);
+                    pos = new Vector2(pos.X, pos.Y - (float)scrollWheel * 0.19999999f);
+                    int xPos = (int)pos.X;
+                    int yPos = 50*(int)Math.Round(pos.Y/50);
+                    pos = new Vector2(xPos, yPos);
+                    this.buttonBox = new Rectangle(xPos, yPos, (int)widthDiff + 10, (int)heightDiff + 10);
                     oldMouse = Mouse.GetState();
                 }
             }
@@ -117,6 +120,9 @@ namespace ProtoDerp
                 return;
             if ((game.gMode == 2 && game.activateButtons && game.cameraWindowValue==0))
             {
+                //game.drawingTool.drawBorderImageFromPos(pos.X, pos.Y, 30, 30,spriteBatch);
+
+
                 if (game.spriteBlockCounter == spritePos)
                 {
                     spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X-2.5),

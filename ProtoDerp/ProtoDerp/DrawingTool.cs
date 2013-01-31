@@ -664,16 +664,82 @@ namespace ProtoDerp
             if (game.gMode == 0 || game.gMode == 2)
             {
                 spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
-                game.Arena.gui.Draw(gameTime, spriteBatch);
+                if ((game.gMode == 2 && game.activateButtons && game.cameraWindowValue == 0))
+                {
+                    drawBorderImageForButtons(spriteBatch);
+                }
                 foreach (Button b in game.Arena.buttons)
                 {
                     b.Draw(gameTime, spriteBatch);
-                }
+                } 
+                game.Arena.gui.Draw(gameTime, spriteBatch);
+
+                game.Arena.gui.DrawMouse(gameTime, spriteBatch);
                 spriteBatch.End();
+
             }
 
 
         }
+        public void drawBorderImageForButtons(SpriteBatch spriteBatch)
+        {
+            for (int i = 0; i <= 700; i += 50)
+            {
+                game.drawingTool.drawBorderImageFromPos(10, i, 30, 30, spriteBatch);
+                game.drawingTool.drawBorderImageFromPos(50, i, 30, 30, spriteBatch);
+                game.drawingTool.drawBorderImageFromPos(90, i, 30, 30, spriteBatch);
+            }
+
+
+
+        }
+
+        public void drawBorderImage(float x, float y, int height, int width, SpriteBatch spriteBatch)
+        {
+            if (Constants.FULLSCREEN)
+            {
+                x = x * 5;
+                y = y + y / 2 + y / 4;
+                height = (int)(height * 1.25f);
+                width = width * 2;
+
+            }
+            Rectangle rect = new Rectangle((int)((game.getWorldSize().X * x)), (int)((game.getWorldSize().Y * y)), width, height);
+            Rectangle rect2 = new Rectangle((int)((game.getWorldSize().X * x)) - 2, (int)((game.getWorldSize().Y * y)) - 2, width + 4, height + 4);
+            Rectangle rect3 = new Rectangle((int)((game.getWorldSize().X * x)) - 4, (int)((game.getWorldSize().Y * y)) - 4, width + 8, height + 8);
+
+            spriteBatch.Draw(game.getSprite("BorderImage").index, rect3, Color.White);
+
+            spriteBatch.Draw(game.getSprite("BorderImageWhite").index, rect2, Color.White);
+
+            spriteBatch.Draw(game.getSprite("BorderImage").index, rect, Color.White);
+
+        }
+
+        public void drawBorderImageFromPos(float x, float y, int height, int width, SpriteBatch spriteBatch)
+        {
+            if (Constants.FULLSCREEN)
+            {
+                x = x * 5;
+                y = y + y / 2 + y / 4;
+                height = (int)(height * 1.25f);
+                width = width * 2;
+
+            }
+            Rectangle rect = new Rectangle((int)(( x)), (int)(( y)), width, height);
+            Rectangle rect2 = new Rectangle((int)(( x)) - 2, (int)(( y)) - 2, width + 4, height + 4);
+            Rectangle rect3 = new Rectangle((int)((x)) - 4, (int)(( y)) - 4, width + 8, height + 8);
+
+            spriteBatch.Draw(game.getSprite("BorderImage").index, rect3, Color.White);
+
+            spriteBatch.Draw(game.getSprite("BorderImageWhite").index, rect2, Color.White);
+
+            spriteBatch.Draw(game.getSprite("BorderImage").index, rect, Color.White);
+
+
+        }
+
+
         //Draws a simple rectangle based on given location and color
         public void drawRectangle(Rectangle rect, Color color)
         {
