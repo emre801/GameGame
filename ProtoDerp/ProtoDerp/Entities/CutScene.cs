@@ -60,6 +60,11 @@ namespace ProtoDerp
             
             if (isVisible)
             {
+                if (!Constants.DO_FADE_OUT)
+                {
+                    loadLevelInfo();
+                }
+
                 keyInput.Update(gameTime);
                 if (this.player1.isAPressed()|| keyInput.IsNewKeyPressed(Keys.Enter))
                 {
@@ -70,19 +75,25 @@ namespace ProtoDerp
                     }
                     else
                     {
-                        game.gMode = 0;
-                        game.isInLevelSelect = false;
-                        //game.playSong("Music//ForrestSounds");
-                        game.playRandonSong();
-                        game.populateWorld();
-                        game.drawingTool.cam.Zoom = 0.55f * game.drawingTool.zoomRatio;
-                        this.isVisible = false;
-                        this.dispose = true;
+                        loadLevelInfo();
                     }
 
 
                 }
             }
+
+        }
+
+        public void loadLevelInfo()
+        {
+            game.gMode = 0;
+            game.isInLevelSelect = false;
+            //game.playSong("Music//ForrestSounds");
+            game.playRandonSong();
+            game.populateWorld();
+            game.drawingTool.cam.Zoom = 0.55f * game.drawingTool.zoomRatio;
+            this.isVisible = false;
+            this.dispose = true;
 
         }
 

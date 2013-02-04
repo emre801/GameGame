@@ -259,6 +259,12 @@ namespace ProtoDerp
             sprites.Add("graph", new Sprite(Content, "graph"));
             sprites.Add("skyScrapper", new Sprite(Content,"skyScrapper"));
             blockList.AddLast("skyScrapper");
+            sprites.Add("simplePix", new Sprite(Content, "simplePix"));
+            blockList.AddLast("simplePix");
+            sprites.Add("mtPix", new Sprite(Content, "mtPix"));
+            blockList.AddLast("mtPix");
+            sprites.Add("GrassHill", new Sprite(Content, "GrassHill"));
+            blockList.AddLast("GrassHill");
             sprites.Add("BorderImage", new Sprite(Content, "BorderImage"));
             sprites.Add("BorderImageWhite", new Sprite(Content, "BorderImageWhite"));
             //blockList.AddLast("BorderImage");
@@ -565,6 +571,8 @@ namespace ProtoDerp
 
         public void playRandonSong()
         {
+            if (!Constants.PLAY_MUSIC)
+                return;
             if (MediaPlayer.State != MediaState.Playing)
             {
                 DirectoryInfo di = new DirectoryInfo(Content.RootDirectory + "\\Music");

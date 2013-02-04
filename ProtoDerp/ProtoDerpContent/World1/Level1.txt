@@ -76,6 +76,10 @@
 1474 297 groundWall Block 95 44 2 180
 1474 389 groundWall Block 95 44 2 180
 -505 100 groundTemplate Block 28 256 2 0
+-3389 -978 derrick.png Block 105 75 0 0
+-2785 34 derrick.png Block 105 75 0 0
+-3249 -221 derrick.png Block 105 75 0 0
+-2258 72 derrick.png Block 105 75 0 0
 1018 -1 ahLogo0 GoalBlock 2
 430 -185 GreenHill2 SuperBack 371 466
 1036 -193 GreenHill2 SuperBack 371 466

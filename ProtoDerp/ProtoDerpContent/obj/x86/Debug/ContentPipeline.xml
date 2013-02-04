@@ -1250,6 +1250,51 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\BorderImageWhite.xnb</Output>
       <Time>2013-01-30T18:24:22.9715008-05:00</Time>
     </Item>
+    <Item>
+      <Source>CoolBG.png</Source>
+      <Name>CoolBG</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CoolBG.xnb</Output>
+      <Time>2013-01-31T15:16:17.5192166-05:00</Time>
+    </Item>
+    <Item>
+      <Source>GrassHill.png</Source>
+      <Name>GrassHill</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\GrassHill.xnb</Output>
+      <Time>2013-01-31T15:25:30.0808214-05:00</Time>
+    </Item>
+    <Item>
+      <Source>GameGrumps.png</Source>
+      <Name>GameGrumps</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\GameGrumps.xnb</Output>
+      <Time>2013-01-31T15:31:52.2006774-05:00</Time>
+    </Item>
+    <Item>
+      <Source>simplePix.png</Source>
+      <Name>simplePix</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\simplePix.xnb</Output>
+      <Time>2013-01-31T15:54:30.7123798-05:00</Time>
+    </Item>
+    <Item>
+      <Source>mtPix.png</Source>
+      <Name>mtPix</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\mtPix.xnb</Output>
+      <Time>2013-01-31T20:26:40.479389-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

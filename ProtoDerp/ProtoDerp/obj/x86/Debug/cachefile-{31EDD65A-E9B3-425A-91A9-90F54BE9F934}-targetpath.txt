@@ -151,6 +151,11 @@ Content\backGroundMan.xnb
 Content\grassTempBack.xnb
 Content\BorderImage.xnb
 Content\BorderImageWhite.xnb
+Content\CoolBG.xnb
+Content\GrassHill.xnb
+Content\GameGrumps.xnb
+Content\simplePix.xnb
+Content\mtPix.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt
