@@ -648,7 +648,7 @@ namespace ProtoDerp
                             e.Draw(gameTime, spriteBatch);
                     }
                 }
-                if (e is CreaterBlock)
+                if (e is CreaterBlock|| e is WaterBlock)
                 {
                     e.Draw(gameTime, spriteBatch);
                 }

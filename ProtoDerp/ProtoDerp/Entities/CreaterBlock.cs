@@ -182,14 +182,14 @@ namespace ProtoDerp
             if (keyInput.IsNewKeyPressed(Keys.A))
             {
                 if (blockPressed == 0)
-                    blockPressed = 6;
+                    blockPressed = Constants.TOTAL_NUM_BLOCK_TYPES;
                 else
                     blockPressed--;
                 changeBlockType();
             }
             if (keyInput.IsNewKeyPressed(Keys.S))
             {
-                if (blockPressed == 6)
+                if (blockPressed == Constants.TOTAL_NUM_BLOCK_TYPES)
                     blockPressed = 0;
                 else
                     blockPressed++;
@@ -409,6 +409,9 @@ namespace ProtoDerp
                             break;
                         case Game.BlockType.Magnet:
                             addMagnetBlock();
+                            break;
+                        case Game.BlockType.WaterBlock:
+                            addWaterBlock();
                             break;
                     }
                 }
@@ -781,6 +784,11 @@ namespace ProtoDerp
                     game.blockType = Game.BlockType.Cycle;
                     game.cachedEntityLists = new Dictionary<Type, object>();
                     break;
+                case 7:
+                    game.blockType = Game.BlockType.WaterBlock;
+                    game.cachedEntityLists = new Dictionary<Type, object>();
+                    break;
+
             }
 
         }
@@ -1246,6 +1254,9 @@ namespace ProtoDerp
                             pathPoints = new ArrayList();
                         }
                         break;
+                    case Game.BlockType.WaterBlock:
+                       game.addEntity(new WaterBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], rotation,blockWidth,blockHeight));
+                        break;
                 }
             }
             
@@ -1285,6 +1296,11 @@ namespace ProtoDerp
 
             game.addEntity(new MovingPath(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter], 2, point1, point2, false));
         }
+        public void addWaterBlock()
+        {
+            game.addEntity(new WaterBlock(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter], rotation,blockWidth,blockHeight));
+        }
+
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {

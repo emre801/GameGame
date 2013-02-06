@@ -42,6 +42,7 @@ namespace ProtoDerp
         LinkedList<MovingDeath> moveDeathBlocks = new LinkedList<MovingDeath>();
         LinkedList<MovingPath> movePathBlock = new LinkedList<MovingPath>();
         LinkedList<MovingCycle> moveCycleBlock = new LinkedList<MovingCycle>();
+        LinkedList<WaterBlock> waterBlocks = new LinkedList<WaterBlock>();
         public void readFile(int templateNum)
         {
             String path = Directory.GetCurrentDirectory();
@@ -71,6 +72,7 @@ namespace ProtoDerp
             if(game.loadNewLevel)
             game.clearEntities();
             game.camZoomValue = -1;
+            game.deathBlockGoalCollision = false;
             while ((line = sr.ReadLine()) != null)
             {
                 c++;
@@ -176,6 +178,11 @@ namespace ProtoDerp
                     game.backGroundImages.Add(new BackgroundBlock(game, game.Arena, new Vector2(x, y), 1, spriteName, System.Convert.ToSingle(words[5]), System.Convert.ToSingle(words[4])));
 
                 }
+
+                if (words[3].Equals("WaterBlock"))
+                {
+                    waterBlocks.AddLast(new WaterBlock(game,game.Arena,new Vector2(x,y),1,spriteName,System.Convert.ToSingle(words[4]),System.Convert.ToSingle(words[5]),System.Convert.ToSingle(words[6])));
+                }
                 
             }
             
@@ -198,8 +205,10 @@ namespace ProtoDerp
                 game.addEntity(i);
             foreach (GoalBlock i in goalBlocks)
                 game.addEntity(i);
+            foreach (WaterBlock i in waterBlocks)
+                game.addEntity(i);
 
-
+            
 
             foreach (MovingDeath i in moveDeathBlocks)
             {

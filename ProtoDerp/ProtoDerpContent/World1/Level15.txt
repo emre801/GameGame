@@ -304,7 +304,7 @@
 10508 -176 grassTempBack Block 25 196 1 0
 10704 -176 grassTempBack Block 25 196 1 0
 10900 -176 grassTempBack Block 25 196 1 0
-7224 -131 ahLogo0 GoalBlock 1
+7224 -131 ahLogo0 GoalBlock 6
 1799 118 deathBall MovingPath 7 1807 628 1809 931 
 2952 -248 deathBall MovingPath 7 2960 261 2958 927 
 4119 421 deathBall MovingPath 7 4127 931 4131 46 

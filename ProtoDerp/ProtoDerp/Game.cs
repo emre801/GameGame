@@ -67,6 +67,7 @@ namespace ProtoDerp
 
         public Stopwatch animationTime = new Stopwatch();
         public bool deathAnimation = false,winningAnimation=false;
+        
 
         LinkedList<Entity> toBeRemoved = new LinkedList<Entity>();
         public bool loadNewLevel = false;
@@ -80,7 +81,7 @@ namespace ProtoDerp
         public float maxLeft, maxRight, maxTop, maxButtom;
         public int count = 0;
 
-        public enum BlockType { Normal, Death, Moving, Goal, Magnet,Path,Cycle };
+        public enum BlockType { Normal, Death, Moving, Goal, Magnet,Path,Cycle,WaterBlock };
         public BlockType blockType = BlockType.Normal;
 
         public float cXLocation=0, cYLocation=0;
@@ -140,6 +141,11 @@ namespace ProtoDerp
 
         public float camZoomValue = -1;
         public Vector2 camPosSet= new Vector2(0,0);
+
+        public bool deathBlockGoalCollision = false;
+
+        public bool inWater = false;
+        public int waterCollisionTime = -1;
 
         public Game()
         {
@@ -710,6 +716,18 @@ namespace ProtoDerp
                 int y = (int)b.startPos.Y;
                 String spriteName=b.spriteName;
                 lines.AddLast(x+ " " + y + " " + spriteName + " " + "SuperBack" + " " + b.width +" "+b.height);
+            }
+            LinkedList<WaterBlock> waterBlocks = getEntitiesOfType<WaterBlock>();
+            foreach (WaterBlock b in waterBlocks)
+            {
+
+                if (!b.IsVisible)
+                    continue;
+                int x = (int)b.origPos.X;
+                int y = (int)b.origPos.Y;
+                String spriteName = b.spriteNumber;
+                lines.AddLast(x + " " + y + " " + spriteName + " WaterBlock" + " " + b.rotationAngle + " "+b.width+ " "+ b.height);
+
             }
 
             lines.AddLast("Demi " + (int)maxLeft + " " + (int)maxRight + " " + (int)maxTop + " " + (int)maxButtom);

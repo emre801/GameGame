@@ -343,10 +343,7 @@ namespace ProtoDerp
                 else
                     fixture.Friction = 0;
 
-                if (yDirection > 0)
-                    body.ApplyLinearImpulse(new Vector2(0, yDirection * 1.05f));
-                else
-                    body.ApplyLinearImpulse(new Vector2(0, yDirection * 0.12f));
+                
             }
 
             if ((inputState.isAPressed() || keyInput.IsNewKeyPressed(Keys.Space)) && onGround)// && body.LinearVelocity.Y > -50)
@@ -453,6 +450,12 @@ namespace ProtoDerp
             }
             if (Math.Abs(body.LinearVelocity.Y) >= 0.0001f)
             {
+
+                if (yDirection > 0)
+                    body.ApplyLinearImpulse(new Vector2(0, yDirection * 1.05f));
+                else
+                    body.ApplyLinearImpulse(new Vector2(0, yDirection * 0.12f));
+
                 if (!isOnWall)
                 {
                     if (body.LinearVelocity.Y > 0.05f)
@@ -520,7 +523,7 @@ namespace ProtoDerp
             //if(framCounter%frameRate==0)
             //ani.nextState();
             this.blend = Color.Black;
-            this.alpha = 0.25f * game.pauseAlpha;
+            this.alpha =Constants.SHADOW_VALUE * game.pauseAlpha;
             ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)),
                    origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),
                        (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), !faceRight, shiftPosition);

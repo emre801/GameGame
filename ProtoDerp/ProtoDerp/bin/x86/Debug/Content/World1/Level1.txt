@@ -88,6 +88,7 @@
 72 -384 CloudBack SuperBack 310 40
 -171 -547 CloudBack SuperBack 310 40
 1051 -602 CloudBack SuperBack 310 40
+260 -140 derrick.png WaterBlock 0 300 385
 Demi -349 1182 -532 795
 BGCOLOR 133 168 232 
 CAM 0.55

@@ -144,6 +144,7 @@
     <Compile Include="Entities\MovingPath.cs" />
     <Compile Include="Entities\PlayableCharacter.cs" />
     <Compile Include="Entities\TitleScreen.cs" />
+    <Compile Include="Entities\WaterBlock.cs" />
     <Compile Include="Input.cs" />
     <Compile Include="KeyboardInput.cs" />
     <Compile Include="PrimitiveDrawingElement.cs" />

@@ -44,6 +44,10 @@ namespace ProtoDerp
 
         public const bool PLAY_MUSIC = true;
 
+        public const float SHADOW_VALUE = 0.25f;
+
+        public const int TOTAL_NUM_BLOCK_TYPES = 7;
+
         public const bool OVERRIDE_FULLSCREEN_RES = false; // If this is true, we will attempt to override the system's default fullscreen resolution.  Not recommended
 
         public static readonly Buttons[] EXPAND_BUTTONS = { Buttons.LeftShoulder, Buttons.LeftTrigger };

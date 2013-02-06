@@ -146,6 +146,7 @@ namespace ProtoDerp
             {
                 //DrawBackThing(gameTime, spriteBatch);
                 DrawCredits(gameTime, spriteBatch);
+                DrawText(spriteBatch, 0.05f, 0.95f, "InWater" + game.inWater);
                 if (game.pause)
                 {
                     DrawText(spriteBatch, 0.05f, 0.9f, game.songName);
@@ -153,6 +154,8 @@ namespace ProtoDerp
                         DrawText(spriteBatch, 0.05f, 0.925f, "by " + game.songArtist);
                     else
                         DrawText(spriteBatch, 0.05f, 0.925f, "by __twc");
+                    DrawText(spriteBatch, 0.05f, 0.95f, "Level"+game.currentLevel);
+
                 }
                  
 
@@ -447,6 +450,10 @@ namespace ProtoDerp
                     blockInfo += "Cycle Block";
                     DrawText(spriteBatch, 0.065f, 0.875f, "Vel: " + game.pathSpeed);
                     break;
+                case Game.BlockType.WaterBlock:
+                    blockInfo += "Water Block";
+                    break;
+
 
             }
             DrawText(spriteBatch, 0.065f, 0.85f, blockInfo);

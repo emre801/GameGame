@@ -23,7 +23,7 @@ using FarseerPhysics.Dynamics.Contacts;
  */
 namespace ProtoDerp
 {
-    public class GoalBlock : EntityBlock
+    public class WaterBlock : EntityBlock
     {
         public Sprite playerSprite;
 
@@ -35,21 +35,38 @@ namespace ProtoDerp
         public String spriteNumber;
         public Vector2 origPos;
         bool isDead = false;
-        public int nextLevel = 0;
-        int goalAnimationNumber = 0;
-        int animationTimer = 0;
-        public GoalBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber,int nextLevel)
+        SpriteStripAnimationHandler ani;
+        public float width, height;
+        public float rotationAngle = 0;
+        public WaterBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber, float rotation, float width,float height)
             : base(g)
         {
             this.pos = Constants.player1SpawnLocation + pos;
             this.origPos = pos;
             this.drawPriority = Constants.PLAYER_DRAWPRI;
             this.spriteNumber = spriteNumber;
+            this.rotationAngle = rotation;
+            this.width = width;
+            this.height = height;
             LoadContent();
             SetUpPhysics(Constants.player1SpawnLocation + pos);
-            origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
-            fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
-            this.nextLevel = nextLevel;
+            origin = new Vector2(ani.widthOf() / 2, ani.heightOf() / 2);
+            //fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
+            //fixture.OnSeparation += new OnSeparationEventHandler(OnSeparation);
+
+
+        }
+
+        void OnSeparation(Fixture fixtureA, Fixture fixtureB)
+        {
+
+            LinkedList<PlayableCharacter> players = game.getEntitiesOfType<PlayableCharacter>();
+            PlayableCharacter player = players.First();
+            if (fixtureB == player.fixture)
+            {
+                game.world.Gravity = new Vector2(0, 5.0f);
+            }
+            //player.body.IgnoreGravity = false;
 
         }
         bool OnCollision(Fixture fixtureA, Fixture fixtureB, Contact contact)
@@ -57,32 +74,26 @@ namespace ProtoDerp
             if (contact.IsTouching())
             {
                 LinkedList<PlayableCharacter> players = game.getEntitiesOfType<PlayableCharacter>();
-                
+
                 PlayableCharacter player = players.First();
                 if (fixtureB == player.fixture)
                 {
-                    if (!game.testLevel)
-                    {
-                        this.IsVisible = false;
-                        game.numDeath = 0;
-                        game.nextLevel(nextLevel++);
-                    }
-                }
-                else
-                {
-                    if(game.deathBlockGoalCollision)
-                        game.PlayerDies();
+                    game.world.Gravity = new Vector2(0, 2.5f);
+                    fixtureB.CollisionFilter.IgnoreCollisionWith(fixtureA);
+                    fixtureA.CollisionFilter.IgnoreCollisionWith(fixtureB);
+                    game.inWater = true;
+                    game.waterCollisionTime = 15;
+                    return true;
+
                 }
             }
-            return true;
+            return false;
         }
 
         protected virtual void SetUpPhysics(Vector2 position)
         {
-            World world = game.world;
+            World world = game.world3;
             float mass = 1;
-            float width = playerSprite.index.Width;
-            float height = playerSprite.index.Height;
             fixture = FixtureFactory.CreateRectangle(world, (float)ConvertUnits.ToSimUnits(width), (float)ConvertUnits.ToSimUnits(height), mass);
             body = fixture.Body;
             fixture.Body.BodyType = BodyType.Static;
@@ -94,6 +105,8 @@ namespace ProtoDerp
             body.FixedRotation = true;
             body.LinearDamping = 0.5f;
             body.AngularDamping = 1f;
+            body.Rotation = rotationAngle * (float)Math.PI / 180f;
+
         }
 
         //private Vector3[] baseHB = new Vector3[Constants.HEALTH_BAR_SEGMENT_COUNT];
@@ -117,13 +130,7 @@ namespace ProtoDerp
         public void LoadContent()
         {
             playerSprite = game.getSprite(spriteNumber);
-        }
-        public void updateGoalImage()
-        {
-            playerSprite = game.getSprite("ahLogo" + goalAnimationNumber);
-            goalAnimationNumber++;
-            if (goalAnimationNumber > 3)
-                goalAnimationNumber = 0;
+            ani = game.getSpriteAnimation(spriteNumber);
         }
 
         public bool isExpanding()
@@ -166,18 +173,38 @@ namespace ProtoDerp
 
         public override void Update(GameTime gameTime, float worldSpeed)
         {
-            animationTimer++;
-            if(animationTimer>10)
+            ani.Update();
+            game.inWater=isInWater();
+        }
+
+        public bool isInWater()
+        {
+
+            LinkedList<PlayableCharacter> players = game.getEntitiesOfType<PlayableCharacter>();
+            PlayableCharacter player = players.First();
+            Rectangle playerRec = new Rectangle((int)ConvertUnits.ToDisplayUnits(player.body.Position.X) - (int)player.playerSprite.index.Width/2,
+                       (int)ConvertUnits.ToDisplayUnits(player.body.Position.Y) - (int)player.playerSprite.index.Height/2, 
+                       (int)player.playerSprite.index.Width, (int)player.playerSprite.index.Height);
+            Rectangle waterRec = new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X)-(int)width/2,
+                (int)ConvertUnits.ToDisplayUnits(body.Position.Y) - (int)height / 2,
+                (int)width, (int)height);
+            if (playerRec.Intersects(waterRec) || waterRec.Contains(playerRec))
             {
-                updateGoalImage();
-                animationTimer = 0;
+                game.world.Gravity = new Vector2(0, 1.5f);
+                return true;
             }
+            else
+            {
+                game.world.Gravity = new Vector2(0, 5f);
+                return false;
+            }
+            
+            
+
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            if (!IsVisible)
-                return;
             Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
             DrawingTool test = game.drawingTool;
             int i = playerSprite.index.Width;
@@ -186,20 +213,29 @@ namespace ProtoDerp
             Color drawColor = Color.White;
             if (isSelected)
                 drawColor = Color.Green;
-            spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, drawColor, body.Rotation, origin, SpriteEffects.None, 0f);
-
+            //spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, drawColor, body.Rotation, origin, SpriteEffects.None, 0f);
+            if (ani.getStateCount() == 1)
+            {
+                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor*0.11f, body.Rotation, origin, SpriteEffects.None, 0f);
+            }
+            else
+            {
+                ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)),
+                       origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),
+                           (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), true, new Vector2(0, 0));
+            }
         }
+
         public void DrawShadow(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            if (!IsVisible)
-                return;
             Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
             DrawingTool test = game.drawingTool;
             int i = playerSprite.index.Width;
             Point bottomRight = new Point(playerSprite.index.Width, playerSprite.index.Height);
             Rectangle targetRect = new Rectangle((int)ringDrawPoint.X, (int)ringDrawPoint.Y, bottomRight.X, bottomRight.Y);
             Color drawColor = Color.Black;
-            spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X)+5, (int)ConvertUnits.ToDisplayUnits(body.Position.Y)-5, (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, drawColor*0.25f, body.Rotation, origin, SpriteEffects.None, 0f);
+
+            //spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X)+5, (int)ConvertUnits.ToDisplayUnits(body.Position.Y)-5, (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, drawColor*0.11f, body.Rotation, origin, SpriteEffects.None, 0f);
 
         }
 
