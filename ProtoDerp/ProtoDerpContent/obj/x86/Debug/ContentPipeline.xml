@@ -1295,6 +1295,42 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\mtPix.xnb</Output>
       <Time>2013-01-31T20:26:40.479389-05:00</Time>
     </Item>
+    <Item>
+      <Source>Water.png</Source>
+      <Name>Water</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Water.xnb</Output>
+      <Time>2013-02-06T09:46:09.9271221-05:00</Time>
+    </Item>
+    <Item>
+      <Source>dirtyBlock.png</Source>
+      <Name>dirtyBlock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\dirtyBlock.xnb</Output>
+      <Time>2013-02-06T12:23:49.471177-05:00</Time>
+    </Item>
+    <Item>
+      <Source>spriteStripFlower.png</Source>
+      <Name>spriteStripFlower</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\spriteStripFlower.xnb</Output>
+      <Time>2013-02-06T11:33:57.3160355-05:00</Time>
+    </Item>
+    <Item>
+      <Source>dirtyBlock2.png</Source>
+      <Name>dirtyBlock2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\dirtyBlock2.xnb</Output>
+      <Time>2013-02-06T13:23:27.7058403-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

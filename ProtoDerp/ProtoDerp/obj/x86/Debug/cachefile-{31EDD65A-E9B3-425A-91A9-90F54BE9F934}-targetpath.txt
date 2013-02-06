@@ -156,6 +156,10 @@ Content\GrassHill.xnb
 Content\GameGrumps.xnb
 Content\simplePix.xnb
 Content\mtPix.xnb
+Content\Water.xnb
+Content\dirtyBlock.xnb
+Content\spriteStripFlower.xnb
+Content\dirtyBlock2.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

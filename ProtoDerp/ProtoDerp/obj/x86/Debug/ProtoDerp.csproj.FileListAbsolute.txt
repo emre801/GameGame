@@ -363,3 +363,7 @@ C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDer
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\GameGrumps.xnb
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\simplePix.xnb
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\mtPix.xnb
+C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Water.xnb
+C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\dirtyBlock.xnb
+C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\spriteStripFlower.xnb
+C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\dirtyBlock2.xnb

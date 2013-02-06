@@ -581,7 +581,7 @@ namespace ProtoDerp
            // {
 
                 //currentPointValue = 0;
-            if (game.blockType != Game.BlockType.Death && game.blockType != Game.BlockType.Normal || Mouse.GetState().RightButton == ButtonState.Pressed)
+            if (game.blockType != Game.BlockType.Death && game.blockType != Game.BlockType.Normal && game.blockType != Game.BlockType.WaterBlock || Mouse.GetState().RightButton == ButtonState.Pressed)
             {
                 
                     currentPointValue = 0;
@@ -603,7 +603,7 @@ namespace ProtoDerp
                 {
                     drawObjectsInLine(drawPoint1, drawPoint2);
                 }
-                else if ((currentSquareValue >= 1 && other % everyOther * 10 == 0) || currentSquareValue == 2)
+                else if ((currentSquareValue >= 1 && other % everyOther * 1000 == 0) || currentSquareValue == 2)
                 {
                     drawObjectsInSquare(drawPoint1, drawPoint2);
                 }
@@ -611,7 +611,7 @@ namespace ProtoDerp
             }
             else
             {
-                if (game.blockType == Game.BlockType.Normal || game.blockType == Game.BlockType.Death)
+                if (game.blockType == Game.BlockType.Normal || game.blockType == Game.BlockType.Death || game.blockType == Game.BlockType.WaterBlock)
                     dragAndDrawObjects(drawPoint1, drawPoint2);
                 else
                 {
@@ -1325,10 +1325,12 @@ namespace ProtoDerp
                                    (int)pos.Y, (int)blockWidth, (int)blockHeight), true, new Vector2(0, 0));
                     }
                 }
+                
                       foreach (Entity e in linedUpBlocks)
                         {
                             e.Draw(gameTime, spriteBatch);
                         }
+                
                     
                     //other++;
                 //}

@@ -781,6 +781,21 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="dirtyBlock.png">
+      <Name>dirtyBlock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="spriteStripFlower.png">
+      <Name>spriteStripFlower</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="dirtyBlock2.png">
+      <Name>dirtyBlock2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="Template\Level3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>Level3</Name>
@@ -795,6 +810,11 @@
     </Content>
     <Compile Include="TopCurtain.png">
       <Name>TopCurtain</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Water.png">
+      <Name>Water</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

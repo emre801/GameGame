@@ -58,6 +58,14 @@
 -398 3 GreenHill Block 615 840 1 0
 -1169 78 GreenHill Block 615 840 1 0
 -1940 -71 GreenHill Block 615 840 1 0
+76 73 spriteStripFlower Block 48 46 2 0
+237 71 spriteStripFlower Block 48 46 2 0
+496 63 spriteStripFlower Block 48 46 2 0
+1328 90 spriteStripFlower Block 48 46 2 0
+1433 78 spriteStripFlower Block 48 46 2 0
+710 78 spriteStripFlower Block 48 46 2 0
+906 58 spriteStripFlower Block 48 46 2 0
+3924 1222 blankImage Block 2090 1330 0 0
 883 64 deathSpikes DeathBlock 0
 752 66 deathSpikes DeathBlock 0
 623 66 deathSpikes DeathBlock 0

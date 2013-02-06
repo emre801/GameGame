@@ -146,7 +146,8 @@ namespace ProtoDerp
             {
                 //DrawBackThing(gameTime, spriteBatch);
                 DrawCredits(gameTime, spriteBatch);
-                DrawText(spriteBatch, 0.05f, 0.95f, "InWater" + game.inWater);
+                //Debug info for debugging
+                //DrawText(spriteBatch, 0.05f, 0.95f, "InWater" + game.inWater);
                 if (game.pause)
                 {
                     DrawText(spriteBatch, 0.05f, 0.9f, game.songName);

@@ -80,6 +80,13 @@
 -2785 34 derrick.png Block 105 75 0 0
 -3249 -221 derrick.png Block 105 75 0 0
 -2258 72 derrick.png Block 105 75 0 0
+150 31 spriteStripFlower Block 48 46 2 0
+543 34 spriteStripFlower Block 48 46 2 0
+894 34 spriteStripFlower Block 48 46 2 0
+-45 31 spriteStripFlower Block 48 46 2 0
+761 41 spriteStripFlower Block 48 46 2 0
+341 38 spriteStripFlower Block 48 46 2 0
+674 38 spriteStripFlower Block 48 46 2 0
 1018 -1 ahLogo0 GoalBlock 2
 430 -185 GreenHill2 SuperBack 371 466
 1036 -193 GreenHill2 SuperBack 371 466
@@ -88,7 +95,6 @@
 72 -384 CloudBack SuperBack 310 40
 -171 -547 CloudBack SuperBack 310 40
 1051 -602 CloudBack SuperBack 310 40
-260 -140 derrick.png WaterBlock 0 300 385
 Demi -349 1182 -532 795
 BGCOLOR 133 168 232 
 CAM 0.55

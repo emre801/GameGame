@@ -184,6 +184,21 @@
 -10 -960 CloudBack Block 70 310 1 0
 1563 -989 CloudBack Block 70 310 1 0
 2472 -875 CloudBack Block 70 310 1 0
+166 29 spriteStripFlower Block 48 46 2 0
+586 27 spriteStripFlower Block 48 46 2 0
+925 35 spriteStripFlower Block 48 46 2 0
+1546 29 spriteStripFlower Block 48 46 2 0
+1372 -383 spriteStripFlower Block 48 46 2 0
+955 -381 spriteStripFlower Block 48 46 2 0
+352 -377 spriteStripFlower Block 48 46 2 0
+-10 -377 spriteStripFlower Block 48 46 2 0
+179 -838 spriteStripFlower Block 48 46 2 0
+483 -838 spriteStripFlower Block 48 46 2 0
+939 -838 spriteStripFlower Block 48 46 2 0
+1965 -842 spriteStripFlower Block 48 46 2 0
+1325 -842 spriteStripFlower Block 48 46 2 0
+2238 33 spriteStripFlower Block 48 46 2 0
+2406 31 spriteStripFlower Block 48 46 2 0
 2308 11 ahLogo0 GoalBlock 8
 1224 -667 deathBall MovingPath 5 1232 -157 1249 217 
 775 -287 deathBall MovingPath 5 783 222 797 -168 
@@ -223,6 +238,6 @@
 1976 -958 CloudBack SuperBack 225 50
 2417 -852 CloudBack SuperBack 225 50
 Demi -100 3621 -862 561
-BGCOLOR 133 195 232 
+BGCOLOR 133 194 232 
 CAM 0.5104445
 CPOS 317.8452 335.9048

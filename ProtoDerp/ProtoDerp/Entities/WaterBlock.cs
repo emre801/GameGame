@@ -174,7 +174,7 @@ namespace ProtoDerp
         public override void Update(GameTime gameTime, float worldSpeed)
         {
             ani.Update();
-            game.inWater=isInWater();
+            isInWater();
         }
 
         public bool isInWater()
@@ -191,13 +191,10 @@ namespace ProtoDerp
             if (playerRec.Intersects(waterRec) || waterRec.Contains(playerRec))
             {
                 game.world.Gravity = new Vector2(0, 1.5f);
-                return true;
+                game.inWater = true;
+                
             }
-            else
-            {
-                game.world.Gravity = new Vector2(0, 5f);
-                return false;
-            }
+            return true;
             
             
 
@@ -205,18 +202,21 @@ namespace ProtoDerp
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            
+
             Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
             DrawingTool test = game.drawingTool;
             int i = playerSprite.index.Width;
             Point bottomRight = new Point(playerSprite.index.Width, playerSprite.index.Height);
             Rectangle targetRect = new Rectangle((int)ringDrawPoint.X, (int)ringDrawPoint.Y, bottomRight.X, bottomRight.Y);
-            Color drawColor = Color.White;
+            Color drawColor = Color.LightBlue;
             if (isSelected)
                 drawColor = Color.Green;
             //spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, drawColor, body.Rotation, origin, SpriteEffects.None, 0f);
             if (ani.getStateCount() == 1)
             {
-                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor*0.11f, body.Rotation, origin, SpriteEffects.None, 0f);
+                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), 
+                    (int)width, (int)height), null, drawColor*0.30f, body.Rotation, origin, SpriteEffects.None, 0f);
             }
             else
             {

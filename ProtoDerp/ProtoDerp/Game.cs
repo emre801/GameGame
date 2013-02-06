@@ -263,6 +263,12 @@ namespace ProtoDerp
             sprites.Add("lC3", new Sprite(Content, "lC3"));
 
             sprites.Add("graph", new Sprite(Content, "graph"));
+            sprites.Add("Water", new Sprite(Content, "Water"));
+            blockList.AddLast("Water");
+            sprites.Add("dirtyBlock", new Sprite(Content, "dirtyBlock"));
+            blockList.AddLast("dirtyBlock");
+            sprites.Add("dirtyBlock2", new Sprite(Content, "dirtyBlock2"));
+            blockList.AddLast("dirtyBlock2");
             sprites.Add("skyScrapper", new Sprite(Content,"skyScrapper"));
             blockList.AddLast("skyScrapper");
             sprites.Add("simplePix", new Sprite(Content, "simplePix"));
@@ -421,6 +427,11 @@ namespace ProtoDerp
                 , 4,120));//fan
             sprites.Add("fan", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "fan"), 4, 120).getIndex(), "fan"));
             blockList.AddLast("fan");
+
+            spriteAnimation.Add("spriteStripFlower", new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripFlower")
+                , 8, 120));//fan
+            sprites.Add("spriteStripFlower", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "fan"), 4, 120).getIndex(), "spriteStripFlower"));
+            blockList.AddLast("spriteStripFlower");
 
             spriteAnimation.Add("missile_strip_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "missile_strip_strip4")
                 , 4, 45));//missle
@@ -821,6 +832,7 @@ namespace ProtoDerp
 
         protected override void Update(GameTime gameTime)
         {
+            inWater = false;
             bool reloadButtons = false;
             if (inTransition)
                 return;
@@ -983,6 +995,10 @@ namespace ProtoDerp
                     //animationTime.Restart();
                     //return;
                 }
+            }
+            if (inWater)
+            {
+                world.Gravity = new Vector2(0, 5);
             }
 
             if (reloadButtons)

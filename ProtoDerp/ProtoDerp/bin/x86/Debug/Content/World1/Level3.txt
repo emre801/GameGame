@@ -62,6 +62,12 @@
 2011 769 GreenHill Block 1095 925 1 360
 2812 931 GreenHill Block 1095 925 1 360
 3622 745 GreenHill Block 1095 925 1 360
+-118 80 spriteStripFlower Block 48 46 2 0
+76 65 spriteStripFlower Block 48 46 2 0
+1358 74 spriteStripFlower Block 48 46 2 0
+1553 80 spriteStripFlower Block 48 46 2 0
+-28 65 spriteStripFlower Block 48 46 2 0
+2606 2094 blankImage Block 2375 2470 0 0
 148 164 deathSpikes DeathBlock 89
 149 236 deathSpikes DeathBlock 89
 150 362 deathSpikes DeathBlock 89
@@ -138,6 +144,6 @@
 2469 766 GreenHill SuperBack 755 945
 3142 755 GreenHill SuperBack 755 945
 Demi -306 1153 -527 604
-BGCOLOR 133 170 232 
+BGCOLOR 133 168 232 
 CAM 0.3533335
 CPOS 732.2817 899.8631
