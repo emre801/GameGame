@@ -57,10 +57,11 @@ namespace ProtoDerp
             this.spriteNumber = spriteNumber;
             this.height = height;
             this.width = width;
-            LoadContent();
+            
             this.drawLevel = drawLevel;
             this.rotationAngle = rotation;
             SetUpPhysics(Constants.player1SpawnLocation + pos);
+            LoadContent();
             origin = new Vector2(ani.widthOf() / 2, ani.heightOf() / 2);
             fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
         }
@@ -129,39 +130,59 @@ namespace ProtoDerp
             playerSprite = game.getSprite(spriteNumber);
             ani = game.getSpriteAnimation(spriteNumber);
 
-            /*
-            if (spriteNumber.Equals("bigBlock")&& width<4000 && height<4000)
+            //XNA Framework HiDef profile supports a maximum Texture2D size of 4096
+            //if ((spriteNumber.Equals("bigBlock") || spriteNumber.Equals("groundWall"))&& width < 4096 && height < 4096)
+            //{
+                if ((spriteNumber.Equals("bigBlock"))&& width < 4096 && height < 4096)
             {
-                Color[] cData = new Color[(int)(width * height)];
-                dynamicPattern = game.getCachedDirt(new Rectangle(1,1,(int)width, (int)height));
+                Color[] cData = new Color[(int)((int)width * (int)height)];
+                dynamicPattern = game.getCachedDirt(new Rectangle(0,0,(int)width, (int)height));
                 
                 if (dynamicPattern == null)
                 {
 
+
+                    Color[] template = new Color[95 * 95];
                     
-                    Color[] template=new Color[256*28];
-                    
-                    game.getSprite("groundTemplate").index.GetData<Color>(template);
+                    game.getSprite("dirtyBlock2").index.GetData<Color>(template);
                     int counter = 0;
                     int maxCounter = template.Length;
                     for (int x = 0; x < width; x++)
                     {
                         for (int y = 0; y < height; y++)
                         {
-                            int xMod = x % 256;
-                            int yMod = y % 28;
-                            cData[(int)(x + y * width)] = template[xMod+yMod*256];
+                            int xMod = (int)origPos.X-(int)width/2+ x;// % 95;
+                            int yMod = (int)origPos.Y - (int)height / 2 + y; //y % 95;
+                            //xMod = xMod / (int)width;
+                            //yMod = yMod / (int)height;
+                            xMod = xMod % 95;
+                            yMod = yMod % 95;
+                            
+                            if (xMod < 0)
+                            {
+                                xMod = xMod+95;
+                            }
+                            if (yMod < 0)
+                            {
+                                yMod =yMod+95;
+                            }
+                            Color tempColor=template[xMod + yMod * 95];
+                            if ((int)(x + y * (int)width) < cData.Length)
+                            {
+                                cData[(int)(x + y * (int)width)] = tempColor;
+                                
+                            }
                             counter++;
                             if (counter == maxCounter)
                                 counter = 0;//new Color(121, 98, 45);
                         }
                     }
-                     
+                     /*
 
                     Color dirtColor = new Color(147, 121, 47);
                     Color dirtColor2 = new Color(105, 87, 46);
                     Color dirtColor3 = new Color(150, 123, 48);
-                    /*
+                    
                     for (int x = (int)width-1; x >= 0; x-=2)
                     {
                         for (int y = (int)height-1; y >= 0; y-=2)
@@ -206,16 +227,16 @@ namespace ProtoDerp
                                 
                             
                         }
-                    }
+                    }*/
                      
                     this.dynamicPattern = new Texture2D(game.drawingTool.getGraphicsDevice(), (int)width, (int)height);
                     dynamicPattern.SetData<Color>(cData);
-                    game.addCachedDirt(new Rectangle(1, 1, (int)width, (int)height), dynamicPattern);
+                    game.addCachedDirt(new Rectangle(0, 0, (int)width, (int)height), dynamicPattern);
                 }
                 heightDiff = playerSprite.index.Height - height;
                 widthDiff = playerSprite.index.Width - width;
                 //origin = new Vector2(width / 2, height / 2);
-            }*/
+            }
                  
         }
 
@@ -300,18 +321,19 @@ namespace ProtoDerp
 
             if (ani.getStateCount() == 1)
             {
-                /*
-                if(spriteNumber.Equals("bigBlock")&& width<4000 && height<4000)
+
+                if ((spriteNumber.Equals("bigBlock")) && width < 4096 && height < 4096)
                 {
-                    spriteBatch.Draw(dynamicPattern, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X+ConvertUnits.ToSimUnits(widthDiff/2f)),
-                        (int)ConvertUnits.ToDisplayUnits(body.Position.Y+ConvertUnits.ToSimUnits(heightDiff/2f)), (int)dynamicPattern.Width, (int)dynamicPattern.Height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
-                
+                    spriteBatch.Draw(dynamicPattern, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X + ConvertUnits.ToSimUnits(widthDiff / 2f)),
+                        (int)ConvertUnits.ToDisplayUnits(body.Position.Y + ConvertUnits.ToSimUnits(heightDiff / 2f)), (int)dynamicPattern.Width, (int)dynamicPattern.Height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
+
                 }
                 else
-                {*/
-                 
-                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
-                //}
+                {
+
+
+                    spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
+                }
             }
             else
             {

@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="139776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="140800">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>6+G6uYrziMkz+rLYv7thXni6Z64=</dsig:DigestValue>
+        <dsig:DigestValue>axJgr7hQ3XX42Vwv5WgvrKBk8qI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -725,7 +725,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>/4j24v7EBPW1S316oAeAb5D+0HU=</dsig:DigestValue>
+      <dsig:DigestValue>cvzvVjDk5UcV83joI41i6UXr62Y=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\lC1.xnb" size="59955">
