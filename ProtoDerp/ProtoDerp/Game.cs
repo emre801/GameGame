@@ -217,6 +217,31 @@ namespace ProtoDerp
             this.isInCreatorMode = true;
         }
 
+        public void preLoadEachLevel()
+        {
+            for(int i =0; i<20;i++)
+            {
+                LevelEditor le = new LevelEditor(this);
+                le.readFile(i);
+            }
+            backToTitleScreen = false;
+            pause = false;
+            restart = false;
+            world = new World(new Vector2(0, 5.0f));
+            entities.Clear();
+            toBeAdded.Clear();
+            cachedEntityLists = new Dictionary<Type, object>();
+            //drawingTool.initialize();
+            //drawingTool.resetCamera();
+            gMode = 6;
+            cachedEntityLists = new Dictionary<Type, object>();
+            Title = new TitleScreen(this);
+            Title.IsVisible = true;
+            addEntity(Title);
+            isInCreatorMode = false;
+
+        }
+
         /**
         * Get the dimensions of the window
         */
@@ -430,8 +455,24 @@ namespace ProtoDerp
 
             spriteAnimation.Add("spriteStripFlower", new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripFlower")
                 , 8, 120));//fan
-            sprites.Add("spriteStripFlower", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "fan"), 4, 120).getIndex(), "spriteStripFlower"));
+            sprites.Add("spriteStripFlower", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripFlower"), 4, 120).getIndex(), "spriteStripFlower"));
             blockList.AddLast("spriteStripFlower");
+
+            /////////////////////
+            spriteAnimation.Add("spriteStripBlueFlowers", new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripBlueFlowers")
+                , 8, 120));//fan
+            sprites.Add("spriteStripBlueFlowers", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripBlueFlowers"), 4, 120).getIndex(), "spriteStripBlueFlowers"));
+            blockList.AddLast("spriteStripBlueFlowers");
+            /////////////////////
+
+            /////////////////////
+            spriteAnimation.Add("spriteStripPurpleFlower", new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripPurpleFlower")
+                , 8, 120));//fan
+            sprites.Add("spriteStripPurpleFlower", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripPurpleFlower"), 4, 120).getIndex(), "spriteStripPurpleFlower"));
+            blockList.AddLast("spriteStripPurpleFlower");
+            /////////////////////
+
+
 
             spriteAnimation.Add("missile_strip_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "missile_strip_strip4")
                 , 4, 45));//missle
@@ -477,6 +518,7 @@ namespace ProtoDerp
            
             //playSong("Music//GameBeat2");
             preloadSongs();
+            preLoadEachLevel();
              
         
         }

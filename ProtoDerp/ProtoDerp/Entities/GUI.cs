@@ -342,8 +342,8 @@ namespace ProtoDerp
             DrawText(spriteBatch, position, i += 0.025f, "Z to Save");
             DrawText(spriteBatch, position, i += 0.025f, "T, Delete all Death Blocks");
             DrawText(spriteBatch, position, i += 0.025f, "Y, Delete all Normal Blocks");
-            DrawText(spriteBatch, position, i += 0.025f, "J, Delete all Normal Blocks, Background");
-            DrawText(spriteBatch, position, i += 0.025f, "K, Delete all Normal Blocks, Foreground");
+            DrawText(spriteBatch, position, i += 0.025f, "K, Delete all Normal Blocks, Background");
+            DrawText(spriteBatch, position, i += 0.025f, "J, Delete all Normal Blocks, Foreground");
             DrawText(spriteBatch, position, i += 0.025f, "D, Delete all Super Backgrounds");
             DrawText(spriteBatch, position, i += 0.025f, "I, Delete all Magnet Blocks");
             DrawText(spriteBatch, position, i += 0.025f, "O, Delete all MovingCycle Blocks");

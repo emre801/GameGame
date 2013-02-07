@@ -9,16 +9,6 @@
 350 90 grassTemplate Block 35 256 2 0
 603 90 grassTemplate Block 35 256 2 0
 824 90 grassTemplate Block 35 256 2 0
-941 138 groundWall Block 120 34 2 180
-941 253 groundWall Block 120 34 2 180
-941 361 groundWall Block 120 34 2 180
-941 470 groundWall Block 120 34 2 180
-941 609 groundWall Block 120 34 2 180
-1275 609 groundWall Block 120 34 2 360
-1275 474 groundWall Block 120 34 2 360
-1275 353 groundWall Block 120 34 2 360
-1275 228 groundWall Block 120 34 2 360
-1275 161 groundWall Block 120 34 2 360
 829 91 grassTemplate Block 35 256 2 360
 1359 104 grassTemplate Block 35 201 2 360
 -20 194 groundWall Block 165 39 2 360
@@ -66,6 +56,20 @@
 710 78 spriteStripFlower Block 48 46 2 0
 906 58 spriteStripFlower Block 48 46 2 0
 3924 1222 blankImage Block 2090 1330 0 0
+949 167 groundWall Block 125 19 2 179
+949 291 groundWall Block 125 19 2 179
+949 416 groundWall Block 125 19 2 179
+950 541 groundWall Block 125 19 2 179
+1261 580 groundWall Block 125 19 2 0
+1261 456 groundWall Block 125 19 2 0
+1262 331 groundWall Block 125 19 2 0
+1263 206 groundWall Block 125 19 2 0
+1263 176 groundWall Block 125 19 2 0
+949 608 groundWall Block 125 19 2 180
+1113 673 grassTemplate Block 35 321 2 360
+1003 644 spriteStripFlower Block 48 46 2 360
+1198 644 spriteStripFlower Block 48 46 2 360
+1137 646 spriteStripFlower Block 48 46 2 360
 883 64 deathSpikes DeathBlock 0
 752 66 deathSpikes DeathBlock 0
 623 66 deathSpikes DeathBlock 0

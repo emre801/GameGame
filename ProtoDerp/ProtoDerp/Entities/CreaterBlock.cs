@@ -971,7 +971,7 @@ namespace ProtoDerp
             }
             if (keyInput.IsNewKeyPressed(Keys.J))
             {
-                deleteAllSelectedType<Block>(0);
+                deleteAllSelectedType<Block>(2);
             }
             if (keyInput.IsNewKeyPressed(Keys.K))
             {

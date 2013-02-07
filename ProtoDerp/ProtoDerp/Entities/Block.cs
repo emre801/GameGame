@@ -133,10 +133,10 @@ namespace ProtoDerp
             //XNA Framework HiDef profile supports a maximum Texture2D size of 4096
             //if ((spriteNumber.Equals("bigBlock") || spriteNumber.Equals("groundWall"))&& width < 4096 && height < 4096)
             //{
-                if ((spriteNumber.Equals("bigBlock"))&& width < 4096 && height < 4096)
+            if ((spriteNumber.Equals("bigBlock"))&& width < 4096 && height < 4096)
             {
                 Color[] cData = new Color[(int)((int)width * (int)height)];
-                dynamicPattern = game.getCachedDirt(new Rectangle(0,0,(int)width, (int)height));
+                dynamicPattern = game.getCachedDirt(new Rectangle((int)body.Position.X, (int)body.Position.Y, (int)width, (int)height));
                 
                 if (dynamicPattern == null)
                 {
@@ -231,12 +231,74 @@ namespace ProtoDerp
                      
                     this.dynamicPattern = new Texture2D(game.drawingTool.getGraphicsDevice(), (int)width, (int)height);
                     dynamicPattern.SetData<Color>(cData);
-                    game.addCachedDirt(new Rectangle(0, 0, (int)width, (int)height), dynamicPattern);
+                    game.addCachedDirt(new Rectangle((int)body.Position.X, (int)body.Position.Y, (int)width, (int)height), dynamicPattern);
                 }
                 heightDiff = playerSprite.index.Height - height;
                 widthDiff = playerSprite.index.Width - width;
                 //origin = new Vector2(width / 2, height / 2);
             }
+
+            /////////////////////////////
+            /*
+            if ((spriteNumber.Equals("groundWall")) && width < 4096 && height < 4096)
+            {
+                Color[] cData = new Color[(int)((int)width * (int)height)];
+                dynamicPattern = game.getCachedDirt(new Rectangle(0, 0, (int)width, (int)height));
+
+                if (dynamicPattern == null)
+                {
+                    Color[] groundTemp = new Color[74 * 200];
+                    game.getSprite("groundWall").index.GetData<Color>(groundTemp);
+                    Color blankColor = new Color(0, 0, 0, 0);
+                    Color[] template = new Color[95 * 95];
+
+                    game.getSprite("dirtyBlock2").index.GetData<Color>(template);
+                    int counter = 0;
+                    int maxCounter = template.Length;
+                    for (int x = 0; x < width; x++)
+                    {
+                        for (int y = 0; y < height; y++)
+                        {
+                            int xMod = (int)origPos.X - (int)width / 2 + x;// % 95;
+                            int yMod = (int)origPos.Y - (int)height / 2 + y; //y % 95;
+                            //xMod = xMod / (int)width;
+                            //yMod = yMod / (int)height;
+                            xMod = xMod % 95;
+                            yMod = yMod % 95;
+
+                            if (xMod < 0)
+                            {
+                                xMod = xMod + 95;
+                            }
+                            if (yMod < 0)
+                            {
+                                yMod = yMod + 95;
+                            }
+                            Color tempColor = template[xMod + yMod * 95];
+                            if ((int)(x + y * (int)width) < cData.Length)
+                            {
+                                if (!template[(int)(x + y * (int)width)].Equals(blankColor))
+                                    cData[(int)(x + y * (int)width)] = tempColor;
+
+                            }
+                            counter++;
+                            if (counter == maxCounter)
+                                counter = 0;//new Color(121, 98, 45);
+                        }
+                    }
+
+                    this.dynamicPattern = new Texture2D(game.drawingTool.getGraphicsDevice(), (int)width, (int)height);
+                    dynamicPattern.SetData<Color>(cData);
+                    game.addCachedDirt(new Rectangle(0, 0, (int)width, (int)height), dynamicPattern);
+                }
+                heightDiff = playerSprite.index.Height - height;
+                widthDiff = playerSprite.index.Width - width;
+                
+                    //heightDiff = playerSprite.index.Width - width;
+                    //widthDiff = playerSprite.index.Height - height;
+                
+                //origin = new Vector2(width / 2, height / 2);
+            }*/
                  
         }
 
@@ -328,6 +390,17 @@ namespace ProtoDerp
                         (int)ConvertUnits.ToDisplayUnits(body.Position.Y + ConvertUnits.ToSimUnits(heightDiff / 2f)), (int)dynamicPattern.Width, (int)dynamicPattern.Height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
 
                 }
+                /*else if ((spriteNumber.Equals("groundWall")) && width < 4096 && height < 4096)
+                {
+                    int widthdiffy = (int)(widthDiff / 2f);
+                    int heightdiffy = (int)(heightDiff / 2f);
+                    spriteBatch.Draw(dynamicPattern, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X + ConvertUnits.ToSimUnits(widthdiffy)),
+                        (int)ConvertUnits.ToDisplayUnits(body.Position.Y + ConvertUnits.ToSimUnits(heightdiffy)), (int)dynamicPattern.Width, (int)dynamicPattern.Height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
+
+                
+
+
+                }*/
                 else
                 {
 

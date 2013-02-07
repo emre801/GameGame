@@ -1085,7 +1085,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\groundWall.xnb</Output>
-      <Time>2013-02-06T16:56:55.2337246-05:00</Time>
+      <Time>2013-02-06T21:03:59.2104574-05:00</Time>
     </Item>
     <Item>
       <Source>leftCurtain.png</Source>
@@ -1330,6 +1330,24 @@
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\dirtyBlock2.xnb</Output>
       <Time>2013-02-06T13:23:27.7058403-05:00</Time>
+    </Item>
+    <Item>
+      <Source>spriteStripBlueFlowers.png</Source>
+      <Name>spriteStripBlueFlowers</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\spriteStripBlueFlowers.xnb</Output>
+      <Time>2013-02-07T12:39:13.1934104-05:00</Time>
+    </Item>
+    <Item>
+      <Source>spriteStripPurpleFlower.png</Source>
+      <Name>spriteStripPurpleFlower</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\spriteStripPurpleFlower.xnb</Output>
+      <Time>2013-02-07T12:39:13.2004108-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -160,6 +160,8 @@ Content\Water.xnb
 Content\dirtyBlock.xnb
 Content\spriteStripFlower.xnb
 Content\dirtyBlock2.xnb
+Content\spriteStripBlueFlowers.xnb
+Content\spriteStripPurpleFlower.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt
