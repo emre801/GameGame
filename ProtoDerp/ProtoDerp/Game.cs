@@ -146,6 +146,9 @@ namespace ProtoDerp
 
         public bool inWater = false;
         public int waterCollisionTime = -1;
+        public int[] xValues = new int[1000];
+        public int[] yValues = new int[1000];
+        public int xycounter = 0;
 
         public Game()
         {
@@ -518,7 +521,8 @@ namespace ProtoDerp
            
             //playSong("Music//GameBeat2");
             preloadSongs();
-            preLoadEachLevel();
+            if(Constants.PRELOAD_LEVELS)
+                preLoadEachLevel();
              
         
         }
@@ -876,6 +880,7 @@ namespace ProtoDerp
         {
             inWater = false;
             bool reloadButtons = false;
+            xycounter = 0;
             if (inTransition)
                 return;
             playerOneInput.Update(gameTime);
@@ -1046,6 +1051,10 @@ namespace ProtoDerp
             if (reloadButtons)
                 addButtons();
             base.Update(gameTime);
+            if (xycounter > 0)
+            {
+                int k121 = xValues[0]+yValues[0];
+            }
 
         }
         public void pauseMusic()

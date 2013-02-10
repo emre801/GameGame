@@ -128,11 +128,16 @@ namespace ProtoDerp
                     spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X-2.5),
                  (int)(pos.Y-2.5),
                  (int)widthDiff + 5, (int)heightDiff + 5), null, Color.Black, 0, origin, SpriteEffects.FlipHorizontally, 0f);
+                    
+
                 }
                 spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X),
                  (int)(pos.Y),
                  (int)widthDiff, (int)heightDiff), null, Color.White, 0, origin, SpriteEffects.FlipHorizontally, 0f);
-                
+
+                game.xValues[game.xycounter] = (int)pos.X;
+                game.yValues[game.xycounter] = (int)pos.Y;
+                game.xycounter = game.xycounter + 1;
             
             }
             if (game.gMode == 1 || game.gMode == 6)

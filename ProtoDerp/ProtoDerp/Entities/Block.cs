@@ -133,7 +133,7 @@ namespace ProtoDerp
             //XNA Framework HiDef profile supports a maximum Texture2D size of 4096
             //if ((spriteNumber.Equals("bigBlock") || spriteNumber.Equals("groundWall"))&& width < 4096 && height < 4096)
             //{
-            if ((spriteNumber.Equals("bigBlock"))&& width < 4096 && height < 4096)
+            if ((spriteNumber.Equals("bigBlock"))&& width < 4096 && height < 4096 && Constants.BLOCK_EFFECT)
             {
                 Color[] cData = new Color[(int)((int)width * (int)height)];
                 dynamicPattern = game.getCachedDirt(new Rectangle((int)body.Position.X, (int)body.Position.Y, (int)width, (int)height));
@@ -384,7 +384,7 @@ namespace ProtoDerp
             if (ani.getStateCount() == 1)
             {
 
-                if ((spriteNumber.Equals("bigBlock")) && width < 4096 && height < 4096)
+                if ((spriteNumber.Equals("bigBlock")) && width < 4096 && height < 4096 && Constants.BLOCK_EFFECT)
                 {
                     spriteBatch.Draw(dynamicPattern, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X + ConvertUnits.ToSimUnits(widthDiff / 2f)),
                         (int)ConvertUnits.ToDisplayUnits(body.Position.Y + ConvertUnits.ToSimUnits(heightDiff / 2f)), (int)dynamicPattern.Width, (int)dynamicPattern.Height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);

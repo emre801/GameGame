@@ -683,11 +683,27 @@ namespace ProtoDerp
         }
         public void drawBorderImageForButtons(SpriteBatch spriteBatch)
         {
-            for (int i = 0; i <= 700; i += 50)
+            if (!Constants.FULLSCREEN)
             {
-                game.drawingTool.drawBorderImageFromPos(10, i, 30, 30, spriteBatch);
-                game.drawingTool.drawBorderImageFromPos(50, i, 30, 30, spriteBatch);
-                game.drawingTool.drawBorderImageFromPos(90, i, 30, 30, spriteBatch);
+                for (int i = 0; i <= 700; i += 50)
+                {
+
+                    game.drawingTool.drawBorderImageFromPos(10, i, 30, 30, spriteBatch);
+                    game.drawingTool.drawBorderImageFromPos(50, i, 30, 30, spriteBatch);
+                    game.drawingTool.drawBorderImageFromPos(90, i, 30, 30, spriteBatch);
+
+                }
+            }
+            else
+            {
+
+                for (int i = 0; i <= 1200; i += 50)
+                {
+                    game.drawingTool.drawBorderImageFromPos(10, i, 30, 30, spriteBatch);
+                    game.drawingTool.drawBorderImageFromPos(50, i, 30, 30, spriteBatch);
+                    game.drawingTool.drawBorderImageFromPos(90, i, 30, 30, spriteBatch);
+                }
+
             }
 
 
@@ -718,8 +734,9 @@ namespace ProtoDerp
 
         public void drawBorderImageFromPos(float x, float y, int height, int width, SpriteBatch spriteBatch)
         {
-            if (Constants.FULLSCREEN)
+            if (Constants.FULLSCREEN && !game.isInCreatorMode)
             {
+
                 x = x * 5;
                 y = y + y / 2 + y / 4;
                 height = (int)(height * 1.25f);

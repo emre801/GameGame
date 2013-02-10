@@ -180,6 +180,18 @@
 -405 15 groundWall Block 110 24 2 2340
 3219 -96 groundWall Block 110 24 2 2520
 3217 13 groundWall Block 110 24 2 2520
+267 45 spriteStripFlower Block 48 46 2 0
+-236 45 spriteStripFlower Block 48 46 2 0
+-120 45 spriteStripBlueFlowers Block 48 46 2 0
+-351 45 spriteStripBlueFlowers Block 48 46 2 0
+1222 45 spriteStripBlueFlowers Block 48 46 2 0
+1623 37 spriteStripBlueFlowers Block 48 46 2 0
+2127 45 spriteStripBlueFlowers Block 48 46 2 0
+2635 45 spriteStripFlower Block 48 46 2 0
+2417 48 spriteStripPurpleFlower Block 48 46 2 0
+2938 42 spriteStripPurpleFlower Block 48 46 2 0
+2836 42 spriteStripBlueFlowers Block 48 46 2 0
+1402 44 spriteStripPurpleFlower Block 48 46 2 0
 559 56 deathSpikes DeathBlock 0
 685 55 deathSpikes DeathBlock 0
 811 55 deathSpikes DeathBlock 0

@@ -124,6 +124,17 @@
 644 -518 groundWall Block 160 14 2 3240
 644 -358 groundWall Block 160 14 2 3240
 644 -198 groundWall Block 160 14 2 3240
+143 23 spriteStripBlueFlowers Block 48 46 2 0
+527 19 spriteStripBlueFlowers Block 48 46 2 0
+774 23 spriteStripBlueFlowers Block 48 46 2 0
+325 23 spriteStripFlower Block 48 46 1 0
+690 21 spriteStripFlower Block 48 46 1 0
+-54 19 spriteStripFlower Block 48 46 1 0
+232 16 spriteStripPurpleFlower Block 48 46 1 0
+607 29 spriteStripPurpleFlower Block 48 46 1 0
+450 23 spriteStripPurpleFlower Block 48 46 1 0
+887 -1874 spriteStripPurpleFlower Block 48 46 1 0
+1031 -1865 spriteStripBlueFlowers Block 48 46 1 0
 622 -180 deathSpikes3 DeathBlock 0
 625 -302 deathSpikes3 DeathBlock 0
 622 -420 deathSpikes3 DeathBlock 0
@@ -155,6 +166,6 @@
 -1771 -322 GreenHill SuperBack 650 575
 1838 -273 GreenHill SuperBack 650 575
 Demi -100 1088 -1770 578
-BGCOLOR 133 171 232 
+BGCOLOR 133 170 232 
 CAM 0.55
 CPOS 400 360

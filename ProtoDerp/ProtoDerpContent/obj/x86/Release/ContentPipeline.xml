@@ -307,24 +307,6 @@
       <Time>2012-08-20T20:17:21.8921375-04:00</Time>
     </Item>
     <Item>
-      <Source>Rage\Wave\Rage1.wav</Source>
-      <Name>Rage\Wave\Rage1</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Rage\Wave\Rage1.xnb</Output>
-      <Time>2012-08-20T21:48:29.7248796-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Rage\Wave\Rage2.wav</Source>
-      <Name>Rage\Wave\Rage2</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Rage\Wave\Rage2.xnb</Output>
-      <Time>2012-08-20T21:48:29.7268797-04:00</Time>
-    </Item>
-    <Item>
       <Source>Rage\Wave\jump.wav</Source>
       <Name>Rage\Wave\jump</Name>
       <Importer>WavImporter</Importer>
@@ -919,36 +901,6 @@
       <Time>2012-12-16T11:15:44.3225267-05:00</Time>
     </Item>
     <Item>
-      <Source>Music\05 Nostalgia.mp3</Source>
-      <Name>Music\05 Nostalgia</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\05 Nostalgia.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\05 Nostalgia.wma</Extra>
-      <Time>2012-12-16T15:48:12.7297466-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Music\01 Syntax Error.mp3</Source>
-      <Name>Music\01 Syntax Error</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\01 Syntax Error.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\01 Syntax Error.wma</Extra>
-      <Time>2012-12-16T15:48:12.2147171-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Music\03 Tokyo Escapade.mp3</Source>
-      <Name>Music\03 Tokyo Escapade</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\03 Tokyo Escapade.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\03 Tokyo Escapade.wma</Extra>
-      <Time>2012-12-16T15:48:12.2607198-05:00</Time>
-    </Item>
-    <Item>
       <Source>Music\Alpha Black Magic.mp3</Source>
       <Name>Music\Alpha Black Magic</Name>
       <Importer>Mp3Importer</Importer>
@@ -957,6 +909,445 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Alpha Black Magic.xnb</Output>
       <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Alpha Black Magic.wma</Extra>
       <Time>2012-12-16T16:13:27.5823912-05:00</Time>
+    </Item>
+    <Item>
+      <Source>CreativeMode.png</Source>
+      <Name>CreativeMode</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\CreativeMode.xnb</Output>
+      <Time>2012-12-23T12:30:41.2677159-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Exit.png</Source>
+      <Name>Exit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Exit.xnb</Output>
+      <Time>2012-12-23T12:30:41.2717161-05:00</Time>
+    </Item>
+    <Item>
+      <Source>SelectLevel.png</Source>
+      <Name>SelectLevel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\SelectLevel.xnb</Output>
+      <Time>2012-12-23T12:30:41.2797165-05:00</Time>
+    </Item>
+    <Item>
+      <Source>start.png</Source>
+      <Name>start</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\start.xnb</Output>
+      <Time>2012-12-23T12:30:41.2847168-05:00</Time>
+    </Item>
+    <Item>
+      <Source>pixSun.png</Source>
+      <Name>pixSun</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\pixSun.xnb</Output>
+      <Time>2013-01-06T02:12:53.4438038-05:00</Time>
+    </Item>
+    <Item>
+      <Source>pixGavin.png</Source>
+      <Name>pixGavin</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\pixGavin.xnb</Output>
+      <Time>2013-01-07T09:30:07.5346268-05:00</Time>
+    </Item>
+    <Item>
+      <Source>pixRay.png</Source>
+      <Name>pixRay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\pixRay.xnb</Output>
+      <Time>2013-01-07T09:30:07.5376269-05:00</Time>
+    </Item>
+    <Item>
+      <Source>backImage.png</Source>
+      <Name>backImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\backImage.xnb</Output>
+      <Time>2013-01-07T13:28:59.686379-05:00</Time>
+    </Item>
+    <Item>
+      <Source>goundBottom.png</Source>
+      <Name>goundBottom</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\goundBottom.xnb</Output>
+      <Time>2013-01-07T17:03:43.0862673-05:00</Time>
+    </Item>
+    <Item>
+      <Source>groundWall.png</Source>
+      <Name>groundWall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\groundWall.xnb</Output>
+      <Time>2013-02-06T21:03:59.2104574-05:00</Time>
+    </Item>
+    <Item>
+      <Source>leftCurtain.png</Source>
+      <Name>leftCurtain</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\leftCurtain.xnb</Output>
+      <Time>2013-01-10T17:27:25.4638988-05:00</Time>
+    </Item>
+    <Item>
+      <Source>rightCurtain.png</Source>
+      <Name>rightCurtain</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\rightCurtain.xnb</Output>
+      <Time>2013-01-10T17:27:25.4658989-05:00</Time>
+    </Item>
+    <Item>
+      <Source>rC1.png</Source>
+      <Name>rC1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\rC1.xnb</Output>
+      <Time>2013-01-14T14:01:21.8582354-05:00</Time>
+    </Item>
+    <Item>
+      <Source>rC2.png</Source>
+      <Name>rC2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\rC2.xnb</Output>
+      <Time>2013-01-14T14:01:21.8622357-05:00</Time>
+    </Item>
+    <Item>
+      <Source>rC3.png</Source>
+      <Name>rC3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\rC3.xnb</Output>
+      <Time>2013-01-14T14:01:21.8712362-05:00</Time>
+    </Item>
+    <Item>
+      <Source>lC1.png</Source>
+      <Name>lC1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\lC1.xnb</Output>
+      <Time>2013-01-14T14:17:39.5831581-05:00</Time>
+    </Item>
+    <Item>
+      <Source>lC2.png</Source>
+      <Name>lC2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\lC2.xnb</Output>
+      <Time>2013-01-14T14:17:39.5871583-05:00</Time>
+    </Item>
+    <Item>
+      <Source>lC3.png</Source>
+      <Name>lC3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\lC3.xnb</Output>
+      <Time>2013-01-14T14:17:39.5901585-05:00</Time>
+    </Item>
+    <Item>
+      <Source>graph.png</Source>
+      <Name>graph</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\graph.xnb</Output>
+      <Time>2013-01-14T16:40:01.0026993-05:00</Time>
+    </Item>
+    <Item>
+      <Source>groundPat.png</Source>
+      <Name>groundPat</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\groundPat.xnb</Output>
+      <Time>2013-01-22T03:09:57.8967975-05:00</Time>
+    </Item>
+    <Item>
+      <Source>blankImage.png</Source>
+      <Name>blankImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\blankImage.xnb</Output>
+      <Time>2013-01-22T15:58:57.7332616-05:00</Time>
+    </Item>
+    <Item>
+      <Source>skyScrapper.png</Source>
+      <Name>skyScrapper</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\skyScrapper.xnb</Output>
+      <Time>2013-01-24T01:44:34.1255492-05:00</Time>
+    </Item>
+    <Item>
+      <Source>backGroundMan.png</Source>
+      <Name>backGroundMan</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\backGroundMan.xnb</Output>
+      <Time>2013-01-30T13:32:43.0805643-05:00</Time>
+    </Item>
+    <Item>
+      <Source>grassTempBack.png</Source>
+      <Name>grassTempBack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\grassTempBack.xnb</Output>
+      <Time>2013-01-30T09:44:55.766295-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BorderImage.png</Source>
+      <Name>BorderImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\BorderImage.xnb</Output>
+      <Time>2013-01-31T01:28:12.0989637-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BorderImageWhite.png</Source>
+      <Name>BorderImageWhite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\BorderImageWhite.xnb</Output>
+      <Time>2013-01-30T18:24:22.9715008-05:00</Time>
+    </Item>
+    <Item>
+      <Source>CoolBG.png</Source>
+      <Name>CoolBG</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\CoolBG.xnb</Output>
+      <Time>2013-01-31T15:16:17.5192166-05:00</Time>
+    </Item>
+    <Item>
+      <Source>GrassHill.png</Source>
+      <Name>GrassHill</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\GrassHill.xnb</Output>
+      <Time>2013-01-31T15:25:30.0808214-05:00</Time>
+    </Item>
+    <Item>
+      <Source>GameGrumps.png</Source>
+      <Name>GameGrumps</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\GameGrumps.xnb</Output>
+      <Time>2013-01-31T15:31:52.2006774-05:00</Time>
+    </Item>
+    <Item>
+      <Source>simplePix.png</Source>
+      <Name>simplePix</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\simplePix.xnb</Output>
+      <Time>2013-01-31T15:54:30.7123798-05:00</Time>
+    </Item>
+    <Item>
+      <Source>mtPix.png</Source>
+      <Name>mtPix</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\mtPix.xnb</Output>
+      <Time>2013-01-31T20:26:40.479389-05:00</Time>
+    </Item>
+    <Item>
+      <Source>dirtyBlock.png</Source>
+      <Name>dirtyBlock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\dirtyBlock.xnb</Output>
+      <Time>2013-02-06T12:23:49.471177-05:00</Time>
+    </Item>
+    <Item>
+      <Source>spriteStripFlower.png</Source>
+      <Name>spriteStripFlower</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\spriteStripFlower.xnb</Output>
+      <Time>2013-02-06T11:33:57.3160355-05:00</Time>
+    </Item>
+    <Item>
+      <Source>dirtyBlock2.png</Source>
+      <Name>dirtyBlock2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\dirtyBlock2.xnb</Output>
+      <Time>2013-02-06T13:23:27.7058403-05:00</Time>
+    </Item>
+    <Item>
+      <Source>spriteStripBlueFlowers.png</Source>
+      <Name>spriteStripBlueFlowers</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\spriteStripBlueFlowers.xnb</Output>
+      <Time>2013-02-07T12:39:13.1934104-05:00</Time>
+    </Item>
+    <Item>
+      <Source>spriteStripPurpleFlower.png</Source>
+      <Name>spriteStripPurpleFlower</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\spriteStripPurpleFlower.xnb</Output>
+      <Time>2013-02-07T12:39:13.2004108-05:00</Time>
+    </Item>
+    <Item>
+      <Source>TopCurtain.png</Source>
+      <Name>TopCurtain</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\TopCurtain.xnb</Output>
+      <Time>2013-01-10T17:27:25.4678991-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Water.png</Source>
+      <Name>Water</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Water.xnb</Output>
+      <Time>2013-02-06T09:46:09.9271221-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Syntax Error.mp3</Source>
+      <Name>Music\Syntax Error</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Syntax Error.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Syntax Error.wma</Extra>
+      <Time>2012-12-16T15:48:12.2147171-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Tokyo Escapade.mp3</Source>
+      <Name>Music\Tokyo Escapade</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Tokyo Escapade.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Tokyo Escapade.wma</Extra>
+      <Time>2012-12-16T15:48:12.2607198-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Nostalgia.mp3</Source>
+      <Name>Music\Nostalgia</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Nostalgia.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Nostalgia.wma</Extra>
+      <Time>2012-12-16T15:48:12.7297466-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Anxiety Attack.mp3</Source>
+      <Name>Music\Anxiety Attack</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Anxiety Attack.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Anxiety Attack.wma</Extra>
+      <Time>2012-12-28T13:57:57.2108879-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Pins and Needles.mp3</Source>
+      <Name>Music\Pins and Needles</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Pins and Needles.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Pins and Needles.wma</Extra>
+      <Time>2012-12-28T13:58:57.4653343-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Pirate Empire.mp3</Source>
+      <Name>Music\Pirate Empire</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Pirate Empire.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Pirate Empire.wma</Extra>
+      <Time>2012-12-28T13:58:57.4863355-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Melt Yourself.mp3</Source>
+      <Name>Music\Melt Yourself</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Melt Yourself.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Music\Melt Yourself.wma</Extra>
+      <Time>2013-01-26T23:27:33.4072146-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Wave\explosion.wav</Source>
+      <Name>Rage\Wave\explosion</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Rage\Wave\explosion.xnb</Output>
+      <Time>2012-12-21T16:29:47.1991645-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Wave\menu.wav</Source>
+      <Name>Rage\Wave\menu</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Rage\Wave\menu.xnb</Output>
+      <Time>2012-12-21T16:37:11.7505914-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Wave\running.wav</Source>
+      <Name>Rage\Wave\running</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Release\Content\Rage\Wave\running.xnb</Output>
+      <Time>2012-12-21T16:42:59.9935097-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
