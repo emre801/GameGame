@@ -31,6 +31,7 @@ namespace ProtoDerp
         bool firstTransition = true;
         int transitionRate = 20;
         public Button[] buttons;
+        public float deathFadeAlpha=1f;
         public GUI(Game g)
             : base(g)
         {
@@ -186,14 +187,34 @@ namespace ProtoDerp
             }
             
         }
+        public void fadeOut(SpriteBatch spriteBatch)
+        {
+            deathFadeAlpha -= 0.1f;
+            spriteBatch.Draw(leftCur.index, new Rectangle((int)(0),
+                        (int)(0),
+                        (int)(curWidth), (int)(curHeight)), null, Color.White*deathFadeAlpha, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            
+
+        }
+        public void fadeIn(SpriteBatch spriteBatch)
+        {
+            deathFadeAlpha += 0.1f;
+            spriteBatch.Draw(leftCur.index, new Rectangle((int)(0),
+                        (int)(0),
+                        (int)(curWidth), (int)(curHeight)), null, Color.White * deathFadeAlpha, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+
+        }
         public void DrawTransitionOpening(SpriteBatch spriteBatch)
         {
 
             //game.inTransition = false;
             if (curLeftMove2 > curLeftMove)
             {
-                curRightMove2 += transitionRate;
-                curLeftMove2 -= transitionRate;
+                if (game.gameDoneLoading)
+                {
+                    curRightMove2 += transitionRate;
+                    curLeftMove2 -= transitionRate;
+                }
             }
             else
             {
@@ -204,26 +225,10 @@ namespace ProtoDerp
             spriteBatch.Draw(leftCur.index, new Rectangle((int)(curLeftMove2),
                         (int)(0),
                         (int)(curWidth / 2f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
-            /*spriteBatch.Draw(leftCur2.index, new Rectangle((int)(curLeftMove2+(curWidth / 2f / 3f)),
-                        (int)(0),
-                        (int)(curWidth / 2f / 3f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
-            spriteBatch.Draw(leftCur3.index, new Rectangle((int)(curLeftMove2 + (curWidth / 2f / 3f) + (curWidth / 2f / 3f)),
-                        (int)(0),
-                        (int)(curWidth / 2f / 3f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
-            */
-            
             spriteBatch.Draw(rightCur.index, new Rectangle((int)(curRightMove2),
                         (int)(0),
                         (int)(curWidth / 2f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
-            /*spriteBatch.Draw(rightCur2.index, new Rectangle((int)(curRightMove2 + curRightMove2 * 2f / 3f),
-                       (int)(0),
-                       (int)(curWidth / 2f / 3f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
-            spriteBatch.Draw(rightCur3.index, new Rectangle((int)(curRightMove2 + curRightMove2 / 3f),
-                        (int)(0),
-                        (int)(curWidth / 2f / 3f), (int)(curHeight)), null, Color.White, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
-            */
             
-
         }
         public void DrawTransitionClosing(SpriteBatch spriteBatch)
         {

@@ -129,15 +129,16 @@ namespace ProtoDerp
         {
             playerSprite = game.getSprite(spriteNumber);
             ani = game.getSpriteAnimation(spriteNumber);
-
+            //game.stopWatchLagTimer.Start();
             //XNA Framework HiDef profile supports a maximum Texture2D size of 4096
             //if ((spriteNumber.Equals("bigBlock") || spriteNumber.Equals("groundWall"))&& width < 4096 && height < 4096)
             //{
             if ((spriteNumber.Equals("bigBlock"))&& width < 4096 && height < 4096 && Constants.BLOCK_EFFECT)
             {
                 Color[] cData = new Color[(int)((int)width * (int)height)];
+                game.stopWatchLagTimer.Start();
                 dynamicPattern = game.getCachedDirt(new Rectangle((int)body.Position.X, (int)body.Position.Y, (int)width, (int)height));
-                
+                game.stopWatchLagTimer.Stop();
                 if (dynamicPattern == null)
                 {
 
@@ -299,7 +300,7 @@ namespace ProtoDerp
                 
                 //origin = new Vector2(width / 2, height / 2);
             }*/
-                 
+            
         }
 
         public Color[] drawPixel(int point, int x, int y, Color[] cData, Color color)

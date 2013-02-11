@@ -25,11 +25,13 @@ namespace ProtoDerp
         
         public const double GAMEWORLD_ASPECT_RATIO = 4f / 3f; // Width of game world / height of game world
 
-        public const bool PRELOAD_LEVELS = false;
+        public const bool PRELOAD_LEVELS = true;
 
         public const bool DO_FADE_OUT = false;
 
-        public const bool BLOCK_EFFECT=false;
+        public const bool BLOCK_EFFECT=true;
+
+        public const bool FIND_LAG = true;
         // The size of the screen in pixels
         public const int DESIRED_GAME_RESOLUTION_WIDTH = 800;
         public const int DESIRED_GAME_RESOLUTION_HEIGHT = (int)(DESIRED_GAME_RESOLUTION_WIDTH / GAMEWORLD_ASPECT_RATIO);
@@ -46,7 +48,7 @@ namespace ProtoDerp
 
         public const bool FULLSCREEN = true;
 
-        public const bool PLAY_MUSIC = true;
+        public const bool PLAY_MUSIC = false;
 
         public const float SHADOW_VALUE = 0.25f;
 

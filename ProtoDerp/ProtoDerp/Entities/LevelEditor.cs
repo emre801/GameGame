@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Microsoft.Xna.Framework;
+using System.Diagnostics;
 
 namespace ProtoDerp
 {
@@ -73,6 +74,9 @@ namespace ProtoDerp
             game.clearEntities();
             game.camZoomValue = -1;
             game.deathBlockGoalCollision = false;
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            game.stopWatchLagTimer.Reset();
             while ((line = sr.ReadLine()) != null)
             {
                 c++;
@@ -110,10 +114,13 @@ namespace ProtoDerp
                 String spriteName = words[2];
                 if (words[3].Equals("Block"))
                 {
+                   
                     float rotation = 0;
                     if(words.Length==8)
                         rotation =(Convert.ToInt32(words[7]));
+                    
                     Block toBeAdded = new Block(game, game.Arena, new Vector2(x, y), 1, spriteName, System.Convert.ToSingle(words[4]), System.Convert.ToSingle(words[5]), Convert.ToInt32(words[6]), rotation);
+                    
                     if (words.Length >= 8)
                     {
                         //toBeAdded.setdisAppearTimer(Convert.ToInt32(words[7]));
@@ -124,6 +131,7 @@ namespace ProtoDerp
                         topBlocks.AddLast(toBeAdded);
                     else
                         buttomBlocks.AddLast(toBeAdded);
+                    
                     
                 }
                 if (words[3].Equals("DeathBlock"))
@@ -185,6 +193,8 @@ namespace ProtoDerp
                 }
                 
             }
+
+            stopWatch.Stop();
             
             foreach (Block i in buttomBlocks)
                 game.addEntity(i);            
@@ -341,7 +351,17 @@ namespace ProtoDerp
 
                 }
             }
-
+            if (Constants.FIND_LAG)
+            {
+                DirectoryInfo di2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\DebugInfo");
+                String name = di2.FullName + @"\LagInfo.txt";
+                LinkedList<String> lines = new LinkedList<String>();
+                lines.AddLast("Level"+game.currentLevel);
+                lines.AddLast(stopWatch.Elapsed.ToString());
+                lines.AddLast(game.stopWatchLagTimer.Elapsed.ToString());
+                System.IO.File.WriteAllLines(name, lines);
+            }
+            game.gameInsertValues = true;
 
             SortedSet<Entity> omg=game.entities;
 

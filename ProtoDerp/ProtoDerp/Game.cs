@@ -64,6 +64,7 @@ namespace ProtoDerp
         TimeSpan pauseAdjustment = TimeSpan.Zero;
 
         public Stopwatch stopWatch = new Stopwatch();
+        public Stopwatch stopWatchLagTimer = new Stopwatch();
 
         public Stopwatch animationTime = new Stopwatch();
         public bool deathAnimation = false,winningAnimation=false;
@@ -149,6 +150,9 @@ namespace ProtoDerp
         public int[] xValues = new int[1000];
         public int[] yValues = new int[1000];
         public int xycounter = 0;
+
+        public bool gameDoneLoading = false;
+        public bool gameInsertValues = false;
 
         public Game()
         {
@@ -278,7 +282,7 @@ namespace ProtoDerp
             sprites.Add("cloud", new Sprite(Content, "cloud"));
             blockList.AddLast("cloud");
             //sprites.Add("DeathTime", new Sprite(Content, "DeathTime"));
-            ///sprites.Add("black", new Sprite(Content,"black"));
+            sprites.Add("black", new Sprite(Content,"black"));
             //sprites.Add("rage", new Sprite(Content, "rage"));
             //sprites.Add("dirtBlock", new Sprite(Content, "dirtBlock"));
             sprites.Add("rC1", new Sprite(Content, "rC1"));
@@ -599,6 +603,8 @@ namespace ProtoDerp
             animationTime = new Stopwatch();
             //animationTime.Reset();
             animationTime.Start();
+            gameDoneLoading = false;
+            gameInsertValues = false;
             //loadNewLevel = true;
         }
 
@@ -1059,10 +1065,13 @@ namespace ProtoDerp
         }
         public void pauseMusic()
         {
-            if (MediaPlayer.State == MediaState.Playing && pause)
-                MediaPlayer.Pause();
-            else if (MediaPlayer.State == MediaState.Paused && !pause)
-                MediaPlayer.Resume();
+            if (Constants.PLAY_MUSIC)
+            {
+                if (MediaPlayer.State == MediaState.Playing && pause)
+                    MediaPlayer.Pause();
+                else if (MediaPlayer.State == MediaState.Paused && !pause)
+                    MediaPlayer.Resume();
+            }
 
         }
 

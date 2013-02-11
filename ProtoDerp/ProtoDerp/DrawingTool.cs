@@ -678,6 +678,10 @@ namespace ProtoDerp
                 spriteBatch.End();
 
             }
+            if (game.gameInsertValues)
+            {
+                game.gameDoneLoading = true;
+            }
 
 
         }
