@@ -32,6 +32,7 @@ namespace ProtoDerp
         int transitionRate = 20;
         public Button[] buttons;
         public float deathFadeAlpha=1f;
+        public float respawnFadeAlpha = 0f;
         public GUI(Game g)
             : base(g)
         {
@@ -76,6 +77,7 @@ namespace ProtoDerp
             {
                 transitionRate *= 2;
             }
+            game.respawnFadeValue = -1;
 
         }
 
@@ -104,6 +106,8 @@ namespace ProtoDerp
                 return;
 
             }
+            fadeIn(spriteBatch);
+            fadeOut(spriteBatch);
 
             //spriteBatch.Draw(pix.index, new Rectangle(5,5,100,100), Color.White);
             if (game.pause)
@@ -187,22 +191,30 @@ namespace ProtoDerp
             }
             
         }
+        //goes from Normal to black
         public void fadeOut(SpriteBatch spriteBatch)
         {
-            deathFadeAlpha -= 0.1f;
-            spriteBatch.Draw(leftCur.index, new Rectangle((int)(0),
-                        (int)(0),
-                        (int)(curWidth), (int)(curHeight)), null, Color.White*deathFadeAlpha, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            if (game.numDeath>0)
+            {
+                deathFadeAlpha -= 0.05f;
+                spriteBatch.Draw(game.getSprite("black").index, new Rectangle((int)(0),
+                            (int)(0),
+                            (int)(curWidth), (int)(curHeight)), null, Color.White * deathFadeAlpha, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            }
             
 
         }
+        //Goes from black to normal
         public void fadeIn(SpriteBatch spriteBatch)
         {
-            deathFadeAlpha += 0.1f;
-            spriteBatch.Draw(leftCur.index, new Rectangle((int)(0),
-                        (int)(0),
-                        (int)(curWidth), (int)(curHeight)), null, Color.White * deathFadeAlpha, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            if (game.respawnFadeValue != -1)
+            {
+                game.respawnFadeValue += 0.05f;
+                spriteBatch.Draw(game.getSprite("black").index, new Rectangle((int)(0),
+                                (int)(0),
+                                (int)(curWidth), (int)(curHeight)), null, Color.White * game.respawnFadeValue, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
 
+            }
         }
         public void DrawTransitionOpening(SpriteBatch spriteBatch)
         {

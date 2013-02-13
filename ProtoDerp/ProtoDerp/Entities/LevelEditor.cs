@@ -363,6 +363,8 @@ namespace ProtoDerp
             }
             game.gameInsertValues = true;
 
+            
+
             SortedSet<Entity> omg=game.entities;
 
         }

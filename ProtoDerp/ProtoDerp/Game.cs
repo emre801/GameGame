@@ -154,6 +154,8 @@ namespace ProtoDerp
         public bool gameDoneLoading = false;
         public bool gameInsertValues = false;
 
+        public float respawnFadeValue = -1f;
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -1093,6 +1095,7 @@ namespace ProtoDerp
             //newLevel();
             //numDeath++;
             deathAnimation = true;
+            respawnFadeValue = 0f;
             //restart = true;
         }
         public Texture2D getCachedDirt(Rectangle key)

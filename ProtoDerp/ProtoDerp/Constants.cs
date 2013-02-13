@@ -46,9 +46,9 @@ namespace ProtoDerp
 
         public const int TOTALNUMBEROFMAPS = 4;
 
-        public const bool FULLSCREEN = true;
+        public const bool FULLSCREEN = false;
 
-        public const bool PLAY_MUSIC = false;
+        public const bool PLAY_MUSIC = true;
 
         public const float SHADOW_VALUE = 0.25f;
 
