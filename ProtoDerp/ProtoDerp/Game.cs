@@ -1027,6 +1027,9 @@ namespace ProtoDerp
                 currentWorld++;
                 inCutScene = false;
                 winningAnimation = false;
+                drawingTool.cam.Zoom = 0.95f * drawingTool.zoomRatio;
+                drawingTool.cam.Pos = new Vector2(400, 360);
+                
                 //worldFinished = true;
 
 

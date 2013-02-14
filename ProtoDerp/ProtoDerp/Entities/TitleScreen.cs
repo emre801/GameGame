@@ -172,6 +172,7 @@ namespace ProtoDerp
 
                 life += gameTime.ElapsedGameTime.TotalMilliseconds;
                 game.drawingTool.cam.Zoom = 0.95f*game.drawingTool.zoomRatio;
+                Vector2 test=game.drawingTool.cam.Pos;
                 //Clock hand ticking
                 angleHandShort -= 0.25f;
                 if (angleHandShort < 135 - 27)
