@@ -944,6 +944,10 @@
       <Name>Level3</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="World2\Level1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level1</Name>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">

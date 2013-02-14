@@ -67,7 +67,7 @@ namespace ProtoDerp
                     {
                         this.IsVisible = false;
                         game.numDeath = 0;
-                        game.nextLevel(nextLevel++);
+                        game.nextLevel(nextLevel);
                     }
                 }
                 else

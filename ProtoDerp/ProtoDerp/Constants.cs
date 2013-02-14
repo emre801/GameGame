@@ -31,7 +31,7 @@ namespace ProtoDerp
 
         public const bool BLOCK_EFFECT=true;
 
-        public const bool FIND_LAG = true;
+        public const bool FIND_LAG = false;
         // The size of the screen in pixels
         public const int DESIRED_GAME_RESOLUTION_WIDTH = 800;
         public const int DESIRED_GAME_RESOLUTION_HEIGHT = (int)(DESIRED_GAME_RESOLUTION_WIDTH / GAMEWORLD_ASPECT_RATIO);
@@ -53,6 +53,8 @@ namespace ProtoDerp
         public const float SHADOW_VALUE = 0.25f;
 
         public const int TOTAL_NUM_BLOCK_TYPES = 7;
+
+        public const int TOTAL_NUMBER_OF_WORLDS = 2;
 
         public const bool OVERRIDE_FULLSCREEN_RES = false; // If this is true, we will attempt to override the system's default fullscreen resolution.  Not recommended
 

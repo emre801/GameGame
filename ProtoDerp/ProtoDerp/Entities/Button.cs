@@ -149,12 +149,21 @@ namespace ProtoDerp
                     alpha = 0.5f;
                 if (Constants.FULLSCREEN)
                 {
+                    spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X+5),
+                     (int)(pos.Y+5),
+                     (int)(blockSprite.index.Width * 0.65f * game.drawingTool.zoomRatio), (int)(blockSprite.index.Height * 0.65f * game.drawingTool.zoomRatio)), null, Color.Black*game.fadeAlpha, 0, origin, SpriteEffects.None, 0f);
+                
                     spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X),
                      (int)(pos.Y),
                      (int)(blockSprite.index.Width * 0.65f * game.drawingTool.zoomRatio), (int)(blockSprite.index.Height * 0.65f * game.drawingTool.zoomRatio)), null, Color.White * alpha * game.fadeAlpha, 0, origin, SpriteEffects.None, 0f);
                 }
                 else
                 {
+                    spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X+5),
+                     (int)(pos.Y),
+                     (int)(blockSprite.index.Width * 0.45f * game.drawingTool.zoomRatio), (int)(blockSprite.index.Height * 0.45f * game.drawingTool.zoomRatio)), null, Color.Black*game.fadeAlpha, 0, origin, SpriteEffects.None, 0f);
+                
+                
                     spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X),
                      (int)(pos.Y),
                      (int)(blockSprite.index.Width * 0.45f * game.drawingTool.zoomRatio), (int)(blockSprite.index.Height * 0.45f * game.drawingTool.zoomRatio)), null, Color.White * alpha * game.fadeAlpha, 0, origin, SpriteEffects.None, 0f);

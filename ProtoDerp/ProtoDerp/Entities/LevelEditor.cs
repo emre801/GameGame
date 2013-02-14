@@ -16,7 +16,7 @@ namespace ProtoDerp
         {
             this.game = game;
             if (game.gMode == 0)
-                initLevels("World1");
+                initLevels("World"+game.currentWorld);
             else
             {
                 if (!game.loadFromLevel)
@@ -25,7 +25,7 @@ namespace ProtoDerp
                 }
                 else
                 {
-                    initLevels("World1");
+                    initLevels("World"+game.currentWorld);
                 }
             }
 
@@ -71,7 +71,7 @@ namespace ProtoDerp
             char[] delimiterChars = { ' ', ',', ':', '\t' };
             int c = 0;
             if(game.loadNewLevel)
-            game.clearEntities();
+                game.clearEntities();
             game.camZoomValue = -1;
             game.deathBlockGoalCollision = false;
             Stopwatch stopWatch = new Stopwatch();
@@ -195,7 +195,8 @@ namespace ProtoDerp
             }
 
             stopWatch.Stop();
-            
+            if (game.preloadLevelOnly)
+                return;
             foreach (Block i in buttomBlocks)
                 game.addEntity(i);            
             foreach (MovingDeath i in moveDeathBlocks)

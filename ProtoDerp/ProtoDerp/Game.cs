@@ -156,6 +156,11 @@ namespace ProtoDerp
 
         public float respawnFadeValue = -1f;
 
+        public float currentWorld = 1;
+        public bool worldFinished = false;
+
+        public bool preloadLevelOnly = false;
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -228,11 +233,14 @@ namespace ProtoDerp
 
         public void preLoadEachLevel()
         {
+            //JumpPoint
+            LevelEditor le = new LevelEditor(this);
+            preloadLevelOnly = true;
             for(int i =0; i<20;i++)
             {
-                LevelEditor le = new LevelEditor(this);
                 le.readFile(i);
             }
+            preloadLevelOnly = false;
             backToTitleScreen = false;
             pause = false;
             restart = false;
@@ -600,6 +608,28 @@ namespace ProtoDerp
             currentLevel = level;
              * */
             //newLevel();
+            if (level == -1)
+            {
+                if (currentWorld < Constants.TOTAL_NUMBER_OF_WORLDS)
+                {
+                    currentWorld++;
+                    worldFinished = true;
+                }
+                /*
+                LevelEditor le = new LevelEditor(this);
+                //Preloads each Level so that the cache can do it's magic
+                for (int i = 0; i < 2; i++)
+                    le.readFile(i);
+                entities.Clear();
+                toBeAdded.Clear();
+                cachedEntityLists = new Dictionary<Type, object>();
+                //JumpPoint
+                level = 1;*/
+                //level = 1;
+                level = 1;
+                
+
+            }
             currentLevel = level;
             winningAnimation = true;
             animationTime = new Stopwatch();
@@ -676,11 +706,11 @@ namespace ProtoDerp
             String path ="";
             int pathIndex = path.IndexOf("bin");
             //Need to change this.....
-            DirectoryInfo di = new DirectoryInfo(@"Content\" + "World1");
+            DirectoryInfo di = new DirectoryInfo(@"Content\" + "World"+currentWorld);
             String fullName = di.FullName;
             if (Constants.IS_IN_DEBUG_MODE)
             {
-                path = @"C:\Users\John\Documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerpContent\World1\Level" + templateNum + @".txt";
+                path = @"C:\Users\John\Documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerpContent\World"+currentWorld+@"\Level" + templateNum + @".txt";
             }
             else
             {

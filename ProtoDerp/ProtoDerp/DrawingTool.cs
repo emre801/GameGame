@@ -652,6 +652,8 @@ namespace ProtoDerp
                 {
                     e.Draw(gameTime, spriteBatch);
                 }
+                if (e is TitleScreen)
+                    e.Draw(gameTime, spriteBatch);
             }
             if (game.Arena != null) 
                game.Arena.Draw(gameTime, spriteBatch);

@@ -163,6 +163,15 @@ namespace ProtoDerp
 
             }
 
+            if (keyInput.IsNewKeyPressed(Keys.OemPeriod))
+            {
+                if (game.currentWorld < Constants.TOTAL_NUMBER_OF_WORLDS)
+                    game.currentWorld += 1;
+                else
+                    game.currentWorld = 1;
+
+            }
+
             if (keyInput.IsNewKeyPressed(Keys.Tab))
             {
                 game.testLevel = !game.testLevel;

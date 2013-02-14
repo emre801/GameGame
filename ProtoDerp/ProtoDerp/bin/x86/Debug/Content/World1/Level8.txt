@@ -186,7 +186,7 @@
 172 -284 deathSpikes DeathBlock 270
 172 -159 deathSpikes DeathBlock 270
 172 -34 deathSpikes DeathBlock 270
-465 3 ahLogo0 GoalBlock 13
+465 3 ahLogo0 GoalBlock 18
 209 857 deathBall MovingPath 5 217 1367 -161 642 
 300 857 deathBall MovingPath 5 308 1367 693 629 
 245 109 deathBall MovingCycle 8 7 262 616 713 597 266 1364 200 1364 -145 626 253 619 253 619

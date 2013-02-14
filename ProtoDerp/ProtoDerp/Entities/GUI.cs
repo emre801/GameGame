@@ -161,6 +161,7 @@ namespace ProtoDerp
                     else
                         DrawText(spriteBatch, 0.05f, 0.925f, "by __twc");
                     DrawText(spriteBatch, 0.05f, 0.95f, "Level"+game.currentLevel);
+                    DrawText(spriteBatch, 0.05f, 0.975f, "World" + game.currentWorld);
 
                 }
                  
@@ -506,7 +507,9 @@ namespace ProtoDerp
         public void DrawCurrentLevelInfo(GameTime gameTime, SpriteBatch spriteBatch)
         {
             String currentLevel = "Current Level: " + game.currentWriteLevel;
-            DrawText(spriteBatch, 0.465f, 0.90f, currentLevel);           
+            DrawText(spriteBatch, 0.465f, 0.90f, currentLevel);
+            String currentWorld = "Current World: " + game.currentWorld;
+            DrawText(spriteBatch, 0.465f, 0.925f, currentWorld); 
 
         }
         public void DrawCurrentTemplateLevel(GameTime gameTime, SpriteBatch spriteBatch)

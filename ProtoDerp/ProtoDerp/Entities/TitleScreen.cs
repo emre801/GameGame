@@ -120,6 +120,9 @@ namespace ProtoDerp
             keyInput = new KeyboardInput();
 
             posLogoText = new Vector2(Constants.GAME_WORLD_WIDTH * 0.3f, Constants.GAME_WORLD_HEIGHT * (0.301f));
+            //LevelEditor le = new LevelEditor(game);
+            //le.readFile();
+            
                 
         }
 
@@ -306,6 +309,8 @@ namespace ProtoDerp
             if (IsVisible)
             {
                 base.Draw(gameTime, spriteBatch);
+                spriteBatch.Draw(sprLogoText.index, game.drawingTool.getDrawingCoords(posLogoText+new Vector2(5,5)), null, Color.Black * 1f, 0, sprLogoText.origin, game.drawingTool.gameToScreen(1.0f * scaleFactor), SpriteEffects.None, 0);
+                
                 spriteBatch.Draw(sprLogoText.index, game.drawingTool.getDrawingCoords(posLogoText), null, Color.White * alpha * 1f, 0, sprLogoText.origin, game.drawingTool.gameToScreen(1.0f * scaleFactor), SpriteEffects.None, 0);
                 //spriteBatch.Draw(sprSelectText.index, game.drawingTool.getDrawingCoords(posSelectText), null, Color.White * alpha * 1f, 0, sprSelectText.origin, game.drawingTool.gameToScreen(1.0f * scaleFactor), SpriteEffects.None, 0);
                 //game.GUI.DrawRectangle(spriteBatch, new Rectangle((int)game.drawingTool.gameToScreen(0), (int)game.drawingTool.gameToScreen(posSelectInner.Y), (int)game.drawingTool.gameXCoordToScreenCoordX(game.getWorldSize().X), (int)game.drawingTool.gameToScreen(sprSelectInner.index.Height * scaleFactor)), Color.Black, .75f);

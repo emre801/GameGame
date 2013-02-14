@@ -95,6 +95,21 @@ namespace ProtoDerp
             player1.inputState = game.playerOneInput;
             //TODO: Load Level;
             LevelEditor le = new LevelEditor(game);
+            if (game.worldFinished)
+            {
+                
+                //Preloads each Level so that the cache can do it's magic
+                game.preloadLevelOnly = true;
+               for (int i = 0; i < 2; i++)
+                    le.readFile(i);
+               game.preloadLevelOnly = false;
+
+                game.entities.Clear();
+                game.toBeAdded.Clear();
+                game.cachedEntityLists = new Dictionary<Type, object>();
+                game.worldFinished = false;
+                game.loadNewLevel = true;
+            }
             if(game.gMode==0)
                 le.readFile(game.currentLevel);  
             else
