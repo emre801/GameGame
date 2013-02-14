@@ -29,6 +29,8 @@ namespace ProtoDerp
 
         public const bool DO_FADE_OUT = false;
 
+        public const bool DO_CUT_SCENE = true;
+
         public const bool BLOCK_EFFECT=true;
 
         public const bool FIND_LAG = false;

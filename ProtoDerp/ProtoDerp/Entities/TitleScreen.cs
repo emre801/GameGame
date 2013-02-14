@@ -121,7 +121,7 @@ namespace ProtoDerp
 
             posLogoText = new Vector2(Constants.GAME_WORLD_WIDTH * 0.3f, Constants.GAME_WORLD_HEIGHT * (0.301f));
             //LevelEditor le = new LevelEditor(game);
-            //le.readFile();
+            //le.readFile(-2);
             
                 
         }
@@ -273,7 +273,7 @@ namespace ProtoDerp
                     {
                         //Start Game
                         IsVisible = false;
-                        CutScene ct = new CutScene(game, 1);
+                        CutScene ct = new CutScene(game, (int)game.currentWorld);
                         game.addEntity(ct);
 
 

@@ -56,6 +56,7 @@ namespace ProtoDerp
             {
                 file = templates.Values.First<string>();
                 Console.WriteLine("Level " + path + " not found.");
+                game.currentLevel = 1;
             }
 
             height = Constants.GAME_WORLD_HEIGHT;
@@ -66,6 +67,8 @@ namespace ProtoDerp
 
         public void createLevel(String file)
         {
+            //if (game.inCutScene)
+               // return;
             StringReader sr = new StringReader(file);
             String line;
             char[] delimiterChars = { ' ', ',', ':', '\t' };

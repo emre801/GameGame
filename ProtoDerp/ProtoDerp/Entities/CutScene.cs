@@ -60,7 +60,7 @@ namespace ProtoDerp
             
             if (isVisible)
             {
-                if (!Constants.DO_FADE_OUT)
+                if (!Constants.DO_CUT_SCENE)
                 {
                     loadLevelInfo();
                 }
@@ -94,6 +94,13 @@ namespace ProtoDerp
             game.drawingTool.cam.Zoom = 0.55f * game.drawingTool.zoomRatio;
             this.isVisible = false;
             this.dispose = true;
+            if (game.currentWorld>1)
+            {
+                game.inTransition = false;
+                game.gameDoneLoading = true;
+                game.inCutScene = false;
+                game.worldFinished = true;
+            }
 
         }
 

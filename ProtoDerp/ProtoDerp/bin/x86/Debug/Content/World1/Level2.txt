@@ -128,7 +128,7 @@
 4302 153 deathSpikes DeathBlock 360
 4428 152 deathSpikes DeathBlock 360
 4554 152 deathSpikes DeathBlock 360
-1103 614 deathSpikes GoalBlock -1
+1103 614 deathSpikes GoalBlock 3
 779 -416 CloudBack SuperBack 490 30
 234 -362 CloudBack SuperBack 490 30
 1391 -288 CloudBack SuperBack 490 30

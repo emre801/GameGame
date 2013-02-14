@@ -161,6 +161,11 @@ namespace ProtoDerp
 
         public bool preloadLevelOnly = false;
 
+        public bool inCutScene = false;
+
+        public bool loadCutScene = false;
+
+        
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -610,33 +615,39 @@ namespace ProtoDerp
             //newLevel();
             if (level == -1)
             {
+
                 if (currentWorld < Constants.TOTAL_NUMBER_OF_WORLDS)
                 {
-                    currentWorld++;
-                    worldFinished = true;
+
+                    //entities.Clear();
+                    //toBeAdded.Clear();
+                    //cachedEntityLists = new Dictionary<Type, object>();
+                    //backGroundImages.Clear();
+
+                    //CutScene ct = new CutScene(this, (int)currentWorld);
+                    //addEntity(ct);
+                    //inCutScene = true;
+                    camZoomValue = -1;
+                    currentLevel = level;
+                    winningAnimation = true;
+                    ///backToTitleScreen = true;
+                    //backGroundImages.Clear();
+                    //JUMP Point
+
+
                 }
-                /*
-                LevelEditor le = new LevelEditor(this);
-                //Preloads each Level so that the cache can do it's magic
-                for (int i = 0; i < 2; i++)
-                    le.readFile(i);
-                entities.Clear();
-                toBeAdded.Clear();
-                cachedEntityLists = new Dictionary<Type, object>();
-                //JumpPoint
-                level = 1;*/
-                //level = 1;
-                level = 1;
-                
 
             }
-            currentLevel = level;
-            winningAnimation = true;
-            animationTime = new Stopwatch();
-            //animationTime.Reset();
-            animationTime.Start();
-            gameDoneLoading = false;
-            gameInsertValues = false;
+            else
+            {
+                currentLevel = level;
+                winningAnimation = true;
+                animationTime = new Stopwatch();
+                //animationTime.Reset();
+                animationTime.Start();
+                gameDoneLoading = false;
+                gameInsertValues = false;
+            }
             //loadNewLevel = true;
         }
 
@@ -921,6 +932,7 @@ namespace ProtoDerp
             xycounter = 0;
             if (inTransition)
                 return;
+            
             playerOneInput.Update(gameTime);
             if (camZoomValue != -1 && isInCreatorMode)//&& !isInCreatorMode)
             {
@@ -994,6 +1006,31 @@ namespace ProtoDerp
                 isInCreatorMode = false;
 
             }
+            if (inCutScene)
+            {
+                
+                pause = false;
+                restart = false;
+                world = new World(new Vector2(0, 5.0f));
+                entities.Clear();
+                toBeAdded.Clear();
+                cachedEntityLists = new Dictionary<Type, object>();
+                //drawingTool.initialize();
+                //drawingTool.resetCamera();
+                gMode = 6;
+                cachedEntityLists = new Dictionary<Type, object>();
+                CutScene ct= new CutScene(this,(int)currentWorld);
+                backGroundImages.Clear();
+                //Title.IsVisible = true;
+                addEntity(ct);
+                isInCreatorMode = false;
+                currentWorld++;
+                inCutScene = false;
+                winningAnimation = false;
+                //worldFinished = true;
+
+
+            }
 
             
 
@@ -1061,7 +1098,16 @@ namespace ProtoDerp
                 ballPosition += 30;
                 if (ts.CompareTo(new TimeSpan(0, 0, 0,0,500)) > 0)
                 {
-                    inTransition = true;
+                    if (currentLevel > 0)
+                        inTransition = true;
+                    else
+                    {
+                        if(!inCutScene)
+                            inCutScene = true;
+                    }
+                    
+                    
+
                     //loadNewLevel = true;
                 }
             }
