@@ -156,7 +156,7 @@ namespace ProtoDerp
 
         public float respawnFadeValue = -1f;
 
-        public float currentWorld = 1;
+        public float currentWorld = Constants.STARTING_WORLD;
         public bool worldFinished = false;
 
         public bool preloadLevelOnly = false;
@@ -164,6 +164,8 @@ namespace ProtoDerp
         public bool inCutScene = false;
 
         public bool loadCutScene = false;
+
+        public bool doNotLoadLevel = false;
 
         
         public Game()
@@ -616,7 +618,7 @@ namespace ProtoDerp
             if (level == -1)
             {
 
-                if (currentWorld < Constants.TOTAL_NUMBER_OF_WORLDS)
+                if (currentWorld <= Constants.TOTAL_NUMBER_OF_WORLDS)
                 {
 
                     //entities.Clear();
@@ -662,7 +664,7 @@ namespace ProtoDerp
                 this.songName = songName.Substring(songName.IndexOf("\\")+1);
                 MediaPlayer.Play(song);
                 MediaPlayer.IsRepeating = false;
-                MediaPlayer.Volume = 0.2f;
+                MediaPlayer.Volume = 0.1f;
             }
         }
         public void preloadSongs()
@@ -676,7 +678,8 @@ namespace ProtoDerp
 
                 Song song = Content.Load<Song>("Music\\"+songName);
                 MediaPlayer.Play(song);
-                MediaPlayer.Pause();
+                MediaPlayer.Stop();
+                MediaPlayer.Volume = 0.1f;
             }
 
         }
@@ -685,6 +688,7 @@ namespace ProtoDerp
         {
             if (!Constants.PLAY_MUSIC)
                 return;
+            MediaPlayer.Volume = 0.1f;
             if (MediaPlayer.State != MediaState.Playing)
             {
                 DirectoryInfo di = new DirectoryInfo(Content.RootDirectory + "\\Music");
@@ -692,6 +696,8 @@ namespace ProtoDerp
 
                 String songName = fi[ran.Next(fi.Length)].Name;
                 songName = songName.Substring(0, songName.IndexOf("."));
+                //MediaPlayer.Volume = 0.1f;
+                float volume = MediaPlayer.Volume;
                 if(playedSongs.Contains(songName)&& playedSongs.Count!=Constants.NUMBER_OF_SONGS)
                 {
                     playRandonSong();
@@ -927,7 +933,7 @@ namespace ProtoDerp
 
         protected override void Update(GameTime gameTime)
         {
-            inWater = false;
+            
             bool reloadButtons = false;
             xycounter = 0;
             if (inTransition)
@@ -1019,7 +1025,7 @@ namespace ProtoDerp
                 //drawingTool.resetCamera();
                 gMode = 6;
                 cachedEntityLists = new Dictionary<Type, object>();
-                CutScene ct= new CutScene(this,(int)currentWorld);
+                CutScene ct= new CutScene(this,(int)currentWorld+1);
                 backGroundImages.Clear();
                 //Title.IsVisible = true;
                 addEntity(ct);
@@ -1105,8 +1111,11 @@ namespace ProtoDerp
                         inTransition = true;
                     else
                     {
-                        if(!inCutScene)
+                        if (!inCutScene)
+                        {
                             inCutScene = true;
+                            inTransition = true;
+                        }
                     }
                     
                     

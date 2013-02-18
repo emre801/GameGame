@@ -33,6 +33,7 @@ namespace ProtoDerp
         public Button[] buttons;
         public float deathFadeAlpha=1f;
         public float respawnFadeAlpha = 0f;
+        public bool isDoneClosing = false;
         public GUI(Game g)
             : base(g)
         {
@@ -256,7 +257,10 @@ namespace ProtoDerp
             {
 
                 game.inTransition = false;
-                game.loadNewLevel = true;
+                isDoneClosing = true;
+                if(!game.inCutScene && !game.doNotLoadLevel)
+                    game.loadNewLevel = true;
+                
             }
 
             spriteBatch.Draw(leftCur.index, new Rectangle((int)(curLeftMove),

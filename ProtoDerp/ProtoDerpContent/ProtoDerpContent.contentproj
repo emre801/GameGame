@@ -816,6 +816,11 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="CutScene1\2.png">
+      <Name>2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="Template\Level3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>Level3</Name>
@@ -953,6 +958,22 @@
     <Content Include="World1\Level3.txt">
       <Name>Level3</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="World2\Level3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level3</Name>
+    </Content>
+    <Content Include="World2\Level2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level2</Name>
+    </Content>
+    <Content Include="World2\Level5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level5</Name>
+    </Content>
+    <Content Include="World2\Level4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Name>Level4</Name>
     </Content>
     <Content Include="World2\Level1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

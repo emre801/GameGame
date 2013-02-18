@@ -164,6 +164,7 @@ Content\spriteStripBlueFlowers.xnb
 Content\spriteStripPurpleFlower.xnb
 Content\CutScene2\0.xnb
 Content\CutScene2\1.xnb
+Content\CutScene1\2.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt
@@ -196,4 +197,8 @@ Content\World1\Level5.txt
 Content\World1\Level1.txt
 Content\World1\Level2.txt
 Content\World1\Level3.txt
+Content\World2\Level3.txt
+Content\World2\Level2.txt
+Content\World2\Level5.txt
+Content\World2\Level4.txt
 Content\World2\Level1.txt

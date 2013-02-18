@@ -21,6 +21,8 @@ namespace ProtoDerp
         private static Dictionary<string, string> images = new Dictionary<string, string>();
         public bool isVisible = false;
         KeyboardInput keyInput;
+        GUI gui = null;
+        float curHeight, curWidth;
         public CutScene(Game g, int cutSceneNumber)
             : base(g)
         {
@@ -30,6 +32,26 @@ namespace ProtoDerp
             LoadContent();
             isVisible = true;
             keyInput = new KeyboardInput();
+
+            if (!Constants.FULLSCREEN)
+            {
+                curHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+                curWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width * 0.5f;
+               
+            }
+            else
+            {
+                curHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height + 10f;
+                curWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+
+            }
+            if (cutSceneNumber > Constants.TOTAL_NUMBER_OF_WORLDS)
+            {
+
+                cutSceneNumber = Constants.TOTAL_NUMBER_OF_WORLDS;
+            }
+            
+            gui = new GUI(game);
 
         }
         public void LoadContent()
@@ -60,6 +82,11 @@ namespace ProtoDerp
             
             if (isVisible)
             {
+                game.pauseMusic();
+                if(game.currentWorld>Constants.STARTING_WORLD)
+                    game.doNotLoadLevel = true;
+                if (game.currentWorld > Constants.STARTING_WORLD) 
+                    gui.Update(gameTime, worldFactor);
                 if (!Constants.DO_CUT_SCENE)
                 {
                     loadLevelInfo();
@@ -75,12 +102,19 @@ namespace ProtoDerp
                     }
                     else
                     {
-                        loadLevelInfo();
+                        if (game.currentWorld == Constants.STARTING_WORLD)
+                            loadLevelInfo();
+                        else
+                        {
+                            game.inTransition = true;
+                        }
                     }
 
 
                 }
             }
+            if (gui.isDoneClosing)
+                loadLevelInfo();
 
         }
 
@@ -94,12 +128,14 @@ namespace ProtoDerp
             game.drawingTool.cam.Zoom = 0.55f * game.drawingTool.zoomRatio;
             this.isVisible = false;
             this.dispose = true;
-            if (game.currentWorld>1)
+            if (game.currentWorld>Constants.STARTING_WORLD)
             {
-                game.inTransition = false;
+                //game.inTransition = false;
                 game.gameDoneLoading = true;
                 game.inCutScene = false;
                 game.worldFinished = true;
+                game.doNotLoadLevel = false;
+                game.playRandonSong();
             }
 
         }
@@ -107,9 +143,18 @@ namespace ProtoDerp
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             //TODO add Draw so that it goes to fullScreen :)
-            if(isVisible)
-                spriteBatch.Draw(currentImage.index, game.drawingTool.getDrawingCoords(new Vector2(0, 0)), null, Color.White * alpha * 1f, 0, currentImage.origin, game.drawingTool.gameToScreen(1.0f), SpriteEffects.None, 0);
+            if (isVisible)
+            {
                 
+                //spriteBatch.Draw(currentImage.index, game.drawingTool.getDrawingCoords(new Vector2(0, 0)), null, Color.White * alpha * 1f, 0, currentImage.origin, game.drawingTool.gameToScreen(1.0f), SpriteEffects.None, 0);
+                spriteBatch.Draw(currentImage.index, new Rectangle((int)(curWidth/2),
+                        (int)(curHeight/4),
+                        (int)(currentImage.index.Width/2), (int)(currentImage.index.Height/2)), null, Color.White, 0,
+                        new Vector2(currentImage.index.Width / 2, currentImage.index.Height/2), SpriteEffects.None, 0f);
+                
+                if (game.currentWorld > Constants.STARTING_WORLD)
+                    gui.Draw(gameTime, spriteBatch);
+            }   
         }
 
     }

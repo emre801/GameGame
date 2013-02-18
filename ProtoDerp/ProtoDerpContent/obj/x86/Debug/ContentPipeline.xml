@@ -512,7 +512,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CutScene1\0.xnb</Output>
-      <Time>2012-10-05T12:40:25.9005716-04:00</Time>
+      <Time>2013-02-18T10:30:23.0240658-05:00</Time>
     </Item>
     <Item>
       <Source>CutScene1\1.png</Source>
@@ -521,7 +521,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CutScene1\1.xnb</Output>
-      <Time>2012-10-05T12:40:25.907572-04:00</Time>
+      <Time>2013-02-18T10:30:23.8721143-05:00</Time>
     </Item>
     <Item>
       <Source>MouseImage.png</Source>
@@ -1366,6 +1366,15 @@
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CutScene2\1.xnb</Output>
       <Time>2013-02-14T16:15:22.5727898-05:00</Time>
+    </Item>
+    <Item>
+      <Source>CutScene1\2.png</Source>
+      <Name>CutScene1\2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CutScene1\2.xnb</Output>
+      <Time>2013-02-18T10:30:23.8821149-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

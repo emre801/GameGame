@@ -304,6 +304,13 @@ namespace ProtoDerp
                 distance = 0;
                 run = !run;
             }
+            float waterValue = 1;
+            if (game.inWater)
+            {
+                waterValue = 0.45f;
+                game.inWater = false;
+            }
+
             //Ignores input if it's in creator mode
             if (game.isInCreatorMode && !game.testLevel)
             {
@@ -326,7 +333,7 @@ namespace ProtoDerp
             {
                 if ((Math.Abs(body.LinearVelocity.X) < 10 * runningValue))
                 {
-                    body.ApplyLinearImpulse(new Vector2(xDirection * 0.45f * runningValue, 0));// inputState.getYDirection() * 300f));
+                    body.ApplyLinearImpulse(new Vector2(xDirection * 0.45f * runningValue*waterValue, 0));// inputState.getYDirection() * 300f));
                 }
                 if (xDirection == 0)
                     fixture.Friction = 80;
@@ -336,7 +343,7 @@ namespace ProtoDerp
             else
             {
 
-                body.ApplyLinearImpulse(new Vector2(xDirection * 0.95f * runningValue, 0));// inputState.getYDirection() * 300f));
+                body.ApplyLinearImpulse(new Vector2(xDirection * 0.95f * runningValue*waterValue, 0));// inputState.getYDirection() * 300f));
                 //motor.MotorSpeed = inputState.getXDirection()*10;
                 if (inputState.getXDirection() == 0)
                     fixture.Friction = 10;
@@ -359,11 +366,11 @@ namespace ProtoDerp
                 {
                     if (jumpDirection)
                     {
-                        body.ApplyLinearImpulse(new Vector2(-7.75f * runningValue, 0f));
+                        body.ApplyLinearImpulse(new Vector2(-7.75f * runningValue*waterValue, 0f));
                     }
                     else
                     {
-                        body.ApplyLinearImpulse(new Vector2(7.75f * runningValue, 0f));
+                        body.ApplyLinearImpulse(new Vector2(7.75f * runningValue*waterValue, 0f));
                     }
 
                 }

@@ -76,7 +76,7 @@
 1479 -146 groundWall Block 120 14 2 540
 1479 -26 groundWall Block 120 14 2 540
 1479 93 groundWall Block 120 14 2 540
-1018 -1 ahLogo0 GoalBlock -1
+1018 -1 ahLogo0 GoalBlock 2
 430 -185 GreenHill2 SuperBack 371 466
 1036 -193 GreenHill2 SuperBack 371 466
 -158 -187 GreenHill2 SuperBack 371 466

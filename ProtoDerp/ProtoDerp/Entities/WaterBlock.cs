@@ -192,6 +192,7 @@ namespace ProtoDerp
             {
                 game.world.Gravity = new Vector2(0, 1.5f);
                 game.inWater = true;
+                int k = 1;
                 
             }
             return true;
