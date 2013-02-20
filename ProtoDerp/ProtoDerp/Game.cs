@@ -146,6 +146,7 @@ namespace ProtoDerp
         public bool deathBlockGoalCollision = false;
 
         public bool inWater = false;
+        public bool oldWater = false;
         public int waterCollisionTime = -1;
         public int[] xValues = new int[1000];
         public int[] yValues = new int[1000];
@@ -318,6 +319,10 @@ namespace ProtoDerp
             blockList.AddLast("dirtyBlock");
             sprites.Add("dirtyBlock2", new Sprite(Content, "dirtyBlock2"));
             blockList.AddLast("dirtyBlock2");
+            sprites.Add("seablock", new Sprite(Content, "seablock"));
+            blockList.AddLast("seablock");
+            sprites.Add("seaWall", new Sprite(Content, "seaWall"));
+            blockList.AddLast("seaWall");
             sprites.Add("skyScrapper", new Sprite(Content,"skyScrapper"));
             blockList.AddLast("skyScrapper");
             sprites.Add("simplePix", new Sprite(Content, "simplePix"));
@@ -479,24 +484,29 @@ namespace ProtoDerp
 
             spriteAnimation.Add("spriteStripFlower", new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripFlower")
                 , 8, 120));//fan
-            sprites.Add("spriteStripFlower", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripFlower"), 4, 120).getIndex(), "spriteStripFlower"));
+            sprites.Add("spriteStripFlower", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripFlower"), 8, 120).getIndex(), "spriteStripFlower"));
             blockList.AddLast("spriteStripFlower");
 
             /////////////////////
             spriteAnimation.Add("spriteStripBlueFlowers", new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripBlueFlowers")
                 , 8, 120));//fan
-            sprites.Add("spriteStripBlueFlowers", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripBlueFlowers"), 4, 120).getIndex(), "spriteStripBlueFlowers"));
+            sprites.Add("spriteStripBlueFlowers", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripBlueFlowers"), 8, 120).getIndex(), "spriteStripBlueFlowers"));
             blockList.AddLast("spriteStripBlueFlowers");
             /////////////////////
 
             /////////////////////
             spriteAnimation.Add("spriteStripPurpleFlower", new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripPurpleFlower")
                 , 8, 120));//fan
-            sprites.Add("spriteStripPurpleFlower", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripPurpleFlower"), 4, 120).getIndex(), "spriteStripPurpleFlower"));
+            sprites.Add("spriteStripPurpleFlower", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "spriteStripPurpleFlower"), 8, 120).getIndex(), "spriteStripPurpleFlower"));
             blockList.AddLast("spriteStripPurpleFlower");
             /////////////////////
 
-
+            /////////////////////
+            spriteAnimation.Add("bubbleSpriteSheet", new SpriteStripAnimationHandler(new Sprite(Content, "bubbleSpriteSheet")
+                , 4, 240));//fan
+            sprites.Add("bubbleSpriteSheet", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "bubbleSpriteSheet"), 4, 120).getIndex(), "bubbleSpriteSheet"));
+            blockList.AddLast("bubbleSpriteSheet");
+            ////////////////////
 
             spriteAnimation.Add("missile_strip_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "missile_strip_strip4")
                 , 4, 45));//missle
@@ -948,7 +958,7 @@ namespace ProtoDerp
             {
                 Exit();
             }
-            if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Start) && !pause)
+            if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Back) && !pause)
             {
                 if (gMode == 0)
                     restart = true;
@@ -971,7 +981,7 @@ namespace ProtoDerp
                 animationTime.Reset();
                 return;
             }
-            if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Back) || isPausePressed)
+            if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Start) || isPausePressed)
             {
                 isPausePressed = false;
                
@@ -1143,6 +1153,7 @@ namespace ProtoDerp
             {
                 world.Gravity = new Vector2(0, 5);
             }
+            oldWater = inWater;
 
             if (reloadButtons)
                 addButtons();

@@ -188,7 +188,7 @@ namespace ProtoDerp
             Rectangle waterRec = new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X)-(int)width/2,
                 (int)ConvertUnits.ToDisplayUnits(body.Position.Y) - (int)height / 2,
                 (int)width, (int)height);
-            if (playerRec.Intersects(waterRec) || waterRec.Contains(playerRec))
+            if (waterRec.Contains(playerRec))
             {
                 game.world.Gravity = new Vector2(0, 1.5f);
                 game.inWater = true;
@@ -210,14 +210,14 @@ namespace ProtoDerp
             int i = playerSprite.index.Width;
             Point bottomRight = new Point(playerSprite.index.Width, playerSprite.index.Height);
             Rectangle targetRect = new Rectangle((int)ringDrawPoint.X, (int)ringDrawPoint.Y, bottomRight.X, bottomRight.Y);
-            Color drawColor = Color.LightBlue;
+            Color drawColor = Color.DarkBlue;
             if (isSelected)
                 drawColor = Color.Green;
             //spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, drawColor, body.Rotation, origin, SpriteEffects.None, 0f);
             if (ani.getStateCount() == 1)
             {
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), 
-                    (int)width, (int)height), null, drawColor*0.30f, body.Rotation, origin, SpriteEffects.None, 0f);
+                    (int)width, (int)height), null, drawColor*0.25f, body.Rotation, origin, SpriteEffects.None, 0f);
             }
             else
             {

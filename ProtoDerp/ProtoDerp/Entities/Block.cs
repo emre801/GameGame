@@ -143,9 +143,19 @@ namespace ProtoDerp
                 {
 
 
-                    Color[] template = new Color[95 * 95];
-                    
+                    Color[] template;
+                    template= new Color[95 * 95];
+                    int demi = 95;
                     game.getSprite("dirtyBlock2").index.GetData<Color>(template);
+
+                    if (game.currentWorld == 2)
+                    {
+                        template = new Color[95 * 95];
+                        game.getSprite("seablock").index.GetData<Color>(template);
+                        demi = 95;
+
+                    }
+
                     int counter = 0;
                     int maxCounter = template.Length;
                     for (int x = 0; x < width; x++)
@@ -156,18 +166,18 @@ namespace ProtoDerp
                             int yMod = (int)origPos.Y - (int)height / 2 + y; //y % 95;
                             //xMod = xMod / (int)width;
                             //yMod = yMod / (int)height;
-                            xMod = xMod % 95;
-                            yMod = yMod % 95;
+                            xMod = xMod % demi;
+                            yMod = yMod % demi;
                             
                             if (xMod < 0)
                             {
-                                xMod = xMod+95;
+                                xMod = xMod+demi;
                             }
                             if (yMod < 0)
                             {
-                                yMod =yMod+95;
+                                yMod =yMod+demi;
                             }
-                            Color tempColor=template[xMod + yMod * 95];
+                            Color tempColor=template[xMod + yMod * demi];
                             if ((int)(x + y * (int)width) < cData.Length)
                             {
                                 cData[(int)(x + y * (int)width)] = tempColor;
@@ -387,6 +397,8 @@ namespace ProtoDerp
 
                 if ((spriteNumber.Equals("bigBlock")) && width < 4096 && height < 4096 && Constants.BLOCK_EFFECT)
                 {
+                    if (game.currentWorld == 2)
+                        displayAlpha = 1f;
                     spriteBatch.Draw(dynamicPattern, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X + ConvertUnits.ToSimUnits(widthDiff / 2f)),
                         (int)ConvertUnits.ToDisplayUnits(body.Position.Y + ConvertUnits.ToSimUnits(heightDiff / 2f)), (int)dynamicPattern.Width, (int)dynamicPattern.Height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
 

@@ -307,8 +307,17 @@ namespace ProtoDerp
             float waterValue = 1;
             if (game.inWater)
             {
-                waterValue = 0.45f;
+                waterValue = 0.25f;
+                if (body.LinearVelocity.Y > 2f)// && !game.oldWater)
+                {
+                    body.LinearVelocity = new Vector2(body.LinearVelocity.X, 2f);
+                }
                 game.inWater = false;
+                if (game.ran.Next(100) % 13 == 0)
+                {
+                    TempBlock bubble = new TempBlock(game, game.Arena, ConvertUnits.ToDisplayUnits(body.Position) - Constants.player1SpawnLocation + new Vector2(0, -35), 1, "bubbleSpriteSheet");
+                    game.addEntity(bubble);
+                }
             }
 
             //Ignores input if it's in creator mode
@@ -459,9 +468,9 @@ namespace ProtoDerp
             {
 
                 if (yDirection > 0)
-                    body.ApplyLinearImpulse(new Vector2(0, yDirection * 1.05f));
+                    body.ApplyLinearImpulse(new Vector2(0, yDirection * 1.05f*waterValue));
                 else
-                    body.ApplyLinearImpulse(new Vector2(0, yDirection * 0.12f));
+                    body.ApplyLinearImpulse(new Vector2(0, yDirection * 0.12f*waterValue));
 
                 if (!isOnWall)
                 {

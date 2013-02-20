@@ -165,6 +165,10 @@ Content\spriteStripPurpleFlower.xnb
 Content\CutScene2\0.xnb
 Content\CutScene2\1.xnb
 Content\CutScene1\2.xnb
+Content\CutScene2\2.xnb
+Content\seablock.xnb
+Content\seawall.xnb
+Content\bubbleSpriteSheet.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

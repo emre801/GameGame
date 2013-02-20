@@ -143,6 +143,7 @@
     <Compile Include="Entities\MovingDeath.cs" />
     <Compile Include="Entities\MovingPath.cs" />
     <Compile Include="Entities\PlayableCharacter.cs" />
+    <Compile Include="Entities\TempBlock.cs" />
     <Compile Include="Entities\TitleScreen.cs" />
     <Compile Include="Entities\WaterBlock.cs" />
     <Compile Include="Input.cs" />

@@ -9,8 +9,8 @@ namespace ProtoDerp
 {
     class Constants
     {
-        public const int WRITE_LEVEL = 1;
-        public const int STARTING_WORLD = 1;
+        public const int WRITE_LEVEL = 3;
+        public const int STARTING_WORLD = 2;
         public const int MAX_WRITE_LEVEL = 29;
         public const int READ_LEVEL = 2;
 
@@ -51,7 +51,7 @@ namespace ProtoDerp
 
         public const bool FULLSCREEN = false;
 
-        public const bool PLAY_MUSIC = true;
+        public const bool PLAY_MUSIC = false;
 
         public const float SHADOW_VALUE = 0.25f;
 

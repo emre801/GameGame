@@ -1356,7 +1356,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CutScene2\0.xnb</Output>
-      <Time>2013-02-14T16:15:22.5567888-05:00</Time>
+      <Time>2013-02-19T10:19:31.8709434-05:00</Time>
     </Item>
     <Item>
       <Source>CutScene2\1.png</Source>
@@ -1365,7 +1365,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CutScene2\1.xnb</Output>
-      <Time>2013-02-14T16:15:22.5727898-05:00</Time>
+      <Time>2013-02-19T10:19:32.4299753-05:00</Time>
     </Item>
     <Item>
       <Source>CutScene1\2.png</Source>
@@ -1375,6 +1375,42 @@
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CutScene1\2.xnb</Output>
       <Time>2013-02-18T10:30:23.8821149-05:00</Time>
+    </Item>
+    <Item>
+      <Source>CutScene2\2.png</Source>
+      <Name>CutScene2\2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CutScene2\2.xnb</Output>
+      <Time>2013-02-19T10:19:32.4339756-05:00</Time>
+    </Item>
+    <Item>
+      <Source>seablock.png</Source>
+      <Name>seablock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\seablock.xnb</Output>
+      <Time>2013-02-19T23:39:23.5740205-05:00</Time>
+    </Item>
+    <Item>
+      <Source>seawall.png</Source>
+      <Name>seawall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\seawall.xnb</Output>
+      <Time>2013-02-19T22:59:52.834422-05:00</Time>
+    </Item>
+    <Item>
+      <Source>bubbleSpriteSheet.png</Source>
+      <Name>bubbleSpriteSheet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\bubbleSpriteSheet.xnb</Output>
+      <Time>2013-02-20T11:25:52.6689572-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
