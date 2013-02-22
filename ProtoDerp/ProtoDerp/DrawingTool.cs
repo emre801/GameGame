@@ -120,6 +120,7 @@ namespace ProtoDerp
             startingCamPosition = cam.Pos;
 
             cam.Zoom = 0.75f;// *zoomRatio;
+            cam.Zoom = 0.55f * zoomRatio;
             if (game.camZoomValue != -1)
             {
                 cam.Zoom = game.camZoomValue;

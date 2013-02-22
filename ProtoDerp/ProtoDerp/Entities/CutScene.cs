@@ -42,7 +42,8 @@ namespace ProtoDerp
             else
             {
                 curHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height + 10f;
-                curWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+                curWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width+40;
+                
 
             }
             if (cutSceneNumber > Constants.TOTAL_NUMBER_OF_WORLDS)
@@ -79,7 +80,14 @@ namespace ProtoDerp
 
         public override void Update(GameTime gameTime, float worldFactor)
         {
-            
+            //if(Constants.FULLSCREEN)
+                //game.drawingTool.cam.Pos = new Vector2(800, 540);
+            if (game.currentLevel != 1)
+            {
+                loadLevelInfo();
+                return;
+
+            }
             if (isVisible)
             {
                 game.pauseMusic();
@@ -125,7 +133,7 @@ namespace ProtoDerp
             //game.playSong("Music//ForrestSounds");
             game.playRandonSong();
             game.populateWorld();
-            game.drawingTool.cam.Zoom = 0.55f * game.drawingTool.zoomRatio;
+           // game.drawingTool.cam.Zoom = 0.55f * game.drawingTool.zoomRatio;
             this.isVisible = false;
             this.dispose = true;
             if (game.currentWorld>Constants.STARTING_WORLD)
@@ -136,6 +144,7 @@ namespace ProtoDerp
                 game.worldFinished = true;
                 game.doNotLoadLevel = false;
                 game.playRandonSong();
+                //game.camZoomValue = 0.55f;
             }
 
         }

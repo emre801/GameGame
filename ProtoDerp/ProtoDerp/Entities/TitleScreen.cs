@@ -138,7 +138,7 @@ namespace ProtoDerp
                 selectLevel.Update(gameTime, worldFactor);
                 creativeMode.Update(gameTime, worldFactor);
                 exit.Update(gameTime, worldFactor);
-
+                game.camZoomValue = -1;
                 //Move buttons up and down
                 /*
                 if (moveTimer % 30 == 0)

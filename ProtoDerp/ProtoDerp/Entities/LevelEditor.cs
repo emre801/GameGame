@@ -367,6 +367,10 @@ namespace ProtoDerp
             }
             game.gameInsertValues = true;
 
+            //game.drawingTool.resetCamera();
+            
+                game.drawingTool.cam.Zoom = game.camZoomValue;
+                game.drawingTool.cam.Pos = game.camPosSet;
             
 
             SortedSet<Entity> omg=game.entities;

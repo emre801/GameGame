@@ -304,13 +304,13 @@ namespace ProtoDerp
                 distance = 0;
                 run = !run;
             }
-            float waterValue = 1;
+            float waterValue = 0.85f;
             if (game.inWater)
             {
                 waterValue = 0.25f;
-                if (body.LinearVelocity.Y > 2f)// && !game.oldWater)
+                if (body.LinearVelocity.Y > 4f)// && !game.oldWater)
                 {
-                    body.LinearVelocity = new Vector2(body.LinearVelocity.X, 2f);
+                    body.LinearVelocity = new Vector2(body.LinearVelocity.X, 4f);
                 }
                 game.inWater = false;
                 if (game.ran.Next(100) % 13 == 0)
@@ -319,7 +319,7 @@ namespace ProtoDerp
                     game.addEntity(bubble);
                 }
             }
-
+            
             //Ignores input if it's in creator mode
             if (game.isInCreatorMode && !game.testLevel)
             {
@@ -370,7 +370,7 @@ namespace ProtoDerp
                     oldYvalue = 0;
                 body.LinearVelocity = new Vector2(body.LinearVelocity.X, 0);
                 modes = Modes.AIRUP;
-                body.ApplyLinearImpulse(new Vector2(0, -30f+oldYvalue));
+                body.ApplyLinearImpulse(new Vector2(0, -30f+oldYvalue*waterValue));
                 if (isOnWall)
                 {
                     if (jumpDirection)
@@ -517,6 +517,11 @@ namespace ProtoDerp
                 jumpDirection = isWallOnRight;// faceRight;
                 faceRight = jumpDirection;
                 isFirstAni = true;
+            }
+            if (body.LinearVelocity.X > 25)
+            {
+                body.LinearVelocity = new Vector2(25, body.LinearVelocity.Y);
+
             }
 
         }

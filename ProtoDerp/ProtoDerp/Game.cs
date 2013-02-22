@@ -205,7 +205,7 @@ namespace ProtoDerp
         }
         public void populateWorld()
         {
-            drawingTool.cam.Zoom = 0.55f * drawingTool.zoomRatio;
+            //drawingTool.cam.Zoom = 0.55f * drawingTool.zoomRatio;
             //Create the in-game arena.
             Arena = new Arena(this, Arena.GameMode.MODE_MULTI_PLAYER);
             addEntity(Arena);
@@ -639,7 +639,7 @@ namespace ProtoDerp
                     //CutScene ct = new CutScene(this, (int)currentWorld);
                     //addEntity(ct);
                     //inCutScene = true;
-                    camZoomValue = -1;
+                    //camZoomValue = -1;
                     currentLevel = level;
                     winningAnimation = true;
                     ///backToTitleScreen = true;
@@ -1044,7 +1044,15 @@ namespace ProtoDerp
                 inCutScene = false;
                 winningAnimation = false;
                 drawingTool.cam.Zoom = 0.95f * drawingTool.zoomRatio;
-                drawingTool.cam.Pos = new Vector2(400, 360);
+                if (!Constants.FULLSCREEN)
+                {
+                    drawingTool.cam.Pos = new Vector2(400, 360);
+                }
+                else
+                {
+                    drawingTool.cam.Pos = new Vector2(800, 540);
+
+                }
                 
                 //worldFinished = true;
 

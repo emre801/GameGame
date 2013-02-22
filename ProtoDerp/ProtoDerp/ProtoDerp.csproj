@@ -160,6 +160,7 @@
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
+    <Content Include="RQ.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\Farseer Physics Engine 3.2 XNA %281%29\Farseer Physics Engine 3.2 XNA\Farseer Physics 3.2 XNA.csproj">
