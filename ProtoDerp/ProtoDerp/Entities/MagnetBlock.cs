@@ -39,6 +39,7 @@ namespace ProtoDerp
         public Vector2 magnetPulse;
         public float height, width;
         bool isInMagnet = false;
+        public bool isFan;
         public MagnetBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber,Vector2 magnetPulse, float height, float width)
             : base(g)
         {
@@ -55,8 +56,26 @@ namespace ProtoDerp
             fixture.OnSeparation += new OnSeparationEventHandler(OnSeparation);
 
             this.magnetPulse = magnetPulse;
-            
+            isFan = false;
             //game.Arena.player1.fixture.CollisionFilter.IgnoreCollisionWith(this.fixture);
+        }
+        public MagnetBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber, Vector2 magnetPulse, float height, float width, bool isFan)
+            : base(g)
+        {
+            this.pos = Constants.player1SpawnLocation + pos;
+            this.origPos = pos;
+            this.drawPriority = Constants.PLAYER_DRAWPRI;
+            this.spriteNumber = spriteNumber;
+            this.width = width;
+            this.height = height;
+            LoadContent();
+            SetUpPhysics(Constants.player1SpawnLocation + pos);
+            origin = new Vector2(playerSprite.index.Width / 2, playerSprite.index.Height / 2);
+            fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
+            fixture.OnSeparation += new OnSeparationEventHandler(OnSeparation);
+
+            this.magnetPulse = magnetPulse;
+            this.isFan = isFan;
         }
         void OnSeparation(Fixture fixtureA, Fixture fixtureB)
         {
@@ -81,7 +100,21 @@ namespace ProtoDerp
                 PlayableCharacter player = players.First();
                 if (fixtureB == player.fixture)
                 {
-                    player.body.ApplyLinearImpulse(magnetPulse);
+                    Vector2 magneticForce;
+                    if(!isFan)
+                        magneticForce=magnetPulse * game.magValue;
+                    else
+                        magneticForce=magnetPulse;
+                    if (magneticForce.X != 0)
+                    {
+                        player.body.LinearVelocity = new Vector2(magneticForce.X, player.body.LinearVelocity.Y);
+
+                    }
+                    else
+                    {
+                        player.body.LinearVelocity = new Vector2(player.body.LinearVelocity.X, magneticForce.Y);
+
+                    }
                     if (!isInMagnet)
                     {
                         /*
@@ -141,6 +174,14 @@ namespace ProtoDerp
             playerSprite = game.getSprite(spriteNumber);
         }
 
+        public void updateMagnetBlock()
+        {
+            if(game.magValue<0)
+                playerSprite = game.getSprite("magNeg");
+            else
+                playerSprite = game.getSprite("magPulse");
+        }
+
         public bool isExpanding()
         {
             return false;
@@ -181,7 +222,7 @@ namespace ProtoDerp
 
         public override void Update(GameTime gameTime, float worldSpeed)
         {
-
+            //updateMagnetBlock();
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)

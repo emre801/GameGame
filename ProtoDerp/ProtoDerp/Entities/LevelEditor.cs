@@ -80,6 +80,7 @@ namespace ProtoDerp
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             game.stopWatchLagTimer.Reset();
+            game.magValue = 1;
             while ((line = sr.ReadLine()) != null)
             {
                 c++;
@@ -144,9 +145,16 @@ namespace ProtoDerp
                         rotation = System.Convert.ToSingle(words[4]);
                     deathBlocks.AddLast(new DeathBlock(game, game.Arena, new Vector2(x, y), 1, spriteName,rotation));
                 }
-                 if (words[3].Equals("MagnetBlock"))
-                    magnetBlocks.AddLast(new MagnetBlock(game, game.Arena, new Vector2(x, y), 1, spriteName, new Vector2(Convert.ToInt32(words[4]), Convert.ToInt32(words[5])), Convert.ToInt32(words[6]), Convert.ToInt32(words[7])));
-                
+                if (words[3].Equals("MagnetBlock"))
+                {
+                    if (words.Length < 9)
+                        magnetBlocks.AddLast(new MagnetBlock(game, game.Arena, new Vector2(x, y), 1, spriteName, new Vector2(Convert.ToInt32(words[4]), Convert.ToInt32(words[5])), Convert.ToInt32(words[6]), Convert.ToInt32(words[7])));
+                    else
+                    {
+                        bool isFan = Convert.ToInt32(words[8]) == 1;
+                        magnetBlocks.AddLast(new MagnetBlock(game, game.Arena, new Vector2(x, y), 1, spriteName, new Vector2(Convert.ToInt32(words[4]), Convert.ToInt32(words[5])), Convert.ToInt32(words[6]), Convert.ToInt32(words[7]), isFan));
+                    }
+                }
                 if (words[3].Equals("GoalBlock"))
                     goalBlocks.AddLast(new GoalBlock(game, game.Arena, new Vector2(x, y), 1, spriteName, Convert.ToInt32(words[4])));
                 if (words[3].Equals("MovingDeath"))

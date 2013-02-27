@@ -288,6 +288,11 @@ namespace ProtoDerp
             float direction = inputState.GetJoyDirection();
             float x = (float)Math.Sin(direction);
             float y = (float)Math.Cos(direction) - 1;
+            if(inputState.IsNewButtonPressed(Buttons.LeftShoulder))
+            {
+                game.magValue= game.magValue*-1;
+            }
+
             //if (body.LinearVelocity.X < 3 && body.LinearVelocity.X > -3)
             //body.ApplyLinearImpulse(new Vector2(inputState.getXDirection() * 2f, 0));// inputState.getYDirection() * 300f));
 
@@ -396,13 +401,16 @@ namespace ProtoDerp
                 
 
             }
-            if (body.LinearVelocity.X > 0)
+            if (modes != Modes.WALL)
             {
-                faceRight = true;
-            }
-            if (body.LinearVelocity.X < 0)
-            {
-                faceRight = false;
+                if (body.LinearVelocity.X > 0)
+                {
+                    faceRight = true;
+                }
+                if (body.LinearVelocity.X < 0)
+                {
+                    faceRight = false;
+                }
             }
 
             if (body.LinearVelocity.Y < -1)

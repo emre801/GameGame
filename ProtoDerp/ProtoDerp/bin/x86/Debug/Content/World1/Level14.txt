@@ -393,9 +393,9 @@
 886 -921 deathSpikes DeathBlock 0
 2130 189 deathSpikes DeathBlock 0
 2255 189 deathSpikes DeathBlock 0
-1434 -775 deathSpikes DeathBlock 180
-1556 -776 deathSpikes DeathBlock 180
-1677 -773 deathSpikes DeathBlock 180
+1434 -776 deathSpikes DeathBlock 180
+1556 -777 deathSpikes DeathBlock 180
+1677 -778 deathSpikes DeathBlock 180
 -549 -168 deathSpikes DeathBlock 270
 -546 -284 deathSpikes DeathBlock 270
 -530 -405 deathSpikes DeathBlock 270

@@ -422,6 +422,9 @@ namespace ProtoDerp
                         case Game.BlockType.WaterBlock:
                             addWaterBlock();
                             break;
+                        case Game.BlockType.Fan:
+                            addFan();
+                            break;
                     }
                 }
 
@@ -795,6 +798,10 @@ namespace ProtoDerp
                     break;
                 case 7:
                     game.blockType = Game.BlockType.WaterBlock;
+                    game.cachedEntityLists = new Dictionary<Type, object>();
+                    break;
+                case 8:
+                    game.blockType = Game.BlockType.Fan;
                     game.cachedEntityLists = new Dictionary<Type, object>();
                     break;
 
@@ -1266,6 +1273,9 @@ namespace ProtoDerp
                     case Game.BlockType.WaterBlock:
                        game.addEntity(new WaterBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], rotation,blockWidth,blockHeight));
                         break;
+                    case Game.BlockType.Fan:
+                        game.addEntity(new MagnetBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], game.magnetPulse, blockHeight, blockWidth,true));
+                        break;
                 }
             }
             
@@ -1286,6 +1296,12 @@ namespace ProtoDerp
         {
 
             game.addEntity(new MagnetBlock(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter], game.magnetPulse, blockHeight,blockWidth));
+        }
+
+        public void addFan()
+        {
+
+            game.addEntity(new MagnetBlock(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter], game.magnetPulse, blockHeight, blockWidth,true));
         }
 
         public void addGoalBlock()
@@ -1320,7 +1336,7 @@ namespace ProtoDerp
                 //spriteBatch.Draw(playerSprite.index, new Rectangle((int)pos.X, (int)pos.Y, (int)blockWidth, (int)blockHeight), null, Color.White, 0, origin, SpriteEffects.None, 0f);
                 //if (mouseInSelectMode)
                 //{
-                if (currentPointValue == 0 && currentSquareValue == 0 && keyInput.keyboardState.IsKeyUp(Keys.LeftShift) || keyInput.keyboardState.IsKeyDown(Keys.D3))
+                if (currentPointValue == 0 && currentSquareValue == 0  || keyInput.keyboardState.IsKeyDown(Keys.D3))
                 {
 
                     if (ani.getStateCount() == 1)

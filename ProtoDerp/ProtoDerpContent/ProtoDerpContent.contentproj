@@ -841,6 +841,21 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+    <Compile Include="particle.png">
+      <Name>particle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="magNeg.png">
+      <Name>magNeg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="magPluse.png">
+      <Name>magPluse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Content Include="Template\Level3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <Name>Level3</Name>

@@ -2,10 +2,12 @@
 779 -288 bigBlock Block 55 175 0 0
 942 -257 bigBlock Block 1095 175 0 0
 405 37 magnet1 Block 112 107 0 0
-834 -194 deathSpikes3 DeathBlock 0
-839 -68 deathSpikes3 DeathBlock 0
-845 54 deathSpikes3 DeathBlock 0
+836 -198 deathSpikes DeathBlock 630
+835 -75 deathSpikes DeathBlock 630
+834 48 deathSpikes DeathBlock 630
 411 262 LongGround MagnetBlock 0 -20 1510 200
 777 -382 ahLogo0 GoalBlock 12
 Demi -100 800 -1600 572
-BGCOLOR 133 175 232
+BGCOLOR 133 173 232 
+CAM 0.55
+CPOS 400 360

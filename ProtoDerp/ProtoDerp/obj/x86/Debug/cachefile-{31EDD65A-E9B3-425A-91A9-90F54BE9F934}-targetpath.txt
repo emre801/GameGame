@@ -169,6 +169,9 @@ Content\CutScene2\2.xnb
 Content\seablock.xnb
 Content\seawall.xnb
 Content\bubbleSpriteSheet.xnb
+Content\particle.xnb
+Content\magNeg.xnb
+Content\magPluse.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

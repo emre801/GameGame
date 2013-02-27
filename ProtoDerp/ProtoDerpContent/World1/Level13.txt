@@ -130,11 +130,6 @@
 777 123 groundWall Block 45 14 2 2700
 1210 -849 groundWall Block 80 14 2 2970
 -555 -846 groundWall Block 80 14 2 2970
-228 -316 deathSpikes3 DeathBlock 0
-235 -189 deathSpikes3 DeathBlock 0
--501 -231 deathSpikes4 DeathBlock 0
--501 -359 deathSpikes4 DeathBlock 0
--505 -104 deathSpikes4 DeathBlock 0
 -469 898 deathSpikes DeathBlock 0
 -345 898 deathSpikes DeathBlock 0
 -221 895 deathSpikes DeathBlock 0
@@ -148,15 +143,22 @@
 820 898 deathSpikes DeathBlock 0
 951 902 deathSpikes DeathBlock 0
 1082 898 deathSpikes DeathBlock 0
--203 788 magnet1 DeathBlock 0
--66 169 deathSpikes2 DeathBlock 0
-248 166 deathSpikes2 DeathBlock 0
-585 166 deathSpikes2 DeathBlock 0
--214 657 bigBlock MagnetBlock 0 -18 460 135
-100 682 bigBlock MagnetBlock 0 -18 460 135
-409 625 bigBlock MagnetBlock 0 -18 460 135
-731 679 bigBlock MagnetBlock 0 -18 460 135
-1004 345 bigBlock MagnetBlock 0 -18 945 135
+-66 169 deathSpikes DeathBlock 180
+248 166 deathSpikes DeathBlock 180
+585 166 deathSpikes DeathBlock 180
+232 -319 deathSpikes DeathBlock 630
+232 -196 deathSpikes DeathBlock 630
+-495 -786 deathSpikes DeathBlock 1171
+-497 -663 deathSpikes DeathBlock 1171
+-500 -539 deathSpikes DeathBlock 1171
+1161 -792 deathSpikes DeathBlock 1710
+1161 -669 deathSpikes DeathBlock 1710
+1161 -545 deathSpikes DeathBlock 1710
+-214 657 bigBlock MagnetBlock 0 -9 460 135
+100 682 bigBlock MagnetBlock 0 -9 460 135
+409 625 bigBlock MagnetBlock 0 -9 460 135
+731 679 bigBlock MagnetBlock 0 -9 460 135
+1004 345 bigBlock MagnetBlock 0 -9 945 135
 387 -12 ahLogo0 GoalBlock 14
 290 617 GreenHill SuperBack 585 450
 -612 688 GreenHill SuperBack 585 450
@@ -165,6 +167,6 @@
 1430 623 GreenHill SuperBack 585 450
 2012 623 GreenHill SuperBack 585 450
 Demi -617 1270 76 1532
-BGCOLOR 133 171 232 
+BGCOLOR 133 169 232 
 CAM -1
 CPOS 400 360

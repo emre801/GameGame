@@ -159,9 +159,9 @@
 3534 145 deathSpikes DeathBlock 0
 3660 145 deathSpikes DeathBlock 0
 3786 145 deathSpikes DeathBlock 0
-1350 -452 LongGround MagnetBlock 0 -100 915 200
-1361 -1582 LongGround MagnetBlock 0 -100 560 200
-945 -1158 LongGround MagnetBlock 0 -100 605 200
+1350 -452 LongGround MagnetBlock 0 -10 915 200
+1361 -1582 LongGround MagnetBlock 0 -10 560 200
+945 -1158 LongGround MagnetBlock 0 -10 605 200
 955 -1800 groundWall GoalBlock 13
 -702 -30 GreenHill SuperBack 840 980
 416 -73 GreenHill SuperBack 840 980

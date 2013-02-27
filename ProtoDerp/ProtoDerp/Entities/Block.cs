@@ -313,6 +313,14 @@ namespace ProtoDerp
             
         }
 
+        public void updateMagnetBlock()
+        {
+            if (game.magValue < 0)
+                playerSprite = game.getSprite("magNeg");
+            else
+                playerSprite = game.getSprite("magPluse");
+        }
+
         public Color[] drawPixel(int point, int x, int y, Color[] cData, Color color)
         {
             for (int x1 = x-point; x1 < point+x; x1++)
@@ -350,6 +358,11 @@ namespace ProtoDerp
         {
             //Texture2D test=sprite.index;
             //test.SetData<Color>(Color[])
+            if(spriteNumber.Equals("magnet1"))
+            {
+                updateMagnetBlock();
+            }
+
 
             ani.Update();
             if (disappearTimer == 0)

@@ -591,7 +591,7 @@ namespace ProtoDerp
 
             spriteBatch.Begin(SpriteSortMode.Deferred,
                          BlendState.NonPremultiplied,
-                         SamplerState.AnisotropicClamp,
+                         SamplerState.LinearClamp,
                          null,
                          null,
                          null,

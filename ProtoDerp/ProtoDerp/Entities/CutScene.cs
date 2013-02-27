@@ -82,6 +82,12 @@ namespace ProtoDerp
         {
             //if(Constants.FULLSCREEN)
                 //game.drawingTool.cam.Pos = new Vector2(800, 540);
+
+            if (game.currentLevel == -1)
+            {
+                game.currentLevel = 1;
+            }
+
             if (game.currentLevel != 1)
             {
                 loadLevelInfo();
@@ -144,6 +150,7 @@ namespace ProtoDerp
                 game.worldFinished = true;
                 game.doNotLoadLevel = false;
                 game.playRandonSong();
+                game.ballPosition = 0;
                 //game.camZoomValue = 0.55f;
             }
 

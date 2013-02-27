@@ -82,7 +82,7 @@ namespace ProtoDerp
         public float maxLeft, maxRight, maxTop, maxButtom;
         public int count = 0;
 
-        public enum BlockType { Normal, Death, Moving, Goal, Magnet,Path,Cycle,WaterBlock };
+        public enum BlockType { Normal, Death, Moving, Goal, Magnet,Path,Cycle,WaterBlock,Fan };
         public BlockType blockType = BlockType.Normal;
 
         public float cXLocation=0, cYLocation=0;
@@ -168,6 +168,8 @@ namespace ProtoDerp
 
         public bool doNotLoadLevel = false;
 
+        public int magValue = 1;
+
         
         public Game()
         {
@@ -244,7 +246,7 @@ namespace ProtoDerp
             //JumpPoint
             LevelEditor le = new LevelEditor(this);
             preloadLevelOnly = true;
-            for(int i =0; i<20;i++)
+            for(int i =1; i<20;i++)
             {
                 le.readFile(i);
             }
@@ -363,6 +365,10 @@ namespace ProtoDerp
             blockList.AddLast("bullet.0");
             sprites.Add("magnet1", new Sprite(Content, "magnet1"));
             blockList.AddLast("magnet1");
+            sprites.Add("magNeg", new Sprite(Content, "magNeg"));
+            blockList.AddLast("magNeg");
+            sprites.Add("magPluse", new Sprite(Content, "magPluse"));
+            blockList.AddLast("magPluse");
             sprites.Add("GreenHill2", new Sprite(Content, "GreenHill2"));
             blockList.AddLast("GreenHill2");
             sprites.Add("CloudBack", new Sprite(Content, "CloudBack"));
@@ -507,6 +513,14 @@ namespace ProtoDerp
             sprites.Add("bubbleSpriteSheet", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "bubbleSpriteSheet"), 4, 120).getIndex(), "bubbleSpriteSheet"));
             blockList.AddLast("bubbleSpriteSheet");
             ////////////////////
+
+
+            ///////////////////
+            spriteAnimation.Add("particle", new SpriteStripAnimationHandler(new Sprite(Content, "particle")
+                , 5, 240));//fan
+            sprites.Add("particle", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "particle"), 5, 120).getIndex(), "particle"));
+            blockList.AddLast("particle");
+            //////////////////
 
             spriteAnimation.Add("missile_strip_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "missile_strip_strip4")
                 , 4, 45));//missle
@@ -777,7 +791,10 @@ namespace ProtoDerp
                 int x = (int)b.origPos.X;
                 int y = (int)b.origPos.Y;
                 String spriteName = b.spriteNumber;
-                lines.AddLast(x + " " + y + " " + spriteName + " MagnetBlock" + " " + b.magnetPulse.X + " "+ b.magnetPulse.Y + " "+ b.height +" "+ b.width  );
+                int isFan = 0;
+                if(b.isFan)
+                    isFan=1;
+                lines.AddLast(x + " " + y + " " + spriteName + " MagnetBlock" + " " + b.magnetPulse.X + " "+ b.magnetPulse.Y + " "+ b.height +" "+ b.width + " "+isFan);
 
             }
 

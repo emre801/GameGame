@@ -99,8 +99,9 @@ namespace ProtoDerp
             {
                 
                 //Preloads each Level so that the cache can do it's magic
+                
                 game.preloadLevelOnly = true;
-               for (int i = 0; i < 2; i++)
+               for (int i = 1; i < 2; i++)
                     le.readFile(i);
                game.preloadLevelOnly = false;
 
@@ -109,6 +110,7 @@ namespace ProtoDerp
                 game.cachedEntityLists = new Dictionary<Type, object>();
                 game.worldFinished = false;
                 game.loadNewLevel = true;
+                 
             }
             if(game.gMode==0)
                 le.readFile(game.currentLevel);  

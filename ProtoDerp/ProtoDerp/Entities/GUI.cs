@@ -476,6 +476,9 @@ namespace ProtoDerp
                 case Game.BlockType.WaterBlock:
                     blockInfo += "Water Block";
                     break;
+                case Game.BlockType.Fan:
+                    blockInfo += "Fan Block";
+                    break;
 
 
             }
