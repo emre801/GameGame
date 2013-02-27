@@ -172,6 +172,9 @@ Content\bubbleSpriteSheet.xnb
 Content\particle.xnb
 Content\magNeg.xnb
 Content\magPluse.xnb
+Content\SawAni.xnb
+Content\groundBad.xnb
+Content\pixGroundTest.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

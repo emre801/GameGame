@@ -323,6 +323,10 @@ namespace ProtoDerp
             blockList.AddLast("dirtyBlock2");
             sprites.Add("seablock", new Sprite(Content, "seablock"));
             blockList.AddLast("seablock");
+            sprites.Add("groundBad", new Sprite(Content, "groundBad"));
+            blockList.AddLast("groundBad");
+            sprites.Add("pixGroundTest", new Sprite(Content, "pixGroundTest"));
+            blockList.AddLast("pixGroundTest");
             sprites.Add("seaWall", new Sprite(Content, "seaWall"));
             blockList.AddLast("seaWall");
             sprites.Add("skyScrapper", new Sprite(Content,"skyScrapper"));
@@ -520,6 +524,13 @@ namespace ProtoDerp
                 , 5, 240));//fan
             sprites.Add("particle", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "particle"), 5, 120).getIndex(), "particle"));
             blockList.AddLast("particle");
+            //////////////////
+
+            ///////////////////
+            spriteAnimation.Add("SawAni", new SpriteStripAnimationHandler(new Sprite(Content, "SawAni")
+                , 11, 5));//fan
+            sprites.Add("SawAni", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "SawAni"), 11, 3).getIndex(), "SawAni"));
+            blockList.AddLast("SawAni");
             //////////////////
 
             spriteAnimation.Add("missile_strip_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "missile_strip_strip4")

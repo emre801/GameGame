@@ -144,10 +144,15 @@ namespace ProtoDerp
 
 
                     Color[] template;
+                    
                     template= new Color[95 * 95];
                     int demi = 95;
                     game.getSprite("dirtyBlock2").index.GetData<Color>(template);
-
+                    
+                    //template = new Color[125 * 125];
+                    //int demi = 125;
+                    //game.getSprite("groundBad").index.GetData<Color>(template);
+                    
                     if (game.currentWorld == 2)
                     {
                         template = new Color[95 * 95];

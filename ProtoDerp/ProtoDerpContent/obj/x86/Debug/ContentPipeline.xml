@@ -1439,6 +1439,33 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\magPluse.xnb</Output>
       <Time>2013-02-26T13:17:31.4286564-05:00</Time>
     </Item>
+    <Item>
+      <Source>SawAni.png</Source>
+      <Name>SawAni</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\SawAni.xnb</Output>
+      <Time>2013-02-27T14:04:46.9952835-05:00</Time>
+    </Item>
+    <Item>
+      <Source>groundBad.png</Source>
+      <Name>groundBad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\groundBad.xnb</Output>
+      <Time>2013-02-27T12:19:39.7445294-05:00</Time>
+    </Item>
+    <Item>
+      <Source>pixGroundTest.png</Source>
+      <Name>pixGroundTest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\pixGroundTest.xnb</Output>
+      <Time>2013-02-27T12:25:39.4071009-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

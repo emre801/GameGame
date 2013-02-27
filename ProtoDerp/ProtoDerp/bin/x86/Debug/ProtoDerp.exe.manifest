@@ -112,7 +112,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>BcFzCPe1ut5zym5Wq+VJaZOVFhU=</dsig:DigestValue>
+        <dsig:DigestValue>2Ki6JFWOLqL1r1xoW1POVI/e5ao=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -746,6 +746,15 @@
       <dsig:DigestValue>iD/ClRYDpgpmP6e90zlx+41/O/w=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Content\groundBad.xnb" size="62687">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+izsqkuAMNZWtPr/htHjuy1knG4=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Content\groundPat.xnb" size="53435">
     <hash>
       <dsig:Transforms>
@@ -1178,6 +1187,15 @@
       <dsig:DigestValue>0oelfCfgq0mew1U1NCJ8TxODFWg=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Content\pixGroundTest.xnb" size="57787">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>YZF9mawoZx81WZnvFTgHZE09AkU=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Content\pixRay.xnb" size="50363">
     <hash>
       <dsig:Transforms>
@@ -1455,6 +1473,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>p7r8Ja33LPPetc+8doi/O+l44Og=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\SawAni.xnb" size="2750187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>eUiH4wORhkN7xgS/epbzgrD+Tts=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\seablock.xnb" size="36287">
@@ -1952,13 +1979,13 @@
       <dsig:DigestValue>8+Np5VOyvRr+oQIl8d3MzJHP8sk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level8.txt" size="8273">
+  <file name="Content\World1\Level8.txt" size="8307">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>yrT3GPuVL5lOzQHi+LsX9NZyu/c=</dsig:DigestValue>
+      <dsig:DigestValue>SaesUxqvK6TkslLjUV5nKu76uaA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level9.txt" size="6946">
