@@ -36,18 +36,9 @@
 1371 819 goundBottom Block 80 120 2 720
 1316 -383 CloudBack Block 70 1120 2 720
 0 -284 CloudBack Block 70 1120 2 720
-250 18 GreenHill Block 440 540 1 0
-775 14 GreenHill Block 540 540 1 0
-1192 -19 GreenHill Block 635 480 1 0
 -843 1264 bigBlock Block 2245.851 3530.378 0 0
 3030 1271 bigBlock Block 2204.415 3190.6 0 0
 1157 1582 bigBlock Block 1616.018 870.1636 0 0
-1858 -4 GreenHill Block 520 840 1 0
-2687 -29 GreenHill Block 615 840 1 0
-3515 86 GreenHill Block 615 840 1 0
--398 3 GreenHill Block 615 840 1 0
--1169 78 GreenHill Block 615 840 1 0
--1940 -71 GreenHill Block 615 840 1 0
 76 73 spriteStripFlower Block 48 46 2 0
 237 71 spriteStripFlower Block 48 46 2 0
 496 63 spriteStripFlower Block 48 46 2 0
@@ -56,20 +47,24 @@
 710 78 spriteStripFlower Block 48 46 2 0
 906 58 spriteStripFlower Block 48 46 2 0
 3924 1222 blankImage Block 2090 1330 0 0
-949 167 groundWall Block 125 19 2 179
-949 291 groundWall Block 125 19 2 179
-949 416 groundWall Block 125 19 2 179
-950 541 groundWall Block 125 19 2 179
-1261 580 groundWall Block 125 19 2 0
-1261 456 groundWall Block 125 19 2 0
-1262 331 groundWall Block 125 19 2 0
-1263 206 groundWall Block 125 19 2 0
-1263 176 groundWall Block 125 19 2 0
-949 608 groundWall Block 125 19 2 180
 1113 673 grassTemplate Block 35 321 2 360
 1003 644 spriteStripFlower Block 48 46 2 360
 1198 644 spriteStripFlower Block 48 46 2 360
 1137 646 spriteStripFlower Block 48 46 2 360
+67 -47 trees2 Block 492 305 1 0
+1570 51 trees2 Block 492 305 1 0
+2682 33 trees2 Block 492 305 1 0
+-1246 11 trees2 Block 492 305 1 0
+797 -28 trees1 Block 412 248 1 0
+2144 66 trees1 Block 412 248 1 0
+-685 18 trees1 Block 412 248 1 0
+446 -32 trees0 Block 472 295 1 0
+1873 51 trees0 Block 472 295 1 0
+3176 48 trees0 Block 472 295 1 0
+-344 7 trees0 Block 472 295 1 0
+1372 16 trees3 Block 244 212 1 0
+-135 60 trees3 Block 244 212 1 0
+3600 74 trees3 Block 244 212 1 0
 883 64 deathSpikes DeathBlock 0
 752 66 deathSpikes DeathBlock 0
 623 66 deathSpikes DeathBlock 0
@@ -129,19 +124,13 @@
 4428 152 deathSpikes DeathBlock 360
 4554 152 deathSpikes DeathBlock 360
 1103 614 deathSpikes GoalBlock 3
-779 -416 CloudBack SuperBack 490 30
-234 -362 CloudBack SuperBack 490 30
-1391 -288 CloudBack SuperBack 490 30
-520 -38 GreenHill SuperBack 250 445
-952 -20 GreenHill SuperBack 250 445
--821 -13 GreenHill SuperBack 840 615
--1459 -46 GreenHill SuperBack 840 615
-2280 0 GreenHill SuperBack 840 615
-1501 -24 GreenHill SuperBack 620 505
-3208 -49 GreenHill SuperBack 620 505
-4078 82 GreenHill SuperBack 620 505
--2473 89 deathSpikes SuperBack 126 43
+365 -60 pixMT SuperBack 1103 421
+-734 -60 pixMT SuperBack 1103 421
+-1874 -60 pixMT SuperBack 1103 421
+1968 4 pixMT SuperBack 1103 421
+3060 -35 pixMT SuperBack 1103 421
+4172 -35 pixMT SuperBack 1103 421
 Demi -138 1487 337 1178
-BGCOLOR 133 168 232 
+BGCOLOR 167 218 220 
 CAM 0.5047556
 CPOS 609.1294 609.4301

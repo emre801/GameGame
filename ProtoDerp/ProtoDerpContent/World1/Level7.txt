@@ -36,78 +36,6 @@
 3620 99 grassTemplate Block 35 256 2 0
 3697 99 grassTemplate Block 35 256 2 0
 4132 99 grassTemplate Block 35 176 2 0
-460 -102 groundWall Block 150 19 2 0
-460 15 groundWall Block 150 19 2 0
-598 15 groundWall Block 150 19 2 180
-598 -104 groundWall Block 150 19 2 180
-1133 -98 groundWall Block 150 19 2 360
-1133 13 groundWall Block 150 19 2 360
-1261 13 groundWall Block 150 19 2 540
-1261 -100 groundWall Block 150 19 2 540
-1626 -78 groundWall Block 150 19 2 720
-1626 9 groundWall Block 150 19 2 720
-1751 9 groundWall Block 150 19 2 900
-1751 -80 groundWall Block 150 19 2 900
-2032 7 groundWall Block 170 19 2 1080
-2171 7 groundWall Block 170 19 2 1260
-2583 -7 groundWall Block 190 19 2 1440
-2728 -7 groundWall Block 190 19 2 1620
-3092 -7 groundWall Block 190 19 2 1800
-3092 -78 groundWall Block 190 19 2 1800
-3236 -78 groundWall Block 190 19 2 1980
-3236 -8 groundWall Block 190 19 2 1980
-3823 -8 groundWall Block 190 19 2 2160
-3823 -166 groundWall Block 190 19 2 2160
-4047 -166 groundWall Block 190 19 2 2340
-4047 -6 groundWall Block 190 19 2 2340
-4223 -6 groundWall Block 190 19 2 2520
-4223 -188 groundWall Block 190 19 2 2520
-4223 -329 groundWall Block 190 19 2 2520
--84 354 groundWall Block 190 19 2 3150
-104 354 groundWall Block 190 19 2 3510
-293 354 groundWall Block 190 19 2 3510
-483 354 groundWall Block 190 19 2 3510
-673 354 groundWall Block 190 19 2 3510
-863 354 groundWall Block 190 19 2 3510
-1053 354 groundWall Block 190 19 2 3510
-1243 354 groundWall Block 190 19 2 3510
-1433 354 groundWall Block 190 19 2 3510
-1623 354 groundWall Block 190 19 2 3510
-1813 354 groundWall Block 190 19 2 3510
-2003 354 groundWall Block 190 19 2 3510
-2193 354 groundWall Block 190 19 2 3510
-2383 355 groundWall Block 190 19 2 3510
-2573 355 groundWall Block 190 19 2 3510
-2763 355 groundWall Block 190 19 2 3510
-2953 355 groundWall Block 190 19 2 3510
-3143 355 groundWall Block 190 19 2 3510
-3333 355 groundWall Block 190 19 2 3510
-3523 355 groundWall Block 190 19 2 3510
-3713 355 groundWall Block 190 19 2 3510
-3903 355 groundWall Block 190 19 2 3510
-4093 355 groundWall Block 190 19 2 3510
-4283 355 groundWall Block 190 19 2 3510
-4377 356 groundWall Block 190 19 2 3510
-4473 268 groundWall Block 190 19 2 3780
-4473 79 groundWall Block 190 19 2 3780
-4473 -110 groundWall Block 190 19 2 3780
-4473 -300 groundWall Block 190 19 2 3780
-4473 -490 groundWall Block 190 19 2 3780
-4473 -680 groundWall Block 190 19 2 3780
-4389 -778 groundWall Block 190 19 2 4410
-4200 -778 groundWall Block 190 19 2 4410
-4010 -778 groundWall Block 190 19 2 4410
-3820 -778 groundWall Block 190 19 2 4410
-3630 -778 groundWall Block 190 19 2 4410
-3591 -776 groundWall Block 190 19 2 4230
-3497 -684 groundWall Block 190 19 2 4679
-3499 -517 groundWall Block 190 19 2 4680
-3593 -417 groundWall Block 190 19 2 5310
-3782 -417 groundWall Block 190 19 2 5310
-3972 -416 groundWall Block 190 19 2 5310
-4126 -415 groundWall Block 190 19 2 5310
--174 210 groundWall Block 190 19 2 5400
--174 263 groundWall Block 190 19 2 5400
 531 -171 grassTemplate Block 35 146 2 0
 1196 -166 grassTemplate Block 35 146 2 0
 1688 -148 grassTemplate Block 35 146 2 0
@@ -189,6 +117,6 @@
 3879 -361 bigGround MagnetBlock -21 0 15 570
 4132 27 ahLogo0 GoalBlock 8
 Demi -100 3621 -862 561
-BGCOLOR 133 179 232 
+BGCOLOR 167 218 220 
 CAM 0.5104445
 CPOS 317.8452 335.9048

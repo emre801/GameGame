@@ -317,10 +317,28 @@ namespace ProtoDerp
             sprites.Add("graph", new Sprite(Content, "graph"));
             sprites.Add("Water", new Sprite(Content, "Water"));
             blockList.AddLast("Water");
+
+            sprites.Add("trees0", new Sprite(Content, "trees0"));
+            blockList.AddLast("trees0");
+            sprites.Add("trees1", new Sprite(Content, "trees1"));
+            blockList.AddLast("trees1");
+            sprites.Add("trees2", new Sprite(Content, "trees2"));
+            blockList.AddLast("trees2");
+            sprites.Add("trees3", new Sprite(Content, "trees3"));
+            blockList.AddLast("trees3");
+            sprites.Add("trees4", new Sprite(Content, "trees4"));
+            blockList.AddLast("trees4");
+
+
+            sprites.Add("pixMT", new Sprite(Content, "pixMT"));
+            blockList.AddLast("pixMT");
+
             sprites.Add("dirtyBlock", new Sprite(Content, "dirtyBlock"));
             blockList.AddLast("dirtyBlock");
             sprites.Add("dirtyBlock2", new Sprite(Content, "dirtyBlock2"));
             blockList.AddLast("dirtyBlock2");
+            sprites.Add("pixGroundTemp", new Sprite(Content, "pixGroundTemp"));
+            blockList.AddLast("pixGroundTemp");
             sprites.Add("seablock", new Sprite(Content, "seablock"));
             blockList.AddLast("seablock");
             sprites.Add("groundBad", new Sprite(Content, "groundBad"));

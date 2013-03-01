@@ -45,91 +45,6 @@
 1911 781 grassTempBack Block 35 256 1 0
 2167 781 grassTempBack Block 35 256 1 0
 2423 782 grassTempBack Block 35 256 1 0
--593 -785 groundWall Block 115 14 2 360
--593 -671 groundWall Block 115 14 2 360
--593 -556 groundWall Block 115 14 2 360
--593 -441 groundWall Block 115 14 2 360
--593 -326 groundWall Block 115 14 2 360
--593 -211 groundWall Block 115 14 2 360
--593 -96 groundWall Block 115 14 2 360
--593 18 groundWall Block 115 14 2 360
--593 133 groundWall Block 115 14 2 360
--594 248 groundWall Block 115 14 2 360
--594 363 groundWall Block 115 14 2 360
--594 478 groundWall Block 115 14 2 360
--594 593 groundWall Block 115 14 2 360
--594 708 groundWall Block 115 14 2 360
--594 823 groundWall Block 115 14 2 360
--593 922 groundWall Block 115 14 2 360
--540 980 groundWall Block 115 14 2 990
--425 980 groundWall Block 115 14 2 990
--310 980 groundWall Block 115 14 2 990
--195 980 groundWall Block 115 14 2 990
--80 980 groundWall Block 115 14 2 990
-34 980 groundWall Block 115 14 2 990
-149 980 groundWall Block 115 14 2 990
-264 980 groundWall Block 115 14 2 990
-379 980 groundWall Block 115 14 2 990
-494 980 groundWall Block 115 14 2 990
-609 980 groundWall Block 115 14 2 990
-724 980 groundWall Block 115 14 2 990
-839 980 groundWall Block 115 14 2 990
-954 980 groundWall Block 115 14 2 990
-1069 980 groundWall Block 115 14 2 990
-1184 980 groundWall Block 115 14 2 990
-1193 982 groundWall Block 115 14 2 990
-1253 927 groundWall Block 115 14 2 1260
-1253 813 groundWall Block 115 14 2 1260
-1253 698 groundWall Block 115 14 2 1260
-1253 583 groundWall Block 115 14 2 1260
-1253 468 groundWall Block 115 14 2 1260
-1252 353 groundWall Block 115 14 2 1260
-1252 238 groundWall Block 115 14 2 1260
-1252 123 groundWall Block 115 14 2 1260
-1252 8 groundWall Block 115 14 2 1260
-1251 -106 groundWall Block 115 14 2 1260
-1251 -221 groundWall Block 115 14 2 1260
-1251 -336 groundWall Block 115 14 2 1260
-1251 -451 groundWall Block 115 14 2 1260
-1250 -566 groundWall Block 115 14 2 1260
-1250 -681 groundWall Block 115 14 2 1260
-1250 -796 groundWall Block 115 14 2 1260
-1173 -777 groundWall Block 145 14 2 1799
-1173 -633 groundWall Block 145 14 2 1799
-1173 -488 groundWall Block 145 14 2 1799
-1173 -343 groundWall Block 145 14 2 1799
-1173 -198 groundWall Block 145 14 2 1799
-1173 -53 groundWall Block 145 14 2 1799
-1173 91 groundWall Block 145 14 2 1799
-1174 236 groundWall Block 145 14 2 1799
-1174 381 groundWall Block 145 14 2 1799
-1174 526 groundWall Block 145 14 2 1799
-1174 671 groundWall Block 145 14 2 1799
-1174 816 groundWall Block 145 14 2 1799
-1175 840 groundWall Block 145 14 2 1800
--525 828 groundWall Block 145 14 2 1980
--525 684 groundWall Block 145 14 2 1980
--525 539 groundWall Block 145 14 2 1980
--524 394 groundWall Block 145 14 2 1980
--524 249 groundWall Block 145 14 2 1980
--523 104 groundWall Block 145 14 2 1980
--523 -40 groundWall Block 145 14 2 1980
--522 -185 groundWall Block 145 14 2 1980
--522 -330 groundWall Block 145 14 2 1980
--521 -475 groundWall Block 145 14 2 1980
--521 -620 groundWall Block 145 14 2 1980
--520 -765 groundWall Block 145 14 2 1980
--112 144 groundWall Block 145 14 2 2430
-32 144 groundWall Block 145 14 2 2430
-177 144 groundWall Block 145 14 2 2430
-322 144 groundWall Block 145 14 2 2430
-467 144 groundWall Block 145 14 2 2430
-612 144 groundWall Block 145 14 2 2430
-704 146 groundWall Block 145 14 2 2430
--192 121 groundWall Block 45 14 2 2520
-777 123 groundWall Block 45 14 2 2700
-1210 -849 groundWall Block 80 14 2 2970
--555 -846 groundWall Block 80 14 2 2970
 -469 898 deathSpikes DeathBlock 0
 -345 898 deathSpikes DeathBlock 0
 -221 895 deathSpikes DeathBlock 0
@@ -167,6 +82,6 @@
 1430 623 GreenHill SuperBack 585 450
 2012 623 GreenHill SuperBack 585 450
 Demi -617 1270 76 1532
-BGCOLOR 133 169 232 
+BGCOLOR 167 218 220 
 CAM -1
 CPOS 400 360

@@ -16,50 +16,6 @@
 885 -905 grassTemplate Block 35 256 2 0
 973 -905 grassTemplate Block 35 256 2 0
 -58 -632 groundWall Block 105 34 2 0
--55 -630 groundWall Block 105 34 2 180
--55 -526 groundWall Block 105 34 2 180
--55 -421 groundWall Block 105 34 2 180
--55 -316 groundWall Block 105 34 2 180
--55 -211 groundWall Block 105 34 2 180
--55 -106 groundWall Block 105 34 2 180
--55 -1 groundWall Block 105 34 2 180
--55 103 groundWall Block 105 34 2 180
-765 -835 groundWall Block 105 34 2 360
-765 -731 groundWall Block 105 34 2 360
-764 -626 groundWall Block 105 34 2 360
-764 -521 groundWall Block 105 34 2 360
-763 -416 groundWall Block 105 34 2 360
-762 -311 groundWall Block 105 34 2 360
-762 -206 groundWall Block 105 34 2 360
-761 -101 groundWall Block 105 34 2 360
-761 3 groundWall Block 105 34 2 360
-760 108 groundWall Block 105 34 2 360
-1090 -826 groundWall Block 125 49 2 540
-1090 -702 groundWall Block 125 49 2 540
-1090 -577 groundWall Block 125 49 2 540
-1090 -452 groundWall Block 125 49 2 540
-1089 -327 groundWall Block 125 49 2 540
-1089 -202 groundWall Block 125 49 2 540
-1089 -77 groundWall Block 125 49 2 540
-1089 47 groundWall Block 125 49 2 540
-1157 122 groundWall Block 125 49 2 450
-1248 126 groundWall Block 125 49 2 450
-1295 175 groundWall Block 125 49 2 899
-1296 299 groundWall Block 125 49 2 899
-1297 424 groundWall Block 125 49 2 899
--399 -624 groundWall Block 125 49 2 720
--401 -619 groundWall Block 125 49 2 1079
--401 -495 groundWall Block 125 49 2 1079
--401 -370 groundWall Block 125 49 2 1079
--401 -245 groundWall Block 125 49 2 1079
--401 -120 groundWall Block 125 49 2 1079
--400 4 groundWall Block 125 49 2 1079
--400 129 groundWall Block 125 49 2 1079
--400 254 groundWall Block 125 49 2 1079
--400 379 groundWall Block 125 49 2 1079
--401 441 groundWall Block 125 49 2 1080
-146 -46 GreenHill Block 510 455 1 1080
-573 -66 GreenHill Block 510 455 1 1080
 720 -1213 CloudBack Block 105 1175 2 1080
 -468 -983 CloudBack Block 105 1175 2 1080
 534 -114 spriteStripFlower Block 48 46 2 0
@@ -72,164 +28,6 @@
 -107 -728 spriteStripFlower Block 48 46 2 0
 801 -932 spriteStripFlower Block 48 46 2 0
 1064 -935 spriteStripFlower Block 48 46 2 0
--367 -632 dirtyBlock2 Block 95 95 2 0
--367 -537 dirtyBlock2 Block 95 95 2 0
--367 -442 dirtyBlock2 Block 95 95 2 0
--367 -347 dirtyBlock2 Block 95 95 2 0
--367 -252 dirtyBlock2 Block 95 95 2 0
--367 -157 dirtyBlock2 Block 95 95 2 0
--367 -62 dirtyBlock2 Block 95 95 2 0
--367 33 dirtyBlock2 Block 95 95 2 0
--367 128 dirtyBlock2 Block 95 95 2 0
--367 223 dirtyBlock2 Block 95 95 2 0
--367 318 dirtyBlock2 Block 95 95 2 0
--367 413 dirtyBlock2 Block 95 95 2 0
--272 -632 dirtyBlock2 Block 95 95 2 0
--272 -537 dirtyBlock2 Block 95 95 2 0
--272 -442 dirtyBlock2 Block 95 95 2 0
--272 -347 dirtyBlock2 Block 95 95 2 0
--272 -252 dirtyBlock2 Block 95 95 2 0
--272 -157 dirtyBlock2 Block 95 95 2 0
--272 -62 dirtyBlock2 Block 95 95 2 0
--272 33 dirtyBlock2 Block 95 95 2 0
--272 128 dirtyBlock2 Block 95 95 2 0
--272 223 dirtyBlock2 Block 95 95 2 0
--272 318 dirtyBlock2 Block 95 95 2 0
--272 413 dirtyBlock2 Block 95 95 2 0
--177 -632 dirtyBlock2 Block 95 95 2 0
--177 -537 dirtyBlock2 Block 95 95 2 0
--177 -442 dirtyBlock2 Block 95 95 2 0
--177 -347 dirtyBlock2 Block 95 95 2 0
--177 -252 dirtyBlock2 Block 95 95 2 0
--177 -157 dirtyBlock2 Block 95 95 2 0
--177 -62 dirtyBlock2 Block 95 95 2 0
--177 33 dirtyBlock2 Block 95 95 2 0
--177 128 dirtyBlock2 Block 95 95 2 0
--177 223 dirtyBlock2 Block 95 95 2 0
--177 318 dirtyBlock2 Block 95 95 2 0
--177 413 dirtyBlock2 Block 95 95 2 0
--272 -110 blankImage Block 1140 285 0 0
-807 -838 dirtyBlock2 Block 95 95 2 0
-807 -743 dirtyBlock2 Block 95 95 2 0
-807 -648 dirtyBlock2 Block 95 95 2 0
-807 -553 dirtyBlock2 Block 95 95 2 0
-807 -458 dirtyBlock2 Block 95 95 2 0
-807 -363 dirtyBlock2 Block 95 95 2 0
-807 -268 dirtyBlock2 Block 95 95 2 0
-807 -173 dirtyBlock2 Block 95 95 2 0
-807 -78 dirtyBlock2 Block 95 95 2 0
-807 17 dirtyBlock2 Block 95 95 2 0
-807 112 dirtyBlock2 Block 95 95 2 0
-807 207 dirtyBlock2 Block 95 95 2 0
-807 302 dirtyBlock2 Block 95 95 2 0
-807 397 dirtyBlock2 Block 95 95 2 0
-807 492 dirtyBlock2 Block 95 95 2 0
-902 -838 dirtyBlock2 Block 95 95 2 0
-902 -743 dirtyBlock2 Block 95 95 2 0
-902 -648 dirtyBlock2 Block 95 95 2 0
-902 -553 dirtyBlock2 Block 95 95 2 0
-902 -458 dirtyBlock2 Block 95 95 2 0
-902 -363 dirtyBlock2 Block 95 95 2 0
-902 -268 dirtyBlock2 Block 95 95 2 0
-902 -173 dirtyBlock2 Block 95 95 2 0
-902 -78 dirtyBlock2 Block 95 95 2 0
-902 17 dirtyBlock2 Block 95 95 2 0
-902 112 dirtyBlock2 Block 95 95 2 0
-902 207 dirtyBlock2 Block 95 95 2 0
-902 302 dirtyBlock2 Block 95 95 2 0
-902 397 dirtyBlock2 Block 95 95 2 0
-902 492 dirtyBlock2 Block 95 95 2 0
-997 -838 dirtyBlock2 Block 95 95 2 0
-997 -743 dirtyBlock2 Block 95 95 2 0
-997 -648 dirtyBlock2 Block 95 95 2 0
-997 -553 dirtyBlock2 Block 95 95 2 0
-997 -458 dirtyBlock2 Block 95 95 2 0
-997 -363 dirtyBlock2 Block 95 95 2 0
-997 -268 dirtyBlock2 Block 95 95 2 0
-997 -173 dirtyBlock2 Block 95 95 2 0
-997 -78 dirtyBlock2 Block 95 95 2 0
-997 17 dirtyBlock2 Block 95 95 2 0
-997 112 dirtyBlock2 Block 95 95 2 0
-997 207 dirtyBlock2 Block 95 95 2 0
-997 302 dirtyBlock2 Block 95 95 2 0
-997 397 dirtyBlock2 Block 95 95 2 0
-997 492 dirtyBlock2 Block 95 95 2 0
-901 -174 blankImage Block 1425 285 0 0
--79 172 dirtyBlock2 Block 95 95 2 0
--79 267 dirtyBlock2 Block 95 95 2 0
--79 362 dirtyBlock2 Block 95 95 2 0
--79 457 dirtyBlock2 Block 95 95 2 0
-16 172 dirtyBlock2 Block 95 95 2 0
-16 267 dirtyBlock2 Block 95 95 2 0
-16 362 dirtyBlock2 Block 95 95 2 0
-16 457 dirtyBlock2 Block 95 95 2 0
-111 172 dirtyBlock2 Block 95 95 2 0
-111 267 dirtyBlock2 Block 95 95 2 0
-111 362 dirtyBlock2 Block 95 95 2 0
-111 457 dirtyBlock2 Block 95 95 2 0
-206 172 dirtyBlock2 Block 95 95 2 0
-206 267 dirtyBlock2 Block 95 95 2 0
-206 362 dirtyBlock2 Block 95 95 2 0
-206 457 dirtyBlock2 Block 95 95 2 0
-301 172 dirtyBlock2 Block 95 95 2 0
-301 267 dirtyBlock2 Block 95 95 2 0
-301 362 dirtyBlock2 Block 95 95 2 0
-301 457 dirtyBlock2 Block 95 95 2 0
-396 172 dirtyBlock2 Block 95 95 2 0
-396 267 dirtyBlock2 Block 95 95 2 0
-396 362 dirtyBlock2 Block 95 95 2 0
-396 457 dirtyBlock2 Block 95 95 2 0
-491 172 dirtyBlock2 Block 95 95 2 0
-491 267 dirtyBlock2 Block 95 95 2 0
-491 362 dirtyBlock2 Block 95 95 2 0
-491 457 dirtyBlock2 Block 95 95 2 0
-586 172 dirtyBlock2 Block 95 95 2 0
-586 267 dirtyBlock2 Block 95 95 2 0
-586 362 dirtyBlock2 Block 95 95 2 0
-586 457 dirtyBlock2 Block 95 95 2 0
-681 172 dirtyBlock2 Block 95 95 2 0
-681 267 dirtyBlock2 Block 95 95 2 0
-681 362 dirtyBlock2 Block 95 95 2 0
-681 457 dirtyBlock2 Block 95 95 2 0
-776 172 dirtyBlock2 Block 95 95 2 0
-776 267 dirtyBlock2 Block 95 95 2 0
-776 362 dirtyBlock2 Block 95 95 2 0
-776 457 dirtyBlock2 Block 95 95 2 0
-347 315 blankImage Block 380 950 0 0
-1098 164 dirtyBlock2 Block 95 95 2 0
-1098 259 dirtyBlock2 Block 95 95 2 0
-1098 354 dirtyBlock2 Block 95 95 2 0
-1098 449 dirtyBlock2 Block 95 95 2 0
-1193 164 dirtyBlock2 Block 95 95 2 0
-1193 259 dirtyBlock2 Block 95 95 2 0
-1193 354 dirtyBlock2 Block 95 95 2 0
-1193 449 dirtyBlock2 Block 95 95 2 0
-1146 306 blankImage Block 380 190 0 0
--102 -633 dirtyBlock2 Block 95 95 2 0
--102 -538 dirtyBlock2 Block 95 95 2 0
--102 -443 dirtyBlock2 Block 95 95 2 0
--102 -348 dirtyBlock2 Block 95 95 2 0
--102 -253 dirtyBlock2 Block 95 95 2 0
--102 -158 dirtyBlock2 Block 95 95 2 0
--102 -63 dirtyBlock2 Block 95 95 2 0
--102 32 dirtyBlock2 Block 95 95 2 0
--102 127 dirtyBlock2 Block 95 95 2 0
--103 -254 blankImage Block 855 95 0 0
-1048 -838 dirtyBlock2 Block 95 95 2 0
-1048 -743 dirtyBlock2 Block 95 95 2 0
-1048 -648 dirtyBlock2 Block 95 95 2 0
-1048 -553 dirtyBlock2 Block 95 95 2 0
-1048 -458 dirtyBlock2 Block 95 95 2 0
-1048 -363 dirtyBlock2 Block 95 95 2 0
-1048 -268 dirtyBlock2 Block 95 95 2 0
-1048 -173 dirtyBlock2 Block 95 95 2 0
-1048 -78 dirtyBlock2 Block 95 95 2 0
-1048 17 dirtyBlock2 Block 95 95 2 0
-1047 -410 blankImage Block 950 95 0 0
-1241 163 dirtyBlock2 Block 95 95 2 0
-1241 258 dirtyBlock2 Block 95 95 2 0
-1241 353 dirtyBlock2 Block 95 95 2 0
-1241 448 dirtyBlock2 Block 95 95 2 0
 1241 306 blankImage Block 380 95 0 0
 -367 459 dirtyBlock2 Block 95 95 2 0
 -272 459 dirtyBlock2 Block 95 95 2 0
@@ -249,6 +47,20 @@
 -2200 -1260 CloudBack Block 70 1120 2 0
 -2240 -1230 CloudBack Block 70 1120 2 0
 -2770 -690 CloudBack Block 70 1120 2 0
+41 9 trees1 Block 412 248 1 0
+729 7 trees1 Block 412 248 1 0
+395 12 trees2 Block 492 305 1 0
+-544 231 trees2 Block 492 305 1 0
+-1210 227 trees2 Block 492 305 1 0
+-884 286 trees3 Block 244 212 1 0
+-1555 235 trees1 Block 412 248 1 0
+-1889 241 trees0 Block 472 295 1 0
+1215 16 trees0 Block 472 295 1 0
+1693 189 trees0 Block 472 295 1 0
+1872 2 trees0 Block 472 295 1 0
+2384 181 trees1 Block 412 248 1 0
+-313 -776 trees3 Block 244 212 1 0
+924 -985 trees3 Block 244 212 1 0
 -31 -643 deathSpikes DeathBlock 90
 -33 -516 deathSpikes DeathBlock 90
 -35 -192 deathSpikes DeathBlock 90
@@ -261,18 +73,7 @@
 661 -497 deathSpikes DeathBlock 540
 536 -500 deathSpikes DeathBlock 540
 -233 -773 deathSpikes GoalBlock 5
-364 -115 GreenHill SuperBack 355 455
-767 -69 GreenHill SuperBack 355 455
--17 -26 GreenHill SuperBack 355 455
-988 -1121 CloudBack SuperBack 1120 70
--267 -962 CloudBack SuperBack 1120 70
--1000 -950 CloudBack SuperBack 1120 70
-2170 -520 CloudBack SuperBack 1120 70
-2710 -1190 CloudBack SuperBack 1120 70
-230 -1620 CloudBack SuperBack 1120 70
--1950 -300 CloudBack SuperBack 1120 70
-2530 -1630 CloudBack SuperBack 1120 70
 Demi -226 1082 -507 624
-BGCOLOR 133 168 232 
+BGCOLOR 167 218 220 
 CAM 0.5407555
 CPOS 343.2737 360

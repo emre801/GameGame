@@ -20,130 +20,6 @@
 1158 -486 CloudBack Block 70 1120 2 0
 1839 -265 CloudBack Block 70 1120 2 0
 3115 -462 CloudBack Block 70 1120 2 0
--1270 -230 GreenHill Block 1550 1800 1 0
-529 -242 GreenHill Block 1550 1800 1 0
-2329 -255 GreenHill Block 1550 1800 1 0
-4129 -268 GreenHill Block 1550 1800 1 0
-1551 630 backGroundMan Block 1000 8202.943 1 0
--2423 131 grassTempBack Block 10 256 1 0
--2168 131 grassTempBack Block 10 256 1 0
--1912 131 grassTempBack Block 10 256 1 0
--1656 131 grassTempBack Block 10 256 1 0
--1400 131 grassTempBack Block 10 256 1 0
--1144 131 grassTempBack Block 10 256 1 0
--888 131 grassTempBack Block 10 256 1 0
--632 132 grassTempBack Block 10 256 1 0
--376 132 grassTempBack Block 10 256 1 0
--120 132 grassTempBack Block 10 256 1 0
-135 132 grassTempBack Block 10 256 1 0
-391 132 grassTempBack Block 10 256 1 0
-647 132 grassTempBack Block 10 256 1 0
-903 132 grassTempBack Block 10 256 1 0
-1159 133 grassTempBack Block 10 256 1 0
-1415 133 grassTempBack Block 10 256 1 0
-1671 133 grassTempBack Block 10 256 1 0
-1927 133 grassTempBack Block 10 256 1 0
-2183 133 grassTempBack Block 10 256 1 0
-2439 133 grassTempBack Block 10 256 1 0
-2695 133 grassTempBack Block 10 256 1 0
-2951 134 grassTempBack Block 10 256 1 0
-3207 134 grassTempBack Block 10 256 1 0
-3463 134 grassTempBack Block 10 256 1 0
-3719 134 grassTempBack Block 10 256 1 0
-3975 134 grassTempBack Block 10 256 1 0
-4231 134 grassTempBack Block 10 256 1 0
-4487 134 grassTempBack Block 10 256 1 0
-4743 135 grassTempBack Block 10 256 1 0
-4999 135 grassTempBack Block 10 256 1 0
-5255 135 grassTempBack Block 10 256 1 0
-5511 135 grassTempBack Block 10 256 1 0
--552 -340 groundWall Block 110 24 2 809
--443 -340 groundWall Block 110 24 2 809
--333 -340 groundWall Block 110 24 2 809
--223 -340 groundWall Block 110 24 2 809
--113 -340 groundWall Block 110 24 2 809
--3 -340 groundWall Block 110 24 2 809
-106 -340 groundWall Block 110 24 2 809
-216 -340 groundWall Block 110 24 2 809
-326 -340 groundWall Block 110 24 2 809
-436 -340 groundWall Block 110 24 2 809
-546 -340 groundWall Block 110 24 2 809
-656 -340 groundWall Block 110 24 2 809
-766 -340 groundWall Block 110 24 2 809
-876 -340 groundWall Block 110 24 2 809
-986 -341 groundWall Block 110 24 2 809
-1096 -341 groundWall Block 110 24 2 809
-1206 -341 groundWall Block 110 24 2 809
-1316 -341 groundWall Block 110 24 2 809
-1426 -341 groundWall Block 110 24 2 809
-1536 -341 groundWall Block 110 24 2 809
-1646 -341 groundWall Block 110 24 2 809
-1756 -341 groundWall Block 110 24 2 809
-1866 -341 groundWall Block 110 24 2 809
-1976 -341 groundWall Block 110 24 2 809
-2086 -341 groundWall Block 110 24 2 809
-2196 -341 groundWall Block 110 24 2 809
-2306 -341 groundWall Block 110 24 2 809
-2416 -341 groundWall Block 110 24 2 809
-2526 -342 groundWall Block 110 24 2 809
-2636 -342 groundWall Block 110 24 2 809
-2746 -342 groundWall Block 110 24 2 809
-2856 -342 groundWall Block 110 24 2 809
-2966 -342 groundWall Block 110 24 2 809
-3076 -342 groundWall Block 110 24 2 809
-3186 -342 groundWall Block 110 24 2 809
-3296 -342 groundWall Block 110 24 2 809
-3420 -291 groundWall Block 110 24 2 900
-3420 -182 groundWall Block 110 24 2 900
-3419 -72 groundWall Block 110 24 2 900
-3419 37 groundWall Block 110 24 2 900
-3418 147 groundWall Block 110 24 2 900
--600 -281 groundWall Block 110 24 2 1440
--600 -172 groundWall Block 110 24 2 1440
--600 -62 groundWall Block 110 24 2 1440
--600 47 groundWall Block 110 24 2 1440
--600 157 groundWall Block 110 24 2 1440
--601 193 groundWall Block 110 24 2 1440
-3419 204 groundWall Block 110 24 2 1260
-3371 252 groundWall Block 110 24 2 1710
-3375 -343 groundWall Block 110 24 2 1890
--356 -145 groundWall Block 110 24 2 2430
--247 -145 groundWall Block 110 24 2 2430
--137 -145 groundWall Block 110 24 2 2430
--27 -145 groundWall Block 110 24 2 2430
-82 -145 groundWall Block 110 24 2 2430
-192 -145 groundWall Block 110 24 2 2430
-302 -145 groundWall Block 110 24 2 2430
-412 -145 groundWall Block 110 24 2 2430
-522 -145 groundWall Block 110 24 2 2430
-632 -145 groundWall Block 110 24 2 2430
-742 -145 groundWall Block 110 24 2 2430
-852 -145 groundWall Block 110 24 2 2430
-962 -145 groundWall Block 110 24 2 2430
-1072 -145 groundWall Block 110 24 2 2430
-1182 -144 groundWall Block 110 24 2 2430
-1292 -144 groundWall Block 110 24 2 2430
-1402 -144 groundWall Block 110 24 2 2430
-1512 -144 groundWall Block 110 24 2 2430
-1622 -144 groundWall Block 110 24 2 2430
-1732 -144 groundWall Block 110 24 2 2430
-1842 -144 groundWall Block 110 24 2 2430
-1952 -144 groundWall Block 110 24 2 2430
-2062 -144 groundWall Block 110 24 2 2430
-2172 -144 groundWall Block 110 24 2 2430
-2282 -144 groundWall Block 110 24 2 2430
-2392 -144 groundWall Block 110 24 2 2430
-2502 -144 groundWall Block 110 24 2 2430
-2612 -144 groundWall Block 110 24 2 2430
-2722 -143 groundWall Block 110 24 2 2430
-2832 -143 groundWall Block 110 24 2 2430
-2942 -143 groundWall Block 110 24 2 2430
-3052 -143 groundWall Block 110 24 2 2430
-3162 -143 groundWall Block 110 24 2 2430
--404 -84 groundWall Block 110 24 2 2340
--405 15 groundWall Block 110 24 2 2340
-3219 -96 groundWall Block 110 24 2 2520
-3217 13 groundWall Block 110 24 2 2520
 267 45 spriteStripFlower Block 48 46 2 0
 -236 45 spriteStripFlower Block 48 46 2 0
 -120 45 spriteStripBlueFlowers Block 48 46 2 0
@@ -190,6 +66,51 @@
 5658 191 groundWall Block 180 19 2 810
 5838 191 groundWall Block 180 19 2 810
 5947 191 groundWall Block 180 19 2 810
+435 -11 trees3 Block 244 212 1 0
+2483 6 trees3 Block 244 212 1 0
+-288 -8 trees1 Block 412 248 1 0
+1259 -55 trees1 Block 412 248 1 0
+81 -51 trees2 Block 492 305 1 0
+-483 -332 grassTemplate Block 33 256 2 0
+-228 -332 grassTemplate Block 33 256 2 0
+27 -332 grassTemplate Block 33 256 2 0
+283 -332 grassTemplate Block 33 256 2 0
+539 -332 grassTemplate Block 33 256 2 0
+795 -332 grassTemplate Block 33 256 2 0
+1051 -333 grassTemplate Block 33 256 2 0
+1307 -333 grassTemplate Block 33 256 2 0
+1563 -333 grassTemplate Block 33 256 2 0
+1819 -333 grassTemplate Block 33 256 2 0
+2075 -333 grassTemplate Block 33 256 2 0
+2331 -333 grassTemplate Block 33 256 2 0
+2587 -334 grassTemplate Block 33 256 2 0
+2843 -334 grassTemplate Block 33 256 2 0
+3099 -334 grassTemplate Block 33 256 2 0
+3298 -335 grassTemplate Block 33 256 2 0
+3416 -217 grassTemplate Block 33 256 2 451
+3411 37 grassTemplate Block 33 256 2 451
+3408 77 grassTemplate Block 33 256 2 810
+-603 -213 grassTemplate Block 33 256 2 990
+-603 15 grassTemplate Block 33 256 2 990
+-719 133 grassTemplate Block 33 256 2 1080
+-974 133 grassTemplate Block 33 256 2 1080
+-1230 133 grassTemplate Block 33 256 2 1080
+-1486 133 grassTemplate Block 33 256 2 1080
+-1742 133 grassTemplate Block 33 256 2 1080
+-1998 133 grassTemplate Block 33 256 2 1080
+-2254 133 grassTemplate Block 33 256 2 1080
+-2510 133 grassTemplate Block 33 256 2 1080
+3543 194 grassTemplate Block 33 256 2 1080
+3798 194 grassTemplate Block 33 256 2 1080
+4054 194 grassTemplate Block 33 256 2 1080
+4310 194 grassTemplate Block 33 256 2 1080
+4566 193 grassTemplate Block 33 256 2 1080
+4822 193 grassTemplate Block 33 256 2 1080
+5078 193 grassTemplate Block 33 256 2 1080
+5334 193 grassTemplate Block 33 256 2 1080
+5590 192 grassTemplate Block 33 256 2 1080
+5846 192 grassTemplate Block 33 256 2 1080
+6102 192 grassTemplate Block 33 256 2 1080
 559 56 deathSpikes DeathBlock 0
 685 55 deathSpikes DeathBlock 0
 811 55 deathSpikes DeathBlock 0
@@ -198,7 +119,7 @@
 1803 55 deathSpikes DeathBlock 0
 2282 57 deathSpikes DeathBlock 0
 2768 58 deathSpikes DeathBlock 0
-1469 -121 deathSpikes DeathBlock 180
+1469 -124 deathSpikes DeathBlock 180
 1595 -127 deathSpikes DeathBlock 180
 2041 -128 deathSpikes DeathBlock 180
 2519 -134 deathSpikes DeathBlock 180
@@ -208,15 +129,15 @@
 3196 -86 deathSpikes DeathBlock 270
 3195 8 deathSpikes DeathBlock 270
 3047 30 deathSpikes GoalBlock 9
--2029 -298 GreenHill SuperBack 1065 980
--965 -297 GreenHill SuperBack 1065 980
-99 -296 GreenHill SuperBack 1065 980
-1164 -295 GreenHill SuperBack 1065 980
-2229 -293 GreenHill SuperBack 1065 980
-3294 -292 GreenHill SuperBack 1065 980
-4359 -291 GreenHill SuperBack 1065 980
-5424 -290 GreenHill SuperBack 1065 980
+-218 -47 pixMT SuperBack 1103 421
+809 -73 pixMT SuperBack 1103 421
+1883 -68 pixMT SuperBack 1103 421
+2933 -81 pixMT SuperBack 1103 421
+-1299 -36 pixMT SuperBack 1103 421
+-2385 -41 pixMT SuperBack 1103 421
+3934 0 pixMT SuperBack 1103 421
+4877 27 pixMT SuperBack 1103 421
 Demi -642 3452 84 844
-BGCOLOR 133 168 232 
+BGCOLOR 167 218 220 
 CAM 0.3894195
 CPOS 800 540

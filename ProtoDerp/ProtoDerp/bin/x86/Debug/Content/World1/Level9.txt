@@ -46,84 +46,6 @@
 2339 336 bigBlock Block 258.9796 2058.121 2 0
 2358 707 bigBlock Block 553.6806 2009.325 2 0
 -1345 223 bigBlock Block 31.25615 2062.907 2 0
--331 -401 groundWall Block 160 14 2 360
--331 -242 groundWall Block 160 14 2 360
--332 -82 groundWall Block 160 14 2 360
--332 77 groundWall Block 160 14 2 360
--330 130 groundWall Block 160 14 2 360
--253 -480 groundWall Block 160 14 2 810
--208 -480 groundWall Block 160 14 2 810
--131 -403 groundWall Block 160 14 2 1620
--131 -244 groundWall Block 160 14 2 1620
--132 -84 groundWall Block 160 14 2 1620
--130 -23 groundWall Block 160 14 2 1620
-1063 -1921 groundWall Block 160 14 2 1800
-1063 -2080 groundWall Block 160 14 2 1800
-1062 -2240 groundWall Block 160 14 2 1800
-1061 -2400 groundWall Block 160 14 2 1800
-1060 -2560 groundWall Block 160 14 2 1800
-1060 -2720 groundWall Block 160 14 2 1800
-1063 -2769 groundWall Block 160 14 2 1800
-1139 -2841 groundWall Block 160 14 2 1890
-1239 -2841 groundWall Block 160 14 2 1890
-1321 -2765 groundWall Block 160 14 2 2340
-1321 -2606 groundWall Block 160 14 2 2340
-1321 -2446 groundWall Block 160 14 2 2340
-1321 -2286 groundWall Block 160 14 2 2340
-1321 -2126 groundWall Block 160 14 2 2340
-1321 -1966 groundWall Block 160 14 2 2340
-1321 -1806 groundWall Block 160 14 2 2340
-1321 -1646 groundWall Block 160 14 2 2340
-1321 -1486 groundWall Block 160 14 2 2340
-1321 -1326 groundWall Block 160 14 2 2340
-1321 -1166 groundWall Block 160 14 2 2340
-1320 -1006 groundWall Block 160 14 2 2340
-1320 -846 groundWall Block 160 14 2 2340
-1320 -686 groundWall Block 160 14 2 2340
-1320 -526 groundWall Block 160 14 2 2340
-1320 -366 groundWall Block 160 14 2 2340
-1320 -206 groundWall Block 160 14 2 2340
-1320 -46 groundWall Block 160 14 2 2340
-1320 113 groundWall Block 160 14 2 2340
-1398 199 groundWall Block 160 14 2 2970
-1558 199 groundWall Block 160 14 2 2970
-1718 199 groundWall Block 160 14 2 2970
-1878 199 groundWall Block 160 14 2 2970
-2038 199 groundWall Block 160 14 2 2970
-2198 199 groundWall Block 160 14 2 2970
-2358 199 groundWall Block 160 14 2 2970
-2518 199 groundWall Block 160 14 2 2970
-2678 199 groundWall Block 160 14 2 2970
-2838 199 groundWall Block 160 14 2 2970
-2998 199 groundWall Block 160 14 2 2970
-3158 199 groundWall Block 160 14 2 2970
-3293 199 groundWall Block 160 14 2 2970
--415 202 groundWall Block 160 14 2 3329
--574 202 groundWall Block 160 14 2 3329
--734 202 groundWall Block 160 14 2 3329
--894 202 groundWall Block 160 14 2 3329
--1054 203 groundWall Block 160 14 2 3329
--1214 203 groundWall Block 160 14 2 3329
--1374 203 groundWall Block 160 14 2 3329
--1534 204 groundWall Block 160 14 2 3329
--1694 204 groundWall Block 160 14 2 3329
--1854 204 groundWall Block 160 14 2 3329
--2014 204 groundWall Block 160 14 2 3329
--2174 205 groundWall Block 160 14 2 3329
--2334 205 groundWall Block 160 14 2 3329
-645 -2117 groundWall Block 160 14 2 3240
-645 -1958 groundWall Block 160 14 2 3240
-645 -1798 groundWall Block 160 14 2 3240
-645 -1638 groundWall Block 160 14 2 3240
-645 -1478 groundWall Block 160 14 2 3240
-645 -1318 groundWall Block 160 14 2 3240
-645 -1158 groundWall Block 160 14 2 3240
-644 -998 groundWall Block 160 14 2 3240
-644 -838 groundWall Block 160 14 2 3240
-644 -678 groundWall Block 160 14 2 3240
-644 -518 groundWall Block 160 14 2 3240
-644 -358 groundWall Block 160 14 2 3240
-644 -198 groundWall Block 160 14 2 3240
 143 23 spriteStripBlueFlowers Block 48 46 2 0
 527 19 spriteStripBlueFlowers Block 48 46 2 0
 774 23 spriteStripBlueFlowers Block 48 46 2 0
@@ -165,6 +87,6 @@
 -1771 -322 GreenHill SuperBack 650 575
 1838 -273 GreenHill SuperBack 650 575
 Demi -100 1088 -1770 578
-BGCOLOR 133 169 232 
+BGCOLOR 167 218 220 
 CAM 0.55
 CPOS 400 360

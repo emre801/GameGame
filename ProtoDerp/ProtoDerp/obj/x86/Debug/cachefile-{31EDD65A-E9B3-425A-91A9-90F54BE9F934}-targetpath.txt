@@ -175,6 +175,13 @@ Content\magPluse.xnb
 Content\SawAni.xnb
 Content\groundBad.xnb
 Content\pixGroundTest.xnb
+Content\trees0.xnb
+Content\trees1.xnb
+Content\trees2.xnb
+Content\trees3.xnb
+Content\trees4.xnb
+Content\pixGroundTemp.xnb
+Content\pixMT.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt
