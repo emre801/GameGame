@@ -5,12 +5,6 @@
 783 702 bigBlock Block 75 115 0 0
 1121 749 bigBlock Block 161 676 0 0
 418 533 bigBlock Block 584.2349 843.8948 0 0
-101 90 grassTemplate Block 35 256 2 0
-350 90 grassTemplate Block 35 256 2 0
-603 90 grassTemplate Block 35 256 2 0
-824 90 grassTemplate Block 35 256 2 0
-829 91 grassTemplate Block 35 256 2 360
-1359 104 grassTemplate Block 35 201 2 360
 -20 194 groundWall Block 165 39 2 360
 -20 344 groundWall Block 165 39 2 360
 -20 509 groundWall Block 165 39 2 360
@@ -65,6 +59,35 @@
 1372 16 trees3 Block 244 212 1 0
 -135 60 trees3 Block 244 212 1 0
 3600 74 trees3 Block 244 212 1 0
+826 91 grassTemplate Block 33 256 2 1080
+571 91 grassTemplate Block 33 256 2 1080
+315 91 grassTemplate Block 33 256 2 1080
+99 91 grassTemplate Block 33 256 2 1080
+-132 147 grassTemplate Block 33 256 2 1081
+-387 147 grassTemplate Block 33 256 2 1081
+-643 147 grassTemplate Block 33 256 2 1081
+-899 147 grassTemplate Block 33 256 2 1081
+-1155 147 grassTemplate Block 33 256 2 1081
+-1411 147 grassTemplate Block 33 256 2 1081
+-1667 146 grassTemplate Block 33 256 2 1081
+-1923 146 grassTemplate Block 33 256 2 1081
+-2179 146 grassTemplate Block 33 256 2 1081
+-2435 146 grassTemplate Block 33 256 2 1081
+-2691 146 grassTemplate Block 33 256 2 1081
+1593 170 grassTemplate Block 33 256 2 1440
+1848 170 grassTemplate Block 33 256 2 1440
+2104 171 grassTemplate Block 33 256 2 1440
+2360 171 grassTemplate Block 33 256 2 1440
+2616 172 grassTemplate Block 33 256 2 1440
+2872 173 grassTemplate Block 33 256 2 1440
+3128 173 grassTemplate Block 33 256 2 1440
+3384 174 grassTemplate Block 33 256 2 1440
+3640 175 grassTemplate Block 33 256 2 1440
+3896 175 grassTemplate Block 33 256 2 1440
+4152 176 grassTemplate Block 33 256 2 1440
+4408 177 grassTemplate Block 33 256 2 1440
+4664 177 grassTemplate Block 33 256 2 1440
+1369 105 grassTemplate Block 33 206 2 1440
 883 64 deathSpikes DeathBlock 0
 752 66 deathSpikes DeathBlock 0
 623 66 deathSpikes DeathBlock 0

@@ -548,8 +548,8 @@ namespace ProtoDerp
 
             ///////////////////
             spriteAnimation.Add("SawAni", new SpriteStripAnimationHandler(new Sprite(Content, "SawAni")
-                , 11, 5));//fan
-            sprites.Add("SawAni", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "SawAni"), 11, 3).getIndex(), "SawAni"));
+                , 11, 0f));//fan
+            sprites.Add("SawAni", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "SawAni"), 11, 0f).getIndex(), "SawAni"));
             blockList.AddLast("SawAni");
             //////////////////
 

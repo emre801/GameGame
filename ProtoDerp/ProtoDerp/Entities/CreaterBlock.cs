@@ -1345,7 +1345,7 @@ namespace ProtoDerp
                     }
                     else
                     {
-                        ani.drawCurrentState(spriteBatch, this, new Vector2((int)pos.X - blockWidth, (int)pos.Y),
+                        ani.drawCurrentState(spriteBatch, this, new Vector2((int)pos.X, (int)pos.Y),
                                origin, null, new Rectangle((int)pos.X,
                                    (int)pos.Y, (int)blockWidth, (int)blockHeight), true, new Vector2(0, 0));
                     }

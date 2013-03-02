@@ -27,24 +27,6 @@
 2592 2006 bigBlock Block 2260 2170 0 0
 6517 -4193 bigBlock Block 1200 200 0 0
 1062 2241 bigBlock Block 1790 2130 0 0
--2475 858 grassTemplate Block 35 256 2 0
--2220 858 grassTemplate Block 35 256 2 0
--1964 858 grassTemplate Block 35 256 2 0
--1708 857 grassTemplate Block 35 256 2 0
--1452 857 grassTemplate Block 35 256 2 0
--1196 856 grassTemplate Block 35 256 2 0
--940 856 grassTemplate Block 35 256 2 0
--684 856 grassTemplate Block 35 256 2 0
--428 855 grassTemplate Block 35 256 2 0
--295 858 grassTemplate Block 35 256 2 0
-1743 875 grassTemplate Block 35 256 2 0
-1999 875 grassTemplate Block 35 256 2 0
-2255 875 grassTemplate Block 35 256 2 0
-2511 875 grassTemplate Block 35 256 2 0
-2767 875 grassTemplate Block 35 256 2 0
-3023 875 grassTemplate Block 35 256 2 0
-3279 875 grassTemplate Block 35 256 2 0
-3535 875 grassTemplate Block 35 256 2 0
 -118 80 spriteStripFlower Block 48 46 2 0
 76 65 spriteStripFlower Block 48 46 2 0
 1358 74 spriteStripFlower Block 48 46 2 0
@@ -65,6 +47,29 @@
 2133 797 trees3 Block 244 212 1 360
 521 1070 trees3 Block 244 212 1 360
 932 1057 trees3 Block 244 212 1 360
+1962 876 grassTemplate Block 33 256 2 0
+2217 876 grassTemplate Block 33 256 2 0
+2473 876 grassTemplate Block 33 256 2 0
+2729 877 grassTemplate Block 33 256 2 0
+2985 877 grassTemplate Block 33 256 2 0
+3241 877 grassTemplate Block 33 256 2 0
+3497 878 grassTemplate Block 33 256 2 0
+3753 878 grassTemplate Block 33 256 2 0
+-283 859 grassTemplate Block 33 256 2 359
+-538 859 grassTemplate Block 33 256 2 359
+-794 859 grassTemplate Block 33 256 2 359
+-1050 859 grassTemplate Block 33 256 2 359
+-1306 860 grassTemplate Block 33 256 2 359
+-1562 860 grassTemplate Block 33 256 2 359
+-1818 860 grassTemplate Block 33 256 2 359
+-2074 861 grassTemplate Block 33 256 2 359
+-2330 861 grassTemplate Block 33 256 2 359
+-2586 861 grassTemplate Block 33 256 2 359
+1150 1133 grassTemplate Block 33 256 2 359
+895 1133 grassTemplate Block 33 256 2 359
+639 1134 grassTemplate Block 33 256 2 359
+383 1135 grassTemplate Block 33 256 2 359
+264 1136 grassTemplate Block 33 256 2 360
 148 164 deathSpikes DeathBlock 89
 149 236 deathSpikes DeathBlock 89
 150 362 deathSpikes DeathBlock 89

@@ -58,6 +58,22 @@
 934 2224 bigBlock Block 540 2880 0 0
 3579 2249 bigBlock Block 510 2590 0 0
 -1859 2222 bigBlock Block 540 2880 0 0
+633 1352 trees3 Block 244 212 1 0
+1340 1365 trees3 Block 244 212 1 0
+-629 1343 trees2 Block 492 305 1 0
+-1051 1334 trees1 Block 412 248 1 0
+-1822 1336 trees2 Block 492 305 1 0
+-2031 1025 trees2 Block 492 305 1 0
+-2471 1349 trees2 Block 492 305 1 0
+-1395 1323 trees0 Block 472 295 1 0
+71 1340 trees0 Block 472 295 1 0
+2059 1340 trees0 Block 472 295 1 0
+3368 1391 trees0 Block 472 295 1 0
+2498 1357 trees1 Block 412 248 1 0
+2975 1357 trees2 Block 492 305 1 0
+4161 1357 trees1 Block 412 248 1 0
+3752 1340 trees2 Block 492 305 1 0
+954 1316 trees2 Block 492 305 1 0
 -2 1421 deathSpikes DeathBlock 0
 118 1421 deathSpikes DeathBlock 0
 237 1421 deathSpikes DeathBlock 0
@@ -77,9 +93,17 @@
 1050 743 LongGround MagnetBlock 0 20 1370 115 0
 1363 91 bigGround MagnetBlock 0 -40 555 485 0
 1309 1390 ahLogo0 GoalBlock 7
-412 327 deathBall MovingPath 7 420 837 414 1483 
-799 965 deathBall MovingPath 7 807 1475 812 855 
+443 351 SawAni MovingPath 5 451 861 445 1439 
+812 1186 SawAni MovingPath 5 820 1696 820 905 
+-2823 1272 pixMT SuperBack 1103 421
+-1721 1269 pixMT SuperBack 1103 421
+-618 1265 pixMT SuperBack 1103 421
+484 1262 pixMT SuperBack 1103 421
+1587 1258 pixMT SuperBack 1103 421
+2690 1255 pixMT SuperBack 1103 421
+3793 1251 pixMT SuperBack 1103 421
+4896 1248 pixMT SuperBack 1103 421
 Demi -100 1720 48 2155
 BGCOLOR 167 218 220 
-CAM -1
-CPOS 800 540
+CAM 0.4824
+CPOS 461.2087 699.4391

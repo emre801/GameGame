@@ -105,7 +105,8 @@ namespace ProtoDerp
             this.width = ani.widthOf();
             this.height = ani.heightOf();
             if (this.spriteNumber.Equals("deathBall")
-                || spriteNumber.Contains("circle"))
+                || spriteNumber.Contains("circle")
+                || spriteNumber.Equals("SawAni"))
             {
                 fixture = FixtureFactory.CreateCircle(world, (float)ConvertUnits.ToSimUnits(width)/2,  mass);
 

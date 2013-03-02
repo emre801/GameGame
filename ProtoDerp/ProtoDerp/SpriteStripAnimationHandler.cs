@@ -30,12 +30,12 @@ namespace ProtoDerp
             }
         }
 
-        private int frameRate;
-        private int origFrameRate;
+        private float frameRate;
+        private float origFrameRate;
         public Stopwatch stopWatch = new Stopwatch();
         public int numberOfTotalCycles = 0;
 
-        public SpriteStripAnimationHandler(Sprite strip, int stateCount,int frameRate)
+        public SpriteStripAnimationHandler(Sprite strip, int stateCount,float frameRate)
         {
             this.spriteStrip = strip;
             if (strip.index.Width % stateCount != 0)
@@ -94,7 +94,7 @@ namespace ProtoDerp
         {
             this.frameRate = frameRate;
         }
-        public int getFrameRate()
+        public float getFrameRate()
         {
             return frameRate;
         }

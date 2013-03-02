@@ -1,49 +1,32 @@
-423 158 bigBlock Block 200 1750 0 0
-1198 -346 bigBlock Block 1200 200 0 0
--351 -346 bigBlock Block 1200 200 0 0
-430 350 bigBlock Block 220 1765 2 0
--545 -190 bigBlock Block 1510 200 2 0
-1380 -190 bigBlock Block 1510 200 2 0
-420 101 bigBlock Block 55 1385 0 0
--123 63 grassTemplate Block 35 256 2 0
-132 63 grassTemplate Block 35 256 2 0
-387 63 grassTemplate Block 35 256 2 0
-643 63 grassTemplate Block 35 256 2 0
-898 63 grassTemplate Block 35 256 2 0
-973 63 grassTemplate Block 35 256 2 0
--254 -80 grassTemplate Block 35 256 2 90
--254 -331 grassTemplate Block 35 256 2 90
--254 -585 grassTemplate Block 35 256 2 90
--254 -819 grassTemplate Block 35 256 2 90
-1103 -819 grassTemplate Block 35 256 2 270
-1103 -565 grassTemplate Block 35 256 2 270
-1103 -312 grassTemplate Block 35 256 2 270
-1103 -59 grassTemplate Block 35 256 2 270
--382 -939 grassTemplate Block 35 256 2 360
--515 -939 grassTemplate Block 35 256 2 360
-1225 -939 grassTemplate Block 35 256 2 360
-1358 -939 grassTemplate Block 35 256 2 360
-762 -658 CloudBack Block 70 1120 2 0
--348 -736 CloudBack Block 70 1120 2 0
--980 -581 CloudBack Block 70 1120 2 0
-1800 -468 CloudBack Block 70 1120 2 0
-2337 -982 CloudBack Block 70 1120 2 0
 -3389 -978 derrick.png Block 105 75 0 0
 -2785 34 derrick.png Block 105 75 0 0
 -3249 -221 derrick.png Block 105 75 0 0
 -2258 72 derrick.png Block 105 75 0 0
-150 31 spriteStripFlower Block 48 46 2 0
-543 34 spriteStripFlower Block 48 46 2 0
-894 34 spriteStripFlower Block 48 46 2 0
--45 31 spriteStripFlower Block 48 46 2 0
-761 41 spriteStripFlower Block 48 46 2 0
-341 38 spriteStripFlower Block 48 46 2 0
-674 38 spriteStripFlower Block 48 46 2 0
-394 -63 trees1 Block 412 248 1 0
-845 -63 trees2 Block 492 305 1 0
-227 -1 trees3 Block 244 212 1 0
-601 -3 trees3 Block 244 212 1 0
--78 -52 trees0 Block 472 295 1 0
+394 -27 trees1 Block 412 248 1 0
+845 -22 trees2 Block 492 305 1 0
+227 20 trees3 Block 244 212 1 0
+601 20 trees3 Block 244 212 1 0
+-78 -15 trees0 Block 472 295 1 0
+410 332 bigBlock Block 475.0903 1904.073 0 0
+1519 -71 bigBlock Block 1288.139 675.4423 0 0
+-707 -36 bigBlock Block 1240.156 590.5506 0 0
+-157 95 grassTemplate Block 33 256 2 0
+-286 95 grassTemplate Block 33 256 2 0
+1729 -713 grassTemplate Block 33 256 2 0
+-539 -657 grassTemplate Block 33 256 2 0
+1054 97 grassTemplate Block 33 256 2 1
+799 97 grassTemplate Block 33 256 2 1
+543 97 grassTemplate Block 33 256 2 1
+287 96 grassTemplate Block 33 256 2 1
+31 96 grassTemplate Block 33 256 2 1
+-794 -658 grassTemplate Block 33 256 2 360
+-874 -658 grassTemplate Block 33 256 2 360
+1473 -712 grassTemplate Block 33 256 2 360
+1308 -711 grassTemplate Block 33 256 2 360
+-394 -583 deathSpikes DeathBlock 90
+-390 -449 deathSpikes DeathBlock 90
+1181 -635 deathSpikes DeathBlock 630
+1181 -512 deathSpikes DeathBlock 630
 1018 -1 ahLogo0 GoalBlock 2
 102 -116 pixMT SuperBack 1103 421
 1184 -108 pixMT SuperBack 1103 421

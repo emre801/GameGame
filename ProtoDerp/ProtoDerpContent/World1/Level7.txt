@@ -44,6 +44,17 @@
 3165 -168 grassTemplate Block 35 156 2 0
 3894 -253 grassTemplate Block 35 156 2 0
 3973 -253 grassTemplate Block 35 156 2 0
+758 -32 trees2 Block 492 305 1 0
+2751 -38 trees2 Block 492 305 1 0
+3309 29 trees3 Block 244 212 1 0
+1313 -19 trees1 Block 412 248 1 0
+2112 -28 trees0 Block 472 295 1 0
+3748 -10 trees0 Block 472 295 1 0
+-52 0 trees0 Block 472 295 1 0
+3629 -771 grassTemplate Block 33 256 2 0
+3884 -771 grassTemplate Block 33 256 2 0
+4140 -772 grassTemplate Block 33 256 2 0
+4342 -774 grassTemplate Block 33 256 2 0
 445 -116 deathSpikes DeathBlock 630
 445 6 deathSpikes DeathBlock 630
 445 130 deathSpikes DeathBlock 630
@@ -107,14 +118,14 @@
 3483 -718 deathSpikes DeathBlock 629
 3484 -595 deathSpikes DeathBlock 629
 3485 -498 deathSpikes DeathBlock 630
-349 -220 bigGround MagnetBlock 0 10 365 110
-1026 -219 bigGround MagnetBlock 0 10 365 110
-1530 -164 bigGround MagnetBlock 0 10 365 110
-1946 -94 bigGround MagnetBlock 0 10 180 95
-2500 -84 bigGround MagnetBlock 0 10 180 95
-3004 -118 bigGround MagnetBlock 0 10 180 95
-3454 70 bigGround MagnetBlock -19 0 155 610
-3879 -361 bigGround MagnetBlock -21 0 15 570
+349 -220 bigGround MagnetBlock 0 10 365 110 0
+1026 -219 bigGround MagnetBlock 0 10 365 110 0
+1530 -164 bigGround MagnetBlock 0 10 365 110 0
+1946 -94 bigGround MagnetBlock 0 10 180 95 0
+2500 -84 bigGround MagnetBlock 0 10 180 95 0
+3004 -118 bigGround MagnetBlock 0 10 180 95 0
+3454 70 bigGround MagnetBlock -19 0 155 610 0
+3879 -361 bigGround MagnetBlock -21 0 15 570 0
 4132 27 ahLogo0 GoalBlock 8
 Demi -100 3621 -862 561
 BGCOLOR 167 218 220 

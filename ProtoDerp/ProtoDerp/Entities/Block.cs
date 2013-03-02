@@ -75,15 +75,27 @@ namespace ProtoDerp
 
                 if (spriteNumber.Equals("bigBlock"))
                 {
-
+                    /*
                     float widthOfObject = game.getSprite("grassTemplate").index.Width;
                     float heighOfObject = game.getSprite("grassTemplate").index.Width;
-                    for (float XX = pos.X - width / 2; XX < pos.X + width / 2; XX += widthOfObject)
+                    float XX = XX = pos.X - width / 2;
+                    for (XX = pos.X - width / 2; XX < pos.X + width / 2; XX += widthOfObject)
                     {
-                       LayerBlock lb = new LayerBlock(game, a, new Vector2(XX + widthOfObject / 2, pos.Y - height / 2), 1, "grassTemplate", game.getSprite("grassTemplate").index.Height, game.getSprite("grassTemplate").index.Width, 0, blockNumber);
-                        game.addEntity(lb);
+                        if (XX + widthOfObject < pos.X + width/2)
+                        {
+                            LayerBlock lb = new LayerBlock(game, a, new Vector2(XX + widthOfObject / 2, pos.Y - height / 2), 1, "grassTemplate", game.getSprite("grassTemplate").index.Height, game.getSprite("grassTemplate").index.Width, 0, blockNumber);
+                            game.addEntity(lb);
+                        }
                     }
+                    
+                    if (XX + widthOfObject > pos.X + width / 2)
+                    {
+                        float endLength = (XX + widthOfObject) - (pos.X + width / 2f);
+                        //LayerBlock lb = new LayerBlock(game, a, new Vector2(XX - endLength/2, pos.Y - height / 2), 1, "grassTemplate", game.getSprite("grassTemplate").index.Height, endLength, 0, blockNumber);
+                        //game.addEntity(lb);
 
+                    }
+                     * */
 
                 }
             }
