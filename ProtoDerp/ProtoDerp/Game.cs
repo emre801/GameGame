@@ -170,7 +170,9 @@ namespace ProtoDerp
 
         public int magValue = 1;
 
-        
+
+        public int blockNumber = 0;
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -792,6 +794,8 @@ namespace ProtoDerp
             foreach (Block b in blocks)
             {
                 if (!b.IsVisible)
+                    continue;
+                if (b is LayerBlock)
                     continue;
                 int x = (int)b.origPos.X;
                 int y = (int)b.origPos.Y;

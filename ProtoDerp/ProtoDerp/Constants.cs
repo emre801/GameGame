@@ -51,7 +51,7 @@ namespace ProtoDerp
 
         public const bool FULLSCREEN = false;
 
-        public const bool PLAY_MUSIC = true;
+        public const bool PLAY_MUSIC = false;
 
         public const float SHADOW_VALUE = 0.25f;
 

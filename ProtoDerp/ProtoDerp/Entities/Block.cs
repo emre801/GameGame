@@ -48,6 +48,10 @@ namespace ProtoDerp
         Texture2D dynamicPattern;
         float heightDiff = 0,widthDiff=0;
         Random r = new Random(801);
+        public int blockNumber;
+        public World world;
+        public int associatedLevel;
+        public Color FUCKYOUSHIT=Color.White;
         public Block(Game g, Arena a, Vector2 pos, int playerNum,String spriteNumber,float height, float width,int drawLevel, float rotation)
             : base(g)
         {
@@ -57,13 +61,33 @@ namespace ProtoDerp
             this.spriteNumber = spriteNumber;
             this.height = height;
             this.width = width;
-            
+            this.blockNumber = game.blockNumber;
+            game.blockNumber++;
             this.drawLevel = drawLevel;
             this.rotationAngle = rotation;
+            this.associatedLevel = game.currentLevel;
             SetUpPhysics(Constants.player1SpawnLocation + pos);
             LoadContent();
             origin = new Vector2(ani.widthOf() / 2, ani.heightOf() / 2);
             fixture.OnCollision += new OnCollisionEventHandler(OnCollision);
+            if (!game.backToTitleScreen)
+            {
+
+                if (spriteNumber.Equals("bigBlock"))
+                {
+
+                    float widthOfObject = game.getSprite("grassTemplate").index.Width;
+                    float heighOfObject = game.getSprite("grassTemplate").index.Width;
+                    for (float XX = pos.X - width / 2; XX < pos.X + width / 2; XX += widthOfObject)
+                    {
+                       LayerBlock lb = new LayerBlock(game, a, new Vector2(XX + widthOfObject / 2, pos.Y - height / 2), 1, "grassTemplate", game.getSprite("grassTemplate").index.Height, game.getSprite("grassTemplate").index.Width, 0, blockNumber);
+                        game.addEntity(lb);
+                    }
+
+
+                }
+            }
+            
         }
 
         bool OnCollision(Fixture fixtureA, Fixture fixtureB, Contact contact)
@@ -90,7 +114,7 @@ namespace ProtoDerp
 
         protected virtual void SetUpPhysics(Vector2 position)
         {
-            World world = game.world;
+             world = game.world;
             if (drawLevel == 1)
                 world = game.world2;
             if (drawLevel == 2)
@@ -412,7 +436,11 @@ namespace ProtoDerp
 
             if (isSelected)
                 drawColor = Color.Green;
+            if (!FUCKYOUSHIT.Equals(Color.White))
+            {
 
+                drawColor = FUCKYOUSHIT;
+            }
             if (ani.getStateCount() == 1)
             {
 
@@ -460,13 +488,18 @@ namespace ProtoDerp
         {
             if (!IsVisible)
                 return;
+            
             Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
             DrawingTool test = game.drawingTool;
             int i = playerSprite.index.Width;
             Point bottomRight = new Point(playerSprite.index.Width, playerSprite.index.Height);
             Rectangle targetRect = new Rectangle((int)ringDrawPoint.X, (int)ringDrawPoint.Y, bottomRight.X, bottomRight.Y);
             Color drawColor = Color.Black;
-            
+            if (blockNumber == 34)
+            {
+                int FUCK = 0;
+                drawColor = Color.Red;
+            }
             if (ani.getStateCount() == 1)
             {
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X) + 7, (int)ConvertUnits.ToDisplayUnits(body.Position.Y) - 5, (int)width, (int)height), null, drawColor * Constants.SHADOW_VALUE, body.Rotation, origin, SpriteEffects.None, 0f);

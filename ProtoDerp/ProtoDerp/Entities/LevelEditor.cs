@@ -81,6 +81,7 @@ namespace ProtoDerp
             stopWatch.Start();
             game.stopWatchLagTimer.Reset();
             game.magValue = 1;
+            game.blockNumber = 0;
             while ((line = sr.ReadLine()) != null)
             {
                 c++;
@@ -246,8 +247,11 @@ namespace ProtoDerp
             {
                    foreach (Block j in blocks)
                    {
-                        i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
-                        j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+                       if (!(j is LayerBlock || i is LayerBlock))
+                       {
+                           i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                           j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+                       }
                    }
             }
 

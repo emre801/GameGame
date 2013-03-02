@@ -135,6 +135,7 @@
     <Compile Include="Entities\EntityBlock.cs" />
     <Compile Include="Entities\GoalBlock.cs" />
     <Compile Include="Entities\GUI.cs" />
+    <Compile Include="Entities\LayerBlock.cs" />
     <Compile Include="Entities\LevelEditor.cs" />
     <Compile Include="Entities\LevelSelect.cs" />
     <Compile Include="Entities\MagnetBlock.cs" />

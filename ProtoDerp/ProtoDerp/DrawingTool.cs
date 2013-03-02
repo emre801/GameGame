@@ -555,7 +555,8 @@ namespace ProtoDerp
             //Draw all game Entities (sprites)
             foreach (Entity e in game.backGroundImages)
             {
-                e.Draw(gameTime, spriteBatch);
+                if(e is BackgroundBlock)
+                    e.Draw(gameTime, spriteBatch);
             }
             //DrawShadows
             foreach (Entity e in entities)
@@ -649,7 +650,7 @@ namespace ProtoDerp
                             e.Draw(gameTime, spriteBatch);
                     }
                 }
-                if (e is CreaterBlock|| e is WaterBlock || e is TempBlock)
+                if (e is CreaterBlock|| e is WaterBlock || e is TempBlock || e is LayerBlock)
                 {
                     e.Draw(gameTime, spriteBatch);
                 }
@@ -658,7 +659,13 @@ namespace ProtoDerp
             }
             if (game.Arena != null) 
                game.Arena.Draw(gameTime, spriteBatch);
-                
+
+            foreach (Entity e in game.backGroundImages)
+            {
+                if (e is LayerBlock)
+                    e.Draw(gameTime, spriteBatch);
+            }
+
             endBatch();
 
             //foreach (Block i in topBlocks)
