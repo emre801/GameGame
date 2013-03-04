@@ -20,9 +20,6 @@
 1553 1297 groundWall Block 200 74 2 540
 -14 98 grassTemplate Block 35 306 2 720
 1438 105 grassTemplate Block 35 316 2 720
-200 -264 CloudBack Block 70 1120 2 720
-1318 -121 CloudBack Block 70 1120 2 720
-1276 -258 CloudBack Block 50 425 2 720
 -1237 1991 bigBlock Block 2250 2730 0 0
 2592 2006 bigBlock Block 2260 2170 0 0
 6517 -4193 bigBlock Block 1200 200 0 0
@@ -70,6 +67,44 @@
 639 1134 grassTemplate Block 33 256 2 359
 383 1135 grassTemplate Block 33 256 2 359
 264 1136 grassTemplate Block 33 256 2 360
+1278 186 groundWall Block 129 14 2 900
+1278 314 groundWall Block 129 14 2 900
+1278 443 groundWall Block 129 14 2 900
+1277 572 groundWall Block 129 14 2 900
+1277 701 groundWall Block 129 14 2 900
+1276 830 groundWall Block 129 14 2 900
+1276 959 groundWall Block 129 14 2 900
+1278 1044 groundWall Block 129 14 2 900
+-162 180 groundWall Block 129 14 2 1260
+-162 308 groundWall Block 129 14 2 1260
+-163 437 groundWall Block 129 14 2 1260
+-163 566 groundWall Block 129 14 2 1260
+-164 695 groundWall Block 129 14 2 1260
+-162 779 groundWall Block 129 14 2 1260
+138 174 groundWall Block 129 14 2 1799
+138 302 groundWall Block 129 14 2 1799
+138 431 groundWall Block 129 14 2 1799
+139 560 groundWall Block 129 14 2 1799
+139 689 groundWall Block 129 14 2 1799
+140 818 groundWall Block 129 14 2 1799
+140 947 groundWall Block 129 14 2 1799
+141 1056 groundWall Block 129 14 2 1800
+1575 181 groundWall Block 129 14 2 2160
+1574 309 groundWall Block 129 14 2 2160
+1572 438 groundWall Block 129 14 2 2160
+1570 567 groundWall Block 129 14 2 2160
+1568 696 groundWall Block 129 14 2 2160
+1571 816 groundWall Block 129 14 2 2160
+2810 -264 cloudPix Block 144 624 2 0
+1807 -480 cloudPix Block 144 624 2 0
+656 -319 cloudPix Block 144 624 2 0
+-270 -444 cloudPix Block 144 624 2 0
+-1115 -209 cloudPix Block 144 624 2 0
+-1929 -524 cloudPix Block 144 624 2 0
+-2613 -197 cloudPix Block 144 624 2 0
+-3184 -517 cloudPix Block 144 624 2 0
+-3549 -146 cloudPix Block 144 624 2 0
+3590 -468 cloudPix Block 144 624 2 0
 148 164 deathSpikes DeathBlock 89
 149 236 deathSpikes DeathBlock 89
 150 362 deathSpikes DeathBlock 89

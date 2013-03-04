@@ -117,6 +117,23 @@
 1138 -5146 magnet1 Block 85 100 2 991
 1138 -5246 magnet1 Block 85 100 2 991
 207 379 SawAni Block 246 250 0 0
+-44 -2387 cloudPix Block 144 624 2 0
+1705 -2707 cloudPix Block 144 624 2 0
+-104 -4217 cloudPix Block 144 624 2 0
+2064 -5206 cloudPix Block 144 624 2 0
+1574 -5676 cloudPix Block 144 624 2 0
+-55 -5776 cloudPix Block 144 624 2 0
+-995 -4876 cloudPix Block 144 624 2 0
+-1125 -3526 cloudPix Block 144 624 2 0
+-2158 -2496 cloudPix Block 144 624 2 0
+2277 -4376 cloudPix Block 144 624 2 0
+2047 -3586 cloudPix Block 144 624 2 0
+3687 -2656 cloudPix Block 144 624 2 0
+3897 -3856 cloudPix Block 144 624 2 0
+4877 -4826 cloudPix Block 144 624 2 0
+3557 -5186 cloudPix Block 144 624 2 0
+-2970 -3921 cloudPix Block 144 624 2 0
+-3982 -2923 cloudPix Block 144 624 2 0
 410 -5304 deathSpikes DeathBlock 450
 410 -5181 deathSpikes DeathBlock 450
 410 -5057 deathSpikes DeathBlock 450
@@ -214,6 +231,6 @@
 806 -2673 bigGround MagnetBlock 6 0 5445 735 0
 803 -5280 ahLogo0 GoalBlock 18
 Demi -813 1456 -5258 753
-BGCOLOR 167 218 220
+BGCOLOR 167 218 220 
 CAM 0.4608877
 CPOS 202.8936 684.5406

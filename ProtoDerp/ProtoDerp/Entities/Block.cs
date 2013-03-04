@@ -96,6 +96,27 @@ namespace ProtoDerp
 
                     }
                      * */
+                    /*
+                    float widthOfObject = game.getSprite("groundWall").index.Width;
+                    float heighOfObject = game.getSprite("groundWall").index.Width;
+                    float XX = XX = pos.X - width / 2;
+                    for (XX = pos.X - width / 2; XX < pos.X + width / 2; XX += widthOfObject)
+                    {
+                        if (XX + widthOfObject < pos.X + width / 2)
+                        {
+                            LayerBlock lb = new LayerBlock(game, a, new Vector2(XX + widthOfObject / 2, pos.Y + height / 2), 1, "groundWall", game.getSprite("groundWall").index.Height, game.getSprite("groundWall").index.Width, 90, blockNumber);
+                            game.addEntity(lb);
+                        }
+                    }
+
+                    if (XX + widthOfObject > pos.X + width / 2)
+                    {
+                        float endLength = (XX + widthOfObject) - (pos.X + width / 2f);
+                        //LayerBlock lb = new LayerBlock(game, a, new Vector2(XX - endLength/2, pos.Y - height / 2), 1, "grassTemplate", game.getSprite("grassTemplate").index.Height, endLength, 0, blockNumber);
+                        //game.addEntity(lb);
+
+                    }
+                     * */
 
                 }
             }

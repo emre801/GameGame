@@ -3,20 +3,6 @@
 655 -1155 bigBlock Block 2085 30 0 0
 -231 -113 bigBlock Block 735 205 0 0
 1191 -1295 bigBlock Block 3090 255 0 0
--934 -250 GreenHill Block 1550 1800 1 0
-860 -256 GreenHill Block 1550 1800 1 0
-2655 -250 GreenHill Block 1550 1800 1 0
--2701 -250 GreenHill Block 1550 1800 1 0
-3865 -2890 GreenHill Block 1550 1800 1 0
-496 586 bigBlock Block 770 5760 1 0
--150 -910 CloudBack Block 70 1120 2 0
--1040 -1240 CloudBack Block 70 1120 2 0
-20 -1680 CloudBack Block 70 1120 2 0
--960 -1940 CloudBack Block 70 1120 2 0
-360 -2360 CloudBack Block 70 1120 2 0
-2120 -1000 CloudBack Block 70 1120 2 0
-2010 -1660 CloudBack Block 70 1120 2 0
-2270 -2200 CloudBack Block 70 1120 2 0
 12 59 grassTemplate Block 35 256 2 0
 267 59 grassTemplate Block 35 256 2 0
 523 59 grassTemplate Block 35 256 2 0
@@ -49,14 +35,17 @@
 143 23 spriteStripBlueFlowers Block 48 46 2 0
 527 19 spriteStripBlueFlowers Block 48 46 2 0
 774 23 spriteStripBlueFlowers Block 48 46 2 0
-325 23 spriteStripFlower Block 48 46 1 0
-690 21 spriteStripFlower Block 48 46 1 0
--54 19 spriteStripFlower Block 48 46 1 0
-232 16 spriteStripPurpleFlower Block 48 46 1 0
-607 29 spriteStripPurpleFlower Block 48 46 1 0
-450 23 spriteStripPurpleFlower Block 48 46 1 0
-887 -1874 spriteStripPurpleFlower Block 48 46 1 0
-1031 -1865 spriteStripBlueFlowers Block 48 46 1 0
+1928 -1484 cloudPix Block 144 624 2 0
+2558 -2124 cloudPix Block 144 624 2 0
+1938 -2514 cloudPix Block 144 624 2 0
+-221 -2084 cloudPix Block 144 624 2 0
+-281 -1604 cloudPix Block 144 624 2 0
+-1651 -1464 cloudPix Block 144 624 2 0
+-2741 -1574 cloudPix Block 144 624 2 0
+-2291 -2334 cloudPix Block 144 624 2 0
+-1041 -2104 cloudPix Block 144 624 2 0
+558 -2674 cloudPix Block 144 624 2 0
+-511 -2664 cloudPix Block 144 624 2 0
 625 -176 deathSpikes DeathBlock 270
 625 -299 deathSpikes DeathBlock 270
 625 -423 deathSpikes DeathBlock 270
@@ -82,10 +71,6 @@
 1044 -2732 deathSpikes DeathBlock 631
 1045 -2766 deathSpikes DeathBlock 990
 950 -1900 ahLogo0 GoalBlock 10
-36 -300 GreenHill SuperBack 650 575
-561 -320 GreenHill SuperBack 650 575
--1771 -322 GreenHill SuperBack 650 575
-1838 -273 GreenHill SuperBack 650 575
 Demi -100 1088 -1770 578
 BGCOLOR 167 218 220 
 CAM 0.55

@@ -21,12 +21,19 @@
 1896 -1008 grassTemplate Block 35 176 2 720
 1541 -820 grassTemplate Block 35 176 2 720
 1903 -1313 grassTemplate Block 35 176 2 720
-719 -427 CloudBack Block 70 1120 2 10260
-1123 -1168 CloudBack Block 70 1120 2 10260
-2969 -1313 CloudBack Block 70 1120 2 10260
-3062 -491 CloudBack Block 70 1120 2 10260
--105 -1197 CloudBack Block 70 1120 2 10260
-3765 -942 CloudBack Block 70 1120 2 10260
+2608 -1437 cloudPix Block 144 624 2 0
+948 -1147 cloudPix Block 144 624 2 0
+468 -1557 cloudPix Block 144 624 2 0
+1898 -1757 cloudPix Block 144 624 2 0
+3058 -1117 cloudPix Block 144 624 2 0
+-305 -1024 cloudPix Block 144 624 2 0
+-925 -1624 cloudPix Block 144 624 2 0
+-1555 -1104 cloudPix Block 144 624 2 0
+3862 -1518 cloudPix Block 144 624 2 0
+4082 -998 cloudPix Block 144 624 2 0
+5312 -1348 cloudPix Block 144 624 2 0
+-999 -762 cloudPix Block 144 624 2 0
+3220 -732 cloudPix Block 144 624 2 0
 1443 -757 deathSpikes DeathBlock 270
 2323 -761 deathSpikes DeathBlock 450
 2319 -112 deathSpikes DeathBlock 450

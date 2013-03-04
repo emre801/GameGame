@@ -173,6 +173,8 @@ namespace ProtoDerp
 
         public int blockNumber = 0;
 
+        Texture2D backgroundTex;
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -296,6 +298,8 @@ namespace ProtoDerp
             if(Constants.IS_IN_DEBUG_MODE)
                 loadImageFromContent();
 
+            
+
             //Load Sprites            
             /*sprites.Add("fire0", new Sprite(Content, "fire0"));
             sprites.Add("fire1", new Sprite(Content, "fire1"));
@@ -303,6 +307,9 @@ namespace ProtoDerp
              */
             sprites.Add("cloud", new Sprite(Content, "cloud"));
             blockList.AddLast("cloud");
+
+            sprites.Add("cloudPix", new Sprite(Content, "cloudPix"));
+            blockList.AddLast("cloudPix");
             //sprites.Add("DeathTime", new Sprite(Content, "DeathTime"));
             sprites.Add("black", new Sprite(Content,"black"));
             //sprites.Add("rage", new Sprite(Content, "rage"));
@@ -599,6 +606,8 @@ namespace ProtoDerp
             preloadSongs();
             if(Constants.PRELOAD_LEVELS)
                 preLoadEachLevel();
+
+            backgroundTex = createBG();
              
         
         }
@@ -1237,16 +1246,38 @@ namespace ProtoDerp
 
         protected override void Draw(GameTime gameTime)
         {
-            if(gMode==0 || gMode==2)
+            if (gMode == 0 || gMode == 2)
+            {
                 GraphicsDevice.Clear(backGroundColor);
+                drawingTool.drawBGGradient(backgroundTex);
+            }
             else
                 GraphicsDevice.Clear(Color.Black);
 
+
+            
             drawingTool.drawEntities(entities, gameTime);
             drawingTool.drawLetterBox();
 
             base.Draw(gameTime);
         }
+
+        private Texture2D createBG()
+        {
+            backgroundTex = new Texture2D(GraphicsDevice, drawingTool.ActualScreenPixelWidth, drawingTool.ActualScreenPixelHeight);
+            Color[] bgc = new Color[drawingTool.ActualScreenPixelHeight * drawingTool.ActualScreenPixelWidth];
+            float texColour = 33;          // Defines the colour of the gradient.
+            int gradientThickness = drawingTool.ActualScreenPixelHeight/4;  // Defines how "diluted" the gradient gets. I've found 2 works great, and 16 is a very fine gradient.
+
+            for (float i = 0; i < bgc.Length; i++)
+            {
+                texColour = (i / (drawingTool.ActualScreenPixelHeight * gradientThickness));
+                bgc[(int)i] = new Color(texColour, texColour, texColour);
+            }
+            backgroundTex.SetData<Color>(bgc);
+            return backgroundTex;
+        }
+
         public void PlayerDies()
         {
             //newLevel();

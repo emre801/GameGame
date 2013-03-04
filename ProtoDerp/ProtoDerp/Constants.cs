@@ -9,7 +9,7 @@ namespace ProtoDerp
 {
     class Constants
     {
-        public const int WRITE_LEVEL = 6;
+        public const int WRITE_LEVEL = 7;
         public const int STARTING_WORLD = 1;
         public const int MAX_WRITE_LEVEL = 29;
         public const int READ_LEVEL = 2;
@@ -26,7 +26,7 @@ namespace ProtoDerp
         
         public const double GAMEWORLD_ASPECT_RATIO = 4f / 3f; // Width of game world / height of game world
 
-        public const bool PRELOAD_LEVELS = true;
+        public const bool PRELOAD_LEVELS = true; // Set this to true when release
 
         public const bool DO_FADE_OUT = false;
 
@@ -51,7 +51,7 @@ namespace ProtoDerp
 
         public const bool FULLSCREEN = false;
 
-        public const bool PLAY_MUSIC = false;
+        public const bool PLAY_MUSIC = true;
 
         public const float SHADOW_VALUE = 0.25f;
 

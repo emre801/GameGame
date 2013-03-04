@@ -23,28 +23,14 @@
 250 -255 grassTemplate Block 35 256 2 270
 321 -255 grassTemplate Block 35 256 2 450
 321 -38 grassTemplate Block 35 256 2 450
--128 698 GreenHill Block 620 835 1 0
-738 694 GreenHill Block 765 905 1 0
-782 -399 CloudBack Block 70 1120 2 0
--168 -496 CloudBack Block 70 1120 2 0
--1782 354 backGroundMan Block 50 50 1 0
-422 1338 backGroundMan Block 1121.698 3940.083 1 0
--1415 778 grassTempBack Block 35 256 1 0
--1160 778 grassTempBack Block 35 256 1 0
--904 778 grassTempBack Block 35 256 1 0
--648 778 grassTempBack Block 35 256 1 0
--392 779 grassTempBack Block 35 256 1 0
--136 779 grassTempBack Block 35 256 1 0
-119 779 grassTempBack Block 35 256 1 0
-375 779 grassTempBack Block 35 256 1 0
-631 780 grassTempBack Block 35 256 1 0
-887 780 grassTempBack Block 35 256 1 0
-1143 780 grassTempBack Block 35 256 1 0
-1399 781 grassTempBack Block 35 256 1 0
-1655 781 grassTempBack Block 35 256 1 0
-1911 781 grassTempBack Block 35 256 1 0
-2167 781 grassTempBack Block 35 256 1 0
-2423 782 grassTempBack Block 35 256 1 0
+1785 -116 cloudPix Block 144 624 2 0
+782 -592 cloudPix Block 144 624 2 0
+-1058 -318 cloudPix Block 144 624 2 0
+-1332 114 cloudPix Block 144 624 2 0
+1894 425 cloudPix Block 144 624 2 0
+1778 -643 cloudPix Block 144 624 2 0
+-993 331 cloudPix Block 144 624 2 0
+-213 -708 cloudPix Block 144 624 2 0
 -469 898 deathSpikes DeathBlock 0
 -345 898 deathSpikes DeathBlock 0
 -221 895 deathSpikes DeathBlock 0
@@ -69,18 +55,12 @@
 1161 -792 deathSpikes DeathBlock 1710
 1161 -669 deathSpikes DeathBlock 1710
 1161 -545 deathSpikes DeathBlock 1710
--214 657 bigBlock MagnetBlock 0 -9 460 135
-100 682 bigBlock MagnetBlock 0 -9 460 135
-409 625 bigBlock MagnetBlock 0 -9 460 135
-731 679 bigBlock MagnetBlock 0 -9 460 135
-1004 345 bigBlock MagnetBlock 0 -9 945 135
+-214 657 bigBlock MagnetBlock 0 -9 460 135 0
+100 682 bigBlock MagnetBlock 0 -9 460 135 0
+409 625 bigBlock MagnetBlock 0 -9 460 135 0
+731 679 bigBlock MagnetBlock 0 -9 460 135 0
+1004 345 bigBlock MagnetBlock 0 -9 945 135 0
 387 -12 ahLogo0 GoalBlock 14
-290 617 GreenHill SuperBack 585 450
--612 688 GreenHill SuperBack 585 450
--1183 681 GreenHill SuperBack 585 450
-835 606 GreenHill SuperBack 585 450
-1430 623 GreenHill SuperBack 585 450
-2012 623 GreenHill SuperBack 585 450
 Demi -617 1270 76 1532
 BGCOLOR 167 218 220 
 CAM -1

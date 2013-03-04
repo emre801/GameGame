@@ -2,8 +2,6 @@
 1405 -243 bigBlock Block 191.965 3978.911 0 0
 -510 -45 bigBlock Block 595 200 0 0
 3317 -45 bigBlock Block 595 200 0 0
-3972 194 bigBlock Block 1200 200 0 0
--1279 -223 bigBlock Block 634.2775 1006.627 0 0
 -287 78 grassTemplate Block 33 256 2 0
 -32 78 grassTemplate Block 33 256 2 0
 223 78 grassTemplate Block 33 256 2 0
@@ -35,6 +33,151 @@
 2841 -341 grassTemplate Block 33 256 2 0
 3097 -341 grassTemplate Block 33 256 2 0
 3288 -339 grassTemplate Block 33 256 2 0
+2790 -608 cloudPix Block 144 624 2 0
+1990 -818 cloudPix Block 144 624 2 0
+830 -538 cloudPix Block 144 624 2 0
+-199 -778 cloudPix Block 144 624 2 0
+-1209 -528 cloudPix Block 144 624 2 0
+3940 -518 cloudPix Block 144 624 2 0
+3920 -878 cloudPix Block 144 624 2 0
+-1839 -868 cloudPix Block 144 624 2 0
+-489 -416 trees3 Block 244 212 1 0
+1319 -400 trees3 Block 244 212 1 0
+2663 -400 trees3 Block 244 212 1 0
+3321 -416 trees3 Block 244 212 1 0
+2025 -466 trees2 Block 492 305 1 0
+182 -471 trees2 Block 492 305 1 0
+595 -450 trees1 Block 412 248 1 0
+3075 -484 trees1 Block 412 248 1 0
+1600 -461 trees0 Block 472 295 1 0
+-274 -447 trees0 Block 472 295 1 0
+337 -18 trees0 Block 472 295 1 0
+1559 20 trees3 Block 244 212 1 0
+2586 14 trees3 Block 244 212 1 0
+-83 575 bigBlock Block 844.7504 3214.347 1 0
+3222 604 bigBlock Block 830.4327 3450.591 1 0
+1392 1376 bigBlock Block 887.7039 3822.854 1 0
+-1239 1333 bigBlock Block 1016.564 2326.643 1 0
+4794 1444 bigBlock Block 1038.041 3214.347 1 0
+-2249 807 bigBlock Block 1141.164 3010.571 1 0
+5996 710 bigBlock Block 1006.026 2154.697 1 0
+-412 -84 groundWall Block 129 14 2 0
+-408 2 groundWall Block 129 14 2 0
+-347 -147 groundWall Block 129 14 2 450
+-219 -147 groundWall Block 129 14 2 450
+-90 -147 groundWall Block 129 14 2 450
+38 -147 groundWall Block 129 14 2 450
+167 -147 groundWall Block 129 14 2 450
+296 -147 groundWall Block 129 14 2 450
+425 -147 groundWall Block 129 14 2 450
+554 -147 groundWall Block 129 14 2 450
+683 -147 groundWall Block 129 14 2 450
+812 -147 groundWall Block 129 14 2 450
+941 -146 groundWall Block 129 14 2 450
+1070 -146 groundWall Block 129 14 2 450
+1199 -146 groundWall Block 129 14 2 450
+1328 -146 groundWall Block 129 14 2 450
+1457 -146 groundWall Block 129 14 2 450
+1586 -146 groundWall Block 129 14 2 450
+1715 -146 groundWall Block 129 14 2 450
+1844 -146 groundWall Block 129 14 2 450
+1973 -146 groundWall Block 129 14 2 450
+2102 -146 groundWall Block 129 14 2 450
+2231 -145 groundWall Block 129 14 2 450
+2360 -145 groundWall Block 129 14 2 450
+2489 -145 groundWall Block 129 14 2 450
+2618 -145 groundWall Block 129 14 2 450
+2747 -145 groundWall Block 129 14 2 450
+2876 -145 groundWall Block 129 14 2 450
+3005 -145 groundWall Block 129 14 2 450
+3134 -145 groundWall Block 129 14 2 450
+3154 -142 groundWall Block 129 14 2 450
+3217 -82 groundWall Block 129 14 2 540
+3216 15 groundWall Block 129 14 2 540
+-608 -261 groundWall Block 129 14 2 900
+-608 -133 groundWall Block 129 14 2 900
+-608 -4 groundWall Block 129 14 2 900
+-611 91 groundWall Block 129 14 2 900
+-678 151 groundWall Block 129 14 2 1350
+-806 151 groundWall Block 129 14 2 1350
+-935 151 groundWall Block 129 14 2 1350
+-1064 151 groundWall Block 129 14 2 1350
+-1193 151 groundWall Block 129 14 2 1350
+-1322 151 groundWall Block 129 14 2 1350
+-1451 151 groundWall Block 129 14 2 1350
+-1580 151 groundWall Block 129 14 2 1350
+-1631 151 groundWall Block 129 14 2 1350
+-1752 234 groundWall Block 129 14 2 1709
+-1880 234 groundWall Block 129 14 2 1709
+-2009 234 groundWall Block 129 14 2 1709
+-2138 234 groundWall Block 129 14 2 1709
+-2267 235 groundWall Block 129 14 2 1709
+-2396 235 groundWall Block 129 14 2 1709
+-2525 235 groundWall Block 129 14 2 1709
+-2654 235 groundWall Block 129 14 2 1709
+-2783 236 groundWall Block 129 14 2 1709
+-2912 236 groundWall Block 129 14 2 1709
+-3041 236 groundWall Block 129 14 2 1709
+-3170 237 groundWall Block 129 14 2 1709
+-3299 237 groundWall Block 129 14 2 1709
+-3428 237 groundWall Block 129 14 2 1709
+-3557 237 groundWall Block 129 14 2 1709
+-3686 238 groundWall Block 129 14 2 1709
+-1688 195 groundWall Block 79 14 2 1620
+3416 -287 groundWall Block 79 14 2 2160
+3416 -209 groundWall Block 79 14 2 2160
+3416 -130 groundWall Block 79 14 2 2160
+3415 -51 groundWall Block 79 14 2 2160
+3415 27 groundWall Block 79 14 2 2160
+3414 106 groundWall Block 79 14 2 2160
+3415 151 groundWall Block 79 14 2 2160
+3451 187 groundWall Block 79 14 2 2790
+3529 187 groundWall Block 79 14 2 2790
+3608 187 groundWall Block 79 14 2 2790
+3687 187 groundWall Block 79 14 2 2790
+3766 187 groundWall Block 79 14 2 2790
+3845 187 groundWall Block 79 14 2 2790
+3924 187 groundWall Block 79 14 2 2790
+4003 187 groundWall Block 79 14 2 2790
+4082 187 groundWall Block 79 14 2 2790
+4161 187 groundWall Block 79 14 2 2790
+4240 187 groundWall Block 79 14 2 2790
+4319 187 groundWall Block 79 14 2 2790
+4398 187 groundWall Block 79 14 2 2790
+4477 187 groundWall Block 79 14 2 2790
+4556 188 groundWall Block 79 14 2 2790
+4635 188 groundWall Block 79 14 2 2790
+4714 188 groundWall Block 79 14 2 2790
+4793 188 groundWall Block 79 14 2 2790
+4872 188 groundWall Block 79 14 2 2790
+4908 188 groundWall Block 79 14 2 2790
+4988 210 groundWall Block 79 14 2 3150
+5066 210 groundWall Block 79 14 2 3150
+5145 210 groundWall Block 79 14 2 3150
+5224 210 groundWall Block 79 14 2 3150
+5303 210 groundWall Block 79 14 2 3150
+5382 210 groundWall Block 79 14 2 3150
+5461 210 groundWall Block 79 14 2 3150
+5540 210 groundWall Block 79 14 2 3150
+5619 210 groundWall Block 79 14 2 3150
+5698 210 groundWall Block 79 14 2 3150
+5777 210 groundWall Block 79 14 2 3150
+5856 210 groundWall Block 79 14 2 3150
+5935 210 groundWall Block 79 14 2 3150
+6014 210 groundWall Block 79 14 2 3150
+6093 210 groundWall Block 79 14 2 3150
+6172 210 groundWall Block 79 14 2 3150
+6251 210 groundWall Block 79 14 2 3150
+6330 210 groundWall Block 79 14 2 3150
+6409 210 groundWall Block 79 14 2 3150
+6488 211 groundWall Block 79 14 2 3150
+6567 211 groundWall Block 79 14 2 3150
+6646 211 groundWall Block 79 14 2 3150
+6725 211 groundWall Block 79 14 2 3150
+6804 211 groundWall Block 79 14 2 3150
+6883 211 groundWall Block 79 14 2 3150
+6962 211 groundWall Block 79 14 2 3150
+7041 211 groundWall Block 79 14 2 3150
 559 56 deathSpikes DeathBlock 0
 685 55 deathSpikes DeathBlock 0
 811 55 deathSpikes DeathBlock 0
@@ -53,6 +196,13 @@
 3196 -86 deathSpikes DeathBlock 270
 3195 8 deathSpikes DeathBlock 270
 3047 30 deathSpikes GoalBlock 9
+-1080 3 pixMT SuperBack 1103 421
+-111 71 pixMT SuperBack 1103 421
+779 21 pixMT SuperBack 1103 421
+1615 140 pixMT SuperBack 1103 421
+2452 -102 pixMT SuperBack 1103 421
+3544 25 pixMT SuperBack 1288 521
+-2256 14 pixMT SuperBack 1288 521
 Demi -642 3452 84 844
 BGCOLOR 167 218 220 
 CAM 0.3894195

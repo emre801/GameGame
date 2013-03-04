@@ -3,12 +3,6 @@
 721 -1083 bigBlock Block 1947.05 238.2754 0 0
 1160 -2029 bigBlock Block 1115 190 0 90
 1110 1309 bigBlock Block 2302.582 6480.74 0 0
--102 -111 GreenHill Block 875 1150 1 0
--1199 -35 GreenHill Block 875 1150 1 0
-1021 -111 GreenHill Block 980 1150 1 0
-2145 83 GreenHill Block 980 1150 1 0
-3216 -35 GreenHill Block 980 1150 1 0
-4232 -8 GreenHill Block 980 1150 1 0
 74 116 grassTemplate Block 35 256 2 2880
 330 116 grassTemplate Block 35 256 2 2880
 586 116 grassTemplate Block 35 256 2 2880
@@ -40,6 +34,21 @@
 4112 189 bigBlock Block 77.56418 473.1418 0 0
 -2121 162 bigBlock Block 1200 200 0 0
 -1029 173 bigBlock Block 15.51283 1978.057 0 0
+2076 -948 cloudPix Block 144 624 2 0
+2946 -1418 cloudPix Block 144 624 2 0
+1866 -1648 cloudPix Block 144 624 2 0
+116 -1708 cloudPix Block 144 624 2 0
+36 -1248 cloudPix Block 144 624 2 0
+-758 -1568 cloudPix Block 144 624 2 0
+1771 -2198 cloudPix Block 144 624 2 0
+581 -2198 cloudPix Block 144 624 2 0
+-708 -978 cloudPix Block 144 624 2 0
+3041 -901 cloudPix Block 144 624 2 0
+4081 -1091 cloudPix Block 144 624 2 0
+3721 -1831 cloudPix Block 144 624 2 0
+2961 -2061 cloudPix Block 144 624 2 0
+-1185 -2189 cloudPix Block 144 624 2 0
+-1905 -1369 cloudPix Block 144 624 2 0
 581 -171 deathSpikes DeathBlock 270
 581 -302 deathSpikes DeathBlock 270
 580 -2106 deathSpikes DeathBlock 360
@@ -96,21 +105,10 @@
 3534 145 deathSpikes DeathBlock 0
 3660 145 deathSpikes DeathBlock 0
 3786 145 deathSpikes DeathBlock 0
-1350 -452 LongGround MagnetBlock 0 -10 915 200
-1361 -1582 LongGround MagnetBlock 0 -10 560 200
-945 -1158 LongGround MagnetBlock 0 -10 605 200
+1350 -452 LongGround MagnetBlock 0 -10 915 200 0
+1361 -1582 LongGround MagnetBlock 0 -10 560 200 0
+945 -1158 LongGround MagnetBlock 0 -10 605 200 0
 955 -1800 groundWall GoalBlock 13
--702 -30 GreenHill SuperBack 840 980
-416 -73 GreenHill SuperBack 840 980
-1572 12 GreenHill SuperBack 840 980
-2513 -57 GreenHill SuperBack 840 980
-3891 -57 GreenHill SuperBack 840 980
-427 -873 CloudBack SuperBack 1120 70
-2302 -716 CloudBack SuperBack 1120 70
-2426 -1727 CloudBack SuperBack 1120 70
--270 -1943 CloudBack SuperBack 1120 70
--870 -830 CloudBack SuperBack 1120 70
-1843 -2095 CloudBack SuperBack 1120 70
 Demi -100 1792 -1636 839
 BGCOLOR 167 218 220 
 CAM 0.5157019

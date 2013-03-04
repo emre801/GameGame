@@ -1529,6 +1529,15 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\pixMT.xnb</Output>
       <Time>2013-03-01T13:37:19.8045159-05:00</Time>
     </Item>
+    <Item>
+      <Source>cloudPix.png</Source>
+      <Name>cloudPix</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\cloudPix.xnb</Output>
+      <Time>2013-03-02T16:44:10.0646916-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

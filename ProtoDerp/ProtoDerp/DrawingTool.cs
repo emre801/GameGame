@@ -695,6 +695,14 @@ namespace ProtoDerp
 
 
         }
+
+        public void drawBGGradient(Texture2D bgGradient)
+        {
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
+            //spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearWrap, null, null, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
+            spriteBatch.Draw(bgGradient, new Rectangle(0, 0, ActualScreenPixelWidth, ActualScreenPixelHeight), Color.White * 0.25f);
+            spriteBatch.End();
+        }
         public void drawBorderImageForButtons(SpriteBatch spriteBatch)
         {
             if (!Constants.FULLSCREEN)

@@ -13,108 +13,6 @@
 5796 498 bigBlock Block 965.6644 114.4492 0 0
 6792 559 bigBlock Block 1201.716 82.26025 0 0
 131 829 bigBlock Block 475 85 0 0
-49 -708 GreenHill Block 1140 1445 1 0
-1489 -708 GreenHill Block 1140 1445 1 0
-2933 -707 GreenHill Block 1140 1445 1 0
-4378 -705 GreenHill Block 1140 1445 1 0
-5823 -704 GreenHill Block 1140 1445 1 0
-7268 -702 GreenHill Block 1140 1445 1 0
-8713 -701 GreenHill Block 1140 1445 1 0
-10158 -699 GreenHill Block 1140 1445 1 0
--1390 -708 GreenHill Block 1140 1445 1 359
--2834 -706 GreenHill Block 1140 1445 1 359
--4279 -703 GreenHill Block 1140 1445 1 359
--5724 -700 GreenHill Block 1140 1445 1 359
-2230 532 backGroundMan Block 1424.262 17351.06 1 0
--6347 -176 grassTempBack Block 25 196 1 0
--6151 -176 grassTempBack Block 25 196 1 0
--5955 -176 grassTempBack Block 25 196 1 0
--5759 -176 grassTempBack Block 25 196 1 0
--5563 -176 grassTempBack Block 25 196 1 0
--5367 -176 grassTempBack Block 25 196 1 0
--5171 -176 grassTempBack Block 25 196 1 0
--4975 -176 grassTempBack Block 25 196 1 0
--4779 -176 grassTempBack Block 25 196 1 0
--4583 -176 grassTempBack Block 25 196 1 0
--4387 -176 grassTempBack Block 25 196 1 0
--4191 -176 grassTempBack Block 25 196 1 0
--3995 -176 grassTempBack Block 25 196 1 0
--3799 -176 grassTempBack Block 25 196 1 0
--3603 -176 grassTempBack Block 25 196 1 0
--3407 -176 grassTempBack Block 25 196 1 0
--3211 -176 grassTempBack Block 25 196 1 0
--3015 -176 grassTempBack Block 25 196 1 0
--2819 -176 grassTempBack Block 25 196 1 0
--2623 -176 grassTempBack Block 25 196 1 0
--2427 -176 grassTempBack Block 25 196 1 0
--2231 -176 grassTempBack Block 25 196 1 0
--2035 -176 grassTempBack Block 25 196 1 0
--1839 -176 grassTempBack Block 25 196 1 0
--1643 -176 grassTempBack Block 25 196 1 0
--1447 -176 grassTempBack Block 25 196 1 0
--1251 -176 grassTempBack Block 25 196 1 0
--1055 -176 grassTempBack Block 25 196 1 0
--859 -176 grassTempBack Block 25 196 1 0
--663 -176 grassTempBack Block 25 196 1 0
--467 -176 grassTempBack Block 25 196 1 0
--271 -176 grassTempBack Block 25 196 1 0
--75 -176 grassTempBack Block 25 196 1 0
-120 -176 grassTempBack Block 25 196 1 0
-316 -176 grassTempBack Block 25 196 1 0
-512 -176 grassTempBack Block 25 196 1 0
-708 -176 grassTempBack Block 25 196 1 0
-904 -176 grassTempBack Block 25 196 1 0
-1100 -176 grassTempBack Block 25 196 1 0
-1296 -176 grassTempBack Block 25 196 1 0
-1492 -176 grassTempBack Block 25 196 1 0
-1688 -176 grassTempBack Block 25 196 1 0
-1884 -176 grassTempBack Block 25 196 1 0
-2080 -176 grassTempBack Block 25 196 1 0
-2276 -176 grassTempBack Block 25 196 1 0
-2472 -176 grassTempBack Block 25 196 1 0
-2668 -176 grassTempBack Block 25 196 1 0
-2864 -176 grassTempBack Block 25 196 1 0
-3060 -176 grassTempBack Block 25 196 1 0
-3256 -176 grassTempBack Block 25 196 1 0
-3452 -176 grassTempBack Block 25 196 1 0
-3648 -176 grassTempBack Block 25 196 1 0
-3844 -176 grassTempBack Block 25 196 1 0
-4040 -176 grassTempBack Block 25 196 1 0
-4236 -176 grassTempBack Block 25 196 1 0
-4432 -176 grassTempBack Block 25 196 1 0
-4628 -176 grassTempBack Block 25 196 1 0
-4824 -176 grassTempBack Block 25 196 1 0
-5020 -176 grassTempBack Block 25 196 1 0
-5216 -176 grassTempBack Block 25 196 1 0
-5412 -176 grassTempBack Block 25 196 1 0
-5608 -176 grassTempBack Block 25 196 1 0
-5804 -176 grassTempBack Block 25 196 1 0
-6000 -176 grassTempBack Block 25 196 1 0
-6196 -176 grassTempBack Block 25 196 1 0
-6392 -176 grassTempBack Block 25 196 1 0
-6588 -176 grassTempBack Block 25 196 1 0
-6784 -176 grassTempBack Block 25 196 1 0
-6980 -176 grassTempBack Block 25 196 1 0
-7176 -176 grassTempBack Block 25 196 1 0
-7372 -176 grassTempBack Block 25 196 1 0
-7568 -176 grassTempBack Block 25 196 1 0
-7764 -176 grassTempBack Block 25 196 1 0
-7960 -176 grassTempBack Block 25 196 1 0
-8156 -176 grassTempBack Block 25 196 1 0
-8352 -176 grassTempBack Block 25 196 1 0
-8548 -176 grassTempBack Block 25 196 1 0
-8744 -176 grassTempBack Block 25 196 1 0
-8940 -176 grassTempBack Block 25 196 1 0
-9136 -176 grassTempBack Block 25 196 1 0
-9332 -176 grassTempBack Block 25 196 1 0
-9528 -176 grassTempBack Block 25 196 1 0
-9724 -176 grassTempBack Block 25 196 1 0
-9920 -176 grassTempBack Block 25 196 1 0
-10116 -176 grassTempBack Block 25 196 1 0
-10312 -176 grassTempBack Block 25 196 1 0
-10508 -176 grassTempBack Block 25 196 1 0
-10704 -176 grassTempBack Block 25 196 1 0
-10900 -176 grassTempBack Block 25 196 1 0
 -124 87 grassTemplate Block 35 256 2 16560
 131 87 grassTemplate Block 35 256 2 16560
 387 87 grassTemplate Block 35 256 2 16560
@@ -146,6 +44,17 @@
 6699 -68 grassTemplate Block 35 256 2 16920
 6954 -67 grassTemplate Block 35 256 2 16920
 7179 -66 grassTemplate Block 35 256 2 16920
+7155 -630 cloudPix Block 144 624 2 0
+5905 -530 cloudPix Block 144 624 2 0
+5015 -850 cloudPix Block 144 624 2 0
+3942 -448 cloudPix Block 144 624 2 0
+2172 -728 cloudPix Block 144 624 2 0
+1842 -438 cloudPix Block 144 624 2 0
+345 -778 cloudPix Block 144 624 2 0
+-624 -378 cloudPix Block 144 624 2 0
+655 -378 cloudPix Block 144 624 2 0
+3392 -818 cloudPix Block 144 624 2 0
+6633 -948 cloudPix Block 144 624 2 0
 7224 -131 ahLogo0 GoalBlock 6
 1799 118 deathBall MovingPath 7 1807 628 1809 931 
 2952 -248 deathBall MovingPath 7 2960 261 2958 927 
@@ -153,13 +62,6 @@
 5274 -360 deathBall MovingPath 7 5282 149 5288 941 
 6297 425 deathBall MovingPath 7 6305 935 6305 106 
 -273 128 deathBall MovingCycle 15 16 -282 615 712 615 1928 615 2977 582 4206 535 5278 509 6340 480 7300 488 7136 1285 5942 1498 4265 1498 2908 1498 981 787 -81 869 -265 638 -265 638
--630 -664 GreenHill SuperBack 1415 1085
-774 -684 GreenHill SuperBack 1415 1085
-2188 -693 GreenHill SuperBack 1415 1085
-3603 -703 GreenHill SuperBack 1415 1085
-5018 -713 GreenHill SuperBack 1415 1085
-6433 -723 GreenHill SuperBack 1415 1085
-7848 -732 GreenHill SuperBack 1415 1085
 Demi -906 7504 200 1842
 BGCOLOR 167 218 220 
 CAM 0.5119111
