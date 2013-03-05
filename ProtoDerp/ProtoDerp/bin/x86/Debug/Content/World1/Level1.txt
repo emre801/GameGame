@@ -84,6 +84,11 @@
 840 -728 cloudPix Block 144 624 2 0
 241 -507 cloudPix Block 144 624 2 0
 -361 -809 cloudPix Block 144 624 2 0
+-82 160 roots0 Block 138 232 3 0
+849 149 roots1 Block 104 136 3 0
+398 166 roots2 Block 137 156 3 0
+586 124 roots3 Block 56 148 3 0
+215 122 roots3 Block 56 148 3 0
 -394 -583 deathSpikes DeathBlock 90
 -390 -449 deathSpikes DeathBlock 90
 1181 -635 deathSpikes DeathBlock 630

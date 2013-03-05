@@ -5,29 +5,6 @@
 783 702 bigBlock Block 75 115 0 0
 1121 749 bigBlock Block 161 676 0 0
 418 533 bigBlock Block 584.2349 843.8948 0 0
--20 194 groundWall Block 165 39 2 360
--20 344 groundWall Block 165 39 2 360
--20 509 groundWall Block 165 39 2 360
--20 666 groundWall Block 165 39 2 360
--20 736 groundWall Block 165 39 2 360
-1449 196 groundWall Block 165 39 2 540
-1449 361 groundWall Block 165 39 2 540
-1449 539 groundWall Block 165 39 2 540
-1449 729 groundWall Block 165 39 2 540
-43 819 goundBottom Block 80 120 2 720
-143 819 goundBottom Block 80 120 2 720
-257 819 goundBottom Block 80 120 2 720
-362 819 goundBottom Block 80 120 2 720
-478 819 goundBottom Block 80 120 2 720
-586 819 goundBottom Block 80 120 2 720
-699 819 goundBottom Block 80 120 2 720
-809 819 goundBottom Block 80 120 2 720
-912 819 goundBottom Block 80 120 2 720
-1013 819 goundBottom Block 80 120 2 720
-1099 819 goundBottom Block 80 120 2 720
-1189 819 goundBottom Block 80 120 2 720
-1278 819 goundBottom Block 80 120 2 720
-1371 819 goundBottom Block 80 120 2 720
 -843 1264 bigBlock Block 2245.851 3530.378 0 0
 3030 1271 bigBlock Block 2204.415 3190.6 0 0
 1157 1582 bigBlock Block 1616.018 870.1636 0 0
@@ -104,6 +81,20 @@
 -2057 -477 cloudPix Block 144 624 2 0
 -2365 -217 cloudPix Block 144 624 2 0
 2313 -677 cloudPix Block 144 624 2 0
+807 153 roots2 Block 137 156 3 0
+440 151 roots0 Block 138 232 3 0
+70 135 roots1 Block 104 136 3 0
+-143 173 roots3 Block 56 148 3 0
+-357 210 roots0 Block 138 232 3 0
+1362 127 roots3 Block 56 148 3 0
+1564 234 roots2 Block 137 156 3 0
+1863 232 roots0 Block 138 232 3 0
+2156 224 roots1 Block 104 136 3 0
+-670 196 roots1 Block 104 136 3 0
+-1245 210 roots2 Block 137 156 3 0
+2690 230 roots2 Block 137 156 3 0
+3166 238 roots0 Block 138 232 3 0
+3593 202 roots3 Block 56 148 3 0
 883 64 deathSpikes DeathBlock 0
 752 66 deathSpikes DeathBlock 0
 623 66 deathSpikes DeathBlock 0

@@ -248,6 +248,17 @@
 -664 -71 cloudPix Block 144 624 2 0
 -1279 -308 cloudPix Block 144 624 2 0
 3538 -410 cloudPix Block 144 624 2 0
+628 1469 roots3 Block 56 148 3 0
+1331 1463 roots3 Block 56 148 3 0
+73 1507 roots0 Block 138 232 3 0
+-1409 1507 roots0 Block 138 232 3 0
+2059 1513 roots0 Block 138 232 3 0
+3381 1534 roots0 Block 138 232 3 0
+2504 1525 roots2 Block 137 156 3 0
+2978 1513 roots1 Block 104 136 3 0
+3751 1515 roots1 Block 104 136 3 0
+4167 1525 roots1 Block 104 136 3 0
+1000 1513 roots2 Block 137 156 3 0
 -2 1421 deathSpikes DeathBlock 0
 118 1421 deathSpikes DeathBlock 0
 237 1421 deathSpikes DeathBlock 0

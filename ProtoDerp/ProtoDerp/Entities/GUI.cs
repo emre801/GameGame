@@ -396,15 +396,18 @@ namespace ProtoDerp
 
         public void DrawMouse(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            MouseState ms = Mouse.GetState();
-            Rectangle rect= new Rectangle(ms.X,ms.Y,10,15);
-            if (ms.LeftButton == ButtonState.Pressed)
+            if (game.isInCreatorMode || game.backToTitleScreen)
             {
-                spriteBatch.Draw(game.getSprite("MouseClick").index, rect, Color.White);
-            }
-            else
-            {
-                spriteBatch.Draw(game.getSprite("MouseImage").index, rect, Color.White);
+                MouseState ms = Mouse.GetState();
+                Rectangle rect = new Rectangle(ms.X, ms.Y, 10, 15);
+                if (ms.LeftButton == ButtonState.Pressed)
+                {
+                    spriteBatch.Draw(game.getSprite("MouseClick").index, rect, Color.White);
+                }
+                else
+                {
+                    spriteBatch.Draw(game.getSprite("MouseImage").index, rect, Color.White);
+                }
             }
         
         }
@@ -497,9 +500,14 @@ namespace ProtoDerp
             {
                 drawLevel = "Super Background";
             }
+            else if (game.drawLevel == 3)
+            {
+                drawLevel = "FIXPatch";
+            }
             else
             {
                 drawLevel = "Normal";
+
             }
 
             DrawText(spriteBatch, 0.065f, 0.90f, "DrawLevel = "+drawLevel);

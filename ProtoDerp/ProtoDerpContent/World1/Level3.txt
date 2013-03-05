@@ -1,23 +1,6 @@
 -11 655 bigBlock Block 1128.836 304.5334 0 0
 1424 746 bigBlock Block 1289.249 290.9241 0 0
 608 1270 bigBlock Block 275.2679 1515.254 0 0
--65 1401 goundBottom Block 105 160 2 0
-93 1401 goundBottom Block 105 160 2 0
-253 1400 goundBottom Block 105 160 2 0
-413 1399 goundBottom Block 105 160 2 0
-573 1398 goundBottom Block 105 160 2 0
-733 1397 goundBottom Block 105 160 2 0
-893 1396 goundBottom Block 105 160 2 0
-1053 1395 goundBottom Block 105 160 2 0
-1213 1394 goundBottom Block 105 160 2 0
-1373 1393 goundBottom Block 105 160 2 0
-1490 1391 goundBottom Block 105 160 2 0
--151 994 groundWall Block 200 74 2 359
--150 1194 groundWall Block 200 74 2 359
--139 1295 groundWall Block 200 74 2 360
-1563 1006 groundWall Block 200 74 2 540
-1563 1206 groundWall Block 200 74 2 540
-1553 1297 groundWall Block 200 74 2 540
 -14 98 grassTemplate Block 35 306 2 720
 1438 105 grassTemplate Block 35 316 2 720
 -1237 1991 bigBlock Block 2250 2730 0 0
@@ -105,6 +88,19 @@
 -3184 -517 cloudPix Block 144 624 2 0
 -3549 -146 cloudPix Block 144 624 2 0
 3590 -468 cloudPix Block 144 624 2 0
+694 1210 roots0 Block 138 232 3 0
+1798 952 roots0 Block 138 232 3 0
+-334 924 roots0 Block 138 232 3 0
+-1957 924 roots0 Block 138 232 3 0
+273 1182 roots1 Block 104 136 3 0
+2473 928 roots1 Block 104 136 3 0
+-824 903 roots1 Block 104 136 3 0
+-2520 905 roots1 Block 104 136 3 0
+1138 1202 roots2 Block 137 156 3 0
+929 1163 roots3 Block 56 148 3 0
+499 1160 roots3 Block 56 148 3 0
+2113 898 roots3 Block 56 148 3 0
+3169 906 roots3 Block 56 148 3 0
 148 164 deathSpikes DeathBlock 89
 149 236 deathSpikes DeathBlock 89
 150 362 deathSpikes DeathBlock 89

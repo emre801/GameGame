@@ -338,6 +338,16 @@ namespace ProtoDerp
             sprites.Add("trees4", new Sprite(Content, "trees4"));
             blockList.AddLast("trees4");
 
+            sprites.Add("roots0", new Sprite(Content, "roots0"));
+            blockList.AddLast("roots0");
+            sprites.Add("roots1", new Sprite(Content, "roots1"));
+            blockList.AddLast("roots1");
+            sprites.Add("roots2", new Sprite(Content, "roots2"));
+            blockList.AddLast("roots2");
+            sprites.Add("roots3", new Sprite(Content, "roots3"));
+            blockList.AddLast("roots3");
+            
+
 
             sprites.Add("pixMT", new Sprite(Content, "pixMT"));
             blockList.AddLast("pixMT");
@@ -559,6 +569,16 @@ namespace ProtoDerp
             sprites.Add("SawAni", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "SawAni"), 11, 0f).getIndex(), "SawAni"));
             blockList.AddLast("SawAni");
             //////////////////
+
+
+            ///////////////////
+            spriteAnimation.Add("Star", new SpriteStripAnimationHandler(new Sprite(Content, "Star")
+                , 11, 120f));//fan
+            sprites.Add("Star", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "Star"), 11, 0f).getIndex(), "Star"));
+            blockList.AddLast("Star");
+            //////////////////
+
+
 
             spriteAnimation.Add("missile_strip_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "missile_strip_strip4")
                 , 4, 45));//missle
@@ -1267,12 +1287,12 @@ namespace ProtoDerp
             backgroundTex = new Texture2D(GraphicsDevice, drawingTool.ActualScreenPixelWidth, drawingTool.ActualScreenPixelHeight);
             Color[] bgc = new Color[drawingTool.ActualScreenPixelHeight * drawingTool.ActualScreenPixelWidth];
             float texColour = 33;          // Defines the colour of the gradient.
-            int gradientThickness = drawingTool.ActualScreenPixelHeight/4;  // Defines how "diluted" the gradient gets. I've found 2 works great, and 16 is a very fine gradient.
+            int gradientThickness = (int)(drawingTool.ActualScreenPixelHeight);  // Defines how "diluted" the gradient gets. I've found 2 works great, and 16 is a very fine gradient.
 
             for (float i = 0; i < bgc.Length; i++)
             {
                 texColour = (i / (drawingTool.ActualScreenPixelHeight * gradientThickness));
-                bgc[(int)i] = new Color(texColour, texColour, texColour);
+                bgc[(int)i] = backGroundColor*texColour;
             }
             backgroundTex.SetData<Color>(bgc);
             return backgroundTex;

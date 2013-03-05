@@ -38,6 +38,7 @@ namespace ProtoDerp
         public int nextLevel = 0;
         int goalAnimationNumber = 0;
         int animationTimer = 0;
+        SpriteStripAnimationHandler ani;
         public GoalBlock(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber,int nextLevel)
             : base(g)
         {
@@ -83,8 +84,8 @@ namespace ProtoDerp
         {
             World world = game.world;
             float mass = 1;
-            float width = playerSprite.index.Width;
-            float height = playerSprite.index.Height;
+            float width = ani.widthOf();
+            float height = ani.heightOf();
             fixture = FixtureFactory.CreateRectangle(world, (float)ConvertUnits.ToSimUnits(width), (float)ConvertUnits.ToSimUnits(height), mass);
             body = fixture.Body;
             fixture.Body.BodyType = BodyType.Static;
@@ -119,6 +120,7 @@ namespace ProtoDerp
         public void LoadContent()
         {
             playerSprite = game.getSprite(spriteNumber);
+            ani = game.getSpriteAnimation("Star");
         }
         public void updateGoalImage()
         {
@@ -168,41 +170,32 @@ namespace ProtoDerp
 
         public override void Update(GameTime gameTime, float worldSpeed)
         {
-            animationTimer++;
-            if(animationTimer>10)
-            {
-                updateGoalImage();
-                animationTimer = 0;
-            }
+            ani.Update();
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             if (!IsVisible)
                 return;
-            Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
-            DrawingTool test = game.drawingTool;
-            int i = playerSprite.index.Width;
-            Point bottomRight = new Point(playerSprite.index.Width, playerSprite.index.Height);
-            Rectangle targetRect = new Rectangle((int)ringDrawPoint.X, (int)ringDrawPoint.Y, bottomRight.X, bottomRight.Y);
+            //Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
+            //DrawingTool test = game.drawingTool;
+            //int i = playerSprite.index.Width;
+            //Point bottomRight = new Point(playerSprite.index.Width, playerSprite.index.Height);
+            //Rectangle targetRect = new Rectangle((int)ringDrawPoint.X, (int)ringDrawPoint.Y, bottomRight.X, bottomRight.Y);
             Color drawColor = Color.White;
             if (isSelected)
                 drawColor = Color.Green;
-            spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, drawColor, body.Rotation, origin, SpriteEffects.None, 0f);
-
+            //spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, drawColor, body.Rotation, origin, SpriteEffects.None, 0f);
+            ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)),
+                      origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),
+                          (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)ani.widthOf(), (int)ani.heightOf()), true, new Vector2(0, 0));
+            
+        
+        
         }
         public void DrawShadow(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            if (!IsVisible)
-                return;
-            Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
-            DrawingTool test = game.drawingTool;
-            int i = playerSprite.index.Width;
-            Point bottomRight = new Point(playerSprite.index.Width, playerSprite.index.Height);
-            Rectangle targetRect = new Rectangle((int)ringDrawPoint.X, (int)ringDrawPoint.Y, bottomRight.X, bottomRight.Y);
-            Color drawColor = Color.Black;
-            spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X)+5, (int)ConvertUnits.ToDisplayUnits(body.Position.Y)-5, (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, drawColor*0.25f, body.Rotation, origin, SpriteEffects.None, 0f);
-
+           
         }
 
         private void drawHealthBar()

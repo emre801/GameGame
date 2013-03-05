@@ -150,7 +150,7 @@ namespace ProtoDerp
              world = game.world;
             if (drawLevel == 1)
                 world = game.world2;
-            if (drawLevel == 2)
+            if (drawLevel == 2 || drawLevel ==3)
                 world = game.world3;
             float mass = 1000;
             float width = this.width;

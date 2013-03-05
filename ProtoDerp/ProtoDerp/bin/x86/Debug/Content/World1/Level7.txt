@@ -150,6 +150,15 @@
 6328 319 groundWall Block 129 14 2 1710
 6457 319 groundWall Block 129 14 2 1710
 6586 319 groundWall Block 129 14 2 1710
+478 -115 bigBlock Block 85 35 0 0
+482 18 bigBlock Block 85 35 0 0
+80 -383 bigBlock Block 85 35 0 0
+-30 170 roots0 Block 138 232 3 0
+760 151 roots1 Block 104 136 3 0
+1333 165 roots2 Block 137 156 3 0
+2792 157 roots2 Block 137 156 3 0
+3315 125 roots3 Block 56 148 3 0
+3716 165 roots0 Block 138 232 3 0
 445 -116 deathSpikes DeathBlock 630
 445 6 deathSpikes DeathBlock 630
 445 130 deathSpikes DeathBlock 630

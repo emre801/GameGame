@@ -183,6 +183,11 @@ Content\trees4.xnb
 Content\pixGroundTemp.xnb
 Content\pixMT.xnb
 Content\cloudPix.xnb
+Content\Star.xnb
+Content\roots0.xnb
+Content\roots1.xnb
+Content\roots2.xnb
+Content\roots3.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

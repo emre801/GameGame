@@ -842,13 +842,13 @@ namespace ProtoDerp
                 }
                 else
                 {
-                    drawLevel = 2;
-                    game.drawLevel = 2;
+                    drawLevel = 3;
+                    game.drawLevel = 3;
                 }
             }
             if (keyInput.IsNewKeyPressed(Keys.R))
             {
-                if (game.drawLevel < 2)
+                if (game.drawLevel < 3)
                 {
                     drawLevel++;
                     game.drawLevel++;

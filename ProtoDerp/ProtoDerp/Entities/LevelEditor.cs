@@ -290,6 +290,17 @@ namespace ProtoDerp
 
             foreach (MovingPath i in movePathBlock)
             {
+                foreach (GoalBlock j in goalBlocks)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+
+                }
+
+            }
+
+            foreach (MovingPath i in movePathBlock)
+            {
                 foreach (Block j in blocks)
                 {
                     i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
@@ -323,8 +334,8 @@ namespace ProtoDerp
             {
                 foreach (GoalBlock j in goalBlocks)
                 {
-                    //i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
-                    //j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
 
                 }
             }

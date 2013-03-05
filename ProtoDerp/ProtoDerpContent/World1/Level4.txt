@@ -17,9 +17,6 @@
 801 -932 spriteStripFlower Block 48 46 2 0
 1064 -935 spriteStripFlower Block 48 46 2 0
 1241 306 blankImage Block 380 95 0 0
--367 459 dirtyBlock2 Block 95 95 2 0
--272 459 dirtyBlock2 Block 95 95 2 0
--177 459 dirtyBlock2 Block 95 95 2 0
 -273 459 blankImage Block 95 285 0 0
 670 805 bigBlock Block 730 3320 0 0
 2515 680 bigBlock Block 780 2530 0 0
@@ -124,6 +121,22 @@
 -1478 -1039 cloudPix Block 144 624 2 0
 2251 -953 cloudPix Block 144 624 2 0
 2411 -1453 cloudPix Block 144 624 2 0
+957 -1042 cloudPix Block 144 624 2 0
+-784 -716 cloudPix Block 144 624 2 0
+1665 -676 cloudPix Block 144 624 2 0
+385 185 roots2 Block 137 156 3 0
+58 168 roots1 Block 104 136 3 0
+700 178 roots1 Block 104 136 3 0
+-1541 401 roots1 Block 104 136 3 0
+-1207 410 roots2 Block 137 156 3 0
+-538 404 roots2 Block 137 156 3 0
+-1893 421 roots0 Block 138 232 3 0
+1703 377 roots0 Block 138 232 3 0
+1194 197 roots0 Block 138 232 3 0
+-892 371 roots3 Block 56 148 3 0
+914 -882 roots3 Block 56 148 3 0
+-316 -678 roots3 Block 56 148 3 0
+2392 364 roots2 Block 137 156 3 0
 -31 -643 deathSpikes DeathBlock 90
 -33 -516 deathSpikes DeathBlock 90
 -35 -192 deathSpikes DeathBlock 90
@@ -136,6 +149,11 @@
 661 -497 deathSpikes DeathBlock 540
 536 -500 deathSpikes DeathBlock 540
 -233 -773 deathSpikes GoalBlock 5
+-1444 118 pixMT SuperBack 1368 591
+-123 54 pixMT SuperBack 1408 766
+830 174 pixMT SuperBack 1028 486
+1808 150 pixMT SuperBack 1158 661
+2612 221 pixMT SuperBack 778 456
 Demi -226 1082 -507 624
 BGCOLOR 167 218 220 
 CAM 0.5407555

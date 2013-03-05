@@ -178,6 +178,19 @@
 6883 211 groundWall Block 79 14 2 3150
 6962 211 groundWall Block 79 14 2 3150
 7041 211 groundWall Block 79 14 2 3150
+319 152 roots0 Block 138 232 3 0
+1598 -263 roots0 Block 138 232 3 0
+-270 -262 roots0 Block 138 232 3 0
+2572 111 roots3 Block 56 148 3 0
+2649 -312 roots3 Block 56 148 3 0
+1312 -310 roots3 Block 56 148 3 0
+-517 -310 roots3 Block 56 148 3 0
+3075 -271 roots2 Block 137 156 3 0
+595 -260 roots2 Block 137 156 3 0
+178 -286 roots1 Block 104 136 3 0
+2022 -281 roots1 Block 104 136 3 0
+1547 111 roots3 Block 56 148 3 0
+3302 -304 roots3 Block 56 148 3 0
 559 56 deathSpikes DeathBlock 0
 685 55 deathSpikes DeathBlock 0
 811 55 deathSpikes DeathBlock 0

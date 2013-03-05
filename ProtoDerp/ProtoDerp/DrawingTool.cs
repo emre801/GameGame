@@ -569,6 +569,7 @@ namespace ProtoDerp
                 }
 
             }
+
             foreach (Entity e in entities)
             {
                 if (e is PlayableCharacter || e is GUI)
@@ -620,6 +621,32 @@ namespace ProtoDerp
             }
             foreach (Entity e in entities)
             {
+                if (e is Block)
+                {
+                    Block b = (Block)e;
+                    if (b.drawLevel == 0)
+                    {
+                            b.Draw(gameTime, spriteBatch);
+                    }
+                }
+
+            }
+            foreach (Entity e in entities)
+            {
+                if (e is Block)
+                {
+                    Block b = (Block)e;
+                    if (b.drawLevel == 1)
+                    {
+                        String name = b.spriteNumber;
+                        if(name.Contains("tree"))
+                            b.Draw(gameTime, spriteBatch);
+                    }
+                }
+
+            }
+            foreach (Entity e in entities)
+            {
                 if (e is PlayableCharacter)
                 {
                     e.Draw(gameTime, spriteBatch);
@@ -638,13 +665,36 @@ namespace ProtoDerp
 
 
             }
-
             foreach (Entity e in entities)
             {
                 if (e is Block)
                 {
                     Block b = (Block)e;
-                    if (b.drawLevel == 2 || b.drawLevel == 0)
+                    if (b.drawLevel == 0)
+                    {
+                            b.Draw(gameTime, spriteBatch);
+                    }
+                }
+
+            }
+            foreach (Entity e in entities)
+            {
+                if (e is Block)
+                {
+                    Block b = (Block)e;
+                    if (b.drawLevel == 3)
+                    {
+                        b.Draw(gameTime, spriteBatch);
+                    }
+                }
+
+            }
+            foreach (Entity e in entities)
+            {
+                if (e is Block)
+                {
+                    Block b = (Block)e;
+                    if (b.drawLevel == 2)
                     {
                         if(b.IsVisible)
                             e.Draw(gameTime, spriteBatch);
@@ -700,7 +750,7 @@ namespace ProtoDerp
         {
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
             //spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearWrap, null, null, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
-            spriteBatch.Draw(bgGradient, new Rectangle(0, 0, ActualScreenPixelWidth, ActualScreenPixelHeight), Color.White * 0.25f);
+            spriteBatch.Draw(bgGradient, new Rectangle(0, 0, ActualScreenPixelWidth, ActualScreenPixelHeight), Color.White * 0.65f);
             spriteBatch.End();
         }
         public void drawBorderImageForButtons(SpriteBatch spriteBatch)
