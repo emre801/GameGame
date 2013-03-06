@@ -660,7 +660,7 @@ namespace ProtoDerp
                     continue;
                 }
                 
-                if (e is DeathBlock || e is GoalBlock || e is CreaterBlock || e is Arena)
+                if (e is DeathBlock || e is GoalBlock || e is CreaterBlock || e is Arena || e is MovingCycle || e is MovingPath)
                     e.Draw(gameTime, spriteBatch);
 
 

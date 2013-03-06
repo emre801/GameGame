@@ -229,7 +229,7 @@
 653 -1306 deathSpikes DeathBlock 900
 796 -2723 bigGround MagnetBlock 0 -7 5445 735 1
 806 -2673 bigGround MagnetBlock 6 0 5445 735 0
-803 -5280 ahLogo0 GoalBlock 18
+803 -5280 ahLogo0 GoalBlock 16
 Demi -813 1456 -5258 753
 BGCOLOR 167 218 220 
 CAM 0.4608877

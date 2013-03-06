@@ -310,6 +310,29 @@ namespace ProtoDerp
 
             }
 
+            foreach (MovingPath i in movePathBlock)
+            {
+                foreach (MagnetBlock j in magnetBlocks)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+
+                }
+
+            }
+
+
+            foreach (MovingCycle i in moveCycleBlock)
+            {
+                foreach (MagnetBlock j in magnetBlocks)
+                {
+                    i.fixture.CollisionFilter.IgnoreCollisionWith(j.fixture);
+                    j.fixture.CollisionFilter.IgnoreCollisionWith(i.fixture);
+
+                }
+
+            }
+
             foreach (MovingDeath i in moveDeathBlocks)
             {
                 foreach (MovingDeath j in moveDeathBlocks)

@@ -188,6 +188,7 @@ Content\roots0.xnb
 Content\roots1.xnb
 Content\roots2.xnb
 Content\roots3.xnb
+Content\sawAni2.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

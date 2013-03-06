@@ -570,6 +570,13 @@ namespace ProtoDerp
             blockList.AddLast("SawAni");
             //////////////////
 
+            ///////////////////
+            spriteAnimation.Add("sawAni2", new SpriteStripAnimationHandler(new Sprite(Content, "sawAni2")
+                , 11, 0f));//fan
+            sprites.Add("sawAni2", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "sawAni2"), 11, 0f).getIndex(), "sawAni2"));
+            blockList.AddLast("sawAni2");
+            //////////////////
+
 
             ///////////////////
             spriteAnimation.Add("Star", new SpriteStripAnimationHandler(new Sprite(Content, "Star")
@@ -1270,6 +1277,7 @@ namespace ProtoDerp
             {
                 GraphicsDevice.Clear(backGroundColor);
                 drawingTool.drawBGGradient(backgroundTex);
+                
             }
             else
                 GraphicsDevice.Clear(Color.Black);
@@ -1278,6 +1286,7 @@ namespace ProtoDerp
             
             drawingTool.drawEntities(entities, gameTime);
             drawingTool.drawLetterBox();
+            
 
             base.Draw(gameTime);
         }
