@@ -31,11 +31,25 @@ namespace ProtoDerp
             this.pos = pos+Constants.player1SpawnLocation;
             this.blockSprite = game.getSprite(spriteNumber);
         }
+        public override void Update(GameTime gameTime, float worldSpeed)
+        {
+            if (spriteNumber.Contains("cloud") && !game.isInCreatorMode)
+            {
+
+                pos = new Vector2(pos.X - 0.005f, pos.Y);
+            }
+        }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             if (!IsVisible)
                 return;
+
+            if (spriteNumber.Contains("cloud") && !game.isInCreatorMode)
+            {
+
+                pos = new Vector2(pos.X - 0.1f, pos.Y);
+            }
 
             Vector2 origin = new Vector2(blockSprite.index.Width / 2, blockSprite.index.Height / 2);
 

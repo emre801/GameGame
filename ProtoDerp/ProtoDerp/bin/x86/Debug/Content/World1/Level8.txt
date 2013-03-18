@@ -230,6 +230,18 @@
 796 -2723 bigGround MagnetBlock 0 -7 5445 735 1
 806 -2673 bigGround MagnetBlock 6 0 5445 735 0
 803 -5280 ahLogo0 GoalBlock 16
+1016 -3752 cloudPix SuperBack 294 79
+498 -3411 cloudPix SuperBack 294 79
+1246 -2884 cloudPix SuperBack 294 79
+383 -2719 cloudPix SuperBack 294 79
+1096 -1960 cloudPix SuperBack 294 79
+490 -1981 cloudPix SuperBack 294 79
+560 -4557 cloudPix SuperBack 294 79
+907 -5265 cloudPix SuperBack 294 79
+540 -5400 cloudPix SuperBack 294 79
+340 -5539 cloudPix SuperBack 294 79
+1290 -5526 cloudPix SuperBack 294 79
+118 -5584 cloudPix SuperBack 294 79
 Demi -813 1456 -5258 753
 BGCOLOR 167 218 220 
 CAM 0.4608877

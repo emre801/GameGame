@@ -591,9 +591,12 @@ namespace ProtoDerp
             }
             endBatch();
 
+            SamplerState test = new SamplerState();
+            test.MaxMipLevel = 100;
+
             spriteBatch.Begin(SpriteSortMode.Deferred,
-                         BlendState.NonPremultiplied,
-                         SamplerState.LinearClamp,
+                         BlendState.AlphaBlend,
+                         SamplerState.AnisotropicClamp,
                          null,
                          null,
                          null,
@@ -660,7 +663,7 @@ namespace ProtoDerp
                     continue;
                 }
                 
-                if (e is DeathBlock || e is GoalBlock || e is CreaterBlock || e is Arena || e is MovingCycle || e is MovingPath)
+                if (e is DeathBlock || e is GoalBlock || e is CreaterBlock || e is Arena || e is MovingCycle || e is MovingPath || e is WaterBlock)
                     e.Draw(gameTime, spriteBatch);
 
 
@@ -700,7 +703,7 @@ namespace ProtoDerp
                             e.Draw(gameTime, spriteBatch);
                     }
                 }
-                if (e is CreaterBlock|| e is WaterBlock || e is TempBlock || e is LayerBlock)
+                if (e is CreaterBlock|| e is TempBlock || e is LayerBlock)
                 {
                     e.Draw(gameTime, spriteBatch);
                 }

@@ -186,46 +186,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Rage\Rage1.mp3">
-      <Name>Rage1</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="Rage\Rage2.mp3">
-      <Name>Rage2</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="Rage\Rage3.mp3">
-      <Name>Rage3</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="Rage\Rage4.mp3">
-      <Name>Rage4</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="Rage\Rage5.mp3">
-      <Name>Rage5</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="Rage\Rage6.mp3">
-      <Name>Rage6</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="Rage\Rage7.mp3">
-      <Name>Rage7</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-    <Compile Include="Rage\Rage8.mp3">
-      <Name>Rage8</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
     <Compile Include="clouds.png">
       <Name>clouds</Name>
       <Importer>TextureImporter</Importer>
@@ -913,6 +873,51 @@
     </Compile>
     <Compile Include="sawAni2.png">
       <Name>sawAni2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="route23.png">
+      <Name>route23</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Music\Saturday Supernova.mp3">
+      <Name>Saturday Supernova</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="AHStar copy.png">
+      <Name>AHStar copy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="AHStar.png">
+      <Name>AHStar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Rage\Rage0.wav">
+      <Name>Rage0</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Rage\Rage1.wav">
+      <Name>Rage1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Rage\Rage2.wav">
+      <Name>Rage2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Rage\Rage3.wav">
+      <Name>Rage3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="gym.png">
+      <Name>gym</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

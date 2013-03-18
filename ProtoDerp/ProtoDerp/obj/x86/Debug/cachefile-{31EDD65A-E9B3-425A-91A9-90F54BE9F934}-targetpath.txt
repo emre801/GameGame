@@ -86,22 +86,6 @@ Content\dirtBlockLong.xnb
 Content\grassTemplate.xnb
 Content\Error.xnb
 Content\deathBall.xnb
-Content\Rage\Rage1.xnb
-Content\Rage\Rage1.wma
-Content\Rage\Rage2.xnb
-Content\Rage\Rage2.wma
-Content\Rage\Rage3.xnb
-Content\Rage\Rage3.wma
-Content\Rage\Rage4.xnb
-Content\Rage\Rage4.wma
-Content\Rage\Rage5.xnb
-Content\Rage\Rage5.wma
-Content\Rage\Rage6.xnb
-Content\Rage\Rage6.wma
-Content\Rage\Rage7.xnb
-Content\Rage\Rage7.wma
-Content\Rage\Rage8.xnb
-Content\Rage\Rage8.wma
 Content\Rage\Wave\jump.xnb
 Content\Rage\Wave\death.xnb
 Content\Rage\Wave\Opening.xnb
@@ -189,6 +173,16 @@ Content\roots1.xnb
 Content\roots2.xnb
 Content\roots3.xnb
 Content\sawAni2.xnb
+Content\route23.xnb
+Content\Music\Saturday Supernova.xnb
+Content\Music\Saturday Supernova.wma
+Content\AHStar copy.xnb
+Content\AHStar.xnb
+Content\Rage\Rage0.xnb
+Content\Rage\Rage1.xnb
+Content\Rage\Rage2.xnb
+Content\Rage\Rage3.xnb
+Content\gym.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

@@ -192,7 +192,7 @@ namespace ProtoDerp
                 //posLogoHandLong = new Vector2(Constants.GAME_WORLD_WIDTH * 0.309f, Constants.GAME_WORLD_HEIGHT * (0.148f + offsetGear));
 
                 //Menu Control
-                if ((this.player1.IsUpPressed() || keyInput.IsNewKeyPressed(Keys.Up)) && alpha >= 1)
+                if ((this.player1.IsUpPressed() || keyInput.IsNewKeyPressed(Keys.Up) || keyInput.IsNewKeyPressed(Keys.W)) && alpha >= 1)
                 {
                     //game.getSound("Audio\\Waves\\menuNavigate").Play();
                     
@@ -207,7 +207,7 @@ namespace ProtoDerp
                     }
                    
                 }
-                else if ((this.player1.IsDownPressed() || keyInput.IsNewKeyPressed(Keys.Down)) && alpha >= 1)
+                else if ((this.player1.IsDownPressed() || keyInput.IsNewKeyPressed(Keys.Down) || keyInput.IsNewKeyPressed(Keys.S)) && alpha >= 1)
                 {
                     game.sounds["Rage//Wave//menu"].Play();
                    // game.getSound("Audio\\Waves\\menuNavigate").Play();

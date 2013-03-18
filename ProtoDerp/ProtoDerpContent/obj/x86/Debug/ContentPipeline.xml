@@ -794,86 +794,6 @@
       <Time>2012-12-16T11:15:44.3225267-05:00</Time>
     </Item>
     <Item>
-      <Source>Rage\Rage1.mp3</Source>
-      <Name>Rage\Rage1</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage1.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage1.wma</Extra>
-      <Time>2012-08-20T20:17:21.7601299-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Rage\Rage2.mp3</Source>
-      <Name>Rage\Rage2</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage2.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage2.wma</Extra>
-      <Time>2012-08-20T20:17:21.7841313-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Rage\Rage3.mp3</Source>
-      <Name>Rage\Rage3</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage3.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage3.wma</Extra>
-      <Time>2012-08-20T20:17:21.8091327-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Rage\Rage4.mp3</Source>
-      <Name>Rage\Rage4</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage4.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage4.wma</Extra>
-      <Time>2012-08-20T20:17:21.8391344-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Rage\Rage5.mp3</Source>
-      <Name>Rage\Rage5</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage5.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage5.wma</Extra>
-      <Time>2012-08-20T20:17:21.867136-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Rage\Rage6.mp3</Source>
-      <Name>Rage\Rage6</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage6.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage6.wma</Extra>
-      <Time>2012-08-20T20:17:21.8701362-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Rage\Rage7.mp3</Source>
-      <Name>Rage\Rage7</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage7.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage7.wma</Extra>
-      <Time>2012-08-20T20:17:21.8721363-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Rage\Rage8.mp3</Source>
-      <Name>Rage\Rage8</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage8.xnb</Output>
-      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage8.wma</Extra>
-      <Time>2012-08-20T20:17:21.8921375-04:00</Time>
-    </Item>
-    <Item>
       <Source>Rage\Wave\jump.wav</Source>
       <Name>Rage\Wave\jump</Name>
       <Importer>WavImporter</Importer>
@@ -1545,7 +1465,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Star.xnb</Output>
-      <Time>2013-03-05T12:02:18.6487068-05:00</Time>
+      <Time>2013-03-08T11:18:50.9489628-05:00</Time>
     </Item>
     <Item>
       <Source>roots0.png</Source>
@@ -1591,6 +1511,88 @@
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\sawAni2.xnb</Output>
       <Time>2013-03-06T10:12:56.2151056-05:00</Time>
+    </Item>
+    <Item>
+      <Source>route23.png</Source>
+      <Name>route23</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\route23.xnb</Output>
+      <Time>2013-03-06T15:54:02.1406896-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Music\Saturday Supernova.mp3</Source>
+      <Name>Music\Saturday Supernova</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Saturday Supernova.xnb</Output>
+      <Extra>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Saturday Supernova.wma</Extra>
+      <Time>2013-03-07T00:29:03.0336822-05:00</Time>
+    </Item>
+    <Item>
+      <Source>AHStar copy.png</Source>
+      <Name>AHStar copy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\AHStar copy.xnb</Output>
+      <Time>2013-03-10T12:59:45.8137376-04:00</Time>
+    </Item>
+    <Item>
+      <Source>AHStar.png</Source>
+      <Name>AHStar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\AHStar.xnb</Output>
+      <Time>2013-03-10T16:37:32.4631072-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Rage0.wav</Source>
+      <Name>Rage\Rage0</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage0.xnb</Output>
+      <Time>2013-03-10T13:27:36.9503212-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Rage1.wav</Source>
+      <Name>Rage\Rage1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage1.xnb</Output>
+      <Time>2013-03-10T13:27:36.9953238-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Rage2.wav</Source>
+      <Name>Rage\Rage2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage2.xnb</Output>
+      <Time>2013-03-10T13:27:37.0093246-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Rage\Rage3.wav</Source>
+      <Name>Rage\Rage3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage3.xnb</Output>
+      <Time>2013-03-10T13:27:37.0253255-04:00</Time>
+    </Item>
+    <Item>
+      <Source>gym.png</Source>
+      <Name>gym</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\gym.xnb</Output>
+      <Time>2013-03-18T11:04:31.7577319-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

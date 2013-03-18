@@ -89,6 +89,7 @@
 398 166 roots2 Block 137 156 3 0
 586 124 roots3 Block 56 148 3 0
 215 122 roots3 Block 56 148 3 0
+-207 -576 derrick.png Block 105 75 0 0
 -394 -583 deathSpikes DeathBlock 90
 -390 -449 deathSpikes DeathBlock 90
 1181 -635 deathSpikes DeathBlock 630
@@ -96,6 +97,14 @@
 1018 -1 ahLogo0 GoalBlock 2
 102 -116 pixMT SuperBack 1103 421
 1184 -108 pixMT SuperBack 1103 421
+981 -460 cloudPix SuperBack 349 84
+571 -653 cloudPix SuperBack 349 84
+-113 -396 cloudPix SuperBack 349 84
+-475 -680 cloudPix SuperBack 349 84
+-1192 -374 cloudPix SuperBack 349 84
+1709 -695 cloudPix SuperBack 349 84
+1981 -385 cloudPix SuperBack 349 84
+2346 -851 cloudPix SuperBack 349 84
 Demi -349 1182 -532 795
 BGCOLOR 167 218 220 
 CAM 0.55

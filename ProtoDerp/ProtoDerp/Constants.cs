@@ -9,8 +9,8 @@ namespace ProtoDerp
 {
     class Constants
     {
-        public const int WRITE_LEVEL = 18;
-        public const int STARTING_WORLD = 1;
+        public const int WRITE_LEVEL = 2;
+        public const int STARTING_WORLD = 2;
         public const int MAX_WRITE_LEVEL = 29;
         public const int READ_LEVEL = 2;
 
@@ -28,7 +28,7 @@ namespace ProtoDerp
 
         public const bool PRELOAD_LEVELS = true; // Set this to true when release
 
-        public const bool DO_FADE_OUT = false;
+        public const bool DO_FADE_OUT = false; // set this to true for release
 
         public const bool DO_CUT_SCENE = true;
 
@@ -51,13 +51,15 @@ namespace ProtoDerp
 
         public const bool FULLSCREEN = false;
 
-        public const bool PLAY_MUSIC = false;
+        public const bool PLAY_MUSIC = true;
 
         public const float SHADOW_VALUE = 0.25f;
 
-        public const int TOTAL_NUM_BLOCK_TYPES = 8;
+        public const int TOTAL_NUM_BLOCK_TYPES = 9;
 
         public const int TOTAL_NUMBER_OF_WORLDS = 2;
+
+        public const bool PLAY_RAGE_SOUNDS = true;
 
         public const bool OVERRIDE_FULLSCREEN_RES = false; // If this is true, we will attempt to override the system's default fullscreen resolution.  Not recommended
 

@@ -482,6 +482,9 @@ namespace ProtoDerp
                 case Game.BlockType.Fan:
                     blockInfo += "Fan Block";
                     break;
+               case Game.BlockType.Missle:
+                    blockInfo += "Missle Block";
+                    break;
 
 
             }

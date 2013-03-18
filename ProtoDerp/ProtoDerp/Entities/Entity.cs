@@ -83,7 +83,10 @@ namespace ProtoDerp
         public virtual void OnRemovedFromGame(GameTime time)
         {
         }
+        public virtual void removeItself()
+        {
 
+        }
         public virtual void Update(GameTime gameTime, float worldFactor)
         {
             MoveSelf(gameTime, worldFactor);

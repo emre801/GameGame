@@ -252,22 +252,9 @@ C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDer
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage1.xnb
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage2.xnb
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage3.xnb
-C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage4.xnb
-C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage5.xnb
-C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage6.xnb
-C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage7.xnb
-C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage8.xnb
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\jump.xnb
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\death.xnb
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Wave\Opening.xnb
-C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage1.wma
-C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage2.wma
-C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage3.wma
-C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage4.wma
-C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage5.wma
-C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage6.wma
-C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage7.wma
-C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage8.wma
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Template\Level3.txt
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Template\Level2.txt
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Template\Level1.txt
@@ -401,3 +388,10 @@ C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDer
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\roots2.xnb
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\roots3.xnb
 C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\sawAni2.xnb
+C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\route23.xnb
+C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Saturday Supernova.xnb
+C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Music\Saturday Supernova.wma
+C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\AHStar copy.xnb
+C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\AHStar.xnb
+C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Rage\Rage0.xnb
+C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\gym.xnb

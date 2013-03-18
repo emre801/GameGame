@@ -168,7 +168,7 @@ namespace ProtoDerp
                         xMomentum = -Math.Abs(body.LinearVelocity.X * 0.8f);
                     }
                     XboxInput xbi = (XboxInput)inputState;
-                    if (xbi.getYDirection() < 0 || Keyboard.GetState().IsKeyDown(Keys.Up))
+                    if (xbi.getYDirection() < 0 || Keyboard.GetState().IsKeyDown(Keys.Up) || Keyboard.GetState().IsKeyDown(Keys.W))
                         xMomentum += xbi.getYDirection() * 4f;
                     else
                         xMomentum = 0;
@@ -273,11 +273,11 @@ namespace ProtoDerp
             {
                 game.isPausePressed = true;
             }
-            if (keyInput.IsKeyPressed(Keys.Up))
+            if (keyInput.IsKeyPressed(Keys.Up) || keyInput.IsKeyPressed(Keys.W))
             {
                 game.isUpMenuSelect = 1;
             }
-            if (keyInput.IsKeyPressed(Keys.Down))
+            if (keyInput.IsKeyPressed(Keys.Down) || keyInput.IsKeyPressed(Keys.S))
             {
                 game.isUpMenuSelect = 2;
             }
@@ -333,7 +333,7 @@ namespace ProtoDerp
                 return;
             }
 
-            if (inputState.IsButtonPressed(Buttons.RightShoulder) || keyInput.IsKeyPressed(Keys.Z))
+            if (inputState.IsButtonPressed(Buttons.RightShoulder) || keyInput.IsKeyPressed(Keys.Z) || keyInput.IsKeyPressed(Keys.L))
                 runningValue = 2.5f;
 
 
@@ -365,7 +365,7 @@ namespace ProtoDerp
                     fixture.Friction = 0;
 
                 
-            }
+            } 
 
             if ((inputState.isAPressed() || keyInput.IsNewKeyPressed(Keys.Space)) && onGround)// && body.LinearVelocity.Y > -50)
             {

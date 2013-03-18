@@ -69,6 +69,7 @@ namespace ProtoDerp
                      {
                          game.PlayerDies();
                          game.sounds["Rage//Wave//death"].Play();
+                         game.playRandomDeathSound();
                      }
                      //game.playSong("Rage//Rage"+game.ran.Next(1,8));
                      

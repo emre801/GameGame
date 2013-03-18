@@ -29,7 +29,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>34</ApplicationRevision>
+    <ApplicationRevision>37</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -139,6 +139,7 @@
     <Compile Include="Entities\LevelEditor.cs" />
     <Compile Include="Entities\LevelSelect.cs" />
     <Compile Include="Entities\MagnetBlock.cs" />
+    <Compile Include="Entities\Missle.cs" />
     <Compile Include="Entities\MouseItem.cs" />
     <Compile Include="Entities\MoveCycle.cs" />
     <Compile Include="Entities\MovingDeath.cs" />

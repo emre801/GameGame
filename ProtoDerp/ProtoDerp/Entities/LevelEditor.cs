@@ -44,6 +44,8 @@ namespace ProtoDerp
         LinkedList<MovingPath> movePathBlock = new LinkedList<MovingPath>();
         LinkedList<MovingCycle> moveCycleBlock = new LinkedList<MovingCycle>();
         LinkedList<WaterBlock> waterBlocks = new LinkedList<WaterBlock>();
+        LinkedList<Missle> missles = new LinkedList<Missle>();
+        
         public void readFile(int templateNum)
         {
             String path = Directory.GetCurrentDirectory();
@@ -203,6 +205,11 @@ namespace ProtoDerp
                 {
                     waterBlocks.AddLast(new WaterBlock(game,game.Arena,new Vector2(x,y),1,spriteName,System.Convert.ToSingle(words[4]),System.Convert.ToSingle(words[5]),System.Convert.ToSingle(words[6])));
                 }
+
+                if (words[3].Equals("Missle"))
+                {
+                    missles.AddLast(new Missle(game, game.Arena, new Vector2(x, y), 1, spriteName, System.Convert.ToSingle(words[4]),true));
+                }
                 
             }
 
@@ -229,6 +236,8 @@ namespace ProtoDerp
             foreach (GoalBlock i in goalBlocks)
                 game.addEntity(i);
             foreach (WaterBlock i in waterBlocks)
+                game.addEntity(i);
+            foreach (Missle i in missles)
                 game.addEntity(i);
 
             

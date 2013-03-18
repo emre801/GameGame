@@ -197,6 +197,13 @@
 2684 51 pixMT SuperBack 1203 511
 1714 -78 pixMT SuperBack 1283 746
 -815 -108 pixMT SuperBack 1283 746
+1154 -2105 cloudPix SuperBack 344 74
+463 -2238 cloudPix SuperBack 344 74
+171 -1686 cloudPix SuperBack 344 74
+886 -1453 cloudPix SuperBack 344 74
+24 -1282 cloudPix SuperBack 344 74
+1310 -1322 cloudPix SuperBack 344 74
+1515 -2232 cloudPix SuperBack 344 74
 Demi -100 1088 -1770 578
 BGCOLOR 167 218 220 
 CAM 0.55

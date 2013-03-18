@@ -120,7 +120,7 @@ namespace ProtoDerp
         public void LoadContent()
         {
             playerSprite = game.getSprite(spriteNumber);
-            ani = game.getSpriteAnimation("Star");
+            ani = game.getSpriteAnimation("AHStar");
         }
         public void updateGoalImage()
         {
@@ -188,7 +188,7 @@ namespace ProtoDerp
             //spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)playerSprite.index.Width, (int)playerSprite.index.Height), null, drawColor, body.Rotation, origin, SpriteEffects.None, 0f);
             ani.drawCurrentState(spriteBatch, this, new Vector2((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y)),
                       origin, body, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X),
-                          (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)ani.widthOf(), (int)ani.heightOf()), true, new Vector2(0, 0));
+                          (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)ani.widthOf()/2, (int)ani.heightOf()/2), true, new Vector2(0, 0));
             
         
         

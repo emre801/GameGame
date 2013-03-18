@@ -82,7 +82,7 @@ namespace ProtoDerp
         public float maxLeft, maxRight, maxTop, maxButtom;
         public int count = 0;
 
-        public enum BlockType { Normal, Death, Moving, Goal, Magnet,Path,Cycle,WaterBlock,Fan };
+        public enum BlockType { Normal, Death, Moving, Goal, Magnet,Path,Cycle,WaterBlock,Fan,Missle };
         public BlockType blockType = BlockType.Normal;
 
         public float cXLocation=0, cYLocation=0;
@@ -175,10 +175,12 @@ namespace ProtoDerp
 
         Texture2D backgroundTex;
 
+        public float graveValue = 1.0f;
+
         public Game()
         {
             WorldSpeed = 1.0f;
-            world = new World(new Vector2(0, 5.0f));
+            world = new World(new Vector2(0, 5.0f*graveValue)); // original = 5.0f
             world2 = new World(new Vector2(0, 0));
             world3 = new World(new Vector2(0, 0));
             ConvertUnits.SetDisplayUnitToSimUnitRatio(30);
@@ -226,6 +228,16 @@ namespace ProtoDerp
 
             this.isInCreatorMode = false;
         }
+        public void playRandomDeathSound()
+        {
+            if (Constants.PLAY_RAGE_SOUNDS)
+            {
+                int rageFile = ran.Next(4);
+                sounds["Rage//Rage" + rageFile].Play();
+            }
+
+
+        }
 
         public void populateWorldCreatorMode()
         {
@@ -258,7 +270,7 @@ namespace ProtoDerp
             backToTitleScreen = false;
             pause = false;
             restart = false;
-            world = new World(new Vector2(0, 5.0f));
+            world = new World(new Vector2(0, 5.0f * graveValue));
             entities.Clear();
             toBeAdded.Clear();
             cachedEntityLists = new Dictionary<Type, object>();
@@ -295,8 +307,8 @@ namespace ProtoDerp
             playerOneInput = new XboxInput(PlayerIndex.One);
 
             //Load uploaded sprites
-            if(Constants.IS_IN_DEBUG_MODE)
-                loadImageFromContent();
+            //if(Constants.IS_IN_DEBUG_MODE)
+                //loadImageFromContent();
 
             
 
@@ -307,6 +319,9 @@ namespace ProtoDerp
              */
             sprites.Add("cloud", new Sprite(Content, "cloud"));
             blockList.AddLast("cloud");
+
+            sprites.Add("gym", new Sprite(Content, "gym"));
+            blockList.AddLast("gym");
 
             sprites.Add("cloudPix", new Sprite(Content, "cloudPix"));
             blockList.AddLast("cloudPix");
@@ -351,6 +366,9 @@ namespace ProtoDerp
 
             sprites.Add("pixMT", new Sprite(Content, "pixMT"));
             blockList.AddLast("pixMT");
+
+            sprites.Add("route23", new Sprite(Content, "route23"));
+            blockList.AddLast("route23");
 
             sprites.Add("dirtyBlock", new Sprite(Content, "dirtyBlock"));
             blockList.AddLast("dirtyBlock");
@@ -520,6 +538,11 @@ namespace ProtoDerp
             addSound("Rage//Wave//explosion");
             addSound("Rage//Wave//menu");
             addSound("Rage//Wave//running");
+
+            addSound("Rage//Rage0");
+            addSound("Rage//Rage1");
+            addSound("Rage//Rage2");
+            addSound("Rage//Rage3");
             
             spriteAnimation.Add("player_strip12", new SpriteStripAnimationHandler(new Sprite(Content, "player_strip12")
                 , 12,60));//Player Standing
@@ -572,17 +595,24 @@ namespace ProtoDerp
 
             ///////////////////
             spriteAnimation.Add("sawAni2", new SpriteStripAnimationHandler(new Sprite(Content, "sawAni2")
-                , 11, 0f));//fan
-            sprites.Add("sawAni2", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "sawAni2"), 11, 0f).getIndex(), "sawAni2"));
+                , 11, 16f));//fan
+            sprites.Add("sawAni2", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "sawAni2"), 11, 16f).getIndex(), "sawAni2"));
             blockList.AddLast("sawAni2");
             //////////////////
 
 
             ///////////////////
             spriteAnimation.Add("Star", new SpriteStripAnimationHandler(new Sprite(Content, "Star")
-                , 11, 120f));//fan
-            sprites.Add("Star", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "Star"), 11, 0f).getIndex(), "Star"));
+                , 21, 120f));//fan
+            sprites.Add("Star", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "Star"), 21, 0f).getIndex(), "Star"));
             blockList.AddLast("Star");
+            //////////////////
+
+            ///////////////////
+            spriteAnimation.Add("AHStar", new SpriteStripAnimationHandler(new Sprite(Content, "AHStar")
+                , 11, 120f));//fan
+            sprites.Add("AHStar", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "AHStar"), 11, 120f).getIndex(), "AHStar"));
+            blockList.AddLast("AHStar");
             //////////////////
 
 
@@ -677,7 +707,7 @@ namespace ProtoDerp
         public void newLevel()
         {
             //writeLevel(2);
-            world = new World(new Vector2(0, 5.0f));
+            world = new World(new Vector2(0, 5.0f * graveValue));
             world2 = new World(new Vector2(0, 0));
             world3 = new World(new Vector2(0, 0));
             entities.Clear();
@@ -937,6 +967,19 @@ namespace ProtoDerp
                 lines.AddLast(x + " " + y + " " + spriteName + " WaterBlock" + " " + b.rotationAngle + " "+b.width+ " "+ b.height);
 
             }
+            LinkedList<Missle> missleBlocks = getEntitiesOfType<Missle>();
+
+            foreach (Missle b in missleBlocks)
+            {
+
+                if (!b.IsVisible)
+                    continue;
+                int x = (int)b.origPos.X;
+                int y = (int)b.origPos.Y;
+                String spriteName = b.spriteNumber;
+                lines.AddLast(x + " " + y + " " + spriteName + " Missle" + " "+b.velObj);
+
+            }
 
             lines.AddLast("Demi " + (int)maxLeft + " " + (int)maxRight + " " + (int)maxTop + " " + (int)maxButtom);
             //lines.AddLast(path);
@@ -1094,7 +1137,7 @@ namespace ProtoDerp
                 backToTitleScreen = false;
                 pause = false;
                 restart = false;
-                world = new World(new Vector2(0, 5.0f));
+                world = new World(new Vector2(0, 5.0f * graveValue));
                 entities.Clear();
                 toBeAdded.Clear();
                 cachedEntityLists = new Dictionary<Type, object>();
@@ -1113,7 +1156,7 @@ namespace ProtoDerp
                 
                 pause = false;
                 restart = false;
-                world = new World(new Vector2(0, 5.0f));
+                world = new World(new Vector2(0, 5.0f * graveValue));
                 entities.Clear();
                 toBeAdded.Clear();
                 cachedEntityLists = new Dictionary<Type, object>();

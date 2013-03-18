@@ -642,9 +642,13 @@ namespace ProtoDerp
             {
                 linedUpBlocks.Clear();
                 Vector2 squareVec = p2 - p1;
-                if(squareVec.X>2 && squareVec.Y>2)
+                if (squareVec.X > 2 && squareVec.Y > 2)
+                {
+                    World tempWOrld = game.world;
+                    game.world = game.world2;
                     linedUpBlocks.Add(new Block(game, game.Arena, p1 + new Vector2((int)squareVec.X / 2, (int)squareVec.Y / 2), 1, blockArray[game.spriteBlockCounter], (int)squareVec.Y, (int)squareVec.X, game.drawLevel, (int)rotation));
-                
+                    game.world = tempWOrld;
+                }
 
             }
             else if (currentPointValue == 2)
@@ -802,6 +806,10 @@ namespace ProtoDerp
                     break;
                 case 8:
                     game.blockType = Game.BlockType.Fan;
+                    game.cachedEntityLists = new Dictionary<Type, object>();
+                    break;
+                case 9:
+                    game.blockType = Game.BlockType.Missle;
                     game.cachedEntityLists = new Dictionary<Type, object>();
                     break;
 
@@ -1275,6 +1283,9 @@ namespace ProtoDerp
                         break;
                     case Game.BlockType.Fan:
                         game.addEntity(new MagnetBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], game.magnetPulse, blockHeight, blockWidth,true));
+                        break;
+                    case Game.BlockType.Missle:
+                        game.addEntity(new Missle(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter],game.pathSpeed,true));
                         break;
                 }
             }

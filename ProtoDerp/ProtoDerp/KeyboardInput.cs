@@ -50,11 +50,11 @@ namespace ProtoDerp
 
         public override float VerticalMovement()
         {
-            if (keyboardState.IsKeyDown(Keys.Up))
+            if (keyboardState.IsKeyDown(Keys.Up) || keyboardState.IsKeyDown(Keys.W))
             {
                 return 1;
             }
-            else if (keyboardState.IsKeyDown(Keys.Down))
+            else if (keyboardState.IsKeyDown(Keys.Down) || keyboardState.IsKeyDown(Keys.S))
             {
                 return -1;
             }
@@ -63,11 +63,11 @@ namespace ProtoDerp
 
         public override float HorizontalMovement()
         {
-            if (keyboardState.IsKeyDown(Keys.Left))
+            if (keyboardState.IsKeyDown(Keys.Left) || keyboardState.IsKeyDown(Keys.A))
             {
                 return -1;
             }
-            else if (keyboardState.IsKeyDown(Keys.Right))
+            else if (keyboardState.IsKeyDown(Keys.Right) || keyboardState.IsKeyDown(Keys.D))
             {
                 return 1;
             }
@@ -115,24 +115,24 @@ namespace ProtoDerp
 
         public override bool IsUpPressed()
         {
-            return this.IsNewKeyPressed(Keys.Up);
+            return this.IsNewKeyPressed(Keys.Up) || this.IsNewKeyPressed(Keys.W);
         }
 
 
         public override bool IsDownPressed()
         {
-            return this.IsNewKeyPressed(Keys.Down);
+            return this.IsNewKeyPressed(Keys.Down) || this.IsNewKeyPressed(Keys.S);
         }
 
         public override bool IsLeftPressed()
         {
-            return this.IsNewKeyPressed(Keys.Left);
+            return this.IsNewKeyPressed(Keys.Left) || this.IsNewKeyPressed(Keys.A);
         }
 
 
         public override bool IsRightPressed()
         {
-            return this.IsNewKeyPressed(Keys.Right);
+            return this.IsNewKeyPressed(Keys.Right) || this.IsNewKeyPressed(Keys.D);
         }
 
         public override bool IsSelectPressed()

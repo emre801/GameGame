@@ -213,13 +213,13 @@ namespace ProtoDerp
                     //int demi = 125;
                     //game.getSprite("groundBad").index.GetData<Color>(template);
                     
-                    if (game.currentWorld == 2)
+                    /*if (game.currentWorld == 2)
                     {
                         template = new Color[95 * 95];
                         game.getSprite("seablock").index.GetData<Color>(template);
                         demi = 95;
 
-                    }
+                    }*/
 
                     int counter = 0;
                     int maxCounter = template.Length;
@@ -304,8 +304,10 @@ namespace ProtoDerp
                             
                         }
                     }*/
-                     
-                    this.dynamicPattern = new Texture2D(game.drawingTool.getGraphicsDevice(), (int)width, (int)height);
+
+                    GraphicsDevice gd= game.drawingTool.getGraphicsDevice();
+                    this.dynamicPattern = new Texture2D(gd, (int)width, (int)height);
+                    
                     dynamicPattern.SetData<Color>(cData);
                     game.addCachedDirt(new Rectangle((int)body.Position.X, (int)body.Position.Y, (int)width, (int)height), dynamicPattern);
                 }
@@ -428,6 +430,12 @@ namespace ProtoDerp
                 updateMagnetBlock();
             }
 
+            if (spriteNumber.Contains("cloud") && !game.isInCreatorMode)
+            {
+
+                body.Position = new Vector2(body.Position.X - 0.01f, body.Position.Y);
+            }
+
 
             ani.Update();
             if (disappearTimer == 0)
@@ -460,6 +468,8 @@ namespace ProtoDerp
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+            if (!IsVisible)
+                return;
             Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
             DrawingTool test = game.drawingTool;
             int i = playerSprite.index.Width;
