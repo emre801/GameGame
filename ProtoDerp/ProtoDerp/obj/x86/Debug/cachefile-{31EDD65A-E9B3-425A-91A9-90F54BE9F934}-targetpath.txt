@@ -183,6 +183,8 @@ Content\Rage\Rage1.xnb
 Content\Rage\Rage2.xnb
 Content\Rage\Rage3.xnb
 Content\gym.xnb
+Content\bulletAni.xnb
+Content\nonFireMissle.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt

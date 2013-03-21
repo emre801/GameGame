@@ -518,6 +518,7 @@ namespace ProtoDerp
             sprites.Add("Tree4", new Sprite(Content, "Tree4"));
             blockList.AddLast("Tree4");
 
+            sprites.Add("nonFireMissle", new Sprite(Content, "nonFireMissle"));
             sprites.Add("leftCurtain", new Sprite(Content, "leftCurtain"));
             sprites.Add("rightCurtain", new Sprite(Content, "rightCurtain"));
             sprites.Add("TopCurtain", new Sprite(Content, "TopCurtain"));
@@ -615,10 +616,15 @@ namespace ProtoDerp
             blockList.AddLast("AHStar");
             //////////////////
 
+            spriteAnimation.Add("bulletAni", new SpriteStripAnimationHandler(new Sprite(Content, "bulletAni")
+                , 21, 120f));//fan
+            sprites.Add("bulletAni", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "bulletAni"), 21, 120f).getIndex(), "bulletAni"));
+            blockList.AddLast("bulletAni");
+
 
 
             spriteAnimation.Add("missile_strip_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "missile_strip_strip4")
-                , 4, 45));//missle
+                , 4, 120));//missle
             spriteAnimation.Add("sprite14_strip9", new SpriteStripAnimationHandler(new Sprite(Content, "sprite14_strip9")
                 , 9, 60));//Wall Hang
             spriteAnimation.Add("sprite15_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "sprite15_strip4")

@@ -1594,6 +1594,24 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\gym.xnb</Output>
       <Time>2013-03-18T11:04:31.7577319-04:00</Time>
     </Item>
+    <Item>
+      <Source>bulletAni.png</Source>
+      <Name>bulletAni</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\bulletAni.xnb</Output>
+      <Time>2013-03-19T14:54:13.2166403-04:00</Time>
+    </Item>
+    <Item>
+      <Source>nonFireMissle.png</Source>
+      <Name>nonFireMissle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\nonFireMissle.xnb</Output>
+      <Time>2013-03-19T15:06:47.2557689-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
