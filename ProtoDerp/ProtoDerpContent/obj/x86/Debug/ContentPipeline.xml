@@ -1612,16 +1612,124 @@
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\nonFireMissle.xnb</Output>
       <Time>2013-03-19T15:06:47.2557689-04:00</Time>
     </Item>
+    <Item>
+      <Source>QWOP\QWOP0.png</Source>
+      <Name>QWOP\QWOP0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\QWOP\QWOP0.xnb</Output>
+      <Time>2013-03-27T11:26:22.0715286-04:00</Time>
+    </Item>
+    <Item>
+      <Source>QWOP\QWOP1.png</Source>
+      <Name>QWOP\QWOP1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\QWOP\QWOP1.xnb</Output>
+      <Time>2013-03-27T11:26:22.0735287-04:00</Time>
+    </Item>
+    <Item>
+      <Source>QWOP\QWOP2.png</Source>
+      <Name>QWOP\QWOP2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\QWOP\QWOP2.xnb</Output>
+      <Time>2013-03-27T11:26:22.0775289-04:00</Time>
+    </Item>
+    <Item>
+      <Source>QWOP\QWOPBlue.png</Source>
+      <Name>QWOP\QWOPBlue</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\QWOP\QWOPBlue.xnb</Output>
+      <Time>2013-03-27T11:26:22.0805291-04:00</Time>
+    </Item>
+    <Item>
+      <Source>QWOP\QWOPGrad.png</Source>
+      <Name>QWOP\QWOPGrad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\QWOP\QWOPGrad.xnb</Output>
+      <Time>2013-03-27T11:26:22.0835293-04:00</Time>
+    </Item>
+    <Item>
+      <Source>QWOP\QWOPGreen.png</Source>
+      <Name>QWOP\QWOPGreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\QWOP\QWOPGreen.xnb</Output>
+      <Time>2013-03-27T11:26:22.0865294-04:00</Time>
+    </Item>
+    <Item>
+      <Source>QWOP\QWOPground.png</Source>
+      <Name>QWOP\QWOPground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\QWOP\QWOPground.xnb</Output>
+      <Time>2013-03-27T11:26:22.0885296-04:00</Time>
+    </Item>
+    <Item>
+      <Source>QWOP\QWOPStrip.png</Source>
+      <Name>QWOP\QWOPStrip</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\QWOP\QWOPStrip.xnb</Output>
+      <Time>2013-03-27T11:26:22.0905297-04:00</Time>
+    </Item>
+    <Item>
+      <Source>QWOP\QWOPWhite.png</Source>
+      <Name>QWOP\QWOPWhite</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\QWOP\QWOPWhite.xnb</Output>
+      <Time>2013-03-27T11:26:22.0935298-04:00</Time>
+    </Item>
+    <Item>
+      <Source>QWOP\QWOPScreen.png</Source>
+      <Name>QWOP\QWOPScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\QWOP\QWOPScreen.xnb</Output>
+      <Time>2013-03-27T11:47:39.9246176-04:00</Time>
+    </Item>
+    <Item>
+      <Source>QWOP\QWOPBot.png</Source>
+      <Name>QWOP\QWOPBot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\QWOP\QWOPBot.xnb</Output>
+      <Time>2013-03-27T12:06:56.2337547-04:00</Time>
+    </Item>
+    <Item>
+      <Source>QWOP\QwopTop.png</Source>
+      <Name>QWOP\QwopTop</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\QWOP\QwopTop.xnb</Output>
+      <Time>2013-03-27T12:06:56.2367549-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerpContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerpContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerpContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerpContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

@@ -566,6 +566,14 @@
 1772 -5877 cloudPix Block 144 624 2 0
 2292 -4557 cloudPix Block 144 624 2 0
 1862 -3687 cloudPix Block 144 624 2 0
+1661 -2280 cloudPix Block 154 494 2 0
+1308 -1202 cloudPix Block 154 494 2 0
+-148 -1652 cloudPix Block 154 494 2 0
+-988 245 cloudPix Block 154 494 2 0
+1531 269 cloudPix Block 154 494 2 0
+1394 -3455 cloudPix Block 154 494 2 0
+-310 -3700 cloudPix Block 154 494 2 0
+-668 -3072 cloudPix Block 154 494 2 0
 1041 -4742 bigGround MagnetBlock 0 -30 785 240 0
 543 -5218 bigGround MagnetBlock -40 0 175 1230 0
 -213 -4995 bigGround MagnetBlock 0 10 580 200 0
@@ -596,6 +604,22 @@
 -627 -3544 cloudPix SuperBack 339 114
 52 -3464 cloudPix SuperBack 339 114
 662 -3044 cloudPix SuperBack 339 114
+1093 -504 cloudPix SuperBack 389 94
+-229 -634 cloudPix SuperBack 389 94
+929 -1143 cloudPix SuperBack 389 94
+1011 -1609 cloudPix SuperBack 389 94
+848 -1982 cloudPix SuperBack 389 94
+-912 -2302 cloudPix SuperBack 389 94
+-1069 -1283 cloudPix SuperBack 389 94
+1812 -888 cloudPix SuperBack 389 94
+101 -1142 cloudPix SuperBack 389 94
+-1242 -655 cloudPix SuperBack 389 94
+1720 -1695 cloudPix SuperBack 389 94
+1487 -2583 cloudPix SuperBack 389 94
+1124 -2080 cloudPix SuperBack 389 94
+604 -2871 cloudPix SuperBack 389 94
+-1209 -2650 cloudPix SuperBack 389 94
+1953 -2081 cloudPix SuperBack 389 94
 Demi -876 1343 -6170 839
 BGCOLOR 167 218 220 
 CAM 0.5157019

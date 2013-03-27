@@ -259,6 +259,9 @@
 3751 1515 roots1 Block 104 136 3 0
 4167 1525 roots1 Block 104 136 3 0
 1000 1513 roots2 Block 137 156 3 0
+294 1296 QWOP0 Block 283 173 1 0
+1151 1349 QWOP2 Block 283 221 1 0
+-762 1331 QWOP1 Block 238 323 1 0
 -2 1421 deathSpikes DeathBlock 0
 118 1421 deathSpikes DeathBlock 0
 237 1421 deathSpikes DeathBlock 0

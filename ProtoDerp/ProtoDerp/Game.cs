@@ -526,6 +526,33 @@ namespace ProtoDerp
             sprites.Add("MouseImage", new Sprite(Content, "MouseImage"));
             sprites.Add("MouseClick", new Sprite(Content, "MouseClick"));
 
+            sprites.Add("QWOP0", new Sprite(Content, "QWOP\\QWOP0"));
+            sprites.Add("QWOP1", new Sprite(Content, "QWOP\\QWOP1"));
+            sprites.Add("QWOP2", new Sprite(Content, "QWOP\\QWOP2"));
+            sprites.Add("QWOPBlue", new Sprite(Content, "QWOP\\QWOPBlue"));
+            sprites.Add("QWOPGrad", new Sprite(Content, "QWOP\\QWOPGrad"));
+            sprites.Add("QWOPGreen", new Sprite(Content, "QWOP\\QWOPGreen"));
+            sprites.Add("QWOPground", new Sprite(Content, "QWOP\\QWOPground"));
+            sprites.Add("QWOPStrip", new Sprite(Content, "QWOP\\QWOPStrip"));
+            sprites.Add("QWOPWhite", new Sprite(Content, "QWOP\\QWOPWhite"));
+            sprites.Add("QWOPScreen", new Sprite(Content, "QWOP\\QWOPScreen"));
+            sprites.Add("QwopTop", new Sprite(Content, "QWOP\\QwopTop"));
+            sprites.Add("QWOPBot", new Sprite(Content, "QWOP\\QWOPBot"));
+
+            blockList.AddLast("QWOPScreen");
+            blockList.AddLast("QwopTop");
+            blockList.AddLast("QWOPBot");
+
+            blockList.AddLast("QWOP0");
+            blockList.AddLast("QWOP1");
+            blockList.AddLast("QWOP2");
+            blockList.AddLast("QWOPBlue");
+            blockList.AddLast("QWOPGrad");
+            blockList.AddLast("QWOPGreen");
+            blockList.AddLast("QWOPground");
+            blockList.AddLast("QWOPStrip");
+            blockList.AddLast("QWOPWhite");
+
             //Load Fonts
             fonts[(int)Fonts.FT_MEDIUM] = Content.Load<SpriteFont>("Font\\share_20px_reg");
             fonts[(int)Fonts.FT_HEADER] = Content.Load<SpriteFont>("Font\\share_48px_bold");

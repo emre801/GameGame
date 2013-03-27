@@ -565,7 +565,9 @@ namespace ProtoDerp
                 {
                     Block b = (Block)e;
                     if (b.drawLevel == 1)
-                        b.DrawShadow(gameTime, spriteBatch);
+                    {
+                        //b.DrawShadow(gameTime, spriteBatch);
+                    }
                 }
 
             }
@@ -596,7 +598,7 @@ namespace ProtoDerp
 
             spriteBatch.Begin(SpriteSortMode.Deferred,
                          BlendState.AlphaBlend,
-                         SamplerState.AnisotropicClamp,
+                         SamplerState.LinearClamp,
                          null,
                          null,
                          null,
@@ -608,7 +610,9 @@ namespace ProtoDerp
                 {
                     Block b = (Block)e;
                     if (b.drawLevel != 1)
-                        b.DrawShadow(gameTime, spriteBatch);
+                    {
+                        //b.DrawShadow(gameTime, spriteBatch);
+                    }
                 }
                 if (e is DeathBlock)
                 {
