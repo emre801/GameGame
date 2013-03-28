@@ -43,7 +43,8 @@ namespace ProtoDerp
         Vector2 path;
         bool moveDirection = true;
         Vector2 validPoint;
-        Vector2 goalPoint; 
+        Vector2 goalPoint;
+        Sprite blackSprite,blackCircleSprite,redCircleSprite,redSprite;
         public MovingPath(Game g, Arena a, Vector2 pos, int playerNum, String spriteNumber, float velObj,
             Vector2 point1,Vector2 point2, bool isDeath)
             : base(g)
@@ -154,6 +155,10 @@ namespace ProtoDerp
         {
             playerSprite = game.getSprite(spriteNumber);
             ani = game.getSpriteAnimation(spriteNumber);
+            blackSprite = game.getSprite("black");
+            blackCircleSprite = game.getSprite("blackCircle");
+            redCircleSprite = game.getSprite("redCircle");
+            redSprite = game.getSprite("red");
         }
 
         public bool isExpanding()
@@ -259,9 +264,38 @@ namespace ProtoDerp
 
             return true;
         }
+        public void drawPath(SpriteBatch spriteBatch, Vector2 p1, Vector2 p2)
+        {
+            int pixHeight = 10;
+            int pixWeight = (int)Math.Sqrt(((p1.X - p2.X) * (p1.X - p2.X) +
+                (p1.Y - p2.Y) * (p1.Y - p2.Y)));
+
+            float Angle = (float)Math.Atan2(p1.Y - p2.Y, p1.X - p2.X) - (float)Math.PI;
+            Vector2 midp = (p1 + p2) / 2f;
+            int ballSize = 25;
+
+            float xDiff = (float)(Math.Cos(Angle) * (pixWeight / 2)) + (float)(Math.Sin(Angle) * (pixHeight / 2));
+            float yDiff = (float)(Math.Sin(Angle) * (pixHeight / 2)) + (float)(Math.Cos(Angle) * (pixWeight / 2)); ;
+
+            //spriteBatch.Draw(blackSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(p1.X), (int)ConvertUnits.ToDisplayUnits(p1.Y), (int)pixWeight, (int)pixHeight), null, Color.White, Angle, midp, SpriteEffects.None, 0f);
+            spriteBatch.Draw(blackSprite.index, new Rectangle((int)p1.X, (int)p1.Y, (int)pixWeight, (int)pixHeight), null, Color.White, Angle, new Vector2(0, 0), SpriteEffects.None, 0f);
+
+            spriteBatch.Draw(blackCircleSprite.index, new Rectangle((int)p1.X - ballSize / 2, (int)p1.Y - ballSize / 2, (int)ballSize, (int)ballSize), null, Color.White, 0, new Vector2(0, 0), SpriteEffects.None, 0f);
+            spriteBatch.Draw(blackCircleSprite.index, new Rectangle((int)p2.X - ballSize / 2, (int)p2.Y - ballSize / 2, (int)ballSize, (int)ballSize), null, Color.White, 0, new Vector2(0, 0), SpriteEffects.None, 0f);
+
+            spriteBatch.Draw(redCircleSprite.index, new Rectangle((int)p1.X - ballSize / 4, (int)p1.Y - ballSize / 4, (int)ballSize / 2, (int)ballSize / 2), null, Color.White, 0, new Vector2(0, 0), SpriteEffects.None, 0f);
+            spriteBatch.Draw(redCircleSprite.index, new Rectangle((int)p2.X - ballSize / 4, (int)p2.Y - ballSize / 4, (int)ballSize / 2, (int)ballSize / 2), null, Color.White, 0, new Vector2(0, 0), SpriteEffects.None, 0f);
+            spriteBatch.Draw(redSprite.index, new Rectangle((int)p1.X, (int)p1.Y, (int)pixWeight, (int)pixHeight / 4), null, Color.White, Angle, new Vector2(0, 0), SpriteEffects.None, 0f);
+            
+        }
+
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+
+            drawPath(spriteBatch,point1,point2);
+
+
             Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
             DrawingTool test = game.drawingTool;
             //int i = playerSprite.index.Width;
@@ -283,6 +317,8 @@ namespace ProtoDerp
             }
             //if(game.gMode==2)
                 //game.drawingTool.DrawLine(spriteBatch, 2, Color.Yellow, point1, point2);
+
+
         }
 
         private void drawHealthBar()

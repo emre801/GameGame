@@ -327,6 +327,10 @@ namespace ProtoDerp
             blockList.AddLast("cloudPix");
             //sprites.Add("DeathTime", new Sprite(Content, "DeathTime"));
             sprites.Add("black", new Sprite(Content,"black"));
+            sprites.Add("blackCircle", new Sprite(Content, "blackCircle"));
+            sprites.Add("redCircle", new Sprite(Content, "redCircle"));
+            sprites.Add("red", new Sprite(Content, "red"));
+            
             //sprites.Add("rage", new Sprite(Content, "rage"));
             //sprites.Add("dirtBlock", new Sprite(Content, "dirtBlock"));
             sprites.Add("rC1", new Sprite(Content, "rC1"));
@@ -361,7 +365,22 @@ namespace ProtoDerp
             blockList.AddLast("roots2");
             sprites.Add("roots3", new Sprite(Content, "roots3"));
             blockList.AddLast("roots3");
-            
+
+            sprites.Add("Water0", new Sprite(Content, "WaterWorld//Water0"));
+            blockList.AddLast("Water0");
+            sprites.Add("Water1", new Sprite(Content, "WaterWorld//Water1"));
+            blockList.AddLast("Water1");
+            sprites.Add("Water2", new Sprite(Content, "WaterWorld//Water2"));
+            blockList.AddLast("Water2");
+            sprites.Add("Water3", new Sprite(Content, "WaterWorld//Water3"));
+            blockList.AddLast("Water3");
+            sprites.Add("WaterMT", new Sprite(Content, "WaterWorld//WaterMT"));
+            blockList.AddLast("WaterMT");
+            sprites.Add("WaterGBlock", new Sprite(Content, "WaterWorld//WaterGBlock"));
+            blockList.AddLast("WaterGBlock");
+            sprites.Add("WatergroundWall", new Sprite(Content, "WaterWorld//WatergroundWall"));
+            blockList.AddLast("WatergroundWall");
+
 
 
             sprites.Add("pixMT", new Sprite(Content, "pixMT"));

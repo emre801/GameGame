@@ -213,13 +213,13 @@ namespace ProtoDerp
                     //int demi = 125;
                     //game.getSprite("groundBad").index.GetData<Color>(template);
                     
-                    /*if (game.currentWorld == 2)
+                    if (game.currentWorld == 2)
                     {
-                        template = new Color[95 * 95];
-                        game.getSprite("seablock").index.GetData<Color>(template);
-                        demi = 95;
+                        template = new Color[64 * 64];
+                        game.getSprite("WaterGBlock").index.GetData<Color>(template);
+                        demi = 64;
 
-                    }*/
+                    }
 
                     int counter = 0;
                     int maxCounter = template.Length;

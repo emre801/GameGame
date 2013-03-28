@@ -197,6 +197,16 @@ Content\QWOP\QWOPWhite.xnb
 Content\QWOP\QWOPScreen.xnb
 Content\QWOP\QWOPBot.xnb
 Content\QWOP\QwopTop.xnb
+Content\blackCircle.xnb
+Content\redCircle.xnb
+Content\red.xnb
+Content\WaterWorld\Water0.xnb
+Content\WaterWorld\Water1.xnb
+Content\WaterWorld\Water2.xnb
+Content\WaterWorld\Water3.xnb
+Content\WaterWorld\WaterGBlock.xnb
+Content\WaterWorld\WaterMT.xnb
+Content\WaterWorld\WatergroundWall.xnb
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt
