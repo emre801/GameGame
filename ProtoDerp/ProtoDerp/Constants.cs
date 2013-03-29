@@ -9,8 +9,8 @@ namespace ProtoDerp
 {
     class Constants
     {
-        public const int WRITE_LEVEL = 1;
-        public const int STARTING_WORLD = 2;
+        public const int WRITE_LEVEL = 5;
+        public const int STARTING_WORLD = 1;
         public const int MAX_WRITE_LEVEL = 29;
         public const int READ_LEVEL = 2;
 
@@ -57,7 +57,7 @@ namespace ProtoDerp
 
         public const int TOTAL_NUM_BLOCK_TYPES = 9;
 
-        public const int TOTAL_NUMBER_OF_WORLDS = 2;
+        public const int TOTAL_NUMBER_OF_WORLDS = 3;
 
         public const bool PLAY_RAGE_SOUNDS = true;
 

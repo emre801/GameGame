@@ -101,7 +101,7 @@ namespace ProtoDerp
                 //Preloads each Level so that the cache can do it's magic
                 
                 game.preloadLevelOnly = true;
-               for (int i = 1; i < 2; i++)
+               for (int i = 1; i < 10; i++)
                     le.readFile(i);
                game.preloadLevelOnly = false;
 

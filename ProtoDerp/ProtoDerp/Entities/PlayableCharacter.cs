@@ -312,7 +312,7 @@ namespace ProtoDerp
             float waterValue = 0.85f;
             if (game.inWater)
             {
-                waterValue = 0.25f;
+                waterValue = 0.35f;
                 if (body.LinearVelocity.Y > 4f)// && !game.oldWater)
                 {
                     body.LinearVelocity = new Vector2(body.LinearVelocity.X, 4f);

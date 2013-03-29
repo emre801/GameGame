@@ -284,6 +284,24 @@ namespace ProtoDerp
             isInCreatorMode = false;
 
         }
+        public void preLoadEachLevelWithOutGoingToTitle()
+        {
+            //JumpPoint
+            LevelEditor le = new LevelEditor(this);
+            preloadLevelOnly = true;
+            for (int i = 1; i < 20; i++)
+            {
+                le.readFile(i);
+            }
+            entities.Clear();
+            toBeAdded.Clear();
+            cachedEntityLists = new Dictionary<Type, object>();
+            //drawingTool.initialize();
+            //drawingTool.resetCamera();
+            cachedEntityLists = new Dictionary<Type, object>();
+            isInCreatorMode = false;
+
+        }
 
         /**
         * Get the dimensions of the window
@@ -380,11 +398,16 @@ namespace ProtoDerp
             blockList.AddLast("WaterGBlock");
             sprites.Add("WatergroundWall", new Sprite(Content, "WaterWorld//WatergroundWall"));
             blockList.AddLast("WatergroundWall");
+            sprites.Add("seaMoss", new Sprite(Content, "WaterWorld//seaMoss"));
+            blockList.AddLast("seaMoss");
 
 
 
             sprites.Add("pixMT", new Sprite(Content, "pixMT"));
             blockList.AddLast("pixMT");
+
+            sprites.Add("PewterGym", new Sprite(Content, "PewterGym"));
+            blockList.AddLast("PewterGym");
 
             sprites.Add("route23", new Sprite(Content, "route23"));
             blockList.AddLast("route23");
@@ -1129,6 +1152,8 @@ namespace ProtoDerp
             xycounter = 0;
             if (inTransition)
                 return;
+            if (currentWorld > Constants.TOTAL_NUMBER_OF_WORLDS)
+                currentWorld = 1;
             
             playerOneInput.Update(gameTime);
             if (camZoomValue != -1 && isInCreatorMode)//&& !isInCreatorMode)
@@ -1224,6 +1249,7 @@ namespace ProtoDerp
                 currentWorld++;
                 inCutScene = false;
                 winningAnimation = false;
+                //preLoadEachLevelWithOutGoingToTitle();
                 drawingTool.cam.Zoom = 0.95f * drawingTool.zoomRatio;
                 if (!Constants.FULLSCREEN)
                 {
@@ -1259,36 +1285,41 @@ namespace ProtoDerp
             }
 
             toBeAdded.Clear();
-
-            foreach (Entity e in entities)
+            try
             {
-                if (e.IsUpdateable && !e.dispose)
+                foreach (Entity e in entities)
                 {
-                    
+                    if (e.IsUpdateable && !e.dispose)
+                    {
 
-                    if (e.updatesWhenPaused)
-                    {
-                        // Entities which continue to update when the game is paused receive the unmodified gametime
-                        if (e is CreaterBlock || e is Button)
-                            e.Update(gameTime, WorldSpeed);
-                    }
-                    else if (!isPaused)
-                    {
-                        // All others receive the modified one.
-                        if (gMode == 2)
+
+                        if (e.updatesWhenPaused)
                         {
-                            //if (!(e is CreaterBlock || e is Button))
+                            // Entities which continue to update when the game is paused receive the unmodified gametime
+                            if (e is CreaterBlock || e is Button)
+                                e.Update(gameTime, WorldSpeed);
+                        }
+                        else if (!isPaused)
+                        {
+                            // All others receive the modified one.
+                            if (gMode == 2)
+                            {
+                                //if (!(e is CreaterBlock || e is Button))
+                                e.Update(pauseAdjustedGameTime, WorldSpeed);
+                            }
+                            else
                                 e.Update(pauseAdjustedGameTime, WorldSpeed);
                         }
-                        else
-                                e.Update(pauseAdjustedGameTime, WorldSpeed);
+                    }
+                    if (e.dispose)
+                    {
+
+                        toBeRemoved.AddLast(e);
                     }
                 }
-                if (e.dispose)
-                {
-                    
-                    toBeRemoved.AddLast(e);
-                }
+            }
+            catch
+            {
             }
             
             foreach (Entity e in toBeRemoved)

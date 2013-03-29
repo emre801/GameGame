@@ -1810,6 +1810,33 @@
       <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\WaterWorld\WatergroundWall.xnb</Output>
       <Time>2013-03-28T16:28:14.197417-04:00</Time>
     </Item>
+    <Item>
+      <Source>WaterWorld\seaMoss.png</Source>
+      <Name>WaterWorld\seaMoss</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\WaterWorld\seaMoss.xnb</Output>
+      <Time>2013-03-29T11:08:51.9478219-04:00</Time>
+    </Item>
+    <Item>
+      <Source>PewterGym.png</Source>
+      <Name>PewterGym</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\PewterGym.xnb</Output>
+      <Time>2013-03-29T12:36:03.2790546-04:00</Time>
+    </Item>
+    <Item>
+      <Source>CutScene3\0.png</Source>
+      <Name>CutScene3\0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CutScene3\0.xnb</Output>
+      <Time>2013-03-29T15:34:45.0231009-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

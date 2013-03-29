@@ -27,6 +27,8 @@ namespace ProtoDerp
             : base(g)
         {
             this.cutSceneNumber = cutSceneNumber;
+            if (this.cutSceneNumber > Constants.TOTAL_NUMBER_OF_WORLDS)
+                this.cutSceneNumber = Constants.TOTAL_NUMBER_OF_WORLDS;
             addCurrentPictures();
             player1 = game.playerOneInput;
             LoadContent();
@@ -134,6 +136,7 @@ namespace ProtoDerp
 
         public void loadLevelInfo()
         {
+            //game.preLoadEachLevelWithOutGoingToTitle();
             game.gMode = 0;
             game.isInLevelSelect = false;
             //game.playSong("Music//ForrestSounds");

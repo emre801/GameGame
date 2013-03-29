@@ -213,7 +213,7 @@
 2551 197 LongGround MagnetBlock 0 -10 345 15 0
 3271 213 LongGround MagnetBlock 0 -10 345 15 0
 3368 -135 LongGround MagnetBlock 0 -10 345 15 0
-4628 -272 ahLogo0 GoalBlock 1
+4628 -272 ahLogo0 GoalBlock -1
 174 278 sawAni2 MovingPath 8 182 788 568 788 
 923 286 sawAni2 MovingPath 8 931 796 1392 800 
 217 93 sawAni2 MovingPath 8 225 603 603 615 

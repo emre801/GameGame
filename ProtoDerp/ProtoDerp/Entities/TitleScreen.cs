@@ -273,6 +273,8 @@ namespace ProtoDerp
                     if (decreaseAlpha == 0)
                     {
                         //Start Game
+                        //if(Constants.PRELOAD_LEVELS)
+                            //game.preLoadEachLevel();
                         IsVisible = false;
                         CutScene ct = new CutScene(game, (int)game.currentWorld);
                         game.addEntity(ct);
