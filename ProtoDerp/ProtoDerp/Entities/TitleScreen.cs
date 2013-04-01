@@ -277,6 +277,8 @@ namespace ProtoDerp
                             //game.preLoadEachLevel();
                         IsVisible = false;
                         CutScene ct = new CutScene(game, (int)game.currentWorld);
+                        game.cutSceneStartTime.Reset();
+                        game.cutSceneStartTime.Start();
                         game.addEntity(ct);
 
 

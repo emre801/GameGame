@@ -55,6 +55,8 @@ namespace ProtoDerp
             }
             
             gui = new GUI(game);
+            createCutScene();
+            
 
         }
         public void LoadContent()
@@ -78,6 +80,29 @@ namespace ProtoDerp
             }
 
 
+        }
+
+        public void createCutScene()
+        {
+            StringReader sr = new StringReader(File.ReadAllText("Content\\CutScene" + cutSceneNumber + "\\info.txt"));
+                
+            String line;
+            char[] delimiterChars = { ' ', ',', ':', '\t' };
+            while ((line = sr.ReadLine()) != null)
+            {
+                    
+                string[] words = line.Split(delimiterChars);
+                float x = System.Convert.ToSingle(words[1]);
+                float y = System.Convert.ToSingle(words[2]);
+                String spriteName = words[3];
+                if (words[0].Equals("Normal"))
+                {
+                    CutSceneItem csi = new CutSceneItem(game, game.Arena, x, y, 1, spriteName,
+                        System.Convert.ToSingle(words[4]), System.Convert.ToSingle(words[5]));
+                    game.addEntity(csi);
+                }
+            }
+            
         }
 
         public override void Update(GameTime gameTime, float worldFactor)

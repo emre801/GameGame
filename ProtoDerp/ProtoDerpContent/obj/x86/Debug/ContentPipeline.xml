@@ -665,7 +665,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\sprite18_strip4.xnb</Output>
-      <Time>2012-11-04T11:30:17.4595899-05:00</Time>
+      <Time>2013-03-30T13:05:58.2362231-04:00</Time>
     </Item>
     <Item>
       <Source>GreenHill.png</Source>
@@ -1836,6 +1836,69 @@
       <Options>None</Options>
       <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CutScene3\0.xnb</Output>
       <Time>2013-03-29T15:34:45.0231009-04:00</Time>
+    </Item>
+    <Item>
+      <Source>SnowWorld\snowflake.png</Source>
+      <Name>SnowWorld\snowflake</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\SnowWorld\snowflake.xnb</Output>
+      <Time>2013-03-29T17:38:49.8873251-04:00</Time>
+    </Item>
+    <Item>
+      <Source>SnowWorld\SnowGrass.png</Source>
+      <Name>SnowWorld\SnowGrass</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\SnowWorld\SnowGrass.xnb</Output>
+      <Time>2013-03-29T17:38:49.8903252-04:00</Time>
+    </Item>
+    <Item>
+      <Source>SnowWorld\SnowTree0.png</Source>
+      <Name>SnowWorld\SnowTree0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\SnowWorld\SnowTree0.xnb</Output>
+      <Time>2013-03-29T17:38:49.8953255-04:00</Time>
+    </Item>
+    <Item>
+      <Source>SnowWorld\SnowTree1.png</Source>
+      <Name>SnowWorld\SnowTree1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\SnowWorld\SnowTree1.xnb</Output>
+      <Time>2013-03-29T17:38:49.8983257-04:00</Time>
+    </Item>
+    <Item>
+      <Source>SnowWorld\SnowTree2.png</Source>
+      <Name>SnowWorld\SnowTree2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\SnowWorld\SnowTree2.xnb</Output>
+      <Time>2013-03-29T17:38:49.9013259-04:00</Time>
+    </Item>
+    <Item>
+      <Source>SnowWorld\SnowTree3.png</Source>
+      <Name>SnowWorld\SnowTree3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\SnowWorld\SnowTree3.xnb</Output>
+      <Time>2013-03-29T17:38:49.903326-04:00</Time>
+    </Item>
+    <Item>
+      <Source>SpriteWallSlide.png</Source>
+      <Name>SpriteWallSlide</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\SpriteWallSlide.xnb</Output>
+      <Time>2013-03-30T13:22:26.1797302-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

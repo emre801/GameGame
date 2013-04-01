@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="175104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="178176">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>FH+SDOXLRUrwviuKGbc21t+Fq3w=</dsig:DigestValue>
+        <dsig:DigestValue>n70GeSzlbvzq1jt+u4raw07XbAU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -465,6 +465,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>nTD7LSt8PKTXU/DQ3tFgeKYPlhI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\CutScene1\info.txt" size="82">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>1oiQMPZ6g4OSSdMATDXYx13uSwg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\CutScene2\0.xnb" size="198191">
@@ -1718,6 +1727,60 @@
       <dsig:DigestValue>tojBTK8VTga/qiMTHlrIe7/ocFs=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Content\SnowWorld\snowflake.xnb" size="16571">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jQdxc1qdTRLQhtO3wyw7YwKBMQo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\SnowWorld\SnowGrass.xnb" size="37051">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>6yXEqQZ3K8k7yaY+y1tXgyVq5/g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\SnowWorld\SnowTree0.xnb" size="563771">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>EkzHxy4Tqr2aymMOUZ/y7HIxcIk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\SnowWorld\SnowTree1.xnb" size="427579">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Bmf74hSEfva70MCI3TESJv3189Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\SnowWorld\SnowTree2.xnb" size="616187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Ero6CocEGJ1UNM7tE4Fwb6ywE90=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\SnowWorld\SnowTree3.xnb" size="217275">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Hwpn+NQTZkHnt/Kg+gxcDex42AM=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Content\Space.xnb" size="10187">
     <hash>
       <dsig:Transforms>
@@ -1790,13 +1853,13 @@
       <dsig:DigestValue>lzWPqiUYYEyogyThSpKctph/yCY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\sprite18_strip4.xnb" size="91579">
+  <file name="Content\sprite18_strip4.xnb" size="68731">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>2Mi4Oqlu/9OAt/4n2esswoatx4U=</dsig:DigestValue>
+      <dsig:DigestValue>qS0ugHOo0eX5iGbxj4n8edck4uQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\spriteStripBlueFlowers.xnb" size="70843">
@@ -1824,6 +1887,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>scg4Xw7VU8k9/E5CQbad2VCxQUo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\SpriteWallSlide.xnb" size="14635">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>JbYmIWLEnrme0RprbL67qRemDV0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Star.xnb" size="1185595">
@@ -2402,13 +2474,40 @@
       <dsig:DigestValue>qiqnmm5KvSb5uwBdhr+ejcWZ1sg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World3\Level1.txt" size="4372">
+  <file name="Content\World3\Level1.txt" size="4335">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>s/weZ+CpaiNW+mOhqPYpbvZs/y8=</dsig:DigestValue>
+      <dsig:DigestValue>XXIYc+DfHuYzmHP+nzE57sSGp0w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\World3\Level2.txt" size="4335">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XXIYc+DfHuYzmHP+nzE57sSGp0w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\World3\Level3.txt" size="4335">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XXIYc+DfHuYzmHP+nzE57sSGp0w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\World3\Level4.txt" size="4335">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XXIYc+DfHuYzmHP+nzE57sSGp0w=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Game.ico" size="15086">

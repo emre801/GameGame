@@ -177,6 +177,8 @@ namespace ProtoDerp
 
         public float graveValue = 1.0f;
 
+        public Stopwatch cutSceneStartTime= new Stopwatch();
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -384,6 +386,7 @@ namespace ProtoDerp
             sprites.Add("roots3", new Sprite(Content, "roots3"));
             blockList.AddLast("roots3");
 
+            //Water World Info
             sprites.Add("Water0", new Sprite(Content, "WaterWorld//Water0"));
             blockList.AddLast("Water0");
             sprites.Add("Water1", new Sprite(Content, "WaterWorld//Water1"));
@@ -401,7 +404,23 @@ namespace ProtoDerp
             sprites.Add("seaMoss", new Sprite(Content, "WaterWorld//seaMoss"));
             blockList.AddLast("seaMoss");
 
+            //Snow World Info
 
+            sprites.Add("SnowTree0", new Sprite(Content, "SnowWorld//SnowTree0"));
+            blockList.AddLast("SnowTree0");
+            sprites.Add("SnowTree1", new Sprite(Content, "SnowWorld//SnowTree1"));
+            blockList.AddLast("SnowTree1");
+            sprites.Add("SnowTree2", new Sprite(Content, "SnowWorld//SnowTree2"));
+            blockList.AddLast("SnowTree2");
+            sprites.Add("SnowTree3", new Sprite(Content, "SnowWorld//SnowTree3"));
+            blockList.AddLast("SnowTree3");
+            sprites.Add("SnowGrass", new Sprite(Content, "SnowWorld//SnowGrass"));
+            blockList.AddLast("SnowGrass");
+            sprites.Add("snowflake", new Sprite(Content, "SnowWorld//snowflake"));
+            blockList.AddLast("snowflake");
+
+            sprites.Add("SpriteWallSlide", new Sprite(Content, "SpriteWallSlide"));
+            blockList.AddLast("SpriteWallSlide");
 
             sprites.Add("pixMT", new Sprite(Content, "pixMT"));
             blockList.AddLast("pixMT");
@@ -705,7 +724,7 @@ namespace ProtoDerp
             spriteAnimation.Add("sprite17-2", new SpriteStripAnimationHandler(new Sprite(Content, "sprite17-2")
                 , 1, 60));//jumping up
             spriteAnimation.Add("sprite18_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "sprite18_strip4")
-                , 4, 45));//WallJump
+                , 3, 45));//WallJump
             blockCounter=9;
             foreach (String i in blockList)
             {
@@ -1242,6 +1261,9 @@ namespace ProtoDerp
                 gMode = 6;
                 cachedEntityLists = new Dictionary<Type, object>();
                 CutScene ct= new CutScene(this,(int)currentWorld+1);
+                //cutSceneStartTime = gameTime.ElapsedGameTime.Milliseconds;
+                cutSceneStartTime.Reset();
+                cutSceneStartTime.Start();
                 backGroundImages.Clear();
                 //Title.IsVisible = true;
                 addEntity(ct);

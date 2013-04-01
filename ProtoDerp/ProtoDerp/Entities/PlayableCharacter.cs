@@ -71,6 +71,7 @@ namespace ProtoDerp
         bool isWallOnRight = false;
         bool isOnJumpAnimation = false;
         int ignoreInput = 0;
+        Rectangle collisionRec=new Rectangle();
         public PlayableCharacter(Game g, Arena a, Vector2 pos, int playerNum)
             : base(g)
         {
@@ -137,7 +138,9 @@ namespace ProtoDerp
                 }
                 if (pColis.X != 0 && pColis.Y == 0)
                 {
-                    
+
+                    collisionRec = getBlockFromFixture(fixtureB);
+
                     if (fixtureB.Body.Rotation % 45 != 0)
                     {
                         onGround = true;
@@ -195,6 +198,24 @@ namespace ProtoDerp
                     return true;
             }
             return false;
+        }
+
+        public Rectangle getBlockFromFixture(Fixture fix)
+        {
+            LinkedList<Block> blocks = game.getEntitiesOfType<Block>();
+            foreach(Block b in blocks)
+            {
+                if (b.fixture.Equals(fix))
+                {
+                    Rectangle rect = new Rectangle((int)ConvertUnits.ToDisplayUnits(b.body.Position.X) - (int)b.width / 2,
+               (int)ConvertUnits.ToDisplayUnits(b.body.Position.Y) - (int)b.height / 2,
+               (int)b.width, (int)b.height);
+                    return rect;
+                }
+
+            }
+            return new Rectangle(0,0,1,1);
+            
         }
 
         protected virtual void SetUpPhysics(Vector2 position)
@@ -495,6 +516,7 @@ namespace ProtoDerp
                 else
                 {
                     ani = game.getSpriteAnimation("sprite18_strip4");
+                    //ani = game.getSpriteAnimation("SpriteWallSlide");
                     if (isFirstAni)
                     {
                         ani.setStatePub(0);
@@ -503,7 +525,7 @@ namespace ProtoDerp
 
                     wallJumpCount++;
                     faceRight = jumpDirection;
-                    if (ani.getCycles() >= 3)
+                    if (ani.getCycles() >= 2)
                     {
                         isOnWall = false;
                         isOnJumpAnimation = false;
@@ -518,7 +540,10 @@ namespace ProtoDerp
                 isOnJumpAnimation = true;
                 playerSprite = game.getSprite("MikeWall");
                 fixture.Friction = 80;
-                ani = game.getSpriteAnimation("sprite14_strip9");
+                //ani = game.getSpriteAnimation("sprite14_strip9");
+                ani = game.getSpriteAnimation("SpriteWallSlide");
+                if(!determineIfBothCornersIntersect())
+                    ani = game.getSpriteAnimation("sprite17");
                 doAnimation = true;
                 shiftPosition = new Vector2(8, 0);
                 isOnWall = true;
@@ -532,6 +557,39 @@ namespace ProtoDerp
 
             }
 
+        }
+        public bool determineIfBothCornersIntersect()
+        {
+            Rectangle playerRec = new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X) - (int)playerSprite.index.Width / 2,
+                      (int)ConvertUnits.ToDisplayUnits(body.Position.Y) - (int)playerSprite.index.Height / 2,
+                      (int)playerSprite.index.Width, (int)playerSprite.index.Height);
+
+            Point p1 = new Point((int)playerRec.Left, 
+                (int)playerRec.Bottom);
+            Point p2 = new Point((int)playerRec.Right,
+                (int)playerRec.Bottom);
+            Point p3 = new Point((int)playerRec.Left,
+                (int)playerRec.Top);
+            Point p4 = new Point((int)playerRec.Right,
+                (int)playerRec.Top);
+            if (isWallOnRight)
+            {
+                
+                if (collisionRec.Contains(p2)&&collisionRec.Contains(p4))
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                
+                if (collisionRec.Contains(p1) && collisionRec.Contains(p3))
+                {
+                    return true;
+                }
+
+            }
+            return false;
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
