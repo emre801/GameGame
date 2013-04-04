@@ -1900,6 +1900,24 @@
       <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\SpriteWallSlide.xnb</Output>
       <Time>2013-03-30T13:22:26.1797302-04:00</Time>
     </Item>
+    <Item>
+      <Source>blackBackground.png</Source>
+      <Name>blackBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\blackBackground.xnb</Output>
+      <Time>2013-04-01T18:00:42.3360007-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Font\PressStart2P.bmp</Source>
+      <Name>Font\PressStart2P</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>FontTextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Font\PressStart2P.xnb</Output>
+      <Time>2013-04-04T11:04:05.1884806-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

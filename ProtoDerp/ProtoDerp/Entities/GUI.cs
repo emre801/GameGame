@@ -199,9 +199,9 @@ namespace ProtoDerp
             if (game.numDeath>0)
             {
                 deathFadeAlpha -= 0.05f;
-                spriteBatch.Draw(game.getSprite("black").index, new Rectangle((int)(0),
+                spriteBatch.Draw(game.getSprite("blackBackground").index, new Rectangle((int)(0),
                             (int)(0),
-                            (int)(curWidth), (int)(curHeight)), null, Color.White * deathFadeAlpha, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+                            (int)(curWidth+200), (int)(curHeight+100)), null, Color.White * deathFadeAlpha, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
             }
             
 
@@ -212,9 +212,9 @@ namespace ProtoDerp
             if (game.respawnFadeValue != -1)
             {
                 game.respawnFadeValue += 0.05f;
-                spriteBatch.Draw(game.getSprite("black").index, new Rectangle((int)(0),
+                spriteBatch.Draw(game.getSprite("blackBackground").index, new Rectangle((int)(0),
                                 (int)(0),
-                                (int)(curWidth), (int)(curHeight)), null, Color.White * game.respawnFadeValue, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+                                (int)(curWidth+200), (int)(curHeight+100)), null, Color.White * game.respawnFadeValue, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
 
             }
         }

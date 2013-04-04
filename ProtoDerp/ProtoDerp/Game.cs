@@ -26,7 +26,7 @@ namespace ProtoDerp
     public class Game : Microsoft.Xna.Framework.Game
     {
         public Random ran = new Random();
-        public enum Fonts { FT_MEDIUM, FT_HEADER, FT_TITLE };
+        public enum Fonts { FT_MEDIUM, FT_HEADER, FT_TITLE,FT_PIXEL };
         public SpriteFont[] fonts = new SpriteFont[4];
 
         public SortedSet<Entity> entities = new SortedSet<Entity>();
@@ -178,6 +178,13 @@ namespace ProtoDerp
         public float graveValue = 1.0f;
 
         public Stopwatch cutSceneStartTime= new Stopwatch();
+        public int aButtonValue = 0;
+        public bool ignoreAInputs = false;
+        public int cutScene = 1;
+
+        //This are only temp variables
+        public int orderNumber = 0;
+
 
         public Game()
         {
@@ -347,6 +354,7 @@ namespace ProtoDerp
             blockList.AddLast("cloudPix");
             //sprites.Add("DeathTime", new Sprite(Content, "DeathTime"));
             sprites.Add("black", new Sprite(Content,"black"));
+            sprites.Add("blackBackground", new Sprite(Content, "blackBackground"));
             sprites.Add("blackCircle", new Sprite(Content, "blackCircle"));
             sprites.Add("redCircle", new Sprite(Content, "redCircle"));
             sprites.Add("red", new Sprite(Content, "red"));
@@ -618,7 +626,8 @@ namespace ProtoDerp
             fonts[(int)Fonts.FT_MEDIUM] = Content.Load<SpriteFont>("Font\\share_20px_reg");
             fonts[(int)Fonts.FT_HEADER] = Content.Load<SpriteFont>("Font\\share_48px_bold");
             fonts[(int)Fonts.FT_TITLE] = Content.Load<SpriteFont>("Font\\ghost_42px_bold");
-
+            fonts[(int)Fonts.FT_PIXEL] = Content.Load<SpriteFont>("Font\\PressStart2P");
+            
             //Title Screen
             //populateWorld();
             addSound("Rage//Wave//jump");

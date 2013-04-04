@@ -25,11 +25,11 @@ namespace ProtoDerp
         public float width, height;
         String spriteNumber;
         Vector2 origPos,origin;
-        SpriteStripAnimationHandler ani;
+        protected SpriteStripAnimationHandler ani;
         Sprite itemSprite;
         float startTime, endTime;
-
-
+        protected float aValue = -1;
+        bool loadFromCT=false;
         public CutSceneItem(Game g, Arena a,float xPos,float yPos, int playerNum, String spriteNumber,float startTime,float endTime)
             : base(g)
         {
@@ -47,10 +47,69 @@ namespace ProtoDerp
             LoadContent();
             origin = new Vector2(ani.widthOf() / 2, ani.heightOf() / 2);
         }
+        public CutSceneItem(Game g, Arena a, float xPos, float yPos, int playerNum, String spriteNumber,float aValue, bool loadFromCT)
+            : base(g)
+        {
+            this.pos = new Vector2(game.drawingTool.ActualScreenPixelWidth * xPos, game.drawingTool.ActualScreenPixelHeight * yPos);
+            this.origPos = new Vector2(game.drawingTool.ActualScreenPixelWidth * xPos, game.drawingTool.ActualScreenPixelHeight * yPos);
+            this.drawPriority = Constants.PLAYER_DRAWPRI;
+            this.spriteNumber = spriteNumber;
+            //this.height = height;
+            //this.width = width;
+            this.blockNumber = game.blockNumber;
+            this.aValue = aValue;
+            this.IsVisible = false;
+            game.blockNumber++;
+
+            this.loadFromCT = loadFromCT;
+            LoadContent();
+            origin = new Vector2(ani.widthOf() / 2, ani.heightOf() / 2);
+        }
         public void LoadContent()
         {
-            itemSprite = game.getSprite(spriteNumber);
-            ani = game.getSpriteAnimation(spriteNumber);
+            if (loadFromCT)
+            {
+                itemSprite = new Sprite(game.Content, "CutScene" + game.cutScene + "\\" + spriteNumber);
+                ani = game.getSpriteAnimation("Error");
+            }
+            else
+            {
+                itemSprite = game.getSprite(spriteNumber);
+                ani = game.getSpriteAnimation(spriteNumber);
+            }
+        }
+        public void itemTimeUpdate(double itemTime)
+        {
+            if (itemTime >= startTime)
+            {
+                this.IsVisible = true;
+                game.ignoreAInputs = true;
+
+            }
+            if (itemTime >= endTime)
+            {
+                this.IsVisible = false;
+                this.dispose = true;
+                game.ignoreAInputs = false;
+                game.aButtonValue++;
+            }
+        }
+        public void updateButtonValue()
+        {
+
+            if (aValue == game.aButtonValue)
+            {
+                this.IsVisible = true;
+                
+            }
+            if (aValue < game.aButtonValue)
+            {
+                this.IsVisible = false;
+                this.dispose = true;
+                this.removeItself();
+               
+            }
+
         }
         public override void Update(GameTime gameTime, float worldSpeed)
         {
@@ -58,15 +117,13 @@ namespace ProtoDerp
             double itemTime =game.cutSceneStartTime.Elapsed.TotalMilliseconds;// game.cutSceneStartTime.Stop()
             ani.Update();
             game.cutSceneStartTime.Start();
-            if (itemTime >= startTime)
+            if (aValue < 0)
             {
-                this.IsVisible = true;
-
+                itemTimeUpdate(itemTime);
             }
-            if (itemTime >= endTime)
+            else
             {
-                this.IsVisible = false;
-                this.dispose = true;
+                updateButtonValue();
             }
 
         }
@@ -79,7 +136,7 @@ namespace ProtoDerp
                     spriteBatch.Draw(itemSprite.index, new Rectangle((int)(pos.X),
                            (int)(pos.Y),
                            (int)(itemSprite.index.Width / 2), (int)(itemSprite.index.Height / 2)), null, Color.White, 0,
-                           new Vector2(itemSprite.index.Width, itemSprite.index.Height), SpriteEffects.None, 0f);
+                           new Vector2(itemSprite.index.Width/2, itemSprite.index.Height/2), SpriteEffects.None, 0f);
                 }
                 else
                 {

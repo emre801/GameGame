@@ -23,10 +23,12 @@ namespace ProtoDerp
         KeyboardInput keyInput;
         GUI gui = null;
         float curHeight, curWidth;
+        bool isFirstUpdate = true;
         public CutScene(Game g, int cutSceneNumber)
             : base(g)
         {
             this.cutSceneNumber = cutSceneNumber;
+            game.cutScene = cutSceneNumber;
             if (this.cutSceneNumber > Constants.TOTAL_NUMBER_OF_WORLDS)
                 this.cutSceneNumber = Constants.TOTAL_NUMBER_OF_WORLDS;
             addCurrentPictures();
@@ -55,6 +57,7 @@ namespace ProtoDerp
             }
             
             gui = new GUI(game);
+            game.aButtonValue = 0;
             createCutScene();
             
 
@@ -94,12 +97,70 @@ namespace ProtoDerp
                 string[] words = line.Split(delimiterChars);
                 float x = System.Convert.ToSingle(words[1]);
                 float y = System.Convert.ToSingle(words[2]);
-                String spriteName = words[3];
+               
                 if (words[0].Equals("Normal"))
                 {
+                    String spriteName = words[3];
                     CutSceneItem csi = new CutSceneItem(game, game.Arena, x, y, 1, spriteName,
                         System.Convert.ToSingle(words[4]), System.Convert.ToSingle(words[5]));
                     game.addEntity(csi);
+                }
+                if (words[0].Equals("AButt"))
+                {
+                    String spriteName = words[3];
+                    bool butt=Boolean.Parse(words[5]);
+                    CutSceneItem csi = new CutSceneItem(game, game.Arena, x, y, 1, spriteName,
+                        System.Convert.ToSingle(words[4]), butt);
+                    game.addEntity(csi);
+                }
+                if (words[0].Equals("AButtMoveCycle"))
+                {
+                    String spriteName = words[3];
+                    bool butt = Boolean.Parse(words[5]);
+                    CutSceneMovingItem csi = new CutSceneMovingItem(game, game.Arena, x, y, 
+                        System.Convert.ToSingle(words[6]), 
+                        System.Convert.ToSingle(words[7]), 1, spriteName,
+                        System.Convert.ToSingle(words[4]), butt);
+                    game.addEntity(csi);
+                }
+                if (words[0].Equals("NormalMoveCycle"))
+                {
+                    String spriteName = words[3];
+                    CutSceneMovingItem csi = new CutSceneMovingItem(game, game.Arena, x, y,
+                        System.Convert.ToSingle(words[6]),
+                        System.Convert.ToSingle(words[7]), 1, spriteName,
+                        System.Convert.ToSingle(words[4]), System.Convert.ToSingle(words[5]));
+                    game.addEntity(csi);
+                }
+                if (words[0].Equals("MultipleMoves"))
+                {
+                    String spriteName = words[3];
+                    float totalCount = x;
+                    int sizeOfArray = (int)y;
+                     bool butt = Boolean.Parse(words[4]);
+                    Vector2[] paths = new Vector2[sizeOfArray];
+                    int count = 0;
+                    for (int i = 0; i < x;i=i+2 )
+                    {
+                        float xVal = System.Convert.ToSingle(words[i + 5]);
+                        float yVal = System.Convert.ToSingle(words[i + 6]);
+                        paths[count]=(new Vector2(xVal,yVal));
+                        count++;
+                    }
+                    CutSceneMultipleMoves csmm = new CutSceneMultipleMoves(game, game.Arena, paths, 1, spriteName, butt);
+                    game.addEntity(csmm);
+                }
+                if (words[0].Equals("Text"))
+                {
+                    float numberOfLines=System.Convert.ToSingle(words[3]);
+                    float orderNumber = System.Convert.ToSingle(words[4]);
+                    String[] text = new String[(int)numberOfLines];
+                    for (int i = 0; i < numberOfLines; i++)
+                    {
+                        text[i]=sr.ReadLine();
+                    }
+                    CutSceneText cst = new CutSceneText(game, game.Arena, new Vector2(x, y), 1, text,orderNumber);
+                    game.addEntity(cst);
                 }
             }
             
@@ -107,9 +168,43 @@ namespace ProtoDerp
 
         public override void Update(GameTime gameTime, float worldFactor)
         {
+            if (!Constants.DO_CUT_SCENE)
+                return;
+
+            if (isVisible)
+            {
+                game.pauseMusic();
+                if (game.currentWorld > Constants.STARTING_WORLD)
+                    game.doNotLoadLevel = true;
+                if (game.currentWorld > Constants.STARTING_WORLD)
+                    gui.Update(gameTime, worldFactor);
+                if ((this.player1.isAPressed() || keyInput.IsNewKeyPressed(Keys.Enter)) && !game.ignoreAInputs)
+                {
+                    game.aButtonValue = game.aButtonValue + 1;
+
+                }
+                LinkedList<CutSceneItem> cutScenes = game.getEntitiesOfType<CutSceneItem>();
+                bool skippToMain = true;
+                if (!isFirstUpdate)
+                {
+                    foreach (CutSceneItem csi in cutScenes)
+                    {
+                        if (csi.IsVisible)
+                        {
+                            skippToMain = false;
+                            break;
+                        }
+                    }
+                    if (skippToMain)
+                    {
+                        loadLevelInfo();
+                    }
+                }
+                isFirstUpdate = false;
+            }
             //if(Constants.FULLSCREEN)
                 //game.drawingTool.cam.Pos = new Vector2(800, 540);
-
+            /*
             if (game.currentLevel == -1)
             {
                 game.currentLevel = 1;
@@ -136,6 +231,7 @@ namespace ProtoDerp
                 keyInput.Update(gameTime);
                 if (this.player1.isAPressed()|| keyInput.IsNewKeyPressed(Keys.Enter))
                 {
+                    game.aButtonValue = game.aButtonValue + 1;
                     if (images.Count > currentPic+1)
                     {
                         currentPic++;
@@ -154,6 +250,7 @@ namespace ProtoDerp
 
                 }
             }
+             * */
             if (gui.isDoneClosing)
                 loadLevelInfo();
 
@@ -187,6 +284,7 @@ namespace ProtoDerp
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             //TODO add Draw so that it goes to fullScreen :)
+            /*
             if (isVisible)
             {
                 
@@ -198,7 +296,10 @@ namespace ProtoDerp
                 
                 if (game.currentWorld > Constants.STARTING_WORLD)
                     gui.Draw(gameTime, spriteBatch);
-            }   
+            }   */
+            if(isVisible)
+                if (game.currentWorld > Constants.STARTING_WORLD)
+                gui.Draw(gameTime, spriteBatch);
         }
 
     }

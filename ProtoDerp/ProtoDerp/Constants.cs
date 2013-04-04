@@ -9,7 +9,7 @@ namespace ProtoDerp
 {
     class Constants
     {
-        public const int WRITE_LEVEL = 9;
+        public const int WRITE_LEVEL = 4;
         public const int STARTING_WORLD = 1;
         public const int MAX_WRITE_LEVEL = 29;
         public const int READ_LEVEL = 2;
@@ -49,7 +49,7 @@ namespace ProtoDerp
 
         public const int TOTALNUMBEROFMAPS = 4;
 
-        public const bool FULLSCREEN = false;
+        public const bool FULLSCREEN = true;
 
         public const bool PLAY_MUSIC = true;
 

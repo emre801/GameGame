@@ -217,7 +217,11 @@ Content\SnowWorld\SnowTree1.xnb
 Content\SnowWorld\SnowTree2.xnb
 Content\SnowWorld\SnowTree3.xnb
 Content\SpriteWallSlide.xnb
+Content\blackBackground.xnb
+Content\Font\PressStart2P.xnb
 Content\CutScene1\info.txt
+Content\CutScene2\info.txt
+Content\CutScene3\info.txt
 Content\Template\Level3.txt
 Content\Template\Level2.txt
 Content\Template\Level1.txt
