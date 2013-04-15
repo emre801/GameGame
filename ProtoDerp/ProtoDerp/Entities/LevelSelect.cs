@@ -92,7 +92,7 @@ namespace ProtoDerp
         public void DrawText(SpriteBatch spriteBatch, float x, float y, String text)
         {
             String[] tempstrMulti = text.Split("|".ToCharArray());
-            SpriteFont font = game.fonts[(int)Game.Fonts.FT_HEADER];
+            SpriteFont font = game.fonts[(int)Game.Fonts.FT_PIXEL];
             tempstrMulti = text.Split("|".ToCharArray());
             for (int i = 0; i < tempstrMulti.Length; i += 1)
                 spriteBatch.DrawString(font, tempstrMulti[i],

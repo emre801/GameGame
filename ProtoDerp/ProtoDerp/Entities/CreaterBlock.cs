@@ -54,7 +54,7 @@ namespace ProtoDerp
         Vector2 point1 = new Vector2(0, 0), point2 = new Vector2(0, 0);
         bool clickOne = false;
         bool clickTwo = false;
-        ArrayList pathPoints= new ArrayList();
+        List<Vector2> pathPoints= new List<Vector2>();
         Vector2 drawPoint1 = Vector2.Zero, drawPoint2=Vector2.Zero;
         //Vector2 drawSquarePoint1 = Vector2.Zero, drawSquarePoint = Vector2.Zero;
         int currentPointValue = 0;
@@ -421,6 +421,9 @@ namespace ProtoDerp
                             break;
                         case Game.BlockType.WaterBlock:
                             addWaterBlock();
+                            break;
+                        case Game.BlockType.Sign:
+                            addSignBlock();
                             break;
                         case Game.BlockType.Fan:
                             addFan();
@@ -810,6 +813,10 @@ namespace ProtoDerp
                     break;
                 case 9:
                     game.blockType = Game.BlockType.Missle;
+                    game.cachedEntityLists = new Dictionary<Type, object>();
+                    break;
+                case 10:
+                    game.blockType = Game.BlockType.Sign;
                     game.cachedEntityLists = new Dictionary<Type, object>();
                     break;
 
@@ -1275,7 +1282,7 @@ namespace ProtoDerp
                         {
                             pathPoints.Add(origin+Constants.player1SpawnLocation);
                             game.addEntity(new MovingCycle(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], game.pathSpeed, pathPoints, true));
-                            pathPoints = new ArrayList();
+                            pathPoints = new List<Vector2>();
                         }
                         break;
                     case Game.BlockType.WaterBlock:
@@ -1286,6 +1293,9 @@ namespace ProtoDerp
                         break;
                     case Game.BlockType.Missle:
                         game.addEntity(new Missle(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter],game.pathSpeed,true));
+                        break;
+                    case Game.BlockType.Sign:
+                        game.addEntity(new SignBlock(game, game.Arena, origin, 1, blockArray[game.spriteBlockCounter], rotation, blockWidth, blockHeight));
                         break;
                 }
             }
@@ -1335,6 +1345,10 @@ namespace ProtoDerp
         public void addWaterBlock()
         {
             game.addEntity(new WaterBlock(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter], rotation,blockWidth,blockHeight));
+        }
+        public void addSignBlock()
+        {
+            game.addEntity(new SignBlock(game, game.Arena, origPos, 1, blockArray[game.spriteBlockCounter], rotation, blockWidth, blockHeight));
         }
 
 

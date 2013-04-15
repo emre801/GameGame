@@ -1918,6 +1918,15 @@
       <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Font\PressStart2P.xnb</Output>
       <Time>2013-04-04T11:04:05.1884806-04:00</Time>
     </Item>
+    <Item>
+      <Source>sign0.png</Source>
+      <Name>sign0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\sign0.xnb</Output>
+      <Time>2013-04-05T21:19:47.794957-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

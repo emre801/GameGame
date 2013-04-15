@@ -105,6 +105,15 @@
 1709 -695 cloudPix SuperBack 349 84
 1981 -385 cloudPix SuperBack 349 84
 2346 -851 cloudPix SuperBack 349 84
+74 56 sign0 SignBlock 0 56 63
+Text 0.3 0.8 -1
+This is level one
+Press A near a sign for tips
+Or not
+whatever I'm not your mother
+Ok fine.
+Get the green star to go to the next level
+$
 Demi -349 1182 -532 795
 BGCOLOR 167 218 220 
 CAM 0.55

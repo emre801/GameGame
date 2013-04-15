@@ -569,6 +569,10 @@ namespace ProtoDerp
                         b.DrawShadow(gameTime, spriteBatch);
                     }
                 }
+                if (e is SignBlock)
+                {
+                    e.Draw(gameTime, spriteBatch);
+                }
 
             }
 
@@ -738,7 +742,15 @@ namespace ProtoDerp
                 foreach (Button b in game.Arena.buttons)
                 {
                     b.Draw(gameTime, spriteBatch);
-                } 
+                }
+                foreach (Entity e in entities)
+                {
+                    game.hackyGuiThing = true;
+                    if (e is CutSceneText)
+                        e.Draw(gameTime, spriteBatch);
+                    game.hackyGuiThing = false;
+
+                }
                 game.Arena.gui.Draw(gameTime, spriteBatch);
 
                 game.Arena.gui.DrawMouse(gameTime, spriteBatch);

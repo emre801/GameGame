@@ -34,6 +34,8 @@ namespace ProtoDerp
         public float deathFadeAlpha=1f;
         public float respawnFadeAlpha = 0f;
         public bool isDoneClosing = false;
+        //CutSceneText cst;
+
         public GUI(Game g)
             : base(g)
         {
@@ -82,6 +84,8 @@ namespace ProtoDerp
 
         }
 
+        
+
         public override void Update(GameTime gameTime, float worldSpeed)
         {
             //No Need to update anything here
@@ -92,6 +96,9 @@ namespace ProtoDerp
         {
             float zoom=game.drawingTool.cam.Zoom;
             keyInput.Update(gameTime);
+            
+
+
             if (firstTransition&& game.numDeath==0)
             {
                 DrawTransitionOpening(spriteBatch);
@@ -484,6 +491,9 @@ namespace ProtoDerp
                     break;
                case Game.BlockType.Missle:
                     blockInfo += "Missle Block";
+                    break;
+               case Game.BlockType.Sign:
+                    blockInfo += "Sign Block";
                     break;
 
 

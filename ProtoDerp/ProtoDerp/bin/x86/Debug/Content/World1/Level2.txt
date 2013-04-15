@@ -172,6 +172,12 @@
 -1234 -444 cloudPix SuperBack 324 74
 -2228 -551 cloudPix SuperBack 324 74
 -2311 -347 cloudPix SuperBack 324 74
+280 49 sign0 SignBlock 0 56 63
+Text 0.3 0.8 -1
+You see those spike things
+....
+Try to avoid them.
+$
 Demi -138 1487 337 1178
 BGCOLOR 167 218 220 
 CAM 0.5047556

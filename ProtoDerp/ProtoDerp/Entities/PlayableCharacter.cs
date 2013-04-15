@@ -388,7 +388,7 @@ namespace ProtoDerp
                 
             } 
 
-            if ((inputState.isAPressed() || keyInput.IsNewKeyPressed(Keys.Space)) && onGround)// && body.LinearVelocity.Y > -50)
+            if ((inputState.isAPressed() || keyInput.IsNewKeyPressed(Keys.Space)) && onGround && !game.isNextToSign)// && body.LinearVelocity.Y > -50)
             {
                 body.IgnoreGravity = true;
                 float oldYvalue = body.LinearVelocity.Y;

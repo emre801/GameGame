@@ -82,7 +82,7 @@ namespace ProtoDerp
         public float maxLeft, maxRight, maxTop, maxButtom;
         public int count = 0;
 
-        public enum BlockType { Normal, Death, Moving, Goal, Magnet,Path,Cycle,WaterBlock,Fan,Missle };
+        public enum BlockType { Normal, Death, Moving, Goal, Magnet,Path,Cycle,WaterBlock,Fan,Missle,Sign };
         public BlockType blockType = BlockType.Normal;
 
         public float cXLocation=0, cYLocation=0;
@@ -185,7 +185,11 @@ namespace ProtoDerp
         //This are only temp variables
         public int orderNumber = 0;
 
+        public float scale;
 
+        public bool isReadingText = false;
+        public bool hackyGuiThing = false;
+        public bool isNextToSign = false;
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -332,7 +336,7 @@ namespace ProtoDerp
            
             drawingTool.initialize();
             playerOneInput = new XboxInput(PlayerIndex.One);
-
+            this.scale = drawingTool.ActualScreenPixelWidth / 800;
             //Load uploaded sprites
             //if(Constants.IS_IN_DEBUG_MODE)
                 //loadImageFromContent();
@@ -343,12 +347,14 @@ namespace ProtoDerp
             /*sprites.Add("fire0", new Sprite(Content, "fire0"));
             sprites.Add("fire1", new Sprite(Content, "fire1"));
             sprites.Add("fire2", new Sprite(Content, "fire2"));
-             */
+           s  */
             sprites.Add("cloud", new Sprite(Content, "cloud"));
             blockList.AddLast("cloud");
 
             sprites.Add("gym", new Sprite(Content, "gym"));
             blockList.AddLast("gym");
+            sprites.Add("sign0", new Sprite(Content, "sign0"));
+            blockList.AddLast("sign0");
 
             sprites.Add("cloudPix", new Sprite(Content, "cloudPix"));
             blockList.AddLast("cloudPix");
@@ -1070,6 +1076,34 @@ namespace ProtoDerp
                 lines.AddLast(x + " " + y + " " + spriteName + " WaterBlock" + " " + b.rotationAngle + " "+b.width+ " "+ b.height);
 
             }
+
+            LinkedList<SignBlock> signBlock = getEntitiesOfType<SignBlock>();
+            foreach (SignBlock b in signBlock)
+            {
+
+                if (!b.IsVisible)
+                    continue;
+                int x = (int)b.origPos.X;
+                int y = (int)b.origPos.Y;
+                String spriteName = b.spriteNumber;
+                lines.AddLast(x + " " + y + " " + spriteName + " SignBlock" + " " + b.rotationAngle + " " + b.width + " " + b.height);
+                
+            }
+
+            LinkedList<CutSceneText> text = getEntitiesOfType<CutSceneText>();
+            foreach (CutSceneText b in text)
+            {
+               
+                lines.AddLast("Text "+b.pos.X/drawingTool.ActualScreenPixelWidth + " " + b.pos.Y/drawingTool.ActualScreenPixelHeight + " " + b.orderNumber);
+                String[] texts=b.getText();
+                foreach(String k in texts)
+                {
+                    lines.AddLast(k);
+                }
+                lines.AddLast("$");
+
+            }
+
             LinkedList<Missle> missleBlocks = getEntitiesOfType<Missle>();
 
             foreach (Missle b in missleBlocks)
@@ -1235,6 +1269,19 @@ namespace ProtoDerp
            { 
                 pauseAlpha = 0.25f;
                 return;
+            }
+            if (isReadingText)
+            {
+                orderNumber = -1;
+                foreach (Entity e in entities)
+                {
+                    if (e is CutSceneText)
+                    {
+                        e.Update(gameTime, WorldSpeed);
+                    }
+                }
+                return;
+
             }
 
             if (backToTitleScreen)

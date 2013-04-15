@@ -30,9 +30,10 @@ namespace ProtoDerp
         bool stopSound = false;
         float boxLength = 1000;
         bool IsDoneOpening = false,isClosing=false;
-        float orderNumber = 0;
+        public float orderNumber = 0;
         
-        float openValue = 0;
+        public  float openValue = 0;
+
         public CutSceneText(Game g, Arena a, Vector2 points, int playerNum, String[] text, float orderNumber)
             : base(g, a, points.X, points.Y, playerNum, "Error", -1, false)
         {
@@ -41,7 +42,14 @@ namespace ProtoDerp
             this.text = text;
             this.orderNumber = orderNumber;
         }
-
+        public String[] getText()
+        {
+            return text;
+        }
+        public Vector2 getOriginalPosition()
+        {
+            return new Vector2(pos.X / game.drawingTool.ActualScreenPixelWidth, pos.Y / game.drawingTool.ActualScreenPixelHeight);
+        }
 
         public override void Update(GameTime gameTime, float worldSpeed)
         {
@@ -65,12 +73,13 @@ namespace ProtoDerp
                             game.sounds["Rage//Wave//menu"].Play();
                     }
                     textSpeedValue++;
-                    if (textValue >= text.Length)
+                    if (textValue >= text.Length || xi.IsButtonPressed(Buttons.B))
                     {
                         //IsVisible = false;
                         IsDoneOpening = false;
                         isClosing = true;
                     }
+
                 }
                 else
                 {
@@ -79,8 +88,18 @@ namespace ProtoDerp
                         openValue -= 10;
                         if (openValue == 0)
                         {
+                            if(!game.isReadingText)
+                                this.dispose = true;
                             IsVisible = false;
                             game.orderNumber = game.orderNumber + 1;
+                            if (game.isReadingText)
+                            {
+                                game.isReadingText = false;
+                                IsVisible = true;
+                            }
+                            textValue = 0;
+                            IsDoneOpening = false; 
+                            isClosing = false;
                         }
                     }
                     else
@@ -104,14 +123,14 @@ namespace ProtoDerp
             char[] tempstrMulti = text.ToCharArray(); 
             SpriteFont font = game.fonts[(int)Game.Fonts.FT_PIXEL];
 
-            drawBorderImage(x - font.MeasureString("A").X * size, y - font.MeasureString("A").Y*size*0.5f, 100, (int)(boxLength * size * 0.75f), spriteBatch);
+            drawBorderImage(x - font.MeasureString("A").X * size * game.scale, y - font.MeasureString("A").Y * size * game.scale * 0.5f, 100, (int)(boxLength * size * game.scale * 0.75f), spriteBatch);
             
             if (currentTextValue > tempstrMulti.Length)
             {
                 currentTextValue = tempstrMulti.Length;
                 stopSound = true;
             }
-            float numOfCharsInLine = boxLength*size / (font.MeasureString("A").Y * size);
+            float numOfCharsInLine = boxLength * size * game.scale / (font.MeasureString("A").Y * size * game.scale);
             int counter = 0;
             while (counter + numOfCharsInLine < tempstrMulti.Length)
             {
@@ -130,7 +149,7 @@ namespace ProtoDerp
                 if ("{".Equals("" + tempstrMulti[i]))
                 {
                     drawPosX = 0;
-                    drawPosY += font.MeasureString("A").Y * size;
+                    drawPosY += font.MeasureString("A").Y * size * game.scale;
                     continue;
                 }
                 spriteBatch.DrawString(font, ""+tempstrMulti[i],
@@ -139,14 +158,14 @@ namespace ProtoDerp
                     0f,
                     Vector2.Zero,
                     //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
-                    1f*size,
+                    1f * size * game.scale,
                     SpriteEffects.None,
                     0);
-                drawPosX += font.MeasureString(""+tempstrMulti[i]).X*size;
-                if (drawPosX > boxLength*size)
+                drawPosX += font.MeasureString("" + tempstrMulti[i]).X * size * game.scale;
+                if (drawPosX > boxLength * size * game.scale)
                 {
                     drawPosX = 0;
-                    drawPosY += font.MeasureString("A").Y * size;
+                    drawPosY += font.MeasureString("A").Y * size* game.scale;
                 }
             }
 
@@ -167,7 +186,7 @@ namespace ProtoDerp
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            if (IsVisible && game.orderNumber==orderNumber)
+            if (IsVisible && game.orderNumber==orderNumber && game.hackyGuiThing)
             {
                 if (IsDoneOpening)
                 {
@@ -177,7 +196,9 @@ namespace ProtoDerp
                 {
                     SpriteFont font = game.fonts[(int)Game.Fonts.FT_PIXEL];
 
-                    drawBorderImage(pos.X - font.MeasureString("A").X * 0.5f, pos.Y - font.MeasureString("A").Y * 0.5f * 0.5f, (int)(100 * (openValue / 100f)), (int)((boxLength * 0.5f * 0.75f) * (openValue / 100f)), spriteBatch);
+                    drawBorderImage(pos.X - font.MeasureString("A").X * 0.5f, pos.Y - font.MeasureString("A").Y * 0.5f * 0.5f, 
+                        (int)(100 * (openValue / 100f)*game.scale),
+                        (int)((boxLength * 0.5f * 0.75f) * (openValue / 100f)*game.scale), spriteBatch);
             
 
 

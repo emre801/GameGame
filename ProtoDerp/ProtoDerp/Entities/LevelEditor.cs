@@ -44,6 +44,7 @@ namespace ProtoDerp
         LinkedList<MovingPath> movePathBlock = new LinkedList<MovingPath>();
         LinkedList<MovingCycle> moveCycleBlock = new LinkedList<MovingCycle>();
         LinkedList<WaterBlock> waterBlocks = new LinkedList<WaterBlock>();
+        LinkedList<SignBlock> signBlocks = new LinkedList<SignBlock>();
         LinkedList<Missle> missles = new LinkedList<Missle>();
         
         public void readFile(int templateNum)
@@ -116,8 +117,26 @@ namespace ProtoDerp
                     game.camPosSet = new Vector2(System.Convert.ToSingle(words[1]), System.Convert.ToSingle(words[2]));
                     continue;
                 }
-                float x=Convert.ToInt32(words[0]);
-                float y = Convert.ToInt32(words[1]);
+                if (words[0].Equals("Text"))
+                {
+                    float orderNumber = System.Convert.ToSingle(words[3]);
+                    float x1 = System.Convert.ToSingle(words[1]);
+                    float y1 = System.Convert.ToSingle(words[2]);
+                    List<String> textItems = new List<String>();
+                    String lineText;
+                    int i = 0;
+                    while (!(lineText = sr.ReadLine()).Contains("$"))
+                    {
+                        textItems.Add(lineText);
+                        i++;
+                    }
+                    String[] text = textItems.ToArray();
+                    CutSceneText cst = new CutSceneText(game, game.Arena, new Vector2(x1, y1), 1, text, orderNumber);
+                    game.addEntity(cst);
+                    continue;
+                }
+                float x = System.Convert.ToSingle(words[0]);
+                float y = System.Convert.ToSingle(words[1]);
                 String spriteName = words[2];
                 if (words[3].Equals("Block"))
                 {
@@ -174,7 +193,7 @@ namespace ProtoDerp
                 if (words[3].Equals("MovingCycle"))
                 {
                     int count = Convert.ToInt32(words[5]);
-                    ArrayList paths = new ArrayList();
+                    List<Vector2> paths = new List<Vector2>();
                     for (int i = 6; i < 6+count*2; i+=2)
                     {
                         int xPos = Convert.ToInt32(words[i]);
@@ -206,10 +225,16 @@ namespace ProtoDerp
                     waterBlocks.AddLast(new WaterBlock(game,game.Arena,new Vector2(x,y),1,spriteName,System.Convert.ToSingle(words[4]),System.Convert.ToSingle(words[5]),System.Convert.ToSingle(words[6])));
                 }
 
+                if (words[3].Equals("SignBlock"))
+                {
+                    signBlocks.AddLast(new SignBlock(game, game.Arena, new Vector2(x, y), 1, spriteName, System.Convert.ToSingle(words[4]), System.Convert.ToSingle(words[5]), System.Convert.ToSingle(words[6])));
+                }
+
                 if (words[3].Equals("Missle"))
                 {
                     missles.AddLast(new Missle(game, game.Arena, new Vector2(x, y), 1, spriteName, System.Convert.ToSingle(words[4]),true));
                 }
+                
                 
             }
 
@@ -236,6 +261,8 @@ namespace ProtoDerp
             foreach (GoalBlock i in goalBlocks)
                 game.addEntity(i);
             foreach (WaterBlock i in waterBlocks)
+                game.addEntity(i);
+            foreach (SignBlock i in signBlocks)
                 game.addEntity(i);
             foreach (Missle i in missles)
                 game.addEntity(i);

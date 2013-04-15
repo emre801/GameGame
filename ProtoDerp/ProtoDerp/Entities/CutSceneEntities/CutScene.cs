@@ -59,6 +59,8 @@ namespace ProtoDerp
             gui = new GUI(game);
             game.aButtonValue = 0;
             createCutScene();
+            game.orderNumber = 0;
+            game.hackyGuiThing = true;
             
 
         }
@@ -152,13 +154,20 @@ namespace ProtoDerp
                 }
                 if (words[0].Equals("Text"))
                 {
-                    float numberOfLines=System.Convert.ToSingle(words[3]);
-                    float orderNumber = System.Convert.ToSingle(words[4]);
-                    String[] text = new String[(int)numberOfLines];
-                    for (int i = 0; i < numberOfLines; i++)
+                    //float numberOfLines=System.Convert.ToSingle(words[3]);
+                    float orderNumber = System.Convert.ToSingle(words[3]);
+                    //String[] text = new String[(int)numberOfLines];
+                    List<String> textItems = new List<String>();
+                    //for (int i = 0; i < numberOfLines; i++)
+                    String lineText;
+                    int i=0;
+                    while(!(lineText=sr.ReadLine()).Contains("$"))
                     {
-                        text[i]=sr.ReadLine();
+                        //text[i] = lineText;
+                        textItems.Add(lineText);
+                        i++;
                     }
+                    String[] text=textItems.ToArray();
                     CutSceneText cst = new CutSceneText(game, game.Arena, new Vector2(x, y), 1, text,orderNumber);
                     game.addEntity(cst);
                 }
@@ -168,8 +177,11 @@ namespace ProtoDerp
 
         public override void Update(GameTime gameTime, float worldFactor)
         {
-            if (!Constants.DO_CUT_SCENE)
+            if (!Constants.DO_CUT_SCENE || game.currentLevel > 1)
+            {
+                loadLevelInfo();
                 return;
+            }
 
             if (isVisible)
             {
@@ -259,6 +271,7 @@ namespace ProtoDerp
         public void loadLevelInfo()
         {
             //game.preLoadEachLevelWithOutGoingToTitle();
+            game.hackyGuiThing = false;
             game.gMode = 0;
             game.isInLevelSelect = false;
             //game.playSong("Music//ForrestSounds");
