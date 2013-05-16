@@ -15,8 +15,9 @@ using FarseerPhysics.Controllers;
 using FarseerPhysics.Dynamics;
 using FarseerPhysics.Factories;
 using System.IO;
-using System.Net;
-using System.Net.Mail;
+using System.Threading;
+//using System.Net;
+//using System.Net.Mail;
 
 
 
@@ -29,7 +30,7 @@ namespace ProtoDerp
         public enum Fonts { FT_MEDIUM, FT_HEADER, FT_TITLE,FT_PIXEL };
         public SpriteFont[] fonts = new SpriteFont[4];
 
-        public SortedSet<Entity> entities = new SortedSet<Entity>();
+        public List<Entity> entities = new List<Entity>();
         public float WorldSpeed { get; set; }
         Dictionary<string, Sprite> sprites = new Dictionary<string, Sprite>();
         public LinkedList<String> blockList = new LinkedList<string>();
@@ -133,7 +134,7 @@ namespace ProtoDerp
 
         public Color backGroundColor = Color.SkyBlue;
 
-        public SortedSet<Entity> backGroundImages = new SortedSet<Entity>();
+        public List<Entity> backGroundImages = new List<Entity>();
 
         public int backGroundNum = 0;
 
@@ -190,6 +191,11 @@ namespace ProtoDerp
         public bool isReadingText = false;
         public bool hackyGuiThing = false;
         public bool isNextToSign = false;
+
+        public int perfectComplete = 0;
+        public float splashFadeOut = 1f;
+
+        bool isLoadingContent = true;
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -275,9 +281,13 @@ namespace ProtoDerp
             //JumpPoint
             LevelEditor le = new LevelEditor(this);
             preloadLevelOnly = true;
+            
             for(int i =1; i<20;i++)
             {
                 le.readFile(i);
+                perfectComplete += 1;
+                entities.Clear();
+                toBeAdded.Clear();
             }
             preloadLevelOnly = false;
             backToTitleScreen = false;
@@ -328,13 +338,36 @@ namespace ProtoDerp
         {          
             base.Initialize();
         }
-
         protected override void LoadContent()
+        {
+            //LoadingContent();
+            //ThreadInfo threadInfo = new ThreadInfo();
+            //Load Fonts
+            fonts[(int)Fonts.FT_MEDIUM] = Content.Load<SpriteFont>("Font\\share_20px_reg");
+            fonts[(int)Fonts.FT_HEADER] = Content.Load<SpriteFont>("Font\\share_48px_bold");
+            fonts[(int)Fonts.FT_TITLE] = Content.Load<SpriteFont>("Font\\ghost_42px_bold");
+            fonts[(int)Fonts.FT_PIXEL] = Content.Load<SpriteFont>("Font\\PressStart2P");
+            drawingTool.initialize();
+            sprites.Add("c801", new Sprite(Content, "Splash Art\\c801"));
+            sprites.Add("PixelA", new Sprite(Content, "Splash Art\\PixelA"));
+
+            ThreadPool.QueueUserWorkItem(new WaitCallback(LoadingContentThread2));
+        }
+
+        public void LoadingContentThread1(Object a)
+        {
+            
+
+
+        }
+
+        public void LoadingContentThread2(Object a)
         {
             
             //spriteBatch = new SpriteBatch(GraphicsDevice);
+            isLoadingContent = true;
            
-            drawingTool.initialize();
+            //drawingTool.initialize();
             playerOneInput = new XboxInput(PlayerIndex.One);
             this.scale = drawingTool.ActualScreenPixelWidth / 800;
             //Load uploaded sprites
@@ -348,6 +381,7 @@ namespace ProtoDerp
             sprites.Add("fire1", new Sprite(Content, "fire1"));
             sprites.Add("fire2", new Sprite(Content, "fire2"));
            s  */
+            perfectComplete = 10;
             sprites.Add("cloud", new Sprite(Content, "cloud"));
             blockList.AddLast("cloud");
 
@@ -390,7 +424,7 @@ namespace ProtoDerp
             blockList.AddLast("trees3");
             sprites.Add("trees4", new Sprite(Content, "trees4"));
             blockList.AddLast("trees4");
-
+            perfectComplete = 40;
             sprites.Add("roots0", new Sprite(Content, "roots0"));
             blockList.AddLast("roots0");
             sprites.Add("roots1", new Sprite(Content, "roots1"));
@@ -561,7 +595,7 @@ namespace ProtoDerp
             sprites.Add("pix", new Sprite(Content, "pix"));
             sprites.Add("Circle", new Sprite(Content, "Circle"));
             sprites.Add("LeverSelect", new Sprite(Content, "LeverSelect"));
-
+            perfectComplete = 50;
             sprites.Add("MikeIcon", new Sprite(Content, "MikeIcon"));
             //sprites.Add("ahLogo", new Sprite(Content, "ahLogo"));
             sprites.Add("ahLogo0", new Sprite(Content, "ahLogo0"));
@@ -628,12 +662,7 @@ namespace ProtoDerp
             blockList.AddLast("QWOPStrip");
             blockList.AddLast("QWOPWhite");
 
-            //Load Fonts
-            fonts[(int)Fonts.FT_MEDIUM] = Content.Load<SpriteFont>("Font\\share_20px_reg");
-            fonts[(int)Fonts.FT_HEADER] = Content.Load<SpriteFont>("Font\\share_48px_bold");
-            fonts[(int)Fonts.FT_TITLE] = Content.Load<SpriteFont>("Font\\ghost_42px_bold");
-            fonts[(int)Fonts.FT_PIXEL] = Content.Load<SpriteFont>("Font\\PressStart2P");
-            
+           
             //Title Screen
             //populateWorld();
             addSound("Rage//Wave//jump");
@@ -724,7 +753,7 @@ namespace ProtoDerp
             sprites.Add("bulletAni", new Sprite(new SpriteStripAnimationHandler(new Sprite(Content, "bulletAni"), 21, 120f).getIndex(), "bulletAni"));
             blockList.AddLast("bulletAni");
 
-
+            perfectComplete = 70;
 
             spriteAnimation.Add("missile_strip_strip4", new SpriteStripAnimationHandler(new Sprite(Content, "missile_strip_strip4")
                 , 4, 120));//missle
@@ -769,11 +798,16 @@ namespace ProtoDerp
             addEntity(levelSelect);
            
             //playSong("Music//GameBeat2");
+            perfectComplete = 80;
             preloadSongs();
+//#if WINDOWS
             if(Constants.PRELOAD_LEVELS)
                 preLoadEachLevel();
-
+//#endif
+            perfectComplete = 100;
             backgroundTex = createBG();
+
+            isLoadingContent = false;
              
         
         }
@@ -848,7 +882,7 @@ namespace ProtoDerp
             if (level == -1)
             {
 
-                if (currentWorld <= Constants.TOTAL_NUMBER_OF_WORLDS)
+                if (currentWorld < Constants.TOTAL_NUMBER_OF_WORLDS)
                 {
 
                     //entities.Clear();
@@ -899,8 +933,13 @@ namespace ProtoDerp
         }
         public void preloadSongs()
         {
+
             DirectoryInfo di = new DirectoryInfo(Content.RootDirectory + "\\Music");
+#if WINDOWS
             FileInfo[] fi = di.GetFiles("*", SearchOption.AllDirectories);
+#elif XBOX
+            FileInfo[] fi = di.GetFiles();
+#endif
             foreach (FileInfo fInfo in fi)
             {
                 String songName = fInfo.Name;
@@ -912,10 +951,12 @@ namespace ProtoDerp
                 MediaPlayer.Volume = 0.1f;
             }
 
+
         }
 
         public void playRandonSong()
         {
+#if WINDOWS
             if (!Constants.PLAY_MUSIC)
                 return;
             MediaPlayer.Volume = 0.1f;
@@ -945,7 +986,7 @@ namespace ProtoDerp
                     playSong("Music\\" + songName);
                 }
             }
-        
+#endif
         }
 
         public void writeLevel(int templateNum)
@@ -1126,8 +1167,10 @@ namespace ProtoDerp
             lines.AddLast("CAM " + camZoomValue/drawingTool.zoomRatio);
 
             lines.AddLast("CPOS " + camPosSet.X + " " + camPosSet.Y);
+#if WINDOWS
             System.IO.File.WriteAllLines(path, lines);
-                
+#endif
+
             if (Constants.SEND_EMAIL_DATA)
             {
                 string emailBody = "";
@@ -1140,12 +1183,14 @@ namespace ProtoDerp
             }
             if (!Constants.IS_IN_DEBUG_MODE)
             {
+#if WINDOWS
                 DirectoryInfo di2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\LevelEditor");
                 System.IO.File.WriteAllLines(di2.FullName+"\\Level" + templateNum + @".txt", lines);
+#endif
             }
 
         }
-
+        /*
         public void sendEmail(string body)
         {
             var fromAddress = new MailAddress("c801studios@gmail.com", "EmailBot");
@@ -1206,10 +1251,18 @@ namespace ProtoDerp
             }
 
         }
-
+        */
         protected override void Update(GameTime gameTime)
         {
-            
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+            {
+                Exit();
+            }
+            if (isLoadingContent)
+            {
+                return;
+
+            }
             bool reloadButtons = false;
             xycounter = 0;
             if (inTransition)
@@ -1222,10 +1275,7 @@ namespace ProtoDerp
             {
                 //drawingTool.cam.Zoom = camZoomValue;
             }
-            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
-            {
-                Exit();
-            }
+            
             if (((XboxInput)playerOneInput).IsNewButtonPressed(Buttons.Back) && !pause)
             {
                 if (gMode == 0)
@@ -1325,6 +1375,8 @@ namespace ProtoDerp
                 addEntity(ct);
                 isInCreatorMode = false;
                 currentWorld++;
+                if (currentWorld > Constants.TOTAL_NUMBER_OF_WORLDS) ;
+                    currentWorld = 1;
                 inCutScene = false;
                 winningAnimation = false;
                 //preLoadEachLevelWithOutGoingToTitle();
@@ -1474,25 +1526,41 @@ namespace ProtoDerp
 
         }
 
-
+        //Jump point Joker
         protected override void Draw(GameTime gameTime)
         {
-            if (gMode == 0 || gMode == 2)
+            if (!isLoadingContent && splashFadeOut<0)
             {
-                GraphicsDevice.Clear(backGroundColor);
-                drawingTool.drawBGGradient(backgroundTex);
-                
+                if (gMode == 0 || gMode == 2)
+                {
+                    GraphicsDevice.Clear(backGroundColor);
+                    //Jump Point Batman
+                    //drawingTool.drawBGGradient(backgroundTex);
+
+                }
+                else
+                    GraphicsDevice.Clear(Color.Black);
+
+
+
+                drawingTool.drawEntities(entities, gameTime);
+                drawingTool.drawLetterBox();
+
+
+                base.Draw(gameTime);
             }
             else
+            {
                 GraphicsDevice.Clear(Color.Black);
+                GraphicsDevice gd = drawingTool.getGraphicsDevice();
+                var spriteBatch = new SpriteBatch(gd);
+                drawingTool.drawLoadingText();
+                if (perfectComplete == 100)
+                {
+                    splashFadeOut -= 0.005f;
+                }
 
-
-            
-            drawingTool.drawEntities(entities, gameTime);
-            drawingTool.drawLetterBox();
-            
-
-            base.Draw(gameTime);
+            }
         }
 
         private Texture2D createBG()
@@ -1561,7 +1629,7 @@ namespace ProtoDerp
         public void loadImageFromContent()
         {
 
-
+#if WINDOWS
             try
             {
                 if (Constants.IS_IN_REALSE_MODE)
@@ -1628,6 +1696,7 @@ namespace ProtoDerp
             {
 
             }
+#endif
 
 
         }

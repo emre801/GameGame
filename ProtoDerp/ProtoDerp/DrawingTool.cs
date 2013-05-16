@@ -346,12 +346,24 @@ namespace ProtoDerp
             //}
             //effect.Alpha = temp;
         }//
+        public void drawLoadingText()
+        {
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
+            DrawText(spriteBatch, 50, 50, "Loading " + game.perfectComplete + "%", 1,game.splashFadeOut);
+            Sprite spalshArt = game.getSprite("c801");
+            spriteBatch.Draw(spalshArt.index, new Rectangle((int)(ActualScreenPixelWidth*0.05f),
+                           (int)(ActualScreenPixelHeight*0.85f),
+                           (int)(spalshArt.index.Width*0.15f*game.scale), (int)(spalshArt.index.Height*0.15f*game.scale)), null, Color.White*game.splashFadeOut, 0, new Vector2(1, 1), SpriteEffects.None, 0f);
+            
+            spriteBatch.End();
 
+        }
         private void endBatch()
         {
             spriteBatch.End();
         }
 
+        public Vector2 oldPosition=Vector2.Zero;
         private void followPlayer()
         {
             float widthRatio = 0.85f;
@@ -363,10 +375,13 @@ namespace ProtoDerp
             //This allows the camera to follow the player
             PlayableCharacter p1 = game.Arena.player1;
             game.moveBackGround = new Vector2(0, 0);
+            oldPosition = cam.Pos;
+            bool hasCamMoved = false;
             if (!(game.Arena.maxLeft > p1.Position.X || game.Arena.maxRight < p1.Position.X))
             {
                 if (p1.Position.X + width > cam._pos.X + cam.ViewportWidth / 1)
                 {
+                    hasCamMoved = true;
                     cam.Move(new Vector2((p1.Position.X + width) - (cam._pos.X + cam.ViewportWidth / 1), 0));
                     //cam.Move(new Vector2(10, 0));
                     if (Math.Abs(game.Arena.player1.body.LinearVelocity.X) > 0.1f)
@@ -377,6 +392,7 @@ namespace ProtoDerp
                 }
                 if (p1.Position.X - width < cam._pos.X - cam.ViewportWidth / 1)
                 {
+                    hasCamMoved = true;
                     cam.Move(new Vector2((p1.Position.X - width) - (cam._pos.X - cam.ViewportWidth / 1), 0));
                     //cam.Move(new Vector2(-, 0));
                     if (Math.Abs(game.Arena.player1.body.LinearVelocity.X) > 0.1f)
@@ -390,6 +406,7 @@ namespace ProtoDerp
             {
                 if (p1.Position.Y + height2 > cam._pos.Y + cam.ViewportHeight / 1)
                 {
+                    hasCamMoved = true;
                     cam.Move(new Vector2(0, (p1.Position.Y + height2) - (cam._pos.Y + cam.ViewportHeight / 1)));
                     if (Math.Abs(game.Arena.player1.body.LinearVelocity.Y) > 0.1f)
                     {
@@ -399,6 +416,7 @@ namespace ProtoDerp
                 }
                 if (p1.Position.Y - height < cam._pos.Y - cam.ViewportHeight / 1)
                 {
+                    hasCamMoved = true;
                     cam.Move(new Vector2(0, (p1.Position.Y - height) - (cam._pos.Y - cam.ViewportHeight / 1)));
                     if (Math.Abs(game.Arena.player1.body.LinearVelocity.Y) > 0.1f)
                     {
@@ -416,6 +434,9 @@ namespace ProtoDerp
                 game.PlayerDies();
             }
             moveBackgrounCamera();
+            if(hasCamMoved)
+                game.moveBackGround = (cam.Pos - oldPosition)*5;
+            
         }
 
 
@@ -546,10 +567,10 @@ namespace ProtoDerp
                 else
                     followTitle();
 
-                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.AnisotropicClamp, null, null, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
+                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.LinearClamp, null, null, null, cam.get_transformation(gdm.GraphicsDevice /*Send the variable that has your graphic device here*/));
             }
         }
-        internal void drawEntities(SortedSet<Entity> entities, GameTime gameTime)
+        internal void drawEntities(List<Entity> entities, GameTime gameTime)
         {
             beginBatch();
             //Draw all game Entities (sprites)
@@ -752,7 +773,7 @@ namespace ProtoDerp
 
                 }
                 game.Arena.gui.Draw(gameTime, spriteBatch);
-
+                game.Arena.gui.DrawButtonPress(gameTime, spriteBatch);
                 game.Arena.gui.DrawMouse(gameTime, spriteBatch);
                 spriteBatch.End();
 
@@ -885,6 +906,43 @@ namespace ProtoDerp
                        angle, Vector2.Zero, new Vector2(length, width),
                        SpriteEffects.None, 0);
              * */
+        }
+        public void DrawText(SpriteBatch spriteBatch, float x, float y, String text, float size)
+        {
+            DrawText(spriteBatch, x, y, text, size, 1);
+        }
+
+        public void DrawText(SpriteBatch spriteBatch, float x, float y, String text, float size,float fadePercent)
+        {
+
+            char[] tempstrMulti = text.ToCharArray();
+            SpriteFont font = game.fonts[(int)Game.Fonts.FT_PIXEL];
+
+            //drawBorderImage(x - font.MeasureString("A").X * size * game.scale, y - font.MeasureString("A").Y * size * game.scale * 0.5f, 100, (int)(size * game.scale * 0.75f), spriteBatch);
+
+            float drawPosX = 0;
+            float drawPosY = 0;
+            for (int i = 0; i < tempstrMulti.Length; i += 1)
+            {
+                if ("{".Equals("" + tempstrMulti[i]))
+                {
+                    drawPosX = 0;
+                    drawPosY += font.MeasureString("A").Y * size * game.scale;
+                    continue;
+                }
+                spriteBatch.DrawString(font, "" + tempstrMulti[i],
+                    new Vector2(x + drawPosX, y + drawPosY),
+                    Color.White*fadePercent,
+                    0f,
+                    Vector2.Zero,
+                    //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
+                    1f * size * game.scale,
+                    SpriteEffects.None,
+                    0);
+                drawPosX += font.MeasureString("" + tempstrMulti[i]).X * size * game.scale;
+                
+            }
+
         }
     }
 }

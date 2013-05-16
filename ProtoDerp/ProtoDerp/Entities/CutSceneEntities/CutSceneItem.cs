@@ -69,6 +69,9 @@ namespace ProtoDerp
         {
             if (loadFromCT)
             {
+                if (game.cutScene > Constants.TOTAL_NUMBER_OF_WORLDS)
+                    game.cutScene = 1;
+
                 itemSprite = new Sprite(game.Content, "CutScene" + game.cutScene + "\\" + spriteNumber);
                 ani = game.getSpriteAnimation("Error");
             }

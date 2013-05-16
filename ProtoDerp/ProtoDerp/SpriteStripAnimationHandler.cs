@@ -111,8 +111,8 @@ namespace ProtoDerp
                 stopWatch.Reset();
                 nextState();
                 soundRate++;
-                if (sound != null && soundRate%rateOfSound==0)
-                    sound.Play();
+                //if (sound != null && soundRate%rateOfSound==0)
+                //    sound.Play();
             }
             stopWatch.Start();
 

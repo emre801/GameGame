@@ -220,6 +220,8 @@ Content\SpriteWallSlide.xnb
 Content\blackBackground.xnb
 Content\Font\PressStart2P.xnb
 Content\sign0.xnb
+Content\Splash Art\c801.xnb
+Content\Splash Art\PixelA.xnb
 Content\CutScene1\info.txt
 Content\CutScene2\info.txt
 Content\CutScene3\info.txt

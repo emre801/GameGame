@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using Microsoft.Xna.Framework;
 using System.Diagnostics;
+using Microsoft.Xna.Framework.Storage;
 
 namespace ProtoDerp
 {
@@ -49,23 +50,35 @@ namespace ProtoDerp
         
         public void readFile(int templateNum)
         {
-            String path = Directory.GetCurrentDirectory();
+            String path = "";
+#if WINDOWS
+            path=Directory.GetCurrentDirectory();
+            //string[] allFiles=StorageContainer.GetFileNames();
+            //fi.FullName = "T:\\584E07D1\\Content\\World1\\Level11.txt"
+#endif
             game.backGroundImages.Clear();
             int pathIndex = path.IndexOf("bin");
             path = @"Level" + templateNum + @".txt";
-
+            //game.currentWorld
             string file;
             if (!templates.TryGetValue(path, out file))
             {
-                file = templates.Values.First<string>();
-                Console.WriteLine("Level " + path + " not found.");
-                game.currentLevel = 1;
+                try
+                {
+                    file = templates.Values.First<string>();
+                    Console.WriteLine("Level " + path + " not found.");
+                    game.currentLevel = 1;
+                }
+                catch
+                {
+
+                }
             }
 
             height = Constants.GAME_WORLD_HEIGHT;
             width = Constants.GAME_WORLD_WIDTH;
-            
-            createLevel(file);
+            if(file!=null)
+                createLevel(file);
         }
 
         public void createLevel(String file)
@@ -108,7 +121,11 @@ namespace ProtoDerp
                 {
 
                     float camValue=System.Convert.ToSingle(words[1]);
+#if XBOX
+                    camValue=camValue*0.9f;
+#endif
                     game.drawingTool.cam.Zoom = camValue;
+                    
                     game.camZoomValue = camValue;
                     continue;
                 }
@@ -219,7 +236,6 @@ namespace ProtoDerp
                     game.backGroundImages.Add(new BackgroundBlock(game, game.Arena, new Vector2(x, y), 1, spriteName, System.Convert.ToSingle(words[5]), System.Convert.ToSingle(words[4])));
 
                 }
-
                 if (words[3].Equals("WaterBlock"))
                 {
                     waterBlocks.AddLast(new WaterBlock(game,game.Arena,new Vector2(x,y),1,spriteName,System.Convert.ToSingle(words[4]),System.Convert.ToSingle(words[5]),System.Convert.ToSingle(words[6])));
@@ -439,6 +455,7 @@ namespace ProtoDerp
             }
             if (Constants.FIND_LAG)
             {
+                #if WINDOWS
                 DirectoryInfo di2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\DebugInfo");
                 String name = di2.FullName + @"\LagInfo.txt";
                 LinkedList<String> lines = new LinkedList<String>();
@@ -446,6 +463,7 @@ namespace ProtoDerp
                 lines.AddLast(stopWatch.Elapsed.ToString());
                 lines.AddLast(game.stopWatchLagTimer.Elapsed.ToString());
                 System.IO.File.WriteAllLines(name, lines);
+            #endif
             }
             game.gameInsertValues = true;
 
@@ -455,7 +473,7 @@ namespace ProtoDerp
                 game.drawingTool.cam.Pos = game.camPosSet;
             
 
-            SortedSet<Entity> omg=game.entities;
+            List<Entity> omg=game.entities;
 
         }
         
@@ -472,26 +490,39 @@ namespace ProtoDerp
             {
                 DirectoryInfo di = new DirectoryInfo(@"Content\"+path);
                 String fullname=di.FullName;
+
                 //This clears the cache templates so that new Maps can be loaded
                 templates = new Dictionary<string, string>();
                 foreach (FileInfo fi in di.GetFiles())
                 {
-                    try
-                    {
+                   // try
+                    //{
+                        String fullPathName = fi.FullName;
+#if WINDOWS
                         templates.Add(fi.Name, File.ReadAllText(fi.FullName));
-                    }
-                    catch {
-                        int i = 0;
-                    }
+//#endif
+#elif XBOX
+                        //String fullPathName=fi.FullName;
+                        Stream stream=TitleContainer.OpenStream(@"Content\"+path+"\\"+fi.Name);
+                        System.IO.StreamReader sReader = new System.IO.StreamReader(stream);
+                        String text = sReader.ReadToEnd();
+                        templates.Add(fi.Name, text);
+#endif
+                    // }
+                    //catch {
+                    //    int i = 0;
+                    //}
                 }
                 if (!Constants.IS_IN_REALSE_MODE)
                 {
-                    DirectoryInfo di2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\DebugInfo");
-                    String name = di2.FullName + @"\DebugInfo.txt";
-                    LinkedList<String> lines = new LinkedList<String>();
-                    lines.AddLast(di.FullName);
-                    fullLocation = di.FullName;
-                    System.IO.File.WriteAllLines(name, lines);
+                    #if WINDOWS
+                        DirectoryInfo di2 = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\DebugInfo");
+                        String name = di2.FullName + @"\DebugInfo.txt";
+                        LinkedList<String> lines = new LinkedList<String>();
+                        lines.AddLast(di.FullName);
+                        fullLocation = di.FullName;
+                        System.IO.File.WriteAllLines(name, lines);
+                    #endif
                 }
                 
             }

@@ -35,9 +35,9 @@ namespace ProtoDerp
         {
             if (spriteNumber.Contains("cloud") && !game.isInCreatorMode)
             {
-
                 pos = new Vector2(pos.X - 0.005f, pos.Y);
             }
+            pos = new Vector2(pos.X-game.moveBackGround.X/5, pos.Y);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -64,10 +64,10 @@ namespace ProtoDerp
             }
             spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X),
                     (int)(pos.Y),
-                    (int)(width), (int)(height)), null, Color.LightBlue, 0, origin, SpriteEffects.None, 0f);
+                    (int)(width), (int)(height)), null, game.backGroundColor, 0, origin, SpriteEffects.None, 0f);
             spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X),
                     (int)(pos.Y),
-                    (int)(width), (int)(height)), null, color*0.7f, 0, origin, SpriteEffects.None, 0f);
+                    (int)(width), (int)(height)), null, color*0.5f, 0, origin, SpriteEffects.None, 0f);
 
            
         }

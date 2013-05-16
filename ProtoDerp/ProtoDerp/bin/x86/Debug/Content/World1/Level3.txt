@@ -1,32 +1,11 @@
--11 655 bigBlock Block 1128.836 304.5334 0 0
-1424 746 bigBlock Block 1289.249 290.9241 0 0
-608 1270 bigBlock Block 275.2679 1515.254 0 0
 -14 98 grassTemplate Block 35 306 2 720
 1438 105 grassTemplate Block 35 316 2 720
--1237 1991 bigBlock Block 2250 2730 0 0
-2592 2006 bigBlock Block 2260 2170 0 0
-6517 -4193 bigBlock Block 1200 200 0 0
-1062 2241 bigBlock Block 1790 2130 0 0
 -118 80 spriteStripFlower Block 48 46 2 0
 76 65 spriteStripFlower Block 48 46 2 0
 1358 74 spriteStripFlower Block 48 46 2 0
 1553 80 spriteStripFlower Block 48 46 2 0
 -28 65 spriteStripFlower Block 48 46 2 0
-2606 2094 blankImage Block 2375 2470 0 0
 1716 880 grassTemplate Block 35 256 2 1440
--321 716 trees0 Block 472 295 1 360
--1955 726 trees0 Block 472 295 1 360
--816 720 trees2 Block 492 305 1 360
--2519 723 trees2 Block 492 305 1 360
-273 1011 trees2 Block 492 305 1 360
-1118 1022 trees1 Block 412 248 1 360
-708 1025 trees0 Block 472 295 1 360
-1799 771 trees0 Block 472 295 1 360
-2474 759 trees2 Block 492 305 1 360
-3174 791 trees3 Block 244 212 1 360
-2133 797 trees3 Block 244 212 1 360
-521 1070 trees3 Block 244 212 1 360
-932 1057 trees3 Block 244 212 1 360
 1962 876 grassTemplate Block 33 256 2 0
 2217 876 grassTemplate Block 33 256 2 0
 2473 876 grassTemplate Block 33 256 2 0
@@ -101,6 +80,27 @@
 499 1160 roots3 Block 56 148 3 0
 2113 898 roots3 Block 56 148 3 0
 3169 906 roots3 Block 56 148 3 0
+-321 716 trees0 Block 472 295 1 360
+-1955 726 trees0 Block 472 295 1 360
+-816 720 trees2 Block 492 305 1 360
+-2519 723 trees2 Block 492 305 1 360
+273 1011 trees2 Block 492 305 1 360
+1118 1022 trees1 Block 412 248 1 360
+708 1025 trees0 Block 472 295 1 360
+1799 771 trees0 Block 472 295 1 360
+2474 759 trees2 Block 492 305 1 360
+3174 791 trees3 Block 244 212 1 360
+2133 797 trees3 Block 244 212 1 360
+521 1070 trees3 Block 244 212 1 360
+932 1057 trees3 Block 244 212 1 360
+-11 655 bigBlock Block 1128.836 304.5334 0 0
+1424 746 bigBlock Block 1289.249 290.9241 0 0
+608 1270 bigBlock Block 275.2679 1515.254 0 0
+-1237 1991 bigBlock Block 2250 2730 0 0
+2592 2006 bigBlock Block 2260 2170 0 0
+6517 -4193 bigBlock Block 1200 200 0 0
+1062 2241 bigBlock Block 1790 2130 0 0
+2606 2094 blankImage Block 2375 2470 0 0
 148 164 deathSpikes DeathBlock 89
 149 236 deathSpikes DeathBlock 89
 150 362 deathSpikes DeathBlock 89
@@ -180,6 +180,15 @@
 -1340 -116 cloudPix SuperBack 264 74
 2602 -349 cloudPix SuperBack 264 74
 2560 -150 cloudPix SuperBack 264 74
+-67 54 sign0 SignBlock 0 56 63
+Text 0.3 0.8 -1
+JUMP
+Trying Jumping
+......
+Also
+.....
+Running might help!!
+$
 Demi -306 1153 -527 604
 BGCOLOR 167 218 220 
 CAM 0.3533335

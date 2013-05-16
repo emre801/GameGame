@@ -190,6 +190,7 @@ namespace ProtoDerp
             //XNA Framework HiDef profile supports a maximum Texture2D size of 4096
             //if ((spriteNumber.Equals("bigBlock") || spriteNumber.Equals("groundWall"))&& width < 4096 && height < 4096)
             //{
+#if WINDOWS
             if ((spriteNumber.Equals("bigBlock"))&& width < 4096 && height < 4096 && Constants.BLOCK_EFFECT)
             {
                 Color[] cData = new Color[(int)((int)width * (int)height)];
@@ -377,6 +378,7 @@ namespace ProtoDerp
                 
                 //origin = new Vector2(width / 2, height / 2);
             }*/
+#endif
             
         }
 
@@ -459,10 +461,12 @@ namespace ProtoDerp
                 }
             }
 
-            if (drawLevel == 1)
+            if (drawLevel == 1 || drawLevel==3)
             {
-                if(game.moveBackGround.X!=0)
-                    body.Position += new Vector2(game.moveBackGround.X / 100000f, game.moveBackGround.Y / 300000f);
+                //if(game.moveBackGround.X!=0)
+                    //body.Position += new Vector2(game.moveBackGround.X / 100000f, game.moveBackGround.Y / 300000f);
+
+                //body.Position -= new Vector2(game.moveBackGround.X/10000f, 0);
             }
         }
 
@@ -486,7 +490,7 @@ namespace ProtoDerp
             }
             if (ani.getStateCount() == 1)
             {
-
+#if WINDOWS
                 if ((spriteNumber.Equals("bigBlock")) && width < 4096 && height < 4096 && Constants.BLOCK_EFFECT)
                 {
                     if (game.currentWorld == 2)
@@ -508,10 +512,21 @@ namespace ProtoDerp
                 }*/
                 else
                 {
+                if(drawLevel==1 || drawLevel==3)
+                {
+                    displayAlpha=0.3f;
+                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, game.backGroundColor, body.Rotation, origin, SpriteEffects.None, 0f);
+                
+
+                }
 
 
                     spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
                 }
+#elif XBOX
+
+                spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
+#endif
             }
             else
             {
@@ -531,7 +546,7 @@ namespace ProtoDerp
         {
             if (!IsVisible)
                 return;
-            
+            return;
             Vector2 ringDrawPoint = game.drawingTool.getDrawingCoords(body.Position);
             DrawingTool test = game.drawingTool;
             int i = playerSprite.index.Width;

@@ -26,7 +26,7 @@ namespace ProtoDerp
         
         public const double GAMEWORLD_ASPECT_RATIO = 4f / 3f; // Width of game world / height of game world
 
-        public const bool PRELOAD_LEVELS = true; // Set this to true when release
+        public const bool PRELOAD_LEVELS = false; // Set this to true when release
 
         public const bool DO_FADE_OUT = false; // set this to true for release
 
@@ -36,21 +36,25 @@ namespace ProtoDerp
 
         public const bool FIND_LAG = false;
         // The size of the screen in pixels
-        public const int DESIRED_GAME_RESOLUTION_WIDTH = 800;
-        public const int DESIRED_GAME_RESOLUTION_HEIGHT = (int)(DESIRED_GAME_RESOLUTION_WIDTH / GAMEWORLD_ASPECT_RATIO);
+        public const int DESIRED_GAME_RESOLUTION_WIDTH = 800;//480
+        public const int DESIRED_GAME_RESOLUTION_HEIGHT = (int)(DESIRED_GAME_RESOLUTION_WIDTH / GAMEWORLD_ASPECT_RATIO); //320
+
 
         // The size of the game world in imaginary units
         public const float GAME_WORLD_WIDTH = 800f;  // Changing this constant will require changing lots of other constants, unless we cahnge them to be relative to this
         public const float GAME_WORLD_HEIGHT = (float)(GAME_WORLD_WIDTH / GAMEWORLD_ASPECT_RATIO);
+
 
         public const int NUMBER_OF_SONGS = 8;
 
         public const int TEMPLATE_COUNT = 8;
 
         public const int TOTALNUMBEROFMAPS = 4;
-
-        public const bool FULLSCREEN = true;
-
+#if WINDOWS
+        public const bool FULLSCREEN = false;
+#elif XBOX
+        public const bool FULLSCREEN = false;
+#endif
         public const bool PLAY_MUSIC = true;
 
         public const float SHADOW_VALUE = 0.25f;
@@ -59,7 +63,7 @@ namespace ProtoDerp
 
         public const int TOTAL_NUMBER_OF_WORLDS = 3;
 
-        public const bool PLAY_RAGE_SOUNDS = true;
+        public const bool PLAY_RAGE_SOUNDS = false;
 
         public const bool OVERRIDE_FULLSCREEN_RES = false; // If this is true, we will attempt to override the system's default fullscreen resolution.  Not recommended
 

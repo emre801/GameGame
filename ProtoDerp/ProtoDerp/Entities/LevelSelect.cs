@@ -22,6 +22,8 @@ namespace ProtoDerp
         Vector2 origin;
 
         int levelNum = 1;
+        int worldNum = 2;
+        int pointer = 0;
         KeyboardInput keyInput;
         //Input player1 = null;
         public LevelSelect(Game g)
@@ -50,16 +52,44 @@ namespace ProtoDerp
             {
                 if (this.player1.IsDownPressed() || keyInput.IsNewKeyPressed(Keys.Down))
                 {
-                    if (levelNum != 1)
-                        levelNum--;
-                    game.sounds["Rage//Wave//menu"].Play();
+                    if (pointer == 0)
+                        pointer = 1;
                 }
                 if (this.player1.IsUpPressed() || keyInput.IsNewKeyPressed(Keys.Up))
                 {
-                    if (levelNum != Constants.MAX_WRITE_LEVEL)
-                        levelNum++;
-                    game.sounds["Rage//Wave//menu"].Play();
+                    if (pointer == 1)
+                        pointer = 0;
                 }
+                if (this.player1.IsLeftPressed() || keyInput.IsNewKeyPressed(Keys.Left))
+                {
+                    if (pointer == 0)
+                    {
+                        if (levelNum != 1)
+                            levelNum--;
+                    }
+                    else
+                    {
+                        worldNum--;
+                    }
+                    game.sounds["Rage//Wave//menu"].Play();
+
+                }
+                if (this.player1.IsRightPressed() || keyInput.IsNewKeyPressed(Keys.Right))
+                {
+                    if (pointer == 0)
+                    {
+                        if (levelNum != Constants.MAX_WRITE_LEVEL)
+                            levelNum++;
+                    }
+                    else
+                    {
+                        worldNum++;
+                    }
+                    game.sounds["Rage//Wave//menu"].Play();
+
+                }
+                
+
                 if (player1.isAPressed() || keyInput.IsNewKeyPressed(Keys.Enter))
                 {
                     game.gMode = 0;
@@ -67,6 +97,9 @@ namespace ProtoDerp
                     game.playRandonSong();
                     //game.playSong("Music//ForrestSounds");
                     game.currentLevel = levelNum;
+                    game.currentWorld = worldNum;
+                    game.cutScene = worldNum;
+                    game.winningAnimation = false;
                     game.populateWorld();                    
                     game.drawingTool.cam.Zoom = 0.55f * game.drawingTool.zoomRatio;
 
@@ -85,11 +118,20 @@ namespace ProtoDerp
         {
             if (IsVisible)
             {
-                DrawText(spriteBatch, 0.5f, 0.5f, "Current Level " + levelNum);
+                DrawText(spriteBatch, 0.5f, 0.5f, "Current Level " + levelNum,1f);
+                DrawText(spriteBatch, 0.5f, 0.55f, "Current World " + worldNum, 1f);
+                if (pointer == 0)
+                {
+                    DrawText(spriteBatch, 0.45f, 0.5f, "->", 1f);
+                }
+                else
+                {
+                    DrawText(spriteBatch, 0.45f, 0.55f, "->", 1f);
+                }
             }
         }
 
-        public void DrawText(SpriteBatch spriteBatch, float x, float y, String text)
+        public void DrawText(SpriteBatch spriteBatch, float x, float y, String text,float size)
         {
             String[] tempstrMulti = text.Split("|".ToCharArray());
             SpriteFont font = game.fonts[(int)Game.Fonts.FT_PIXEL];
@@ -101,7 +143,7 @@ namespace ProtoDerp
                     0f,
                     Vector2.Zero,
                     //new Vector2(font.MeasureString(tempstrMulti[i]).X / 2, 0), 
-                    game.drawingTool.gameToScreen(1f) * 0.25f,
+                    game.drawingTool.gameToScreen(1f) * 0.25f*size,
                     SpriteEffects.None,
                     0);
 

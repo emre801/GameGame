@@ -64,7 +64,7 @@ namespace ProtoDerp
 
         bool isCapOn = false;
 
-        public SortedSet<Entity> linedUpBlocks = new SortedSet<Entity>();
+        public List<Entity> linedUpBlocks = new List<Entity>();
 
         
 
@@ -130,7 +130,7 @@ namespace ProtoDerp
             {
                 if (Constants.SEND_EMAIL_DATA)
                 {
-                    game.sendEmailWithAttachments();
+                    //game.sendEmailWithAttachments();
                 }
             }
             if (game.backGroundNum != 0)
@@ -678,7 +678,7 @@ namespace ProtoDerp
             float angle = (float)Math.Atan2(p2.Y - p1.Y, p2.X - p1.X);
             int blockSpacing = (int)this.blockWidth;
             float angleDegree = angle / (float)Math.PI*180f;
-            linedUpBlocks = new SortedSet<Entity>() ;
+            linedUpBlocks = new List<Entity>() ;
             //angleDegree = Math.Abs(angleDegree);
             if ((angleDegree > 0 && angleDegree <= 90) || (angleDegree > 180 && angleDegree <= 270))
             {
@@ -710,13 +710,13 @@ namespace ProtoDerp
             if (currentPointValue == 2)
             {
                 currentPointValue = 0;
-                linedUpBlocks = new SortedSet<Entity>();
+                linedUpBlocks = new List<Entity>();
             }
             rotation = (int)tempRotation;
         }
         public void drawObjectsInSquare(Vector2 p1, Vector2 p2)
         {
-            linedUpBlocks = new SortedSet<Entity>();
+            linedUpBlocks = new List<Entity>();
 
             Vector2 squareVec = p2 - p1;
             int xWidth = 0,yWidth=0;
@@ -754,7 +754,7 @@ namespace ProtoDerp
             if (currentSquareValue == 2)
             {
                 currentSquareValue = 0;
-                linedUpBlocks = new SortedSet<Entity>();
+                linedUpBlocks = new List<Entity>();
                 if (game.drawLevel == 0)
                 {
                     int actuallyWidth = (int)(xWidth * blockWidth);
@@ -912,7 +912,7 @@ namespace ProtoDerp
 
         public void DeleteBlockSelector()
         {
-            SortedSet<Entity> block= game.entities;
+            List<Entity> block= game.entities;
             int count = 0;
             if (isSelectedBlockChanged)
             {

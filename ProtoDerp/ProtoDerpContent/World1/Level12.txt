@@ -577,7 +577,7 @@
 1041 -4742 bigGround MagnetBlock 0 -30 785 240 0
 543 -5218 bigGround MagnetBlock -40 0 175 1230 0
 -213 -4995 bigGround MagnetBlock 0 10 580 200 0
-273 -6353 ahLogo0 GoalBlock 13
+273 -6353 ahLogo0 GoalBlock 17
 -627 -5746 sawAni2 MovingPath 10 -619 -5236 -607 -4101 
 -623 -4601 sawAni2 MovingPath 10 -615 -4091 -613 -5227 
 -313 -6252 sawAni2 MovingPath 10 -305 -5742 -314 -5325 

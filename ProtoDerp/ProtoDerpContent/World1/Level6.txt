@@ -1,15 +1,5 @@
-14 410 bigBlock Block 700 150 0 0
-371 570 bigBlock Block 1010 145 0 0
-848 864 bigBlock Block 1220 190 0 0
-712 -49 bigBlock Block 240 540 0 0
-1536 1076 bigBlock Block 1955 250 0 0
-635 1596 bigBlock Block 310 1920 0 0
-765 -302 bigBlock Block 310 1920 0 0
-2621 -33 bigBlock Block 310 1920 0 0
--273 612 bigBlock Block 1735 440 0 0
 -24 1315 magnet1 Block 57 67 2 90
 1045 103 magnet1 Block 57 67 2 180
--697 -680 derrick.png Block 105 75 0 0
 20 64 grassTemplate Block 35 146 2 720
 369 68 grassTemplate Block 35 146 2 720
 820 258 grassTemplate Block 35 146 2 720
@@ -49,28 +39,6 @@
 1123 -50 magnet1 Block 50 60 2 180
 1439 -54 magnet1 Block 50 60 2 180
 1528 -57 magnet1 Block 50 60 2 180
-240 1766 bigBlock Block 649.9999 3970 0 0
--2299 1771 bigBlock Block 639.9999 2130 0 0
-3354 1779 bigBlock Block 650 2320 0 0
-934 2224 bigBlock Block 540 2880 0 0
-3579 2249 bigBlock Block 510 2590 0 0
--1859 2222 bigBlock Block 540 2880 0 0
-633 1352 trees3 Block 244 212 1 0
-1340 1365 trees3 Block 244 212 1 0
--629 1343 trees2 Block 492 305 1 0
--1051 1334 trees1 Block 412 248 1 0
--1822 1336 trees2 Block 492 305 1 0
--2031 1025 trees2 Block 492 305 1 0
--2471 1349 trees2 Block 492 305 1 0
--1395 1323 trees0 Block 472 295 1 0
-71 1340 trees0 Block 472 295 1 0
-2059 1340 trees0 Block 472 295 1 0
-3368 1391 trees0 Block 472 295 1 0
-2498 1357 trees1 Block 412 248 1 0
-2975 1357 trees2 Block 492 305 1 0
-4161 1357 trees1 Block 412 248 1 0
-3752 1340 trees2 Block 492 305 1 0
-954 1316 trees2 Block 492 305 1 0
 13 -146 groundWall Block 129 14 2 810
 142 -146 groundWall Block 129 14 2 810
 271 -146 groundWall Block 129 14 2 810
@@ -259,9 +227,41 @@
 3751 1515 roots1 Block 104 136 3 0
 4167 1525 roots1 Block 104 136 3 0
 1000 1513 roots2 Block 137 156 3 0
+633 1352 trees3 Block 244 212 1 0
+1340 1365 trees3 Block 244 212 1 0
+-629 1343 trees2 Block 492 305 1 0
+-1051 1334 trees1 Block 412 248 1 0
+-1822 1336 trees2 Block 492 305 1 0
+-2031 1025 trees2 Block 492 305 1 0
+-2471 1349 trees2 Block 492 305 1 0
+-1395 1323 trees0 Block 472 295 1 0
+71 1340 trees0 Block 472 295 1 0
+2059 1340 trees0 Block 472 295 1 0
+3368 1391 trees0 Block 472 295 1 0
+2498 1357 trees1 Block 412 248 1 0
+2975 1357 trees2 Block 492 305 1 0
+4161 1357 trees1 Block 412 248 1 0
+3752 1340 trees2 Block 492 305 1 0
+954 1316 trees2 Block 492 305 1 0
 294 1296 QWOP0 Block 283 173 1 0
 1151 1349 QWOP2 Block 283 221 1 0
 -762 1331 QWOP1 Block 238 323 1 0
+14 410 bigBlock Block 700 150 0 0
+371 570 bigBlock Block 1010 145 0 0
+848 864 bigBlock Block 1220 190 0 0
+712 -49 bigBlock Block 240 540 0 0
+1536 1076 bigBlock Block 1955 250 0 0
+635 1596 bigBlock Block 310 1920 0 0
+765 -302 bigBlock Block 310 1920 0 0
+2621 -33 bigBlock Block 310 1920 0 0
+-273 612 bigBlock Block 1735 440 0 0
+-697 -680 derrick.png Block 105 75 0 0
+240 1766 bigBlock Block 649.9999 3970 0 0
+-2299 1771 bigBlock Block 639.9999 2130 0 0
+3354 1779 bigBlock Block 650 2320 0 0
+934 2224 bigBlock Block 540 2880 0 0
+3579 2249 bigBlock Block 510 2590 0 0
+-1859 2222 bigBlock Block 540 2880 0 0
 -2 1421 deathSpikes DeathBlock 0
 118 1421 deathSpikes DeathBlock 0
 237 1421 deathSpikes DeathBlock 0
@@ -291,6 +291,11 @@
 2690 1255 pixMT SuperBack 1103 421
 3793 1251 pixMT SuperBack 1103 421
 4896 1248 pixMT SuperBack 1103 421
+334 25 sign0 SignBlock 0 56 63
+Text 0.3 0.8 -1
+It's all about timing
+Any also position yourself correctly
+$
 Demi -100 1720 48 2155
 BGCOLOR 167 218 220 
 CAM 0.4824

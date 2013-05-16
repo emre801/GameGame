@@ -1790,7 +1790,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\WaterWorld\WaterGBlock.xnb</Output>
-      <Time>2013-03-28T16:17:48.1586096-04:00</Time>
+      <Time>2013-05-13T11:51:17.3494295-04:00</Time>
     </Item>
     <Item>
       <Source>WaterWorld\WaterMT.png</Source>
@@ -1799,7 +1799,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\WaterWorld\WaterMT.xnb</Output>
-      <Time>2013-03-28T16:13:44.9076965-04:00</Time>
+      <Time>2013-05-13T12:33:24.3099634-04:00</Time>
     </Item>
     <Item>
       <Source>WaterWorld\WatergroundWall.png</Source>
@@ -1808,7 +1808,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\WaterWorld\WatergroundWall.xnb</Output>
-      <Time>2013-03-28T16:28:14.197417-04:00</Time>
+      <Time>2013-05-13T11:45:52.5858541-04:00</Time>
     </Item>
     <Item>
       <Source>WaterWorld\seaMoss.png</Source>
@@ -1926,6 +1926,24 @@
       <Options>None</Options>
       <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\sign0.xnb</Output>
       <Time>2013-04-05T21:19:47.794957-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Splash Art\c801.png</Source>
+      <Name>Splash Art\c801</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Splash Art\c801.xnb</Output>
+      <Time>2013-04-16T11:16:34.1770481-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Splash Art\PixelA.png</Source>
+      <Name>Splash Art\PixelA</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Splash Art\PixelA.xnb</Output>
+      <Time>2013-04-16T22:51:17.3291398-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

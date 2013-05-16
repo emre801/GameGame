@@ -513,6 +513,10 @@ namespace ProtoDerp
             {
                 drawLevel = "Super Background";
             }
+            else if (game.drawLevel == -2)
+            {
+                drawLevel = "Super Mega Background";
+            }
             else if (game.drawLevel == 3)
             {
                 drawLevel = "FIXPatch";
@@ -524,6 +528,21 @@ namespace ProtoDerp
             }
 
             DrawText(spriteBatch, 0.065f, 0.90f, "DrawLevel = "+drawLevel);
+        }
+
+        public void DrawButtonPress(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            if (game.isNextToSign)
+            {
+                Sprite aButt = game.getSprite("PixelA");
+
+                spriteBatch.Draw(aButt.index, new Rectangle((int)(game.drawingTool.ActualScreenPixelWidth * 0.05f), (int)(game.drawingTool.ActualScreenPixelHeight * 0.85f),
+                    (int)(aButt.index.Width * 2.12f), (int)(aButt.index.Height * 2.12f)), null, Color.Black, 0, new Vector2(0, 0), SpriteEffects.None, 0f);
+            
+
+                spriteBatch.Draw(aButt.index, new Rectangle((int)(game.drawingTool.ActualScreenPixelWidth * 0.05f), (int)(game.drawingTool.ActualScreenPixelHeight * 0.85f),
+                    (int)(aButt.index.Width*2f), (int)(aButt.index.Height*2f)), null, Color.White, 0, new Vector2(0, 0), SpriteEffects.None, 0f);
+            }
         }
 
         public void DrawPositionInformation(GameTime gameTime, SpriteBatch spriteBatch)

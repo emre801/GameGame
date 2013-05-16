@@ -106,6 +106,9 @@ namespace ProtoDerp
             {
                 v4 = new Vector2(posSelectText.X, v2.Y + selectLevelSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
             }
+#if XBOX
+            v4 = new Vector2(posSelectText.X, v2.Y + selectLevelSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
+#endif
             start = new Button(g, v1, 0, "start");
             start.setTitleValuee(0);
             selectLevel = new Button(g, v2, 0, "SelectLevel");
@@ -176,6 +179,8 @@ namespace ProtoDerp
                     game.drawingTool.cam.Pos=new Vector2(800,540);
                 else
                     game.drawingTool.cam.Pos = new Vector2(400, 360);
+                float actualH=game.drawingTool.ActualScreenPixelWidth;
+
                 //Clock hand ticking
                 angleHandShort -= 0.25f;
                 if (angleHandShort < 135 - 27)
@@ -203,11 +208,16 @@ namespace ProtoDerp
                     select -= 1;
                     if (select < 0)
                         select = numOptions - 1;
+#if WINDOWS
                     if (!Constants.ENABLE_CREATIVE_MODE)
                     {
                         if (select == 2)
                             select = 1;
                     }
+#elif XBOX 
+                    if (select == 2)
+                            select = 1;
+#endif
                    
                 }
                 else if ((this.player1.IsDownPressed() || keyInput.IsNewKeyPressed(Keys.Down) || keyInput.IsNewKeyPressed(Keys.S)) && alpha >= 1)
@@ -217,11 +227,16 @@ namespace ProtoDerp
                     select += 1;
                     if (select > numOptions - 1)
                         select = 0;
+#if WINDOWS
                     if (!Constants.ENABLE_CREATIVE_MODE)
                     {
                         if (select == 2)
                             select = 3;
                     }
+#elif XBOX 
+                    if (select == 2)
+                            select = 3;
+#endif
                 }
                 else if ((this.player1.IsSelectPressed() || keyInput.IsNewKeyPressed(Keys.Enter)) && alpha >= 1)
                 {
@@ -306,7 +321,17 @@ namespace ProtoDerp
                         IsVisible = false;
                     }
                     else if (this.decreaseAlpha == 3)
+                    {
+                        
+                        #if WINDOWS
                         Environment.Exit(0);
+                        #elif XBOX
+                        game.Exit();
+#endif
+                        
+                        
+
+                    }
 
                 }
             }
@@ -324,8 +349,10 @@ namespace ProtoDerp
                 //game.GUI.DrawRectangle(spriteBatch, new Rectangle((int)game.drawingTool.gameToScreen(0), (int)game.drawingTool.gameToScreen(posSelectInner.Y), (int)game.drawingTool.gameXCoordToScreenCoordX(game.getWorldSize().X), (int)game.drawingTool.gameToScreen(sprSelectInner.index.Height * scaleFactor)), Color.Black, .75f);
                 start.Draw(gameTime, spriteBatch);
                 selectLevel.Draw(gameTime, spriteBatch);
+#if WINDOWS
                 if(Constants.ENABLE_CREATIVE_MODE)
                     creativeMode.Draw(gameTime, spriteBatch);
+#endif
                 exit.Draw(gameTime, spriteBatch);
                 game.GUI.DrawMouse(gameTime, spriteBatch);    
             

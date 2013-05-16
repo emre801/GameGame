@@ -76,7 +76,9 @@ namespace ProtoDerp
             {
                 try
                 {
+#if WINDOWS
                     images.Add(fi.Name, File.ReadAllText(fi.FullName));
+#endif
                 }
                 catch
                 {
@@ -89,7 +91,17 @@ namespace ProtoDerp
 
         public void createCutScene()
         {
-            StringReader sr = new StringReader(File.ReadAllText("Content\\CutScene" + cutSceneNumber + "\\info.txt"));
+            if (!Constants.DO_CUT_SCENE || game.currentLevel > 1)
+            {
+                loadLevelInfo();
+                return;
+            }
+//#if WINDOWS
+            Stream stream = TitleContainer.OpenStream("Content\\CutScene" + cutSceneNumber + "\\info.txt");
+            System.IO.StreamReader sReader = new System.IO.StreamReader(stream);
+            String textInfo = sReader.ReadToEnd();
+
+            StringReader sr = new StringReader(textInfo);
                 
             String line;
             char[] delimiterChars = { ' ', ',', ':', '\t' };
@@ -172,7 +184,7 @@ namespace ProtoDerp
                     game.addEntity(cst);
                 }
             }
-            
+//#endif
         }
 
         public override void Update(GameTime gameTime, float worldFactor)

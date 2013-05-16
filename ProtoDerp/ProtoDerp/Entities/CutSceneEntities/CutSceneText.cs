@@ -31,6 +31,7 @@ namespace ProtoDerp
         float boxLength = 1000;
         bool IsDoneOpening = false,isClosing=false;
         public float orderNumber = 0;
+        KeyboardInput keyInput;
         
         public  float openValue = 0;
 
@@ -41,6 +42,7 @@ namespace ProtoDerp
             this.IsVisible = true;
             this.text = text;
             this.orderNumber = orderNumber;
+            this.keyInput = new KeyboardInput();
         }
         public String[] getText()
         {
@@ -53,12 +55,15 @@ namespace ProtoDerp
 
         public override void Update(GameTime gameTime, float worldSpeed)
         {
+            //if (game.currentLevel > 1)
+               // return;
+            keyInput.Update(gameTime);
             if (IsVisible&& orderNumber==game.orderNumber)
             {
 
                 if (IsDoneOpening)
                 {
-                    if (xi.isAPressed())
+                    if (xi.isAPressed() || keyInput.IsNewKeyPressed(Keys.Enter))
                     {
                         textValue++;
                         currentTextValue = 0;

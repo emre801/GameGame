@@ -1,14 +1,3 @@
-969 222 bigBlock Block 253.9727 2293.763 0 0
-2101 137 bigBlock Block 427.7436 147.0369 0 0
-3197 231 bigBlock Block 260.6563 2112.288 0 0
-528 -31 bigBlock Block 297.4154 140.3533 0 0
-1198 -19 bigBlock Block 307.4407 130.3281 0 0
-1689 -14 bigBlock Block 270.6815 126.9865 0 0
-2656 30 bigBlock Block 267.3397 143.6951 0 0
-3166 -3 bigBlock Block 340.8582 147.0369 0 0
-3934 -47 bigBlock Block 427.7436 220.5552 0 0
-3982 -598 bigBlock Block 360.9086 965.7649 0 0
-4344 -66 bigBlock Block 848.8036 250.6313 0 0
 347 -401 magnet1 Block 80 90 2 540
 1037 -402 magnet1 Block 80 90 2 540
 1539 -318 magnet1 Block 80 90 2 540
@@ -44,13 +33,6 @@
 3165 -168 grassTemplate Block 35 156 2 0
 3894 -253 grassTemplate Block 35 156 2 0
 3973 -253 grassTemplate Block 35 156 2 0
-758 -32 trees2 Block 492 305 1 0
-2751 -38 trees2 Block 492 305 1 0
-3309 29 trees3 Block 244 212 1 0
-1313 -19 trees1 Block 412 248 1 0
-2112 -28 trees0 Block 472 295 1 0
-3748 -10 trees0 Block 472 295 1 0
--52 0 trees0 Block 472 295 1 0
 3629 -771 grassTemplate Block 33 256 2 0
 3884 -771 grassTemplate Block 33 256 2 0
 4140 -772 grassTemplate Block 33 256 2 0
@@ -108,12 +90,6 @@
 4463 243 groundWall Block 129 14 2 5760
 -177 178 groundWall Block 129 14 2 6300
 -177 282 groundWall Block 129 14 2 6300
-622 625 bigBlock Block 640 3010 0 0
-3713 620 bigBlock Block 590 3280 0 0
-5583 635 bigBlock Block 640 2160 0 0
--1121 710 bigBlock Block 530 2470 0 0
-1206 1322 bigBlock Block 920 3160 0 0
-3975 1352 bigBlock Block 1000 2920 0 0
 -250 306 groundWall Block 129 14 2 630
 -378 306 groundWall Block 129 14 2 630
 -507 306 groundWall Block 129 14 2 630
@@ -150,15 +126,39 @@
 6328 319 groundWall Block 129 14 2 1710
 6457 319 groundWall Block 129 14 2 1710
 6586 319 groundWall Block 129 14 2 1710
-478 -115 bigBlock Block 85 35 0 0
-482 18 bigBlock Block 85 35 0 0
-80 -383 bigBlock Block 85 35 0 0
 -30 170 roots0 Block 138 232 3 0
 760 151 roots1 Block 104 136 3 0
 1333 165 roots2 Block 137 156 3 0
 2792 157 roots2 Block 137 156 3 0
 3315 125 roots3 Block 56 148 3 0
 3716 165 roots0 Block 138 232 3 0
+758 -32 trees2 Block 492 305 1 0
+2751 -38 trees2 Block 492 305 1 0
+3309 29 trees3 Block 244 212 1 0
+1313 -19 trees1 Block 412 248 1 0
+2112 -28 trees0 Block 472 295 1 0
+3748 -10 trees0 Block 472 295 1 0
+-52 0 trees0 Block 472 295 1 0
+969 222 bigBlock Block 253.9727 2293.763 0 0
+2101 137 bigBlock Block 427.7436 147.0369 0 0
+3197 231 bigBlock Block 260.6563 2112.288 0 0
+528 -31 bigBlock Block 297.4154 140.3533 0 0
+1198 -19 bigBlock Block 307.4407 130.3281 0 0
+1689 -14 bigBlock Block 270.6815 126.9865 0 0
+2656 30 bigBlock Block 267.3397 143.6951 0 0
+3166 -3 bigBlock Block 340.8582 147.0369 0 0
+3934 -47 bigBlock Block 427.7436 220.5552 0 0
+3982 -598 bigBlock Block 360.9086 965.7649 0 0
+4344 -66 bigBlock Block 848.8036 250.6313 0 0
+622 625 bigBlock Block 640 3010 0 0
+3713 620 bigBlock Block 590 3280 0 0
+5583 635 bigBlock Block 640 2160 0 0
+-1121 710 bigBlock Block 530 2470 0 0
+1206 1322 bigBlock Block 920 3160 0 0
+3975 1352 bigBlock Block 1000 2920 0 0
+478 -115 bigBlock Block 85 35 0 0
+482 18 bigBlock Block 85 35 0 0
+80 -383 bigBlock Block 85 35 0 0
 445 -116 deathSpikes DeathBlock 630
 445 6 deathSpikes DeathBlock 630
 445 130 deathSpikes DeathBlock 630
@@ -286,6 +286,10 @@
 932 -972 cloudPix SuperBack 339 84
 2561 -949 cloudPix SuperBack 339 84
 3918 -949 cloudPix SuperBack 339 84
+-126 59 sign0 SignBlock 0 56 63
+Text 0.3 0.8 -1
+ddfdfd
+$
 Demi -100 3621 -862 561
 BGCOLOR 167 218 220 
 CAM 0.5104445
