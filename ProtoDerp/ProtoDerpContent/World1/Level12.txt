@@ -1,36 +1,3 @@
-32 -176 bigBlock Block 120.2245 630.2091 0 0
-1013 -158 bigBlock Block 135.7373 729.1034 0 0
-602 -556 bigBlock Block 135.7374 1212.97 0 0
--477 -556 bigBlock Block 141.5546 366.4908 0 0
-777 -935 bigBlock Block 151.2502 929.8436 0 0
--195 -953 bigBlock Block 129.92 378.1254 0 0
-938 -1332 bigBlock Block 160.9457 729.1033 0 0
--212 -1323 bigBlock Block 174.5194 944.344 0 0
-1011 -1794 bigBlock Block 120.2245 711.6514 0 0
--152 -1786 bigBlock Block 141.5546 1006.395 0 0
-727 -2556 bigBlock Block 151.2502 1237.03 0 0
--496 -2551 bigBlock Block 137.6765 595.3052 0 0
--530 -2268 bigBlock Block 484.7762 286.9875 0 0
-173 -2107 bigBlock Block 195.8496 521.6192 0 0
-980 -3036 bigBlock Block 168.7019 672.8694 0 0
--386 -3535 bigBlock Block 1258.957 558.4622 0 0
-1064 -3803 bigBlock Block 947.5654 333.526 0 0
--215 -4027 bigBlock Block 308.3179 959.8569 0 0
-884 -4159 bigBlock Block 263.7185 684.504 0 0
--325 -4413 bigBlock Block 217.1797 608.8789 0 0
--483 -4458 bigBlock Block 285.0483 374.2473 0 0
--471 -6044 bigBlock Block 523.7451 350.7222 0 0
-1013 -6041 bigBlock Block 521.4067 341.3697 0 0
-1257 -4525 bigBlock Block 4005.736 191.9714 0 0
-1264 -1049 bigBlock Block 3003.37 215.2406 0 0
--737 -4522 bigBlock Block 4016.789 195.8496 0 0
--746 -1035 bigBlock Block 2972.707 184.215 0 0
-266 210 bigBlock Block 213.0584 1942.382 0 0
-1062 -2170 bigBlock Block 660.481 259.221 0 0
-243 -6567 bigBlock Block 202.4053 2226.46 0 0
-266 -5500 bigBlock Block 310 510 0 0
-291 -6140 bigBlock Block 190 320 0 0
-403 -4908 bigBlock Block 270 950 0 0
 1123 -4324 magPluse Block 65 70 2 720
 1054 -4324 magPluse Block 65 70 2 720
 984 -4324 magPluse Block 65 70 2 720
@@ -507,6 +474,42 @@
 517 -5519 groundWall Block 114 14 2 13320
 521 -5582 groundWall Block 114 14 2 13680
 -294 -4565 groundWall Block 44 14 2 13680
+495 -1563 grassTemplate Block 33 156 2 0
+491 -1481 groundWall Block 129 14 2 90
+572 -1516 groundWall Block 74 14 2 360
+423 -1518 groundWall Block 74 14 2 540
+231 -3050 grassTemplate Block 33 221 2 0
+124 -2978 groundWall Block 129 14 2 180
+336 -2976 groundWall Block 129 14 2 360
+281 -2885 groundWall Block 129 14 2 810
+190 -2887 groundWall Block 129 14 2 810
+1462 -4947 cloudPix Block 144 624 2 0
+162 -5947 cloudPix Block 144 624 2 0
+-1447 -4957 cloudPix Block 144 624 2 0
+-1297 -3247 cloudPix Block 144 624 2 0
+1872 -2967 cloudPix Block 144 624 2 0
+132 -4207 cloudPix Block 144 624 2 0
+-1637 -4077 cloudPix Block 144 624 2 0
+2442 -5597 cloudPix Block 144 624 2 0
+-1137 -6067 cloudPix Block 144 624 2 0
+-977 -5597 cloudPix Block 144 624 2 0
+1772 -5877 cloudPix Block 144 624 2 0
+2292 -4557 cloudPix Block 144 624 2 0
+1862 -3687 cloudPix Block 144 624 2 0
+1661 -2280 cloudPix Block 154 494 2 0
+1308 -1202 cloudPix Block 154 494 2 0
+-148 -1652 cloudPix Block 154 494 2 0
+-988 245 cloudPix Block 154 494 2 0
+1531 269 cloudPix Block 154 494 2 0
+1394 -3455 cloudPix Block 154 494 2 0
+-310 -3700 cloudPix Block 154 494 2 0
+-668 -3072 cloudPix Block 154 494 2 0
+286 473 bigBlock Block 359.1821 2163.712 2 0
+2194 478 bigBlock Block 350.5617 1767.176 2 0
+-1660 499 bigBlock Block 295.966 2077.509 2 0
+321 806 bigBlock Block 574.6912 2749.897 2 0
+2259 859 bigBlock Block 462.6263 1232.713 2 0
+-1837 878 bigBlock Block 534.463 1870.62 2 0
 -370 0 trees0 Block 472 295 1 0
 527 -14 trees1 Block 412 248 1 0
 -509 -738 trees1 Block 412 248 1 0
@@ -536,11 +539,40 @@
 -454 -6383 trees3 Block 244 212 1 0
 1011 -6375 trees3 Block 244 212 1 0
 -468 -2688 trees3 Block 244 212 1 0
+32 -176 bigBlock Block 120.2245 630.2091 0 0
+1013 -158 bigBlock Block 135.7373 729.1034 0 0
+602 -556 bigBlock Block 135.7374 1212.97 0 0
+-477 -556 bigBlock Block 141.5546 366.4908 0 0
+777 -935 bigBlock Block 151.2502 929.8436 0 0
+-195 -953 bigBlock Block 129.92 378.1254 0 0
+938 -1332 bigBlock Block 160.9457 729.1033 0 0
+-212 -1323 bigBlock Block 174.5194 944.344 0 0
+1011 -1794 bigBlock Block 120.2245 711.6514 0 0
+-152 -1786 bigBlock Block 141.5546 1006.395 0 0
+727 -2556 bigBlock Block 151.2502 1237.03 0 0
+-496 -2551 bigBlock Block 137.6765 595.3052 0 0
+-530 -2268 bigBlock Block 484.7762 286.9875 0 0
+173 -2107 bigBlock Block 195.8496 521.6192 0 0
+980 -3036 bigBlock Block 168.7019 672.8694 0 0
+-386 -3535 bigBlock Block 1258.957 558.4622 0 0
+1064 -3803 bigBlock Block 947.5654 333.526 0 0
+-215 -4027 bigBlock Block 308.3179 959.8569 0 0
+884 -4159 bigBlock Block 263.7185 684.504 0 0
+-325 -4413 bigBlock Block 217.1797 608.8789 0 0
+-483 -4458 bigBlock Block 285.0483 374.2473 0 0
+-471 -6044 bigBlock Block 523.7451 350.7222 0 0
+1013 -6041 bigBlock Block 521.4067 341.3697 0 0
+1257 -4525 bigBlock Block 4005.736 191.9714 0 0
+1264 -1049 bigBlock Block 3003.37 215.2406 0 0
+-737 -4522 bigBlock Block 4016.789 195.8496 0 0
+-746 -1035 bigBlock Block 2972.707 184.215 0 0
+266 210 bigBlock Block 213.0584 1942.382 0 0
+1062 -2170 bigBlock Block 660.481 259.221 0 0
+243 -6567 bigBlock Block 202.4053 2226.46 0 0
+266 -5500 bigBlock Block 310 510 0 0
+291 -6140 bigBlock Block 190 320 0 0
+403 -4908 bigBlock Block 270 950 0 0
 496 -1523 bigBlock Block 93.07703 147.3719 0 0
-495 -1563 grassTemplate Block 33 156 2 0
-491 -1481 groundWall Block 129 14 2 90
-572 -1516 groundWall Block 74 14 2 360
-423 -1518 groundWall Block 74 14 2 540
 -40 -2386 bigBlock Block 96.95532 127.9809 0 0
 -44 -2422 grassTemplate Block 33 136 0 0
 24 -2379 groundWall Block 69 14 0 0
@@ -548,32 +580,6 @@
 -68 -2342 groundWall Block 69 14 0 450
 -13 -2341 groundWall Block 69 14 0 450
 231 -2965 bigBlock Block 162.8848 215.2406 0 0
-231 -3050 grassTemplate Block 33 221 2 0
-124 -2978 groundWall Block 129 14 2 180
-336 -2976 groundWall Block 129 14 2 360
-281 -2885 groundWall Block 129 14 2 810
-190 -2887 groundWall Block 129 14 2 810
-1462 -4947 cloudPix Block 144 624 2 0
-162 -5947 cloudPix Block 144 624 2 0
--1447 -4957 cloudPix Block 144 624 2 0
--1297 -3247 cloudPix Block 144 624 2 0
-1872 -2967 cloudPix Block 144 624 2 0
-132 -4207 cloudPix Block 144 624 2 0
--1637 -4077 cloudPix Block 144 624 2 0
-2442 -5597 cloudPix Block 144 624 2 0
--1137 -6067 cloudPix Block 144 624 2 0
--977 -5597 cloudPix Block 144 624 2 0
-1772 -5877 cloudPix Block 144 624 2 0
-2292 -4557 cloudPix Block 144 624 2 0
-1862 -3687 cloudPix Block 144 624 2 0
-1661 -2280 cloudPix Block 154 494 2 0
-1308 -1202 cloudPix Block 154 494 2 0
--148 -1652 cloudPix Block 154 494 2 0
--988 245 cloudPix Block 154 494 2 0
-1531 269 cloudPix Block 154 494 2 0
-1394 -3455 cloudPix Block 154 494 2 0
--310 -3700 cloudPix Block 154 494 2 0
--668 -3072 cloudPix Block 154 494 2 0
 1041 -4742 bigGround MagnetBlock 0 -30 785 240 0
 543 -5218 bigGround MagnetBlock -40 0 175 1230 0
 -213 -4995 bigGround MagnetBlock 0 10 580 200 0
@@ -620,7 +626,10 @@
 604 -2871 cloudPix SuperBack 389 94
 -1209 -2650 cloudPix SuperBack 389 94
 1953 -2081 cloudPix SuperBack 389 94
+230 -24 pixMT SuperBack 1798 821
+2081 -131 pixMT SuperBack 2833 2266
+-1491 -630 pixMT SuperBack 2018 2836
 Demi -876 1343 -6170 839
 BGCOLOR 167 218 220 
-CAM 0.5157019
+CAM 0.407432
 CPOS 805.9515 320.8332

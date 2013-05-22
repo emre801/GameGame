@@ -1375,7 +1375,7 @@ namespace ProtoDerp
                 addEntity(ct);
                 isInCreatorMode = false;
                 currentWorld++;
-                if (currentWorld > Constants.TOTAL_NUMBER_OF_WORLDS) ;
+                if (currentWorld > Constants.TOTAL_NUMBER_OF_WORLDS)
                     currentWorld = 1;
                 inCutScene = false;
                 winningAnimation = false;

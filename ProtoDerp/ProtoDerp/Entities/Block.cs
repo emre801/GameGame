@@ -308,7 +308,7 @@ namespace ProtoDerp
 
                     GraphicsDevice gd= game.drawingTool.getGraphicsDevice();
                     this.dynamicPattern = new Texture2D(gd, (int)width, (int)height);
-                    
+                    gd.Clear(Color.Red);
                     dynamicPattern.SetData<Color>(cData);
                     game.addCachedDirt(new Rectangle((int)body.Position.X, (int)body.Position.Y, (int)width, (int)height), dynamicPattern);
                 }
