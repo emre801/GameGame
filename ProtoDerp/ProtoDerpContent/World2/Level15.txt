@@ -1,0 +1,108 @@
+-2 729 bigBlock Block 1296.606 177.8825 0 0
+612 1277 bigBlock Block 199.5754 1388.351 0 0
+1206 732 bigBlock Block 1253.855 190.8983 0 0
+-495 735 bigBlock Block 1234.073 947.4185 0 0
+273 1771 bigBlock Block 840.5303 2434.137 0 0
+2112 1174 bigBlock Block 1982.291 1656.768 0 0
+-1320 1168 bigBlock Block 2074.604 1263.225 0 0
+909 2506 bigBlock Block 1044.59 2851.972 0 0
+88 1111 groundWall Block 129 14 2 1080
+88 983 groundWall Block 129 14 2 1080
+88 854 groundWall Block 129 14 2 1080
+88 725 groundWall Block 129 14 2 1080
+89 596 groundWall Block 129 14 2 1080
+89 467 groundWall Block 129 14 2 1080
+89 338 groundWall Block 129 14 2 1080
+90 209 groundWall Block 129 14 2 1080
+93 144 groundWall Block 129 14 2 1080
+1109 163 groundWall Block 129 14 2 1620
+1109 291 groundWall Block 129 14 2 1620
+1109 420 groundWall Block 129 14 2 1620
+1109 549 groundWall Block 129 14 2 1620
+1108 678 groundWall Block 129 14 2 1620
+1108 807 groundWall Block 129 14 2 1620
+1108 936 groundWall Block 129 14 2 1620
+1107 1065 groundWall Block 129 14 2 1620
+1112 1117 groundWall Block 129 14 2 1620
+162 1175 groundWall Block 129 14 2 2070
+290 1175 groundWall Block 129 14 2 2070
+419 1175 groundWall Block 129 14 2 2070
+548 1176 groundWall Block 129 14 2 2070
+677 1176 groundWall Block 129 14 2 2070
+806 1176 groundWall Block 129 14 2 2070
+935 1177 groundWall Block 129 14 2 2070
+1037 1178 groundWall Block 129 14 2 2070
+1179 102 groundWall Block 129 14 2 2070
+1232 102 groundWall Block 129 14 2 2070
+35 82 groundWall Block 129 14 2 2070
+-25 80 groundWall Block 129 14 2 2070
+-147 119 groundWall Block 129 14 2 2431
+-275 119 groundWall Block 129 14 2 2431
+-404 118 groundWall Block 129 14 2 2431
+-533 118 groundWall Block 129 14 2 2431
+-662 117 groundWall Block 129 14 2 2431
+-791 117 groundWall Block 129 14 2 2431
+-920 116 groundWall Block 129 14 2 2431
+-1049 116 groundWall Block 129 14 2 2431
+-1178 115 groundWall Block 129 14 2 2431
+-1307 115 groundWall Block 129 14 2 2431
+-1436 114 groundWall Block 129 14 2 2431
+-1565 114 groundWall Block 129 14 2 2431
+-1694 113 groundWall Block 129 14 2 2431
+-1823 113 groundWall Block 129 14 2 2431
+-1952 112 groundWall Block 129 14 2 2431
+1359 178 groundWall Block 129 14 2 3150
+1487 178 groundWall Block 129 14 2 3150
+1616 178 groundWall Block 129 14 2 3150
+1745 179 groundWall Block 129 14 2 3150
+1874 179 groundWall Block 129 14 2 3150
+2003 180 groundWall Block 129 14 2 3150
+2132 180 groundWall Block 129 14 2 3150
+2261 180 groundWall Block 129 14 2 3150
+2390 181 groundWall Block 129 14 2 3150
+2519 181 groundWall Block 129 14 2 3150
+2648 182 groundWall Block 129 14 2 3150
+2777 182 groundWall Block 129 14 2 3150
+2906 182 groundWall Block 129 14 2 3150
+1301 153 groundWall Block 109 14 2 3240
+-87 129 groundWall Block 109 14 2 3240
+145 1139 Water0 Block 124 67 1 0
+826 1143 Water1 Block 117 104 1 0
+334 1144 Water2 Block 114 72 1 0
+597 1152 Water3 Block 97 100 1 0
+1363 164 deathSpikes DeathBlock 0
+1488 164 deathSpikes DeathBlock 0
+1614 164 deathSpikes DeathBlock 0
+1740 164 deathSpikes DeathBlock 0
+1866 164 deathSpikes DeathBlock 0
+1992 163 deathSpikes DeathBlock 0
+2118 163 deathSpikes DeathBlock 0
+2244 163 deathSpikes DeathBlock 0
+2370 163 deathSpikes DeathBlock 0
+2496 163 deathSpikes DeathBlock 0
+2622 162 deathSpikes DeathBlock 0
+2748 162 deathSpikes DeathBlock 0
+2874 162 deathSpikes DeathBlock 0
+-155 108 deathSpikes DeathBlock 360
+-280 108 deathSpikes DeathBlock 360
+-406 108 deathSpikes DeathBlock 360
+-532 108 deathSpikes DeathBlock 360
+-658 108 deathSpikes DeathBlock 360
+-784 108 deathSpikes DeathBlock 360
+-910 108 deathSpikes DeathBlock 360
+-1036 108 deathSpikes DeathBlock 360
+-1162 108 deathSpikes DeathBlock 360
+-1288 108 deathSpikes DeathBlock 360
+-1414 108 deathSpikes DeathBlock 360
+-1540 108 deathSpikes DeathBlock 360
+-1666 108 deathSpikes DeathBlock 360
+-1792 108 deathSpikes DeathBlock 360
+-1918 108 deathSpikes DeathBlock 360
+1021 1071 ahLogo0 GoalBlock 2
+423 1057 WaterMT SuperBack 712 266
+926 1059 WaterMT SuperBack 712 266
+605 741 Water WaterBlock 0 1028.248 880.7354
+Demi -160 1432 454 1895
+BGCOLOR 133 168 232 
+CAM 0.55
+CPOS 400 360

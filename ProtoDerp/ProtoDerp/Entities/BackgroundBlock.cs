@@ -37,7 +37,7 @@ namespace ProtoDerp
             {
                 pos = new Vector2(pos.X - 0.005f, pos.Y);
             }
-            pos = new Vector2(pos.X-game.moveBackGround.X/5, pos.Y);
+            pos = new Vector2(pos.X+game.moveBackGround.X/5, pos.Y);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)

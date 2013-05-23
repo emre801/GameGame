@@ -1,0 +1,184 @@
+-104 -376 bigBlock Block 962.7964 165.5765 0 0
+338 90 bigBlock Block 110.3844 956.6639 0 0
+338 662 bigBlock Block 85.85443 944.399 0 0
+-69 922 bigBlock Block 593.5961 120.6897 0 0
+666 1193 bigBlock Block 46.7981 1497.67 0 0
+1052 55 bigBlock Block 1824.847 81.28082 0 0
+644 920 bigBlock Block 93.59607 891.6256 0 0
+1366 197 bigBlock Block 2017.042 100.9852 0 0
+788 381 bigBlock Block 630.9091 87.27271 0 0
+-18 -790 WatergroundWall Block 129 14 2 719
+-18 -662 WatergroundWall Block 129 14 2 719
+-18 -533 WatergroundWall Block 129 14 2 719
+-18 -404 WatergroundWall Block 129 14 2 719
+-17 -275 WatergroundWall Block 129 14 2 719
+-17 -146 WatergroundWall Block 129 14 2 719
+-17 -17 WatergroundWall Block 129 14 2 719
+47 37 WatergroundWall Block 129 14 2 1349
+175 37 WatergroundWall Block 129 14 2 1349
+304 37 WatergroundWall Block 129 14 2 1349
+433 37 WatergroundWall Block 129 14 2 1349
+562 36 WatergroundWall Block 129 14 2 1349
+691 36 WatergroundWall Block 129 14 2 1349
+765 37 WatergroundWall Block 129 14 2 1350
+823 106 WatergroundWall Block 129 14 2 1799
+823 234 WatergroundWall Block 129 14 2 1799
+823 363 WatergroundWall Block 129 14 2 1799
+824 492 WatergroundWall Block 129 14 2 1799
+824 621 WatergroundWall Block 129 14 2 1799
+761 701 WatergroundWall Block 129 14 2 2249
+633 701 WatergroundWall Block 129 14 2 2249
+504 701 WatergroundWall Block 129 14 2 2249
+375 701 WatergroundWall Block 129 14 2 2249
+246 702 WatergroundWall Block 129 14 2 2249
+117 702 WatergroundWall Block 129 14 2 2249
+56 705 WatergroundWall Block 129 14 2 2250
+54 1168 WatergroundWall Block 129 14 2 2790
+182 1168 WatergroundWall Block 129 14 2 2790
+311 1168 WatergroundWall Block 129 14 2 2790
+440 1169 WatergroundWall Block 129 14 2 2790
+569 1169 WatergroundWall Block 129 14 2 2790
+698 1169 WatergroundWall Block 129 14 2 2790
+827 1170 WatergroundWall Block 129 14 2 2790
+956 1170 WatergroundWall Block 129 14 2 2790
+1085 1171 WatergroundWall Block 129 14 2 2790
+1214 1171 WatergroundWall Block 129 14 2 2790
+1250 1170 WatergroundWall Block 129 14 2 2790
+261 966 WatergroundWall Block 129 14 2 3330
+389 966 WatergroundWall Block 129 14 2 3330
+518 966 WatergroundWall Block 129 14 2 3330
+647 966 WatergroundWall Block 129 14 2 3330
+776 967 WatergroundWall Block 129 14 2 3330
+905 967 WatergroundWall Block 129 14 2 3330
+1028 966 WatergroundWall Block 129 14 2 3330
+1090 901 WatergroundWall Block 129 14 2 3600
+1090 773 WatergroundWall Block 129 14 2 3600
+1090 644 WatergroundWall Block 129 14 2 3600
+1091 515 WatergroundWall Block 129 14 2 3600
+1091 386 WatergroundWall Block 129 14 2 3600
+1092 257 WatergroundWall Block 129 14 2 3600
+1092 128 WatergroundWall Block 129 14 2 3600
+1092 0 WatergroundWall Block 129 14 2 3600
+1093 -129 WatergroundWall Block 129 14 2 3600
+1093 -258 WatergroundWall Block 129 14 2 3600
+1094 -387 WatergroundWall Block 129 14 2 3600
+1094 -516 WatergroundWall Block 129 14 2 3600
+1094 -645 WatergroundWall Block 129 14 2 3600
+1095 -774 WatergroundWall Block 129 14 2 3600
+1316 -745 WatergroundWall Block 129 14 2 4140
+1316 -617 WatergroundWall Block 129 14 2 4140
+1316 -488 WatergroundWall Block 129 14 2 4140
+1316 -359 WatergroundWall Block 129 14 2 4140
+1316 -230 WatergroundWall Block 129 14 2 4140
+1316 -101 WatergroundWall Block 129 14 2 4140
+1316 27 WatergroundWall Block 129 14 2 4140
+1316 156 WatergroundWall Block 129 14 2 4140
+1316 285 WatergroundWall Block 129 14 2 4140
+1315 414 WatergroundWall Block 129 14 2 4140
+1315 543 WatergroundWall Block 129 14 2 4140
+1315 672 WatergroundWall Block 129 14 2 4140
+1315 801 WatergroundWall Block 129 14 2 4140
+1315 930 WatergroundWall Block 129 14 2 4140
+1315 1059 WatergroundWall Block 129 14 2 4140
+1314 1112 WatergroundWall Block 129 14 2 4140
+262 871 WatergroundWall Block 129 14 2 4590
+391 871 WatergroundWall Block 129 14 2 4590
+520 871 WatergroundWall Block 129 14 2 4590
+649 871 WatergroundWall Block 129 14 2 4590
+778 871 WatergroundWall Block 129 14 2 4590
+907 871 WatergroundWall Block 129 14 2 4590
+946 871 WatergroundWall Block 129 14 2 4590
+1010 800 WatergroundWall Block 129 14 2 4860
+1010 672 WatergroundWall Block 129 14 2 4860
+1010 543 WatergroundWall Block 129 14 2 4860
+1010 414 WatergroundWall Block 129 14 2 4860
+1010 285 WatergroundWall Block 129 14 2 4860
+1011 156 WatergroundWall Block 129 14 2 4860
+1011 27 WatergroundWall Block 129 14 2 4860
+1011 -101 WatergroundWall Block 129 14 2 4860
+1011 -230 WatergroundWall Block 129 14 2 4860
+1011 -359 WatergroundWall Block 129 14 2 4860
+1012 -488 WatergroundWall Block 129 14 2 4860
+1012 -617 WatergroundWall Block 129 14 2 4860
+1012 -746 WatergroundWall Block 129 14 2 4860
+1013 -791 WatergroundWall Block 129 14 2 4860
+262 369 bigBlock Block 566.3329 1013.767 0 0
+-629 -92 bigBlock Block 1492.491 923.0289 0 0
+-598 1284 bigBlock Block 1311.014 973.0915 0 0
+1969 350 bigBlock Block 2288.784 1110.764 0 0
+1205 1583 bigBlock Block 743.7611 2645.206 0 0
+696 0 Water0 Block 124 67 1 0
+267 2 Water0 Block 124 67 1 0
+867 832 Water0 Block 124 67 1 0
+696 1135 Water0 Block 124 67 1 0
+1263 1130 Water0 Block 124 67 1 0
+1028 1144 Water1 Block 117 104 1 0
+147 1146 Water1 Block 117 104 1 0
+342 843 Water1 Block 117 104 1 0
+538 11 Water2 Block 114 72 1 0
+666 847 Water2 Block 114 72 1 0
+344 1144 Water2 Block 114 72 1 0
+1166 1142 Water3 Block 97 100 1 0
+61 15 Water3 Block 97 100 1 0
+-74 -858 seaMoss Block 16 130 2 0
+-125 -858 seaMoss Block 16 130 2 0
+1476 -792 seaMoss Block 16 130 2 0
+1605 -792 seaMoss Block 16 130 2 0
+1735 -792 seaMoss Block 16 130 2 0
+1865 -792 seaMoss Block 16 130 2 0
+1995 -792 seaMoss Block 16 130 2 0
+2125 -791 seaMoss Block 16 130 2 0
+2255 -791 seaMoss Block 16 130 2 0
+2385 -791 seaMoss Block 16 130 2 0
+2515 -791 seaMoss Block 16 130 2 0
+-253 -838 seaMoss Block 16 130 2 360
+-382 -838 seaMoss Block 16 130 2 360
+-512 -838 seaMoss Block 16 130 2 360
+-642 -838 seaMoss Block 16 130 2 360
+-772 -838 seaMoss Block 16 130 2 360
+-902 -838 seaMoss Block 16 130 2 360
+-1032 -838 seaMoss Block 16 130 2 360
+1361 -812 seaMoss Block 16 100 2 360
+1048 -858 seaMoss Block 16 100 2 360
+990 -752 deathSpikes DeathBlock 630
+990 -627 deathSpikes DeathBlock 630
+990 -501 deathSpikes DeathBlock 630
+990 -375 deathSpikes DeathBlock 630
+989 -249 deathSpikes DeathBlock 630
+989 -123 deathSpikes DeathBlock 630
+989 2 deathSpikes DeathBlock 630
+989 128 deathSpikes DeathBlock 630
+988 254 deathSpikes DeathBlock 630
+988 380 deathSpikes DeathBlock 630
+988 506 deathSpikes DeathBlock 630
+987 632 deathSpikes DeathBlock 630
+987 758 deathSpikes DeathBlock 630
+850 643 deathSpikes DeathBlock 810
+850 518 deathSpikes DeathBlock 810
+850 392 deathSpikes DeathBlock 810
+849 266 deathSpikes DeathBlock 810
+849 140 deathSpikes DeathBlock 810
+258 987 deathSpikes DeathBlock 1260
+668 987 deathSpikes DeathBlock 1260
+469 1149 deathSpikes DeathBlock 1440
+880 1149 deathSpikes DeathBlock 1440
+489 851 deathSpikes DeathBlock 1440
+9 765 deathSpikes DeathBlock 1890
+8 890 deathSpikes DeathBlock 1890
+7 1016 deathSpikes DeathBlock 1890
+11 1107 deathSpikes DeathBlock 1890
+7 -793 deathSpikes DeathBlock 1890
+9 -663 deathSpikes DeathBlock 1890
+3 -532 deathSpikes DeathBlock 90
+6 -397 deathSpikes DeathBlock 90
+8 -268 deathSpikes DeathBlock 90
+1201 -563 ahLogo0 GoalBlock 4
+460 1006 WaterMT SuperBack 1162 491
+1323 934 WaterMT SuperBack 1312 796
+96 -41 WaterMT SuperBack 1312 796
+-5 -543 Water WaterBlock 0 10 10
+723 557 Water WaterBlock 0 3658.025 2782.937
+Demi -160 1432 -298 1895
+BGCOLOR 167 218 220
+CAM 0.55
+CPOS 400 360
