@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="190464">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="190976">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>73o7z0Z9w3vOofpGx+L5jz1ftVY=</dsig:DigestValue>
+        <dsig:DigestValue>bN+mf+Qypw6fC/JGkYjQW9uA33w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2204,13 +2204,13 @@
       <dsig:DigestValue>AFGaIczHAzOg7d673ecqToS4tcU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\World1\Level11.txt" size="4679">
+  <file name="Content\World1\Level11.txt" size="5292">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>DCEmweh9X1FlWsGoulkgj7eU7j8=</dsig:DigestValue>
+      <dsig:DigestValue>dwOFWHux8OhfeH3Kj3HAd6zSQ7w=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\World1\Level12.txt" size="27372">

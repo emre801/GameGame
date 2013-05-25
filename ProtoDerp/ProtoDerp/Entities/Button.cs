@@ -45,7 +45,11 @@ namespace ProtoDerp
             this.IsVisible = false;
             this.oldMouse = Mouse.GetState();
             this.blockSprite = game.getSprite(spriteName);
-            this.buttonBox = new Rectangle((int)pos.X, (int)pos.Y, 20, 20);
+            if(!isInTitle)
+                this.buttonBox = new Rectangle((int)pos.X, (int)pos.Y, 20, 20);
+            else
+                this.buttonBox = new Rectangle((int)pos.X - blockSprite.index.Width / 2, (int)pos.Y - blockSprite.index.Height/2,
+                    (int)(blockSprite.index.Width), (int)(blockSprite.index.Height));
             this.origin = new Vector2(1, 1);
         }
 
@@ -60,6 +64,13 @@ namespace ProtoDerp
 
         public override void Update(GameTime gameTime, float worldSpeed)
         {
+             if(!isInTitle)
+                this.buttonBox = new Rectangle((int)pos.X, (int)pos.Y, 20, 20);
+            else
+                 this.buttonBox = new Rectangle((int)pos.X - (int)(blockSprite.index.Width / 4), (int)pos.Y - (int)(blockSprite.index.Height / 4f),
+                (int)(blockSprite.index.Width/2), (int)(blockSprite.index.Height/2f));
+
+
             if (game.gMode == 2 && game.activateButtons&& game.backGroundNum==0)
             {
                 isColliding();
@@ -93,7 +104,7 @@ namespace ProtoDerp
             Rectangle mouseRect = new Rectangle((int)mousePosition.X, (int)mousePosition.Y, 1, 1);
             if (mouseRect.Intersects(buttonBox))
             {
-                if (oldMouse.LeftButton == ButtonState.Released && Mouse.GetState().LeftButton == ButtonState.Pressed)
+                if (Mouse.GetState().LeftButton == ButtonState.Pressed)
                 {
                     if (!isInTitle)
                     {
@@ -118,6 +129,8 @@ namespace ProtoDerp
         {
             if (game.backGroundNum != 0)
                 return;
+
+            
             if ((game.gMode == 2 && game.activateButtons && game.cameraWindowValue==0))
             {
                 //game.drawingTool.drawBorderImageFromPos(pos.X, pos.Y, 30, 30,spriteBatch);
@@ -175,6 +188,13 @@ namespace ProtoDerp
 
 
             }
+            /*
+            if (isInTitle)
+            {
+                spriteBatch.Draw(game.getSprite("Error").index, buttonBox, null, Color.Green, 0, new Vector2(0,0), SpriteEffects.None, 0f);
+
+
+            }*/
 
         }
 

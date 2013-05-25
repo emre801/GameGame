@@ -403,7 +403,7 @@ namespace ProtoDerp
 
         public void DrawMouse(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            if (game.isInCreatorMode || game.backToTitleScreen)
+            if (game.isInCreatorMode || game.backToTitleScreen || game.Title.IsVisible)
             {
                 MouseState ms = Mouse.GetState();
                 Rectangle rect = new Rectangle(ms.X, ms.Y, 10, 15);
