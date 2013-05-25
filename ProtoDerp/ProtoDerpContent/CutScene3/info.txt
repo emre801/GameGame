@@ -1,0 +1,2 @@
+Normal 0.50 0.30 player_strip12 0 10
+AButt 0.50 0.30 0 1 true
