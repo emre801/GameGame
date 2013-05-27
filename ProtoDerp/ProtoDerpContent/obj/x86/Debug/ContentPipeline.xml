@@ -1945,6 +1945,33 @@
       <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Splash Art\PixelA.xnb</Output>
       <Time>2013-04-16T22:51:17.3291398-04:00</Time>
     </Item>
+    <Item>
+      <Source>Controller\ControllerButton.png</Source>
+      <Name>Controller\ControllerButton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Controller\ControllerButton.xnb</Output>
+      <Time>2013-05-26T15:49:00.9266314-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Controller\ControllerSel.png</Source>
+      <Name>Controller\ControllerSel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Controller\ControllerSel.xnb</Output>
+      <Time>2013-05-26T15:51:28.2780595-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Controller\ControllerDPad.png</Source>
+      <Name>Controller\ControllerDPad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Controller\ControllerDPad.xnb</Output>
+      <Time>2013-05-26T15:54:27.9083337-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

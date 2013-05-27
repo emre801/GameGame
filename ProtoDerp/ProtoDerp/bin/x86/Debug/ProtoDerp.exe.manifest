@@ -112,7 +112,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>bN+mf+Qypw6fC/JGkYjQW9uA33w=</dsig:DigestValue>
+        <dsig:DigestValue>bQDlGQa6R2iRDInSNK9nKiUzc48=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -429,6 +429,33 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>du8evCF6+am7zhtqEJ4n/rAmBiw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Controller\ControllerButton.xnb" size="86623">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>FKfv/INxMNbOMmIPCr6QBwsK/p0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Controller\ControllerDPad.xnb" size="45331">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>eMzJlYTQR20KxCzosNwKVY5SiU8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Controller\ControllerSel.xnb" size="31771">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>xFjtdwrWG5P4mWpH9EMfUGW/38A=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\CoolBG.xnb" size="3052795">

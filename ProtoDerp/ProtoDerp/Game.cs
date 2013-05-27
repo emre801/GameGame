@@ -1529,6 +1529,7 @@ namespace ProtoDerp
         //Jump point Joker
         protected override void Draw(GameTime gameTime)
         {
+            
             if (!isLoadingContent && splashFadeOut<0)
             {
                 if (gMode == 0 || gMode == 2)
