@@ -225,6 +225,7 @@ Content\Splash Art\PixelA.xnb
 Content\Controller\ControllerButton.xnb
 Content\Controller\ControllerSel.xnb
 Content\Controller\ControllerDPad.xnb
+Content\Controller\ControllerJoyStick.xnb
 Content\CutScene1\info.txt
 Content\CutScene2\info.txt
 Content\CutScene3\info.txt

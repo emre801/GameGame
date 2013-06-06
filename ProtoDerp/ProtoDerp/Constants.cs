@@ -14,21 +14,21 @@ namespace ProtoDerp
         public const int MAX_WRITE_LEVEL = 29;
         public const int READ_LEVEL = 2;
 
-        public const bool IS_IN_REALSE_MODE = false; // set to true to make sure no debug info is set
+        public const bool IS_IN_REALSE_MODE = true; // set to true to make sure no debug info is set
 
         public const int MAX_TEMPLATE_LEVEL = 10;
 
-        public const bool IS_IN_DEBUG_MODE = true; //set this to false when release
+        public const bool IS_IN_DEBUG_MODE = false; //set this to false when release
 
-        public const bool ENABLE_CREATIVE_MODE = true; //set this to false if you want to give access to creative mode
+        public const bool ENABLE_CREATIVE_MODE = false; //set this to false if you want to give access to creative mode
 
         public const bool SEND_EMAIL_DATA = false; // set to true when working it friends
         
         public const double GAMEWORLD_ASPECT_RATIO = 4f / 3f; // Width of game world / height of game world
 
-        public const bool PRELOAD_LEVELS = false; // Set this to true when release
+        public const bool PRELOAD_LEVELS = true; // Set this to true when release
 
-        public const bool DO_FADE_OUT = false; // set this to true for release
+        public const bool DO_FADE_OUT = true; // set this to true for release
 
         public const bool DO_CUT_SCENE = true;
 

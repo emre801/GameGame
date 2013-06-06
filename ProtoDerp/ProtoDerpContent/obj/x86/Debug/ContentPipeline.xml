@@ -1972,6 +1972,15 @@
       <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Controller\ControllerDPad.xnb</Output>
       <Time>2013-05-26T15:54:27.9083337-04:00</Time>
     </Item>
+    <Item>
+      <Source>Controller\ControllerJoyStick.png</Source>
+      <Name>Controller\ControllerJoyStick</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Controller\ControllerJoyStick.xnb</Output>
+      <Time>2013-05-27T19:54:32.4181443-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

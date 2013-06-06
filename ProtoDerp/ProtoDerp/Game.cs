@@ -278,7 +278,7 @@ namespace ProtoDerp
 
         public void preLoadEachLevel()
         {
-            //JumpPoint
+            //JumpPoint for John
             LevelEditor le = new LevelEditor(this);
             preloadLevelOnly = true;
             
@@ -342,7 +342,7 @@ namespace ProtoDerp
         {
             //LoadingContent();
             //ThreadInfo threadInfo = new ThreadInfo();
-            //Load Fonts
+            //Load Fonts, this is important for splash screen.
             fonts[(int)Fonts.FT_MEDIUM] = Content.Load<SpriteFont>("Font\\share_20px_reg");
             fonts[(int)Fonts.FT_HEADER] = Content.Load<SpriteFont>("Font\\share_48px_bold");
             fonts[(int)Fonts.FT_TITLE] = Content.Load<SpriteFont>("Font\\ghost_42px_bold");
@@ -351,17 +351,10 @@ namespace ProtoDerp
             sprites.Add("c801", new Sprite(Content, "Splash Art\\c801"));
             sprites.Add("PixelA", new Sprite(Content, "Splash Art\\PixelA"));
 
-            ThreadPool.QueueUserWorkItem(new WaitCallback(LoadingContentThread2));
+            ThreadPool.QueueUserWorkItem(new WaitCallback(LoadingContentThread));
         }
 
-        public void LoadingContentThread1(Object a)
-        {
-            
-
-
-        }
-
-        public void LoadingContentThread2(Object a)
+        public void LoadingContentThread(Object a)
         {
             
             //spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -884,23 +877,8 @@ namespace ProtoDerp
 
                 if (currentWorld < Constants.TOTAL_NUMBER_OF_WORLDS)
                 {
-
-                    //entities.Clear();
-                    //toBeAdded.Clear();
-                    //cachedEntityLists = new Dictionary<Type, object>();
-                    //backGroundImages.Clear();
-
-                    //CutScene ct = new CutScene(this, (int)currentWorld);
-                    //addEntity(ct);
-                    //inCutScene = true;
-                    //camZoomValue = -1;
                     currentLevel = level;
                     winningAnimation = true;
-                    ///backToTitleScreen = true;
-                    //backGroundImages.Clear();
-                    //JUMP Point
-
-
                 }
 
             }
@@ -914,7 +892,6 @@ namespace ProtoDerp
                 gameDoneLoading = false;
                 gameInsertValues = false;
             }
-            //loadNewLevel = true;
         }
 
         public void playSong(String songName)
