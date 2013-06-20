@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\RageQuit.xnb</Output>
-      <Time>2012-12-15T01:58:51.7020901-05:00</Time>
+      <Time>2013-06-20T00:26:35.820658-04:00</Time>
     </Item>
     <Item>
       <Source>block1-2.png</Source>
@@ -864,7 +864,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\CreativeMode.xnb</Output>
-      <Time>2012-12-23T12:30:41.2677159-05:00</Time>
+      <Time>2013-06-20T00:22:09.4484223-04:00</Time>
     </Item>
     <Item>
       <Source>Exit.png</Source>
@@ -873,7 +873,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Exit.xnb</Output>
-      <Time>2012-12-23T12:30:41.2717161-05:00</Time>
+      <Time>2013-06-20T00:24:39.1979875-04:00</Time>
     </Item>
     <Item>
       <Source>SelectLevel.png</Source>
@@ -882,7 +882,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\SelectLevel.xnb</Output>
-      <Time>2012-12-23T12:30:41.2797165-05:00</Time>
+      <Time>2013-06-20T00:15:52.3198518-04:00</Time>
     </Item>
     <Item>
       <Source>start.png</Source>
@@ -891,7 +891,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\start.xnb</Output>
-      <Time>2012-12-23T12:30:41.2847168-05:00</Time>
+      <Time>2013-06-20T00:13:39.1712361-04:00</Time>
     </Item>
     <Item>
       <Source>Music\Pins and Needles.mp3</Source>

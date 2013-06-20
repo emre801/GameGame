@@ -159,6 +159,23 @@
 478 -115 bigBlock Block 85 35 0 0
 482 18 bigBlock Block 85 35 0 0
 80 -383 bigBlock Block 85 35 0 0
+194 -489 pixRay Block 128 98 0 0
+525 -587 pixRay Block 128 98 0 0
+676 -422 pixRay Block 128 98 0 0
+633 -361 pixRay Block 128 98 0 0
+564 -373 pixRay Block 128 98 0 0
+186 -218 pixRay Block 128 98 0 0
+23 -277 pixRay Block 128 98 0 0
+2 -550 pixRay Block 128 98 0 0
+335 -681 pixRay Block 128 98 0 0
+768 -242 pixRay Block 128 98 0 0
+772 -651 pixRay Block 128 98 0 0
+999 -387 pixRay Block 128 98 0 0
+157 -11 pixRay Block 128 98 0 0
+-138 -346 pixRay Block 128 98 0 0
+-128 -555 pixRay Block 128 98 0 0
+-154 -17 pixRay Block 128 98 0 0
+891 -44 pixRay Block 128 98 0 0
 445 -116 deathSpikes DeathBlock 630
 445 6 deathSpikes DeathBlock 630
 445 130 deathSpikes DeathBlock 630

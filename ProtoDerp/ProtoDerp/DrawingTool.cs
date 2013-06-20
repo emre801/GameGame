@@ -585,6 +585,7 @@ namespace ProtoDerp
                 if (e is Block)
                 {
                     Block b = (Block)e;
+                    //experiment with look --- if (b.drawLevel == 1)
                     if (b.drawLevel == 1)
                     {
                         b.DrawShadow(gameTime, spriteBatch);
@@ -634,7 +635,8 @@ namespace ProtoDerp
                 if (e is Block)
                 {
                     Block b = (Block)e;
-                    if (b.drawLevel != 1)
+                    //Testing look --- if (b.drawLevel != 1)
+                    if (b.drawLevel != 4)
                     {
                         b.DrawShadow(gameTime, spriteBatch);
                     }
