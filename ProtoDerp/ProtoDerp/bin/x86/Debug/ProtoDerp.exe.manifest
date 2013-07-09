@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="193024">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProtoDerp.exe" size="198144">
       <assemblyIdentity name="ProtoDerp" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>OT+kK08+6gIXb8qe9NasjJnLOmk=</dsig:DigestValue>
+        <dsig:DigestValue>KuZ1w40iwAWd3tHZJYl4HeI58Sc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -584,13 +584,13 @@
       <dsig:DigestValue>/eMGkYERsZTyBafEfJUIxe2EQ2A=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\CutSceneInfo\CutScene0.txt" size="162">
+  <file name="Content\CutSceneInfo\CutScene0.txt" size="96">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>kvB+fGhjJw4/r1Xaz6AFQyRsmw4=</dsig:DigestValue>
+      <dsig:DigestValue>cFJiacO522MX36cjDPJlSNfIqSk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\deathBall.xnb" size="136339">

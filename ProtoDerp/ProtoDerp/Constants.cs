@@ -14,6 +14,7 @@ namespace ProtoDerp
         public const int MAX_WRITE_LEVEL = 29;
         public const int READ_LEVEL = 2;
 
+        public const int WAIT_TIME = 5000;
         public const bool IS_IN_REALSE_MODE = false; // set to true to make sure no debug info is set
 
         public const int MAX_TEMPLATE_LEVEL = 10;

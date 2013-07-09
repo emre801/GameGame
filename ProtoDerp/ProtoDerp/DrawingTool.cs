@@ -47,6 +47,7 @@ namespace ProtoDerp
 
         public float zoomRatioValue = 0.75f;
 
+        public Vector2 worldDemension;
 
         public DrawingTool(Game game)
         {
@@ -129,6 +130,7 @@ namespace ProtoDerp
 
             rectangle = new Texture2D(gdm.GraphicsDevice, 1, 1);
             rectangle.SetData(new[] { Color.White });
+            worldDemension = new Vector2(w, h);
 
         }
         public void resetCamera()

@@ -337,7 +337,7 @@ namespace ProtoDerp
                         game.isInLevelSelect = false;
                         game.drawingTool.cam.Zoom = 0.35f * game.drawingTool.zoomRatio;
                         //game.populateWorldCreatorMode();
-                        game.populateCutSceneEditor();
+                        game.populateCutSceneEditor(true);
                         game.gMode = 12;
                         IsVisible = false;
                     }

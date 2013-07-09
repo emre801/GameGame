@@ -261,12 +261,9 @@ namespace ProtoDerp
 
         }
 
-        public void populateCutSceneEditor()
+        public void populateCutSceneEditor(bool val)
         {
-           cse = new CutSceneEditor(this);
-            
-
-
+           cse = new CutSceneEditor(this,val);
         }
 
         public void populateWorldCreatorMode()
@@ -1423,8 +1420,8 @@ namespace ProtoDerp
             }
 
             toBeAdded.Clear();
-            try
-            {
+            //try
+            //{
                 foreach (Entity e in entities)
                 {
                     if (e.IsUpdateable && !e.dispose)
@@ -1455,10 +1452,10 @@ namespace ProtoDerp
                         toBeRemoved.AddLast(e);
                     }
                 }
-            }
-            catch
-            {
-            }
+            //}
+            //catch
+            //{
+            //}
             
             foreach (Entity e in toBeRemoved)
             {
