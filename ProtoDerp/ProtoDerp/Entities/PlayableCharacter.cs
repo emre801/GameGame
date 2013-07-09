@@ -54,7 +54,7 @@ namespace ProtoDerp
         public Fixture wheel;
         public FixedAngleJoint fixedAngleJoint;
         public RevoluteJoint motor;
-        SpriteStripAnimationHandler ani;
+        public SpriteStripAnimationHandler ani;
         KeyboardInput keyInput;
         Vector2 shiftPosition;
 

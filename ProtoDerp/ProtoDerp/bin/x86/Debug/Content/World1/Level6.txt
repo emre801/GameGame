@@ -291,6 +291,38 @@
 2690 1255 pixMT SuperBack 1103 421
 3793 1251 pixMT SuperBack 1103 421
 4896 1248 pixMT SuperBack 1103 421
+-3228 1407 trees0 SuperBack 125 202
+-2975 1396 trees0 SuperBack 125 202
+-2739 1390 trees0 SuperBack 125 202
+-2118 1405 trees0 SuperBack 125 202
+-1667 1388 trees0 SuperBack 125 202
+-1228 1394 trees0 SuperBack 125 202
+-864 1382 trees0 SuperBack 125 202
+408 1365 trees0 SuperBack 125 202
+1211 1376 trees0 SuperBack 125 202
+1728 1386 trees0 SuperBack 125 202
+2158 1386 trees0 SuperBack 125 202
+2613 1407 trees0 SuperBack 125 202
+3113 1415 trees0 SuperBack 125 202
+3559 1415 trees0 SuperBack 125 202
+3979 1396 trees0 SuperBack 125 202
+2380 1411 trees0 SuperBack 125 202
+-3113 1387 trees1 SuperBack 133 227
+-2574 1387 trees1 SuperBack 133 227
+-1950 1375 trees1 SuperBack 133 227
+-1455 1387 trees1 SuperBack 133 227
+157 1358 trees1 SuperBack 133 227
+1061 1366 trees1 SuperBack 133 227
+1935 1381 trees1 SuperBack 133 227
+2267 1395 trees1 SuperBack 133 227
+2810 1400 trees1 SuperBack 133 227
+3434 1427 trees1 SuperBack 133 227
+3278 1414 trees2 SuperBack 130 212
+4295 1412 trees2 SuperBack 130 212
+-994 1371 trees2 SuperBack 130 212
+-1551 1389 trees2 SuperBack 130 212
+-2225 1381 trees2 SuperBack 130 212
+-2868 1381 trees2 SuperBack 130 212
 334 25 sign0 SignBlock 0 56 63
 Text 0.3 0.8 -1
 It's all about timing

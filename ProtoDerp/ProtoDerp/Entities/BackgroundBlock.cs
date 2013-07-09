@@ -33,11 +33,12 @@ namespace ProtoDerp
         }
         public override void Update(GameTime gameTime, float worldSpeed)
         {
-            if (spriteNumber.Contains("cloud") && !game.isInCreatorMode)
+            if (spriteNumber.Contains("cloud") && !game.isInCreatorMode && !game.IsPaused)
             {
                 pos = new Vector2(pos.X - 0.005f, pos.Y);
+
+                pos = new Vector2(pos.X + game.moveBackGround.X / 5, pos.Y);
             }
-            pos = new Vector2(pos.X+game.moveBackGround.X/5, pos.Y);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -45,7 +46,7 @@ namespace ProtoDerp
             if (!IsVisible)
                 return;
 
-            if (spriteNumber.Contains("cloud") && !game.isInCreatorMode)
+            if (spriteNumber.Contains("cloud") && !game.isInCreatorMode && !game.pause)
             {
 
                 pos = new Vector2(pos.X - 0.1f, pos.Y);
@@ -53,7 +54,7 @@ namespace ProtoDerp
 
             Vector2 origin = new Vector2(blockSprite.index.Width / 2, blockSprite.index.Height / 2);
 
-            if (game.moveBackGround.X != 0)
+            if (game.moveBackGround.X != 0 && !game.pause)
             {
                 pos -= new Vector2(game.moveBackGround.X / 150, 0);
             }

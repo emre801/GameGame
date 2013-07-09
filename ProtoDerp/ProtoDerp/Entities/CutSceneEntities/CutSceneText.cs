@@ -91,7 +91,7 @@ namespace ProtoDerp
                     if (isClosing)
                     {
                         openValue -= 10;
-                        if (openValue == 0)
+                        if (openValue < 0)
                         {
                             if(!game.isReadingText)
                                 this.dispose = true;
@@ -128,7 +128,8 @@ namespace ProtoDerp
             char[] tempstrMulti = text.ToCharArray(); 
             SpriteFont font = game.fonts[(int)Game.Fonts.FT_PIXEL];
 
-            drawBorderImage(x - font.MeasureString("A").X * size * game.scale, y - font.MeasureString("A").Y * size * game.scale * 0.5f, 100, (int)(boxLength * size * game.scale * 0.75f), spriteBatch);
+            drawBorderImage(x - font.MeasureString("A").X * size * game.scale, y - font.MeasureString("A").Y * size * game.scale * 0.5f, 100, 
+                (int)(boxLength * size * game.scale * 0.75f), spriteBatch);
             
             if (currentTextValue > tempstrMulti.Length)
             {
@@ -200,10 +201,12 @@ namespace ProtoDerp
                 else
                 {
                     SpriteFont font = game.fonts[(int)Game.Fonts.FT_PIXEL];
-
-                    drawBorderImage(pos.X - font.MeasureString("A").X * 0.5f, pos.Y - font.MeasureString("A").Y * 0.5f * 0.5f, 
-                        (int)(100 * (openValue / 100f)*game.scale),
-                        (int)((boxLength * 0.5f * 0.75f) * (openValue / 100f)*game.scale), spriteBatch);
+                    if (openValue >= 0)
+                    {
+                        drawBorderImage(pos.X - font.MeasureString("A").X * 0.5f, pos.Y - font.MeasureString("A").Y * 0.5f * 0.5f,
+                            (int)(100 * (openValue / 100f)),
+                            (int)((boxLength * 0.5f * game.scale * 0.75f) * (openValue / 100f)), spriteBatch);
+                    }
             
 
 

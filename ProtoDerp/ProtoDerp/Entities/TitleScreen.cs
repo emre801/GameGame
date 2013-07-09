@@ -44,12 +44,12 @@ namespace ProtoDerp
         Input player1 = null;
 
         int select = 0;
-        const int numOptions = 4;
+        const int numOptions = 5;
         int decreaseAlpha = -1; //If set to something other than -1, fades the title screen out, and performs
         //the parallel option (that matches select)
 
         KeyboardInput keyInput;
-        Button start, selectLevel, creativeMode, exit;
+        Button start, selectLevel, creativeMode, cutScene,exit;
         bool moveDirection;
         int moveTimer = 0;
 
@@ -92,7 +92,11 @@ namespace ProtoDerp
             Sprite startSP=game.getSprite("start");
             Sprite selectLevelSP = game.getSprite("SelectLevel");
             Sprite creativeSP = game.getSprite("CreativeMode");
+            Sprite cutSceneSP = game.getSprite("cutScene");
             Sprite exitSP = game.getSprite("Exit");
+
+            Sprite selIcon = game.getSprite("selIcon");
+
             float spaceValue = 0.45f;
             if (Constants.FULLSCREEN)
                 spaceValue = 0.65f;
@@ -102,9 +106,11 @@ namespace ProtoDerp
             Vector2 v3 = new Vector2(posSelectText.X, v2.Y + selectLevelSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
             
             Vector2 v4 = new Vector2(posSelectText.X, v3.Y + creativeSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
+            Vector2 v5 = new Vector2(posSelectText.X, v4.Y + cutSceneSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
             if (!Constants.ENABLE_CREATIVE_MODE)
             {
                 v4 = new Vector2(posSelectText.X, v2.Y + selectLevelSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
+                v5 = new Vector2(posSelectText.X, v2.Y + selectLevelSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
             }
 #if XBOX
             v4 = new Vector2(posSelectText.X, v2.Y + selectLevelSP.index.Height * spaceValue * game.drawingTool.zoomRatio + 20 * game.drawingTool.zoomRatio);
@@ -115,8 +121,10 @@ namespace ProtoDerp
             selectLevel.setTitleValuee(1);
             creativeMode = new Button(g, v3, 0, "CreativeMode");
             creativeMode.setTitleValuee(2);
-            exit = new Button(g, v4, 0, "Exit");
-            exit.setTitleValuee(3);
+            cutScene = new Button(g, v4, 0, "cutScene");
+            cutScene.setTitleValuee(3);
+            exit = new Button(g, v5, 0, "Exit");
+            exit.setTitleValuee(4);
 
             game.fadeAlpha = 1f;
             game.drawingTool.resetCamera();
@@ -211,8 +219,9 @@ namespace ProtoDerp
 #if WINDOWS
                     if (!Constants.ENABLE_CREATIVE_MODE)
                     {
-                        if (select == 2)
+                        if (select == 3)
                             select = 1;
+                        
                     }
 #elif XBOX 
                     if (select == 2)
@@ -231,7 +240,7 @@ namespace ProtoDerp
                     if (!Constants.ENABLE_CREATIVE_MODE)
                     {
                         if (select == 2)
-                            select = 3;
+                            select = 4;
                     }
 #elif XBOX 
                     if (select == 2)
@@ -251,6 +260,8 @@ namespace ProtoDerp
                         decreaseAlpha = 2;
                     else if (select == 3) //End Game
                         decreaseAlpha = 3;
+                    else if (select == 4) //End Game
+                        decreaseAlpha = 4;
                 }
                 if (game.isCollidingWithButton)
                 {
@@ -322,6 +333,16 @@ namespace ProtoDerp
                     }
                     else if (this.decreaseAlpha == 3)
                     {
+                        //CutScene block
+                        game.isInLevelSelect = false;
+                        game.drawingTool.cam.Zoom = 0.35f * game.drawingTool.zoomRatio;
+                        //game.populateWorldCreatorMode();
+                        game.populateCutSceneEditor();
+                        game.gMode = 12;
+                        IsVisible = false;
+                    }
+                    else if (this.decreaseAlpha == 4)
+                    {
                         
                         #if WINDOWS
                         Environment.Exit(0);
@@ -350,8 +371,11 @@ namespace ProtoDerp
                 start.Draw(gameTime, spriteBatch);
                 selectLevel.Draw(gameTime, spriteBatch);
 #if WINDOWS
-                if(Constants.ENABLE_CREATIVE_MODE)
+                if (Constants.ENABLE_CREATIVE_MODE)
+                {
                     creativeMode.Draw(gameTime, spriteBatch);
+                    cutScene.Draw(gameTime, spriteBatch);
+                }
 #endif
                 exit.Draw(gameTime, spriteBatch);
                 game.GUI.DrawMouse(gameTime, spriteBatch);    

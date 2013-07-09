@@ -873,7 +873,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Exit.xnb</Output>
-      <Time>2013-06-20T00:24:39.1979875-04:00</Time>
+      <Time>2013-06-20T11:19:06.4103525-04:00</Time>
     </Item>
     <Item>
       <Source>SelectLevel.png</Source>
@@ -882,7 +882,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\SelectLevel.xnb</Output>
-      <Time>2013-06-20T00:15:52.3198518-04:00</Time>
+      <Time>2013-06-20T11:20:12.8831545-04:00</Time>
     </Item>
     <Item>
       <Source>start.png</Source>
@@ -891,7 +891,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\John\documents\visual studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\start.xnb</Output>
-      <Time>2013-06-20T00:13:39.1712361-04:00</Time>
+      <Time>2013-06-20T11:19:46.5666493-04:00</Time>
     </Item>
     <Item>
       <Source>Music\Pins and Needles.mp3</Source>
@@ -1980,6 +1980,42 @@
       <Options>None</Options>
       <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\Controller\ControllerJoyStick.xnb</Output>
       <Time>2013-05-27T19:54:32.4181443-04:00</Time>
+    </Item>
+    <Item>
+      <Source>selIcon.png</Source>
+      <Name>selIcon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\selIcon.xnb</Output>
+      <Time>2013-06-21T11:58:30.8625763-04:00</Time>
+    </Item>
+    <Item>
+      <Source>RegularBlocks\blockWorld1.png</Source>
+      <Name>RegularBlocks\blockWorld1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\RegularBlocks\blockWorld1.xnb</Output>
+      <Time>2013-07-03T11:34:51.1039786-04:00</Time>
+    </Item>
+    <Item>
+      <Source>RegularBlocks\blockWorld2.png</Source>
+      <Name>RegularBlocks\blockWorld2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\RegularBlocks\blockWorld2.xnb</Output>
+      <Time>2013-07-03T11:34:51.741015-04:00</Time>
+    </Item>
+    <Item>
+      <Source>cutScene.png</Source>
+      <Name>cutScene</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\John\Documents\Visual Studio 2010\Projects\ProtoDerp\ProtoDerp\ProtoDerp\bin\x86\Debug\Content\cutScene.xnb</Output>
+      <Time>2013-07-08T10:31:02.5632173-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

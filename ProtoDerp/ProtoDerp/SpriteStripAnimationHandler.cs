@@ -148,5 +148,12 @@ namespace ProtoDerp
             else
                 spriteBatch.Draw(spriteStrip.index, drawPos, texBounds, owner.blend * owner.alpha, 0, origin, 1, SpriteEffects.FlipHorizontally, 0);
         }
+        public void drawCurrentState(SpriteBatch spriteBatch, Vector2 drawPos, Vector2 origin, Boolean direction)
+        {
+            if (direction)
+                spriteBatch.Draw(spriteStrip.index, drawPos, texBounds, Color.White, 0, origin, 1, SpriteEffects.None, 0);
+            else
+                spriteBatch.Draw(spriteStrip.index, drawPos, texBounds, Color.White, 0, origin, 1, SpriteEffects.FlipHorizontally, 0);
+        }
     }
 }

@@ -204,6 +204,24 @@
 24 -1282 cloudPix SuperBack 344 74
 1310 -1322 cloudPix SuperBack 344 74
 1515 -2232 cloudPix SuperBack 344 74
+249 -21 trees0 SuperBack 140 257
+-702 148 trees0 SuperBack 140 257
+-1121 150 trees0 SuperBack 140 257
+-2217 137 trees0 SuperBack 140 257
+1768 134 trees0 SuperBack 140 257
+2155 132 trees0 SuperBack 140 257
+2497 142 trees0 SuperBack 140 257
+3085 142 trees0 SuperBack 140 257
+-47 -18 trees1 SuperBack 143 242
+758 -28 trees1 SuperBack 143 242
+1387 151 trees1 SuperBack 143 242
+1947 146 trees1 SuperBack 143 242
+2990 149 trees1 SuperBack 143 242
+517 -23 trees2 SuperBack 160 247
+-478 113 trees2 SuperBack 160 247
+-848 128 trees2 SuperBack 160 247
+-1512 130 trees2 SuperBack 160 247
+-1953 118 trees2 SuperBack 160 247
 -72 12 sign0 SignBlock 0 56 63
 Text 0.3 0.8 -1
 Ninja upwards

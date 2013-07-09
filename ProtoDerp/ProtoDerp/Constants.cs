@@ -9,8 +9,8 @@ namespace ProtoDerp
 {
     class Constants
     {
-        public const int WRITE_LEVEL = 7;
-        public const int STARTING_WORLD = 2;
+        public const int WRITE_LEVEL = 1;
+        public const int STARTING_WORLD = 1;
         public const int MAX_WRITE_LEVEL = 29;
         public const int READ_LEVEL = 2;
 
@@ -20,7 +20,7 @@ namespace ProtoDerp
 
         public const bool IS_IN_DEBUG_MODE = true; //set this to false when release
 
-        public const bool ENABLE_CREATIVE_MODE = false; //set this to false if you want to give access to creative mode
+        public const bool ENABLE_CREATIVE_MODE = true; //set this to false if you want to give access to creative mode
 
         public const bool SEND_EMAIL_DATA = false; // set to true when working it friends
         
@@ -28,13 +28,15 @@ namespace ProtoDerp
 
         public const bool PRELOAD_LEVELS = false; // Set this to true when release
 
-        public const bool DO_FADE_OUT = true; // set this to true for release
+        public const bool DO_FADE_OUT = false; // set this to true for release
 
         public const bool DO_CUT_SCENE = true;
 
-        public const bool BLOCK_EFFECT=true;
+        public const bool BLOCK_EFFECT=false; // set this to true to do block effect
 
         public const bool FIND_LAG = false;
+
+        public const bool CUT_SCENE_CREATOR = true;//set to false for release
         // The size of the screen in pixels
         public const int DESIRED_GAME_RESOLUTION_WIDTH = 800;//480
         public const int DESIRED_GAME_RESOLUTION_HEIGHT = (int)(DESIRED_GAME_RESOLUTION_WIDTH / GAMEWORLD_ASPECT_RATIO); //320
@@ -55,7 +57,7 @@ namespace ProtoDerp
 #elif XBOX
         public const bool FULLSCREEN = false;
 #endif
-        public const bool PLAY_MUSIC = true;
+        public const bool PLAY_MUSIC = false;
 
         public const float SHADOW_VALUE = 0.25f;
 

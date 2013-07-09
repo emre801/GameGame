@@ -196,6 +196,9 @@ namespace ProtoDerp
         public float splashFadeOut = 1f;
 
         bool isLoadingContent = true;
+
+        CutSceneEditor cse;
+
         public Game()
         {
             WorldSpeed = 1.0f;
@@ -254,6 +257,14 @@ namespace ProtoDerp
                 int rageFile = ran.Next(4);
                 sounds["Rage//Rage" + rageFile].Play();
             }
+
+
+        }
+
+        public void populateCutSceneEditor()
+        {
+           cse = new CutSceneEditor(this);
+            
 
 
         }
@@ -378,6 +389,9 @@ namespace ProtoDerp
             sprites.Add("cloud", new Sprite(Content, "cloud"));
             blockList.AddLast("cloud");
 
+            sprites.Add("blockWorld1", new Sprite(Content, "RegularBlocks//blockWorld1"));
+            sprites.Add("blockWorld2", new Sprite(Content, "RegularBlocks//blockWorld2"));
+
             sprites.Add("gym", new Sprite(Content, "gym"));
             blockList.AddLast("gym");
             sprites.Add("sign0", new Sprite(Content, "sign0"));
@@ -406,6 +420,8 @@ namespace ProtoDerp
             sprites.Add("graph", new Sprite(Content, "graph"));
             sprites.Add("Water", new Sprite(Content, "Water"));
             blockList.AddLast("Water");
+
+
 
             sprites.Add("trees0", new Sprite(Content, "trees0"));
             blockList.AddLast("trees0");
@@ -607,7 +623,9 @@ namespace ProtoDerp
             sprites.Add("start", new Sprite(Content, "start"));
             sprites.Add("SelectLevel", new Sprite(Content, "SelectLevel"));
             sprites.Add("CreativeMode", new Sprite(Content, "CreativeMode"));
+            sprites.Add("cutScene", new Sprite(Content, "cutScene"));
             sprites.Add("Exit", new Sprite(Content, "Exit"));
+            sprites.Add("selIcon", new Sprite(Content, "selIcon"));
 
             sprites.Add("clouds", new Sprite(Content, "clouds"));
 
@@ -1235,6 +1253,12 @@ namespace ProtoDerp
             {
                 Exit();
             }
+            if (gMode == 12)
+            {
+                cse.Update(gameTime);
+                return;
+
+            }
             if (isLoadingContent)
             {
                 return;
@@ -1306,7 +1330,14 @@ namespace ProtoDerp
                     {
                         e.Update(gameTime, WorldSpeed);
                     }
+                    if (e is PlayableCharacter)
+                    {
+                        PlayableCharacter pc = (PlayableCharacter)e;
+                        pc.ani.Update();
+                    }
+                    
                 }
+                
                 return;
 
             }
@@ -1506,6 +1537,13 @@ namespace ProtoDerp
         //Jump point Joker
         protected override void Draw(GameTime gameTime)
         {
+
+            if (gMode == 12)
+            {
+                cse.Draw(drawingTool.spriteBatch);
+                return;
+            }
+
             
             if (!isLoadingContent && splashFadeOut<0)
             {

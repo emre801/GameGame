@@ -159,23 +159,6 @@
 478 -115 bigBlock Block 85 35 0 0
 482 18 bigBlock Block 85 35 0 0
 80 -383 bigBlock Block 85 35 0 0
-194 -489 pixRay Block 128 98 0 0
-525 -587 pixRay Block 128 98 0 0
-676 -422 pixRay Block 128 98 0 0
-633 -361 pixRay Block 128 98 0 0
-564 -373 pixRay Block 128 98 0 0
-186 -218 pixRay Block 128 98 0 0
-23 -277 pixRay Block 128 98 0 0
-2 -550 pixRay Block 128 98 0 0
-335 -681 pixRay Block 128 98 0 0
-768 -242 pixRay Block 128 98 0 0
-772 -651 pixRay Block 128 98 0 0
-999 -387 pixRay Block 128 98 0 0
-157 -11 pixRay Block 128 98 0 0
--138 -346 pixRay Block 128 98 0 0
--128 -555 pixRay Block 128 98 0 0
--154 -17 pixRay Block 128 98 0 0
-891 -44 pixRay Block 128 98 0 0
 445 -116 deathSpikes DeathBlock 630
 445 6 deathSpikes DeathBlock 630
 445 130 deathSpikes DeathBlock 630
@@ -303,6 +286,29 @@
 932 -972 cloudPix SuperBack 339 84
 2561 -949 cloudPix SuperBack 339 84
 3918 -949 cloudPix SuperBack 339 84
+152 50 trees0 SuperBack 130 192
+373 52 trees0 SuperBack 130 192
+963 40 trees0 SuperBack 130 192
+1792 42 trees0 SuperBack 130 192
+2491 44 trees0 SuperBack 130 192
+3525 50 trees0 SuperBack 130 192
+-264 242 trees0 SuperBack 130 192
+-1097 385 trees0 SuperBack 130 192
+-1711 385 trees0 SuperBack 130 192
+-2272 382 trees0 SuperBack 130 192
+-2061 366 trees1 SuperBack 138 237
+-1385 367 trees1 SuperBack 138 237
+-674 222 trees1 SuperBack 138 237
+263 34 trees1 SuperBack 138 237
+694 21 trees1 SuperBack 138 237
+1478 29 trees1 SuperBack 138 237
+2316 35 trees1 SuperBack 138 237
+2958 32 trees1 SuperBack 138 237
+3652 32 trees1 SuperBack 138 237
+4056 22 trees1 SuperBack 138 237
+1929 22 trees2 SuperBack 140 242
+13 53 trees2 SuperBack 140 242
+2799 58 trees2 SuperBack 140 242
 -126 59 sign0 SignBlock 0 56 63
 Text 0.3 0.8 -1
 ddfdfd

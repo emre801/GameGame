@@ -192,6 +192,22 @@ namespace ProtoDerp
             //XNA Framework HiDef profile supports a maximum Texture2D size of 4096
             //if ((spriteNumber.Equals("bigBlock") || spriteNumber.Equals("groundWall"))&& width < 4096 && height < 4096)
             //{
+            if (spriteNumber.Equals("bigBlock"))
+            {
+                if (game.currentWorld == 2)
+                {
+                    playerSprite = game.getSprite("blockWorld2");
+                    //ani = game.getSpriteAnimation("blockWorld2");
+                }
+                else
+                {
+                    playerSprite = game.getSprite("blockWorld1");
+                    //ani = game.getSpriteAnimation("blockWorld1");
+                }
+
+
+            }
+
 #if WINDOWS
             if ((spriteNumber.Equals("bigBlock"))&& width < 4096 && height < 4096 && Constants.BLOCK_EFFECT)
             {
@@ -390,17 +406,22 @@ namespace ProtoDerp
                 }
                 else
                 {
-                if(drawLevel==1 || drawLevel==3)
-                {
-                    displayAlpha=0.3f;
-                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, game.backGroundColor, body.Rotation, origin, SpriteEffects.None, 0f);
+                    if (drawLevel == 1 || drawLevel == 3)
+                    {
+                        //displayAlpha = 0.3f;
+                        //spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, game.backGroundColor, body.Rotation, origin, SpriteEffects.None, 0f);
+                        spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, Color.White, body.Rotation, origin, SpriteEffects.None, 0f);
                 
 
-                }
+                    }
+                    else
+                    {
+                        spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
+                
+                    }
 
 
-                    spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);
-                }
+                 }
 #elif XBOX
 
                 spriteBatch.Draw(playerSprite.index, new Rectangle((int)ConvertUnits.ToDisplayUnits(body.Position.X), (int)ConvertUnits.ToDisplayUnits(body.Position.Y), (int)width, (int)height), null, drawColor * displayAlpha, body.Rotation, origin, SpriteEffects.None, 0f);

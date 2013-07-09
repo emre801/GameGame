@@ -629,6 +629,23 @@
 230 -24 pixMT SuperBack 1798 821
 2081 -131 pixMT SuperBack 2833 2266
 -1491 -630 pixMT SuperBack 2018 2836
+187 45 trees2 SuperBack 175 287
+921 64 trees2 SuperBack 175 287
+-560 28 trees2 SuperBack 175 287
+-981 281 trees2 SuperBack 175 287
+-1957 292 trees2 SuperBack 175 287
+2197 270 trees2 SuperBack 175 287
+1605 235 trees2 SuperBack 175 287
+2792 233 trees2 SuperBack 175 287
+662 31 trees0 SuperBack 170 242
+-205 31 trees0 SuperBack 170 242
+352 45 trees1 SuperBack 133 202
+-42 53 trees1 SuperBack 133 202
+1117 40 trees1 SuperBack 133 202
+-1201 278 trees1 SuperBack 133 202
+-1679 300 trees1 SuperBack 133 202
+1884 244 trees1 SuperBack 133 202
+1428 241 trees1 SuperBack 133 202
 Demi -876 1343 -6170 839
 BGCOLOR 167 218 220 
 CAM 0.407432

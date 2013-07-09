@@ -35,6 +35,7 @@ namespace ProtoDerp
         float heightDiff=30, widthDiff=30;
         bool isInTitle = false;
         int titleValue=0;
+        Sprite selIcon;
         
         public Button(Game g, Vector2 pos, int spritePos, String spriteName)
             : base(g)
@@ -51,6 +52,7 @@ namespace ProtoDerp
                 this.buttonBox = new Rectangle((int)pos.X - blockSprite.index.Width / 2, (int)pos.Y - blockSprite.index.Height/2,
                     (int)(blockSprite.index.Width), (int)(blockSprite.index.Height));
             this.origin = new Vector2(1, 1);
+            selIcon = game.getSprite("selIcon");
         }
 
         public void setTitleValuee(int titleValue)
@@ -134,7 +136,7 @@ namespace ProtoDerp
             if ((game.gMode == 2 && game.activateButtons && game.cameraWindowValue==0))
             {
                 //game.drawingTool.drawBorderImageFromPos(pos.X, pos.Y, 30, 30,spriteBatch);
-
+                //This is for title screens
 
                 if (game.spriteBlockCounter == spritePos)
                 {
@@ -155,46 +157,30 @@ namespace ProtoDerp
             }
             if (game.gMode == 1 || game.gMode == 6)
             {
+                //this is for title screen
                 origin = new Vector2(blockSprite.index.Width / 2f, blockSprite.index.Height/ 2f);
-                float alpha = 1f;
-
                 if (game.gameTitleValue == titleValue)
                     alpha = 0.5f;
-                if (Constants.FULLSCREEN)
+
+                if (game.gameTitleValue == titleValue)
                 {
-                    spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X+5),
-                     (int)(pos.Y+5),
-                     (int)(blockSprite.index.Width * 0.65f * game.drawingTool.zoomRatio), (int)(blockSprite.index.Height * 0.65f * game.drawingTool.zoomRatio)), null, Color.Black*game.fadeAlpha, 0, origin, SpriteEffects.None, 0f);
-                
-                    spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X),
-                     (int)(pos.Y),
-                     (int)(blockSprite.index.Width * 0.65f * game.drawingTool.zoomRatio), (int)(blockSprite.index.Height * 0.65f * game.drawingTool.zoomRatio)), null, Color.White * alpha * game.fadeAlpha, 0, origin, SpriteEffects.None, 0f);
+                    spriteBatch.Draw(selIcon.index, new Rectangle((int)(pos.X - 25),
+                          (int)(pos.Y - 2),
+                          (int)(selIcon.index.Width * 0.45f * game.drawingTool.zoomRatio), (int)(selIcon.index.Height * 0.45f * game.drawingTool.zoomRatio)), null, Color.White * game.fadeAlpha, 0, origin, SpriteEffects.None, 0f);
+                    spriteBatch.Draw(selIcon.index, new Rectangle((int)(pos.X + blockSprite.index.Width * 0.45f * game.drawingTool.zoomRatio + 7.5),
+                         (int)(pos.Y - 2),
+                         (int)(selIcon.index.Width * 0.45f * game.drawingTool.zoomRatio), (int)(selIcon.index.Height * 0.45f * game.drawingTool.zoomRatio)), null, Color.White * game.fadeAlpha, 0, origin, SpriteEffects.FlipHorizontally, 0f);
+
                 }
-                else
-                {
-                    spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X+5),
-                     (int)(pos.Y),
-                     (int)(blockSprite.index.Width * 0.45f * game.drawingTool.zoomRatio), (int)(blockSprite.index.Height * 0.45f * game.drawingTool.zoomRatio)), null, Color.Black*game.fadeAlpha, 0, origin, SpriteEffects.None, 0f);
+
+
+                spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X),
+                 (int)(pos.Y),
+                 (int)(blockSprite.index.Width * 0.45f * game.drawingTool.zoomRatio), (int)(blockSprite.index.Height * 0.45f * game.drawingTool.zoomRatio)), null, Color.White * game.fadeAlpha, 0, origin, SpriteEffects.None, 0f);
                 
-                
-                    spriteBatch.Draw(blockSprite.index, new Rectangle((int)(pos.X),
-                     (int)(pos.Y),
-                     (int)(blockSprite.index.Width * 0.45f * game.drawingTool.zoomRatio), (int)(blockSprite.index.Height * 0.45f * game.drawingTool.zoomRatio)), null, Color.White * alpha * game.fadeAlpha, 0, origin, SpriteEffects.None, 0f);
-                
-                }
-                //spriteBatch.Draw(blockSprite.index, new Vector2((int)pos.X, (int)pos.Y), new Rectangle((int)(pos.X),
-                // (int)(pos.Y),
-               //  (int)widthDiff, (int)heightDiff), Color.White, 0, origin, 5, SpriteEffects.FlipHorizontally, 0f);
 
 
             }
-            /*
-            if (isInTitle)
-            {
-                spriteBatch.Draw(game.getSprite("Error").index, buttonBox, null, Color.Green, 0, new Vector2(0,0), SpriteEffects.None, 0f);
-
-
-            }*/
 
         }
 

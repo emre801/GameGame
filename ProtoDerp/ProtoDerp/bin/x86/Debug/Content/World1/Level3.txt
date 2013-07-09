@@ -180,6 +180,25 @@
 -1340 -116 cloudPix SuperBack 264 74
 2602 -349 cloudPix SuperBack 264 74
 2560 -150 cloudPix SuperBack 264 74
+383 1067 trees0 SuperBack 175 232
+695 1072 trees0 SuperBack 175 232
+853 1061 trees0 SuperBack 175 232
+1716 826 trees0 SuperBack 175 232
+1989 837 trees0 SuperBack 175 232
+2301 854 trees0 SuperBack 175 232
+-512 805 trees0 SuperBack 175 232
+-760 794 trees1 SuperBack 148 272
+-1165 777 trees1 SuperBack 148 272
+-1354 814 trees1 SuperBack 148 272
+-1796 808 trees1 SuperBack 148 272
+2654 852 trees1 SuperBack 148 272
+3108 852 trees1 SuperBack 148 272
+1080 1098 trees2 SuperBack 165 272
+1593 835 trees2 SuperBack 165 272
+2926 814 trees2 SuperBack 165 272
+-1588 785 trees2 SuperBack 165 272
+-2168 796 trees2 SuperBack 165 272
+3381 824 trees2 SuperBack 165 272
 -67 54 sign0 SignBlock 0 56 63
 Text 0.3 0.8 -1
 JUMP

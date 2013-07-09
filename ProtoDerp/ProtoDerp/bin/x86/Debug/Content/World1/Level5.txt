@@ -227,6 +227,33 @@
 3204 -849 cloudPix SuperBack 299 89
 4620 -530 cloudPix SuperBack 299 89
 3474 -540 cloudPix SuperBack 299 89
+-715 112 trees2 SuperBack 135 192
+-340 36 trees2 SuperBack 135 192
+681 29 trees2 SuperBack 135 192
+2036 32 trees2 SuperBack 135 192
+2892 36 trees2 SuperBack 135 192
+1260 51 trees2 SuperBack 135 192
+-1335 106 trees2 SuperBack 135 192
+-1809 210 trees2 SuperBack 135 192
+-2597 194 trees2 SuperBack 135 192
+-3486 187 trees2 SuperBack 135 192
+-181 28 trees1 SuperBack 98 172
+190 25 trees1 SuperBack 98 172
+456 25 trees1 SuperBack 98 172
+1413 35 trees1 SuperBack 98 172
+2397 32 trees1 SuperBack 98 172
+-1034 109 trees1 SuperBack 98 172
+-2314 200 trees1 SuperBack 98 172
+-1561 108 trees1 SuperBack 98 172
+957 25 trees0 SuperBack 105 187
+-863 125 trees0 SuperBack 105 187
+-1196 111 trees0 SuperBack 105 187
+2 16 trees0 SuperBack 105 187
+1694 25 trees0 SuperBack 105 187
+2156 31 trees0 SuperBack 105 187
+3532 136 trees0 SuperBack 105 187
+4171 143 trees0 SuperBack 105 187
+4999 165 trees0 SuperBack 105 187
 -276 37 sign0 SignBlock 0 56 63
 Text 0.3 0.8 -1
 Sometimes you want to go fast.

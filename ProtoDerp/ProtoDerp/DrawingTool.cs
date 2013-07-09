@@ -12,7 +12,7 @@ namespace ProtoDerp
     {
         readonly GraphicsDeviceManager gdm;
         //BasicEffect effect;
-        SpriteBatch spriteBatch;
+        public SpriteBatch spriteBatch;
         readonly Game game;
         public Camera2d cam;
 
@@ -358,7 +358,7 @@ namespace ProtoDerp
             spriteBatch.End();
 
         }
-        private void endBatch()
+        public void endBatch()
         {
             spriteBatch.End();
         }
@@ -519,7 +519,7 @@ namespace ProtoDerp
             cam.Zoom -= zoomOut / 100f;
         }
 
-        private void beginBatch()
+        public void beginBatch()
         {
             if (game.isInCreatorMode)
             {
@@ -785,6 +785,11 @@ namespace ProtoDerp
                 game.gameDoneLoading = true;
             }
 
+
+        }
+        public void beginBatchGui()
+        {
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied);
 
         }
 
